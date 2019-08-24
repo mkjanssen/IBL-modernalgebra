@@ -212,7 +212,7 @@ $\,$
 %\section{Counting and Proofs}
 
 
-\section*{Introduction}\addcontentsline{toc}{section}{Introduction}
+\section*{Introduction}\addcontentsline{toc}{section}{Introduction}\label{Sec-Introduction}
 
 
 Mathematics is a discipline concerned with the numerical and structural aspects of the world (see, e.g., \cite{franklin2014aristotelian}).
@@ -231,7 +231,7 @@ In order to accomplish this goal, we will walk in the realms of abstraction, and
 
 \clearpage
 
-\section*{A Note to Instructors}\addcontentsline{toc}{section}{A Note to Instructors}
+\section*{A Note to Instructors}\addcontentsline{toc}{section}{A Note to Instructors}\label{Sec-NoteToInstructors}
 
 These notes were developed for first years in a Fall 2018 first course in modern algebra. The purpose of the notes is to explore factorization from an abstract perspective, specifically the question: what structural properties of rings are sufficient to guarantee unique factorization (and what do these words mean?)?
 
@@ -256,13 +256,13 @@ Groups are not present in these notes. Depending on personal preference, with th
 
 \clearpage
 
-\section{The integers}\label{sec:theintegers}
+\section{The integers}\label{Sec-Integers}
 
 
 As children we start exploring the properties and structure of the positive integers as soon as we learn to count and we extend our understanding throughout our schooling as we learn about new operations and collections of numbers. We start our journey into abstract algebra begin with an overview of familiar properties of the integers that are relevant to our course of inquiry. With this foundation set, we will see in later chapters just how far we can extend these properties in more abstract setting.
 
 
-\subsection{Induction and Well-Ordering}
+\subsection{Induction and Well-Ordering}\label{SubSec-WellOrdering}
 
 Note that in this section we will assume the basic algebraic/arithmetic properties of the integers, most of which we will formalize via axioms in subsequent sections.
 
@@ -368,7 +368,7 @@ We will generally take the well-ordering principle on $\N$ to be an axiom, and t
 
 
 
-\subsection{Divisibility in the integers}
+\subsection{Divisibility in the integers}\label{SubSec-Divisibility-in-the-Integers}
 
 In this section, we begin to explore some of the arithmetic and algebraic properties of $\Z$. One of the primary goals of this sections is to formalize definitions that you've been using and have an intuitive understanding of. At first glance, this might seem to add an unnecessary layer of complication. However, it will be abundantly clear as we move forward that a formalized mathematical language and notation are necessary to extend these properties to a more abstract setting. We begin with a twist on a familiar notion.
 
@@ -656,7 +656,7 @@ The following identity provides a useful characterization of the greatest common
 \presnotes
 
 
-\subsection{Primes and Factorization}
+\subsection{Primes and Factorization}\label{SubSec-Primes-and-Factorization}
 
 As described in the Introduction, our main goal is to build a deep structural understanding of the notion of \emph{factorization}.
 That is, splitting objects (e.g., numbers, polynomials, matrices) into products of other numbers.
@@ -840,7 +840,7 @@ As the semester progresses, we will see other theorems like this one, and catch 
 
 
 
-\subsection{The Integers modulo $m$}
+\subsection{The Integers modulo $m$}\label{SubSec-Integers-Mod-m}
 
 If you are familiar with 'military time' then you understand that eighteen hundred hours and 6:00pm are equivalent ways of representing the same time. Similarly, it is common knowledge that if it is 10:00am now, it will again be 10:00am in 24 hours (albeit on a different day). Whether you realize it or not, when you are working with time (in hours) you are working in the integers modulo 12, a concept that is rooted in the mathematical idea of equivalence classes.
 
@@ -1084,11 +1084,11 @@ The previous exercises justify the following definitions.
 \clearpage
 
 
-\section{Fields and Rings}
+\section{Fields and Rings}\label{Sec-Fields-and-Rings}
 You have been exploring numbers and the patterns they hide within them since you began elementary school (if not before). In Chapter 1 we reminded ourselves about what some of those patterns are in the integers (with the goal of understanding factorization) and worked to express them in a more formal way. You may find yourself wondering why we are going out of our way to complicate ideas you have understood since elementary school. The reason for the abstraction (and the reason for this course!) is so that we can explore just how far we can push these patterns. How far does our understanding of factorization in the integers stretch to other types of numbers and other mathematical objects (like polynomials)? In this chapter we will set the ground work for answering that question by introducing more formal notation that will assist us in streamlining our investigation into factorization.
 
 
-\subsection{Fields}
+\subsection{Fields}\label{SubSec-Fields}
 
 We now begin the process of abstraction.
 We will do this in stages, beginning with the concept of a \emph{field}.
@@ -1279,7 +1279,7 @@ We will thus employ this familiar terminology henceforth.
 \presnotes
 
 
-\subsection{Rings}
+\subsection{Rings}\label{SubSec-Rings}
 In the previous section, we observed that many familiar number systems are fields but that some are not. In this section we will explore which field properties usually hold for familiar sets of numbers and which ones are more specialized. Before we proceed with that endeavor we will give a formal definition of polynomial so that we can include it in our exploration.
 \begin{definition}
 	Let $A$ be a set, and $x$ a variable.
@@ -1448,7 +1448,7 @@ In short, noncommutative rings may have left, right, or two-sided identities (or
 
 \presnotes
 
-In the 1920s, Emmy Noether was the first to describe the ring axioms as we know them today, and her definition of a (not-necessarily-commutative) ring has led to a great deal of interesting work in algebra, number theory, and geometry, including the (see \S \ref{sec:nonuniquefactorization} for more on the historical development of the proof of Fermat's Last Theorem). 
+In the 1920s, Emmy Noether was the first to describe the ring axioms as we know them today, and her definition of a (not-necessarily-commutative) ring has led to a great deal of interesting work in algebra, number theory, and geometry, including the (see \S \ref{SubSec-Nonunique-Factorization} for more on the historical development of the proof of Fermat's Last Theorem). 
 Most modern definitions of \emph{ring} agree with our Definition \ref{def:ring} and allow for rings with noncommutative multiplication and no multiplicative identity.
 
 
@@ -1462,7 +1462,7 @@ The proof is not tricky, but a rigorous justification (especially of, e.g., the 
 
 One of the ways to better understand mathematical structures is to understand their similar substructures (e.g., subspaces of vector spaces in linear algebra). Again, this is a formalization of an idea that you have been using since you were a child. There are certain properties of the rational numbers that you understand because you understand the real numbers - this is because the rational numbers are a subring of the real numbers.
 
-In our study of rings, we are primarily interested in special types of subrings, to be studied in more depth in Section \ref{sec:ideals}.
+In our study of rings, we are primarily interested in special types of subrings, to be studied in more depth in Section \ref{Sec-Ideals}.
 
 \begin{definition}
 	Let $(R,+,\cdot)$ be a ring and let $S\subseteq R$.
@@ -1704,7 +1704,7 @@ You have already seen several domains.
 
 \presnotes
 
-When considering sets of polynomials, as we do in \S \ref{sec:factorization}, the following results will be quite useful.
+When considering sets of polynomials, as we do in \S \ref{Sec-Factorization}, the following results will be quite useful.
 
 \begin{theorem}\label{theorem:degreeofproductinfield}
 	Let $F$ be a field, and let $p(x),q(x)\in F[x]$ be nonzero polynomials.
@@ -1740,7 +1740,7 @@ When considering sets of polynomials, as we do in \S \ref{sec:factorization}, th
 
 
 
-\subsection{Divisibility in Integral Domains}
+\subsection{Divisibility in Integral Domains}\label{SubSec-Divisibility-in-Domains}
 
 When we introduced the notion of integral domain, we said that part of the reason for the definition was to capture some of the most essential properties of the integers.
 One such idea is that of cancellation.
@@ -1923,7 +1923,7 @@ It is not the case in all domains that irreducibles are primes, as the next exer
 
 
 
-\subsection{Principal Ideals}
+\subsection{Principal Ideals}\label{SubSec-Principal-Ideals}
 
 One of the ways in which mathematicians study the \emph{structure} of an abstract object is by considering how it interacts with other (related) objects.
 This is especially true of its \emph{sub}objects.
@@ -2088,7 +2088,7 @@ Such domains are given a special name.
 
 \begin{theorem}\label{thm:ZisPID}
 	The ring $\Z$ is a principal ideal domain.
-	\begin{hint}Use properties specific to $\Z$, perhaps from Section \ref{sec:theintegers}.\end{hint}
+	\begin{hint}Use properties specific to $\Z$, perhaps from Section \ref{Sec-Integers}.\end{hint}
 \end{theorem}
 
 
@@ -2167,7 +2167,7 @@ Such domains are given a special name.
 
 \presnotes
 
-We have so far abstracted and axiomatized several important algebraic properties of $\Z$ that we discussed in  \S \ref{sec:theintegers}.
+We have so far abstracted and axiomatized several important algebraic properties of $\Z$ that we discussed in  \S \ref{Sec-Integers}.
 In particular, we have our usual operations of addition and multiplication, and their interactions; we have notions of divisibility/factorization, irreducibility, and primality; we also have cancellation and greatest common divisors.
 
 Our last major abstraction from $\Z$ is the division algorithm.
@@ -2310,10 +2310,10 @@ Thus, a Euclidean domain is an integral domain with a division algorithm that be
 \newpage
 
 
-\section{Factorization}\label{sec:factorization}
+\section{Factorization}\label{Sec-Factorization}
 
 
-\subsection{Factoring Polynomials}
+\subsection{Factoring Polynomials}\label{SubSec-Factoring-Polynomials}
 
 %We will now work in $F[x]$.
 %Can think of it like $\Q[x]$, but more general.
@@ -2322,7 +2322,7 @@ Thus, a Euclidean domain is an integral domain with a division algorithm that be
 
 One of the most beautiful consequences of an abstract study of algebra is the fact that both $\Z$ and $F[x]$ are Euclidean domains.
 While they are not ``the same'', we can expect them to share many of the same properties.
-In this section, our first goal will be to extend familiar properties from \S \ref{sec:theintegers} to $F[x]$. 
+In this section, our first goal will be to extend familiar properties from \S \ref{Sec-Integers} to $F[x]$. 
 We will also see that the particular nature of a polynomial allows for additional criteria for, e.g., its irreducibility to be discovered.
 
 
@@ -2503,7 +2503,7 @@ The following theorem is \href{http://www.corestandards.org/Math/Content/HSA/APR
 
 
 
-\subsection{Factorization in Euclidean Domains}
+\subsection{Factorization in Euclidean Domains}\label{SubSec-Factorization-in-Euclidean-Domains}
 
 
 
@@ -2736,7 +2736,7 @@ However, as we will see later, $\Z[x]$ is not a PID.
 
 
 
-\subsection{Nonunique Factorization}\label{sec:nonuniquefactorization}
+\subsection{Nonunique Factorization}\label{SubSec-Nonunique-Factorization}
 
 % Note to faculty: given time, this section may be omitted and/or developed in regular bi/weekly homework.
 
@@ -2813,10 +2813,10 @@ In the following exercises, we explore factorization in a similar integral domai
 
 \clearpage
 
-\section{Ideals and Homomorphisms}\label{sec:ideals}
+\section{Ideals and Homomorphisms}\label{Sec-Ideals}
 
 
-\subsection{Ideals in general}
+\subsection{Ideals in general}\label{SubSec-Ideals-In-General}
 
 
 \begin{theorem}
@@ -2912,7 +2912,7 @@ One way to think of $\ideal{S}$ is given in the following theorem.
 
 
 
-\subsection{Quotient Rings}
+\subsection{Quotient Rings}\label{SubSec-Quotient-Rings}
 
 \begin{definition}
 	Let $R$ be a ring and $I$ an ideal of $R$.
@@ -3149,7 +3149,7 @@ Rings with only one maximal ideal are said to be \emph{local rings}, and are act
 
 %\presnotes
 
-\subsection{Homomorphisms}
+\subsection{Homomorphisms}\label{SubSec-Homomorphisms}
 
 \begin{definition}
 	Let $R$ and $S$ be commutative rings with identity.
@@ -3350,23 +3350,7 @@ We thus obtain:
 
 
 
-\begin{comment}
-\newpage
 
-
-\section*{Appendix: Connections to Secondary Algebra}\addcontentsline{toc}{section}{Appendix: Connections to Secondary Algebra}
-
-\begin{itemize}
-	\item \href{https://getd.libs.uga.edu/pdfs/suominen_ashley_l_201505_phd.pdf}{Suominen Dissertation}
-    \item \href{https://www.cbmsweb.org/archive/MET2/met2.pdf}{MET2}
-    \item \href{https://sites.google.com/site/bestpracticesforteachingproof/home/k-12-connections-to-abstract-algebra}{Val's Grad School Project}
-    \item \href{https://www.maa.org/programs-and-communities/curriculum\%20resources/meta-math}{MAA META Math}
-    \item \href{https://www.maa.org/sites/default/files/abstractalgebra.pdf}{CUPM Abstract Algebra}
-\end{itemize}
-\newpage
-
-\section*{Appendix: Projects}\addcontentsline{toc}{section}{Appendix: Projects}
-\end{comment}
 
 
 \printindex
