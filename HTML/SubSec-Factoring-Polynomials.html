@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-12-05T10:11:46-06:00    *-->
+<!--*    on 2019-12-05T13:55:47-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -41,7 +41,16 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>(function() {
+  var cx = '017464805646507420634:q2oe2ybvkww';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
@@ -121,6 +130,7 @@ var js_version = 0.12;
 <h1 class="heading"><a href="book-1.html"><span class="title">Modern Algebra</span></a></h1>
 <p class="byline">Michael Janssen, Melissa Lindsey</p>
 </div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
@@ -181,13 +191,13 @@ var js_version = 0.12;
 </h2>
 <a href="SubSec-Factoring-Polynomials.html" class="permalink">¶</a><p id="p-464">One of the most beautiful consequences of an abstract study of algebra is the fact that both \(\Z\) and \(F[x]\) are Euclidean domains. While they are not “the same”, we can expect them to share many of the same properties. In this section, our first goal will be to extend familiar properties from <a href="Sec-Integers.html" class="internal" title="Chapter 1: The Integers">§ 1</a> to \(F[x]\text{.}\) We will also see that the particular nature of a polynomial allows for additional criteria for, e.g., its irreducibility to be discovered.</p>
 <p id="p-465">We saw in <a data-knowl="./knowl/thm_divalg.html" title="Theorem 1.2.5: The Division Algorithm">Theorem 1.2.5</a> and <a data-knowl="./knowl/theorem_polydivalg.html" title="Theorem 2.4.17: Polynomial Division algorithm">Theorem 2.4.17</a> that both \(\Z\) and \(F[x]\) have a division algorithm. It is reasonable (and correct) to expect that similar to the integers we can also investigate the greatest common divisor of polynomials.</p>
-<article class="exercise exercise-like" id="exercise-20"><a data-knowl="" class="id-ref" data-refid="hk-exercise-20"><h6 class="heading">
-<span class="type">Checkpoint</span> <span class="codenumber">3.1.1</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-20"><article class="exercise exercise-like"><p id="p-466">Given \(f(x),g(x)\in F[x]\text{,}\) state a conjecture that gives a means for finding \(\gcd(f(x),g(x))\text{.}\) Prove your conjecture is correct.</p>
+<article class="exercise exercise-like" id="exercise-18"><a data-knowl="" class="id-ref" data-refid="hk-exercise-18"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">3.1.1</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-18"><article class="exercise exercise-like"><p id="p-466">Given \(f(x),g(x)\in F[x]\text{,}\) state a conjecture that gives a means for finding \(\gcd(f(x),g(x))\text{.}\) Prove your conjecture is correct.</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref" data-refid="hk-solution-13" id="solution-13"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like"><p id="p-467">The Euclidean algorithm! Apply the division algorithm for polynomials and mimic the proof of the Euclidean algorithm in \(\Z\text{.}\)</p></div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-21"><a data-knowl="" class="id-ref" data-refid="hk-exercise-21"><h6 class="heading">
-<span class="type">Checkpoint</span> <span class="codenumber">3.1.2</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-21"><article class="exercise exercise-like"><p id="p-468">Carefully state and prove a Bézout-like theorem (recall <a data-knowl="./knowl/theorem_bezoutint.html" title="Theorem 1.2.9: Bézout's Identity">Theorem 1.2.9</a>) for polynomials in \(F[x]\text{.}\)</p>
+<article class="exercise exercise-like" id="exercise-19"><a data-knowl="" class="id-ref" data-refid="hk-exercise-19"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">3.1.2</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-19"><article class="exercise exercise-like"><p id="p-468">Carefully state and prove a Bézout-like theorem (recall <a data-knowl="./knowl/theorem_bezoutint.html" title="Theorem 1.2.8: Bézout's Identity">Theorem 1.2.8</a>) for polynomials in \(F[x]\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref" data-refid="hk-solution-14" id="solution-14"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-14"><div class="solution solution-like"><p id="p-469">Let \(f(x),
 g(x)\in F[x]\) such that \(f\) and \(g\) are not both the zero polynomial. Then there exist polynomials \(s(x),
@@ -203,15 +213,15 @@ t(x)\in F[x]\) such that \(f(x) s(x) + g(x) t(x) = \gcd(f(x),g(x))\text{.}\)</p>
 <span class="type">Theorem</span> <span class="codenumber">3.1.5</span>.</h6>
 <p id="p-474">Let \(F\) be a field, and \(p(x)\in F[x]\text{.}\) Then \(\alpha\in F\) is a root of \(p(x)\) if and only if \(x-\alpha\) divides \(p(x)\text{.}\)</p></article><article class="hiddenproof" id="proof-42"><a data-knowl="" class="id-ref" data-refid="hk-proof-42"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-42"><article class="hiddenproof"><p id="p-475">If \(x-\alpha\) divides \(p(x)\text{,}\) then \(p(x) = q(x) (x-\alpha)\) and \(p(\alpha) = q(\alpha) (\alpha - \alpha) = 0\text{,}\) so \(\alpha\) is a root.</p>
 <p id="p-476">Otherwise, use the division algorithm to divide \(p(x)\) by \(x-\alpha\text{.}\) Then \(p(x) = q(x)(x-\alpha) + r\text{,}\) where \(\deg r \lt \deg (x-\alpha) = 1\text{.}\) Thus, \(r\) is a nonzero constant. If \(\alpha\) is a root of \(p\text{,}\) then \(0 = p(\alpha) = q(\alpha) (\alpha - \alpha) + r = 0 + r = r\text{,}\) so \(r=0\) and \(x-\alpha | p(x)\text{.}\)</p></article></div>
-<article class="exercise exercise-like" id="exercise-22"><a data-knowl="" class="id-ref" data-refid="hk-exercise-22"><h6 class="heading">
-<span class="type">Checkpoint</span> <span class="codenumber">3.1.6</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-22"><article class="exercise exercise-like"><p id="p-477">Given a field \(F\text{,}\) define an irreducible element of \(F[x]\text{,}\) keeping in view <a data-knowl="./knowl/theorem_degreeofproductinfield.html" title="Theorem 2.2.33">Theorem 2.2.33</a> and <a data-knowl="./knowl/def_irreducibleelement.html" title="Definition 2.3.4">Definition 2.3.4</a>.</p>
+<article class="exercise exercise-like" id="exercise-20"><a data-knowl="" class="id-ref" data-refid="hk-exercise-20"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">3.1.6</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-20"><article class="exercise exercise-like"><p id="p-477">Given a field \(F\text{,}\) define an irreducible element of \(F[x]\text{,}\) keeping in view <a data-knowl="./knowl/theorem_degreeofproductinfield.html" title="Theorem 2.2.33">Theorem 2.2.33</a> and <a data-knowl="./knowl/def_irreducibleelement.html" title="Definition 2.3.4">Definition 2.3.4</a>.</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref" data-refid="hk-solution-15" id="solution-15"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-15"><div class="solution solution-like"><p id="p-478">An irreducible polynomial is a nonzero nonconstant \(p(x)\in F[x]\) such that whenever \(p(x) = a(x) b(x)\text{,}\) where \(a(x), b(x) \in F[x]\text{,}\) either \(a(x)\) or \(b(x)\) is a nonzero constant.</p></div></div>
 </div></article></div>
 <article class="definition definition-like" id="definition-32"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">3.1.7</span>.</h6>
-<p id="p-479">A polynomial \(f(x)\in F[x]\) is <dfn class="terminology">reducible</dfn> if it is not irreducible.</p></article><article class="exercise exercise-like" id="exercise-23"><a data-knowl="" class="id-ref" data-refid="hk-exercise-23"><h6 class="heading">
-<span class="type">Checkpoint</span> <span class="codenumber">3.1.8</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-23"><article class="exercise exercise-like"><p id="p-480">State a positive definition for a reducible polynomial with coefficients in a field \(F\text{.}\)</p>
+<p id="p-479">A polynomial \(f(x)\in F[x]\) is <dfn class="terminology">reducible</dfn> if it is not irreducible.</p></article><article class="exercise exercise-like" id="exercise-21"><a data-knowl="" class="id-ref" data-refid="hk-exercise-21"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">3.1.8</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-21"><article class="exercise exercise-like"><p id="p-480">State a positive definition for a reducible polynomial with coefficients in a field \(F\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref" data-refid="hk-solution-16" id="solution-16"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-16"><div class="solution solution-like"><p id="p-481">A polynomial \(r(x)\) is reducible if it can be written as \(r(x) = s(x) t(x)\text{,}\) where \(1 \le \deg s(x) \lt \deg r(x)\) and \(1 \le \deg t(x) \lt \deg r(x)\text{.}\)</p></div></div>
 </div></article></div>

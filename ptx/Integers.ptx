@@ -511,7 +511,7 @@
         </p>
       </solution>
     </investigation>
-    <exercise>
+    <activity>
       <statement>
         <p>
           Use the Euclidean algorithm to compute <m>\gcd(18489,17304)</m>.
@@ -535,7 +535,7 @@
           So <m>\gcd(18489,17304)=3</m>.
         </p>
       </solution>
-    </exercise>
+    </activity>
     <p>
       The following identity provides a useful characterization of the greatest common divisor of two integers,
       not both zero.
@@ -1083,6 +1083,7 @@
             <mrow>\overline{3} \amp = \setof{7k+3}{k\in\Z} = \set{\ldots, -2, 3, 8, 13, \ldots}</mrow>
             <mrow>\overline{4} \amp = \setof{7k+4}{k\in\Z} = \set{\ldots, -1, 4, 9, 14, \ldots}</mrow>
           </md>
+          Since every integer is in one of the above equivalence classes, we know we have found them all.
         </p>
       </answer>
     </exploration>
@@ -1092,13 +1093,13 @@
         <m>\equiv_m</m> is denoted <m>\Z_m</m>.
       </p>
     </notation>
-    <exercise>
+    <activity>
       <statement>
         <p>
           List the elements of <m>\Z_7</m>.
         </p>
       </statement>
-    </exercise>
+    </activity>
     <theorem>
       <statement>
         <p>
@@ -1199,7 +1200,7 @@
         </p>
       </answer>
     </investigation>
-    <theorem>
+    <theorem xml:id="theorem_cancelrelprime">
       <statement>
         <p>
           Let <m>a,b,c</m>,
@@ -1243,7 +1244,7 @@
       <p>
         In <m>\Z_p</m>,
         every nonzero equivalence class is represented by an <m>x</m> for which <m>\gcd(x,p) = 1</m>.
-        Apply the previous theorem.
+        Apply <xref ref="theorem_cancelrelprime" />.
       </p>
     </proof>
   </section>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-12-05T10:11:45-06:00    *-->
+<!--*    on 2019-12-05T13:55:47-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -41,7 +41,16 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>(function() {
+  var cx = '017464805646507420634:q2oe2ybvkww';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
@@ -121,6 +130,7 @@ var js_version = 0.12;
 <h1 class="heading"><a href="book-1.html"><span class="title">Modern Algebra</span></a></h1>
 <p class="byline">Michael Janssen, Melissa Lindsey</p>
 </div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
@@ -253,8 +263,9 @@ var js_version = 0.12;
 <p id="p-76">Let \(a,b\in \N\text{.}\) Write \(a = bq_1+r_1\text{.}\) By <a data-knowl="./knowl/theorem_gcdremainder.html" title="Theorem 1.2.7">Theorem 1.2.7</a>, \((a,b) = (b,r_1)\text{.}\)</p>
 <p id="p-77">Then, write \(b = r_1 q_2 + r_2\) using the Division algorithm. Observe \((b,r_1) = (r_1,r_2)\text{.}\) Continue until there is a \(k\) for which \(r_k = 0\text{,}\) so \((r_k,r_{k-1}) = r_{k-1}\text{.}\) Then \(r_{k-1}= (r_k, r_{k-1}) = (r_{k-1},r_{k-2}) = \cdots = (a,b)\text{.}\)</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="exercise-1"><a data-knowl="" class="id-ref" data-refid="hk-exercise-1"><h6 class="heading">
-<span class="type">Checkpoint</span> <span class="codenumber">1.2.8</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-1"><article class="exercise exercise-like"><p id="p-78">Use the Euclidean algorithm to compute \(\gcd(18489,17304)\text{.}\)</p>
+</div></article><article class="activity project-like" id="activity-3"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">1.2.5</span>.</h6>
+<p id="p-78">Use the Euclidean algorithm to compute \(\gcd(18489,17304)\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like">
 <p id="p-79">We write</p>
@@ -272,10 +283,9 @@ var js_version = 0.12;
 </div>
 <p id="p-80">So \(\gcd(18489,17304)=3\text{.}\)</p>
 </div></div>
-</div></article></div>
-<p id="p-81">The following identity provides a useful characterization of the greatest common divisor of two integers, not both zero.</p>
+</div></article><p id="p-81">The following identity provides a useful characterization of the greatest common divisor of two integers, not both zero.</p>
 <article class="theorem theorem-like" id="theorem_bezoutint"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">1.2.9</span>. <span class="title">Bézout's Identity.</span>
+<span class="type">Theorem</span> <span class="codenumber">1.2.8</span>. <span class="title">Bézout's Identity.</span>
 </h6>
 <p id="p-82">For any integers \(a\) and \(b\) not both 0, there are integers \(x\) and \(y\) such that</p>
 <div class="displaymath">
@@ -297,8 +307,8 @@ r_{k-1} \amp = r_k q_{k+1}\text{,}
 </div>
 <p>where \(0\le r_i \lt  |b|\) and \(r_k \ne 0\text{.}\) Then \(r_k = \gcd(a,b)\) and we may back-substitute to find integers \(x\) and \(y\) such that \(ax + by = r_k = \gcd(a,b)\text{.}\)</p></article></div>
 <article class="theorem theorem-like" id="theorem_relprimecancel"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">1.2.10</span>.</h6>
-<p id="p-85">Let \(a, b\text{,}\) and \(c\) be integers. If \(a|bc\) and \(\gcd(a,b) = 1\text{,}\) then \(a|c\text{.}\)</p></article><article class="hiddenproof" id="proof-8"><a data-knowl="" class="id-ref" data-refid="hk-proof-8"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-8"><article class="hiddenproof"><p id="p-86">Suppose \(\gcd(a,b) = 1\text{.}\) By <a data-knowl="./knowl/theorem_bezoutint.html" title="Theorem 1.2.9: Bézout's Identity">Theorem 1.2.9</a>, there are integers \(x\) and \(y\) such that</p>
+<span class="type">Theorem</span> <span class="codenumber">1.2.9</span>.</h6>
+<p id="p-85">Let \(a, b\text{,}\) and \(c\) be integers. If \(a|bc\) and \(\gcd(a,b) = 1\text{,}\) then \(a|c\text{.}\)</p></article><article class="hiddenproof" id="proof-8"><a data-knowl="" class="id-ref" data-refid="hk-proof-8"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-8"><article class="hiddenproof"><p id="p-86">Suppose \(\gcd(a,b) = 1\text{.}\) By <a data-knowl="./knowl/theorem_bezoutint.html" title="Theorem 1.2.8: Bézout's Identity">Theorem 1.2.8</a>, there are integers \(x\) and \(y\) such that</p>
 <div class="displaymath">
 \begin{equation*}
 ax+by = 1\text{.}
