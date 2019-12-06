@@ -1,0 +1,1216 @@
+<chapter xml:id="Sec-Integers">
+  <title>The integers</title>
+  <introduction>
+    <p>
+      As children we start exploring the properties and structure of the positive integers as soon as we learn to count and we extend our understanding throughout our schooling as we learn about new operations and collections of numbers.
+      We begin our journey into abstract algebra with an overview of familiar properties of the integers that are relevant to our course of inquiry.
+      With this foundation set,
+      we will see in later chapters just how far we can extend these properties in more abstract setting.
+    </p>
+  </introduction>
+  <subsection xml:id="SubSec-WellOrdering">
+    <title>Induction and Well-Ordering</title>
+    <p>
+      Note that in this section we will assume the basic algebraic/arithmetic properties of the integers,
+      most of which we will formalize via axioms in subsequent sections.
+    </p>
+    <definition xml:id="def_naturalnumbers">
+      <statement>
+        <p>
+              <idx><h>natural numbers</h></idx>
+              <idx><h><m>\N</m></h></idx>
+          The collection of <term>natural numbers</term> is denoted by <m>\N</m>, and is the set
+          <me>
+            \N = \set{1, 2, 3, \ldots}
+          </me>.
+        </p>
+        <p>
+          By <m>\N_0</m> we mean the set <m>\N\cup \set{0} = \set{0, 1, 2, 3, \ldots}</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      In some sense,
+      the fundamental properties of <m>\N</m> are (a) there is a smallest natural number,
+      and (b) there is always a next natural number. (A model of <m>\N</m> via the Peano axioms describes this order using
+      <em>successors</em>.) A consequence of the Peano postulates is the
+      <em>well-ordering principle</em>.
+    </p>
+    <axiom xml:id="axiom_wellordering">
+      <title>Well-Ordering Principle</title>
+      <statement>
+        <p>
+              <idx><h>Well-Ordering Axiom</h></idx>
+          Every nonempty subset of <m>\N_0</m> contains a least (smallest) element under the usual ordering, <m>\le</m>.
+        </p>
+      </statement>
+    </axiom>
+    <definition xml:id="def_integers">
+      <statement>
+        <p>
+              <idx><h>integers</h></idx>
+              <idx><h><m>\Z</m></h></idx>
+          The set of integers consists of the positive and negative natural numbers, together with zero, and is denoted by <m>\Z</m>:
+          <me>
+            \Z = \set{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots}
+          </me>.
+        </p>
+      </statement>
+    </definition>
+    <theorem>
+      <title>Mathematical Induction</title>
+      <statement>
+        <p>
+          Let <m>P(m)</m> be a statement about the natural number <m>m</m><fn>
+          Sample statements could include
+          <q><m>m</m> is really interesting</q>
+          or
+          <q><m>3m^2 + m + 2</m> is even</q>.
+          </fn>.
+          Let <m>k_0\in \N</m> be such that the statement <m>P(k_0)</m> is true
+          (the <em>base case</em>),
+          and suppose there is an <m>n\ge k_0</m> such that for all <m>k</m> satisfying <m>k_0 \le k \le n</m>,
+          <m>P(k)</m> is true
+          (the <em>inductive hypothesis</em>).
+          Then <m>P(n+1)</m> is true,
+          and thus <m>P(m)</m> is true for all <m>m\ge k_0</m>
+          (the <em>inductive step</em>).
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      Mathematical induction is sort of like climbing an infinite staircase.
+      The <em>base case</em> tells us that we can take a first step on the staircase
+      (<m>k_0</m>).
+      In the <em>inductive hypothesis</em>,
+      we assume we can take all the steps up to a certain height
+      (<m>n</m>).
+      In the <em>inductive step</em>,
+      we prove that this allows us to take the <m>(n+1)</m>st step.
+    </p>
+    <p>
+      Thus, if we can take step <m>k_0</m>, we can
+      (by the inductive step)
+      take step <m>k_0 + 1</m>.
+      And since we can take step <m>k_0 + 1</m>, we can
+      (again by the inductive step)
+      take step <m>k_0 + 2</m>.
+      And so on, forever
+      (or, if the notion of actual infinity makes you uncomfortable,
+      as far as we want to go).
+    </p>
+    <p>
+      It can be proved that the principle of mathematical induction is logically equivalent to the well-ordering principle.
+      That is, if we assume either one to be true, we can deduce the other.
+      We will generally take the well-ordering principle on <m>\N</m> to be an axiom,
+      and treat induction as a theorem.
+    </p>
+    <example>
+      <statement>
+        <p>
+          For all <m>n \ge 1</m>,
+          <me>
+            1+ 2 + 3 + \cdots + n = \frac{n(n+1)}{2}
+          </me>.
+        </p>
+      </statement>
+    </example>
+    <p>
+      <em>Proof:</em> <em>Base case:</em> When <m>n = 1</m>,
+      the equation <m>1 = \frac{1\cdot (1+1)}{2}</m> is true.
+    </p>
+    <p>
+      <em>Inductive Hypothesis:</em> Assume that there exists a <m>n</m> such that whenever <m>k \le n</m>,
+      the equation
+      <me>
+        1+ 2 + 3 + \cdots + k = \frac{k(k+1)}{2}
+      </me>
+      is true.
+    </p>
+    <p>
+      <em>Inductive Step:</em> Our goal is to show that <m>P(n+1)</m> is true.
+      That is, we wish to establish that
+      <men xml:id="ex_indgoal">
+        1+ 2 + 3 + \cdots + n + (n+1) = \frac{(n+1)((n+1)+1)}{2}
+      </men>.
+    </p>
+    <p>
+      We begin on the left-hand side,
+      where we may apply the inductive hypothesis to see that
+      <men xml:id="ex_indstep1">
+        1+ 2 + 3 + \cdots + n + (n+1) = \frac{n(n+1)}{2} + (n+1)
+      </men>.
+    </p>
+    <p>
+      Through the use of straightforward algebra,
+      the right-hand side becomes
+      <men xml:id="ex_indstep2">
+        \frac{n(n+1)}{2} + (n+1) = \frac{n(n+1)}{2} + \frac{2(n+1)}{2} = \frac{n(n+1) + 2(n+1)}{2} = \frac{(n+1)(n+2)}{2}
+      </men>.
+    </p>
+    <p>
+      Putting <xref ref="ex_indstep1" /> and <xref ref="ex_indstep2" /> together,
+      we obtain
+      <me>
+        1+ 2 + 3 + \cdots + n + (n+1) = \frac{(n+1)((n+1)+1)}{2}
+      </me>,
+      which is exactly the goal we stated in <xref ref="ex_indgoal" />.
+      <m>\square</m>
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          The sum of the first <m>n</m> cubes is <m>\dfrac{n^2(n+1)^2}{4}</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <title>de Moivre's formula</title>
+      <statement>
+        <p>
+          For all <m>n\ge 1</m>,
+          <m>(\cos(x) + i\sin (x))^n = \cos(nx) + i \sin(nx)</m>.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          You'll need some trig identities!
+        </p>
+      </hint>
+    </exercise>
+  </subsection>
+  <subsection xml:id="SubSec-Divisibility-in-the-Integers">
+    <title>Divisibility in the integers</title>
+    <p>
+      In this section,
+      we begin to explore some of the arithmetic and algebraic properties of <m>\Z</m>.
+      One of the primary goals of this sections is to formalize definitions that you've been using and have an intuitive understanding of.
+      At first glance,
+      this might seem to add an unnecessary layer of complication.
+      However, it will be abundantly clear as we move forward that a formalized mathematical language and notation are necessary to extend these properties to a more abstract setting.
+      We begin with a twist on a familiar notion.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Let <m>a,b\in \Z</m>.
+          We say that <m>a</m> <term>divides</term>
+          <m>b</m>, and write <m>a\mid b</m>,
+          if there is an integer <m>c</m> such that <m>ac = b</m>.
+          If no such <m>c\in Z</m> exists, we write <m>a\nmid b</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Note that the symbol <m>|</m> is a <em>verb</em>;
+      it is therefore correct to say,
+      e.g., <m>2|4</m>, as 2 <em>does</em> divide 4.
+      However, it is an abuse of notation to say that <m>2\mid 4 = 2</m>.
+      Instead, we likely mean <m>4\div 2 = 2</m> or <m>\frac{4}{2} = 2</m>
+      (though we will not deal in fractions just yet).
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Determine whether <m>a\mid b</m> if:
+          <ol>
+            <li>
+              <p>
+                <m>a = 3</m>, <m>b = -15</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>a = 4</m>, <m>b = 18</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>a = -7</m>, <m>b = 0</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>a = 0</m>, <m>b = 0</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+    <theorem>
+      <statement>
+        <p>
+          Let <m>a,b</m>, and <m>c</m> be integers.
+          If <m>a\mid b</m> and <m>a\mid c</m>, then <m>a\mid (b+c)</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Our hypothesis means that there exist integers <m>k_1</m> and <m>k_2</m> such that
+        <m>b = a k_1</m> and <m>c = a k_2</m>.
+        Then <m>b+c = a k_1 + a k_2 = a(k_1 + k_2)</m>.
+        Let <m>k' = k_1 + k_2</m>, and observe that <m>k'</m> is an integer;
+        then <m>b+c = a k'</m>, so <m>a\mid (b+c)</m>.
+      </p>
+    </proof>
+    <theorem>
+      <statement>
+        <p>
+          Let <m>a</m>, <m>b</m>, and <m>c</m> be integers.
+          If <m>a\mid b</m>, then <m>a\mid bc</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Our hypotheses means there is an integer <m>k</m> for which <m>b = ak</m>.
+        Then <m>bc = (ak)c = a(kc)</m>.
+        We observe that <m>k' = kc</m> is an integer,
+        so <m>bc = ak'</m>, and therefore <m>a\mid bc</m>.
+      </p>
+    </proof>
+    <definition>
+      <statement>
+        <p>
+          Let <m>a,b\in \Z</m> such that <m>a</m> and <m>b</m> are not both 0.
+          A <term>greatest common divisor</term>
+          of <m>a</m> and <m>b</m>, denoted <m>\gcd(a,b)</m>,
+          is a natural number <m>d</m> satisfying \marginpar{\setstretch{0.7}<term>This formalizes the idea of greatest common factors that is introduced around
+          <url href="http://www.corestandards.org/Math/Content/6/NS/B/4/">sixth grade</url>
+          .</term>}
+          <ol>
+            <li>
+              <p>
+                <m>d\mid a</m> and <m>d\mid b</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                if <m>e\in \N</m> and <m>e\mid a</m> and <m>e\mid b</m>,
+                then <m>e\mid d</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+        <p>
+          If <m>\gcd(a,b) = 1</m>,
+          we say that <m>a</m> and <m>b</m> are
+          <term>relatively prime</term> or <term>coprime</term>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      This definition may be different than the one you are used to,
+      which likely stated that <m>d \ge e</m>.
+      It can be proved using the order relations of <m>\Z</m> that the definition given here is equivalent to that one.
+      However, we will prefer this definition,
+      as it generalizes naturally to other number systems which do not have an order relation like <m>\Z</m>.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Compute <m>\gcd(a,b)</m> if:
+          <ol>
+            <li>
+              <p>
+                <m>a = 123</m>, <m>b = 141</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>a = 0</m>, <m>b = 169</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>a= 85</m>, <m>b = 48</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      As we saw above,
+      not all pairs of integers <m>a,b</m> satisfy <m>a\mid b</m> or <m>b\mid a</m>.
+      However,
+      <url href="http://www.corestandards.org/Math/Content/4/NBT/B/6/">our experience in elementary mathematics does apply:
+      there is often something left over (a remainder)</url>.
+      The following theorem formalizes this idea for <m>a,b\in \N</m>.
+    </p>
+    <theorem xml:id="thm_divalg">
+      <title>The Division algorithm</title>
+      <statement>
+        <p>
+          Let <m>a,b\in \N</m>.
+          Then there exist unique integers <m>q,r</m> such that <m>a = bq + r</m>,
+          where <m>0 \le r \lt b</m>.
+        </p>
+        <p>
+          <em>Note that this theorem has two parts:
+          existence and uniqueness.
+          Don't try to do them both at once!</em>
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        First, assume that <m>a \lt b</m>.
+        Then <m>q = 0</m> and <m>r = a</m> are sufficient.
+        If <m>a = b</m>, then <m>q = 1</m> and <m>r = 0</m> will work.
+      </p>
+      <p>
+        Now, assume that <m>a > b</m>.
+        Then the set <m>S = \setof{s\in\N}{a-bs \ge 0}</m> is nonempty.
+        Further, note that <m>S</m> has a largest element:
+        every element <m>x\in S</m> satisfies <m>x \le a</m>, since <m>a,b\in\N</m>.
+        Let <m>q</m> be the largest element of <m>S</m>,
+        and set <m>r = a - bq</m>.
+      </p>
+      <p>
+        To finish the proof,
+        it is enough to show that this choice of <m>r</m> satisfies <m>0\le r \le b-1</m>.
+        Observe that <m>r\in S</m>, so <m>r\ge 0</m>.
+        If <m>r \ge b</m>, then <m>a - b(q+1) = a-bq -b = r -b \ge 0</m>.
+        Since <m>q+1 > q</m>,
+        this is a contradiction to the assumption that <m>q</m> was the largest element of <m>S</m>.
+        Thus, <m>r \lt b</m>, i.e., <m>r \le b-1</m>.
+      </p>
+      <p>
+        Let <m>q,q',r,r'</m> be such that <m>a = bq+r</m> and <m>a=bq'+r'</m>.
+        We see that <m>bq+r = bq' + r'</m>,
+        so <m>b(q-q') = r'-r</m>, so <m>b|r'-r</m>.
+        If <m>r'-r = 0</m>, we are done.
+      </p>
+      <p>
+        Otherwise, <m>r'-r</m> is a nonzero multiple of <m>n</m>.
+        If <m>r' \ge r</m>,
+        then <m>0\le b(q-q') = r' - r \le b-1 - r</m>, a contradiction.
+        Similarly, if <m>r' \le r</m>,
+        write <m>b(q'-q) = r-r' \ge 0</m>,
+        and a symmetric argument leads to a contradiction.
+      </p>
+      <p>
+        Thus, <m>r' = r</m>, so <m>b(q-q') = 0</m>,
+        and since <m>b > 0</m>, <m>q - q'= 0</m>, i.e., <m>q = q'</m>.
+      </p>
+    </proof>
+    <theorem xml:id="theorem_23lemmageneralization">
+      <statement>
+        <p>
+          Let <m>a,b,c,d\in \Z</m>.
+          If <m>a = b+c</m> and <m>d</m> divides any two of <m>a,b,c</m>,
+          then <m>d</m> divides the third.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        We consider two cases.
+      </p>
+      <p>
+        <em>Case 1:</em> Assume without loss of generality that <m>d|a</m> and <m>d|b</m>.
+        Then there are integers <m>k_1, k_2</m> such that
+        <m>d k_1 = a</m> and <m>d k_2 = b</m>.
+        We observe that <m>c = a - b = d k_1 - d k_2 = d(k_1 - k_2)</m>,
+        so <m>d|c</m>.
+      </p>
+      <p>
+        <em>Case 2:</em> Assume that <m>d| b</m> and <m>d|c</m>,
+        so there are <m>k_1,k_2\in \Z</m> such that
+        <m>d k_1 = b</m> and <m>d k_2 = c</m>.
+        Then <m>a = b+ c = dk_1 + dk_2 = d(k_1 + k_2)</m>, so <m>d|a</m>.
+      </p>
+    </proof>
+    <theorem xml:id="theorem_gcdremainder">
+      <statement>
+        <p>
+          Let <m>a,b,n</m>,
+          and <m>r</m> be integers with <m>a</m> and <m>b</m> not both 0.
+          If <m>a = n b + r</m>, then <m>\gcd(a,b) = \gcd(b,r)</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        By the previous theorem,
+        if <m>d</m> is a common divisor of <m>a</m> and <m>b</m>,
+        then <m>d</m> also divides <m>r</m>,
+        and <m>d \le \gcd(b,r)</m>.
+        Suppose <m>d = \gcd(a,b)</m>,
+        and <m>\gcd(b,r)= e > d</m> is an integer that divides both <m>b</m> and <m>r</m>,
+        say <m>e q_1 = b</m> and <m>e q_2 = r</m>.
+        Then <m>a = n b + r = n (e q_1) + (e q_2)= e (n q_1 + q_2)</m>,
+        so <m>e|a</m>,
+        contradicting the assumption that <m>d = \gcd(a,b)</m>.
+        Thus <m>e = \gcd(b,r) \le d</m>, hence <m>e = d</m>.
+      </p>
+    </proof>
+    <exercise>
+      <statement>
+        <p>
+          As an illustration of the above theorem, note that
+          <md>
+            <mrow>56 \amp = 3\cdot 12 + 8,</mrow>
+            <mrow>12 \amp = 1\cdot 8 +4,</mrow>
+            <mrow>8 \amp = 2\cdot 4 + 0</mrow>
+          </md>.
+        </p>
+        <p>
+          Use the preceding theorem to show that if <m>a = 56</m> and <m>b = 12</m>,
+          then <m>\gcd(56, 12) = \gcd(8, 4) = 3</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Applying the previous theorem to line 1 tells us that <m>\gcd(51,15) = \gcd(15, 6)</m>.
+          The second line tells us that <m>\gcd(15,6) = \gcd(6,3)</m>.
+          The third line tells us that <m>\gcd(6,3) = \gcd(3,0) = 3</m>.
+          The result follows by transitivity.
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p><fn>
+          The lead-up to the Euclidean algorithm has been adapted from<nbsp /><xref ref="NTI" />.
+          </fn> (Euclidean algorithm.) Using the previous theorem and the Division algorithm successively, devise a procedure for finding the greatest common divisor of two integers.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Let <m>a,b\in \N</m>.
+          Write <m>a = bq_1+r_1</m>.
+          By <xref ref="theorem_gcdremainder">Theorem</xref>, <m>(a,b) = (b,r_1)</m>.
+        </p>
+        <p>
+          Then, write <m>b = r_1 q_2 + r_2</m> using the Division algorithm.
+          Observe <m>(b,r_1) = (r_1,r_2)</m>.
+          Continue until there is a <m>k</m> for which <m>r_k = 0</m>,
+          so <m>(r_k,r_{k-1}) = r_{k-1}</m>.
+          Then <m>r_{k-1}= (r_k, r_{k-1}) = (r_{k-1},r_{k-2}) = \cdots = (a,b)</m>.
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Use the Euclidean algorithm to compute <m>\gcd(18489,17304)</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We write
+          <md>
+            <mrow>18489 \amp = 17304 \cdot 1 +1185</mrow>
+            <mrow>17304 \amp = 1185\cdot 14 +714</mrow>
+            <mrow>1185 \amp = 714 \cdot 1 + 471</mrow>
+            <mrow>714 \amp = 471 \cdot 1+ 243</mrow>
+            <mrow>471 \amp = 243\cdot 1 + 228</mrow>
+            <mrow>243 \amp = 228 \cdot 1+ 15</mrow>
+            <mrow>228 \amp = 15 \cdot 15 + 3</mrow>
+            <mrow>15 \amp = 3\cdot 5 + 0</mrow>
+          </md>.
+        </p>
+        <p>
+          So <m>\gcd(18489,17304)=3</m>.
+        </p>
+      </solution>
+    </exercise>
+    <p>
+      The following identity provides a useful characterization of the greatest common divisor of two integers,
+      not both zero.
+    </p>
+    <theorem xml:id="theorem_bezoutint">
+      <title>B&#xe9;zout's Identity</title>
+      <statement>
+        <p>
+          For any integers <m>a</m> and <m>b</m> not both 0, there are integers <m>x</m> and <m>y</m> such that
+          <me>
+            ax + by = \gcd(a,b)
+          </me>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        If, e.g., <m>a = 0</m> and <m>b\ne 0</m>,
+        then <m>\gcd(a,b) = b</m> and <m>x=0,y=1</m> suffices.
+        If <m>a = b</m>, then <m>\gcd(a,b) = a = b</m>,
+        so <m>x = 0, y = 1</m> suffices.
+      </p>
+      <p>
+        So, suppose <m>a,b\ne 0</m>, and let <m>d = \gcd(a,b)</m>.
+        Without loss of generality assume <m>|a| > |b|</m>.
+        The EA provides a sequence of integers <m>r_1, r_2, \ldots,
+        r_k, q_1, q_2, \ldots, q_{k+1}</m> and equations
+        <md>
+          <mrow>|a| \amp = |b| q_1 + r_1</mrow>
+          <mrow>|b| \amp = r_1 q_2 + r_2</mrow>
+          <mrow>r_1 \amp = r_2 q_3 + r_3</mrow>
+          <mrow>\amp \vdots</mrow>
+          <mrow>r_{k-2} \amp = r_{k-1} q_k + r_k</mrow>
+          <mrow>r_{k-1} \amp = r_k q_{k+1}</mrow>
+        </md>,
+        where <m>0\le r_i \lt  |b|</m> and <m>r_k \ne 0</m>.
+        Then <m>r_k = \gcd(a,b)</m> and we may back-substitute to find integers <m>x</m> and <m>y</m> such that <m>ax + by = r_k = \gcd(a,b)</m>.
+      </p>
+    </proof>
+    <theorem xml:id="theorem_relprimecancel">
+      <statement>
+        <p>
+          Let <m>a, b</m>, and <m>c</m> be integers.
+          If <m>a|bc</m> and <m>\gcd(a,b) = 1</m>, then <m>a|c</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Suppose <m>\gcd(a,b) = 1</m>.
+        By <xref ref="theorem_bezoutint">Theorem</xref>,
+        there are integers <m>x</m> and <m>y</m> such that
+        <me>
+          ax+by = 1
+        </me>.
+      </p>
+      <p>
+        Multiply by <m>c</m> to get
+        <me>
+          acx + bcy = c
+        </me>.
+      </p>
+      <p>
+        Since <m>a|bc</m> by assumption,
+        there is an integer <m>k</m> such that <m>ak = bc</m>,
+        so we have
+        <me>
+          acx + bcy = acx + aky = a(cx+ky) = c
+        </me>,
+        so <m>a|c</m>.
+      </p>
+    </proof>
+  </subsection>
+  <subsection xml:id="SubSec-Primes-and-Factorization">
+    <title>Primes and Factorization</title>
+    <p>
+      As described in the Introduction,
+      our main goal is to build a deep structural understanding of the notion of <em>factorization</em>.
+      That is, splitting objects (e.g., numbers,
+      polynomials, matrices) into products of other numbers.
+      One of the most familiar examples of this process involves factoring integers into products of primes.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Let <m>p > 1</m> be a natural number.
+          We say <m>p</m> is <term>prime</term>
+          if whenever <m>a,b\in \Z</m> such that <m>p\mid ab</m>,
+          either <m>p\mid a</m> or <m>p\mid b</m>.
+        </p>
+        <p>
+          A natural number <m>m > 1</m> is said to be
+          <term>composite</term> if it is not prime.
+        </p>
+      </statement>
+    </definition>
+    <theorem xml:id="theorem_euclidslemma">
+      <statement>
+        <p>
+          Given any <m>p\in \N</m>, <m>p > 1</m>,
+          <m>p</m> is prime if and only if whenever <m>m\in \N</m> divides <m>p</m>,
+          either <m>m = p</m> or <m>m = 1</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Let <m>p</m> be prime and suppose <m>m\in \N</m> divides <m>p</m>,
+        so <m>p = mk</m> for some <m>k\in \N</m>.
+        By definition, <m>p|m</m> or <m>p|k</m>.
+        If <m>p|m</m>, then <m>pj = m</m>, so <m>p = pjk</m>,
+        and <m>jk=1</m>, which means <m>j=k=1</m> and thus <m>m=p</m>.
+        If <m>p|k</m>, then <m>pj=k</m>,
+        so <m>p = mpj</m>, and <m>mj=1</m>, so <m>m = j = 1</m>.
+      </p>
+      <p>
+        Conversely, assume <m>p\in \N</m> has the property that whenever an integer <m>m</m> exists with <m>m|p</m>,
+        then <m>m= p</m> or <m>m =1</m>.
+        Suppose <m>p|ab</m>,
+        so there exists a <m>k\in\N</m> such that <m>pk = ab</m>.
+        Note that if <m>\gcd(a,p) = d > 1</m>,
+        then <m>d|p</m>, and so <m>d = p</m>, and then <m>p|a</m>.
+        If <m>\gcd(a,p) = 1</m>,
+        then by B&#xe9;zout's Identity there are integers <m>x</m> and <m>y</m> such that <m>ax + py = 1</m>,
+        so we may multiply by <m>b</m> to obtain <m>abx + pby = b</m>,
+        whence <m>p|b</m>.
+      </p>
+    </proof>
+    <question xml:id="question_compositecharacterization">
+      <statement>
+        <p>
+          Using the previous theorem as a guide,
+          give a biconditional characterization for composite numbers.
+          That is, fill in the blank:
+          <q>A number <m>m\in\N</m> is composite if and only if \makebox[0.75in]{\hrulefill}.</q>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <q>A number <m>m\in\N</m> is composite if and only if there exist natural numbers
+          <m>a,b\ne 1</m> such that <m>m = ab</m>.</q>
+        </p>
+      </answer>
+    </question>
+    <theorem>
+      <statement>
+        <p>
+          Let <m>a\in \N</m> such that <m>a > 1</m>.
+          Then there is a prime <m>p</m> such that <m>p\mid a</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        We proceed by mathematical induction.
+        Note that when <m>a = 2</m>, the statement holds.
+      </p>
+      <p>
+        Assume that there is a <m>k\in\N</m> such that for all <m>a\le k</m>,
+        the statement holds.
+        Consider <m>k+1</m>.
+        If <m>k+1</m> is prime, we are done.
+        If not, then <m>k+1</m> is composite,
+        and by the answer to <xref ref="question_compositecharacterization">Question</xref>,
+        there are integers <m>a,b\ne 1</m> such that <m>k+1 = ab</m>.
+        By induction,
+        there is a prime <m>p</m> such that <m>p|a</m>, so <m>p|k+1</m>.
+      </p>
+    </proof>
+    <p>
+      Our first major theorem of the semester makes two claims:
+      that positive integers greater than 1 <em>can</em>
+      be factored into products of primes,
+      and that this factorization can happen in only one way.
+      As the semester progresses, we will see other theorems like this one,
+      and catch glimpses of other ways to think about the
+      <em>unique factorization property</em>.
+    </p>
+    <theorem>
+      <title>Fundamental Theorem of Arithmetic</title>
+      <statement>
+        <p>
+          Every natural number greater than 1 is either a prime number or it can be expressed as a finite product of prime numbers where the expression is unique up to the order of the factors.
+        </p>
+      </statement>
+    </theorem>
+    <theorem>
+      <statement>
+        <p>
+          (Fundamental Theorem of Arithmetic<ndash/>Existence Part.)<fn>
+          This approach to the Fundamental Theorem of Arithmetic is adapted from<nbsp /><xref ref="NTI" />.
+          </fn> Every natural number <m>n > 1</m> is either a prime number or it can be expressed as a finite product of prime numbers.
+          That is, for every natural number <m>n > 1</m>,
+          there exist primes <m>p_1, p_2, \ldots,
+          p_m</m> and natural numbers <m>r_1, r_2, \ldots, r_m</m> such that
+          <me>
+            n = p_1^{r_1} p_2^{r_2} \cdots p_m^{r_m}
+          </me>.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Use the Well-Ordering Principle (or something equivalent to it.)
+        </p>
+      </hint>
+    </theorem>
+    <proof>
+      <p>
+        It is enough to show that,
+        if <m>n > 1</m>, we may write <m>n = p_1 p_2 \cdots p_k</m>,
+        where the <m>p_i</m>'s are not necessarily distinct primes.
+        Then we can collect the common primes and write them with exponent notation.
+      </p>
+      <p>
+        Note that when <m>n = 2</m>, there is such an expression,
+        so let <m>k > 2</m> be the least positive integer that fails to be expressed as above.
+        We note that <m>k</m> cannot be prime,
+        or it could be expressed as above.
+        Thus, by Theorem 2.1, there is a prime <m>p</m> such that <m>k = p b</m>,
+        where <m>1 \lt p, b \lt k</m>.
+        Since <m>k</m> was the least positive integer that cannot be factored as a product of primes,
+        <m>b</m> has a prime factorization.
+        But then so does <m>k</m>, a contradiction.
+      </p>
+    </proof>
+    <lemma>
+      <statement>
+        <p>
+          Let <m>p</m> and <m>q_1, q_2,\ldots,
+          q_n</m> all be primes and let <m>k</m> be a natural number such that <m>pk = q_1 q_2 \ldots q_n</m>.
+          Then <m>p = q_i</m> for some <m>i</m>.
+        </p>
+      </statement>
+    </lemma>
+    <proof>
+      <p>
+        We first state a claim that will be useful.
+      </p>
+      <p>
+        <em>Claim 1:</em> If <m>p,q</m> are primes such that <m>p|q</m>,
+        then <m>p = q</m>.
+      </p>
+      <p>
+        <em>Proof of Claim 1:</em> Since
+        <m>p,
+        q > 1</m> and both <m>p</m> and <m>q</m> are prime,
+        <m>p = q</m> by the definition of primality.
+        <m>\checkmark</m>
+      </p>
+      <p>
+        Now assume that <m>pk = q_1 q_2 \cdots q_n = (q_1 q_2 \cdots q_{n-1}) q_n</m>.
+        If <m>p|q_n</m>, we're done by Claim 1.
+        If not, the definition of a prime guarantees that <m>p| q_1 q_2 \cdots q_{n-1}</m>.
+        If <m>p|q_{n-1}</m>, we're done by Claim 1.
+        Otherwise, <m>p|q_1 q_2 \cdots q_{n-2}</m>.
+      </p>
+      <p>
+        Repeating this process,
+        we see that either <m>p|q_i</m> for some <m>i > 2</m>,
+        or <m>p|q_1 q_2</m>.
+        Now the definition of a prime guarantees that <m>p|q_1</m> or <m>p|q_2</m>,
+        in which case Claim 1 requires that <m>p = q_1</m> or <m>p = q_2</m>.
+      </p>
+    </proof>
+    <theorem>
+      <statement>
+        <p>
+          (Fundamental Theorem of Arithmetic<ndash/>Uniqueness part.) Let <m>n</m> be a natural number.
+          Let <m>\set{p_1,p_2,\ldots,p_m}</m> and
+          <m>\set{q_1,q_2,\ldots,q_s}</m> be sets of primes with
+          <m>p_i\ne p_j</m> if <m>i\ne j</m> and <m>q_i\ne q_j</m> if <m>i\ne j</m>.
+          Let <m>\set{r_1,r_2,\ldots,r_m}</m> and
+          <m>\set{t_1,t_2,\ldots,t_s}</m> be sets of natural numbers such that
+          <md>
+            <mrow>n \amp = p_1^{r_1} p_2^{r_2} \cdots p_m^{r_m}</mrow>
+            <mrow>\amp = q_1^{t_1} q_2^{t_2} \cdots q_s^{t_s}</mrow>
+          </md>.
+        </p>
+        <p>
+          Then <m>m = s</m> and <m>\set{p_1,p_2,\ldots,p_m} = \set{q_1,q_2,\ldots,q_s}</m>.
+          That is, the sets of primes are equal but their elements are not necessarily listed in the same order;
+          that is, <m>p_i</m> may or may not equal <m>q_i</m>.
+          Moreover, if <m>p_i = q_j</m>, then <m>r_i = t_j</m>.
+          In other words,
+          if we express the same natural number as a product of distinct primes,
+          then the expressions are identical except for the ordering of the factors.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Argue that the two sets are equal.
+          Then argue that the exponents must also be equal.
+        </p>
+      </hint>
+    </theorem>
+    <proof>
+      <p>
+        Without loss of generality,
+        assume <m>p_1 \lt  p_2 \lt  \cdots \lt  p_m</m> and <m>q_1 \lt  q_2 \lt  \cdots \lt  q_s</m>.
+        Given a <m>p_i</m>,
+        we know that <m>p_i | q_1^{t_1} q_2^{t_2} \cdots q_s^{t_s}</m>,
+        which implies that <m>p_i | q_j</m> for some <m>j</m> by Claim 2 in the proof of Lemma 2.8.
+        Further, Lemma 2.8 implies that <m>p_i = q_j</m>, and similarly,
+        given a <m>q_j</m>, <m>q_j = p_i</m> for some <m>i</m>.
+        Thus, <m>m =s</m>,
+        and by the ordering of the <m>p_i</m>'s and <m>q_j</m>'s, we have <m>p_i = q_j</m>,
+        <m>i = 1, 2, \ldots, m</m>.
+        Therefore,
+        <me>
+          n = p_1^{r_1} p_2^{r_2} \cdots p_m^{r_m} = p_1^{t_1} p_2^{t_2} \cdots p_m^{t_m}
+        </me>.
+      </p>
+      <p>
+        Now, assume by way of contradiction,
+        that <m>r_i \ne t_i</m> for some <m>i</m>.
+        Without loss of generality, we may assume <m>r_i \lt  t_i</m>.
+        Then <m>p_i^{t_i} | p_1^{r_1} p_2^{r_2} \cdots p_m^{r_m}</m>,
+        which implies that
+        <me>
+          p_i^{t_i - r_i} | p_1^{r_1} p_2^{r_2} \cdots \hat{p}_i^{r_i} \cdots p_m^{r_m}
+        </me>.
+      </p>
+      <p>
+        Since <m>t_i - r_i > 0</m>, we have that
+        <me>
+          p_i  | p_1^{r_1} p_2^{r_2} \cdots \hat{p}_i^{r_i} \cdots p_m^{r_m}
+        </me>,
+        from which <m>p_i | p_j</m> for some <m>j\ne i</m> by Lemma 2.8.
+        This is a contradiction,
+        so <m>r_i = t_i</m> for <m>i = 1, 2, \ldots, m</m>.
+      </p>
+    </proof>
+  </subsection>
+  <subsection xml:id="SubSec-Integers-Mod-m">
+    <title>The Integers modulo <m>m</m></title>
+    <p>
+      If you are familiar with 'military time' then you understand that eighteen hundred hours and 6:00pm are equivalent ways of representing the same time.
+      Similarly, it is common knowledge that if it is 10:00am now,
+      it will again be 10:00am in 24 hours
+      (albeit on a different day).
+      Whether you realize it or not,
+      when you are working with time
+      (in hours)
+      you are working in the integers modulo 12,
+      a concept that is rooted in the mathematical idea of equivalence classes.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Let <m>S</m> be a nonempty set.
+          A <term>relation</term> <m>R</m> on <m>S</m> is a subset of <m>S\times S</m>.
+          If <m>x,y\in S</m> such that <m>(x,y)\in R</m>,
+          we usually write <m>xRy</m> and say that <m>x</m> and <m>y</m> are
+          <term>related under <m>R</m></term>.
+        </p>
+      </statement>
+    </definition>
+    <definition>
+      <statement>
+        <p>
+          Let <m>S</m> be a nonempty set.
+          We say a relation <m>\sim</m> on <m>S</m> is an
+          <term>equivalence relation</term>
+          if the following properties hold:
+          <ul>
+            <li>
+              <p>
+                <m>\sim</m> is <em>reflexive</em>:
+                if <m>a\in S</m>, then <m>a\sim a</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\sim</m> is <em>symmetric</em>:
+                if <m>a,b\in S</m> with <m>a\sim b</m>, then <m>b\sim a</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\sim</m> is <em>transitive</em>:
+                if <m>a,b,c\in S</m> with <m>a\sim b</m> and <m>b\sim c</m>,
+                then <m>a\sim c</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+        <p>
+          Given <m>x\in S</m>, the set
+          <me>
+            \overline{x} = \setof{y\in S}{x\sim y}
+          </me>
+          is called the <term>equivalence class of <m>x</m></term>.
+          Any element <m>z\in \overline{x}</m> is called a
+          <term>representative</term>
+          of the equivalence class.
+        </p>
+      </statement>
+    </definition>
+    <exercise>
+      <statement>
+        <p>
+          Prove that
+          <q>has the same birthday as</q>
+          is an equivalence relation on the set <m>P</m> of all people.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Given any <m>x\in P</m>,
+          clearly <m>x</m> has the same birthday as <m>x</m>.
+        </p>
+        <p>
+          Moreover, if <m>x,y\in P</m> such that <m>x</m> has the same birthday as <m>y</m>,
+          then it is clear that <m>y</m> has the same birthday as <m>x</m>.
+        </p>
+        <p>
+          Finally, if <m>x,y,z\in P</m> such that <m>x</m> has the same birthday as <m>y</m> and <m>y</m> has the same birthday as <m>z</m>,
+          then <m>x</m> must have the same birthday as <m>z</m>.
+        </p>
+      </solution>
+    </exercise>
+    <question>
+      <statement>
+        <p>
+          What other relations can you think of?
+          Write down one example and one non-example of an equivalence relation.
+        </p>
+      </statement>
+    </question>
+    <exercise>
+      <statement>
+        <p>
+          Prove that <m>\le</m> is <em>not</em>
+          an equivalence relation on <m>\Z</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The relation <m>\le</m> fails the symmetry condition.
+          As an example, note that <m>2 \le 3</m>, but <m>3\not\le 2</m>.
+        </p>
+      </solution>
+    </exercise>
+    <definition>
+      <statement>
+        <p>
+          Let <m>a,b\in \Z</m> and <m>m \in \N</m>, <m>m > 1</m>.
+          We say <term><m>a</m> is congruent to <m>b</m> modulo <m>m</m></term> if <m>m\mid a-b</m>.
+          We write <m>a \equiv_m b</m>.
+        </p>
+      </statement>
+    </definition>
+    <exercise>
+      <statement>
+        <p>
+          Justify the following congruences.
+          <ol>
+            <li>
+              <title>(a)</title>
+              <p>
+                <m>18 \equiv_{12} 6</m>
+              </p>
+            </li>
+            <li>
+              <title>(b)</title>
+              <p>
+                <m>47 \equiv_{13} 8</m>
+              </p>
+            </li>
+            <li>
+              <title>(c)</title>
+              <p>
+                <m>71 \equiv_5 1</m>
+              </p>
+            </li>
+            <li>
+              <title>(d)</title>
+              <p>
+                <m>21 \equiv_{11} -1</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+    <theorem>
+      <statement>
+        <p>
+          Given an integer <m>m > 1</m>,
+          congruence modulo <m>m</m> is an equivalence relation on <m>\Z</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Let <m>a\in \Z</m>.
+        Then <m>m|a-a</m>, so <m>a \equiv_m a</m>.
+        Thus, <m>\equiv_m</m> is reflexive.
+      </p>
+      <p>
+        Let <m>a,b\in \Z</m> such that <m>a\equiv_m b</m>.
+        This means that <m>m|a-b</m>,
+        so there is some <m>k\in \Z</m> such that <m>mk = a-b</m>.
+        Then <m>m(-k) = b-a</m>, so <m>m|b-a</m> and <m>b \equiv_m a</m>.
+        Thus, <m>\equiv_m</m> is symmetric.
+      </p>
+      <p>
+        Finally, let <m>a,b,c\in \Z</m> such that
+        <m>a\equiv_m b</m> and <m>b\equiv_m c</m>.
+        Then <m>m|a-b</m> and <m>m|b-c</m>,
+        so there are integers <m>k_1, k_2</m> such that
+        <m>m k_1 = a-b</m> and <m>m k_2 = b-c</m>.
+        Summing these equations yields <m>m(k_1 + k_2) = (a-b) + (b-c) = a-c</m>,
+        so <m>m|a-c</m> and <m>a\equiv_m c</m>.
+      </p>
+    </proof>
+    <question>
+      <statement>
+        <p>
+          What are the equivalence classes of <m>\Z</m> under the relation <m>\equiv_5</m>?
+        </p>
+      </statement>
+      <answer>
+        <p>
+          The equivalence classes are
+          <md>
+            <mrow>\overline{0} \amp = \setof{7k}{k\in\Z} = \set{\ldots, -5, 0, 5, 10, \ldots}</mrow>
+            <mrow>\overline{1} \amp = \setof{7k+1}{k\in\Z} = \set{\ldots, -4, 1, 6, 11, \ldots}</mrow>
+            <mrow>\overline{2} \amp = \setof{7k+2}{k\in\Z} = \set{\ldots, -3, 2, 7, 12, \ldots}</mrow>
+            <mrow>\overline{3} \amp = \setof{7k+3}{k\in\Z} = \set{\ldots, -2, 3, 8, 13, \ldots}</mrow>
+            <mrow>\overline{4} \amp = \setof{7k+4}{k\in\Z} = \set{\ldots, -1, 4, 9, 14, \ldots}</mrow>
+          </md>
+        </p>
+      </answer>
+    </question>
+    <notation>
+      <p>
+        The set of equivalence classes of <m>\Z</m> under
+        <m>\equiv_m</m> is denoted <m>\Z_m</m>.
+      </p>
+    </notation>
+    <exercise>
+      <statement>
+        <p>
+          List the elements of <m>\Z_7</m>.
+        </p>
+      </statement>
+    </exercise>
+    <theorem>
+      <statement>
+        <p>
+          Let <m>a,b, c,d\in \Z</m> and <m>m > 1</m> such that
+          <m>a\equiv_m c</m> and <m>b\equiv_m d</m>.
+          Then <m>a+b \equiv_m c + d</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Write <m>mk_1 = a-c</m> and
+        <m>m k_2 = b-d</m> for some <m>k_1,k_2\in \Z</m>.
+        Then <m>m(k_1 + k_2) = (a-c) + (b-d) = (a+b) - (c+d)</m>,
+        so <m>a+b \equiv_m c+d</m>.
+      </p>
+    </proof>
+    <theorem>
+      <statement>
+        <p>
+          Let <m>a,b, c,d\in \Z</m> and <m>m > 1</m> such that
+          <m>a\equiv_m c</m> and <m>b\equiv_m d</m>.
+          Then <m>ab \equiv_m c d</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Write <m>mk_1 = a-c</m> and
+        <m>m k_2 = b-d</m> for some <m>k_1,k_2\in \Z</m>.
+        Observe
+        <md>
+          <mrow>ab -cd \amp = ab - bc + bc - cd</mrow>
+          <mrow>\amp = b(a-c) + c(b-d)</mrow>
+          <mrow>\amp = bmk_1 + cmk_2</mrow>
+          <mrow>\amp = m(bk_1 + ck_2)</mrow>
+        </md>.
+      </p>
+      <p>
+        Thus, <m>m|ab-cd</m> and <m>ab \equiv_m cd</m>.
+      </p>
+    </proof>
+    <definition>
+      <statement>
+        <p>
+          Let <m>S</m> be a set and <m>\sim</m> an equivalence relation on <m>S</m>.
+          Then a statement <m>P</m> about the equivalence classes of <m>S</m> is <term>well-defined</term>
+          if the representative of the equivalence class does not matter.
+          That is, whenever <m>\overline{x} = \overline{y}</m>,
+          <m>P(\overline{x}) = P(\overline{y})</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      The previous exercises justify the following definitions.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Let <m>m > 1</m> and <m>a,b\in \Z_m</m>.
+          Then the following are well-defined operations on the equivalence classes:
+          <ol>
+            <li>
+              <p>
+                <em>Addition modulo <m>m</m></em>:
+                <m>\overline{a} + \overline{b} := \overline{a+b}</m>.\marginpar{\setstretch{0.7}<em>The symbol <m>:=</m> is often used to indicate that we are <em>defining</em>
+                the expression on the left to equal the expression on the right.</em>}
+              </p>
+            </li>
+            <li>
+              <p>
+                <em>Multiplication modulo <m>m</m></em>:
+                <m>\overline{a}\cdot \overline{b} := \overline{a\cdot b}</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </definition>
+    <question xml:id="q_zmodmcancel">
+      <statement>
+        <p>
+          Let <m>\overline{a},\overline{b}\in \Z_m</m> and <m>m > 1</m>.
+          If <m>\overline{a}\cdot \overline{c} = \overline{b}\cdot \overline{c}</m>,
+          is it true that <m>\overline{a} = \overline{b}</m>?
+          If so, prove it.
+          If not, find an example of when the statement fails to hold.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          It is not true.
+          For example, in <m>\Z_{12}</m>,
+          <m>\overline{6}\cdot \overline{3} = \overline{6}\cdot\overline{1}</m>,
+          but <m>\overline{3}\ne \overline{1}</m>.
+        </p>
+      </answer>
+    </question>
+    <theorem>
+      <statement>
+        <p>
+          Let <m>a,b,c</m>,
+          and <m>m</m> be integers with <m>m > 1</m> and <m>\gcd(c,m)=1</m>.
+          Then there is some <m>x\in \Z</m> such that <m>\overline{c} \overline{x} = \overline{1}</m>.
+        </p>
+        <p>
+          Conclude that if <m>\overline{a} \cdot\overline{c} = \overline{b}\cdot\overline{c}</m> in <m>\Z_m</m> that <m>\overline{a} = \overline{b}</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        We know that <m>m|ac-bc</m>, i.e., that <m>m|c(a-b)</m>.
+        By <xref ref="theorem_relprimecancel">Theorem</xref>, <m>m|a-b</m>.
+      </p>
+    </proof>
+    <theorem xml:id="theorem_cancelinZp">
+      <statement>
+        <p>
+          Let <m>p\in \N</m> be prime and
+          <m>\overline{a},\overline{b},\overline{c}\in \Z_p</m> such that <m>\overline{c}\ne \overline{0}</m>.
+          Then
+          <ol>
+            <li>
+              <p>
+                there is some <m>\overline{x}\in \Z_p</m> such that <m>\overline{c}\cdot \overline{x} = \overline{1}</m>; and,
+              </p>
+            </li>
+            <li>
+              <p>
+                if <m>\overline{a} \cdot\overline{c} = \overline{b}\cdot\overline{c}</m>,
+                <m>\overline{a} = \overline{b}</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        In <m>\Z_p</m>,
+        every nonzero equivalence class is represented by an <m>x</m> for which <m>\gcd(x,p) = 1</m>.
+        Apply the previous theorem.
+      </p>
+    </proof>
+  </subsection>
+</section>

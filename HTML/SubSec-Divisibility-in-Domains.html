@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-12-05T10:11:45-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Divisibility in Integral Domains</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.12;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\labelitemi}{$\diamond$}
+\def\arraystretch{1.5}
+\newcommand{\contentsfinish}{}
+\newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
+\newcommand{\tosay}[1]{\begin{center}\text{\fbox{\scriptsize{#1}}}\end{center}}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsecpagefont}{}
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\smallcaps{#1}}
+\def\oldequation{\equation}
+\def\endoldequation{\endequation}
+\newcommand{\nl}{
+}
+\newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\thesection}.\ \smallcaps{#1}}{\thesection.\ \smallcaps{#1}}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\scriptsize\thesection}.\ \smallcaps{#1}}{}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0.5pt}
+\newcommand{\makedefaultsection}[2][true]{
+}
+\newcommand{\timestamp}{{\color{red}Last updated: {\currenttime\ (UTC), \today}}}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\ideal}[1]{\left\langle\, #1 \,\right\rangle}
+\newcommand{\subgp}[1]{\left\langle\, #1 \,\right\rangle}
+\def\p{\varphi}
+\def\isomorphic{\cong}
+\def\Gal{\text{Gal}}
+\def\im{\text{im}}
+\def\normal{\vartriangleleft}
+\renewcommand{\qedsymbol}{$\checkmark$}
+\def\lcm{{\text{lcm}\,}}
+\newcommand{\q}[1]{{\color{red} {#1}}}
+\newcommand{\startimportant}[1]{\end{[{Hint:} #1]\end}}
+\renewcommand{\textcircled}[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt,color=red] (char) {#1};}}
+\newcommand{\crossout}[1]{\tikz[baseline=(char.base)]{\node[mynode, cross out,draw] (char) {#1};}}
+\newcommand{\set}[1]{\left\{ {#1} \right\}}
+\newcommand{\setof}[2]{{\left\{#1\,\colon\,#2\right\}}}
+\def\C{{\mathbb C}}
+\def\Z{{\mathbb Z}}
+\def\bF{{\mathbb F}}
+\def\Q{{\mathbb Q}}
+\def\N{{\mathbb N}}
+\def\R{{\mathbb R}}
+\newcommand{\h}[1]{{\textbf{#1}}}
+\def\presnotes{}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Modern Algebra</span></a></h1>
+<p class="byline">Michael Janssen, Melissa Lindsey</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="SubSec-Rings.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Sec-Fields-and-Rings.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="SubSec-Principal-Ideals.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="SubSec-Rings.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Sec-Fields-and-Rings.html" title="Up">Up</a><a class="next-button button toolbar-item" href="SubSec-Principal-Ideals.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction">Introduction</a></li>
+<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents">A Note to Students</a></li>
+<li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors">A Note to Instructors</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Sec-Integers.html" data-scroll="Sec-Integers"><span class="codenumber">1</span> <span class="title">The Integers</span></a><ul>
+<li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering">Induction and Well-Ordering</a></li>
+<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers">Divisibility in the integers</a></li>
+<li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization">Primes and Factorization</a></li>
+<li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m">The Integers modulo \(m\)</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Sec-Fields-and-Rings.html" data-scroll="Sec-Fields-and-Rings"><span class="codenumber">2</span> <span class="title">Fields and Rings</span></a><ul>
+<li><a href="SubSec-Fields.html" data-scroll="SubSec-Fields">Fields</a></li>
+<li><a href="SubSec-Rings.html" data-scroll="SubSec-Rings">Rings</a></li>
+<li><a href="SubSec-Divisibility-in-Domains.html" data-scroll="SubSec-Divisibility-in-Domains" class="active">Divisibility in Integral Domains</a></li>
+<li><a href="SubSec-Principal-Ideals.html" data-scroll="SubSec-Principal-Ideals">Principal Ideals</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Sec-Factorization.html" data-scroll="Sec-Factorization"><span class="codenumber">3</span> <span class="title">Factorization</span></a><ul>
+<li><a href="SubSec-Factoring-Polynomials.html" data-scroll="SubSec-Factoring-Polynomials">Factoring Polynomials</a></li>
+<li><a href="SubSec-Factorization-in-Euclidean-Domains.html" data-scroll="SubSec-Factorization-in-Euclidean-Domains">Factorization in Euclidean Domains</a></li>
+<li><a href="SubSec-Nonunique-Factorization.html" data-scroll="SubSec-Nonunique-Factorization">Nonunique Factorization</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Sec-Ideals.html" data-scroll="Sec-Ideals"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a><ul>
+<li><a href="SubSec-Ideals-In-General.html" data-scroll="SubSec-Ideals-In-General">Ideals in general</a></li>
+<li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings">Quotient Rings</a></li>
+<li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms">Homomorphisms</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="SubSec-Divisibility-in-Domains"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Divisibility in Integral Domains</span>
+</h2>
+<a href="SubSec-Divisibility-in-Domains.html" class="permalink">¶</a><p id="p-327">When we introduced the notion of integral domain, we said that part of the reason for the definition was to capture some of the most essential properties of the integers. One such idea is that of cancellation.</p>
+<article class="theorem theorem-like" id="theorem-30"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">2.3.1</span>.</h6>
+<p id="p-328">Let \(R\) be a ring. Then \(R\) is a domain if and only if for all \(a,b,c\in R\) with \(c\ne 0_R\) and \(ac = bc\text{,}\) we have \(a = b\text{.}\)</p></article><article class="hiddenproof" id="proof-28"><a data-knowl="" class="id-ref" data-refid="hk-proof-28"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-28"><article class="hiddenproof"><p id="p-329">Assume \(R\) is a domain and \(ac = bc\text{.}\) Then \(ac - bc = 0\text{,}\) so \(c(a-b) = 0\text{.}\) Since \(R\) is a domain, it has no zero divisors, and therefore either \(c = 0\) or \(a-b=0\text{.}\) The first possibility is ruled out by our assumptions on \(a,b,c\text{,}\) so we must have \(a-b = 0\text{,}\) or \(a =b\text{.}\)</p>
+<p id="p-330">Conversely, assume that \(R\) is not a domain. Let \(z\in R\) be a zero divisor; then there is a nonzero \(x\in R\) such that \(xz = 0 = 0 z\text{.}\) This implies that \(x = 0\text{,}\) a contradiction.</p></article></div>
+<p id="p-331">Thus, the defining property of an integral domain is the ability to <em class="emphasis">cancel</em> common nonzero factors. Note that we have not <em class="emphasis">divided</em>; division is not a binary operation in rings! However, as was the case in \(\Z\text{,}\) there are notions of <em class="emphasis">divisibility</em> and <em class="emphasis">factorization</em> in rings.</p>
+<article class="definition definition-like" id="definition-23"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.3.2</span>.</h6>
+<p id="p-332">Let \(R\) be a commutative ring with identity, and let \(a,b\in R\text{.}\) We say \(a\) <dfn class="terminology">divides</dfn> \(b\) and write \(a\mid b\) if there is a \(c\in R\) such that \(ac = b\text{.}\) We then say that \(a\) is a <dfn class="terminology">factor</dfn> of \(b\text{.}\)</p></article><p id="p-333">Our notion of primality also extends nicely to domains.</p>
+<article class="definition definition-like" id="definition-24"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.3.3</span>.</h6>
+<p id="p-334">Let \(R\) be a domain. We say a nonzero nonunit element \(a\in R\) is <dfn class="terminology">prime</dfn> if whenever \(a\mid bc\) for some \(b,c\in R\text{,}\) either \(a|b\) or \(a|c\text{.}\)</p></article><p id="p-335">A notion related to primality is irreducibility.</p>
+<article class="definition definition-like" id="def_irreducibleelement"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.3.4</span>.</h6>
+<p id="p-336">Let \(R\) be a domain. We say a nonzero nonunit element \(a\in R\) is <dfn class="terminology">irreducible</dfn> if whenever \(a = bc\) for some \(b,c\in R\text{,}\) one of \(b\) or \(c\) is a unit.</p></article><p id="p-337">In familiar settings, the notion of prime and irreducible exactly coincide.</p>
+<article class="theorem theorem-like" id="theorem-31"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">2.3.5</span>.</h6>
+<p id="p-338">Let \(R\) be a domain. If \(a\in R\) is prime, then \(a\) is irreducible.</p></article><article class="hiddenproof" id="proof-29"><a data-knowl="" class="id-ref" data-refid="hk-proof-29"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-29"><article class="hiddenproof"><p id="p-339">Compare to the proof of <a data-knowl="./knowl/theorem_euclidslemma.html" title="Theorem 1.3.2">Theorem 1.3.2</a>.</p>
+<p id="p-340">Let \(a\in R\) be prime, and suppose that \(a = bc\) for some \(b,c\in R\text{.}\) Then \(a|bc\text{,}\) so by definition either \(a|b\) or \(a|c\text{.}\) Without loss of generality, assume \(a|b\text{.}\) Then there is a \(k\in R\) such that \(ak=b\text{,}\) so \(a = (ak)c\text{,}\) and we may cancel \(a\) to obtain \(1_R = kc\text{.}\) Thus, \(c\) is a unit, making \(a\) irreducible.</p></article></div>
+<article class="theorem theorem-like" id="theorem-32"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">2.3.6</span>.</h6>
+<p id="p-341">Every irreducible in \(\Z\) is prime.</p></article><article class="hiddenproof" id="proof-30"><a data-knowl="" class="id-ref" data-refid="hk-proof-30"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-30"><article class="hiddenproof"><p id="p-342">Let \(p\in \Z\) be irreducible, and suppose that \(d|p\text{.}\) Then \(p = de\text{.}\) Since \(p\) is irreducible, either \(d\) or \(e\) is a unit. However, the only units are \(\pm 1\text{,}\) so either one of \(d\) or \(e\) is \(p\) or \(-p\text{.}\) In either case, \(p\) is prime.</p></article></div>
+<p id="p-343">It is not the case in all domains that irreducibles are primes, as the next exercise illustrates.</p>
+<article class="exercise exercise-like" id="exer_irreduciblenotprime"><a data-knowl="" class="id-ref" data-refid="hk-exer_irreduciblenotprime"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">2.3.7</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer_irreduciblenotprime"><article class="exercise exercise-like"><p id="p-344">Consider the set \(R\) of all polynomials in \(\Z[x]\) for which the coefficient on the linear term is zero. That is,</p>
+<div class="displaymath">
+\begin{equation*}
+R = \setof{a_0 + a_2 x^2 + \cdots + a_{n-1} x^{n-1} + a_n x^n}{a_i\in \Z,\ n\in\N}\text{.}
+\end{equation*}
+</div>
+<p id="p-345">(You should convince yourself that \(R\) is an integral domain, but do not need to prove it.) Find a polynomial of the form \(x^n\) in \(R\) that is irreducible, but not prime.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-9" id="solution-9"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like">
+<p id="p-346">Consider \(f(x) = x^2\text{.}\) Then \(f(x)\) is irreducible, as it cannot be factored into a product of linear polynomials (there aren't any in \(R\)), so any factorization of \(f\) is degree 2 times degree 0. Then the leading coefficients must be units, i.e., both 1 or both \(-1\text{.}\)</p>
+<p id="p-347">However, \(f\) is not prime, as \(f| x^3 \cdot x^3\) but \(f\nmid x^3\text{.}\)</p>
+</div></div>
+</div></article></div>
+<article class="definition definition-like" id="definition-26"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.3.8</span>.</h6>
+<p id="p-348">Let \(R\) be a domain, and let \(a,b\in R\text{.}\) A nonzero element \(d\in R\) is a <dfn class="terminology">greatest common divisor</dfn> of \(a\) and \(b\) if</p>
+<ol class="decimal">
+<li id="li-93"><p id="p-349">\(d\mid a\) and \(d\mid b\) and,</p></li>
+<li id="li-94"><p id="p-350">if \(e\in R\) with \(e\mid a\) and \(e\mid b\text{,}\) then \(e\mid d\text{.}\)</p></li>
+</ol></article><article class="theorem theorem-like" id="theorem-33"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">2.3.9</span>.</h6>
+<p id="p-351">Let \(R\) be a domain and \(a,b\in R\) and suppose \(d\) is a greatest common divisor of \(a\) and \(b\text{.}\) Then any associate of \(d\) is also a greatest common divisor of \(a\) and \(b\text{.}\)</p></article><article class="hiddenproof" id="proof-31"><a data-knowl="" class="id-ref" data-refid="hk-proof-31"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-31"><article class="hiddenproof"><p id="p-352">Let \(d\) be a gcd of \(a\) and \(b\text{,}\) let \(u\in R^\times\text{,}\) and \(e =ud\text{.}\) We claim \(e\) is also a gcd of \(a\) and \(b\text{.}\)</p>
+<p id="p-353">Since \(d|a\) and \(d|b\) there are \(k_1,k_2\in R\) such that \(d k_1 = a\) and \(d k_2 = b\text{.}\) Then \(e (u^{-1} k_1) = a\) and \(e (u^{-1} k_2) = b\text{,}\) so \(e|a\) and \(e|b\text{.}\)</p>
+<p id="p-354">Let \(f\) be a common divisor of \(a\) and \(b\text{.}\) Since \(d\) is a gcd, \(f|d\text{,}\) i.e., \(f k_3 = d\text{.}\) Then \(f (uk_3) = e\text{,}\) so \(f|e\text{.}\)</p>
+<p id="p-355">Thus, \(e\) is a gcd of \(a\) and \(b\text{.}\)</p></article></div>
+<article class="exercise exercise-like" id="exercise-16"><a data-knowl="" class="id-ref" data-refid="hk-exercise-16"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">2.3.10</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-16"><article class="exercise exercise-like"><p id="p-356">In most familiar domains, GCDs exist. However, they don't always! Find an example of elements in the ring from <a data-knowl="./knowl/exer_irreduciblenotprime.html" title="Checkpoint 2.3.7">Exercise 2.3.7</a> which do not have a GCD. Justify your assertion.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-10" id="solution-10"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
+<p id="p-357">Consider \(x^5\) and \(x^6\text{.}\) First note that \(x^4\) is not a common divisor in \(R\text{.}\)</p>
+<p id="p-358">Both \(x^5\) and \(x^6\) are divisible by \(x^3\) and \(x^2\) in \(R\text{.}\) However, neither can be the gcd, as \(x^2\nmid x^3\) and \(x^3\nmid x^2\text{.}\)</p>
+</div></div>
+</div></article></div>
+<article class="exercise exercise-like" id="exer_ringgeneralityone"><a data-knowl="" class="id-ref" data-refid="hk-exer_ringgeneralityone"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">2.3.11</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer_ringgeneralityone"><article class="exercise exercise-like"><p id="p-359">Fill in the following blanks in order of increasing generality with the words <em class="emphasis">ring</em>, <em class="emphasis">integral domain</em>, <em class="emphasis">field</em>, and <em class="emphasis">commutative ring</em>.</p>
+<p id="p-360">\makebox[0.75in]{\hrulefill} \(\Rightarrow\) \makebox[0.75in]{\hrulefill} \(\Rightarrow\) \makebox[0.75in]{\hrulefill} \(\Rightarrow\) \makebox[0.75in]{\hrulefill}</p></article></div></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.12/login.js"></script>
+</body>
+</html>

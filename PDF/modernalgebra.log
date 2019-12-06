@@ -1,0 +1,3555 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  25 NOV 2019 12:08
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**modernalgebra.tex
+(./modernalgebra.tex
+LaTeX2e <2018-12-01>
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2018/09/03 v1.4i Standard LaTeX document class
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2018/04/16 v5.8 Page Geometry
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count89
+\Gm@cntv=\count90
+\c@Gm@tempcnt=\count91
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count92
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen111
+\Gin@req@width=\dimen112
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Package option `usenames' ignored on input line 216.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2018/12/12 v1.0d Color table columns (DPC)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tools/array.sty
+Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
+\col@sep=\dimen113
+\ar@mcellbox=\box27
+\extrarowheight=\dimen114
+\NC@list=\toks16
+\extratabsurround=\skip43
+\backup@length=\skip44
+\ar@cellbox=\box28
+)
+\everycr=\toks17
+\minrowclearance=\skip45
+)
+\rownum=\count93
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/xcolor/svgnam.def
+File: svgnam.def 2016/05/11 v2.12 Predefined colors according to SVG 1.1 (UK)
+))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2019/03/02 version 4.20 text color boxes
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
+\pgfutil@everybye=\toks18
+\pgfutil@tempdima=\dimen115
+\pgfutil@tempdimb=\dimen116
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
+sts.tex))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box29
+(/usr/local/texlive/2019/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2019/04/04 v3.1.2 (3.1.2)
+))
+Package: pgf 2019/04/04 v3.1.2 (3.1.2)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2019/04/04 v3.1.2 (3.1.2)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks19
+\pgfkeys@temptoks=\toks20
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+ode.tex
+\pgfkeys@tmptoks=\toks21
+))
+\pgf@x=\dimen117
+\pgf@y=\dimen118
+\pgf@xa=\dimen119
+\pgf@ya=\dimen120
+\pgf@xb=\dimen121
+\pgf@yb=\dimen122
+\pgf@xc=\dimen123
+\pgf@yc=\dimen124
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count94
+\c@pgf@countb=\count95
+\c@pgf@countc=\count96
+\c@pgf@countd=\count97
+\t@pgf@toka=\toks22
+\t@pgf@tokb=\toks23
+\t@pgf@tokc=\toks24
+\pgf@sys@id@count=\count98
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2019/04/04 v3.1.2 (3.1.2)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+File: pgfsys-pdftex.def 2019/04/04 v3.1.2 (3.1.2)
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def
+File: pgfsys-common-pdf.def 2019/04/04 v3.1.2 (3.1.2)
+)))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex
+File: pgfsyssoftpath.code.tex 2019/04/04 v3.1.2 (3.1.2)
+\pgfsyssoftpath@smallbuffer@items=\count99
+\pgfsyssoftpath@bigbuffer@items=\count100
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex
+File: pgfsysprotocol.code.tex 2019/04/04 v3.1.2 (3.1.2)
+))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2019/04/04 v3.1.2 (3.1.2)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen125
+\pgfmath@count=\count101
+\pgfmath@box=\box30
+\pgfmath@toks=\toks25
+\pgfmath@stack@operand=\toks26
+\pgfmath@stack@operation=\toks27
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count102
+))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex
+File: pgfcorepoints.code.tex 2019/04/04 v3.1.2 (3.1.2)
+\pgf@picminx=\dimen126
+\pgf@picmaxx=\dimen127
+\pgf@picminy=\dimen128
+\pgf@picmaxy=\dimen129
+\pgf@pathminx=\dimen130
+\pgf@pathmaxx=\dimen131
+\pgf@pathminy=\dimen132
+\pgf@pathmaxy=\dimen133
+\pgf@xx=\dimen134
+\pgf@xy=\dimen135
+\pgf@yx=\dimen136
+\pgf@yy=\dimen137
+\pgf@zx=\dimen138
+\pgf@zy=\dimen139
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex
+File: pgfcorepathconstruct.code.tex 2019/04/04 v3.1.2 (3.1.2)
+\pgf@path@lastx=\dimen140
+\pgf@path@lasty=\dimen141
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex
+File: pgfcorepathusage.code.tex 2019/04/04 v3.1.2 (3.1.2)
+\pgf@shorten@end@additional=\dimen142
+\pgf@shorten@start@additional=\dimen143
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex
+File: pgfcorescopes.code.tex 2019/04/04 v3.1.2 (3.1.2)
+\pgfpic=\box31
+\pgf@hbox=\box32
+\pgf@layerbox@main=\box33
+\pgf@picture@serial@count=\count103
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex
+File: pgfcoregraphicstate.code.tex 2019/04/04 v3.1.2 (3.1.2)
+\pgflinewidth=\dimen144
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex
+File: pgfcoretransformations.code.tex 2019/04/04 v3.1.2 (3.1.2)
+\pgf@pt@x=\dimen145
+\pgf@pt@y=\dimen146
+\pgf@pt@temp=\dimen147
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex
+File: pgfcorequick.code.tex 2019/04/04 v3.1.2 (3.1.2)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex
+File: pgfcoreobjects.code.tex 2019/04/04 v3.1.2 (3.1.2)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex
+File: pgfcorepathprocessing.code.tex 2019/04/04 v3.1.2 (3.1.2)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex
+File: pgfcorearrows.code.tex 2019/04/04 v3.1.2 (3.1.2)
+\pgfarrowsep=\dimen148
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex
+File: pgfcoreshade.code.tex 2019/04/04 v3.1.2 (3.1.2)
+\pgf@max=\dimen149
+\pgf@sys@shading@range@num=\count104
+\pgf@shadingcount=\count105
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex
+File: pgfcoreimage.code.tex 2019/04/04 v3.1.2 (3.1.2)
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex
+File: pgfcoreexternal.code.tex 2019/04/04 v3.1.2 (3.1.2)
+\pgfexternal@startupbox=\box34
+))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex
+File: pgfcorelayers.code.tex 2019/04/04 v3.1.2 (3.1.2)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex
+File: pgfcoretransparency.code.tex 2019/04/04 v3.1.2 (3.1.2)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex
+File: pgfcorepatterns.code.tex 2019/04/04 v3.1.2 (3.1.2)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex
+File: pgfcorerdf.code.tex 2019/04/04 v3.1.2 (3.1.2)
+)))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
+File: pgfmoduleshapes.code.tex 2019/04/04 v3.1.2 (3.1.2)
+\pgfnodeparttextbox=\box35
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
+File: pgfmoduleplot.code.tex 2019/04/04 v3.1.2 (3.1.2)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
+Package: pgfcomp-version-0-65 2019/04/04 v3.1.2 (3.1.2)
+\pgf@nodesepstart=\dimen150
+\pgf@nodesepend=\dimen151
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
+Package: pgfcomp-version-1-18 2019/04/04 v3.1.2 (3.1.2)
+)) (/usr/local/texlive/2019/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks28
+\verbatim@line=\toks29
+\verbatim@in@stream=\read2
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)
+\@envbody=\toks30
+)
+\tcb@titlebox=\box36
+\tcb@upperbox=\box37
+\tcb@lowerbox=\box38
+\tcb@phantombox=\box39
+\c@tcbbreakpart=\count106
+\c@tcblayer=\count107
+\tcolorbox@number=\count108
+\tcb@temp=\box40
+\tcb@temp=\box41
+\tcb@temp=\box42
+\tcb@temp=\box43
+\tcb@out=\write4
+\tcb@record@out=\write5
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '4.20'
+(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2019/04/04 v3.1.2 (3.1.2)
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen152
+\pgffor@skip=\dimen153
+\pgffor@stack=\toks31
+\pgffor@toks=\toks32
+))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+Package: tikz 2019/04/04 v3.1.2 (3.1.2)
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
+File: pgflibraryplothandlers.code.tex 2019/04/04 v3.1.2 (3.1.2)
+\pgf@plot@mark@count=\count109
+\pgfplotmarksize=\dimen154
+)
+\tikz@lastx=\dimen155
+\tikz@lasty=\dimen156
+\tikz@lastxsaved=\dimen157
+\tikz@lastysaved=\dimen158
+\tikzleveldistance=\dimen159
+\tikzsiblingdistance=\dimen160
+\tikz@figbox=\box44
+\tikz@figbox@bg=\box45
+\tikz@tempbox=\box46
+\tikz@tempbox@bg=\box47
+\tikztreelevel=\count110
+\tikznumberofchildren=\count111
+\tikznumberofcurrentchild=\count112
+\tikz@fig@count=\count113
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
+File: pgfmodulematrix.code.tex 2019/04/04 v3.1.2 (3.1.2)
+\pgfmatrixcurrentrow=\count114
+\pgfmatrixcurrentcolumn=\count115
+\pgf@matrix@numberofcolumns=\count116
+)
+\tikz@expandcount=\count117
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2019/04/04 v3.1.2 (3.1.2)
+)))
+\tcb@waterbox=\box48
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '4.20'
+))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '4.20'
+\tcb@testbox=\box49
+\tcb@totalupperbox=\box50
+\tcb@totallowerbox=\box51
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
+Library (tcolorbox): 'tcbraster.code.tex' version '4.20'
+\c@tcbrastercolumn=\count118
+\c@tcbrasterrow=\count119
+\c@tcbraster=\count120
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/tcolorbox/tcbxparse.code.tex
+Library (tcolorbox): 'tcbxparse.code.tex' version '4.20'
+(/usr/local/texlive/2019/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2019/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2019-05-07 L3 programming layer (loader) 
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2019-05-07 L3 programming layer (code)
+\c_max_int=\count121
+\l_tmpa_int=\count122
+\l_tmpb_int=\count123
+\g_tmpa_int=\count124
+\g_tmpb_int=\count125
+\g__kernel_prg_map_int=\count126
+\c__ior_term_ior=\count127
+\c_log_iow=\count128
+\l_iow_line_count_int=\count129
+\l__iow_line_target_int=\count130
+\l__iow_one_indent_int=\count131
+\l__iow_indent_int=\count132
+\c_zero_dim=\dimen161
+\c_max_dim=\dimen162
+\l_tmpa_dim=\dimen163
+\l_tmpb_dim=\dimen164
+\g_tmpa_dim=\dimen165
+\g_tmpb_dim=\dimen166
+\c_zero_skip=\skip46
+\c_max_skip=\skip47
+\l_tmpa_skip=\skip48
+\l_tmpb_skip=\skip49
+\g_tmpa_skip=\skip50
+\g_tmpb_skip=\skip51
+\c_zero_muskip=\muskip10
+\c_max_muskip=\muskip11
+\l_tmpa_muskip=\muskip12
+\l_tmpb_muskip=\muskip13
+\g_tmpa_muskip=\muskip14
+\g_tmpb_muskip=\muskip15
+\l_keys_choice_int=\count133
+\l__intarray_loop_int=\count134
+\c__intarray_sp_dim=\dimen167
+\g__intarray_font_int=\count135
+\c__fp_leading_shift_int=\count136
+\c__fp_middle_shift_int=\count137
+\c__fp_trailing_shift_int=\count138
+\c__fp_big_leading_shift_int=\count139
+\c__fp_big_middle_shift_int=\count140
+\c__fp_big_trailing_shift_int=\count141
+\c__fp_Bigg_leading_shift_int=\count142
+\c__fp_Bigg_middle_shift_int=\count143
+\c__fp_Bigg_trailing_shift_int=\count144
+\c__kernel_randint_max_int=\count145
+\g__fp_array_int=\count146
+\l__fp_array_loop_int=\count147
+\l__sort_length_int=\count148
+\l__sort_min_int=\count149
+\l__sort_top_int=\count150
+\l__sort_max_int=\count151
+\l__sort_true_max_int=\count152
+\l__sort_block_int=\count153
+\l__sort_begin_int=\count154
+\l__sort_end_int=\count155
+\l__sort_A_int=\count156
+\l__sort_B_int=\count157
+\l__sort_C_int=\count158
+\l__tl_analysis_normal_int=\count159
+\l__tl_analysis_index_int=\count160
+\l__tl_analysis_nesting_int=\count161
+\l__tl_analysis_type_int=\count162
+\l__regex_internal_a_int=\count163
+\l__regex_internal_b_int=\count164
+\l__regex_internal_c_int=\count165
+\l__regex_balance_int=\count166
+\l__regex_group_level_int=\count167
+\l__regex_mode_int=\count168
+\c__regex_cs_in_class_mode_int=\count169
+\c__regex_cs_mode_int=\count170
+\l__regex_catcodes_int=\count171
+\l__regex_default_catcodes_int=\count172
+\c__regex_catcode_D_int=\count173
+\c__regex_catcode_S_int=\count174
+\c__regex_catcode_L_int=\count175
+\c__regex_catcode_O_int=\count176
+\c__regex_catcode_A_int=\count177
+\c__regex_all_catcodes_int=\count178
+\l__regex_show_lines_int=\count179
+\l__regex_min_state_int=\count180
+\l__regex_max_state_int=\count181
+\l__regex_left_state_int=\count182
+\l__regex_right_state_int=\count183
+\l__regex_capturing_group_int=\count184
+\l__regex_min_pos_int=\count185
+\l__regex_max_pos_int=\count186
+\l__regex_curr_pos_int=\count187
+\l__regex_start_pos_int=\count188
+\l__regex_success_pos_int=\count189
+\l__regex_curr_char_int=\count190
+\l__regex_curr_catcode_int=\count191
+\l__regex_last_char_int=\count192
+\l__regex_case_changed_char_int=\count193
+\l__regex_curr_state_int=\count194
+\l__regex_step_int=\count195
+\l__regex_min_active_int=\count196
+\l__regex_max_active_int=\count197
+\l__regex_replacement_csnames_int=\count198
+\l__regex_match_count_int=\count199
+\l__regex_min_submatch_int=\count266
+\l__regex_submatch_int=\count267
+\l__regex_zeroth_submatch_int=\count268
+\g__regex_trace_regex_int=\count269
+\c_empty_box=\box52
+\l_tmpa_box=\box53
+\l_tmpb_box=\box54
+\g_tmpa_box=\box55
+\g_tmpb_box=\box56
+\l__box_top_dim=\dimen168
+\l__box_bottom_dim=\dimen169
+\l__box_left_dim=\dimen170
+\l__box_right_dim=\dimen171
+\l__box_top_new_dim=\dimen172
+\l__box_bottom_new_dim=\dimen173
+\l__box_left_new_dim=\dimen174
+\l__box_right_new_dim=\dimen175
+\l__box_internal_box=\box57
+\l__coffin_internal_box=\box58
+\l__coffin_internal_dim=\dimen176
+\l__coffin_offset_x_dim=\dimen177
+\l__coffin_offset_y_dim=\dimen178
+\l__coffin_x_dim=\dimen179
+\l__coffin_y_dim=\dimen180
+\l__coffin_x_prime_dim=\dimen181
+\l__coffin_y_prime_dim=\dimen182
+\c_empty_coffin=\box59
+\l__coffin_aligned_coffin=\box60
+\l__coffin_aligned_internal_coffin=\box61
+\l_tmpa_coffin=\box62
+\l_tmpb_coffin=\box63
+\g_tmpa_coffin=\box64
+\g_tmpb_coffin=\box65
+\l__coffin_bounding_shift_dim=\dimen183
+\l__coffin_left_corner_dim=\dimen184
+\l__coffin_right_corner_dim=\dimen185
+\l__coffin_bottom_corner_dim=\dimen186
+\l__coffin_top_corner_dim=\dimen187
+\l__coffin_scaled_total_height_dim=\dimen188
+\l__coffin_scaled_width_dim=\dimen189
+\c__coffin_empty_coffin=\box66
+\l__coffin_display_coffin=\box67
+\l__coffin_display_coord_coffin=\box68
+\l__coffin_display_pole_coffin=\box69
+\l__coffin_display_offset_dim=\dimen190
+\l__coffin_display_x_dim=\dimen191
+\l__coffin_display_y_dim=\dimen192
+\g__file_internal_ior=\read3
+\l__seq_internal_a_int=\count270
+\l__seq_internal_b_int=\count271
+\c__deprecation_minus_one=\count272
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+File: l3pdfmode.def 2019-04-06 v L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count273
+\l__driver_pdf_tmp_box=\box70
+))
+Package: xparse 2019-05-03 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count274
+\g__xparse_grabber_int=\count275
+\l__xparse_m_args_int=\count276
+\l__xparse_v_nesting_int=\count277
+))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks33
+\inpenc@posthook=\toks34
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/lm/lmodern.sty
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip52
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks35
+\ex@=\dimen193
+))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen194
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count278
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count279
+\leftroot@=\count280
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count281
+\DOTSCASE@=\count282
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box71
+\strutbox@=\box72
+\big@size=\dimen195
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count283
+\c@MaxMatrixCols=\count284
+\dotsspace@=\muskip16
+\c@parentequation=\count285
+\dspbrk@lvl=\count286
+\tag@help=\toks36
+\row@=\count287
+\column@=\count288
+\maxfields@=\count289
+\andhelp@=\toks37
+\eqnshift@=\dimen196
+\alignsep@=\dimen197
+\tagshift@=\dimen198
+\tagwidth@=\dimen199
+\totwidth@=\dimen256
+\lineht@=\dimen257
+\@envbody=\toks38
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks39
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
+\ttl@box=\box73
+\beforetitleunit=\skip55
+\aftertitleunit=\skip56
+\ttl@plus=\dimen258
+\ttl@minus=\dimen259
+\ttl@toksa=\toks40
+\titlewidth=\dimen260
+\titlewidthlast=\dimen261
+\titlewidthfirst=\dimen262
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/titlesec/ttlps.def
+File: ttlps.def 2016/03/15
+))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/titlesec/ttlkeys.def
+File: ttlkeys.def 2016/03/15
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/titlesec/block.tss
+File: block.tss 2016/03/15
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2017/10/31 v2.20.4
+\thm@style=\toks41
+\thm@bodyfont=\toks42
+\thm@headfont=\toks43
+\thm@notefont=\toks44
+\thm@headpunct=\toks45
+\thm@preskip=\skip57
+\thm@postskip=\skip58
+\thm@headsep=\skip59
+\dth@everypar=\toks46
+)
+\c@cthm=\count290
+\c@cpjt=\count291
+\Oldarrayrulewidth=\skip60
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count292
+\float@exts=\toks47
+\float@box=\box74
+\@float@everytoks=\toks48
+\@floatcapt=\box75
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/caption/newfloat.sty
+Package: newfloat 2018/03/04 v1.1a Defining new floating environments (AR)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen263
+\captionmargin@=\dimen264
+\captionwidth=\dimen265
+\caption@tempdima=\dimen266
+\caption@indent=\dimen267
+\caption@parindent=\dimen268
+\caption@hangindent=\dimen269
+)
+\c@caption@flags=\count293
+\c@ContinuedFloat=\count294
+Package caption Info: float package is loaded.
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/02/04 v3.8 Customized lists
+\labelindent=\skip61
+\enit@outerparindent=\dimen270
+\enit@toks=\toks49
+\enit@inbox=\box76
+\enit@count@id=\count295
+\enitdp@description=\count296
+)
+\enitdp@referencelist=\count297
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/imakeidx/imakeidx.sty
+Package: imakeidx 2016/10/15 v1.3e Package for typesetting indices in a synchro
+nous mode
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2019/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks50
+\XKV@tempa@toks=\toks51
+)
+\XKV@depth=\count298
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
+\c@tracingmulticols=\count299
+\mult@box=\box77
+\multicol@leftmargin=\dimen271
+\c@unbalance=\count300
+\c@collectmore=\count301
+\doublecol@number=\count302
+\multicoltolerance=\count303
+\multicolpretolerance=\count304
+\full@width=\dimen272
+\page@free=\dimen273
+\premulticols=\dimen274
+\postmulticols=\dimen275
+\multicolsep=\skip62
+\multicolbaselineskip=\skip63
+\partial@page=\box78
+\last@line=\box79
+\maxbalancingoverflow=\dimen276
+\mult@rightbox=\box80
+\mult@grightbox=\box81
+\mult@gfirstbox=\box82
+\mult@firstbox=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\c@columnbadness=\count305
+\c@finalcolumnbadness=\count306
+\last@try=\dimen277
+\multicolovershoot=\dimen278
+\multicolundershoot=\dimen279
+\mult@nat@firstbox=\box101
+\colbreak@box=\box102
+\mc@col@check@num=\count307
+))
+\modernalgebra@idxfile=\write6
+\openout6 = `modernalgebra.idx'.
+
+
+Writing index file modernalgebra.idx
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)+ FMi change
+\LTleft=\skip64
+\LTright=\skip65
+\LTpre=\skip66
+\LTpost=\skip67
+\LTchunksize=\count308
+\LTcapwidth=\dimen280
+\LT@head=\box103
+\LT@firsthead=\box104
+\LT@foot=\box105
+\LT@lastfoot=\box106
+\LT@cols=\count309
+\LT@rows=\count310
+\c@LT@tables=\count311
+\c@LT@chunks=\count312
+\LT@p@ftn=\toks52
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen281
+\Hy@linkcounter=\count313
+\Hy@pagecounter=\count314
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count315
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `hyperfootnotes' set `false' on input line 4393.
+Package hyperref Info: Hyper figures OFF on input line 4519.
+Package hyperref Info: Link nesting OFF on input line 4524.
+Package hyperref Info: Hyper index ON on input line 4527.
+Package hyperref Info: Plain pages OFF on input line 4534.
+Package hyperref Info: Backreferencing OFF on input line 4539.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4772.
+\c@Hy@tempcnt=\count316
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5125.
+\XeTeXLinkMargin=\dimen282
+\Fld@menulength=\count317
+\Field@Width=\dimen283
+\Fld@charsize=\dimen284
+Package hyperref Info: Hyper figures OFF on input line 6380.
+Package hyperref Info: Link nesting OFF on input line 6385.
+Package hyperref Info: Hyper index ON on input line 6388.
+Package hyperref Info: backreferencing OFF on input line 6395.
+Package hyperref Info: Link coloring OFF on input line 6400.
+Package hyperref Info: Link coloring with OCG OFF on input line 6405.
+Package hyperref Info: PDF/A mode OFF on input line 6410.
+LaTeX Info: Redefining \ref on input line 6450.
+LaTeX Info: Redefining \pageref on input line 6454.
+\Hy@abspage=\count318
+\c@Item=\count319
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
+\Fld@listcount=\count320
+\c@bookmark@seq@number=\count321
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip68
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 428.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tkz-graph/tkz-graph.sty
+Package: tkz-graph 2018/09/19 ctan v 1.00 d base for graphs
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2019/04/04 v3.1.2 (3.1.2)
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+code.tex
+File: pgflibraryarrows.code.tex 2019/04/04 v3.1.2 (3.1.2)
+\arrowsize=\dimen285
+))
+\c@tkz@gr@a=\count322
+\c@tkz@gr@b=\count323
+\c@tkz@gr@c=\count324
+\c@tkz@gr@e=\count325
+\c@tkz@gr@d=\count326
+\c@tkz@gr@p=\count327
+\c@tkz@gr@i=\count328
+\c@tkz@gr@n=\count329
+\c@tkz@gr@ta=\count330
+\c@tkz@gr@tb=\count331
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tkz-euclide/tkz-euclide.sty
+Package: tkz-euclide 2011/06/01 1.16 c for plots 2d 
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tkz-base/tkz-base.sty
+Package: tkz-base 2018/09/19 1.16 d tkz-base
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2019/04/04 v3.1.2 (3.1.2)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2019/04/04 v3.1.2 (3.1.2)
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmar
+ks.code.tex
+File: pgflibraryplotmarks.code.tex 2019/04/04 v3.1.2 (3.1.2)
+))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2019/04/04 v3.1.2 (3.1.2)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2019/04/04 v3.1.2 (3.1.2)
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2019/04/04 v3.1.2 (3.1.2)
+))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.code.tex
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
+s.code.tex
+\pgfdecoratedcompleteddistance=\dimen286
+\pgfdecoratedremainingdistance=\dimen287
+\pgfdecoratedinputsegmentcompleteddistance=\dimen288
+\pgfdecoratedinputsegmentremainingdistance=\dimen289
+\pgf@decorate@distancetomove=\dimen290
+\pgf@decorate@repeatstate=\count332
+\pgfdecorationsegmentamplitude=\dimen291
+\pgfdecorationsegmentlength=\dimen292
+)
+\tikz@lib@dec@box=\box107
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.markings.code.tex
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.markings.code.tex))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathreplacing.code.tex
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathreplacing.code.tex))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypatterns.code.tex
+File: tikzlibrarypatterns.code.tex 2019/04/04 v3.1.2 (3.1.2)
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/pgflibrarypattern
+s.code.tex
+File: pgflibrarypatterns.code.tex 2019/04/04 v3.1.2 (3.1.2)
+))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/numprint/numprint.sty
+Package: numprint 2012/08/20 v1.39 Print numbers (HH)
+\c@nprt@mantissa@digitsbefore=\count333
+\c@nprt@mantissa@digitsafter=\count334
+\c@nprt@exponent@digitsbefore=\count335
+\c@nprt@exponent@digitsafter=\count336
+\nprt@digitwidth=\skip69
+\nprt@sepwidth=\skip70
+\nprt@decimalwidth=\skip71
+\nprt@blockwidth=\skip72
+\nprt@digittoks=\toks53
+\nprt@pretoks=\toks54
+\nprt@posttoks=\toks55
+\nprt@thisdigit=\count337
+\nprt@curpos=\count338
+\nprt@rndpos=\count339
+\c@nprt@digitsfirstblock=\count340
+\c@nprt@blockcnt=\count341
+\c@nprt@cntprint=\count342
+
+No configuration file `numprint.cfg' found.)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/fp/fp.sty
+Package: fp 1995/04/02
+
+`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
+(/usr/local/texlive/2019/texmf-dist/tex/latex/fp/defpattern.sty
+Package: defpattern 1994/10/12
+\actioncount=\count343
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/fp/fp-basic.sty
+Package: fp-basic 1996/05/13
+\FP@xs=\count344
+\FP@xia=\count345
+\FP@xib=\count346
+\FP@xfa=\count347
+\FP@xfb=\count348
+\FP@rega=\count349
+\FP@regb=\count350
+\FP@regs=\count351
+\FP@times=\count352
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/fp/fp-addons.sty
+Package: fp-addons 1995/03/15
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/fp/fp-snap.sty
+Package: fp-snap 1995/04/05
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/fp/fp-exp.sty
+Package: fp-exp 1995/04/03
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/fp/fp-trigo.sty
+Package: fp-trigo 1995/04/14
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/fp/fp-pas.sty
+Package: fp-pas 1994/08/29
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/fp/fp-random.sty
+Package: fp-random 1995/02/23
+\FPseed=\count353
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/fp/fp-eqn.sty
+Package: fp-eqn 1995/04/03
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/fp/fp-upn.sty
+Package: fp-upn 1996/10/21
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/fp/fp-eval.sty
+Package: fp-eval 1995/04/03
+))
+\tkzRadius=\dimen293
+\tkzLength=\dimen294
+\tkz@radi=\dimen295
+\tkz@ax=\dimen296
+\tkz@ay=\dimen297
+\tkz@bx=\dimen298
+\tkz@by=\dimen299
+\tkz@cx=\dimen300
+\tkz@cy=\dimen301
+\tkz@dx=\dimen302
+\tkz@dy=\dimen303
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tkz-base/tkz-tools-utilities.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tkz-base/tkz-tools-arith.tex
+File: tkz-tool-arith.tex tkz-tool-arith 1.161 d
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tkz-base/tkz-tools-base.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tkz-base/tkz-tools-misc.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tkz-base/tkz-tools-math.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tkz-base/tkz-obj-points.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tkz-base/tkz-obj-segments.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tkz-base/tkz-obj-marks.tex
+\tkz@cntmk=\count354
+))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tkz-euclide/tkz-tools-intersectio
+ns.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tkz-euclide/tkz-tools-transformat
+ions.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tkz-euclide/tkz-obj-lines.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tkz-euclide/tkz-lib-symbols.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tkz-euclide/tkz-obj-circles.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tkz-euclide/tkz-obj-addpoints.tex
+))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2019/04/04 v3.1.2 (3.1.2)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.code.tex
+File: tikzlibraryshapes.code.tex 2019/04/04 v3.1.2 (3.1.2)
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2019/04/04 v3.1.2 (3.1.2)
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2019/04/04 v3.1.2 (3.1.2)
+))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2019/04/04 v3.1.2 (3.1.2)
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.symbols.code.tex
+File: pgflibraryshapes.symbols.code.tex 2019/04/04 v3.1.2 (3.1.2)
+))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2019/04/04 v3.1.2 (3.1.2)
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.arrows.code.tex
+File: pgflibraryshapes.arrows.code.tex 2019/04/04 v3.1.2 (3.1.2)
+))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.callouts.code.tex
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.callouts.code.tex))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2019/04/04 v3.1.2 (3.1.2)
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2019/04/04 v3.1.2 (3.1.2)
+\pgfnodepartlowerbox=\box108
+\pgfnodeparttwobox=\box109
+\pgfnodepartthreebox=\box110
+\pgfnodepartfourbox=\box111
+\pgfnodeparttwentybox=\box112
+\pgfnodepartnineteenbox=\box113
+\pgfnodeparteighteenbox=\box114
+\pgfnodepartseventeenbox=\box115
+\pgfnodepartsixteenbox=\box116
+\pgfnodepartfifteenbox=\box117
+\pgfnodepartfourteenbox=\box118
+\pgfnodepartthirteenbox=\box119
+\pgfnodeparttwelvebox=\box120
+\pgfnodepartelevenbox=\box121
+\pgfnodeparttenbox=\box122
+\pgfnodepartninebox=\box123
+\pgfnodeparteightbox=\box124
+\pgfnodepartsevenbox=\box125
+\pgfnodepartsixbox=\box126
+\pgfnodepartfivebox=\box127
+)))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarythrough.code.tex
+File: tikzlibrarythrough.code.tex 2019/04/04 v3.1.2 (3.1.2)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryintersections.code.tex
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/pgflibraryinterse
+ctions.code.tex
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.cod
+e.tex)
+\pgf@intersect@solutions=\count355
+))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshadows.code.tex
+File: tikzlibraryshadows.code.tex 2019/04/04 v3.1.2 (3.1.2)
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2019/04/04 v3.1.2 (3.1.2)
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings
+.code.tex
+File: pgflibraryfadings.code.tex 2019/04/04 v3.1.2 (3.1.2)
+)))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2018/03/28 v1.16 Data Visualization (1.16)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks56
+\t@pgfplots@tokb=\toks57
+\t@pgfplots@tokc=\toks58
+\pgfplots@tmpa=\dimen304
+\c@pgfplots@coordindex=\count356
+\c@pgfplots@scanlineindex=\count357
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric
+.code.tex))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.c
+ode.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
+soldpgfsupp_loader.code.tex
+Package pgfplots: loading complementary arithmetics for your pgf version...
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
+soldpgfsupp_pgflibraryfpu.code.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
+soldpgfsupp_pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count358
+))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code
+.tex
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+liststructure.code.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+liststructureext.code.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+array.code.tex
+\c@pgfplotsarray@tmp=\count359
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+matrix.code.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable
+shared.code.tex
+\c@pgfplotstable@counta=\count360
+\t@pgfplotstable@a=\toks59
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+deque.code.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.co
+de.tex
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.da
+ta.code.tex))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb
+.code.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplot
+s.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count361
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots
+.surfshading.pgfsys-pdftex.def)))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.
+code.tex
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.cod
+e.tex))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.c
+ode.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.c
+ode.tex
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandle
+r.code.tex
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.
+code.tex)))
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.
+tex)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessin
+g.code.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.cod
+e.tex)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.
+tex)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex
+)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.te
+x)
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathmorphing.code.tex
+(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathmorphing.code.tex))
+\pgfplots@numplots=\count362
+\pgfplots@xmin@reg=\dimen305
+\pgfplots@xmax@reg=\dimen306
+\pgfplots@ymin@reg=\dimen307
+\pgfplots@ymax@reg=\dimen308
+\pgfplots@zmin@reg=\dimen309
+\pgfplots@zmax@reg=\dimen310
+))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/extpfeil/extpfeil.sty
+Package: extpfeil 2009/10/31 v0.4 Extensible Pfeile (PE)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2018/01/08 v1.21 mathematical typesetting tools
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count363
+\calc@Bcount=\count364
+\calc@Adimen=\dimen311
+\calc@Bdimen=\dimen312
+\calc@Askip=\skip73
+\calc@Bskip=\skip74
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count365
+\calc@Cskip=\skip75
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count366
+\l_MT_multwidth_dim=\dimen313
+\origjot=\skip76
+\l_MT_shortvdotswithinadjustabove_dim=\dimen314
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen315
+\l_MT_above_intertext_sep=\dimen316
+\l_MT_below_intertext_sep=\dimen317
+\l_MT_above_shortintertext_sep=\dimen318
+\l_MT_below_shortintertext_sep=\dimen319
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
+Package: stmaryrd 1994/03/03 St Mary's Road symbol package
+\symstmry=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
+(Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
+))
+
+./modernalgebra.tex:485: LaTeX Error: Command \cftsecfont undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.485 \renewcommand{\cftsecfont}
+                                {}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./modernalgebra.tex:486: LaTeX Error: Command \cftsecpagefont undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.486 \renewcommand{\cftsecpagefont}
+                                    {}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./modernalgebra.tex:499: LaTeX Error: Command \headrulewidth undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.499 \renewcommand{\headrulewidth}
+                                   {0pt}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+(./modernalgebra.aux)
+\openout1 = `modernalgebra.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 535.
+LaTeX Font Info:    ... okay on input line 535.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 535.
+LaTeX Font Info:    ... okay on input line 535.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 535.
+LaTeX Font Info:    ... okay on input line 535.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 535.
+LaTeX Font Info:    ... okay on input line 535.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 535.
+LaTeX Font Info:    ... okay on input line 535.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 535.
+LaTeX Font Info:    ... okay on input line 535.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 535.
+LaTeX Font Info:    ... okay on input line 535.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 535.
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(137.14749pt, 340.0pt, 137.1475pt)
+* v-part:(T,H,B)=(57.81598pt, 650.43pt, 86.72401pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=340.0pt
+* \textheight=650.43pt
+* \oddsidemargin=64.8775pt
+* \evensidemargin=64.8775pt
+* \topmargin=-44.5215pt
+* \headheight=12.0pt
+* \headsep=18.06749pt
+* \topskip=10.0pt
+* \footskip=25.29494pt
+* \marginparwidth=69.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count367
+\scratchdimen=\dimen320
+\scratchbox=\box128
+\nofMPsegments=\count368
+\nofMParguments=\count369
+\everyMPshowfont=\toks60
+\MPscratchCnt=\count370
+\MPscratchDim=\dimen321
+\MPnumerator=\count371
+\makeMPintoPDFobject=\count372
+\everyMPtoPDFconversion=\toks61
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+ABD: EveryShipout initializing macros
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2018/08/26 v1.4-95 longtable captions (AR)
+)
+Package caption Info: End \AtBeginDocument code.
+\AtBeginShipoutBox=\box129
+Package hyperref Info: Link coloring ON on input line 535.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count373
+)
+LaTeX Info: Redefining \ref on input line 535.
+LaTeX Info: Redefining \pageref on input line 535.
+LaTeX Info: Redefining \nameref on input line 535.
+
+(./modernalgebra.out) (./modernalgebra.out)
+\@outlinefile=\write7
+\openout7 = `modernalgebra.out'.
+
+
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
+your preamble.
+ on input line 535.
+
+[1
+
+
+{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2
+
+] [3
+
+]
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 569.
+
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 569.
+
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 569
+.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 569
+.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 569.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 569.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 569.
+LaTeX Font Info:    Try loading font information for U+msa on input line 569.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 569.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+stmry on input line 569.
+
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
+
+./modernalgebra.tex:571: LaTeX Error: File `images/CC-BY-SA-license' not found.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.571 ...dth=1\linewidth]{images/CC-BY-SA-license}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[4
+
+]
+************************************************
+Preface Introduction
+************************************************
+
+Package hyperref Warning: Suppressing link with empty target on input line 587.
+
+
+************************************************
+References References
+************************************************
+
+./modernalgebra.tex:596: LaTeX Error: Environment references--numberless undefi
+ned.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.596 \begin{references--numberless}
+                                    {References}{}{References}{}{}{g:referen...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./modernalgebra.tex:597: LaTeX Error: \begin{preface} on input line 584 ended b
+y \end{references--numberless}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.597 \end{references--numberless}
+                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+************************************************
+Preface A Note to Students
+************************************************
+[5
+
+
+]
+************************************************
+Preface A Note to Instructors
+************************************************
+[6
+
+]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 619.
+
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omslmr.fd
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 619.
+ [7
+
+] [8]
+(./modernalgebra.toc)
+\tf@toc=\write8
+\openout8 = `modernalgebra.toc'.
+
+ [9
+
+]
+************************************************
+Chapter 1 The Integers
+************************************************
+Chapter 1.
+************************************************
+Section 1.1 Induction and Well-Ordering
+************************************************
+./modernalgebra.tex:655: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Induction and Well-Ordering}
+l.655 ...ering}{}{}{x:section:SubSec-WellOrdering}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./modernalgebra.tex:655: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Induction and Well-Ordering}
+l.655 ...ering}{}{}{x:section:SubSec-WellOrdering}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[1
+
+
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 682.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 682.
+
+
+LaTeX Warning: Hyper reference `x:men:ex_indhyp' on page 2 undefined on input l
+ine 710.
+
+
+LaTeX Warning: Reference `x:men:ex_indhyp' on page 2 undefined on input line 71
+0.
+
+
+LaTeX Warning: Hyper reference `x:men:ex_indstep1' on page 2 undefined on input
+ line 722.
+
+
+LaTeX Warning: Reference `x:men:ex_indstep1' on page 2 undefined on input line 
+722.
+
+
+LaTeX Warning: Hyper reference `x:men:ex_indstep2' on page 2 undefined on input
+ line 722.
+
+
+LaTeX Warning: Reference `x:men:ex_indstep2' on page 2 undefined on input line 
+722.
+
+
+LaTeX Warning: Hyper reference `x:men:ex_indgoal' on page 2 undefined on input 
+line 726.
+
+
+LaTeX Warning: Reference `x:men:ex_indgoal' on page 2 undefined on input line 7
+26.
+
+[2]
+************************************************
+Section 1.2 Divisibility in the integers
+************************************************
+./modernalgebra.tex:746: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Divisibility in the integ...
+l.746 ...tion:SubSec-Divisibility-in-the-Integers}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./modernalgebra.tex:746: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Divisibility in the integ...
+l.746 ...tion:SubSec-Divisibility-in-the-Integers}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.748 ...finition}{}{g:definition:idm416604595264}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.2}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.752 ...neexercise}{}{g:exercise:idm416604586704}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.3}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.762 ...n{theorem}{}{}{g:theorem:idm416604577888}
+                                                  % [3pdfTeX warning (ext4): de
+stination with the same identifier (name{cthm.4}) has been already used, duplic
+ate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.793 \end{inlineexercise}
+                          ] [4]
+
+LaTeX Warning: Hyper reference `x:theorem:theorem_gcdremainder' on page 5 undef
+ined on input line 845.
+
+
+LaTeX Warning: Reference `x:theorem:theorem_gcdremainder' on page 5 undefined o
+n input line 845.
+
+
+Package hyperref Warning: Suppressing link with empty target on input line 849.
+
+
+
+Overfull \hbox (5.31023pt too wide) in paragraph at lines 850--852
+[]\T1/lmr/bx/n/10 Checkpoint 1.2.12 []\T1/lmr/m/n/10 Use the Eu-clidean al-go-r
+ithm to com-pute $[]\OT1/lmr/m/n/10 (18489\OML/lmm/m/it/10 ; \OT1/lmr/m/n/10 17
+304)$\T1/lmr/m/n/10 . 
+ []
+
+
+Overfull \hbox (15.52533pt too wide) in paragraph at lines 879--881
+\T1/lmr/m/n/10 sume $\OMS/lmsy/m/n/10 j\OML/lmm/m/it/10 a\OMS/lmsy/m/n/10 j \OM
+L/lmm/m/it/10 > \OMS/lmsy/m/n/10 j\OML/lmm/m/it/10 b\OMS/lmsy/m/n/10 j$\T1/lmr/
+m/n/10 . The EA pro-vides a se-quence of in-te-gers $\OML/lmm/m/it/10 r[]; r[];
+ [] ; r[]; q[]; q[]; [] ; q[]$
+ []
+
+[5]
+
+LaTeX Warning: Hyper reference `x:theorem:theorem_bezoutint' on page 6 undefine
+d on input line 895.
+
+
+LaTeX Warning: Reference `x:theorem:theorem_bezoutint' on page 6 undefined on i
+nput line 895.
+
+************************************************
+Section 1.3 Primes and Factorization
+************************************************
+./modernalgebra.tex:920: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Primes and Factorization}
+l.920 ...:section:SubSec-Primes-and-Factorization}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./modernalgebra.tex:920: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Primes and Factorization}
+l.920 ...:section:SubSec-Primes-and-Factorization}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.922 ...finition}{}{g:definition:idm416604455600}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.2}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.927 ...orem}{}{}{x:theorem:theorem_euclidslemma}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.3}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.935 ...stion:question_compositecharacterization}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.4}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.940 ...n{theorem}{}{}{g:theorem:idm416604423376}
+                                                  %
+
+LaTeX Warning: Hyper reference `x:question:question_compositecharacterization' 
+on page 6 undefined on input line 946.
+
+
+LaTeX Warning: Reference `x:question:question_compositecharacterization' on pag
+e 6 undefined on input line 946.
+
+[6]pdfTeX warning (ext4): destination with the same identifier (name{cthm.5}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.949 ...Arithmetic.}{}{g:theorem:idm416604412064}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.6}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.952 ...n{theorem}{}{}{g:theorem:idm416604410176}
+                                                  %
+
+Package hyperref Warning: Suppressing link with empty target on input line 961.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.7}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.967 \begin{lemma}{}{}{g:lemma:idm416604397344}
+                                                %pdfTeX warning (ext4): destina
+tion with the same identifier (name{cthm.8}) has been already used, duplicate i
+gnored
+<to be read again> 
+                   \relax 
+l.983 ...n{theorem}{}{}{g:theorem:idm416604381392}
+                                                  % [7]
+************************************************
+Section 1.4 The Integers modulo \(m\)
+************************************************
+./modernalgebra.tex:1020: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {The Integers modulo \(m\)}
+l.1020 ...\)}{}{}{x:section:SubSec-Integers-Mod-m}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 1020.
+./modernalgebra.tex:1020: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {The Integers modulo \(m\)}
+l.1020 ...\)}{}{}{x:section:SubSec-Integers-Mod-m}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1020.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1022 ...inition}{}{g:definition:idm416604354112}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.2}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1025 ...inition}{}{g:definition:idm416604347952}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.3}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1040 ...eexercise}{}{g:exercise:idm416604336368}
+                                                  % [8]pdfTeX warning (ext4): d
+estination with the same identifier (name{cthm.4}) has been already used, dupli
+cate ignored
+<to be read again> 
+                   \relax 
+l.1049 ...{question}{}{g:question:idm416660392480}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.5}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1052 ...eexercise}{}{g:exercise:idm416660391104}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.6}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1057 ...inition}{}{g:definition:idm416660386400}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.7}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1060 ...eexercise}{}{g:exercise:idm416660381648}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.8}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1070 ...{theorem}{}{}{g:theorem:idm416660373168}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.9}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1080 ...{question}{}{g:question:idm416660358736}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.10}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.1094 ...eexercise}{}{g:exercise:idm416660350800}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.11}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.1097 ...{theorem}{}{}{g:theorem:idm416660349104}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.12}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.1103 ...{theorem}{}{}{g:theorem:idm416660342768}
+                                                  % [9]pdfTeX warning (ext4): d
+estination with the same identifier (name{cthm.13}) has been already used, dupl
+icate ignored
+<to be read again> 
+                   \relax 
+l.1118 ...inition}{}{g:definition:idm416660333920}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.14}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.1122 ...inition}{}{g:definition:idm416660328656}
+                                                  %
+
+LaTeX Warning: Hyper reference `x:theorem:theorem_relprimecancel' on page 10 un
+defined on input line 1141.
+
+
+LaTeX Warning: Reference `x:theorem:theorem_relprimecancel' on page 10 undefine
+d on input line 1141.
+
+************************************************
+Chapter 2 Fields and Rings
+************************************************
+[10]
+Chapter 2.
+************************************************
+Section 2.1 Fields
+************************************************
+./modernalgebra.tex:1172: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Fields}
+l.1172 ...}{}{Fields}{}{}{x:section:SubSec-Fields}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./modernalgebra.tex:1172: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Fields}
+l.1172 ...}{}{Fields}{}{}{x:section:SubSec-Fields}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1174 ...inition}{}{g:definition:idm416661727504}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.2}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1182 ...eexercise}{}{g:exercise:idm416661696576}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.3}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1188 ...inition}{}{g:definition:idm416661434208}
+                                                  % [11
+
+]pdfTeX warning (ext4): destination with the same identifier (name{cthm.4}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1191 ...ion}{}{x:definition:def_binaryoperation}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.5}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1194 ...{question}{}{g:question:idm416661192400}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.6}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1214 ...in{definition}{}{x:definition:def_field}
+                                                  % [12]pdfTeX warning (ext4): 
+destination with the same identifier (name{cthm.7}) has been already used, dupl
+icate ignored
+<to be read again> 
+                   \relax 
+l.1231 ...ercise}{}{x:exercise:exer_fieldexamples}
+                                                  % [13]pdfTeX warning (ext4): 
+destination with the same identifier (name{cthm.8}) has been already used, dupl
+icate ignored
+<to be read again> 
+                   \relax 
+l.1262 ...ields.}{}{x:theorem:thm_fieldproperties}
+                                                  %
+
+LaTeX Warning: Hyper reference `x:theorem:thm_fieldproperties' on page 14 undef
+ined on input line 1283.
+
+
+LaTeX Warning: Reference `x:theorem:thm_fieldproperties' on page 14 undefined o
+n input line 1283.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.9}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1284 ...inition}{}{g:definition:idm416604276144}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.10}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.1294 ...eexercise}{}{g:exercise:idm416604266528}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.11}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.1297 ...{theorem}{}{}{g:theorem:idm416604264400}
+                                                  %
+************************************************
+Section 2.2 Rings
+************************************************
+./modernalgebra.tex:1307: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Rings}
+l.1307 ...gs}{}{Rings}{}{}{x:section:SubSec-Rings}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./modernalgebra.tex:1307: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Rings}
+l.1307 ...gs}{}{Rings}{}{}{x:section:SubSec-Rings}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1309 ...inition}{}{g:definition:idm416604260352}
+                                                  % [14]pdfTeX warning (ext4): 
+destination with the same identifier (name{cthm.2}) has been already used, dupl
+icate ignored
+<to be read again> 
+                   \relax 
+l.1321 ...eexercise}{}{g:exercise:idm416604247344}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.3}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1324 ...eexercise}{}{g:exercise:idm416604245136}
+                                                  %
+Overfull \hbox (89.79926pt too wide) in paragraph at lines 1328--1355
+ [][] 
+ []
+
+[15]pdfTeX warning (ext4): destination with the same identifier (name{cthm.5}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1358 ...ion}{}{x:question:q_fieldaxiomspolyring}
+                                                  %
+
+LaTeX Warning: Hyper reference `x:question:q_fieldaxiomspolyring' on page 16 un
+defined on input line 1363.
+
+
+LaTeX Warning: Reference `x:question:q_fieldaxiomspolyring' on page 16 undefine
+d on input line 1363.
+
+
+LaTeX Warning: Hyper reference `x:table:table_propertiessandsets' on page 16 un
+defined on input line 1363.
+
+
+LaTeX Warning: Reference `x:table:table_propertiessandsets' on page 16 undefine
+d on input line 1363.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.6}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1364 \begin{definition}{}{x:definition:def_ring}
+                                                  % [16]pdfTeX warning (ext4): 
+destination with the same identifier (name{cthm.7}) has been already used, dupl
+icate ignored
+<to be read again> 
+                   \relax 
+l.1378 ...eexercise}{}{g:exercise:idm416604103600}
+                                                  %
+
+LaTeX Warning: Hyper reference `x:definition:def_field' on page 17 undefined on
+ input line 1379.
+
+
+LaTeX Warning: Reference `x:definition:def_field' on page 17 undefined on input
+ line 1379.
+
+
+LaTeX Warning: Hyper reference `x:definition:def_ring' on page 17 undefined on 
+input line 1379.
+
+
+LaTeX Warning: Reference `x:definition:def_ring' on page 17 undefined on input 
+line 1379.
+
+
+Package hyperref Warning: Suppressing link with empty target on input line 1381
+.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.8}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1382 ...inition}{}{g:definition:idm416604100016}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.9}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1386 ...eexercise}{}{g:exercise:idm416604089584}
+                                                  %
+
+LaTeX Warning: Hyper reference `x:table:table_propertiessandsets' on page 17 un
+defined on input line 1387.
+
+
+LaTeX Warning: Reference `x:table:table_propertiessandsets' on page 17 undefine
+d on input line 1387.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.10}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1389 ...{question}{}{g:question:idm416604087552}
+                                                  %
+
+LaTeX Warning: Hyper reference `x:theorem:thm_fieldproperties' on page 17 undef
+ined on input line 1390.
+
+
+LaTeX Warning: Reference `x:theorem:thm_fieldproperties' on page 17 undefined o
+n input line 1390.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.11}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1392 ...{question}{}{g:question:idm416604085568}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.12}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.1395 ...eexercise}{}{g:exercise:idm416604084240}
+                                                  %
+
+LaTeX Warning: Hyper reference `x:section:SubSec-Nonunique-Factorization' on pa
+ge 17 undefined on input line 1411.
+
+
+LaTeX Warning: Reference `x:section:SubSec-Nonunique-Factorization' on page 17 
+undefined on input line 1411.
+
+
+LaTeX Warning: Hyper reference `x:definition:def_ring' on page 17 undefined on 
+input line 1411.
+
+
+LaTeX Warning: Reference `x:definition:def_ring' on page 17 undefined on input 
+line 1411.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.13}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1414 ...{theorem}{}{}{g:theorem:idm416604070336}
+                                                  % [17]
+
+LaTeX Warning: Hyper reference `x:chapter:Sec-Ideals' on page 18 undefined on i
+nput line 1419.
+
+
+LaTeX Warning: Reference `x:chapter:Sec-Ideals' on page 18 undefined on input l
+ine 1419.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.14}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1420 ...inition}{}{g:definition:idm416604065248}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.15}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.1424 ...orem}{}{}{x:theorem:theorem_subringtest}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.16}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.1433 ...eexercise}{}{g:exercise:idm416604049968}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.17}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.1443 ...inition}{}{g:definition:idm416604040672}
+                                                  % [18]
+
+LaTeX Warning: Hyper reference `x:question:q_zmodmcancel' on page 19 undefined 
+on input line 1486.
+
+
+LaTeX Warning: Reference `x:question:q_zmodmcancel' on page 19 undefined on inp
+ut line 1486.
+
+[19]
+
+LaTeX Warning: Hyper reference `x:theorem:theorem_everyfieldisadomain' on page 
+20 undefined on input line 1518.
+
+
+LaTeX Warning: Reference `x:theorem:theorem_everyfieldisadomain' on page 20 und
+efined on input line 1518.
+
+
+LaTeX Warning: Hyper reference `x:theorem:theorem_domainimpliespolynomialdomain
+' on page 20 undefined on input line 1535.
+
+
+LaTeX Warning: Reference `x:theorem:theorem_domainimpliespolynomialdomain' on p
+age 20 undefined on input line 1535.
+
+
+LaTeX Warning: Hyper reference `x:theorem:theorem_subringsaredomains' on page 2
+0 undefined on input line 1537.
+
+
+LaTeX Warning: Reference `x:theorem:theorem_subringsaredomains' on page 20 unde
+fined on input line 1537.
+
+
+LaTeX Warning: Hyper reference `x:chapter:Sec-Factorization' on page 20 undefin
+ed on input line 1539.
+
+
+LaTeX Warning: Reference `x:chapter:Sec-Factorization' on page 20 undefined on 
+input line 1539.
+
+
+Overfull \hbox (1.6267pt too wide) in paragraph at lines 1551--1552
+[]\T1/lmr/m/n/10 Suppose $\OML/lmm/m/it/10 p\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x
+\OT1/lmr/m/n/10 )\OML/lmm/m/it/10 ; q\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x\OT1/lm
+r/m/n/10 ) \OMS/lmsy/m/n/10 2 \OML/lmm/m/it/10 F\OMS/lmsy/m/n/10 ^^B$ \T1/lmr/m
+/n/10 such that $\OML/lmm/m/it/10 p\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x\OT1/lmr/
+m/n/10 )\OML/lmm/m/it/10 q\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 ) 
+= 1$\T1/lmr/m/n/10 . Then $[] \OML/lmm/m/it/10 p\OT1/lmr/m/n/10 (\OML/lmm/m/it/
+10 x\OT1/lmr/m/n/10 ) + [] \OML/lmm/m/it/10 q\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 
+x\OT1/lmr/m/n/10 ) =
+ []
+
+************************************************
+Section 2.3 Divisibility in Integral Domains
+************************************************
+./modernalgebra.tex:1560: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Divisibility in Integral ...
+l.1560 ...:section:SubSec-Divisibility-in-Domains}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./modernalgebra.tex:1560: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Divisibility in Integral ...
+l.1560 ...:section:SubSec-Divisibility-in-Domains}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1562 ...{theorem}{}{}{g:theorem:idm416603933248}
+                                                  % [20]pdfTeX warning (ext4): 
+destination with the same identifier (name{cthm.2}) has been already used, dupl
+icate ignored
+<to be read again> 
+                   \relax 
+l.1571 ...inition}{}{g:definition:idm416603918944}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.3}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1575 ...inition}{}{g:definition:idm416603912576}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.4}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1579 ...}{}{x:definition:def_irreducibleelement}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.5}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1583 ...{theorem}{}{}{g:theorem:idm416603902736}
+                                                  %
+
+LaTeX Warning: Hyper reference `x:theorem:theorem_euclidslemma' on page 21 unde
+fined on input line 1587.
+
+
+LaTeX Warning: Reference `x:theorem:theorem_euclidslemma' on page 21 undefined 
+on input line 1587.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.6}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1591 ...{theorem}{}{}{g:theorem:idm416603892256}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.7}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1598 ...}{}{x:exercise:exer_irreduciblenotprime}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.8}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1611 ...inition}{}{g:definition:idm416603874240}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.9}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1619 ...{theorem}{}{}{g:theorem:idm416603865776}
+                                                  % [21]pdfTeX warning (ext4): 
+destination with the same identifier (name{cthm.10}) has been already used, dup
+licate ignored
+<to be read again> 
+                   \relax 
+l.1631 ...eexercise}{}{g:exercise:idm416603847248}
+                                                  %
+
+LaTeX Warning: Hyper reference `x:exercise:exer_irreduciblenotprime' on page 22
+ undefined on input line 1632.
+
+
+LaTeX Warning: Reference `x:exercise:exer_irreduciblenotprime' on page 22 undef
+ined on input line 1632.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.11}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1638 ...se}{}{x:exercise:exer_ringgeneralityone}
+                                                  %
+Overfull \hbox (74.20476pt too wide) in paragraph at lines 1641--1642
+[]\T1/lmr/m/n/10 \makebox[0.75in]{\hrulefill} $\OMS/lmsy/m/n/10 )$ \T1/lmr/m/n/
+10 \make-box[0.75in]{\hrulefill} $\OMS/lmsy/m/n/10 )$ \T1/lmr/m/n/10 \make-box[
+0.75in]{\hrulefill}
+ []
+
+************************************************
+Section 2.4 Principal Ideals
+************************************************
+./modernalgebra.tex:1650: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Principal Ideals}
+l.1650 ...}{}{}{x:section:SubSec-Principal-Ideals}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./modernalgebra.tex:1650: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Principal Ideals}
+l.1650 ...}{}{}{x:section:SubSec-Principal-Ideals}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1656 ...inition}{}{g:definition:idm416603828416}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.2}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1668 ...{theorem}{}{}{g:theorem:idm416603817584}
+                                                  % [22]pdfTeX warning (ext4): 
+destination with the same identifier (name{cthm.3}) has been already used, dupl
+icate ignored
+<to be read again> 
+                   \relax 
+l.1671 ...{theorem}{}{}{g:theorem:idm416603814656}
+                                                  %
+
+LaTeX Warning: Hyper reference `x:theorem:theorem_subringtest' on page 23 undef
+ined on input line 1675.
+
+
+LaTeX Warning: Reference `x:theorem:theorem_subringtest' on page 23 undefined o
+n input line 1675.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.4}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1678 ...{theorem}{}{}{g:theorem:idm416603810864}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.5}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1687 ...{theorem}{}{}{g:theorem:idm416603802240}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.6}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1702 ...{question}{}{g:question:idm416603792464}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.7}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1719 ...{theorem}{}{}{g:theorem:idm416603777632}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.8}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1725 ...eexercise}{}{g:exercise:idm416603773360}
+                                                  % [23]pdfTeX warning (ext4): 
+destination with the same identifier (name{cthm.9}) has been already used, dupl
+icate ignored
+<to be read again> 
+                   \relax 
+l.1751 ...inition}{}{g:definition:idm416603755952}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.10}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.1754 \begin{theorem}{}{}{x:theorem:thm_ZisPID}
+                                                %
+
+LaTeX Warning: Hyper reference `x:chapter:Sec-Integers' on page 24 undefined on
+ input line 1756.
+
+
+LaTeX Warning: Reference `x:chapter:Sec-Integers' on page 24 undefined on input
+ line 1756.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.11}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1767 ...eexercise}{}{g:exercise:idm416603738224}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.12}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.1788 ...{theorem}{}{}{g:theorem:idm416603723680}
+                                                  % [24]
+
+LaTeX Warning: Hyper reference `x:chapter:Sec-Integers' on page 25 undefined on
+ input line 1809.
+
+
+LaTeX Warning: Reference `x:chapter:Sec-Integers' on page 25 undefined on input
+ line 1809.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.13}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1812 ...inition}{}{g:definition:idm416603694336}
+                                                  %
+Overfull \hbox (43.52063pt too wide) in paragraph at lines 1812--1815
+\T1/lmr/bx/n/10 main \T1/lmr/m/n/10 if there is a func-tion $\OML/lmm/m/it/10 ^
+^N \OT1/lmr/m/n/10 : \OML/lmm/m/it/10 R \OMS/lmsy/m/n/10 n [] ! \U/msb/m/n/10 N
+[]$ \T1/lmr/m/n/10 such that: \margin-par{\setstretch{0.7}\T1/lmr/bx/n/10 This
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.14}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1823 ...{question}{}{g:question:idm416603682608}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.15}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.1828 ...emma}{}{}{x:lemma:lem_minimaldegreepoly}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.16}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.1834 ...in{lemma}{}{}{x:lemma:lem_polydivalglem}
+                                                  % [25]
+Overfull \hbox (16.46416pt too wide) in paragraph at lines 1837--1839
+[]\T1/lmr/m/it/10 Proof. []\T1/lmr/m/n/10 The lead-ing term of $\OML/lmm/m/it/1
+0 f\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 )$ \T1/lmr/m/n/10 is $\OM
+L/lmm/m/it/10 a[]x[]$\T1/lmr/m/n/10 , while the lead-ing term of $\OML/lmm/m/it
+/10 a[]b[]x[]g\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 )$
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.17}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1840 ...orithm.}{}{x:theorem:theorem_polydivalg}
+                                                  %
+
+LaTeX Warning: Hyper reference `x:theorem:thm_divalg' on page 26 undefined on i
+nput line 1847.
+
+
+LaTeX Warning: Reference `x:theorem:thm_divalg' on page 26 undefined on input l
+ine 1847.
+
+
+LaTeX Warning: Hyper reference `x:lemma:lem_polydivalglem' on page 26 undefined
+ on input line 1854.
+
+
+LaTeX Warning: Reference `x:lemma:lem_polydivalglem' on page 26 undefined on in
+put line 1854.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.18}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1870 ...{theorem}{}{}{g:theorem:idm416603630432}
+                                                  %
+
+LaTeX Warning: Hyper reference `x:theorem:thm_ZisPID' on page 26 undefined on i
+nput line 1872.
+
+
+LaTeX Warning: Reference `x:theorem:thm_ZisPID' on page 26 undefined on input l
+ine 1872.
+
+
+LaTeX Warning: Hyper reference `x:lemma:lem_minimaldegreepoly' on page 26 undef
+ined on input line 1872.
+
+
+LaTeX Warning: Reference `x:lemma:lem_minimaldegreepoly' on page 26 undefined o
+n input line 1872.
+
+
+LaTeX Warning: Hyper reference `x:theorem:theorem_polydivalg' on page 26 undefi
+ned on input line 1879.
+
+
+LaTeX Warning: Reference `x:theorem:theorem_polydivalg' on page 26 undefined on
+ input line 1879.
+
+
+LaTeX Warning: Hyper reference `x:theorem:thm_ZisPID' on page 26 undefined on i
+nput line 1879.
+
+
+LaTeX Warning: Reference `x:theorem:thm_ZisPID' on page 26 undefined on input l
+ine 1879.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.19}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1881 ...{question}{}{g:question:idm416603617840}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.20}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.1886 ...{question}{}{g:question:idm416603614736}
+                                                  %
+
+LaTeX Warning: Hyper reference `x:exercise:exer_ringgeneralityone' on page 26 u
+ndefined on input line 1887.
+
+
+LaTeX Warning: Reference `x:exercise:exer_ringgeneralityone' on page 26 undefin
+ed on input line 1887.
+
+[26]
+************************************************
+Chapter 3 Factorization
+************************************************
+[27]
+Chapter 3.
+************************************************
+Section 3.1 Factoring Polynomials
+************************************************
+./modernalgebra.tex:1904: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Factoring Polynomials}
+l.1904 ...{x:section:SubSec-Factoring-Polynomials}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./modernalgebra.tex:1904: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Factoring Polynomials}
+l.1904 ...{x:section:SubSec-Factoring-Polynomials}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Hyper reference `x:chapter:Sec-Integers' on page 28 undefined on
+ input line 1905.
+
+
+LaTeX Warning: Reference `x:chapter:Sec-Integers' on page 28 undefined on input
+ line 1905.
+
+
+LaTeX Warning: Hyper reference `x:theorem:thm_divalg' on page 28 undefined on i
+nput line 1907.
+
+
+LaTeX Warning: Reference `x:theorem:thm_divalg' on page 28 undefined on input l
+ine 1907.
+
+
+LaTeX Warning: Hyper reference `x:theorem:theorem_polydivalg' on page 28 undefi
+ned on input line 1907.
+
+
+LaTeX Warning: Reference `x:theorem:theorem_polydivalg' on page 28 undefined on
+ input line 1907.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1908 ...eexercise}{}{g:exercise:idm416653998032}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.2}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1913 ...eexercise}{}{g:exercise:idm416653994448}
+                                                  %
+
+LaTeX Warning: Hyper reference `x:theorem:theorem_bezoutint' on page 28 undefin
+ed on input line 1914.
+
+
+LaTeX Warning: Reference `x:theorem:theorem_bezoutint' on page 28 undefined on 
+input line 1914.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1921 ...inition}{}{g:definition:idm416653987072}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.4}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1924 ...inition}{}{g:definition:idm416653981072}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.5}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1928 ...{theorem}{}{}{g:theorem:idm416653975488}
+                                                  % [28
+
+]pdfTeX warning (ext4): destination with the same identifier (name{cthm.6}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1936 ...eexercise}{}{g:exercise:idm416653963952}
+                                                  %
+
+LaTeX Warning: Hyper reference `x:theorem:theorem_degreeofproductinfield' on pa
+ge 29 undefined on input line 1937.
+
+
+LaTeX Warning: Reference `x:theorem:theorem_degreeofproductinfield' on page 29 
+undefined on input line 1937.
+
+
+LaTeX Warning: Hyper reference `x:definition:def_irreducibleelement' on page 29
+ undefined on input line 1937.
+
+
+LaTeX Warning: Reference `x:definition:def_irreducibleelement' on page 29 undef
+ined on input line 1937.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.7}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1941 ...inition}{}{g:definition:idm416653957376}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.8}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1944 ...eexercise}{}{g:exercise:idm416653955248}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.9}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.1949 ...{theorem}{}{}{g:theorem:idm416653950896}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.10}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.1955 ...{theorem}{}{}{g:theorem:idm416653944912}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.11}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.1965 ...{theorem}{}{}{g:theorem:idm416653933248}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.12}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.1971 ...{theorem}{}{}{g:theorem:idm416653923072}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.13}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.1974 ...{theorem}{}{}{g:theorem:idm416653920944}
+                                                  %
+************************************************
+Section 3.2 Factorization in Euclidean Domains
+************************************************
+./modernalgebra.tex:1988: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Factorization in Euclidea...
+l.1988 ...bSec-Factorization-in-Euclidean-Domains}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./modernalgebra.tex:1988: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Factorization in Euclidea...
+l.1988 ...bSec-Factorization-in-Euclidean-Domains}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1989 ...inition}{}{g:definition:idm416653915792}
+                                                  % [29]pdfTeX warning (ext4): 
+destination with the same identifier (name{cthm.2}) has been already used, dupl
+icate ignored
+<to be read again> 
+                   \relax 
+l.2001 ...eexercise}{}{g:exercise:idm416653907344}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.3}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2004 ...{theorem}{}{}{g:theorem:idm416653905088}
+                                                  %
+
+LaTeX Warning: Hyper reference `x:theorem:theorem_everyedisufd' on page 30 unde
+fined on input line 2007.
+
+
+LaTeX Warning: Reference `x:theorem:theorem_everyedisufd' on page 30 undefined 
+on input line 2007.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.4}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2008 ...inition}{}{g:definition:idm416653902576}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.5}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2015 ...{theorem}{}{}{g:theorem:idm416653898176}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.6}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2022 ...lemma}{}{}{x:lemma:lem_divisiblebyirred}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.7}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2037 ...{theorem}{}{}{g:theorem:idm416653874992}
+                                                  % [30]
+
+LaTeX Warning: Hyper reference `x:lemma:lem_divisiblebyirred' on page 31 undefi
+ned on input line 2041.
+
+
+LaTeX Warning: Reference `x:lemma:lem_divisiblebyirred' on page 31 undefined on
+ input line 2041.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.8}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2043 \begin{lemma}{}{}{g:lemma:idm416653869920}
+                                                 %pdfTeX warning (ext4): destin
+ation with the same identifier (name{cthm.9}) has been already used, duplicate 
+ignored
+<to be read again> 
+                   \relax 
+l.2049 ...{theorem}{}{}{g:theorem:idm416653860512}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.10}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.2057 ...{theorem}{}{}{g:theorem:idm416653843056}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.11}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.2063 \begin{theorem}{}{}{x:theorem:thm_pidisufd}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.12}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.2093 \begin{theorem}{}{}{x:theorem:thm_edispid}
+                                                 %
+
+LaTeX Warning: Hyper reference `x:theorem:thm_ZisPID' on page 31 undefined on i
+nput line 2095.
+
+
+LaTeX Warning: Reference `x:theorem:thm_ZisPID' on page 31 undefined on input l
+ine 2095.
+
+[31]pdfTeX warning (ext4): destination with the same identifier (name{cthm.13})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2106 ...rem}{}{}{x:theorem:theorem_everyedisufd}
+                                                  %
+
+LaTeX Warning: Hyper reference `x:theorem:thm_edispid' on page 32 undefined on 
+input line 2110.
+
+
+LaTeX Warning: Reference `x:theorem:thm_edispid' on page 32 undefined on input 
+line 2110.
+
+
+LaTeX Warning: Hyper reference `x:theorem:thm_pidisufd' on page 32 undefined on
+ input line 2110.
+
+
+LaTeX Warning: Reference `x:theorem:thm_pidisufd' on page 32 undefined on input
+ line 2110.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.14}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2112 ...lynomials.}{}{g:theorem:idm416653807280}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.15}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.2123 ...{theorem}{}{}{g:theorem:idm416653797824}
+                                                  %
+************************************************
+Section 3.3 Nonunique Factorization
+************************************************
+./modernalgebra.tex:2134: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Nonunique Factorization}
+l.2134 ...:section:SubSec-Nonunique-Factorization}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./modernalgebra.tex:2134: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Nonunique Factorization}
+l.2134 ...:section:SubSec-Nonunique-Factorization}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2144 ...eexercise}{}{g:exercise:idm416653786928}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.2}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2147 ...eexercise}{}{g:exercise:idm416653785232}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.3}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2150 ...{theorem}{}{}{g:theorem:idm416653782224}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.4}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2156 \begin{lemma}{}{}{g:lemma:idm416653777104}
+                                                 % [32]pdfTeX warning (ext4): d
+estination with the same identifier (name{cthm.5}) has been already used, dupli
+cate ignored
+<to be read again> 
+                   \relax 
+l.2162 ...{theorem}{}{}{g:theorem:idm416653772448}
+                                                  %
+************************************************
+Chapter 4 Ideals and Homomorphisms
+************************************************
+[33]
+Chapter 4.
+************************************************
+Section 4.1 Ideals in general
+************************************************
+./modernalgebra.tex:2187: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Ideals in general}
+l.2187 ...{}{}{x:section:SubSec-Ideals-In-General}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./modernalgebra.tex:2187: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Ideals in general}
+l.2187 ...{}{}{x:section:SubSec-Ideals-In-General}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2188 ...{theorem}{}{}{g:theorem:idm416654044256}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.2}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2195 ...inition}{}{g:definition:idm416653719520}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.3}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2203 ...{theorem}{}{}{g:theorem:idm416653714896}
+                                                  %
+
+LaTeX Warning: Hyper reference `x:men:eq_idealgeneratedbyset' on page 34 undefi
+ned on input line 2207.
+
+
+LaTeX Warning: Reference `x:men:eq_idealgeneratedbyset' on page 34 undefined on
+ input line 2207.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.4}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2209 ...m}{}{}{x:theorem:thm_idealgeneratingset}
+                                                  %
+Overfull \hbox (29.97981pt too wide) in paragraph at lines 2213--2216
+\T1/lmr/bx/it/10 Hint\T1/lmr/m/it/10 . Be-gin by show-ing that $\OML/lmm/m/it/1
+0 I \OT1/lmr/m/n/10 = []$
+ []
+
+[34
+
+]
+
+LaTeX Warning: Hyper reference `x:theorem:thm_idealgeneratingset' on page 35 un
+defined on input line 2232.
+
+
+LaTeX Warning: Reference `x:theorem:thm_idealgeneratingset' on page 35 undefine
+d on input line 2232.
+
+************************************************
+Section 4.2 Quotient Rings
+************************************************
+./modernalgebra.tex:2243: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Quotient Rings}
+l.2243 ...gs}{}{}{x:section:SubSec-Quotient-Rings}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./modernalgebra.tex:2243: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Quotient Rings}
+l.2243 ...gs}{}{}{x:section:SubSec-Quotient-Rings}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2244 ...inition}{}{g:definition:idm416653671040}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.2}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2247 ...{question}{}{g:question:idm416653666560}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.3}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2253 ...{theorem}{}{}{g:theorem:idm416653660208}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.4}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2264 ...{theorem}{}{}{g:theorem:idm416653650384}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.5}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2270 ...{theorem}{}{}{g:theorem:idm416653642752}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.6}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2277 ...{theorem}{}{}{g:theorem:idm416653633776}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.7}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2280 ...eexercise}{}{g:exercise:idm416653629488}
+                                                  % [35]pdfTeX warning (ext4): 
+destination with the same identifier (name{cthm.8}) has been already used, dupl
+icate ignored
+<to be read again> 
+                   \relax 
+l.2285 ...inition}{}{g:definition:idm416653624400}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.9}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2288 ...{theorem}{}{}{g:theorem:idm416653619728}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.10}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.2291 ...eexercise}{}{g:exercise:idm416653617184}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.11}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.2312 ...inition}{}{g:definition:idm416653595552}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.12}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.2318 ...{theorem}{}{}{g:theorem:idm416653586928}
+                                                  % [36]pdfTeX warning (ext4): 
+destination with the same identifier (name{cthm.13}) has been already used, dup
+licate ignored
+<to be read again> 
+                   \relax 
+l.2326 \begin{lemma}{}{}{g:lemma:idm416653574544}
+                                                 %pdfTeX warning (ext4): destin
+ation with the same identifier (name{cthm.14}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2329 ...{theorem}{}{}{g:theorem:idm416653569376}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.15}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.2342 ...{theorem}{}{}{g:theorem:idm416653554256}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.16}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.2348 ...{theorem}{}{}{g:theorem:idm416653550768}
+                                                  %
+************************************************
+Section 4.3 Homomorphisms
+************************************************
+./modernalgebra.tex:2365: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Homomorphisms}
+l.2365 ...sms}{}{}{x:section:SubSec-Homomorphisms}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./modernalgebra.tex:2365: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Homomorphisms}
+l.2365 ...sms}{}{}{x:section:SubSec-Homomorphisms}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2366 ...inition}{}{g:definition:idm416653536192}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.2}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2369 ...eexercise}{}{g:exercise:idm416653528464}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.3}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2374 ...{theorem}{}{}{g:theorem:idm416653523968}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.4}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2377 ...eexercise}{}{g:exercise:idm416653520144}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.5}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2380 ...eexercise}{}{g:exercise:idm416653517152}
+                                                  % [37]pdfTeX warning (ext4): 
+destination with the same identifier (name{cthm.6}) has been already used, dupl
+icate ignored
+<to be read again> 
+                   \relax 
+l.2385 ...inition}{}{g:definition:idm416653512208}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.7}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2388 ...eexercise}{}{g:exercise:idm416653509216}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.8}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2393 ...eexercise}{}{g:exercise:idm416653501952}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.9}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2396 ...{theorem}{}{}{g:theorem:idm416653500624}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.10}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.2402 ...{theorem}{}{}{g:theorem:idm416653495504}
+                                                  %
+Overfull \hbox (19.0606pt too wide) in paragraph at lines 2407--2408
+\OML/lmm/m/it/10 R \OMS/lmsy/m/n/10 ! \OML/lmm/m/it/10 S$ \T1/lmr/m/n/10 be a h
+o-mo-mor-phism. Re-call that $[]\OML/lmm/m/it/10 ' \OT1/lmr/m/n/10 = []$\T1/lmr
+/m/n/10 . 
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{cthm.11}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2410 \begin{lemma}{}{}{g:lemma:idm416653488928}
+                                                 %pdfTeX warning (ext4): destin
+ation with the same identifier (name{cthm.12}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2416 \begin{lemma}{}{}{g:lemma:idm416653483728}
+                                                 %pdfTeX warning (ext4): destin
+ation with the same identifier (name{cthm.13}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2422 \begin{lemma}{}{}{g:lemma:idm416653480144}
+                                                 %pdfTeX warning (ext4): destin
+ation with the same identifier (name{cthm.14}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2428 \begin{lemma}{}{}{g:lemma:idm416653474928}
+                                                 %pdfTeX warning (ext4): destin
+ation with the same identifier (name{cthm.15}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.2435 ...m Theorem.}{}{g:theorem:idm416653469408}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{cthm.16}) has been already used, duplicat
+e ignored
+<to be read again> 
+                   \relax 
+l.2440 ...{theorem}{}{}{g:theorem:idm416653465536}
+                                                  % [38] [39]
+runsystem(makeindex modernalgebra.idx)...executed safely (allowed).
+
+
+(./modernalgebra.ind) [40
+
+
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2467.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2467.
+ (./modernalgebra.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2467.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2467.
+
+
+
+Package rerunfilecheck Warning: File `modernalgebra.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `modernalgebra.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  50F1143F4EC55819678E780F99944467;1345.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 50303 strings out of 492616
+ 1142309 string characters out of 6129482
+ 1439038 words of memory out of 5000000
+ 52865 multiletter control sequences out of 15000+600000
+ 621934 words of font info for 81 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 62i,14n,96p,919b,1244s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
+texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
+19/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2019/texmf-d
+ist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2019/texmf-dist/fonts/enc/
+dvips/lm/lm-mathex.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/l
+m/lmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmbx12.p
+fb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/
+local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texl
+ive/2019/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2019/t
+exmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2019/texmf-dist/
+fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1
+/public/lm/lmmi6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/
+lmmi7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><
+/usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/
+texlive/2019/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/201
+9/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2019/texmf-dis
+t/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type
+1/public/lm/lmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/
+lmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr8.pfb></u
+sr/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/t
+exlive/2019/texmf-dist/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/2019
+/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2019/texmf-dis
+t/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2019/texmf-dist/fonts/typ
+e1/public/lm/lmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/a
+msfonts/symbols/msam10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publ
+ic/amsfonts/symbols/msbm10.pfb>
+Output written on modernalgebra.pdf (49 pages, 535906 bytes).
+PDF statistics:
+ 1003 PDF objects out of 1200 (max. 8388607)
+ 902 compressed objects within 10 object streams
+ 545 named destinations out of 1000 (max. 500000)
+ 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+

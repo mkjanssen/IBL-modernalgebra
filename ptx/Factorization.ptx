@@ -1,0 +1,677 @@
+<chapter xml:id="Sec-Factorization">
+  <title>Factorization</title>
+  <section xml:id="SubSec-Factoring-Polynomials">
+    <title>Factoring Polynomials</title>
+    <p>
+      One of the most beautiful consequences of an abstract study of algebra is the fact that both <m>\Z</m> and <m>F[x]</m> are Euclidean domains.
+      While they are not
+      <q>the same</q>,
+      we can expect them to share many of the same properties.
+      In this section,
+      our first goal will be to extend familiar properties from <xref ref="Sec-Integers">&#xa7;</xref> to <m>F[x]</m>.
+      We will also see that the particular nature of a polynomial allows for additional criteria for,
+      e.g., its irreducibility to be discovered.
+    </p>
+    <p>
+      We saw in <xref ref="thm_divalg"></xref>
+      and <xref ref="theorem_polydivalg"></xref>
+      that both <m>\Z</m> and <m>F[x]</m> have a division algorithm.
+      It is reasonable
+      (and correct)
+      to expect that similar to the integers we can also investigate the greatest common divisor of polynomials.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Given <m>f(x),g(x)\in F[x]</m>,
+          state a conjecture that gives a means for finding <m>\gcd(f(x),g(x))</m>.
+          Prove your conjecture is correct.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The Euclidean algorithm!
+          Apply the division algorithm for polynomials and mimic the proof of the Euclidean algorithm in <m>\Z</m>.
+        </p>
+      </solution>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Carefully state and prove a B&#xe9;zout-like theorem
+          (recall <xref ref="theorem_bezoutint">Theorem</xref>)
+          for polynomials in <m>F[x]</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Let <m>f(x),
+          g(x)\in F[x]</m> such that <m>f</m> and <m>g</m> are not both the zero polynomial.
+          Then there exist polynomials
+          <m>s(x),
+          t(x)\in F[x]</m> such that <m>f(x) s(x) + g(x) t(x) = \gcd(f(x),g(x))</m>.
+        </p>
+      </solution>
+    </exercise>
+    <p>
+      We next make the somewhat pedantic <mdash/> yet valuable <mdash/> distinction between the polynomial <m>p(x)\in R[x]</m> and the function
+      <m>p_f : R\to R</m> defined by the polynomial.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Let <m>R</m> be a commutative ring with identity and <m>p(x) = a_0 + a_1 x + \cdots + a_n x^n \in R[x]</m>.
+          A <term>polynomial function</term>
+          <m>p_f : R \to R</m> is defined, for all <m>r\in R</m>,
+          by <m>p_f(r) = a_0 + a_1 r + \cdots + a_n r^n \in R</m>.
+          We usually denote <m>p_f(r)</m> by <m>p(r)</m>,
+          and say that <m>p(r)</m> is the polynomial <m>p</m> evaluated at <m>r</m>.
+        </p>
+      </statement>
+    </definition>
+    <definition>
+      <statement>
+        <p>
+          Let <m>R</m> be commutative with identity and suppose <m>p(x) \in R[x]</m>.
+          We say <m>r\in R</m> is a <term>zero</term> or <term>root</term>
+          of <m>p(x)</m> if <m>p(r) = 0_R</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      The following theorem is
+      <url href="http://www.corestandards.org/Math/Content/HSA/APR/B/2/">a result that you learned in high school algebra</url>
+      (and have likely used countless times since then),
+      but as with the other familiar topics we have explored so far,
+      it is necessary to formalize prior to continuing.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          Let <m>F</m> be a field, and <m>p(x)\in F[x]</m>.
+          Then <m>\alpha\in F</m> is a root of <m>p(x)</m> if and only if <m>x-\alpha</m> divides <m>p(x)</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        If <m>x-\alpha</m> divides <m>p(x)</m>,
+        then <m>p(x) = q(x) (x-\alpha)</m> and <m>p(\alpha) = q(\alpha) (\alpha - \alpha) = 0</m>,
+        so <m>\alpha</m> is a root.
+      </p>
+      <p>
+        Otherwise, use the division algorithm to divide <m>p(x)</m> by <m>x-\alpha</m>.
+        Then <m>p(x) = q(x)(x-\alpha) + r</m>,
+        where <m>\deg r \lt \deg (x-\alpha) = 1</m>.
+        Thus, <m>r</m> is a nonzero constant.
+        If <m>\alpha</m> is a root of <m>p</m>,
+        then <m>0 = p(\alpha) = q(\alpha) (\alpha - \alpha) + r = 0 + r = r</m>,
+        so <m>r=0</m> and <m>x-\alpha | p(x)</m>.
+      </p>
+    </proof>
+    <exercise>
+      <statement>
+        <p>
+          Given a field <m>F</m>, define an irreducible element of <m>F[x]</m>,
+          keeping in view <xref ref="theorem_degreeofproductinfield">Theorem</xref>
+          and <xref ref="def_irreducibleelement">Definition</xref>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          An irreducible polynomial is a nonzero nonconstant
+          <m>p(x)\in F[x]</m> such that whenever <m>p(x) = a(x) b(x)</m>,
+          where <m>a(x), b(x) \in F[x]</m>,
+          either <m>a(x)</m> or <m>b(x)</m> is a nonzero constant.
+        </p>
+      </solution>
+    </exercise>
+    <definition>
+      <statement>
+        <p>
+          A polynomial <m>f(x)\in F[x]</m> is <term>reducible</term>
+          if it is not irreducible.
+        </p>
+      </statement>
+    </definition>
+    <exercise>
+      <statement>
+        <p>
+          State a positive definition for a reducible polynomial with coefficients in a field <m>F</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          A polynomial <m>r(x)</m> is reducible if it can be written as <m>r(x) = s(x) t(x)</m>,
+          where <m>1 \le \deg s(x) \lt \deg r(x)</m> and <m>1 \le \deg t(x) \lt \deg r(x)</m>.
+        </p>
+      </solution>
+    </exercise>
+    <theorem>
+      <statement>
+        <p>
+          Every polynomial of degree 1 in <m>F[x]</m> is irreducible.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Let <m>f(x)</m> be degree 1 and write <m>f(x) = s(x) t(x)</m>.
+        Then <m>\deg f = 1 = \deg s + \deg t</m>.
+        Since <m>\deg s, \deg t \ge 0</m>,
+        one of <m>\deg s</m> or <m>\deg t</m> is 0, hence <m>s</m> or <m>t</m> is constant.
+      </p>
+    </proof>
+    <theorem>
+      <statement>
+        <p>
+          A nonconstant polynomial <m>f(x)\in F[x]</m> of degree 2 or 3 is irreducible over <m>F</m> if and only if it has no zeros in <m>F</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        We prove the double contrapositive:
+        <m>f(x)\in F[x]</m> of degree 2 or 3 is reducible if and only if it has a zero in <m>F</m>.
+      </p>
+      <p>
+        If <m>f(x)</m> is reducible there exist nonconstant
+        <m>s(x),t(x)\in F[x]</m> such that <m>f(x) = s(x) t(x)</m>.
+        Since <m>\deg f = 2</m> or 3, one of <m>s(x)</m> or <m>t(x)</m> has degree 1, and is thus of the form <m>x-\alpha</m>,
+        where <m>\alpha \in F</m>.
+        Thus, <m>f</m> has a zero.
+      </p>
+      <p>
+        Similarly, if <m>f</m> has a zero <m>\alpha\in F</m>,
+        <m>f(x) = (x-\alpha)g(x)</m>,
+        where <m>\deg g \ge 1</m>.
+        Thus, <m>f</m> is reducible over <m>F</m>.
+      </p>
+    </proof>
+    <theorem>
+      <statement>
+        <p>
+          Let <m>F</m> be a field and
+          <m>p(x),f(x),g(x)\in F[x]</m> such that <m>p(x)</m> is irreducible and <m>p(x)</m> divides <m>f(x) g(x)</m>.
+          Then <m>p(x)</m> divides <m>f(x)</m> or <m>p(x)</m> divides <m>g(x)</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Assume <m>p(x)</m> does not divede <m>f(x)</m>.
+        Then <m>\gcd(p(x),f(x)=1</m> and <m>1=s(x)p(x)+t(x)f(x)</m>.
+        Multiplying by <m>g(x)</m> yields
+        <m>g(x)=g(x)s(x)p(x)+g(x)t(x)f(x)</m> which implies that <m>p(x)</m> divides <m>g(x)</m> (since <m>p(x)</m> divides <m>f(x)g(x)</m>) .
+      </p>
+    </proof>
+    <theorem>
+      <statement>
+        <p>
+          Every nonconstant polynomial with coefficients in <m>\C</m> has a root in <m>\C</m>.
+        </p>
+      </statement>
+    </theorem>
+    <theorem>
+      <statement>
+        <p>
+          Every nonconstant polynomial in <m>\C[x]</m> can be written as a product of linear polynomials.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          What are the irreducibles in <m>\C[x]</m>?
+        </p>
+      </hint>
+    </theorem>
+    <proof>
+      <p>
+        Induction on degree of polynomial using previous theorem.
+      </p>
+    </proof>
+  </section>
+  <section xml:id="SubSec-Factorization-in-Euclidean-Domains">
+    <title>Factorization in Euclidean Domains</title>
+    <definition>
+      <statement>
+        <p>
+          An integral domain <m>R</m> is called a
+          <term>unique factorization domain</term>
+          (or <term>UFD</term>)
+          if the following conditions hold.
+          <ol>
+            <li>
+              <p>
+                Every nonzero nonunit element of <m>R</m> is either irreducible or can be written as a finite product of irreducibles in <m>R</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Factorization into irreducibles is unique up to associates.
+                That is, if <m>s\in R</m> can be written as
+                <me>
+                  s = p_1 p_2 \cdots p_k \text{ and }  s = q_1 q_2 \cdots q_m
+                </me>
+                for some irreducibles <m>p_i, q_j\in R</m>, then <m>k=m</m> and,
+                after reordering, <m>p_i</m> is an associate of <m>q_i</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </definition>
+    <exercise>
+      <statement>
+        <p>
+          Using <m>\Z</m> as an example,
+          illustrate the definition of UFD by factoring 20 into two sets of <em>different</em>
+          irreducibles which nonetheless can be paired up as associates.
+        </p>
+      </statement>
+    </exercise>
+    <theorem>
+      <statement>
+        <p>
+          Every field is a UFD.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      Our next main goal is to prove <xref ref="theorem_everyedisufd">Theorem</xref>.
+      In order to do that,
+      we need some information about the ideal-theoretic structure of Euclidean domains.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          A commutative ring <m>R</m> is called <term>Noetherian</term>
+          if it satisfies the <term>ascending chain condition</term> on ideals.
+          That is, if
+          <me>
+            I_1 \subseteq I_2\subseteq I_3\subseteq \cdots
+          </me>
+          is an ascending chain of ideals in <m>R</m>,
+          then there exists some <m>n</m> for which <m>I_n = I_{n+1} = I_{n+2} = \cdots</m>.
+        </p>
+      </statement>
+    </definition>
+    <theorem>
+      <statement>
+        <p>
+          Every principal ideal domain is Noetherian.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Let <m>I_1\subseteq I_2\subseteq I_3 \subseteq \cdots</m> and set <m>I = \cup I_j</m>.
+          Show that <m>I</m> is an ideal, and use your assumptions!
+        </p>
+      </hint>
+    </theorem>
+    <proof>
+      <p>
+        It is
+        <q>clear</q>
+        that <m>I</m> is an ideal.
+        That we are in a PID means there exists <m>a</m> such that <m>I=\cup I_j=\ideal{a}</m>.
+        Therefore there exists <m>j</m> such that <m>a\in I_j</m>.
+        It follows that <m>I=I_j</m> and in particular that <m>I=I_k</m> for all <m>k\geq j</m>.
+      </p>
+    </proof>
+    <lemma xml:id="lem_divisiblebyirred">
+      <statement>
+        <p>
+          Let <m>R</m> be a principal ideal domain,
+          and <m>r\in R</m> a nonzero nonunit.
+          Then <m>r</m> is divisible by an irreducible.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Let <m>r\in R</m> be reducible and write <m>r = r_1 r_2</m>.
+          Continue to factor reducibles and build an ascending chain of ideals.
+        </p>
+      </hint>
+    </lemma>
+    <proof>
+      <p>
+        Suppose that <m>r</m> is not irreducible.
+        Write <m>r = r_1 r_2</m>, where the <m>r_i</m> are nonzero nonunits.
+        Then <m>\ideal{r} \subsetneq \ideal{r_1}</m>.
+        If <m>r_1</m> is not irreducible,
+        we may write <m>r_1 = r_{1,1}r_{1,2}</m>,
+        where <m>r_{1,1},r_{1,2}</m> are nonzero nonunits, and observe that
+        <me>
+          \ideal{r} \subsetneq \ideal{r_1}\subsetneq \ideal{r_{1,1}}
+        </me>.
+      </p>
+      <p>
+        (If <m>r_1</m> <em>is</em> irreducible and we nonetheless write <m>r_1 = r_{1,1} r_{1,2}</m>,
+        then either <m>\ideal{r_{1,1}} = R</m> if <m>r_{1,1}</m> is a unit,
+        or <m>\ideal{r_{1,1}} = \ideal{r_1}</m> if <m>r_{1,1}</m> is associate to <m>r_1</m>.)
+      </p>
+      <p>
+        Continuing in this way,
+        we may continue to factor the reducible factors of <m>r_1</m>;
+        since <m>R</m> is a PID and thus has the ascending chain condition,
+        we must eventually reach a point where the chain stabilizes,
+        i.e., that we have found an irreducible factor of <m>r_1</m>.
+      </p>
+    </proof>
+    <theorem>
+      <statement>
+        <p>
+          Let <m>R</m> be a PID. Then every nonzero nonunit element of <m>R</m> is either irreducible or can be written as a finite product of irreducibles in <m>R</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        We may perform the analysis from <xref ref="lem_divisiblebyirred">Lemma</xref> for all factors of <m>r</m>,
+        and thus <m>r</m> can be factored into a product of irreducibles.
+      </p>
+    </proof>
+    <lemma>
+      <statement>
+        <p>
+          Let <m>R</m> be a PID and let <m>p\in R</m> be irreducible.
+          Let <m>a\in R</m> be such that <m>p\nmid a</m>.
+          Then <m>1\in I = \setof{ax+py}{x,y\in R}</m> and thus there exist
+          <m>s,t\in R</m> such that <m>1 = as+bt</m>.
+        </p>
+      </statement>
+    </lemma>
+    <proof>
+      <p>
+        Assume that <m>p</m> is irreducible.
+        Suppose that <m>p</m> divides <m>ab</m> for some
+        <m>a,b \in R</m> and that <m>p</m> does not divide <m>a</m>.
+        Since <m>R</m> is a PID, <m>I = \ideal{\gcd(a,p)} = \ideal{1}</m>.
+        Thus there exists <m>s,t\in R</m> such that <m>1=as+pt</m>.
+      </p>
+    </proof>
+    <theorem>
+      <statement>
+        <p>
+          Let <m>R</m> be a PID and let <m>p\in R</m>.
+          Then <m>p</m> is prime if and only if <m>p</m> is irreducible.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Assume that <m>p</m> is prime.
+        Suppose that <m>p=ab</m> for some <m>a,b \in R</m>.
+        Then <m>p</m> divides <m>ab</m> which implies that <m>p</m> divides <m>a</m> or <m>p</m> divides <m>b</m>.
+        WLOG, assume that <m>p</m> divides <m>a</m>.
+        Then there exists <m>c\in R</m> such that <m>a=pc</m> which implies that <m>p=pcb</m>.
+        Therefore <m>cb=1</m> and <m>b</m> is a unit which implies that <m>p</m> is irreducible.
+      </p>
+      <p>
+        Assume that <m>p</m> is irreducible.
+        Suppose that <m>p</m> divides <m>ab</m> for some
+        <m>a,b \in R</m> and that <m>p</m> does not divide <m>a</m>.
+        Then <m>\ideal{a,p}=R</m> and there exists
+        <m>x,y\in R</m> such that <m>1=ax+py</m>.
+        Multiplying boths sides by <m>b</m> yiels
+        <m>b=abx+pby=p(cx+by)</m> which implies that <m>p</m> divides <m>b</m> and therefore <m>p</m> is prime.
+      </p>
+    </proof>
+    <theorem>
+      <statement>
+        <p>
+          Let <m>R</m> be a PID and <m>p\in R</m> be irreducible.
+          If <m>a,b\in R</m> with <m>p\mid ab</m>,
+          then <m>p\mid a</m> or <m>p\mid b</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Irreducible implies prime
+        (use the previous theorem).
+      </p>
+    </proof>
+    <theorem xml:id="thm_pidisufd">
+      <statement>
+        <p>
+          Every PID is a UFD.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Let <m>R</m> be a PID and suppose that a non-zero non-unit element <m>a\in R</m> can be factored in two different ways as a product of irreducibles.
+        <me>
+          a=p_1p_2\cdots p_r=q_1q_2\cdots q_s
+        </me>
+      </p>
+      <p>
+        Assume that <m>s\geq r</m>.
+        Since <m>p_1</m> is irreducible
+        (and therefore prime),
+        there exists <m>j</m> such that <m>p_1 \mid q_j</m>.
+        Since <m>q_j</m> is irreducible as well,
+        there is a unit <m>u_1</m> such that <m>p_1=u_1 q_j</m>.
+        Up to reordering we have
+        <me>
+          p_1p_2\cdots p_r=u_1p_1q_2\cdots q_s
+        </me>
+      </p>
+      <p>
+        Therefore
+        <me>
+          p_2\cdots p_r=u_1q_2\cdots q_s
+        </me>
+      </p>
+      <p>
+        We can continue in a similar fashion until we end up with
+        <me>
+          1=u_1\cdots u_rq_{r+1}\cdots q_s
+        </me>
+      </p>
+      <p>
+        Since the <m>q_j</m>'s are non-units,
+        this means that <m>r=s</m> and that the <m>p_i</m>'s are associates of the <m>q_j</m>'s.
+        Therefore <m>R</m> is a UFD.
+      </p>
+    </proof>
+    <theorem xml:id="thm_edispid">
+      <statement>
+        <p>
+          Every Euclidean domain is a principal ideal domain.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Mimic the proof of <xref ref="thm_ZisPID">Theorem</xref>.
+        </p>
+      </hint>
+    </theorem>
+    <proof>
+      <p>
+        Let <m>R</m> be a euclidean domain,
+        and <m>I</m> an ideal of <m>R</m>.
+        If <m>I = \set{0}</m>, then <m>I</m> is principal,
+        so assume that <m>I\ne \set{0}</m>.
+      </p>
+      <p>
+        Define <m>S = \setof{\delta(x)>0}{x\in I}</m>.
+        Then the Well-Ordering Principle guarantees that <m>S</m> has a least element.
+        Let <m>d\in I</m> be such that <m>\delta(d) > 0</m> is minimal.
+        We claim that <m>I = \ideal{d}</m>.
+      </p>
+      <p>
+        Clearly <m>\ideal{d}\subseteq I</m>.
+        Now assume that <m>a\in I</m>,
+        and write <m>a = dq + r</m>,
+        where either <m>r = 0</m> or <m>r\ne 0</m> and <m>\delta(r) \lt \delta(d)</m>.
+        If <m>\delta(r) \lt \delta(d)</m>,
+        then <m>r = a - dq \in I</m>,
+        contradicting the minimality of <m>\delta(d)</m>.
+        Thus, <m>r = 0</m>, and <m>a\in \ideal{d}</m>.
+      </p>
+      <p>
+        Therefore, <m>R</m> is a PID.
+      </p>
+    </proof>
+    <theorem xml:id="theorem_everyedisufd">
+      <statement>
+        <p>
+          Every Euclidean domain is a unique factorization domain.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Apply <xref ref="thm_edispid">Theorems</xref>
+        and <xref ref="thm_pidisufd"></xref>.
+      </p>
+    </proof>
+    <theorem>
+      <title>Unique Factorization of polynomials</title>
+      <statement>
+        <p>
+          Let <m>F</m> be a field.
+          Then <m>F[x]</m> is a UFD.
+        </p>
+        <p>
+          That is, if <m>f(x) \in F[x]</m> with <m>\deg(f(x)) \ge 1</m>,
+          then <m>f(x)</m> is either irreducible or a product of irreducibles in <m>F[x]</m>.
+          What is more, if
+          <me>
+            f(x) = p_1(x) p_2(x) \cdots p_k(x) \text{ and }  f(x) = q_1(x) q_2(x) \cdots q_m(x)
+          </me>
+          are two factorizations of <m>f</m> into irreducibles <m>p_i, q_j</m>,
+          then <m>m=k</m> and after reordering,
+          <m>p_j</m> and <m>q_j</m> are associates.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Handle existence and uniqueness separately.
+          For each, (strong) induction on <m>\deg(f(x))</m> will work.
+          Or do something entirely different.
+        </p>
+      </hint>
+    </theorem>
+    <p>
+      Thus, we see that the existence of a well-behaved division algorithm and (a lack of zero divisors) is sufficient to guarantee unique factorization.
+      However, it is not necessary.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          If <m>R</m> is a UFD, then <m>R[x]</m> is a UFD.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      Thus, <m>\Z[x]</m> is a UFD. However,
+      as we will see later, <m>\Z[x]</m> is not a PID.
+    </p>
+  </section>
+  <section xml:id="SubSec-Nonunique-Factorization">
+    <title>Nonunique Factorization</title>
+    <p>
+      If every ring had the unique factorization property,
+      life would be very boring indeed.
+      And in fact,
+      the failure of certain rings in algebraic number theory to have the unique factorization property played a role in several failed attempts to prove Fermat's Last Theorem,
+      which says that there are no nontrivial integer solutions to the equation <m>x^n + y^n = z^n</m> if <m>n \ge 3</m>.
+    </p>
+    <p>
+      In 1847, Gabriel Lam&#xe9; claimed he had complete solved the problem.
+      His solution relied on the factorization of <m>x^p + y^p</m>,
+      where <m>p</m> is an odd prime, as
+      <me>
+        x^p + y^p = (x+y)(x+\zeta y) \cdots (x+\zeta^{p-1}y)
+      </me>,
+      where <m>\zeta = e^{2\pi i/p}</m> is a primitive <m>p</m>-th root of unity in <m>\C</m>.
+      However, the ring <m>\Z[\zeta] = \setof{a_0 + a_1 \zeta + a_2 \zeta^2 + \cdots + a_{p-1} \zeta^{p-1}}{a_i\in\Z}</m> is not a unique factorization domain.
+    </p>
+    <p>
+      In the following exercises,
+      we explore factorization in a similar integral domain,
+      <m>R = \Z[\sqrt{-7}] = \setof{a+b\sqrt{-7}}{a,b\in\Z}</m>.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Verify that <m>8 = (1+\sqrt{-7})(1-\sqrt{-7})</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          Define a function <m>\delta : R \to \N_0</m> by <m>\delta(a+b\sqrt{-7}) = a^2 + 7 b^2</m>.
+          Prove that if <m>x,y\in R</m>,
+          <m>\delta(xy) = \delta(x)\delta(y)</m>.
+        </p>
+      </statement>
+    </exercise>
+    <theorem>
+      <statement>
+        <p>
+          An element <m>u\in R</m> is a unit if and only if <m>\delta(u) = 1</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Observe that <m>u</m> is a unit if and only if <m>uv = 1</m> for some <m>v</m>,
+        which menas that <m>1 = \delta(1) = \delta(u) \delta(v)</m>,
+        so <m>\delta(u) = \delta(v) = 1</m>.
+      </p>
+    </proof>
+    <lemma>
+      <statement>
+        <p>
+          There do not exist <m>x,y\in \N_0</m> such that <m>2 = x^2 + 7y^2</m>.
+        </p>
+      </statement>
+    </lemma>
+    <proof>
+      <p>
+        Suppose there exist <m>x,y\in \N_0</m> such that <m>2 = x^2 + y^2</m>.
+        Then we must have <m>y = 0</m>,
+        which means that <m>x^2 = 2</m>, a contradiction.
+      </p>
+    </proof>
+    <theorem>
+      <statement>
+        <p>
+          The elements 2, <m>1+ \sqrt{-7}</m>,
+          and <m>1-\sqrt{-7}</m> are irreducible in <m>R</m>.
+          Thus, <m>R</m> is not a UFD.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Suppose <m>2 = ab</m>.
+        Then <m>4 = \delta(2) = \delta(a)\delta(b)</m>.
+        By the lemma, we may not have <m>\delta(a) = 2</m>,
+        which means without loss of generality that <m>\delta(a) = 1</m>,
+        and thus <m>a</m> is a unit.
+        Therefore, 2 is irreducible.
+      </p>
+      <p>
+        Now suppose that <m>1 + \sqrt{-7} = ab</m>.
+        Then <m>8 = \delta(1+\sqrt{-7}) = \delta(a) \delta(b)</m>.
+        The possible values for <m>\delta(a)</m> are 1, 2, 4, and 8.
+        If <m>\delta(a) = 1</m> or 8, then <m>1+\sqrt{-7}</m> is irreducible,
+        as either <m>a</m> or <m>b</m> is necessarily a unit.
+        By the lemma, we may not have
+        <m>\delta(a) = 2</m> or <m>\delta(b) = 2</m>,
+        so in fact either <m>\delta(a) = 1</m> or 8.
+        Therefore, <m>1\pm \sqrt{-7}</m> is irreducible.
+      </p>
+      <p>
+        Since we have factored 8 into two different products of irreducibles,
+        <m>R</m> is not a UFD.
+      </p>
+    </proof>
+  </section>
+</chapter>

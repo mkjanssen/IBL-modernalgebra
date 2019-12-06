@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-12-05T10:11:45-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Integers modulo \(m\)</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.12;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\labelitemi}{$\diamond$}
+\def\arraystretch{1.5}
+\newcommand{\contentsfinish}{}
+\newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
+\newcommand{\tosay}[1]{\begin{center}\text{\fbox{\scriptsize{#1}}}\end{center}}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsecpagefont}{}
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\smallcaps{#1}}
+\def\oldequation{\equation}
+\def\endoldequation{\endequation}
+\newcommand{\nl}{
+}
+\newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\thesection}.\ \smallcaps{#1}}{\thesection.\ \smallcaps{#1}}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\scriptsize\thesection}.\ \smallcaps{#1}}{}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0.5pt}
+\newcommand{\makedefaultsection}[2][true]{
+}
+\newcommand{\timestamp}{{\color{red}Last updated: {\currenttime\ (UTC), \today}}}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\ideal}[1]{\left\langle\, #1 \,\right\rangle}
+\newcommand{\subgp}[1]{\left\langle\, #1 \,\right\rangle}
+\def\p{\varphi}
+\def\isomorphic{\cong}
+\def\Gal{\text{Gal}}
+\def\im{\text{im}}
+\def\normal{\vartriangleleft}
+\renewcommand{\qedsymbol}{$\checkmark$}
+\def\lcm{{\text{lcm}\,}}
+\newcommand{\q}[1]{{\color{red} {#1}}}
+\newcommand{\startimportant}[1]{\end{[{Hint:} #1]\end}}
+\renewcommand{\textcircled}[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt,color=red] (char) {#1};}}
+\newcommand{\crossout}[1]{\tikz[baseline=(char.base)]{\node[mynode, cross out,draw] (char) {#1};}}
+\newcommand{\set}[1]{\left\{ {#1} \right\}}
+\newcommand{\setof}[2]{{\left\{#1\,\colon\,#2\right\}}}
+\def\C{{\mathbb C}}
+\def\Z{{\mathbb Z}}
+\def\bF{{\mathbb F}}
+\def\Q{{\mathbb Q}}
+\def\N{{\mathbb N}}
+\def\R{{\mathbb R}}
+\newcommand{\h}[1]{{\textbf{#1}}}
+\def\presnotes{}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Modern Algebra</span></a></h1>
+<p class="byline">Michael Janssen, Melissa Lindsey</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="SubSec-Primes-and-Factorization.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Sec-Integers.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Sec-Fields-and-Rings.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="SubSec-Primes-and-Factorization.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Sec-Integers.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Sec-Fields-and-Rings.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction">Introduction</a></li>
+<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents">A Note to Students</a></li>
+<li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors">A Note to Instructors</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Sec-Integers.html" data-scroll="Sec-Integers"><span class="codenumber">1</span> <span class="title">The Integers</span></a><ul>
+<li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering">Induction and Well-Ordering</a></li>
+<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers">Divisibility in the integers</a></li>
+<li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization">Primes and Factorization</a></li>
+<li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m" class="active">The Integers modulo \(m\)</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Sec-Fields-and-Rings.html" data-scroll="Sec-Fields-and-Rings"><span class="codenumber">2</span> <span class="title">Fields and Rings</span></a><ul>
+<li><a href="SubSec-Fields.html" data-scroll="SubSec-Fields">Fields</a></li>
+<li><a href="SubSec-Rings.html" data-scroll="SubSec-Rings">Rings</a></li>
+<li><a href="SubSec-Divisibility-in-Domains.html" data-scroll="SubSec-Divisibility-in-Domains">Divisibility in Integral Domains</a></li>
+<li><a href="SubSec-Principal-Ideals.html" data-scroll="SubSec-Principal-Ideals">Principal Ideals</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Sec-Factorization.html" data-scroll="Sec-Factorization"><span class="codenumber">3</span> <span class="title">Factorization</span></a><ul>
+<li><a href="SubSec-Factoring-Polynomials.html" data-scroll="SubSec-Factoring-Polynomials">Factoring Polynomials</a></li>
+<li><a href="SubSec-Factorization-in-Euclidean-Domains.html" data-scroll="SubSec-Factorization-in-Euclidean-Domains">Factorization in Euclidean Domains</a></li>
+<li><a href="SubSec-Nonunique-Factorization.html" data-scroll="SubSec-Nonunique-Factorization">Nonunique Factorization</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Sec-Ideals.html" data-scroll="Sec-Ideals"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a><ul>
+<li><a href="SubSec-Ideals-In-General.html" data-scroll="SubSec-Ideals-In-General">Ideals in general</a></li>
+<li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings">Quotient Rings</a></li>
+<li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms">Homomorphisms</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="SubSec-Integers-Mod-m"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.4</span> <span class="title">The Integers modulo \(m\)</span>
+</h2>
+<a href="SubSec-Integers-Mod-m.html" class="permalink">¶</a><p id="p-119">If you are familiar with 'military time' then you understand that eighteen hundred hours and 6:00pm are equivalent ways of representing the same time. Similarly, it is common knowledge that if it is 10:00am now, it will again be 10:00am in 24 hours (though on a different day). Whether you realize it or not, when you are working with time (in hours) you are working in the integers modulo 12, a concept that is rooted in the mathematical idea of equivalence classes.</p>
+<article class="definition definition-like" id="definition-6"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.4.1</span>.</h6>
+<p id="p-120">Let \(S\) be a nonempty set. A <dfn class="terminology">relation</dfn> \(R\) on \(S\) is a subset of \(S\times S\text{.}\) If \(x,y\in S\) such that \((x,y)\in R\text{,}\) we usually write \(xRy\) and say that \(x\) and \(y\) are <dfn class="terminology">related under \(R\)</dfn>.</p></article><article class="definition definition-like" id="definition-7"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.4.2</span>.</h6>
+<p id="p-121">Let \(S\) be a nonempty set. We say a relation \(\sim\) on \(S\) is an <dfn class="terminology">equivalence relation</dfn> if the following properties hold:</p>
+<ul class="disc">
+<li id="li-14"><p id="p-122">\(\sim\) is <em class="emphasis">reflexive</em>: if \(a\in S\text{,}\) then \(a\sim a\text{.}\)</p></li>
+<li id="li-15"><p id="p-123">\(\sim\) is <em class="emphasis">symmetric</em>: if \(a,b\in S\) with \(a\sim b\text{,}\) then \(b\sim a\text{.}\)</p></li>
+<li id="li-16"><p id="p-124">\(\sim\) is <em class="emphasis">transitive</em>: if \(a,b,c\in S\) with \(a\sim b\) and \(b\sim c\text{,}\) then \(a\sim c\text{.}\)</p></li>
+</ul>
+<p id="p-125">Given \(x\in S\text{,}\) the set</p>
+<div class="displaymath">
+\begin{equation*}
+\overline{x} = \setof{y\in S}{x\sim y}
+\end{equation*}
+</div>
+<p>is called the <dfn class="terminology">equivalence class of \(x\)</dfn>. Any element \(z\in \overline{x}\) is called a <dfn class="terminology">representative</dfn> of the equivalence class.</p></article><article class="activity project-like" id="activity-3"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">1.4.1</span>.</h6>
+<p id="p-126">Prove that “has the same birthday as” is an equivalence relation on the set \(P\) of all people.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
+<p id="p-127">Given any \(x\in P\text{,}\) clearly \(x\) has the same birthday as \(x\text{.}\)</p>
+<p id="p-128">Moreover, if \(x,y\in P\) such that \(x\) has the same birthday as \(y\text{,}\) then it is clear that \(y\) has the same birthday as \(x\text{.}\)</p>
+<p id="p-129">Finally, if \(x,y,z\in P\) such that \(x\) has the same birthday as \(y\) and \(y\) has the same birthday as \(z\text{,}\) then \(x\) must have the same birthday as \(z\text{.}\)</p>
+</div></div>
+</div></article><article class="exploration project-like" id="exploration-3"><h6 class="heading">
+<span class="type">Exploration</span> <span class="codenumber">1.4.2</span>.</h6>
+<p id="p-130">What other relations can you think of? Write down one example and one non-example of an equivalence relation.</p></article><article class="activity project-like" id="activity-4"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">1.4.3</span>.</h6>
+<p id="p-131">Prove that \(\le\) is <em class="emphasis">not</em> an equivalence relation on \(\Z\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like"><p id="p-132">The relation \(\le\) fails the symmetry condition. As an example, note that \(2 \le 3\text{,}\) but \(3\not\le 2\text{.}\)</p></div></div>
+</div></article><article class="definition definition-like" id="definition-8"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.4.3</span>.</h6>
+<p id="p-133">Let \(a,b\in \Z\) and \(m \in \N\text{,}\) \(m &gt; 1\text{.}\) We say <dfn class="terminology">\(a\) is congruent to \(b\) modulo \(m\)</dfn> if \(m\mid a-b\text{.}\) We write \(a \equiv_m b\text{.}\)</p></article><article class="activity project-like" id="activity-5"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">1.4.4</span>.</h6>
+<p id="p-134">Justify the following congruences.</p>
+<ol class="decimal">
+<li id="li-17"><p id="p-135">\(18 \equiv_{12} 6\)</p></li>
+<li id="li-18"><p id="p-136">\(47 \equiv_{13} 8\)</p></li>
+<li id="li-19"><p id="p-137">\(71 \equiv_5 1\)</p></li>
+<li id="li-20"><p id="p-138">\(21 \equiv_{11} -1\)</p></li>
+</ol></article><article class="theorem theorem-like" id="theorem-13"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.4.4</span>.</h6>
+<p id="p-139">Given an integer \(m &gt; 1\text{,}\) congruence modulo \(m\) is an equivalence relation on \(\Z\text{.}\)</p></article><article class="hiddenproof" id="proof-14"><a data-knowl="" class="id-ref" data-refid="hk-proof-14"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-14"><article class="hiddenproof"><p id="p-140">Let \(a\in \Z\text{.}\) Then \(m|a-a\text{,}\) so \(a \equiv_m a\text{.}\) Thus, \(\equiv_m\) is reflexive.</p>
+<p id="p-141">Let \(a,b\in \Z\) such that \(a\equiv_m b\text{.}\) This means that \(m|a-b\text{,}\) so there is some \(k\in \Z\) such that \(mk = a-b\text{.}\) Then \(m(-k) = b-a\text{,}\) so \(m|b-a\) and \(b \equiv_m a\text{.}\) Thus, \(\equiv_m\) is symmetric.</p>
+<p id="p-142">Finally, let \(a,b,c\in \Z\) such that \(a\equiv_m b\) and \(b\equiv_m c\text{.}\) Then \(m|a-b\) and \(m|b-c\text{,}\) so there are integers \(k_1, k_2\) such that \(m k_1 = a-b\) and \(m k_2 = b-c\text{.}\) Summing these equations yields \(m(k_1 + k_2) = (a-b) + (b-c) = a-c\text{,}\) so \(m|a-c\) and \(a\equiv_m c\text{.}\)</p></article></div>
+<article class="exploration project-like" id="exploration-4"><h6 class="heading">
+<span class="type">Exploration</span> <span class="codenumber">1.4.5</span>.</h6>
+<p id="p-143">Find all of the equivalence classes of \(\Z\) under the relation \(\equiv_5\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-2" id="answer-2"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-2"><div class="answer solution-like">
+<p id="p-144">The equivalence classes are</p>
+<div class="displaymath">
+\begin{align*}
+\overline{0} \amp = \setof{7k}{k\in\Z} = \set{\ldots, -5, 0, 5, 10, \ldots}\\
+\overline{1} \amp = \setof{7k+1}{k\in\Z} = \set{\ldots, -4, 1, 6, 11, \ldots}\\
+\overline{2} \amp = \setof{7k+2}{k\in\Z} = \set{\ldots, -3, 2, 7, 12, \ldots}\\
+\overline{3} \amp = \setof{7k+3}{k\in\Z} = \set{\ldots, -2, 3, 8, 13, \ldots}\\
+\overline{4} \amp = \setof{7k+4}{k\in\Z} = \set{\ldots, -1, 4, 9, 14, \ldots}
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-2"><a data-knowl="" class="id-ref" data-refid="hk-exercise-2"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">1.4.5</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-2"><article class="exercise exercise-like"><p id="p-146">List the elements of \(\Z_7\text{.}\)</p></article></div>
+<article class="theorem theorem-like" id="theorem-14"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.4.6</span>.</h6>
+<p id="p-147">Let \(a,b, c,d\in \Z\) and \(m &gt; 1\) such that \(a\equiv_m c\) and \(b\equiv_m d\text{.}\) Then \(a+b \equiv_m c + d\text{.}\)</p></article><article class="hiddenproof" id="proof-15"><a data-knowl="" class="id-ref" data-refid="hk-proof-15"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-15"><article class="hiddenproof"><p id="p-148">Write \(mk_1 = a-c\) and \(m k_2 = b-d\) for some \(k_1,k_2\in \Z\text{.}\) Then \(m(k_1 + k_2) = (a-c) + (b-d) = (a+b) - (c+d)\text{,}\) so \(a+b \equiv_m c+d\text{.}\)</p></article></div>
+<article class="theorem theorem-like" id="theorem-15"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.4.7</span>.</h6>
+<p id="p-149">Let \(a,b, c,d\in \Z\) and \(m &gt; 1\) such that \(a\equiv_m c\) and \(b\equiv_m d\text{.}\) Then \(ab \equiv_m c d\text{.}\)</p></article><article class="hiddenproof" id="proof-16"><a data-knowl="" class="id-ref" data-refid="hk-proof-16"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-16"><article class="hiddenproof"><p id="p-150">Write \(mk_1 = a-c\) and \(m k_2 = b-d\) for some \(k_1,k_2\in \Z\text{.}\) Observe</p>
+<div class="displaymath">
+\begin{align*}
+ab -cd \amp = ab - bc + bc - cd\\
+\amp = b(a-c) + c(b-d)\\
+\amp = bmk_1 + cmk_2\\
+\amp = m(bk_1 + ck_2)\text{.}
+\end{align*}
+</div>
+<p id="p-151">Thus, \(m|ab-cd\) and \(ab \equiv_m cd\text{.}\)</p></article></div>
+<article class="definition definition-like" id="definition-9"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.4.8</span>.</h6>
+<p id="p-152">Let \(S\) be a set and \(\sim\) an equivalence relation on \(S\text{.}\) Then a statement \(P\) about the equivalence classes of \(S\) is <dfn class="terminology">well-defined</dfn> if the representative of the equivalence class does not matter. That is, whenever \(\overline{x} = \overline{y}\text{,}\) \(P(\overline{x}) = P(\overline{y})\text{.}\)</p></article><p id="p-153">The previous exercises justify the following definitions.</p>
+<article class="definition definition-like" id="definition-10"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.4.9</span>.</h6>
+<p id="p-154">Let \(m &gt; 1\) and \(a,b\in \Z_m\text{.}\) Then the following are well-defined operations on the equivalence classes:</p>
+<ol class="decimal">
+<li id="li-21"><p id="p-155"><em class="emphasis">Addition modulo \(m\)</em>: \(\overline{a} + \overline{b} := \overline{a+b}\text{.}\) <aside class="aside aside-like" id="aside-3">The symbol \(:=\) is often used to indicate that we are <em class="emphasis">defining</em> the expression on the left to equal the expression on the right.</aside></p></li>
+<li id="li-22"><p id="p-156"><em class="emphasis">Multiplication modulo \(m\)</em>: \(\overline{a}\cdot \overline{b} := \overline{a\cdot b}\text{.}\)</p></li>
+</ol></article><article class="investigation project-like" id="q_zmodmcancel"><h6 class="heading">
+<span class="type">Investigation</span> <span class="codenumber">1.4.6</span>.</h6>
+<p id="p-157">Let \(\overline{a},\overline{b}\in \Z_m\) and \(m &gt; 1\text{.}\) If \(\overline{a}\cdot \overline{c} = \overline{b}\cdot \overline{c}\text{,}\) is it true that \(\overline{a} = \overline{b}\text{?}\) If so, prove it. If not, find an example of when the statement fails to hold.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-3" id="answer-3"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-3"><div class="answer solution-like"><p id="p-158">It is not true. For example, in \(\Z_{12}\text{,}\) \(\overline{6}\cdot \overline{3} = \overline{6}\cdot\overline{1}\text{,}\) but \(\overline{3}\ne \overline{1}\text{.}\)</p></div></div>
+</div></article><article class="theorem theorem-like" id="theorem-16"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.4.10</span>.</h6>
+<p id="p-159">Let \(a,b,c\text{,}\) and \(m\) be integers with \(m &gt; 1\) and \(\gcd(c,m)=1\text{.}\) Then there is some \(x\in \Z\) such that \(\overline{c} \overline{x} = \overline{1}\text{.}\)</p>
+<p id="p-160">Conclude that if \(\overline{a} \cdot\overline{c} = \overline{b}\cdot\overline{c}\) in \(\Z_m\) that \(\overline{a} = \overline{b}\text{.}\)</p></article><article class="hiddenproof" id="proof-17"><a data-knowl="" class="id-ref" data-refid="hk-proof-17"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-17"><article class="hiddenproof"><p id="p-161">We know that \(m|ac-bc\text{,}\) i.e., that \(m|c(a-b)\text{.}\) By <a data-knowl="./knowl/theorem_relprimecancel.html" title="Theorem 1.2.10">Theorem 1.2.10</a>, \(m|a-b\text{.}\)</p></article></div>
+<article class="theorem theorem-like" id="theorem_cancelinZp"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.4.11</span>.</h6>
+<p id="p-162">Let \(p\in \N\) be prime and \(\overline{a},\overline{b},\overline{c}\in \Z_p\) such that \(\overline{c}\ne \overline{0}\text{.}\) Then</p>
+<ol class="decimal">
+<li id="li-23"><p id="p-163">there is some \(\overline{x}\in \Z_p\) such that \(\overline{c}\cdot \overline{x} = \overline{1}\text{;}\) and,</p></li>
+<li id="li-24"><p id="p-164">if \(\overline{a} \cdot\overline{c} = \overline{b}\cdot\overline{c}\text{,}\) \(\overline{a} = \overline{b}\text{.}\)</p></li>
+</ol></article><article class="hiddenproof" id="proof-18"><a data-knowl="" class="id-ref" data-refid="hk-proof-18"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-18"><article class="hiddenproof"><p id="p-165">In \(\Z_p\text{,}\) every nonzero equivalence class is represented by an \(x\) for which \(\gcd(x,p) = 1\text{.}\) Apply the previous theorem.</p></article></div></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.12/login.js"></script>
+</body>
+</html>

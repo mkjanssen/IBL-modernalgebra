@@ -1,0 +1,2423 @@
+<chapter xml:id="Sec-Fields-and-Rings">
+  <title>Fields and Rings</title>
+  <introduction>
+    <p>
+      You have been exploring numbers and the patterns they hide within them since you began elementary school
+      (if not before).
+      In Chapter 1 we reminded ourselves about what some of those patterns are in the integers
+      (with the goal of understanding factorization)
+      and worked to express them in a more formal way.
+      You may find yourself wondering why we are going out of our way to complicate ideas you have understood since elementary school.
+      The reason for the abstraction
+      (and the reason for this course!)
+      is so that we can explore just how far we can push these patterns.
+      How far does our understanding of factorization in the integers stretch to other types of numbers and other mathematical objects (like polynomials)?
+      In this chapter we will set the ground work for answering that question by introducing more formal notation that will assist us in streamlining our investigation into factorization.
+    </p>
+  </introduction>
+  <section xml:id="SubSec-Fields">
+    <title>Fields</title>
+    <p>
+      We now begin the process of abstraction.
+      We will do this in stages, beginning with the concept of a <em>field</em>.
+      First, we need to formally define some familiar sets of numbers.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          The rational numbers, denoted by <m>\Q</m>, is the set
+          <me>
+            \Q = \setof{\frac{a}{b}}{a,b\in \Z, \ b\ne 0}
+          </me>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Recall that in elementary school,
+      you learned that two fractions
+      <m>\frac{a}{b}, \frac{c}{d} \in \Q</m> are equivalent if and only if <m>ad=bc</m>.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Prove that our elementary school definition of equivalent fractions is an equivalence relation.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      We likely have an intuitive idea of what is meant by <m>\R</m>,
+      the set of real numbers.
+      Defining <m>\R</m> rigorously is actually quite difficult,
+      and will occupy a significant amount of time in a first course in real analysis.
+      Thus, we will make use of your intuition.
+      It is certainly the case that <m>\N\subseteq \Z\subseteq \Q\subseteq \R</m>,
+      but <m>\R</m> also contains many irrational numbers,
+      such as <m>\pi</m>, <m>e</m>,
+      <m>\sqrt{2}</m>, and so on.
+    </p>
+    <p>
+      Out of <m>\R</m> we may build the complex numbers.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          The <term>complex numbers</term> consist of all expressions of the form <m>a+bi</m>,
+          where <m>a,b\in \R</m> and <m>i^2 = -1</m>.
+          Given <m>z = a+bi</m>, we say <m>a</m> is the <term>real part</term>
+          of <m>z</m> and <m>b</m> is the
+          <term>imaginary part</term>.
+          The set of complex numbers is denoted <m>\C</m>.
+        </p>
+      </statement>
+    </definition>
+    <definition xml:id="def_binaryoperation">
+      <statement>
+        <p>
+              <idx><h>binary operation</h></idx>
+          Let <m>X</m> be a nonempty set.
+          A function <m>\star : X \times X \to X</m> is called a
+          <term>binary operation</term>.
+          If <m>\star</m> is a binary operation on <m>X</m>,
+          we say that <m>X</m> is <term>closed under the operation <m>\star</m></term>. [Given <m>a,b\in X</m>,
+          we usually write <m>a\star b</m> in place of <m>\star(a,b)</m>.]
+        </p>
+      </statement>
+    </definition>
+    <question>
+      <statement>
+        <p>
+          Which of <m>+, -, \cdot, \div</m> are binary operations:
+          <ol>
+            <li>
+              <p>
+                on <m>\R</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                on <m>\Q</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                on <m>\Z</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                on <m>\N</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                on <m>\C</m>?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Division is never a binary operation.
+          The others are binary operations on <m>\C</m>,
+          <m>\R, \Q</m>, and <m>\Z</m>.
+          The only binary operation on <m>\N</m> is addition.
+        </p>
+      </answer>
+    </question>
+    <p>
+      The hallmark of modern pure mathematics is the use of <em>axioms</em>.
+      An axiom is essentially an unproved assertion of truth.
+      Our use of axioms serves several purposes.
+    </p>
+    <p>
+      From a logical perspective,
+      axioms help us avoid the problem of infinite regression (e.g., asking
+      <em>How do you know?</em> over and over again).
+      That is, axioms give us very clear starting points from which to make our deductions.
+    </p>
+    <p>
+      More generally,
+      the use of any hypotheses when asking mathematical or scientific questions is a form of creativity,
+      and even <em>play</em>.
+      God has created us in His image,
+      and he is a creative being.
+      The definitions we make and the theorems we prove are reflections of the
+      <em>imago Dei</em> in us.
+      Of course, we do not have the power to create <em>ex nihilo</em>;
+      instead, our tools are the mathematical <em>aspects</em>
+      God has imbued in his creation.
+      We can postulate structures with whichever axioms we like,
+      but our creativity is most valuable if it reflects the world <em>as it is</em>.
+    </p>
+    <p>
+      To that end,
+      our first abstract algebraic structure captures and axiomatizes familiar behavior about how numbers can be combined to produce other numbers of the same type.
+    </p>
+    <definition xml:id="def_field">
+      <statement>
+        <p>
+          A <term>field</term> is a nonempty set <m>F</m> with at least two elements and binary operations <m>+</m> and <m>\cdot</m>,
+          satisfying the following <term>field axioms</term>:
+          <ol>
+            <li>
+              <title>F1.</title>
+              <p>
+                Given any <m>a,b,c\in F</m>, <m>(a+b)+c = a+(b+c)</m>.
+              </p>
+            </li>
+            <li>
+              <title>F2.</title>
+              <p>
+                Given any <m>a,b\in F</m>, <m>a+b= b+a</m>.
+              </p>
+            </li>
+            <li>
+              <title>F3.</title>
+              <p>
+                There exists an element <m>0_F\in F</m> such that for all <m>a\in F</m>,
+                <m>a+0_F = 0_F + a = a</m>.
+              </p>
+            </li>
+            <li>
+              <title>F4.</title>
+              <p>
+                Given any <m>a\in F</m> there exists a <m>b\in F</m> such that <m>a+b = b + a =0_F</m>.
+              </p>
+            </li>
+            <li>
+              <title>F5.</title>
+              <p>
+                Given any <m>a,b,c\in F</m>, <m>(a\cdot b)\cdot c = a\cdot (b\cdot c)</m>.
+              </p>
+            </li>
+            <li>
+              <title>F6.</title>
+              <p>
+                Given any <m>a,b\in F</m>, <m>a\cdot b = b\cdot a</m>.
+              </p>
+            </li>
+            <li>
+              <title>F7.</title>
+              <p>
+                There exists an element <m>1_F\in F</m> such that for all <m>a\in F</m>,
+                <m>1_F\cdot a = a\cdot 1_F = a</m>.
+              </p>
+            </li>
+            <li>
+              <title>F8.</title>
+              <p>
+                For all <m>a\in F</m>, <m>a\ne 0_F</m>,
+                there exists a <m>b\in F</m> such that <m>a\cdot b = b\cdot a = 1_F</m>.
+              </p>
+            </li>
+            <li>
+              <title>F9.</title>
+              <p>
+                For all <m>a,b,c\in F</m>, <m>a\cdot (b+c) = a\cdot b + a\cdot c</m>.
+              </p>
+            </li>
+            <li>
+              <title>F10.</title>
+              <p>
+                For all <m>a,b,c\in F</m>, <m>(a+b)\cdot c = a\cdot c + b\cdot c</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </definition>
+    <p>
+      For brevity's sake,
+      we will usually write <m>a\cdot b</m> as <m>ab</m>.
+    </p>
+    <exercise xml:id="exer_fieldexamples">
+      <statement>
+        <p>
+          Which of the following are fields?
+          If no operations are specified,
+          assume the most obvious operations (e.g., the addition and multiplication you have known for years).
+          For most, a short justification or counterexample is sufficient.
+          <ol>
+            <li>
+              <p>
+                <m>\N</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\Z</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>2\Z</m>, the set of even integers
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\Q</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\Z_{10}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\Z_{11}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\R</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\C</m>, with addition defined as <m>(a_1 + b_1 i) + (a_2 + b_2 i) := (a_1 + a_2) + (b_1 + b_2)i</m>,
+                and multiplication defined as <m>(a_1 + b_1 i)(a_2 + b_2 i) := (a_1 a_2 - b_1 b_2) + (a_1 b_2 + b_1 a_2) i</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\mathcal{M}_2(\R) := \setof{\left(\begin{matrix}a \amp b \\ c \amp d \end{matrix} \right)}{a,b,c,d\in\R}</m><fn>
+                For students who have taken a linear algebra course.
+                </fn>,
+                the set of
+                <m>2\times 2</m> matrices with real coefficients using the usual definition of matrix multiplication<fn>
+                Recall that,
+                if <m>\left(\begin{matrix}a_1 \amp b_1 \\ c_1 \amp d_1 \end{matrix} \right), \left(\begin{matrix}a_2 \amp b_2 \\ c_2 \amp d_2 \end{matrix} \right)\in \mathcal{M}_2(\R)</m>,
+                then <m>\left(\begin{matrix}a_1 \amp b_1 \\ c_1 \amp d_1 \end{matrix} \right) \cdot \left(\begin{matrix}a_2 \amp b_2 \\ c_2 \amp d_2 \end{matrix} \right) = \left(\begin{matrix}a_1 a_2 + b_1 c_2 \amp a_1 b_2 + b_1 d_2 \\ c_1 a_2 + d_1 c_2 \amp c_1 b_2 + d_1 d_2 \end{matrix} \right)</m>.
+                </fn> and matrix addition.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      In the previous exercise,
+      you determined which of sets of familiar mathematical objects are and are not fields.
+      Notice that you have been working with fields for years and years and that our abstraction of language to that of fields is simply to allow us to explore the common features at the same time - it is inefficient to prove the same statement about every single field when we can prove it once and for all about fields in general.
+    </p>
+    <solution>
+      <p>
+        <ol>
+          <li>
+            <p>
+              <m>\N</m> is not closed under taking additive inverses,
+              so is not a field.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\Z</m> is not a field,
+              as there is no integer <m>a</m> such that <m>2a = 1</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>2\Z</m> is not a field for the same reason.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\Q</m> is a field.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\Z_{10}</m> is not a field;
+              there is no <m>\overline{a}\in \Z_{10}</m> for which <m>\overline{5}\cdot \overline{a} = \overline{1}</m>
+              (you can check them all; there are only 9 viable options).
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\Z_{11}</m> <em>is</em> a field.
+              The axioms pertaining to addition and multiplication were established earlier or rely on the same axioms holding for <m>\Z</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\R</m> is a field
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\C</m> is a field.
+              Given <m>a+bi\ne 0</m>,
+              <m>(a+bi)^{-1} = \frac{a}{a^2 + b^2} - \frac{b}{a^2 + b^2} i</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\mathcal{M}_2(\R)</m> is not a field.
+              Matrix multiplication is not commutative.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
+    <theorem xml:id="thm_fieldproperties">
+      <title>properties of fields</title>
+      <statement>
+        <p>
+          Let <m>F</m> be a field.
+          <ol>
+            <li>
+              <p>
+                The additive identity <m>0_F</m> is unique.
+              </p>
+            </li>
+            <li>
+              <p>
+                For all <m>a\in F</m>, <m>a \cdot 0_F = 0_F\cdot a = 0_F</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Additive inverses are unique.
+              </p>
+            </li>
+            <li>
+              <p>
+                The multiplicative identity <m>1_F</m> is unique.
+              </p>
+            </li>
+            <li>
+              <p>
+                Multiplicative inverses are unique.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <ol>
+        <li>
+          <p>
+            Assume <m>0_F, 0_F'</m> both satisfy the additive identity axiom.
+            Observe that <m>0_F = 0_F + 0_F' = 0_F'</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            As <m>0_F = 0_F + 0_F</m>,
+            we may write <m>a\cdot 0_F = a\cdot (0_F + 0_F) = a\cdot 0_F + a \cdot 0_F</m>.
+            Now add the additive inverse of
+            <m>a\cdot 0_F</m> to both sides to obtain <m>0_F = a \cdot 0_F = 0_F\cdot a</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Let <m>a\in F</m> and suppose <m>b</m> and <m>c</m> are such that
+            <m>a+c = 0_F</m> and <m>a+b = 0_F</m>.
+            Then <m>a+c = a+b</m>, and we may add <m>b</m>
+            (or <m>c</m>)
+            to both sides to obtain <m>b+(a+b) = (b+a)+b = 0_F + b = b</m> and <m>c+(a+c) = (c+a)+c = 0_F + c = c</m>.
+            Thus <m>b=c</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Suppose <m>1_F</m> and <m>1_F'</m> are multiplicative identities.
+            Then <m>1_F = 1_F 1_F' = 1_F'</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Let <m>a\in F</m> be nonzero and suppose <m>b,c</m> are multiplicative inverses for <m>a</m>.
+            Then <m>ab = 1_F = ac</m>, and we may multiply by <m>b</m>
+            (or <m>c</m>)
+            to obtain <m>b(ab) = (ba)b = 1_F b = b = b(ac) = (ba)c = 1_F c = c</m>.
+          </p>
+        </li>
+      </ol>
+    </proof>
+    <p>
+      One consequence of <xref ref="thm_fieldproperties">Theorem</xref> is that,
+      given <m>a\in F</m>, <m>b\in F\setminus \set{0}</m>,
+      we may refer to <m>-a</m> as <em>the</em>
+      additive inverse of <m>a</m>,
+      and <m>b^{-1}</m> as <em>the</em>
+      multiplicative inverse of <m>b</m>.
+      We will thus employ this familiar terminology henceforth.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Let <m>K</m> be a field.
+          If <m>F</m> is a nonempty subset satisfying
+          <ol>
+            <li>
+              <p>
+                <m>F\subseteq K</m> and
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>F</m> is a field under the same operations as <m>K</m>,
+              </p>
+            </li>
+          </ol>
+        </p>
+        <p>
+          then we call <m>F</m> a <term>subfield</term> of <m>K</m>,
+          and <m>K</m> an <term>extension field</term> of <m>F</m>, and say
+          <q><m>K/F</m> is a <term>field extension</term>.</q>
+        </p>
+      </statement>
+    </definition>
+    <exercise>
+      <statement>
+        <p>
+          The set of complex numbers <m>\C</m> is an extension field of <m>\R</m>.
+        </p>
+      </statement>
+    </exercise>
+    <theorem>
+      <statement>
+        <p>
+          For all primes <m>p</m>, <m>\Z_p</m> is a field.
+        </p>
+      </statement>
+    </theorem>
+  </section>
+  <section xml:id="SubSec-Rings">
+    <title>Rings</title>
+    <p>
+      In the previous section,
+      we observed that many familiar number systems are fields but that some are not.
+      In this section we will explore which field properties usually hold for familiar sets of numbers and which ones are more specialized.
+      Before we proceed with that endeavor we will give a formal definition of polynomial so that we can include it in our exploration.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Let <m>A</m> be a set, and <m>x</m> a variable.
+          We define a <term>polynomial in <m>x</m> with coefficients in <m>A</m></term>
+          to be an expression of the form
+          <me>
+            p = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n
+          </me>,
+          where <m>n\in \N_0</m> is the <term>degree</term>
+          of the polynomial <m>p</m>,
+          denoted <m>\deg(p) = n</m>, and
+          <m>a_0,a_1,\ldots,
+          a_n</m> are the <term>coefficients</term> of the polynomial.
+          The coefficient <m>a_n</m> is known as the
+          <term>leading coefficient</term> of <m>p</m>,
+          and <m>a_n x^n</m> is the <term>leading term</term> of <m>p</m>.
+          By
+          <me>
+            A[x] := \setof{a_0 + a_1 x + a_2 x + \cdots + a_n x^n}{n\in \N_0, \ a_i\in A}
+          </me>
+          we denote the set of all polynomials with coefficients in <m>A</m>.
+          If <m>A</m> has an additive identity <m>0</m>,
+          then <m>A[x]</m> has a <term>zero polynomial</term>,
+          the polynomial whose coefficients are all <m>0</m>.
+          The zero polynomial is also often denoted by <m>0</m>.
+          The degree of the zero polynomial is <m>-\infty</m>.
+        </p>
+      </statement>
+    </definition>
+    <exercise>
+      <statement>
+        <p>
+          Give some examples of polynomials in <m>A[x]</m> for various choices of number systems <m>A</m>.
+          Identify their coefficients and degrees.
+        </p>
+      </statement>
+    </exercise>
+    <exercise>
+      <statement>
+        <p>
+          In the following table, fill in a <em>Y</em>
+          if the set has the property;
+          fill in a <em>N</em> if it does not.
+        </p>
+        <table xml:id="table_propertiessandsets">
+          <title>A list of properties and sets.</title>
+          <tabular>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell><m>\N</m></cell>
+              <cell><m>\Z</m></cell>
+              <cell><m>2\Z</m></cell>
+              <cell><m>\Q</m></cell>
+              <cell><m>\Q[x]</m></cell>
+              <cell><m>\Z_{8}</m></cell>
+              <cell><m>\Z_{2}</m></cell>
+              <cell><m>\R</m></cell>
+              <cell><m>\C</m></cell>
+              <cell><m>\mathcal{M}_2(\R)</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell>Closure under +</cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell>Closure under <m>\cdot</m></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell><m>+</m> is associative</cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell><m>\cdot</m> is associative</cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell>+ is commutative</cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell><m>\cdot</m> is commutative</cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell><m>\cdot</m> distributes over +</cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell>There is an additive identity</cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell>All elements have additive inverses</cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell>There is an multiplicative identity</cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell>All nonzero elements have mult.<nbsp/>inverses</cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+          </tabular>
+        </table>
+      </statement>
+    </exercise>
+    <question xml:id="q_fieldaxiomspolyring">
+      <statement>
+        <p>
+          Which of the field axioms hold for <m>F[x]</m>,
+          where <m>F</m> is a field, and which fail to hold in general?
+        </p>
+      </statement>
+      <answer>
+        <p>
+          All the axioms hold, except F8.
+          For instance, there is no polynomial
+          <m>f(x)\in \Q[x]</m> for which <m>x f(x) = 1</m>.
+        </p>
+      </answer>
+    </question>
+    <p>
+      As a result of the answer to <xref ref="q_fieldaxiomspolyring">Question</xref>
+      and the completed <xref ref="table_propertiessandsets">Table</xref>,
+      we make the following definition.
+    </p>
+    <definition xml:id="def_ring">
+      <statement>
+        <p>
+          A ring <m>R</m> is a nonempty set,
+          together with binary operations <m>+</m> and <m>\cdot</m> satisfying the following axioms.
+          <ol>
+            <li>
+              <title>R1.</title>
+              <p>
+                Given any <m>a,b,c\in R</m>, <m>(a+b)+c = a+(b+c)</m>.
+              </p>
+            </li>
+            <li>
+              <title>R2.</title>
+              <p>
+                Given any <m>a,b\in R</m>, <m>a+b= b+a</m>.
+              </p>
+            </li>
+            <li>
+              <title>R3.</title>
+              <p>
+                There exists an element <m>0_R\in R</m> such that for all <m>a\in R</m>,
+                <m>a+0_R = 0_R + a = a</m><fn>
+                When the ring <m>R</m> is clear from context,
+                we will often write <m>0</m> in place of <m>0_R</m>.
+                </fn>.
+              </p>
+            </li>
+            <li>
+              <title>R4.</title>
+              <p>
+                Given any <m>a\in R</m> there exists a <m>b\in R</m> such that <m>a+b = b + a =0_R</m>.
+              </p>
+            </li>
+            <li>
+              <title>R5.</title>
+              <p>
+                Given any <m>a,b,c\in R</m>, <m>(a\cdot b)\cdot c = a\cdot (b\cdot c)</m>.
+              </p>
+            </li>
+            <li>
+              <title>R6.</title>
+              <p>
+                For all <m>a,b,c\in R</m>, <m>a\cdot (b+c) = a\cdot b + a\cdot c</m>.
+              </p>
+            </li>
+            <li>
+              <title>R7.</title>
+              <p>
+                For all <m>a,b,c\in R</m>, <m>(a+b)\cdot c = a\cdot c + b\cdot c</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </definition>
+    <exercise>
+      <statement>
+        <p>
+          Compare and contrast <xref ref="def_field">Definitions</xref>
+          and <xref ref="def_ring"></xref>.
+          What are the similarities?
+          What are the differences?
+        </p>
+      </statement>
+    </exercise>
+    <p>
+      While rings seem even more complicated than fields,
+      they are incredibly useful even in applied mathematics
+      (see, e.g., <xref ref="Curto2013" />).
+    </p>
+    <definition>
+      <statement>
+        <p>
+          A ring <m>R</m> is said to be <term>commutative</term> if,
+          for all <m>a,b\in R</m>, <m>ab = ba</m>.
+          Additionally, <m>R</m> is said to have a <term>unity</term>
+          or <term>multiplicative identity</term>
+          if there is an element <m>1_R\in R</m> such that for all <m>a\in R</m>,
+          <m>a \cdot 1_R = 1_R \cdot a= a</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      If <m>R</m> is noncommutative,
+      it may have a left (respectively, right) identity,
+      i.e., an element <m>e\in R</m> such that for all <m>r\in R</m>,
+      <m>er = r</m>
+      (respectively, <m>re = r</m>).
+      If <m>R</m> has an element <m>e</m> for which
+      <m>er = re = r</m> for all <m>r\in R</m>,
+      <m>e</m> is often called a two-sided identity.
+      In short, noncommutative rings may have left,
+      right, or two-sided identities
+      (or none at all).
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Consider the sets given in <xref ref="table_propertiessandsets">Table</xref>.
+          Which are rings?
+          Which are commutative rings with identity?
+        </p>
+      </statement>
+    </exercise>
+    <question>
+      <statement>
+        <p>
+          Which properties of fields in <xref ref="thm_fieldproperties">Theorem</xref> hold for (commutative) rings?
+        </p>
+      </statement>
+    </question>
+    <question>
+      <statement>
+        <p>
+          Are all rings fields?
+          Are all fields rings?
+          Justify.
+        </p>
+      </statement>
+    </question>
+    <exercise>
+      <statement>
+        <p>
+          Most familiar rings are commutative, though not all.
+          Most familiar (commutative) rings have identities, but not all.
+          Find:
+          <ol>
+            <li>
+              <p>
+                A ring that does not have an identity<fn>
+                Sometimes called a
+                <url href="https://en.wikipedia.org/wiki/Rng_(algebra)"><em>rng</em></url>.
+                <m>\ddot\smile</m>
+                </fn>.
+              </p>
+            </li>
+            <li>
+              <p>
+                A noncommutative ring that <em>does</em>
+                have an (two-sided) identity.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>2\Z</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\mathcal{M}_2(\R)</m>;
+                the <m>2\times 2</m> identity matrix is a two-sided identity.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+    <p>
+      In the 1920s, Emmy Noether was the first to describe the ring axioms as we know them today,
+      and her definition of a (not-necessarily-commutative) ring has led to a great deal of interesting work in algebra,
+      number theory, and geometry, including the
+      (see <xref ref="SubSec-Nonunique-Factorization">&#xa7;</xref>
+      for more on the historical development of the proof of Fermat's Last Theorem).
+      Most modern definitions of <em>ring</em>
+      agree with our <xref ref="def_ring">Definition</xref>
+      and allow for rings with noncommutative multiplication and no multiplicative identity.
+    </p>
+    <p>
+      The following theorem states that the set of polynomials with coefficients in a ring <m>R</m> is itself a ring under the usual operations of polynomial addition of like terms,
+      and multiplication via distribution.
+      The proof is not tricky, but a rigorous justification
+      (especially of, e.g., the associativity of multiplication)
+      is tedious, and thus is omitted.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          If <m>R</m> is a (commutative) ring
+          (with identity <m>1_R</m>),
+          then <m>R[x]</m> is a (commutative) ring
+          (with identity <m>1_R</m>).
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      One of the ways to better understand mathematical structures is to understand their similar substructures (e.g., subspaces of vector spaces in linear algebra).
+      Again, this is a formalization of an idea that you have been using since you were a child.
+      There are certain properties of the rational numbers that you understand because you understand the real numbers - this is because the rational numbers are a subring of the real numbers.
+    </p>
+    <p>
+      In our study of rings,
+      we are primarily interested in special types of subrings,
+      to be studied in more depth in <xref ref="Sec-Ideals">Section</xref>.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Let <m>(R,+,\cdot)</m> be a ring and let <m>S\subseteq R</m>.
+          If <m>S</m> is itself a ring under <m>+</m> and <m>\cdot</m>,
+          we say <m>S</m> is a <term>subring</term> of <m>R</m>.
+          In this case, <m>R</m> is often called an
+          <term>overring</term> of <m>S</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      The following theorem provides a nice encapsulation of what needs to be checked to see if a subset <m>S</m> of a ring <m>R</m> is in fact a subring of <m>R</m>.
+    </p>
+    <theorem xml:id="theorem_subringtest">
+      <statement>
+        <p>
+          Let <m>R</m> be a ring and <m>S</m> a subset of <m>R</m>.
+          Then <m>S</m> is a subring if and only if:
+          <ol>
+            <li>
+              <p>
+                <m>S\ne \emptyset</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>S</m> is closed under multiplication; and
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>S</m> is closed under subtraction.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </theorem>
+    <exercise>
+      <statement>
+        <p>
+          Determine whether the following rings <m>S</m> are subrings of the given rings <m>R</m>.
+          <ol>
+            <li>
+              <p>
+                <m>S = \Z</m>, <m>R = \Q</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>S = \Z_{5}</m>, <m>R = \Z_{7}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>S</m> is any ring, <m>R = S[x]</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>S = \R</m>, <m>R = \C</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+    <definition>
+      <statement>
+        <p>
+          Let <m>R</m> be a ring and let <m>u\in R</m> be nonzero.
+          If there is a <m>v\in R</m> such that <m>uv = vu = 1_R</m>,
+          we say <m>u</m> is <term>unit</term> of <m>R</m>.
+          We denote the set of units of <m>R</m> by <m>R^\times</m>.
+          We say <m>x,y\in R</m> are <term>associates</term>
+          if there exists some <m>u\in R^\times</m> such that <m>x = uy</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      That is, a unit in a ring is a nonzero element with a multiplicative inverse.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Explicitly describe the set <m>\Z^\times</m>.
+          What are the associates of 7 in <m>\Z</m>?
+        </p>
+      </statement>
+    </exercise>
+    <theorem>
+      <statement>
+        <p>
+          A commutative ring with identity <m>R</m> in which every nonzero element is a unit is a field.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Compare the axioms for a commutative ring with identity and a field.
+        The only thing missing from the ring axioms is the existence of multiplicative inverses for nonzero elements.
+      </p>
+    </proof>
+    <p>
+      One of the interesting side effects of our abstract definition of <em>ring</em>
+      is that it allows for behavior that may at first appear unintuitive or downright weird.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          A <term>zero divisor</term> in a ring <m>R</m> is a nonzero element <m>z\in R</m> such that there is a nonzero <m>x\in R</m> with <m>xz = zx = 0</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Notice that the reason the idea of zero divisors at first appears weird is that they're not something we encounter when working with numbers.
+      In fact, we specifically use the fact that there are no zero divisors in our familiar numbers systems to solve equations in high school algebra (If <m>(x-2)(x+5)=0</m>,
+      then <m>(x-2)=0</m> or <m>x+5=0</m>).
+      The lack of zero divisors is one of the properties that doesn't persist in our abstraction from the integers to rings in general.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Find, with justification,
+          the zero divisors in <m>\Z_{10}</m> and <m>\Z_{11}</m>.
+          Make and prove a conjecture about zero divisors in <m>\Z_m</m>,
+          where <m>m > 1</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The zero divisors in <m>\Z_{10}</m> are <m>\overline{2}, \overline{4}, \overline{5}, \overline{6},\overline{8}</m>.
+          There are no zero divisors in <m>\Z_{11}</m>.
+        </p>
+        <p>
+          <sc>conjecture.</sc> <m>\overline{x}\in \Z_m</m> is a zero divisor if and only if <m>\gcd(x,m) \ne 1</m>.
+        </p>
+      </solution>
+    </exercise>
+    <question>
+      <statement>
+        <p>
+          Are there any other rings in which you've seen zero divisors?
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Matrix rings?
+        </p>
+      </answer>
+    </question>
+    <theorem>
+      <statement>
+        <p>
+          Let <m>R</m> be a ring and suppose
+          <m>a,b\in R</m> such that <m>ab</m> is a zero divisor.
+          Then either <m>a</m> or <m>b</m> is a zero divisor.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Let <m>a,b\in R</m> such that <m>ab</m> is a zero divisor.
+        Then <m>a,b\ne 0</m>
+        (else <m>ab = 0</m>).
+        Since <m>ab</m> is a zero divisor,
+        there is some <m>c\ne 0</m> such that <m>(ab) c = 0</m>.
+        If <m>bc\ne 0</m>,
+        then <m>a</m> is a zero divisor, as <m>a(bc) = 0</m>.
+        On the other hand, if <m>bc=0</m>,
+        then <m>b</m> is a zero divisor, as <m>b,c\ne 0</m>.
+      </p>
+    </proof>
+    <theorem xml:id="theorem_unitnotazd">
+      <statement>
+        <p>
+          Let <m>R</m> be a ring and <m>u\in R^\times</m>.
+          Then <m>u</m> is not a zero divisor.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Let <m>u\in R^\times</m> and suppose <m>u</m> is a zero divisor.
+        Then there is some <m>v\ne 0</m> such that <m>uv = 0</m>.
+        But then <m>0_R = u^{-1} 0_R = u^{-1} (uv) = (u^{-1} u) v = 1_R v = v</m>. \Lightning
+      </p>
+    </proof>
+    <question>
+      <statement>
+        <p>
+          How can we reinterpret <xref ref="q_zmodmcancel">Question</xref>
+          in light of our new language of units and zero divisors?
+          State a theorem that uses this new language.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          How about this: Let <m>\overline{a},\overline{b},\overline{c}\in \Z_m</m> such that <m>\overline{a}\cdot \overline{c} = \overline{b}\cdot \overline{c}</m>.
+          Then <m>\overline{a} = \overline{b}</m> if and only if
+          <m>\overline{c}</m> is not a zero divisor.
+        </p>
+      </answer>
+    </question>
+    <p>
+      While there is a well-developed body of literature on (noncommutative) rings
+      (possibly without identity),
+      from this point on
+      (for the sake of brevity),
+      and unless stated otherwise,
+      when we use the word <em>ring</em>
+      we mean <em>commutative ring with identity</em>.
+    </p>
+    <p>
+      Moreover, while even commutative rings with identity and zero divisors are useful in many realms of mathematics,
+      we will focus our study on rings with no zero divisors.
+      As these rings share many
+      (though not all)
+      properties of the integers, they are known as integral domains.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          A commutative ring with identity <m>R</m> is an
+          <term>integral domain</term>,
+          or just <term>domain</term>, if <m>R</m> has no zero divisors.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      You have already seen several domains.
+    </p>
+    <exercise>
+      <statement>
+        <p>
+          Which of the following rings are domains?
+          Justify your answers.
+          <ol>
+            <li>
+              <p>
+                <m>\Z</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\Z_{8}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\Z_{19}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\R</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\Q[x]</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+    <theorem xml:id="theorem_everyfieldisadomain">
+      <statement>
+        <p>
+          Every field is a domain.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        If <m>F</m> is a field, the nonzero elements of <m>F</m> are units,
+        which cannot be zero divisors.
+        Thus, <m>F</m> has no zero divisors.
+      </p>
+    </proof>
+    <theorem>
+      <statement>
+        <p>
+          Let <m>m > 1</m> and <m>R = \Z_m</m>.
+          Then <m>R</m> is a field if and only if <m>R</m> is a domain.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        The forward direction holds by <xref ref="theorem_everyfieldisadomain">Theorem</xref>.
+      </p>
+      <p>
+        For the reverse, assume <m>R</m> is a domain.
+        Then <m>R</m> has no zero divisors.
+        If <m>m</m> is composite,
+        there exist integers <m>a,b</m> satisfying
+        <m>1 \lt a,b \lt m</m> such that <m>m=ab</m>.
+        Then <m>\overline{a},\overline{b}\ne \overline{0}</m> in <m>\Z_m</m>,
+        but <m>\overline{a}\cdot \overline{b} = \overline{0}</m>.
+        Thus, <m>m</m> may not be composite, and is therefore prime.
+        By an earlier theorem, <m>\Z_p</m> is a field.
+      </p>
+    </proof>
+    <theorem xml:id="theorem_subringsaredomains">
+      <statement>
+        <p>
+          If <m>R</m> is a domain and <m>S</m> is a subring of <m>R</m>,
+          then <m>S</m> is a domain.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Any zero divisors in <m>S</m> are also zero divisors in <m>R</m>.
+        Since <m>R</m> has no zero divisors, neither does <m>S</m>.
+      </p>
+    </proof>
+    <theorem xml:id="theorem_domainimpliespolynomialdomain">
+      <statement>
+        <p>
+          If <m>R</m> is a domain, then so is <m>R[x]</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Let <m>f(x) = a_i x^i + a_{i+1} x^{i+1} + \cdots a_n x^n</m> and
+        <m>g(x) = b_j x^j + b_{j+1} x^{j+1} + \cdots b_k x^k</m> be nonzero polynomials in <m>R[x]</m>,
+        where <m>a_i, b_j \ne 0</m>.
+        Then the lowest-degree term in
+        <m>f(x) g(x)</m> is <m>a_i b_j x^{i+j}</m>.
+        Since <m>R</m> is a domain, <m>a_i b_j\ne 0</m>,
+        and thus <m>f(x)g(x)</m> is not the zero polynomial.
+      </p>
+    </proof>
+    <question>
+      <statement>
+        <p>
+          Is the converse of <xref ref="theorem_domainimpliespolynomialdomain">Theorem</xref> true?
+          If so, give a short proof.
+          If not, find a counterexample.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Yes.
+          Apply <xref ref="theorem_subringsaredomains">Theorem</xref>.
+        </p>
+      </answer>
+    </question>
+    <p>
+      When considering sets of polynomials,
+      as we do in <xref ref="Sec-Factorization">&#xa7;</xref>,
+      the following results will be quite useful.
+    </p>
+    <theorem xml:id="theorem_degreeofproductinfield">
+      <statement>
+        <p>
+          Let <m>F</m> be a field,
+          and let <m>p(x),q(x)\in F[x]</m> be nonzero polynomials.
+          Then <m>\deg(p(x) q(x)) = \deg(p(x)) + \deg(q(x))</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Let the leading term of <m>p(x)</m> be <m>a_n x^n</m> and the leading term of <m>q(x)</m> be <m>b_m x^m</m>.
+        Then the leading term of <m>p(x) q(x)</m> is <m>a_n b_m x^{n+m}</m>.
+        Thus, <m>\deg(p(x) q(x)) = n+m = \deg(p(x)) + \deg(q(x))</m>.
+      </p>
+    </proof>
+    <question>
+      <statement>
+        <p>
+          What are the units of <m>F[x]</m>?
+          Prove your answer.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          The units are <m>F^\times</m>.
+        </p>
+        <p>
+          Suppose <m>p(x),q(x)\in F\times</m> such that <m>p(x) q(x) = 1</m>.
+          Then <m>\deg p(x) + \deg q(x) = \deg(p(x) q(x)) = \deg(1) = 0</m>.
+          Thus <m>\deg p(x) = \deg q(x) = 0</m>.
+        </p>
+      </answer>
+    </question>
+    <references>
+    	<biblio xml:id="Curto2013">
+    		C. Curto, V. Itskov, A. Veliz-Cuba, N. Youngs, <em>The Neural Ring: An Algebraic Tool for Analyzing the Intrinsic Structure of Neural Codes</em>, Bull. Math. Bio. 75 (2013), 1571-1611, DOI 10.1007/s11538-013-9860-3
+    	</biblio>
+    </references>
+  </section>
+  <section xml:id="SubSec-Divisibility-in-Domains">
+    <title>Divisibility in Integral Domains</title>
+    <p>
+      When we introduced the notion of integral domain,
+      we said that part of the reason for the definition was to capture some of the most essential properties of the integers.
+      One such idea is that of cancellation.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          Let <m>R</m> be a ring.
+          Then <m>R</m> is a domain if and only if for all <m>a,b,c\in R</m> with
+          <m>c\ne 0_R</m> and <m>ac = bc</m>, we have <m>a = b</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Assume <m>R</m> is a domain and <m>ac = bc</m>.
+        Then <m>ac - bc = 0</m>, so <m>c(a-b) = 0</m>.
+        Since <m>R</m> is a domain,
+        it has no zero divisors, and therefore either <m>c = 0</m> or <m>a-b=0</m>.
+        The first possibility is ruled out by our assumptions on <m>a,b,c</m>,
+        so we must have <m>a-b = 0</m>, or <m>a =b</m>.
+      </p>
+      <p>
+        Conversely, assume that <m>R</m> is not a domain.
+        Let <m>z\in R</m> be a zero divisor;
+        then there is a nonzero <m>x\in R</m> such that <m>xz = 0 = 0 z</m>.
+        This implies that <m>x = 0</m>, a contradiction.
+      </p>
+    </proof>
+    <p>
+      Thus, the defining property of an integral domain is the ability to
+      <em>cancel</em> common nonzero factors.
+      Note that we have not <em>divided</em>;
+      division is not a binary operation in rings!
+      However, as was the case in <m>\Z</m>,
+      there are notions of <em>divisibility</em>
+      and <em>factorization</em> in rings.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Let <m>R</m> be a commutative ring with identity, and let <m>a,b\in R</m>.
+          We say <m>a</m> <term>divides</term>
+          <m>b</m> and write <m>a\mid b</m> if there is a <m>c\in R</m> such that <m>ac = b</m>.
+          We then say that <m>a</m> is a <term>factor</term> of <m>b</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Our notion of primality also extends nicely to domains.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Let <m>R</m> be a domain.
+          We say a nonzero nonunit element <m>a\in R</m> is <term>prime</term>
+          if whenever <m>a\mid bc</m> for some <m>b,c\in R</m>,
+          either <m>a|b</m> or <m>a|c</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      A notion related to primality is irreducibility.
+    </p>
+    <definition xml:id="def_irreducibleelement">
+      <statement>
+        <p>
+          Let <m>R</m> be a domain.
+          We say a nonzero nonunit element <m>a\in R</m> is <term>irreducible</term>
+          if whenever <m>a = bc</m> for some <m>b,c\in R</m>,
+          one of <m>b</m> or <m>c</m> is a unit.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      In familiar settings,
+      the notion of prime and irreducible exactly coincide.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          Let <m>R</m> be a domain.
+          If <m>a\in R</m> is prime, then <m>a</m> is irreducible.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Compare to the proof of <xref ref="theorem_euclidslemma">Theorem</xref>.
+      </p>
+      <p>
+        Let <m>a\in R</m> be prime,
+        and suppose that <m>a = bc</m> for some <m>b,c\in R</m>.
+        Then <m>a|bc</m>, so by definition either <m>a|b</m> or <m>a|c</m>.
+        Without loss of generality, assume <m>a|b</m>.
+        Then there is a <m>k\in R</m> such that <m>ak=b</m>, so <m>a = (ak)c</m>,
+        and we may cancel <m>a</m> to obtain <m>1_R = kc</m>.
+        Thus, <m>c</m> is a unit, making <m>a</m> irreducible.
+      </p>
+    </proof>
+    <theorem>
+      <statement>
+        <p>
+          Every irreducible in <m>\Z</m> is prime.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Let <m>p\in \Z</m> be irreducible,
+        and suppose that <m>d|p</m>.
+        Then <m>p = de</m>.
+        Since <m>p</m> is irreducible,
+        either <m>d</m> or <m>e</m> is a unit.
+        However, the only units are <m>\pm 1</m>,
+        so either one of <m>d</m> or <m>e</m> is <m>p</m> or <m>-p</m>.
+        In either case, <m>p</m> is prime.
+      </p>
+    </proof>
+    <p>
+      It is not the case in all domains that irreducibles are primes,
+      as the next exercise illustrates.
+    </p>
+    <exercise xml:id="exer_irreduciblenotprime">
+      <statement>
+        <p>
+          Consider the set <m>R</m> of all polynomials in <m>\Z[x]</m> for which the coefficient on the linear term is zero.
+          That is,
+          <me>
+            R = \setof{a_0 + a_2 x^2 + \cdots + a_{n-1} x^{n-1} + a_n x^n}{a_i\in \Z,\ n\in\N}
+          </me>.
+        </p>
+        <p>
+          (You should convince yourself that <m>R</m> is an integral domain,
+          but do not need to prove it.) Find a polynomial of the form <m>x^n</m> in <m>R</m> that is irreducible,
+          but not prime.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Consider <m>f(x) = x^2</m>.
+          Then <m>f(x)</m> is irreducible,
+          as it cannot be factored into a product of linear polynomials
+          (there aren't any in <m>R</m>),
+          so any factorization of <m>f</m> is degree 2 times degree 0.
+          Then the leading coefficients must be units,
+          i.e., both 1 or both <m>-1</m>.
+        </p>
+        <p>
+          However, <m>f</m> is not prime,
+          as <m>f| x^3 \cdot x^3</m> but <m>f\nmid x^3</m>.
+        </p>
+      </solution>
+    </exercise>
+    <definition>
+      <statement>
+        <p>
+          Let <m>R</m> be a domain, and let <m>a,b\in R</m>.
+          A nonzero element <m>d\in R</m> is a
+          <term>greatest common divisor</term>
+          of <m>a</m> and <m>b</m> if
+          <ol>
+            <li>
+              <p>
+                <m>d\mid a</m> and <m>d\mid b</m> and,
+              </p>
+            </li>
+            <li>
+              <p>
+                if <m>e\in R</m> with <m>e\mid a</m> and <m>e\mid b</m>,
+                then <m>e\mid d</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </definition>
+    <theorem>
+      <statement>
+        <p>
+          Let <m>R</m> be a domain and
+          <m>a,b\in R</m> and suppose <m>d</m> is a greatest common divisor of <m>a</m> and <m>b</m>.
+          Then any associate of <m>d</m> is also a greatest common divisor of <m>a</m> and <m>b</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Let <m>d</m> be a gcd of <m>a</m> and <m>b</m>,
+        let <m>u\in R^\times</m>, and <m>e =ud</m>.
+        We claim <m>e</m> is also a gcd of <m>a</m> and <m>b</m>.
+      </p>
+      <p>
+        Since <m>d|a</m> and <m>d|b</m> there are <m>k_1,k_2\in R</m> such that
+        <m>d k_1 = a</m> and <m>d k_2 = b</m>.
+        Then <m>e (u^{-1} k_1) = a</m> and <m>e (u^{-1} k_2) = b</m>,
+        so <m>e|a</m> and <m>e|b</m>.
+      </p>
+      <p>
+        Let <m>f</m> be a common divisor of <m>a</m> and <m>b</m>.
+        Since <m>d</m> is a gcd, <m>f|d</m>, i.e., <m>f k_3 = d</m>.
+        Then <m>f (uk_3) = e</m>, so <m>f|e</m>.
+      </p>
+      <p>
+        Thus, <m>e</m> is a gcd of <m>a</m> and <m>b</m>.
+      </p>
+    </proof>
+    <exercise>
+      <statement>
+        <p>
+          In most familiar domains, GCDs exist.
+          However, they don't always!
+          Find an example of elements in the ring from <xref ref="exer_irreduciblenotprime">Exercise</xref>
+          which do not have a GCD. Justify your assertion.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Consider <m>x^5</m> and <m>x^6</m>.
+          First note that <m>x^4</m> is not a common divisor in <m>R</m>.
+        </p>
+        <p>
+          Both <m>x^5</m> and <m>x^6</m> are divisible by <m>x^3</m> and <m>x^2</m> in <m>R</m>.
+          However, neither can be the gcd,
+          as <m>x^2\nmid x^3</m> and <m>x^3\nmid x^2</m>.
+        </p>
+      </solution>
+    </exercise>
+    <exercise xml:id="exer_ringgeneralityone">
+      <statement>
+        <p>
+          Fill in the following blanks in order of increasing generality with the words <em>ring</em>,
+          <em>integral domain</em>, <em>field</em>,
+          and <em>commutative ring</em>.
+        </p>
+        <p>
+          \makebox[0.75in]{\hrulefill}
+          <m>\Rightarrow</m> \makebox[0.75in]{\hrulefill}
+          <m>\Rightarrow</m> \makebox[0.75in]{\hrulefill}
+          <m>\Rightarrow</m> \makebox[0.75in]{\hrulefill}
+        </p>
+      </statement>
+    </exercise>
+  </section>
+  <section xml:id="SubSec-Principal-Ideals">
+    <title>Principal Ideals</title>
+    <p>
+      One of the ways in which mathematicians study the <em>structure</em>
+      of an abstract object is by considering how it interacts with other (related) objects.
+      This is especially true of its <em>sub</em>objects.
+      Thus, in linear algebra,
+      we are often concerned with <em>subspaces</em>
+      of a vector space as a means of understanding the vector space,
+      or even submatrices as a way of understanding a matrix
+      (see, e.g., the cofactor expansion formula for the determinant).
+      In real analysis and topology,
+      the important subobjects are usually open sets, or subsequences,
+      and the study of a graph's subgraphs is an important approach to many questions in graph theory.
+    </p>
+    <p>
+      In this section,
+      we begin a set-theoretic structural exploration of the notion of ring by considering a particularly important class of subring which will be integral to our understanding of factorization.
+    </p>
+    <p>
+      These subrings are called <em>ideals</em>.
+      They arose in the work of Kummer and Dedekind as a way of trying to recover some notion of unique factorization in rings that do not have properties like the fundamental theorem of arithmetic in <m>\Z</m>.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          A subset <m>I</m> of a
+          (not necessarily commutative)
+          ring <m>R</m> is called an <term>ideal</term> if:
+          <ol>
+            <li>
+              <p>
+                <m>0\in I</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                for all <m>x,y\in I</m>, <m>x+y\in I</m>; and,
+              </p>
+            </li>
+            <li>
+              <p>
+                for all <m>x\in I</m> and for all <m>r\in R</m>,
+                <m>xr\in I</m> and <m>rx\in I</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Observe that the third requirement for a set <m>I</m> to be an ideal of <m>R</m> is simplified slightly if <m>R</m> is commutative
+      (which, we recall, all of our rings are).
+    </p>
+    <p>
+      There are many important examples and types of ideals,
+      but there are also some trivial ideals contained in every ring.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          Let <m>R</m> be a ring.
+          Then <m>R</m> and <m>\set{0}</m> are ideals of <m>R</m>.
+        </p>
+      </statement>
+    </theorem>
+    <theorem>
+      <statement>
+        <p>
+          All ideals are subrings.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        It is straightforward to check that all conditions of <xref ref="theorem_subringtest">Theorem</xref> are satisfied.
+      </p>
+    </proof>
+    <p>
+      The following theorem provides a useful characterization of when an ideal <m>I</m> is in fact the whole ring.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          Let <m>R</m> be a ring and <m>I</m> an ideal of <m>R</m>.
+          Then <m>I = R</m> if and only <m>I</m> contains a unit of <m>R</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        If <m>I = R</m>, <m>1_R\in R</m> will do.
+      </p>
+      <p>
+        If there is a unit <m>u\in I</m>,
+        then given any <m>r\in R</m>,
+        <m>r = r u^{-1} u = (ru^{-1}) u \in I</m>, so <m>I = R</m>.
+      </p>
+    </proof>
+    <p>
+      The most important type of ideals
+      (for our work, at least),
+      are those which are the sets of all multiples of a single element in the ring.
+      Such ideals are called <em>principal ideals</em>.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          Let <m>R</m> be commutative with identity and let <m>a\in R</m>.
+          The set
+          <me>
+            \ideal{a} = \setof{ra}{r\in R}
+          </me>
+          is an ideal
+          (called the <em>principal ideal generated by <m>a</m></em>).
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Observe that <m>0_R = 0_R a \in \ideal{a}</m>.
+      </p>
+      <p>
+        Moreover, if <m>r_1 a, r_2 a\in \ideal{a}</m>,
+        <m>r_1 a - r_2 a = (r_1 - r_2)a \in \ideal{a}</m>.
+        Finally, if <m>x\in R</m> and <m>r a\in \ideal{a}</m>,
+        <m>x (ra) = (xr) a \in \ideal{a}</m>.
+      </p>
+      <p>
+        Thus, <m>\ideal{a}</m> is an ideal.
+      </p>
+    </proof>
+    <p>
+      The element <m>a</m> in the theorem is known as the
+      <em>generator</em> of <m>\ideal{a}</m>.
+    </p>
+    <question>
+      <statement>
+        <p>
+          Let <m>R</m> be commutative with identity,
+          and let <m>x,y,z\in R</m>.
+          Give necessary and sufficient conditions for <m>z\in \ideal{x}</m> and,
+          separately,
+          <m>\ideal{x} \subseteq \ideal{y}</m>.
+        </p>
+        <p>
+          That is, fill in the blanks:
+          <q><m>z\in \ideal{x} \Leftrightarrow</m> \makebox[0.75in]{\hrulefill}</q>
+          and
+          <q><m>\ideal{x}\subseteq \ideal{y} \Leftrightarrow</m> \makebox[0.75in]{\hrulefill}.</q>
+        </p>
+        <p>
+          Justify your answers.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          We have
+          <q><m>z\in \ideal{x} \Leftrightarrow x|z</m></q>
+          and
+          <q><m>\ideal{x}\subseteq \ideal{y} \Leftrightarrow y|x</m></q><fn>
+          An acceptable alternative would be:
+          <m>x\in \ideal{y}</m>.
+          Make sure students are aware of this!
+          </fn>.
+        </p>
+        <p>
+          Note that <m>z\in \ideal{x} \Leftrightarrow \exists r\in R, z = xr \Leftrightarrow x|z</m>.
+        </p>
+        <p>
+          Similarly, suppose <m>\ideal{x}\subseteq \ideal{y}</m>.
+          Then <m>x\in \ideal{y}</m>, so <m>y|x</m>.
+          Conversely, if <m>y|x</m>,
+          then there is some <m>r\in R</m> such that <m>x = yr</m>,
+          and thus for all <m>ax\in \ideal{x}</m>,
+          <m>ax = (ar)y \in \ideal{y}</m>.
+        </p>
+        <p>
+          Note that this means that if we want to know if <m>\ideal{x}\subseteq \ideal{y}</m>,
+          it's enough to check that <m>x\in \ideal{y}</m>.
+        </p>
+      </answer>
+    </question>
+    <p>
+      Principal ideals may have more than one generator.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          Let <m>R</m> be a ring and <m>a\in R</m>.
+          Then <m>\ideal{a} = \ideal{ua}</m>,
+          where <m>u</m> is any unit of <m>R</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Apply the answer to the question.
+      </p>
+    </proof>
+    <exercise>
+      <statement>
+        <p>
+          In <m>R = \Z</m>, describe the principal ideals generated by
+          <ol>
+            <li>
+              <p>
+                2
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>-9</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                9
+              </p>
+            </li>
+            <li>
+              <p>
+                0
+              </p>
+            </li>
+            <li>
+              <p>
+                27
+              </p>
+            </li>
+            <li>
+              <p>
+                3
+              </p>
+            </li>
+          </ol>
+        </p>
+        <p>
+          Determine the subset relations among the above ideals.
+        </p>
+      </statement>
+      <solution>
+        <ol>
+          <li>
+            <p>
+              All multiples of 2
+            </p>
+          </li>
+          <li>
+            <p>
+              All multiples of <m>-9</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              All multiples of 9; same as the previous part.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\set{0}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              All multiples of 27
+            </p>
+          </li>
+          <li>
+            <p>
+              All multiples of 3
+            </p>
+          </li>
+        </ol>
+        <p>
+          We have <m>\ideal{0}\subsetneq \ideal{27}\subsetneq \ideal{-9} = \ideal{9} \subsetneq \ideal{3}</m>.
+          The ideal <m>\ideal{2}</m> only contains <m>\ideal{0}</m>,
+          which is a subset of all ideals.
+        </p>
+      </solution>
+    </exercise>
+    <p>
+      It is the case in many familiar settings that all ideals are principal.
+      Such domains are given a special name.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          An integral domain <m>R</m> in which every ideal is principal is known as a
+          <term>principal ideal domain (PID)</term>.
+        </p>
+      </statement>
+    </definition>
+    <theorem xml:id="thm_ZisPID">
+      <statement>
+        <p>
+          The ring <m>\Z</m> is a principal ideal domain.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Use properties specific to <m>\Z</m>,
+          perhaps from <xref ref="Sec-Integers">Section</xref>.
+        </p>
+      </hint>
+    </theorem>
+    <proof>
+      <p>
+        Let <m>I\subseteq Z</m> be an ideal.
+        If <m>I = \set{0}</m>, then <m>I = \ideal{0}</m>,
+        so suppose there is some nonzero <m>x\in I</m>.
+        Define <m>S = \setof{m\in \Z}{m > 0}</m>.
+        Note that <m>S\ne \emptyset</m>,
+        as if <m>m\in I</m>, <m>(-1)m \in I</m> also.
+      </p>
+      <p>
+        By WOP, <m>S</m> has a least element, call it <m>d</m>.
+      </p>
+      <p>
+        <em>Claim:</em> <m>I = \ideal{d}</m>.
+      </p>
+      <p>
+        It is clear that <m>\ideal{d}\subseteq I</m>.
+        Now let <m>x\in I</m> be nonzero,
+        and write <m>x = dq + r</m> using the division algorithm.
+        Observe that <m>0 \le r = x - dq \lt d</m>,
+        but as <m>x\in I</m> and <m>-dq \in I</m>,
+        we must have <m>r\in I</m>.
+        To avoid contradicting the WOP, we must have <m>r = 0</m>.
+        Thus, <m>x = dq</m> and <m>x\in \ideal{d}</m>.
+      </p>
+    </proof>
+    <exercise>
+      <statement>
+        <p>
+          Find an integer <m>d</m> such that <m>I = \ideal{d}\subseteq \Z</m>, if
+          <ol>
+            <li>
+              <p>
+                <m>I = \setof{4x+10y}{x,y\in\Z}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>I = \setof{6s+7t}{s,t\in\Z}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>I = \setof{9w+12z}{w,z\in\Z}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>I = \setof{am+bn}{m,n\in\Z}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+        <p>
+          You do not need to prove that each of the sets above are ideals
+          (though you should make sure you can do it).
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We see:
+          <ol>
+            <li>
+              <p>
+                <m>I= \ideal{2}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>I = \ideal{1} = \Z</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>I = \ideal{3}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>I = \ideal{\gcd(a,b)}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+    <theorem>
+      <statement>
+        <p>
+          Let <m>R</m> be a principal ideal domain and <m>x,y\in R</m> be not both zero.
+          Let <m>I = \setof{xm+yn}{m,n\in R}</m>.
+          Then:
+          <ol>
+            <li>
+              <p>
+                <m>I</m> is an ideal, and
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>I = \ideal{d}</m>,
+                where <m>d</m> is any greatest common divisor of <m>x</m> and <m>y</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+        <p>
+          We conclude that there exist
+          <m>s,t\in R</m> such that <m>d = xs + yt</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Observe that <m>0 = x0 + y0 \in I</m>.
+        Additionally, if <m>x m_1 + y n_1, x m_2 + y n_2\in I</m>,
+        then <m>(x m_1 + y n_1) + (x m_2 + y n_2) = x (m_1 + m_2) + y (n_1 + n_2) \in I</m>,
+        and <m>r(x m_1 + y n_1) = x (rm_1) + y(rn_1) \in I</m>.
+        Thus, <m>I</m> is an ideal.
+      </p>
+      <p>
+        Since <m>R</m> is a PID, there exists <m>d\in R</m> such that <m>I = \ideal{d}</m>.
+        We claim that <m>d</m> is a GCD of <m>x</m> and <m>y</m>.
+      </p>
+      <p>
+        It is clear that <m>d|x</m>, as <m>x\cdot 1 + y\cdot 0\in I = \ideal{d}</m>.
+        Similarly, <m>d|y</m>.
+      </p>
+      <p>
+        Now let <m>e\in R</m> be a common divisor of <m>x</m> and <m>y</m>.
+        We wish to show that <m>e|d</m>.
+        Write <m>x = e k_1</m> and <m>y = e k_2</m>.
+        Since <m>d\in \ideal{d}</m>,
+        there exist <m>s,t\in R</m> such that
+        <m>d = x s + yt = (e k_1) s + (e k_2)t = e(k_1 s + k_2 t)</m>,
+        and thus <m>e|d</m>.
+      </p>
+      <p>
+        In particular, there exist
+        <m>s,t\in R</m> such that a GCD <m>d</m> of <m>x</m> and <m>y</m> can be written as <m>d = xs + yt</m>.
+      </p>
+    </proof>
+    <p>
+      We have so far abstracted and axiomatized several important algebraic properties of <m>\Z</m> that we discussed in <xref ref="Sec-Integers">&#xa7;</xref>.
+      In particular,
+      we have our usual operations of addition and multiplication,
+      and their interactions;
+      we have notions of divisibility/factorization,
+      irreducibility, and primality;
+      we also have cancellation and greatest common divisors.
+    </p>
+    <p>
+      Our last major abstraction from <m>\Z</m> is the division algorithm.
+      The main obstacle to postulating domains with a division algorithm is a clear notion of comparison relations.
+      That is, if <m>R</m> is an arbitrary domain with <m>r,s\in R</m>,
+      is it possible to clearly and sensibly say which of <m>r</m> or <m>s</m> is
+      <q>bigger</q>
+      ? (Recall that this was a requirement for the division algorithm with nonzero remainders.) However,
+      if there is a way to relate elements of a domain <m>R</m> to <m>\N_0</m>,
+      we can sensibly define a division algorithm.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Let <m>R</m> be an integral domain.
+          We call <m>R</m> a <term>Euclidean domain</term>
+          if there is a function <m>\delta : R\setminus \set{0_R} \to \N_0</m> such that: \marginpar{\setstretch{0.7}<term>This is the lowercase Greek letter
+          <term>delta</term>.</term>}
+          <ol>
+            <li>
+              <p>
+                If <m>a,b\in R\setminus \set{0}</m>,
+                then <m>\delta(a) \le \delta(ab)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>a,b\in R</m>, <m>b\ne 0</m>,
+                then there exist <m>q,r\in R</m> such that <m>a = bq+r</m>,
+                where either <m>r = 0_R</m> or <m>\delta(r) \lt \delta(b)</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+        <p>
+          We call the function <m>\delta</m> a
+          <term>norm</term> for <m>R</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Thus, a Euclidean domain is an integral domain with a division algorithm that behaves in a familiar way.
+    </p>
+    <question>
+      <statement>
+        <p>
+          Is <m>\Z</m> a Euclidean domain?
+          If so, what is the norm function <m>\delta</m>,
+          and why does this function have the required properties of a norm?
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Yes.
+          The norm is the absolute value function.
+        </p>
+      </answer>
+    </question>
+    <lemma xml:id="lem_minimaldegreepoly">
+      <statement>
+        <p>
+          Let <m>S\subseteq F[x]</m> be a set containing a nonzero polynomial.
+          Prove that <m>S</m> contains a polynomial <m>f</m> such that
+          <m>\deg(f) \le \deg(g)</m> for all <m>g\in S</m>.
+        </p>
+      </statement>
+    </lemma>
+    <proof>
+      <p>
+        Let <m>T = \setof{\deg g}{g\in S}</m>.
+        Since <m>S</m> contains a nonzero polynomial, <m>T\ne \emptyset</m>.
+        By WOP, <m>T</m> contains a minimal element <m>d \ge 0</m>,
+        which must be the degree of some polynomial in <m>S</m>.
+      </p>
+    </proof>
+    <lemma xml:id="lem_polydivalglem">
+      <statement>
+        <p>
+          Let <m>F</m> be a field and
+          <m>f(x),g(x)\in F[x]</m> with <m>g(x)\ne 0</m>.
+          If <m>\deg f(x) \ge \deg g(x) > 0</m>,
+          and <m>f(x) = a_0 + a_1 x + \cdots + a_m x^m</m> and <m>g(x) = b_0 + b_1 x + \cdots + b_n x^n</m>,
+          then <m>h(x) = f(x) - a_m b_n^{-1} x^{m-n} g(x)</m> has degree strictly less than <m>\deg f(x)</m>.
+        </p>
+      </statement>
+    </lemma>
+    <proof>
+      <p>
+        The leading term of <m>f(x)</m> is <m>a_m x^m</m>,
+        while the leading term of <m>a_m b_n^{-1} x^{m-n} g(x)</m> is <m>a_m b_n^{-1} x^{m-n} (b_n x^n) = a_m x^m</m>.
+        Thus, the leading term of <m>h</m> has degree less than <m>m</m>.
+      </p>
+    </proof>
+    <theorem xml:id="theorem_polydivalg">
+      <title>
+      <url href="http://www.corestandards.org/Math/Content/HSA/APR/D/6/">Polynomial Division algorithm</url>
+      </title>
+      <statement>
+        <p>
+          Let <m>F</m> be a field and
+          <m>f(x),g(x)\in F[x]</m> with <m>g(x)\ne 0</m>.
+          Then there exist unique <m>q(x),
+          r(x) \in F[x]</m> such that
+          <me>
+            f(x) = g(x) q(x) + r(x)
+          </me>,
+          where <m>\deg(r(x)) \lt  \deg g(x)</m>.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          For existence, consider three cases:
+          <m>f(x) = 0</m>; <m>f(x) \ne 0</m> and <m>\deg f \lt \deg g</m>;
+          <m>f(x) \ne 0</m> and <m>\deg f \ge \deg g</m>.
+          In the last case, use induction on <m>m = \deg f(x)</m>.
+          For uniqueness,
+          mimic the uniqueness proof of <xref ref="thm_divalg">Theorem</xref>
+        </p>
+      </hint>
+    </theorem>
+    <proof>
+      <p>
+        <em>Existence:</em> If <m>f(x) = 0</m>,
+        then <m>q(x) = 0</m> and <m>r(x) = 0</m> will do.
+        If <m>f(x)\ne 0</m> and <m>\deg f \lt \deg g</m>,
+        then <m>q(x) = 0</m> and <m>r(x) = f(x)</m> will suffice.
+        Thus, we need only consider the case in which
+        <m>f(x) \ne 0</m> and <m>\deg f \ge \deg g</m>.
+        We use induction on <m>\deg f = m</m>.
+      </p>
+      <p>
+        When <m>m = 0</m>, <m>\deg g \le 0 = \deg f</m>,
+        and as <m>g(x) \ne 0</m>, both <m>f</m> and <m>g</m> are nonzero constants.
+        Then <m>r = 0</m> and <m>q = fg^{-1}</m> will work.
+      </p>
+      <p>
+        Now assume <m>q</m> and <m>r</m> exist whenever <m>\deg f \lt m</m>.
+        Assume <m>\deg f = m</m> and write
+        <m>f(x) = a_0 + a_1 x + \cdots + a_m x^m</m> and <m>g(x) = b_0 + b_1 x + \cdots + b_n x^n</m>.
+        Use <xref ref="lem_polydivalglem">Lemma</xref>
+        and set <m>h(x) = f(x) - a_m b_n^{-1} x^{m-n} g(x)</m>,
+        which must have degree less than <m>f</m>.
+        Thus, by induction, there exist
+        <m>q_1, r_1\in F[x]</m> such that <m>h = g q_1 + r_1</m>,
+        with <m>r_1 = 0</m> or <m>\deg r_1 \lt \deg g</m>.
+      </p>
+      <p>
+        We therefore have
+        <md>
+          <mrow>f(x) \amp = a_m b_n^{-1} x^{m-n} g(x) + h(x)</mrow>
+          <mrow>\amp = a_m b_n^{-1} x^{m-n} g(x) + g(x) q_1(x) + r_1(x)</mrow>
+          <mrow>\amp = (a_m b_n^{-1} x^{m-n} + q_1(x)) g(x) + r_1(x)</mrow>
+        </md>,
+        where <m>q = a_m b_n^{-1} x^{m-n} + q_1(x)</m> and
+        <m>r = r_1(x)</m> have the desired properties.
+      </p>
+      <p>
+        <em>Uniqueness:</em> Suppose
+        <m>f = gq + r</m> and <m>f = g\hat{q} + \hat{r}</m>,
+        where <m>r,\hat{r}</m> both have the desired properties.
+        Then
+        <me>
+          0 = g[q - \hat{q}] + [r - \hat{r}]
+        </me>,
+        or <m>\hat{r} - r = g [q - \hat{q}]</m>.
+        Thus either <m>\hat{r} - r = 0</m>,
+        or <m>\hat{r} - r</m> has degree at least <m>\deg g</m>.
+        The latter is clearly impossible,
+        so <m>\hat{r} = r</m> and <m>\hat{q} = q</m>.
+      </p>
+    </proof>
+    <theorem>
+      <statement>
+        <p>
+          The ring <m>F[x]</m> is a principal ideal domain.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Mimic the proof of <xref ref="thm_ZisPID">Theorem</xref>
+          and use <xref ref="lem_minimaldegreepoly">Lemma</xref>!
+        </p>
+      </hint>
+    </theorem>
+    <proof>
+      <p>
+        Let <m>I</m> be a nonzero ideal of <m>F[x]</m> and let
+        <m>f(x)\in I</m> be a polynomial of smallest degree.
+        We claim <m>I = \ideal{f(x)}</m>.
+      </p>
+      <p>
+        Clearly <m>\ideal{f(x)}\subseteq I</m>.
+      </p>
+      <p>
+        Let <m>g(x)\in I</m> and use <xref ref="theorem_polydivalg">Theorem</xref>
+        to write <m>g(x) = f(x) q(x) + r(x)</m>,
+        where <m>\deg r(x) \lt \deg f(x)</m> or <m>r(x) = 0</m>.
+        As in <xref ref="thm_ZisPID">Theorem</xref>,
+        write <m>r(x) = g(x) - f(x) q(x) \in I</m>,
+        so we must have that <m>r(x) = 0</m>.
+        Thus, <m>f(x) | g(x)</m> and <m>g(x)\in \ideal{f(x)}</m>.
+      </p>
+    </proof>
+    <question>
+      <statement>
+        <p>
+          Is <m>F[x]</m> a Euclidean domain?
+          If so, what is the norm function <m>\delta</m>,
+          and why does this function have the required properties of a norm?
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Yes.
+          It's the degree function.
+        </p>
+      </answer>
+    </question>
+    <question>
+      <statement>
+        <p>
+          Where do Euclidean domains and PIDs fit in the hierarchy of abstraction found in <xref ref="exer_ringgeneralityone">Question</xref>?
+        </p>
+      </statement>
+    </question>
+  </section>
+</chapter>

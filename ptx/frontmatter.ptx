@@ -1,0 +1,178 @@
+<frontmatter>
+<titlepage>
+      
+      <author>
+            <personname>Michael Janssen</personname>
+            <department>Mathematics and Statistics Department</department>
+            <institution>Dordt University</institution>
+            <email>mike.janssen@dordt.edu</email>
+        </author>
+        
+        <author>
+            <personname>Melissa Lindsey</personname>
+            <department>Mathematics and Statistics Department</department>
+            <institution>Dordt University</institution>
+            <email>melissa.lindsey@dordt.edu</email>
+        </author>
+      
+      </titlepage>
+
+
+<colophon xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <edition>2019 Beta 1</edition>
+  <website>
+    <name>https://book.mkjanssen.org</name>
+    <address>https://book.mkjanssen.org</address>
+  </website>
+
+  <copyright>
+    <year>2019<ndash /></year>
+
+    <minilicense>CC BY-SA 4.0 License</minilicense>
+    <shortlicense>
+      Permission is granted to copy and (re)distribute this material in any format and/or adapt it (even commercially) under the terms of the Creative Commons Attribution-ShareAlike 4.0 International License.  The work may be used for free in any way by any party so long as attribution is given to the author(s) and if the material is modified, the resulting contributions are distributed under the same license as this original.  All trademarks<trademark /> are the registered<registered /> marks of their respective owners. The graphic
+
+      <sidebyside width="25%" permid="RTE">
+        <image xml:id="CC-BY-SA-license" source="../images/CC-BY-SA-license" />
+      </sidebyside>
+
+      that may appear in other locations in the text shows that the work is licensed with the Creative Commons and that the work may be used for free by any party so long as attribution is given to the author(s) and if the material is modified, the resulting contributions are distributed under the same license as this original. Full details may be found by visiting <url href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</url>  or sending a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+    </shortlicense>
+
+  </copyright>
+</colophon>
+
+
+<preface xml:id="Sec-Introduction">
+  <title>Introduction</title>
+  <p>
+    While it is difficult to intuitively define the way in which mathematics is structural,
+    its concern with <em>number</em> is clear,
+    especially for students of elementary mathematics such as arithmetic.
+    However, the study of <em>number</em>
+    rapidly leads one to structural questions regarding the properties of numbers themselves,
+    which has historically been the domain of <em>algebra</em>.
+  </p>
+  <p>
+    In<nbsp /><xref ref="franklin2014aristotelian" />,
+    the author defines a <em>purely structural property</em> as one that
+    <q>can be defined wholly in terms of the concepts same and different,
+    and part and whole (along with purely logical concepts).</q>
+    This definition and its reference to parts and wholes calls to mind the history of the word
+    <em>algebra</em> itself,
+    which comes from the Arabic <em>al-jabr</em>, literally meaning
+    <q>the reunion of broken parts</q>.
+    One of the concepts fundamental to the historical development of algebra is the notion of <em>factorization</em>;
+    closely related questions that have driven the development of algebra over the centuries are:
+    when does a polynomial equation have solutions in a particular number system,
+    and is there a systematic way to find them?
+  </p>
+  <p>
+    The goal of these notes is to explore the idea of factorization from an abstract perspective.
+    We will first give attention to factorization in the integers,
+    and then factorization properties of polynomials.
+    Our larger goal is to precisely describe deep structural properties common to both the integers and polynomials that guarantee that factorization into fundamental pieces,
+    like primes and irreducibles,
+    can be done <em>uniquely</em>.
+    In order to accomplish this goal,
+    we will walk in the realms of abstraction,
+    and catch glimpses of the beauty and incredible power of this perspective on mathematics.
+  </p>
+  
+  <references>
+  	<biblio xml:id="franklin2014aristotelian">
+  		J. Franklin, <em>An Aristotelian Realist Philosophy of Mathematics: Mathematics as the Science of Quantity and Structure</em>, Palgrave Macmillan UK, 2014
+  	</biblio>
+  </references>
+</preface>
+
+<preface xml:id="Sec-NoteToStudents">
+	<title>A Note to Students</title>
+		<p>
+			The note will go here.
+		</p>
+</preface>
+
+<preface xml:id="Sec-NoteToInstructors">
+  <title>A Note to Instructors</title>
+  <p>
+    Strong opinions informed the writing of these notes.
+    The strongest are (a) that students learn math best by doing it,
+    and (b) that students<ndash/>especially pre-service teachers<ndash/>more naturally learn modern algebra by encountering rings first.
+  </p>
+  <p>
+    Pedagogically, these notes fall under the big tent of
+    <em>inquiry-based learning</em> (IBL).
+    Broadly, there are several types of statements you'll find as you read these notes.
+    <ul>
+      <li>
+        <p>
+          <em>Theorems</em>: A <em>numbered</em>
+          theorem is a statement that students are expected to prove for themselves.
+          The authors generally assign 3<ndash/>6 numbered theorems
+          (or exercises, or lemmas)
+          for each class meeting,
+          with students expected to present their work during the next class.
+          These presentations and the ensuing discussions form the regular work of the class.
+          Students are <em>not</em> expected to prove
+          <em>unnumbered</em> theorems.
+          The unnumbered theorems unify nearby numbered theorems
+          (such as stating an existence theorem and uniqueness theorem as a single result),
+          or are otherwise too technical or complicated to be illuminating.
+          Nonetheless,
+          they are generally important results of which students should be aware.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Lemmas</em>: There are a few lemmas in the notes.
+          As a rule, these lemmas pull out a step from nearby theorems that might be too big to reasonably expect students to take by themselves.
+          If you would like to suggest additional lemmas,
+          feel free to get in touch with the authors.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Exercises</em>: The exercises are generally computational in nature,
+          and presage an upcoming generalization.
+          As such, more than a correct numerical answer is needed for a good solution to an exercise.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Challenges</em>: There are a few (unnumbered) challenge problems in the text.
+          These problems may be assigned or they may not,
+          but they are generally difficult and their omission will not disrupt the flow of the text.
+          Students may be interested merely in knowing their statements (e.g., <m>\Z[x]</m> is not a PID).
+        </p>
+      </li>
+    </ul>
+  </p>
+  <p>
+    We begin with a brief overview of some results from elementary number theory regarding divisibility and primes,
+    and introduce modular arithmetic.
+    Other than induction, no proof techniques are explicitly discussed.
+    It is assumed that students using these notes have had an introduction to proofs.
+  </p>
+  <p>
+    Brief attention is paid to fields before we dive in to rings.
+    Other than mentioning their existence,
+    no attention is given to noncommutative rings.
+    Rings and ideals are developed with an eye toward eventually proving that every Euclidean domain is a unique factorization domain.
+    We briefly explore nonunique factorization
+    (though this could be done in outside homework, if desired)
+    before turning to an exploration of homomorphisms and ideals in general.
+  </p>
+  <p>
+    Groups are not present in these notes.
+    Depending on personal preference,
+    with the time left at the end of the semester
+    (often approximately 1<ndash/>3 weeks,
+    depending on your class's pace),
+    you could present an introduction to groups directly to your students,
+    or use freely available IBL material from the
+    <url href="http://jiblm.org/"><em>Journal of Inquiry-Based Learning in Mathematics</em></url>.
+  </p>
+</preface>
+</frontmatter>

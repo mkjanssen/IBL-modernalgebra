@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-12-05T10:15:16-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Factorization in Euclidean Domains</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.12;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\labelitemi}{$\diamond$}
+\def\arraystretch{1.5}
+\newcommand{\contentsfinish}{}
+\newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
+\newcommand{\tosay}[1]{\begin{center}\text{\fbox{\scriptsize{#1}}}\end{center}}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsecpagefont}{}
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\smallcaps{#1}}
+\def\oldequation{\equation}
+\def\endoldequation{\endequation}
+\newcommand{\nl}{
+}
+\newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\thesection}.\ \smallcaps{#1}}{\thesection.\ \smallcaps{#1}}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\scriptsize\thesection}.\ \smallcaps{#1}}{}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0.5pt}
+\newcommand{\makedefaultsection}[2][true]{
+}
+\newcommand{\timestamp}{{\color{red}Last updated: {\currenttime\ (UTC), \today}}}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\ideal}[1]{\left\langle\, #1 \,\right\rangle}
+\newcommand{\subgp}[1]{\left\langle\, #1 \,\right\rangle}
+\def\p{\varphi}
+\def\isomorphic{\cong}
+\def\Gal{\text{Gal}}
+\def\im{\text{im}}
+\def\normal{\vartriangleleft}
+\renewcommand{\qedsymbol}{$\checkmark$}
+\def\lcm{{\text{lcm}\,}}
+\newcommand{\q}[1]{{\color{red} {#1}}}
+\newcommand{\startimportant}[1]{\end{[{Hint:} #1]\end}}
+\renewcommand{\textcircled}[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt,color=red] (char) {#1};}}
+\newcommand{\crossout}[1]{\tikz[baseline=(char.base)]{\node[mynode, cross out,draw] (char) {#1};}}
+\newcommand{\set}[1]{\left\{ {#1} \right\}}
+\newcommand{\setof}[2]{{\left\{#1\,\colon\,#2\right\}}}
+\def\C{{\mathbb C}}
+\def\Z{{\mathbb Z}}
+\def\bF{{\mathbb F}}
+\def\Q{{\mathbb Q}}
+\def\N{{\mathbb N}}
+\def\R{{\mathbb R}}
+\newcommand{\h}[1]{{\textbf{#1}}}
+\def\presnotes{}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Modern Algebra</span></a></h1>
+<p class="byline">Michael Janssen, Melissa Lindsey</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="SubSec-Factoring-Polynomials.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Sec-Factorization.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="SubSec-Nonunique-Factorization.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="SubSec-Factoring-Polynomials.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Sec-Factorization.html" title="Up">Up</a><a class="next-button button toolbar-item" href="SubSec-Nonunique-Factorization.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction">Introduction</a></li>
+<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents">A Note to Students</a></li>
+<li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors">A Note to Instructors</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Sec-Integers.html" data-scroll="Sec-Integers"><span class="codenumber">1</span> <span class="title">The Integers</span></a><ul>
+<li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering">Induction and Well-Ordering</a></li>
+<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers">Divisibility in the integers</a></li>
+<li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization">Primes and Factorization</a></li>
+<li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m">The Integers modulo \(m\)</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Sec-Fields-and-Rings.html" data-scroll="Sec-Fields-and-Rings"><span class="codenumber">2</span> <span class="title">Fields and Rings</span></a><ul>
+<li><a href="SubSec-Fields.html" data-scroll="SubSec-Fields">Fields</a></li>
+<li><a href="SubSec-Rings.html" data-scroll="SubSec-Rings">Rings</a></li>
+<li><a href="SubSec-Divisibility-in-Domains.html" data-scroll="SubSec-Divisibility-in-Domains">Divisibility in Integral Domains</a></li>
+<li><a href="SubSec-Principal-Ideals.html" data-scroll="SubSec-Principal-Ideals">Principal Ideals</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Sec-Factorization.html" data-scroll="Sec-Factorization"><span class="codenumber">3</span> <span class="title">Factorization</span></a><ul>
+<li><a href="SubSec-Factoring-Polynomials.html" data-scroll="SubSec-Factoring-Polynomials">Factoring Polynomials</a></li>
+<li><a href="SubSec-Factorization-in-Euclidean-Domains.html" data-scroll="SubSec-Factorization-in-Euclidean-Domains" class="active">Factorization in Euclidean Domains</a></li>
+<li><a href="SubSec-Nonunique-Factorization.html" data-scroll="SubSec-Nonunique-Factorization">Nonunique Factorization</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Sec-Ideals.html" data-scroll="Sec-Ideals"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a><ul>
+<li><a href="SubSec-Ideals-In-General.html" data-scroll="SubSec-Ideals-In-General">Ideals in general</a></li>
+<li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings">Quotient Rings</a></li>
+<li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms">Homomorphisms</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="SubSec-Factorization-in-Euclidean-Domains"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">Factorization in Euclidean Domains</span>
+</h2>
+<a href="SubSec-Factorization-in-Euclidean-Domains.html" class="permalink">¶</a><article class="definition definition-like" id="definition-33"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">3.2.1</span>.</h6>
+<p id="p-494">An integral domain \(R\) is called a <dfn class="terminology">unique factorization domain</dfn> (or <dfn class="terminology">UFD</dfn>) if the following conditions hold.</p>
+<ol class="decimal">
+<li id="li-122"><p id="p-495">Every nonzero nonunit element of \(R\) is either irreducible or can be written as a finite product of irreducibles in \(R\text{.}\)</p></li>
+<li id="li-123">
+<p id="p-496">Factorization into irreducibles is unique up to associates. That is, if \(s\in R\) can be written as</p>
+<div class="displaymath">
+\begin{equation*}
+s = p_1 p_2 \cdots p_k \text{ and }  s = q_1 q_2 \cdots q_m
+\end{equation*}
+</div>
+<p>for some irreducibles \(p_i, q_j\in R\text{,}\) then \(k=m\) and, after reordering, \(p_i\) is an associate of \(q_i\text{.}\)</p>
+</li>
+</ol></article><article class="exercise exercise-like" id="exercise-24"><a data-knowl="" class="id-ref" data-refid="hk-exercise-24"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">3.2.2</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-24"><article class="exercise exercise-like"><p id="p-497">Using \(\Z\) as an example, illustrate the definition of UFD by factoring 20 into two sets of <em class="emphasis">different</em> irreducibles which nonetheless can be paired up as associates.</p></article></div>
+<article class="theorem theorem-like" id="theorem-49"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.2.3</span>.</h6>
+<p id="p-498">Every field is a UFD.</p></article><p id="p-499">Our next main goal is to prove <a data-knowl="./knowl/theorem_everyedisufd.html" title="Theorem 3.2.13">Theorem 3.2.13</a>. In order to do that, we need some information about the ideal-theoretic structure of Euclidean domains.</p>
+<article class="definition definition-like" id="definition-34"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">3.2.4</span>.</h6>
+<p id="p-500">A commutative ring \(R\) is called <dfn class="terminology">Noetherian</dfn> if it satisfies the <dfn class="terminology">ascending chain condition</dfn> on ideals. That is, if</p>
+<div class="displaymath">
+\begin{equation*}
+I_1 \subseteq I_2\subseteq I_3\subseteq \cdots
+\end{equation*}
+</div>
+<p>is an ascending chain of ideals in \(R\text{,}\) then there exists some \(n\) for which \(I_n = I_{n+1} = I_{n+2} = \cdots\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-50"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.2.5</span>.</h6>
+<p id="p-501">Every principal ideal domain is Noetherian.</p>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-8" id="hint-8"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like"><p id="p-502">Let \(I_1\subseteq I_2\subseteq I_3 \subseteq \cdots\) and set \(I = \cup I_j\text{.}\) Show that \(I\) is an ideal, and use your assumptions!</p></div></div></article><article class="hiddenproof" id="proof-47"><a data-knowl="" class="id-ref" data-refid="hk-proof-47"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-47"><article class="hiddenproof"><p id="p-503">It is “clear” that \(I\) is an ideal. That we are in a PID means there exists \(a\) such that \(I=\cup I_j=\ideal{a}\text{.}\) Therefore there exists \(j\) such that \(a\in I_j\text{.}\) It follows that \(I=I_j\) and in particular that \(I=I_k\) for all \(k\geq j\text{.}\)</p></article></div>
+<article class="lemma theorem-like" id="lem_divisiblebyirred"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">3.2.6</span>.</h6>
+<p id="p-504">Let \(R\) be a principal ideal domain, and \(r\in R\) a nonzero nonunit. Then \(r\) is divisible by an irreducible.</p>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-9" id="hint-9"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like"><p id="p-505">Let \(r\in R\) be reducible and write \(r = r_1 r_2\text{.}\) Continue to factor reducibles and build an ascending chain of ideals.</p></div></div></article><article class="hiddenproof" id="proof-48"><a data-knowl="" class="id-ref" data-refid="hk-proof-48"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-48"><article class="hiddenproof"><p id="p-506">Suppose that \(r\) is not irreducible. Write \(r = r_1 r_2\text{,}\) where the \(r_i\) are nonzero nonunits. Then \(\ideal{r} \subsetneq \ideal{r_1}\text{.}\) If \(r_1\) is not irreducible, we may write \(r_1 = r_{1,1}r_{1,2}\text{,}\) where \(r_{1,1},r_{1,2}\) are nonzero nonunits, and observe that</p>
+<div class="displaymath">
+\begin{equation*}
+\ideal{r} \subsetneq \ideal{r_1}\subsetneq \ideal{r_{1,1}}\text{.}
+\end{equation*}
+</div>
+<p id="p-507">(If \(r_1\) <em class="emphasis">is</em> irreducible and we nonetheless write \(r_1 = r_{1,1} r_{1,2}\text{,}\) then either \(\ideal{r_{1,1}} = R\) if \(r_{1,1}\) is a unit, or \(\ideal{r_{1,1}} = \ideal{r_1}\) if \(r_{1,1}\) is associate to \(r_1\text{.}\))</p>
+<p id="p-508">Continuing in this way, we may continue to factor the reducible factors of \(r_1\text{;}\) since \(R\) is a PID and thus has the ascending chain condition, we must eventually reach a point where the chain stabilizes, i.e., that we have found an irreducible factor of \(r_1\text{.}\)</p></article></div>
+<article class="theorem theorem-like" id="theorem-51"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.2.7</span>.</h6>
+<p id="p-509">Let \(R\) be a PID. Then every nonzero nonunit element of \(R\) is either irreducible or can be written as a finite product of irreducibles in \(R\text{.}\)</p></article><article class="hiddenproof" id="proof-49"><a data-knowl="" class="id-ref" data-refid="hk-proof-49"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-49"><article class="hiddenproof"><p id="p-510">We may perform the analysis from <a data-knowl="./knowl/lem_divisiblebyirred.html" title="Lemma 3.2.6">Lemma 3.2.6</a> for all factors of \(r\text{,}\) and thus \(r\) can be factored into a product of irreducibles.</p></article></div>
+<article class="lemma theorem-like" id="lemma-5"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">3.2.8</span>.</h6>
+<p id="p-511">Let \(R\) be a PID and let \(p\in R\) be irreducible. Let \(a\in R\) be such that \(p\nmid a\text{.}\) Then \(1\in I = \setof{ax+py}{x,y\in R}\) and thus there exist \(s,t\in R\) such that \(1 = as+bt\text{.}\)</p></article><article class="hiddenproof" id="proof-50"><a data-knowl="" class="id-ref" data-refid="hk-proof-50"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-50"><article class="hiddenproof"><p id="p-512">Assume that \(p\) is irreducible. Suppose that \(p\) divides \(ab\) for some \(a,b \in R\) and that \(p\) does not divide \(a\text{.}\) Since \(R\) is a PID, \(I = \ideal{\gcd(a,p)} = \ideal{1}\text{.}\) Thus there exists \(s,t\in R\) such that \(1=as+pt\text{.}\)</p></article></div>
+<article class="theorem theorem-like" id="theorem-52"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.2.9</span>.</h6>
+<p id="p-513">Let \(R\) be a PID and let \(p\in R\text{.}\) Then \(p\) is prime if and only if \(p\) is irreducible.</p></article><article class="hiddenproof" id="proof-51"><a data-knowl="" class="id-ref" data-refid="hk-proof-51"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-51"><article class="hiddenproof"><p id="p-514">Assume that \(p\) is prime. Suppose that \(p=ab\) for some \(a,b \in R\text{.}\) Then \(p\) divides \(ab\) which implies that \(p\) divides \(a\) or \(p\) divides \(b\text{.}\) WLOG, assume that \(p\) divides \(a\text{.}\) Then there exists \(c\in R\) such that \(a=pc\) which implies that \(p=pcb\text{.}\) Therefore \(cb=1\) and \(b\) is a unit which implies that \(p\) is irreducible.</p>
+<p id="p-515">Assume that \(p\) is irreducible. Suppose that \(p\) divides \(ab\) for some \(a,b \in R\) and that \(p\) does not divide \(a\text{.}\) Then \(\ideal{a,p}=R\) and there exists \(x,y\in R\) such that \(1=ax+py\text{.}\) Multiplying boths sides by \(b\) yiels \(b=abx+pby=p(cx+by)\) which implies that \(p\) divides \(b\) and therefore \(p\) is prime.</p></article></div>
+<article class="theorem theorem-like" id="theorem-53"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.2.10</span>.</h6>
+<p id="p-516">Let \(R\) be a PID and \(p\in R\) be irreducible. If \(a,b\in R\) with \(p\mid ab\text{,}\) then \(p\mid a\) or \(p\mid b\text{.}\)</p></article><article class="hiddenproof" id="proof-52"><a data-knowl="" class="id-ref" data-refid="hk-proof-52"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-52"><article class="hiddenproof"><p id="p-517">Irreducible implies prime (use the previous theorem).</p></article></div>
+<article class="theorem theorem-like" id="thm_pidisufd"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.2.11</span>.</h6>
+<p id="p-518">Every PID is a UFD.</p></article><article class="hiddenproof" id="proof-53"><a data-knowl="" class="id-ref" data-refid="hk-proof-53"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-53"><article class="hiddenproof"><p id="p-519">Let \(R\) be a PID and suppose that a non-zero non-unit element \(a\in R\) can be factored in two different ways as a product of irreducibles.</p>
+<div class="displaymath">
+\begin{equation*}
+a=p_1p_2\cdots p_r=q_1q_2\cdots q_s
+\end{equation*}
+</div>
+<p id="p-520">Assume that \(s\geq r\text{.}\) Since \(p_1\) is irreducible (and therefore prime), there exists \(j\) such that \(p_1 \mid q_j\text{.}\) Since \(q_j\) is irreducible as well, there is a unit \(u_1\) such that \(p_1=u_1 q_j\text{.}\) Up to reordering we have</p>
+<div class="displaymath">
+\begin{equation*}
+p_1p_2\cdots p_r=u_1p_1q_2\cdots q_s
+\end{equation*}
+</div>
+<p id="p-521">Therefore</p>
+<div class="displaymath">
+\begin{equation*}
+p_2\cdots p_r=u_1q_2\cdots q_s
+\end{equation*}
+</div>
+<p id="p-522">We can continue in a similar fashion until we end up with</p>
+<div class="displaymath">
+\begin{equation*}
+1=u_1\cdots u_rq_{r+1}\cdots q_s
+\end{equation*}
+</div>
+<p id="p-523">Since the \(q_j\)'s are non-units, this means that \(r=s\) and that the \(p_i\)'s are associates of the \(q_j\)'s. Therefore \(R\) is a UFD.</p></article></div>
+<article class="theorem theorem-like" id="thm_edispid"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.2.12</span>.</h6>
+<p id="p-524">Every Euclidean domain is a principal ideal domain.</p>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-10" id="hint-10"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-10"><div class="hint solution-like"><p id="p-525">Mimic the proof of <a data-knowl="./knowl/thm_ZisPID.html" title="Theorem 2.4.10">Theorem 2.4.10</a>.</p></div></div></article><article class="hiddenproof" id="proof-54"><a data-knowl="" class="id-ref" data-refid="hk-proof-54"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-54"><article class="hiddenproof"><p id="p-526">Let \(R\) be a euclidean domain, and \(I\) an ideal of \(R\text{.}\) If \(I = \set{0}\text{,}\) then \(I\) is principal, so assume that \(I\ne \set{0}\text{.}\)</p>
+<p id="p-527">Define \(S = \setof{\delta(x)&gt;0}{x\in I}\text{.}\) Then the Well-Ordering Principle guarantees that \(S\) has a least element. Let \(d\in I\) be such that \(\delta(d) &gt; 0\) is minimal. We claim that \(I = \ideal{d}\text{.}\)</p>
+<p id="p-528">Clearly \(\ideal{d}\subseteq I\text{.}\) Now assume that \(a\in I\text{,}\) and write \(a = dq + r\text{,}\) where either \(r = 0\) or \(r\ne 0\) and \(\delta(r) \lt \delta(d)\text{.}\) If \(\delta(r) \lt \delta(d)\text{,}\) then \(r = a - dq \in I\text{,}\) contradicting the minimality of \(\delta(d)\text{.}\) Thus, \(r = 0\text{,}\) and \(a\in \ideal{d}\text{.}\)</p>
+<p id="p-529">Therefore, \(R\) is a PID.</p></article></div>
+<article class="theorem theorem-like" id="theorem_everyedisufd"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.2.13</span>.</h6>
+<p id="p-530">Every Euclidean domain is a unique factorization domain.</p></article><article class="hiddenproof" id="proof-55"><a data-knowl="" class="id-ref" data-refid="hk-proof-55"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-55"><article class="hiddenproof"><p id="p-531">Apply <a data-knowl="./knowl/thm_edispid.html" title="Theorem 3.2.12">Theorems 3.2.12</a> and <a data-knowl="./knowl/thm_pidisufd.html" title="Theorem 3.2.11">Theorem 3.2.11</a>.</p></article></div>
+<article class="theorem theorem-like" id="theorem-57"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.2.14</span>. <span class="title">Unique Factorization of polynomials.</span>
+</h6>
+<p id="p-532">Let \(F\) be a field. Then \(F[x]\) is a UFD.</p>
+<p id="p-533">That is, if \(f(x) \in F[x]\) with \(\deg(f(x)) \ge 1\text{,}\) then \(f(x)\) is either irreducible or a product of irreducibles in \(F[x]\text{.}\) What is more, if</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = p_1(x) p_2(x) \cdots p_k(x) \text{ and }  f(x) = q_1(x) q_2(x) \cdots q_m(x)
+\end{equation*}
+</div>
+<p>are two factorizations of \(f\) into irreducibles \(p_i, q_j\text{,}\) then \(m=k\) and after reordering, \(p_j\) and \(q_j\) are associates.</p>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-11" id="hint-11"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-11"><div class="hint solution-like"><p id="p-534">Handle existence and uniqueness separately. For each, (strong) induction on \(\deg(f(x))\) will work. Or do something entirely different.</p></div></div></article><p id="p-535">Thus, we see that the existence of a well-behaved division algorithm and (a lack of zero divisors) is sufficient to guarantee unique factorization. However, it is not necessary.</p>
+<article class="theorem theorem-like" id="theorem-58"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.2.15</span>.</h6>
+<p id="p-536">If \(R\) is a UFD, then \(R[x]\) is a UFD.</p></article><p id="p-537">Thus, \(\Z[x]\) is a UFD. However, as we will see later, \(\Z[x]\) is not a PID.</p></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.12/login.js"></script>
+</body>
+</html>

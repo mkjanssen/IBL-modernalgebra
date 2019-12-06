@@ -1,0 +1,42 @@
+<preface xml:id="Sec-Introduction">
+  <title>Introduction</title>
+  <p>
+    While it is difficult to intuitively define the way in which mathematics is structural,
+    its concern with <em>number</em> is clear,
+    especially for students of elementary mathematics such as arithmetic.
+    However, the study of <em>number</em>
+    rapidly leads one to structural questions regarding the properties of numbers themselves,
+    which has historically been the domain of <em>algebra</em>.
+  </p>
+  <p>
+    In<nbsp /><xref ref="franklin2014aristotelian" />,
+    the author defines a <em>purely structural property</em> as one that
+    <q>can be defined wholly in terms of the concepts same and different,
+    and part and whole (along with purely logical concepts).</q>
+    This definition and its reference to parts and wholes calls to mind the history of the word
+    <em>algebra</em> itself,
+    which comes from the Arabic <em>al-jabr</em>, literally meaning
+    <q>the reunion of broken parts</q>.
+    One of the concepts fundamental to the historical development of algebra is the notion of <em>factorization</em>;
+    closely related questions that have driven the development of algebra over the centuries are:
+    when does a polynomial equation have solutions in a particular number system,
+    and is there a systematic way to find them?
+  </p>
+  <p>
+    The goal of these notes is to explore the idea of factorization from an abstract perspective.
+    We will first give attention to factorization in the integers,
+    and then factorization properties of polynomials.
+    Our larger goal is to precisely describe deep structural properties common to both the integers and polynomials that guarantee that factorization into fundamental pieces,
+    like primes and irreducibles,
+    can be done <em>uniquely</em>.
+    In order to accomplish this goal,
+    we will walk in the realms of abstraction,
+    and catch glimpses of the beauty and incredible power of this perspective on mathematics.
+  </p>
+  
+  <references>
+  	<biblio>
+  		<title>An Aristotelian Realist Philosophy of Mathematics</title>
+  	</biblio>
+  </references>
+</preface>
