@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-12-06T11:56:28-06:00    *-->
+<!--*    on 2019-12-30T15:36:47-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -50,7 +50,7 @@ MathJax.Hub.Config({
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(gcse, s);
 })();
-</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
@@ -66,7 +66,7 @@ MathJax.Hub.Config({
 var role = 'student';
 var guest_access = true;
 var login_required = false;
-var js_version = 0.12;
+var js_version = 0.13;
 </script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
@@ -189,68 +189,80 @@ var js_version = 0.12;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="SubSec-Divisibility-in-Domains"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Divisibility in Integral Domains</span>
 </h2>
-<a href="SubSec-Divisibility-in-Domains.html" class="permalink">¶</a><p id="p-327">When we introduced the notion of integral domain, we said that part of the reason for the definition was to capture some of the most essential properties of the integers. One such idea is that of cancellation.</p>
+<a href="SubSec-Divisibility-in-Domains.html" class="permalink">¶</a><p id="p-326">When we introduced the notion of integral domain, we said that part of the reason for the definition was to capture some of the most essential properties of the integers. One such idea is that of cancellation.</p>
 <article class="theorem theorem-like" id="theorem-30"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">2.3.1</span>.</h6>
-<p id="p-328">Let \(R\) be a ring. Then \(R\) is a domain if and only if for all \(a,b,c\in R\) with \(c\ne 0_R\) and \(ac = bc\text{,}\) we have \(a = b\text{.}\)</p></article><article class="hiddenproof" id="proof-28"><a data-knowl="" class="id-ref" data-refid="hk-proof-28"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-28"><article class="hiddenproof"><p id="p-329">Assume \(R\) is a domain and \(ac = bc\text{.}\) Then \(ac - bc = 0\text{,}\) so \(c(a-b) = 0\text{.}\) Since \(R\) is a domain, it has no zero divisors, and therefore either \(c = 0\) or \(a-b=0\text{.}\) The first possibility is ruled out by our assumptions on \(a,b,c\text{,}\) so we must have \(a-b = 0\text{,}\) or \(a =b\text{.}\)</p>
-<p id="p-330">Conversely, assume that \(R\) is not a domain. Let \(z\in R\) be a zero divisor; then there is a nonzero \(x\in R\) such that \(xz = 0 = 0 z\text{.}\) This implies that \(x = 0\text{,}\) a contradiction.</p></article></div>
-<p id="p-331">Thus, the defining property of an integral domain is the ability to <em class="emphasis">cancel</em> common nonzero factors. Note that we have not <em class="emphasis">divided</em>; division is not a binary operation in rings! However, as was the case in \(\Z\text{,}\) there are notions of <em class="emphasis">divisibility</em> and <em class="emphasis">factorization</em> in rings.</p>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
+</h6>
+<p id="p-327">Let \(R\) be a ring. Then \(R\) is a domain if and only if for all \(a,b,c\in R\) with \(c\ne 0_R\) and \(ac = bc\text{,}\) we have \(a = b\text{.}\)</p></article><article class="hiddenproof" id="proof-28"><a data-knowl="" class="id-ref original" data-refid="hk-proof-28"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-28"><article class="hiddenproof"><p id="p-328">Assume \(R\) is a domain and \(ac = bc\text{.}\) Then \(ac - bc = 0\text{,}\) so \(c(a-b) = 0\text{.}\) Since \(R\) is a domain, it has no zero divisors, and therefore either \(c = 0\) or \(a-b=0\text{.}\) The first possibility is ruled out by our assumptions on \(a,b,c\text{,}\) so we must have \(a-b = 0\text{,}\) or \(a =b\text{.}\)</p>
+<p id="p-329">Conversely, assume that \(R\) is not a domain. Let \(z\in R\) be a zero divisor; then there is a nonzero \(x\in R\) such that \(xz = 0 = 0 z\text{.}\) This implies that \(x = 0\text{,}\) a contradiction.</p></article></div>
+<p id="p-330">Thus, the defining property of an integral domain is the ability to <em class="emphasis">cancel</em> common nonzero factors. Note that we have not <em class="emphasis">divided</em>; division is not a binary operation in rings! However, as was the case in \(\Z\text{,}\) there are notions of <em class="emphasis">divisibility</em> and <em class="emphasis">factorization</em> in rings.</p>
 <article class="definition definition-like" id="definition-23"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">2.3.2</span>.</h6>
-<p id="p-332">Let \(R\) be a commutative ring with identity, and let \(a,b\in R\text{.}\) We say \(a\) <dfn class="terminology">divides</dfn> \(b\) and write \(a\mid b\) if there is a \(c\in R\) such that \(ac = b\text{.}\) We then say that \(a\) is a <dfn class="terminology">factor</dfn> of \(b\text{.}\)</p></article><p id="p-333">Our notion of primality also extends nicely to domains.</p>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
+</h6>
+<p id="p-331">Let \(R\) be a commutative ring with identity, and let \(a,b\in R\text{.}\) We say \(a\) <dfn class="terminology">divides</dfn> \(b\) and write \(a\mid b\) if there is a \(c\in R\) such that \(ac = b\text{.}\) We then say that \(a\) is a <dfn class="terminology">factor</dfn> of \(b\text{.}\)</p></article><p id="p-332">Our notion of primality also extends nicely to domains.</p>
 <article class="definition definition-like" id="definition-24"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">2.3.3</span>.</h6>
-<p id="p-334">Let \(R\) be a domain. We say a nonzero nonunit element \(a\in R\) is <dfn class="terminology">prime</dfn> if whenever \(a\mid bc\) for some \(b,c\in R\text{,}\) either \(a|b\) or \(a|c\text{.}\)</p></article><p id="p-335">A notion related to primality is irreducibility.</p>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
+</h6>
+<p id="p-333">Let \(R\) be a domain. We say a nonzero nonunit element \(a\in R\) is <dfn class="terminology">prime</dfn> if whenever \(a\mid bc\) for some \(b,c\in R\text{,}\) either \(a|b\) or \(a|c\text{.}\)</p></article><p id="p-334">A notion related to primality is irreducibility.</p>
 <article class="definition definition-like" id="def_irreducibleelement"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">2.3.4</span>.</h6>
-<p id="p-336">Let \(R\) be a domain. We say a nonzero nonunit element \(a\in R\) is <dfn class="terminology">irreducible</dfn> if whenever \(a = bc\) for some \(b,c\in R\text{,}\) one of \(b\) or \(c\) is a unit.</p></article><p id="p-337">In familiar settings, the notion of prime and irreducible exactly coincide.</p>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span>
+</h6>
+<p id="p-335">Let \(R\) be a domain. We say a nonzero nonunit element \(a\in R\) is <dfn class="terminology">irreducible</dfn> if whenever \(a = bc\) for some \(b,c\in R\text{,}\) one of \(b\) or \(c\) is a unit.</p></article><p id="p-336">In familiar settings, the notion of prime and irreducible exactly coincide.</p>
 <article class="theorem theorem-like" id="theorem-31"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">2.3.5</span>.</h6>
-<p id="p-338">Let \(R\) be a domain. If \(a\in R\) is prime, then \(a\) is irreducible.</p></article><article class="hiddenproof" id="proof-29"><a data-knowl="" class="id-ref" data-refid="hk-proof-29"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-29"><article class="hiddenproof"><p id="p-339">Compare to the proof of <a data-knowl="./knowl/theorem_euclidslemma.html" title="Theorem 1.3.2">Theorem 1.3.2</a>.</p>
-<p id="p-340">Let \(a\in R\) be prime, and suppose that \(a = bc\) for some \(b,c\in R\text{.}\) Then \(a|bc\text{,}\) so by definition either \(a|b\) or \(a|c\text{.}\) Without loss of generality, assume \(a|b\text{.}\) Then there is a \(k\in R\) such that \(ak=b\text{,}\) so \(a = (ak)c\text{,}\) and we may cancel \(a\) to obtain \(1_R = kc\text{.}\) Thus, \(c\) is a unit, making \(a\) irreducible.</p></article></div>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span>
+</h6>
+<p id="p-337">Let \(R\) be a domain. If \(a\in R\) is prime, then \(a\) is irreducible.</p></article><article class="hiddenproof" id="proof-29"><a data-knowl="" class="id-ref original" data-refid="hk-proof-29"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-29"><article class="hiddenproof"><p id="p-338">Compare to the proof of <a class="xref" data-knowl="./knowl/theorem_euclidslemma.html" title="Theorem 1.3.2">Theorem 1.3.2</a>.</p>
+<p id="p-339">Let \(a\in R\) be prime, and suppose that \(a = bc\) for some \(b,c\in R\text{.}\) Then \(a|bc\text{,}\) so by definition either \(a|b\) or \(a|c\text{.}\) Without loss of generality, assume \(a|b\text{.}\) Then there is a \(k\in R\) such that \(ak=b\text{,}\) so \(a = (ak)c\text{,}\) and we may cancel \(a\) to obtain \(1_R = kc\text{.}\) Thus, \(c\) is a unit, making \(a\) irreducible.</p></article></div>
 <article class="theorem theorem-like" id="theorem-32"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">2.3.6</span>.</h6>
-<p id="p-341">Every irreducible in \(\Z\) is prime.</p></article><article class="hiddenproof" id="proof-30"><a data-knowl="" class="id-ref" data-refid="hk-proof-30"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-30"><article class="hiddenproof"><p id="p-342">Let \(p\in \Z\) be irreducible, and suppose that \(d|p\text{.}\) Then \(p = de\text{.}\) Since \(p\) is irreducible, either \(d\) or \(e\) is a unit. However, the only units are \(\pm 1\text{,}\) so either one of \(d\) or \(e\) is \(p\) or \(-p\text{.}\) In either case, \(p\) is prime.</p></article></div>
-<p id="p-343">It is not the case in all domains that irreducibles are primes, as the next exercise illustrates.</p>
-<article class="exercise exercise-like" id="exer_irreduciblenotprime"><a data-knowl="" class="id-ref" data-refid="hk-exer_irreduciblenotprime"><h6 class="heading">
-<span class="type">Checkpoint</span> <span class="codenumber">2.3.7</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer_irreduciblenotprime"><article class="exercise exercise-like"><p id="p-344">Consider the set \(R\) of all polynomials in \(\Z[x]\) for which the coefficient on the linear term is zero. That is,</p>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span>
+</h6>
+<p id="p-340">Every irreducible in \(\Z\) is prime.</p></article><article class="hiddenproof" id="proof-30"><a data-knowl="" class="id-ref original" data-refid="hk-proof-30"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-30"><article class="hiddenproof"><p id="p-341">Let \(p\in \Z\) be irreducible, and suppose that \(d|p\text{.}\) Then \(p = de\text{.}\) Since \(p\) is irreducible, either \(d\) or \(e\) is a unit. However, the only units are \(\pm 1\text{,}\) so either one of \(d\) or \(e\) is \(p\) or \(-p\text{.}\) In either case, \(p\) is prime.</p></article></div>
+<p id="p-342">It is not the case in all domains that irreducibles are primes, as <a class="xref" data-knowl="./knowl/exer_irreduciblenotprime.html" title="Exploration 2.3.1">Exploration 2.3.1</a> illustrates.</p>
+<article class="exploration project-like" id="exer_irreduciblenotprime"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
+</h6>
+<p id="p-343">Consider the set \(R\) of all polynomials in \(\Z[x]\) for which the coefficient on the linear term is zero. That is,</p>
 <div class="displaymath">
 \begin{equation*}
 R = \setof{a_0 + a_2 x^2 + \cdots + a_{n-1} x^{n-1} + a_n x^n}{a_i\in \Z,\ n\in\N}\text{.}
 \end{equation*}
 </div>
-<p id="p-345">(You should convince yourself that \(R\) is an integral domain, but do not need to prove it.) Find a polynomial of the form \(x^n\) in \(R\) that is irreducible, but not prime.</p>
+<p id="p-344">(You should convince yourself that \(R\) is an integral domain, but do not need to prove it.) Then, find a polynomial of the form \(x^n\) in \(R\) that is irreducible, but not prime.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-9" id="solution-9"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like">
-<p id="p-346">Consider \(f(x) = x^2\text{.}\) Then \(f(x)\) is irreducible, as it cannot be factored into a product of linear polynomials (there aren't any in \(R\)), so any factorization of \(f\) is degree 2 times degree 0. Then the leading coefficients must be units, i.e., both 1 or both \(-1\text{.}\)</p>
-<p id="p-347">However, \(f\) is not prime, as \(f| x^3 \cdot x^3\) but \(f\nmid x^3\text{.}\)</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like">
+<p id="p-345">Consider \(f(x) = x^2\text{.}\) Then \(f(x)\) is irreducible, as it cannot be factored into a product of linear polynomials (there aren't any in \(R\)), so any factorization of \(f\) is degree 2 times degree 0. Then the leading coefficients must be units, i.e., both 1 or both \(-1\text{.}\)</p>
+<p id="p-346">However, \(f\) is not prime, as \(f| x^3 \cdot x^3\) but \(f\nmid x^3\text{.}\)</p>
 </div></div>
-</div></article></div>
-<article class="definition definition-like" id="definition-26"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">2.3.8</span>.</h6>
-<p id="p-348">Let \(R\) be a domain, and let \(a,b\in R\text{.}\) A nonzero element \(d\in R\) is a <dfn class="terminology">greatest common divisor</dfn> of \(a\) and \(b\) if</p>
+</div></article><article class="definition definition-like" id="definition-26"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.7</span><span class="period">.</span>
+</h6>
+<p id="p-347">Let \(R\) be a domain, and let \(a,b\in R\text{.}\) A nonzero element \(d\in R\) is a <dfn class="terminology">greatest common divisor</dfn> of \(a\) and \(b\) if</p>
 <ol class="decimal">
-<li id="li-93"><p id="p-349">\(d\mid a\) and \(d\mid b\) and,</p></li>
-<li id="li-94"><p id="p-350">if \(e\in R\) with \(e\mid a\) and \(e\mid b\text{,}\) then \(e\mid d\text{.}\)</p></li>
+<li id="li-93"><p id="p-348">\(d\mid a\) and \(d\mid b\) and,</p></li>
+<li id="li-94"><p id="p-349">if \(e\in R\) with \(e\mid a\) and \(e\mid b\text{,}\) then \(e\mid d\text{.}\)</p></li>
 </ol></article><article class="theorem theorem-like" id="theorem-33"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">2.3.9</span>.</h6>
-<p id="p-351">Let \(R\) be a domain and \(a,b\in R\) and suppose \(d\) is a greatest common divisor of \(a\) and \(b\text{.}\) Then any associate of \(d\) is also a greatest common divisor of \(a\) and \(b\text{.}\)</p></article><article class="hiddenproof" id="proof-31"><a data-knowl="" class="id-ref" data-refid="hk-proof-31"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-31"><article class="hiddenproof"><p id="p-352">Let \(d\) be a gcd of \(a\) and \(b\text{,}\) let \(u\in R^\times\text{,}\) and \(e =ud\text{.}\) We claim \(e\) is also a gcd of \(a\) and \(b\text{.}\)</p>
-<p id="p-353">Since \(d|a\) and \(d|b\) there are \(k_1,k_2\in R\) such that \(d k_1 = a\) and \(d k_2 = b\text{.}\) Then \(e (u^{-1} k_1) = a\) and \(e (u^{-1} k_2) = b\text{,}\) so \(e|a\) and \(e|b\text{.}\)</p>
-<p id="p-354">Let \(f\) be a common divisor of \(a\) and \(b\text{.}\) Since \(d\) is a gcd, \(f|d\text{,}\) i.e., \(f k_3 = d\text{.}\) Then \(f (uk_3) = e\text{,}\) so \(f|e\text{.}\)</p>
-<p id="p-355">Thus, \(e\) is a gcd of \(a\) and \(b\text{.}\)</p></article></div>
-<article class="exercise exercise-like" id="exercise-14"><a data-knowl="" class="id-ref" data-refid="hk-exercise-14"><h6 class="heading">
-<span class="type">Checkpoint</span> <span class="codenumber">2.3.10</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-14"><article class="exercise exercise-like"><p id="p-356">In most familiar domains, GCDs exist. However, they don't always! Find an example of elements in the ring from <a data-knowl="./knowl/exer_irreduciblenotprime.html" title="Checkpoint 2.3.7">Exercise 2.3.7</a> which do not have a GCD. Justify your assertion.</p>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.8</span><span class="period">.</span>
+</h6>
+<p id="p-350">Let \(R\) be a domain and \(a,b\in R\) and suppose \(d\) is a greatest common divisor of \(a\) and \(b\text{.}\) Then any associate of \(d\) is also a greatest common divisor of \(a\) and \(b\text{.}\)</p></article><article class="hiddenproof" id="proof-31"><a data-knowl="" class="id-ref original" data-refid="hk-proof-31"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-31"><article class="hiddenproof"><p id="p-351">Let \(d\) be a gcd of \(a\) and \(b\text{,}\) let \(u\in R^\times\text{,}\) and \(e =ud\text{.}\) We claim \(e\) is also a gcd of \(a\) and \(b\text{.}\)</p>
+<p id="p-352">Since \(d|a\) and \(d|b\) there are \(k_1,k_2\in R\) such that \(d k_1 = a\) and \(d k_2 = b\text{.}\) Then \(e (u^{-1} k_1) = a\) and \(e (u^{-1} k_2) = b\text{,}\) so \(e|a\) and \(e|b\text{.}\)</p>
+<p id="p-353">Let \(f\) be a common divisor of \(a\) and \(b\text{.}\) Since \(d\) is a gcd, \(f|d\text{,}\) i.e., \(f k_3 = d\text{.}\) Then \(f (uk_3) = e\text{,}\) so \(f|e\text{.}\)</p>
+<p id="p-354">Thus, \(e\) is a gcd of \(a\) and \(b\text{.}\)</p></article></div>
+<article class="exploration project-like" id="exploration-13"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
+</h6>
+<p id="p-355">In most familiar domains, GCDs exist. However, they don't always! Find an example of elements in the ring from <a class="xref" data-knowl="./knowl/exer_irreduciblenotprime.html" title="Exploration 2.3.1">Exercise 2.3.1</a> which do not have a GCD. Justify your assertion.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-10" id="solution-10"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
-<p id="p-357">Consider \(x^5\) and \(x^6\text{.}\) First note that \(x^4\) is not a common divisor in \(R\text{.}\)</p>
-<p id="p-358">Both \(x^5\) and \(x^6\) are divisible by \(x^3\) and \(x^2\) in \(R\text{.}\) However, neither can be the gcd, as \(x^2\nmid x^3\) and \(x^3\nmid x^2\text{.}\)</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
+<p id="p-356">Consider \(x^5\) and \(x^6\text{.}\) First note that \(x^4\) is not a common divisor in \(R\text{.}\)</p>
+<p id="p-357">Both \(x^5\) and \(x^6\) are divisible by \(x^3\) and \(x^2\) in \(R\text{.}\) However, neither can be the gcd, as \(x^2\nmid x^3\) and \(x^3\nmid x^2\text{.}\)</p>
 </div></div>
-</div></article></div>
-<article class="exercise exercise-like" id="exer_ringgeneralityone"><a data-knowl="" class="id-ref" data-refid="hk-exer_ringgeneralityone"><h6 class="heading">
-<span class="type">Checkpoint</span> <span class="codenumber">2.3.11</span>.</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exer_ringgeneralityone"><article class="exercise exercise-like"><p id="p-359">Fill in the following blanks in order of increasing generality with the words <em class="emphasis">ring</em>, <em class="emphasis">integral domain</em>, <em class="emphasis">field</em>, and <em class="emphasis">commutative ring</em>.</p>
-<p id="p-360">\makebox[0.75in]{\hrulefill} \(\Rightarrow\) \makebox[0.75in]{\hrulefill} \(\Rightarrow\) \makebox[0.75in]{\hrulefill} \(\Rightarrow\) \makebox[0.75in]{\hrulefill}</p></article></div></section></div></main>
+</div></article><article class="exploration project-like" id="exer_ringgeneralityone"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
+</h6>
+<p id="p-358">Fill in the following blanks in order of increasing generality with the words <em class="emphasis">ring</em>, <em class="emphasis">integral domain</em>, <em class="emphasis">field</em>, and <em class="emphasis">commutative ring</em>.</p>
+<p id="p-359">__________ \(\Rightarrow\) __________ \(\Rightarrow\) __________ \(\Rightarrow\) __________</p></article></section></div></main>
 </div>
 <div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.12/login.js"></script>
+<script src="https://pretextbook.org/js/0.13/login.js"></script>
 </body>
 </html>

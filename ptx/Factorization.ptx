@@ -10,7 +10,7 @@
       In this section,
       our first goal will be to extend familiar properties from <xref ref="Sec-Integers">&#xa7;</xref> to <m>F[x]</m>.
       We will also see that the particular nature of a polynomial allows for additional criteria for,
-      e.g., its irreducibility to be discovered.
+      e.g., its irreducibility to be decided.
     </p>
     <p>
       We saw in <xref ref="thm_divalg"></xref>
@@ -20,7 +20,7 @@
       (and correct)
       to expect that similar to the integers we can also investigate the greatest common divisor of polynomials.
     </p>
-    <exercise>
+    <investigation>
       <statement>
         <p>
           Given <m>f(x),g(x)\in F[x]</m>,
@@ -34,8 +34,9 @@
           Apply the division algorithm for polynomials and mimic the proof of the Euclidean algorithm in <m>\Z</m>.
         </p>
       </solution>
-    </exercise>
-    <exercise>
+    </investigation>
+
+    <investigation>
       <statement>
         <p>
           Carefully state and prove a B&#xe9;zout-like theorem
@@ -52,7 +53,8 @@
           t(x)\in F[x]</m> such that <m>f(x) s(x) + g(x) t(x) = \gcd(f(x),g(x))</m>.
         </p>
       </solution>
-    </exercise>
+    </investigation>
+
     <p>
       We next make the somewhat pedantic <mdash/> yet valuable <mdash/> distinction between the polynomial <m>p(x)\in R[x]</m> and the function
       <m>p_f : R\to R</m> defined by the polynomial.
@@ -74,7 +76,7 @@
         <p>
           Let <m>R</m> be commutative with identity and suppose <m>p(x) \in R[x]</m>.
           We say <m>r\in R</m> is a <term>zero</term> or <term>root</term>
-          of <m>p(x)</m> if <m>p(r) = 0_R</m>.
+          of <m>p(x)</m> if <m>p(r) = 0</m>.
         </p>
       </statement>
     </definition>
@@ -109,7 +111,7 @@
         so <m>r=0</m> and <m>x-\alpha | p(x)</m>.
       </p>
     </proof>
-    <exercise>
+    <exploration>
       <statement>
         <p>
           Given a field <m>F</m>, define an irreducible element of <m>F[x]</m>,
@@ -125,7 +127,8 @@
           either <m>a(x)</m> or <m>b(x)</m> is a nonzero constant.
         </p>
       </solution>
-    </exercise>
+    </exploration>
+
     <definition>
       <statement>
         <p>
@@ -134,7 +137,7 @@
         </p>
       </statement>
     </definition>
-    <exercise>
+    <exploration>
       <statement>
         <p>
           State a positive definition for a reducible polynomial with coefficients in a field <m>F</m>.
@@ -146,7 +149,8 @@
           where <m>1 \le \deg s(x) \lt \deg r(x)</m> and <m>1 \le \deg t(x) \lt \deg r(x)</m>.
         </p>
       </solution>
-    </exercise>
+    </exploration>
+
     <theorem>
       <statement>
         <p>
@@ -260,7 +264,7 @@
         </p>
       </statement>
     </definition>
-    <exercise>
+    <activity>
       <statement>
         <p>
           Using <m>\Z</m> as an example,
@@ -268,7 +272,8 @@
           irreducibles which nonetheless can be paired up as associates.
         </p>
       </statement>
-    </exercise>
+    </activity>
+
     <theorem>
       <statement>
         <p>
@@ -529,7 +534,7 @@
       </p>
     </proof>
     <theorem>
-      <title>Unique Factorization of polynomials</title>
+      <title>(Unique Factorization of Polynomials)</title>
       <statement>
         <p>
           Let <m>F</m> be a field.
@@ -567,21 +572,26 @@
       </statement>
     </theorem>
     <p>
-      Thus, <m>\Z[x]</m> is a UFD. However,
+      Thus, <m>\Z[x]</m> is a UFD. That is, every nonconstant polynomial in <m>\Z[x]</m> is either irreducible or can be factored uniquely into a product of irreducibles.  However,
       as we will see later, <m>\Z[x]</m> is not a PID.
     </p>
   </section>
   <section xml:id="SubSec-Nonunique-Factorization">
     <title>Nonunique Factorization</title>
     <p>
-      If every ring had the unique factorization property,
+      Despite the evidence to the contrary, not every ring has the unique factorization property. That is, there are commutative rings with identity which are not UFDs. <!-- 
+If every ring had the unique factorization property,
       life would be very boring indeed.
-      And in fact,
+ -->
+      In fact,
       the failure of certain rings in algebraic number theory to have the unique factorization property played a role in several failed attempts to prove Fermat's Last Theorem,
-      which says that there are no nontrivial integer solutions to the equation <m>x^n + y^n = z^n</m> if <m>n \ge 3</m>.
+      which says that there are no nontrivial integer solutions <m>(x,y,z)</m> to the equation <m>x^n + y^n = z^n</m> if <m>n \ge 3</m>.
+      Pierre de Fermat famously claimed that he had a <q>marvelous proof</q> of this fact, but the margin of the book in which he was writing was <q>too narrow to contain it.</q>
+      Fermat's supposed proof was never found, and many now doubt that he had one.
+      The search for a valid proof would not be complete until the work of Andrew Wiles and Richard Taylor in the mid-1990s.
     </p>
     <p>
-      In 1847, Gabriel Lam&#xe9; claimed he had complete solved the problem.
+      In 1847, Gabriel Lam&#xe9; claimed he had completely solved the problem.
       His solution relied on the factorization of <m>x^p + y^p</m>,
       where <m>p</m> is an odd prime, as
       <me>
@@ -595,22 +605,23 @@
       we explore factorization in a similar integral domain,
       <m>R = \Z[\sqrt{-7}] = \setof{a+b\sqrt{-7}}{a,b\in\Z}</m>.
     </p>
-    <exercise>
+    <activity>
       <statement>
         <p>
           Verify that <m>8 = (1+\sqrt{-7})(1-\sqrt{-7})</m>.
         </p>
       </statement>
-    </exercise>
-    <exercise>
+    </activity>
+
+    <theorem>
       <statement>
         <p>
-          Define a function <m>\delta : R \to \N_0</m> by <m>\delta(a+b\sqrt{-7}) = a^2 + 7 b^2</m>.
-          Prove that if <m>x,y\in R</m>,
+          Define <m>\delta : R \to \N_0</m> by <m>\delta(a+b\sqrt{-7}) = a^2 + 7 b^2</m>.
+          Then for all <m>x,y\in R</m>,
           <m>\delta(xy) = \delta(x)\delta(y)</m>.
         </p>
       </statement>
-    </exercise>
+    </theorem>
     <theorem>
       <statement>
         <p>
@@ -644,7 +655,7 @@
         <p>
           The elements 2, <m>1+ \sqrt{-7}</m>,
           and <m>1-\sqrt{-7}</m> are irreducible in <m>R</m>.
-          Thus, <m>R</m> is not a UFD.
+          We conclude that <m>R</m> is not a UFD.
         </p>
       </statement>
     </theorem>

@@ -175,4 +175,16 @@
     <url href="http://jiblm.org/"><em>Journal of Inquiry-Based Learning in Mathematics</em></url>.
   </p>
 </preface>
+
+<acknowledgements>
+There are several people we wish to thank. In no particular order:
+
+David Farmer, for handling the initial conversion of the <m>\LaTeX</m> code to PreTeXt.
+
+Mitch Keller, for his help with PreTeXt and for being willing to take a chance using this book for his Fall 2019 modern algebra course at Morningside College.
+
+The Network of IBL Communities (and NSF-DUE #1925188) and the UNO STEM TRAIL Center for supporting the collaboration with Mitch Keller.
+
+Rob Beezer and the PreTeXt team for creating this wonderful authoring language.
+</acknowledgements>
 </frontmatter>

@@ -37,13 +37,13 @@
       you learned that two fractions
       <m>\frac{a}{b}, \frac{c}{d} \in \Q</m> are equivalent if and only if <m>ad=bc</m>.
     </p>
-    <exercise>
+    <activity>
       <statement>
         <p>
           Prove that our elementary school definition of equivalent fractions is an equivalence relation.
         </p>
       </statement>
-    </exercise>
+    </activity>
     <p>
       We likely have an intuitive idea of what is meant by <m>\R</m>,
       the set of real numbers.
@@ -83,7 +83,7 @@
         </p>
       </statement>
     </definition>
-    <question>
+    <investigation>
       <statement>
         <p>
           Which of <m>+, -, \cdot, \div</m> are binary operations:
@@ -124,7 +124,7 @@
           The only binary operation on <m>\N</m> is addition.
         </p>
       </answer>
-    </question>
+    </investigation>
     <p>
       The hallmark of modern pure mathematics is the use of <em>axioms</em>.
       An axiom is essentially an unproved assertion of truth.
@@ -136,7 +136,7 @@
       <em>How do you know?</em> over and over again).
       That is, axioms give us very clear starting points from which to make our deductions.
     </p>
-    <p>
+    <!--<p>
       More generally,
       the use of any hypotheses when asking mathematical or scientific questions is a form of creativity,
       and even <em>play</em>.
@@ -149,7 +149,7 @@
       God has imbued in his creation.
       We can postulate structures with whichever axioms we like,
       but our creativity is most valuable if it reflects the world <em>as it is</em>.
-    </p>
+    </p>-->
     <p>
       To that end,
       our first abstract algebraic structure captures and axiomatizes familiar behavior about how numbers can be combined to produce other numbers of the same type.
@@ -230,8 +230,9 @@
     <p>
       For brevity's sake,
       we will usually write <m>a\cdot b</m> as <m>ab</m>.
+      Additionally, we will usually drop the subscripts on <m>0,1</m> unless we need to distinguish between fundamentally different identities in different fields.
     </p>
-    <exercise xml:id="exer_fieldexamples">
+    <investigation xml:id="exer_fieldexamples">
       <statement>
         <p>
           Which of the following are fields?
@@ -296,12 +297,7 @@
           </ol>
         </p>
       </statement>
-    </exercise>
-    <p>
-      In the previous exercise,
-      you determined which of sets of familiar mathematical objects are and are not fields.
-      Notice that you have been working with fields for years and years and that our abstraction of language to that of fields is simply to allow us to explore the common features at the same time - it is inefficient to prove the same statement about every single field when we can prove it once and for all about fields in general.
-    </p>
+    </investigation>
     <solution>
       <p>
         <ol>
@@ -361,20 +357,25 @@
         </ol>
       </p>
     </solution>
+	<p>
+      In the <xref ref="exer_fieldexamples" />,
+      you determined which of sets of familiar mathematical objects are and are not fields.
+      Notice that you have been working with fields for years and years and that our abstraction of language to that of fields is simply to allow us to explore the common features at the same time - it is inefficient to prove the same statement about every single field when we can prove it once and for all about fields in general.
+    </p>
     <theorem xml:id="thm_fieldproperties">
-      <title>properties of fields</title>
+      <title>Properties of Fields</title>
       <statement>
         <p>
           Let <m>F</m> be a field.
           <ol>
             <li>
               <p>
-                The additive identity <m>0_F</m> is unique.
+                The additive identity <m>0</m> is unique.
               </p>
             </li>
             <li>
               <p>
-                For all <m>a\in F</m>, <m>a \cdot 0_F = 0_F\cdot a = 0_F</m>.
+                For all <m>a\in F</m>, <m>a \cdot 0 = 0\cdot a = 0</m>.
               </p>
             </li>
             <li>
@@ -384,7 +385,7 @@
             </li>
             <li>
               <p>
-                The multiplicative identity <m>1_F</m> is unique.
+                The multiplicative identity <m>1</m> is unique.
               </p>
             </li>
             <li>
@@ -400,46 +401,46 @@
       <ol>
         <li>
           <p>
-            Assume <m>0_F, 0_F'</m> both satisfy the additive identity axiom.
-            Observe that <m>0_F = 0_F + 0_F' = 0_F'</m>.
+            Assume <m>0, 0'</m> both satisfy the additive identity axiom.
+            Observe that <m>0 = 0 + 0' = 0'</m>.
           </p>
         </li>
         <li>
           <p>
-            As <m>0_F = 0_F + 0_F</m>,
-            we may write <m>a\cdot 0_F = a\cdot (0_F + 0_F) = a\cdot 0_F + a \cdot 0_F</m>.
+            As <m>0 = 0 + 0</m>,
+            we may write <m>a\cdot 0 = a\cdot (0 + 0) = a\cdot 0 + a \cdot 0</m>.
             Now add the additive inverse of
-            <m>a\cdot 0_F</m> to both sides to obtain <m>0_F = a \cdot 0_F = 0_F\cdot a</m>.
+            <m>a\cdot 0</m> to both sides to obtain <m>0 = a \cdot 0 = 0\cdot a</m>.
           </p>
         </li>
         <li>
           <p>
             Let <m>a\in F</m> and suppose <m>b</m> and <m>c</m> are such that
-            <m>a+c = 0_F</m> and <m>a+b = 0_F</m>.
+            <m>a+c = 0</m> and <m>a+b = 0</m>.
             Then <m>a+c = a+b</m>, and we may add <m>b</m>
             (or <m>c</m>)
-            to both sides to obtain <m>b+(a+b) = (b+a)+b = 0_F + b = b</m> and <m>c+(a+c) = (c+a)+c = 0_F + c = c</m>.
+            to both sides to obtain <m>b+(a+b) = (b+a)+b = 0 + b = b</m> and <m>c+(a+c) = (c+a)+c = 0 + c = c</m>.
             Thus <m>b=c</m>.
           </p>
         </li>
         <li>
           <p>
-            Suppose <m>1_F</m> and <m>1_F'</m> are multiplicative identities.
-            Then <m>1_F = 1_F 1_F' = 1_F'</m>.
+            Suppose <m>1</m> and <m>1'</m> are multiplicative identities.
+            Then <m>1 = 1 \cdot 1' = 1'</m>.
           </p>
         </li>
         <li>
           <p>
             Let <m>a\in F</m> be nonzero and suppose <m>b,c</m> are multiplicative inverses for <m>a</m>.
-            Then <m>ab = 1_F = ac</m>, and we may multiply by <m>b</m>
+            Then <m>ab = 1 = ac</m>, and we may multiply by <m>b</m>
             (or <m>c</m>)
-            to obtain <m>b(ab) = (ba)b = 1_F b = b = b(ac) = (ba)c = 1_F c = c</m>.
+            to obtain <m>b(ab) = (ba)b = 1\cdot b = b = b(ac) = (ba)c = 1\cdot c = c</m>.
           </p>
         </li>
       </ol>
     </proof>
     <p>
-      One consequence of <xref ref="thm_fieldproperties">Theorem</xref> is that,
+      One consequence of <xref ref="thm_fieldproperties" /> is that,
       given <m>a\in F</m>, <m>b\in F\setminus \set{0}</m>,
       we may refer to <m>-a</m> as <em>the</em>
       additive inverse of <m>a</m>,
@@ -472,13 +473,14 @@
         </p>
       </statement>
     </definition>
-    <exercise>
+    Many of the number sets with which you are familiar are fields.
+    <theorem>
       <statement>
         <p>
           The set of complex numbers <m>\C</m> is an extension field of <m>\R</m>.
         </p>
       </statement>
-    </exercise>
+    </theorem>
     <theorem>
       <statement>
         <p>
@@ -525,15 +527,15 @@
         </p>
       </statement>
     </definition>
-    <exercise>
+    <exploration>
       <statement>
         <p>
           Give some examples of polynomials in <m>A[x]</m> for various choices of number systems <m>A</m>.
           Identify their coefficients and degrees.
         </p>
       </statement>
-    </exercise>
-    <exercise>
+    </exploration>
+    <exploration>
       <statement>
         <p>
           In the following table, fill in a <em>Y</em>
@@ -871,8 +873,8 @@
           </tabular>
         </table>
       </statement>
-    </exercise>
-    <question xml:id="q_fieldaxiomspolyring">
+    </exploration>
+    <exploration xml:id="q_fieldaxiomspolyring">
       <statement>
         <p>
           Which of the field axioms hold for <m>F[x]</m>,
@@ -886,9 +888,9 @@
           <m>f(x)\in \Q[x]</m> for which <m>x f(x) = 1</m>.
         </p>
       </answer>
-    </question>
+    </exploration>
     <p>
-      As a result of the answer to <xref ref="q_fieldaxiomspolyring">Question</xref>
+      As a result of the answer to <xref ref="q_fieldaxiomspolyring" />
       and the completed <xref ref="table_propertiessandsets">Table</xref>,
       we make the following definition.
     </p>
@@ -914,10 +916,7 @@
               <title>R3.</title>
               <p>
                 There exists an element <m>0_R\in R</m> such that for all <m>a\in R</m>,
-                <m>a+0_R = 0_R + a = a</m><fn>
-                When the ring <m>R</m> is clear from context,
-                we will often write <m>0</m> in place of <m>0_R</m>.
-                </fn>.
+                <m>a+0_R = 0_R + a = a</m>.
               </p>
             </li>
             <li>
@@ -945,10 +944,12 @@
               </p>
             </li>
           </ol>
+          As with fields, when the ring <m>R</m> is clear from context,
+                we will often write <m>0</m> and <m>1</m> in place of <m>0_R</m> and <m>1_R</m>.
         </p>
       </statement>
     </definition>
-    <exercise>
+    <investigation>
       <statement>
         <p>
           Compare and contrast <xref ref="def_field">Definitions</xref>
@@ -957,11 +958,11 @@
           What are the differences?
         </p>
       </statement>
-    </exercise>
+    </investigation>
     <p>
-      While rings seem even more complicated than fields,
+      While rings do not enjoy all the properties of fields,
       they are incredibly useful even in applied mathematics
-      (see, e.g., <xref ref="Curto2013" />).
+      (see, e.g., <xref ref="Curto2013" /> for one recent example).
     </p>
     <definition>
       <statement>
@@ -988,7 +989,7 @@
       right, or two-sided identities
       (or none at all).
     </p>
-    <exercise>
+    <exploration>
       <statement>
         <p>
           Consider the sets given in <xref ref="table_propertiessandsets">Table</xref>.
@@ -996,15 +997,15 @@
           Which are commutative rings with identity?
         </p>
       </statement>
-    </exercise>
-    <question>
+    </exploration>
+    <exploration>
       <statement>
         <p>
           Which properties of fields in <xref ref="thm_fieldproperties">Theorem</xref> hold for (commutative) rings?
         </p>
       </statement>
-    </question>
-    <question>
+    </exploration>
+    <investigation>
       <statement>
         <p>
           Are all rings fields?
@@ -1012,8 +1013,8 @@
           Justify.
         </p>
       </statement>
-    </question>
-    <exercise>
+    </investigation>
+    <investigation>
       <statement>
         <p>
           Most familiar rings are commutative, though not all.
@@ -1055,12 +1056,12 @@
           </ol>
         </p>
       </solution>
-    </exercise>
+    </investigation>
     <p>
-      In the 1920s, Emmy Noether was the first to describe the ring axioms as we know them today,
+      In the 1920s, Emmy Noether was the first to explicitly describe the ring axioms as we know them today,
       and her definition of a (not-necessarily-commutative) ring has led to a great deal of interesting work in algebra,
       number theory, and geometry, including the
-      (see <xref ref="SubSec-Nonunique-Factorization">&#xa7;</xref>
+      (see <xref ref="SubSec-Nonunique-Factorization" />
       for more on the historical development of the proof of Fermat's Last Theorem).
       Most modern definitions of <em>ring</em>
       agree with our <xref ref="def_ring">Definition</xref>
@@ -1070,19 +1071,20 @@
       The following theorem states that the set of polynomials with coefficients in a ring <m>R</m> is itself a ring under the usual operations of polynomial addition of like terms,
       and multiplication via distribution.
       The proof is not tricky, but a rigorous justification
-      (especially of, e.g., the associativity of multiplication)
+      (especially of, e.g., the associativity of polynomial multiplication)
       is tedious, and thus is omitted.
     </p>
-    <theorem>
+    <assemblage>
+    <title>Theorem</title>
+     <p>
       <statement>
-        <p>
           If <m>R</m> is a (commutative) ring
           (with identity <m>1_R</m>),
           then <m>R[x]</m> is a (commutative) ring
-          (with identity <m>1_R</m>).
-        </p>
+          (with identity <m>1_{R[x]} = 1_R</m>).
       </statement>
-    </theorem>
+     </p>
+    </assemblage>
     <p>
       One of the ways to better understand mathematical structures is to understand their similar substructures (e.g., subspaces of vector spaces in linear algebra).
       Again, this is a formalization of an idea that you have been using since you were a child.
@@ -1091,7 +1093,7 @@
     <p>
       In our study of rings,
       we are primarily interested in special types of subrings,
-      to be studied in more depth in <xref ref="Sec-Ideals">Section</xref>.
+      to be studied in more depth in <xref ref="Sec-Ideals" />.
     </p>
     <definition>
       <statement>
@@ -1165,7 +1167,7 @@
       <statement>
         <p>
           Let <m>R</m> be a ring and let <m>u\in R</m> be nonzero.
-          If there is a <m>v\in R</m> such that <m>uv = vu = 1_R</m>,
+          If there is a <m>v\in R</m> such that <m>uv = vu = 1</m>,
           we say <m>u</m> is <term>unit</term> of <m>R</m>.
           We denote the set of units of <m>R</m> by <m>R^\times</m>.
           We say <m>x,y\in R</m> are <term>associates</term>
@@ -1176,14 +1178,14 @@
     <p>
       That is, a unit in a ring is a nonzero element with a multiplicative inverse.
     </p>
-    <exercise>
+    <exploration>
       <statement>
         <p>
           Explicitly describe the set <m>\Z^\times</m>.
           What are the associates of 7 in <m>\Z</m>?
         </p>
       </statement>
-    </exercise>
+    </exploration>
     <theorem>
       <statement>
         <p>
@@ -1214,7 +1216,7 @@
       then <m>(x-2)=0</m> or <m>x+5=0</m>).
       The lack of zero divisors is one of the properties that doesn't persist in our abstraction from the integers to rings in general.
     </p>
-    <exercise>
+    <exploration>
       <statement>
         <p>
           Find, with justification,
@@ -1232,8 +1234,8 @@
           <sc>conjecture.</sc> <m>\overline{x}\in \Z_m</m> is a zero divisor if and only if <m>\gcd(x,m) \ne 1</m>.
         </p>
       </solution>
-    </exercise>
-    <question>
+    </exploration>
+    <investigation>
       <statement>
         <p>
           Are there any other rings in which you've seen zero divisors?
@@ -1241,10 +1243,10 @@
       </statement>
       <answer>
         <p>
-          Matrix rings?
+          Matrix rings, if students have had linear algebra (and/or completed <xref ref="table_propertiessandsets" />). Otherwise, this may be a new concept.
         </p>
       </answer>
-    </question>
+    </investigation>
     <theorem>
       <statement>
         <p>
@@ -1282,27 +1284,26 @@
         But then <m>0_R = u^{-1} 0_R = u^{-1} (uv) = (u^{-1} u) v = 1_R v = v</m>. \Lightning
       </p>
     </proof>
-    <question>
+    <investigation>
       <statement>
         <p>
-          How can we reinterpret <xref ref="q_zmodmcancel">Question</xref>
+          How can we reinterpret <xref ref="q_zmodmcancel" />
           in light of our new language of units and zero divisors?
           State a theorem that uses this new language.
         </p>
       </statement>
       <answer>
         <p>
-          How about this: Let <m>\overline{a},\overline{b},\overline{c}\in \Z_m</m> such that <m>\overline{a}\cdot \overline{c} = \overline{b}\cdot \overline{c}</m>.
-          Then <m>\overline{a} = \overline{b}</m> if and only if
+          Answers may vary, but how about this: Let <m>\overline{a},\overline{b},\overline{c}\in \Z_m</m> such that <m>\overline{a}\cdot \overline{c} = \overline{b}\cdot \overline{c}</m>.
+          Then <m>\overline{a} = \overline{b}</m> if 
           <m>\overline{c}</m> is not a zero divisor.
         </p>
       </answer>
-    </question>
+    </investigation>
     <p>
       While there is a well-developed body of literature on (noncommutative) rings
       (possibly without identity),
-      from this point on
-      (for the sake of brevity),
+      from this point on,
       and unless stated otherwise,
       when we use the word <em>ring</em>
       we mean <em>commutative ring with identity</em>.
@@ -1312,7 +1313,7 @@
       we will focus our study on rings with no zero divisors.
       As these rings share many
       (though not all)
-      properties of the integers, they are known as integral domains.
+      properties of the integers, they are known as <term>integral domains</term>.
     </p>
     <definition>
       <statement>
@@ -1326,7 +1327,7 @@
     <p>
       You have already seen several domains.
     </p>
-    <exercise>
+    <activity>
       <statement>
         <p>
           Which of the following rings are domains?
@@ -1360,7 +1361,7 @@
           </ol>
         </p>
       </statement>
-    </exercise>
+     </activity>
     <theorem xml:id="theorem_everyfieldisadomain">
       <statement>
         <p>
@@ -1431,7 +1432,7 @@
         and thus <m>f(x)g(x)</m> is not the zero polynomial.
       </p>
     </proof>
-    <question>
+    <investigation>
       <statement>
         <p>
           Is the converse of <xref ref="theorem_domainimpliespolynomialdomain">Theorem</xref> true?
@@ -1445,7 +1446,7 @@
           Apply <xref ref="theorem_subringsaredomains">Theorem</xref>.
         </p>
       </answer>
-    </question>
+    </investigation>
     <p>
       When considering sets of polynomials,
       as we do in <xref ref="Sec-Factorization">&#xa7;</xref>,
@@ -1467,7 +1468,7 @@
         Thus, <m>\deg(p(x) q(x)) = n+m = \deg(p(x)) + \deg(q(x))</m>.
       </p>
     </proof>
-    <question>
+    <investigation>
       <statement>
         <p>
           What are the units of <m>F[x]</m>?
@@ -1484,10 +1485,10 @@
           Thus <m>\deg p(x) = \deg q(x) = 0</m>.
         </p>
       </answer>
-    </question>
+    </investigation>
     <references>
     	<biblio xml:id="Curto2013">
-    		C. Curto, V. Itskov, A. Veliz-Cuba, N. Youngs, <em>The Neural Ring: An Algebraic Tool for Analyzing the Intrinsic Structure of Neural Codes</em>, Bull. Math. Bio. 75 (2013), 1571-1611, DOI 10.1007/s11538-013-9860-3
+    		C. Curto, V. Itskov, A. Veliz-Cuba, N. Youngs, <em>The Neural Ring: An Algebraic Tool for Analyzing the Intrinsic Structurle of Neural Codes</em>, Bull. Math. Bio. 75 (2013), 1571-1611, <url href="https://doi.org/10.1007/s11538-013-9860-3">DOI 10.1007/s11538-013-9860-3</url>
     	</biblio>
     </references>
   </section>
@@ -1615,9 +1616,9 @@
     </proof>
     <p>
       It is not the case in all domains that irreducibles are primes,
-      as the next exercise illustrates.
+      as <xref ref="exer_irreduciblenotprime" /> illustrates.
     </p>
-    <exercise xml:id="exer_irreduciblenotprime">
+    <exploration xml:id="exer_irreduciblenotprime">
       <statement>
         <p>
           Consider the set <m>R</m> of all polynomials in <m>\Z[x]</m> for which the coefficient on the linear term is zero.
@@ -1628,7 +1629,7 @@
         </p>
         <p>
           (You should convince yourself that <m>R</m> is an integral domain,
-          but do not need to prove it.) Find a polynomial of the form <m>x^n</m> in <m>R</m> that is irreducible,
+          but do not need to prove it.) Then, find a polynomial of the form <m>x^n</m> in <m>R</m> that is irreducible,
           but not prime.
         </p>
       </statement>
@@ -1647,7 +1648,8 @@
           as <m>f| x^3 \cdot x^3</m> but <m>f\nmid x^3</m>.
         </p>
       </solution>
-    </exercise>
+    </exploration>
+
     <definition>
       <statement>
         <p>
@@ -1701,7 +1703,7 @@
         Thus, <m>e</m> is a gcd of <m>a</m> and <m>b</m>.
       </p>
     </proof>
-    <exercise>
+    <exploration>
       <statement>
         <p>
           In most familiar domains, GCDs exist.
@@ -1721,8 +1723,9 @@
           as <m>x^2\nmid x^3</m> and <m>x^3\nmid x^2</m>.
         </p>
       </solution>
-    </exercise>
-    <exercise xml:id="exer_ringgeneralityone">
+    </exploration>
+
+    <exploration xml:id="exer_ringgeneralityone">
       <statement>
         <p>
           Fill in the following blanks in order of increasing generality with the words <em>ring</em>,
@@ -1730,13 +1733,13 @@
           and <em>commutative ring</em>.
         </p>
         <p>
-          \makebox[0.75in]{\hrulefill}
-          <m>\Rightarrow</m> \makebox[0.75in]{\hrulefill}
-          <m>\Rightarrow</m> \makebox[0.75in]{\hrulefill}
-          <m>\Rightarrow</m> \makebox[0.75in]{\hrulefill}
+          __________
+          <m>\Rightarrow</m> __________
+          <m>\Rightarrow</m> __________
+          <m>\Rightarrow</m> __________
         </p>
       </statement>
-    </exercise>
+    </exploration>
   </section>
   <section xml:id="SubSec-Principal-Ideals">
     <title>Principal Ideals</title>
@@ -1829,7 +1832,7 @@
     </theorem>
     <proof>
       <p>
-        If <m>I = R</m>, <m>1_R\in R</m> will do.
+        If <m>I = R</m>, <m>1\in R</m> will do.
       </p>
       <p>
         If there is a unit <m>u\in I</m>,
@@ -1858,7 +1861,7 @@
     </theorem>
     <proof>
       <p>
-        Observe that <m>0_R = 0_R a \in \ideal{a}</m>.
+        Observe that <m>0 = 0\cdot a \in \ideal{a}</m>.
       </p>
       <p>
         Moreover, if <m>r_1 a, r_2 a\in \ideal{a}</m>,
@@ -1874,7 +1877,7 @@
       The element <m>a</m> in the theorem is known as the
       <em>generator</em> of <m>\ideal{a}</m>.
     </p>
-    <question>
+    <investigation>
       <statement>
         <p>
           Let <m>R</m> be commutative with identity,
@@ -1920,7 +1923,8 @@
           it's enough to check that <m>x\in \ideal{y}</m>.
         </p>
       </answer>
-    </question>
+    </investigation>
+
     <p>
       Principal ideals may have more than one generator.
     </p>
@@ -1938,7 +1942,7 @@
         Apply the answer to the question.
       </p>
     </proof>
-    <exercise>
+    <activity>
       <statement>
         <p>
           In <m>R = \Z</m>, describe the principal ideals generated by
@@ -2018,7 +2022,8 @@
           which is a subset of all ideals.
         </p>
       </solution>
-    </exercise>
+    </activity>
+
     <p>
       It is the case in many familiar settings that all ideals are principal.
       Such domains are given a special name.
@@ -2070,7 +2075,7 @@
         Thus, <m>x = dq</m> and <m>x\in \ideal{d}</m>.
       </p>
     </proof>
-    <exercise>
+    <activity>
       <statement>
         <p>
           Find an integer <m>d</m> such that <m>I = \ideal{d}\subseteq \Z</m>, if
@@ -2129,7 +2134,8 @@
           </ol>
         </p>
       </solution>
-    </exercise>
+    </activity>
+
     <theorem>
       <statement>
         <p>
@@ -2210,8 +2216,8 @@
         <p>
           Let <m>R</m> be an integral domain.
           We call <m>R</m> a <term>Euclidean domain</term>
-          if there is a function <m>\delta : R\setminus \set{0_R} \to \N_0</m> such that: \marginpar{\setstretch{0.7}<term>This is the lowercase Greek letter
-          <term>delta</term>.</term>}
+          if there is a function <m>\delta : R\setminus \set{0} \to \N_0</m> such that: <aside>This is the lowercase Greek letter
+          <term>delta</term>.</aside>}
           <ol>
             <li>
               <p>
@@ -2223,7 +2229,7 @@
               <p>
                 If <m>a,b\in R</m>, <m>b\ne 0</m>,
                 then there exist <m>q,r\in R</m> such that <m>a = bq+r</m>,
-                where either <m>r = 0_R</m> or <m>\delta(r) \lt \delta(b)</m>.
+                where either <m>r = 0</m> or <m>\delta(r) \lt \delta(b)</m>.
               </p>
             </li>
           </ol>
@@ -2237,7 +2243,7 @@
     <p>
       Thus, a Euclidean domain is an integral domain with a division algorithm that behaves in a familiar way.
     </p>
-    <question>
+    <investigation>
       <statement>
         <p>
           Is <m>\Z</m> a Euclidean domain?
@@ -2251,13 +2257,13 @@
           The norm is the absolute value function.
         </p>
       </answer>
-    </question>
+    </investigation>
     <lemma xml:id="lem_minimaldegreepoly">
       <statement>
         <p>
-          Let <m>S\subseteq F[x]</m> be a set containing a nonzero polynomial.
+          Let <m>F</m> be a field and <m>S\subseteq F[x]</m> a set containing a nonzero polynomial.
           Prove that <m>S</m> contains a polynomial <m>f</m> such that
-          <m>\deg(f) \le \deg(g)</m> for all <m>g\in S</m>.
+          <m>\deg(f) \le \deg(g)</m> for all nonzero <m>g\in S</m>.
         </p>
       </statement>
     </lemma>
@@ -2289,8 +2295,11 @@
     </proof>
     <theorem xml:id="theorem_polydivalg">
       <title>
-      <url href="http://www.corestandards.org/Math/Content/HSA/APR/D/6/">Polynomial Division algorithm</url>
+      (Polynomial Division Algorithm)
       </title>
+      <aside>
+      	See the <url href="http://www.corestandards.org/Math/Content/HSA/APR/D/6/">CCSS</url> for more.
+      </aside>
       <statement>
         <p>
           Let <m>F</m> be a field and
@@ -2310,7 +2319,7 @@
           <m>f(x) \ne 0</m> and <m>\deg f \ge \deg g</m>.
           In the last case, use induction on <m>m = \deg f(x)</m>.
           For uniqueness,
-          mimic the uniqueness proof of <xref ref="thm_divalg">Theorem</xref>
+          mimic the uniqueness proof of <xref ref="thm_divalg">Theorem</xref>.
         </p>
       </hint>
     </theorem>
@@ -2368,7 +2377,7 @@
     <theorem>
       <statement>
         <p>
-          The ring <m>F[x]</m> is a principal ideal domain.
+          Let <m>F</m> be a field. Then the ring <m>F[x]</m> is a principal ideal domain.
         </p>
       </statement>
       <hint>
@@ -2397,10 +2406,10 @@
         Thus, <m>f(x) | g(x)</m> and <m>g(x)\in \ideal{f(x)}</m>.
       </p>
     </proof>
-    <question>
+    <investigation>
       <statement>
         <p>
-          Is <m>F[x]</m> a Euclidean domain?
+          Is <m>F[x]</m> a Euclidean domain for all fields <m>F</m>?
           If so, what is the norm function <m>\delta</m>,
           and why does this function have the required properties of a norm?
         </p>
@@ -2411,13 +2420,15 @@
           It's the degree function.
         </p>
       </answer>
-    </question>
-    <question>
+    </investigation>
+
+    <exploration>
       <statement>
         <p>
           Where do Euclidean domains and PIDs fit in the hierarchy of abstraction found in <xref ref="exer_ringgeneralityone">Question</xref>?
         </p>
       </statement>
-    </question>
+    </exploration>
+
   </section>
 </chapter>
