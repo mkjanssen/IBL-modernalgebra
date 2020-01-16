@@ -33,9 +33,9 @@ IBLMADIR=`pwd`
 
 case $FORMAT in
     [hH]*)
-	cp ${IBLMLADIR}/xsl/ibl-modernalgebra-html.xsl ${PTX}/user
-	cd ${OUTDIR}
-	xsltproc -stringparam publisher ${PUBFILE} -xinclude ${PTX}/user/ibl-modernalgebra-html.xsl ${IBLMADIR}/ptx/index.ptx
+	cp $IBLMLADIR/xsl/ibl-modernalgebra-html.xsl ~/Documents/GitHub/mathbook/user
+	cd $OUTDIR
+	xsltproc -stringparam publisher $PUBFILE -xinclude ~/Documents/GitHub/mathbook/user/ibl-modernalgebra-html.xsl $IBLMADIR/ptx/index.ptx
 	;;
     [lL]*)
 	cd ${OUTDIR}

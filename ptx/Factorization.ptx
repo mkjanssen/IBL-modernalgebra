@@ -382,7 +382,7 @@
           Let <m>R</m> be a PID and let <m>p\in R</m> be irreducible.
           Let <m>a\in R</m> be such that <m>p\nmid a</m>.
           Then <m>1\in I = \setof{ax+py}{x,y\in R}</m> and thus there exist
-          <m>s,t\in R</m> such that <m>1 = as+bt</m>.
+          <m>s,t\in R</m> such that <m>1 = as+pt</m>.
         </p>
       </statement>
     </lemma>

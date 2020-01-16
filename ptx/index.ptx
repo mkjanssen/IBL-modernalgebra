@@ -67,16 +67,18 @@
 \usepackage{pgfplots}
 </latex-image-preamble>
 <search>
-            <google>
-                <cx>017464805646507420634:q2oe2ybvkww</cx>
-            </google>
-        </search>
+	<google>
+		<cx>017464805646507420634:llcu9bfj13p</cx>
+	</google>
+
+</search>
+
         <rename element="principle">Challenge</rename>
   </docinfo>
   <book>
-    <title>Modern Algebra: A Rings-First Approach With Inquiry</title>
+    <title>Rings With Inquiry</title>
 
-    
+     
     	
     	<xi:include href="./frontmatter.ptx" />
     	
