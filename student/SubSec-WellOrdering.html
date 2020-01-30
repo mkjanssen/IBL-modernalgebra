@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-15T12:58:10-07:00    *-->
+<!--*    on 2020-01-24T12:43:57-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -190,7 +190,7 @@ var js_version = 0.13;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="SubSec-WellOrdering"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Induction and Well-Ordering</span>
 </h2>
-<a href="SubSec-WellOrdering.html" class="permalink">¶</a><section class="introduction" id="introduction-2"><p id="p-20">Note that in this section we will assume the basic algebraic/arithmetic properties of the integers, most of which we will formalize via axioms in subsequent sections.</p></section><article class="definition definition-like" id="def_naturalnumbers"><h6 class="heading">
+<a href="SubSec-WellOrdering.html" class="permalink">¶</a><section class="introduction" id="introduction-2"><p id="p-20">In this section we will assume the basic algebraic/arithmetic properties of the integers such as closure under addition, subtraction, and multiplication, most of which we will formalize via axioms in subsequent sections. <a class="xref" data-knowl="./knowl/axiom_wellordering.html" title="Axiom 1.1.2: Well-Ordering Principle">Axiom 1.1.2</a> formalizes the familiar notion that nonempty subsets of the positive integers have a smallest element, which will be used repeatedly throughout the text. We then explore a closely related idea, mathematical induction, via an example and an exercise.</p></section><article class="definition definition-like" id="def_naturalnumbers"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span>
 </h6>
 <p id="p-21"> The collection of <dfn class="terminology">natural numbers</dfn> is denoted by \(\N\text{,}\) and is the set</p>
@@ -203,7 +203,8 @@ var js_version = 0.13;
 <article class="axiom theorem-like" id="axiom_wellordering"><h6 class="heading">
 <span class="type">Axiom</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Well-Ordering Principle.</span>
 </h6>
-<p id="p-24"> Every nonempty subset of \(\N_0\) contains a least (smallest) element under the usual ordering, \(\le\text{.}\)</p></article><article class="definition definition-like" id="def_integers"><h6 class="heading">
+<p id="p-24"> Every nonempty subset of \(\N_0\) contains a least (smallest) element under the usual ordering, \(\le\)<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a>.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">Our word choice is suggestive. In fact, other orderings do exist, and while the set of nonnegative real numbers \(\mathbb{R}\) does not satisfy the well-ordering principle under the usual ordering \(\le\text{,}\) the Well Ordering Axiom asserts that there exists a well ordering on <em class="emphasis">any</em> set, including \(\mathbb{R}\text{.}\) Accepting this axiom is equivalent to accepting the <a class="external" href="https://plato.stanford.edu/entries/axiom-choice/" target="_blank">axiom of choice</a>.</div></div></article><article class="definition definition-like" id="def_integers"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span>
 </h6>
 <p id="p-25"> The set of integers consists of the positive and negative natural numbers, together with zero, and is denoted by \(\Z\text{:}\)</p>
@@ -212,24 +213,54 @@ var js_version = 0.13;
 \Z = \set{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots}\text{.}
 \end{equation*}
 </div></article><article class="assemblage assemblage-like" id="induction"><h6 class="heading"><span class="title">Mathematical Induction.</span></h6>
-<p id="p-26">Let \(P(m)\) be a statement about the natural number \(m\)<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a>. Let \(k_0\in \N\) be such that the statement \(P(k_0)\) is true (the <em class="emphasis">base case</em>), and suppose there is an \(n\ge k_0\) such that for all \(k\) satisfying \(k_0 \le k \le n\text{,}\) \(P(k)\) is true (the <em class="emphasis">inductive hypothesis</em>). Then \(P(n+1)\) is true, and thus \(P(m)\) is true for all \(m\ge k_0\) (the <em class="emphasis">inductive step</em>).</p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">Sample statements could include “\(m\) is really interesting” or “\(3m^2 + m + 2\) is even”.</div></div></article><p id="p-27">Mathematical induction is like climbing an infinite staircase. The <em class="emphasis">base case</em> tells us that we can take a first step on the staircase (\(k_0\)). In the <em class="emphasis">inductive hypothesis</em>, we assume we can take all the steps up to a certain height (\(n\)). In the <em class="emphasis">inductive step</em>, we prove that this allows us to take the \((n+1)\)st step.</p>
+<p id="p-26">Let \(P(m)\) be a statement about the natural number \(m\)<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a>. Let \(k_0\in \N\) be such that the statement \(P(k_0)\) is true (the <em class="emphasis">base case</em>), and suppose there is an \(n\ge k_0\) such that for all \(k\) satisfying \(k_0 \le k \le n\text{,}\) \(P(k)\) is true (the <em class="emphasis">inductive hypothesis</em>). Then \(P(n+1)\) is true, and thus \(P(m)\) is true for all \(m\ge k_0\) (the <em class="emphasis">inductive step</em>).</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">Sample statements could include “\(m\) is really interesting” or “\(3m^2 + m + 2\) is even”.</div></div></article><p id="p-27">Mathematical induction is like climbing an infinite staircase. The <em class="emphasis">base case</em> tells us that we can take a first step on the staircase (\(k_0\)). In the <em class="emphasis">inductive hypothesis</em>, we assume we can take all the steps up to a certain height (\(n\)). In the <em class="emphasis">inductive step</em>, we prove that this allows us to take the \((n+1)\)st step.</p>
 <p id="p-28">Thus, if we can take step \(k_0\text{,}\) we can (by the inductive step) take step \(k_0 + 1\text{.}\) And since we can take step \(k_0 + 1\text{,}\) we can (again by the inductive step) take step \(k_0 + 2\text{.}\) And so on, forever (or, if the notion of actual infinity makes you uncomfortable, as far as we want to go).</p>
 <p id="p-29">It can be proved that the principle of mathematical induction is logically equivalent to the well-ordering principle. That is, if we assume either one to be true, we can deduce the other. We will generally take the well-ordering principle on \(\N\) to be an axiom, and treat induction as a theorem.</p>
 <article class="assemblage assemblage-like" id="assemblage-2"><h6 class="heading"><span class="title">Example.</span></h6>
-<p id="p-30">For all \(n \ge 1\text{,}\)<div class="displaymath">
+<p id="p-30">For all \(n \ge 1\text{,}\)</p>
+<div class="displaymath">
 \begin{equation*}
 1+ 2 + 3 + \cdots + n = \frac{n(n+1)}{2}\text{.}
 \end{equation*}
-</div></p></article><p id="p-37">We conclude with opportunities to practice induction.</p>
+</div>
+<p id="p-31"><em class="emphasis">Proof.</em> Base case: When \(n = 1\text{,}\) the equation \(1 = \frac{1\cdot (1+1)}{2}\) is true.</p>
+<p id="p-32"><em class="emphasis">Inductive Hypothesis:</em> Assume that there exists a \(n\) such that whenever \(k \le n\text{,}\) the equation</p>
+<div class="displaymath">
+\begin{equation}
+1+ 2 + 3 + \cdots + k = \frac{k(k+1)}{2}\label{ex_indhyp}\tag{1.1.1}
+\end{equation}
+</div>
+<p>is true.</p>
+<p id="p-33"><em class="emphasis">Inductive Step:</em> Our goal is to show that \(P(n+1)\) is true. That is, we wish to establish that</p>
+<div class="displaymath">
+\begin{equation}
+1+ 2 + 3 + \cdots + n + (n+1) = \frac{(n+1)((n+1)+1)}{2}\text{.}\label{ex_indgoal}\tag{1.1.2}
+\end{equation}
+</div>
+<p id="p-34">We begin on the left-hand side of <a class="xref" data-knowl="./knowl/ex_indhyp.html" title="Equation 1.1.1">(1.1.1)</a>, where we may apply the inductive hypothesis to see that</p>
+<div class="displaymath">
+\begin{equation}
+1+ 2 + 3 + \cdots + n + (n+1) = \left[\frac{n(n+1)}{2}\right] + (n+1)\text{.}\label{ex_indstep1}\tag{1.1.3}
+\end{equation}
+</div>
+<p>Through the use of straightforward algebra, the right-hand side becomes</p>
+<div class="displaymath">
+\begin{equation}
+\frac{n(n+1)}{2} + \frac{2(n+1)}{2} = \frac{n(n+1) + 2(n+1)}{2} = \frac{(n+1)(n+2)}{2}\text{.}\label{ex_indstep2}\tag{1.1.4}
+\end{equation}
+</div>
+<p id="p-35">Putting <a class="xref" data-knowl="./knowl/ex_indstep1.html" title="Equation 1.1.3">(1.1.3)</a> and <a class="xref" data-knowl="./knowl/ex_indstep2.html" title="Equation 1.1.4">(1.1.4)</a> together, we obtain</p>
+<div class="displaymath">
+\begin{equation*}
+1+ 2 + 3 + \cdots + n + (n+1) = \frac{(n+1)((n+1)+1)}{2}\text{,}
+\end{equation*}
+</div>
+<p>which is exactly the goal we stated in <a class="xref" data-knowl="./knowl/ex_indgoal.html" title="Equation 1.1.2">(1.1.2)</a>.</p></article><p id="p-36">We conclude with opportunities to practice induction.</p>
 <article class="exploration project-like" id="exploration-1"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Induction on the sum of cubes.</span>
 </h6>
-<p id="p-38">Prove that the sum of the first \(n\) cubes is \(\dfrac{n^2(n+1)^2}{4}\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-1"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">(De Moivre's formula).</span>
-</h6>
-<p id="p-39">For all \(n\ge 1\text{,}\) \((\cos(x) + i\sin (x))^n = \cos(nx) + i \sin(nx)\text{.}\)</p>
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-40">You'll need some trig identities!</p></div></div></article><section class="conclusion" id="conclusion-1">Write a conclusion!</section></section></div></main>
+<p id="p-37">Prove that the sum of the first \(n\) cubes is \(\dfrac{n^2(n+1)^2}{4}\text{.}\)</p></article></section></div></main>
 </div>
 <div class="login-link"><span id="loginlogout" class="login">login</span></div>
 <script src="https://pretextbook.org/js/0.13/login.js"></script>

@@ -546,9 +546,13 @@
           Let <m>R</m> and <m>S</m> be commutative rings with identity.
           A function <m>\p : R\to S</m> is a called
           <term>ring homomorphism</term>
-          if it preserves addition and multiplication.
-          That is, for all <m>x,y\in R</m>,
-          <m>\p(x+y) = \p(x) + \p(y)</m> and <m>\p(xy) = \p(x)\p(y)</m>.
+          if it preserves addition, multiplication, and sends the identity of <m>R</m> to the identity of <m>S</m>.
+          That is, for all <m>x,y\in R</m>:
+          <ul>
+          	<li><m>\p(x+y) = \p(x) + \p(y)</m>,</li>
+          	<li><m>\p(xy) = \p(x)\p(y)</m>, and</li>
+          	<li><m>\p(1_R) = 1_S</m>.</li>
+          </ul>
           If <m>\p</m> is a bijection,
           we say that <m>\p</m> is an <term>isomorphism</term>
           and write <m>R\cong S</m>.

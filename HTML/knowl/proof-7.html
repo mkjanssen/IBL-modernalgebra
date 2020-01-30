@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-03T15:52:03-06:00    *-->
+<!--*    on 2020-01-24T11:19:44-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,19 +13,24 @@
 </head>
 <body>
 <article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>
-<p>If, e.g., \(a = 0\) and \(b\ne 0\text{,}\) then \(\gcd(a,b) = b\) and \(x=0,y=1\) suffices. If \(a = b\text{,}\) then \(\gcd(a,b) = a = b\text{,}\) so \(x = 0, y = 1\) suffices.</p>
-<p>So, suppose \(a,b\ne 0\text{,}\) and let \(d = \gcd(a,b)\text{.}\) Without loss of generality assume \(|a| &gt; |b|\text{.}\) The EA provides a sequence of integers \(r_1, r_2, \ldots,
-r_k, q_1, q_2, \ldots, q_{k+1}\) and equations</p>
+<p>Suppose \(\gcd(a,b) = 1\text{.}\) By <a class="xref" data-knowl="./knowl/theorem_bezoutint.html" title="Theorem 1.2.8: Bézout's Identity">Theorem 1.2.8</a>, there are integers \(x\) and \(y\) such that</p>
 <div class="displaymath">
-\begin{align*}
-|a| \amp = |b| q_1 + r_1\\
-|b| \amp = r_1 q_2 + r_2\\
-r_1 \amp = r_2 q_3 + r_3\\
-\amp \vdots\\
-r_{k-2} \amp = r_{k-1} q_k + r_k\\
-r_{k-1} \amp = r_k q_{k+1}\text{,}
-\end{align*}
+\begin{equation*}
+ax+by = 1\text{.}
+\end{equation*}
 </div>
-<p>where \(0\le r_i \lt  |b|\) and \(r_k \ne 0\text{.}\) Then \(r_k = \gcd(a,b)\) and we may back-substitute to find integers \(x\) and \(y\) such that \(ax + by = r_k = \gcd(a,b)\text{.}\)</p></article><span class="incontext"><a href="SubSec-Divisibility-in-the-Integers.html#proof-7">in-context</a></span>
+<p>Multiply by \(c\) to get</p>
+<div class="displaymath">
+\begin{equation*}
+acx + bcy = c\text{.}
+\end{equation*}
+</div>
+<p>Since \(a|bc\) by assumption, there is an integer \(k\) such that \(ak = bc\text{,}\) so we have</p>
+<div class="displaymath">
+\begin{equation*}
+acx + bcy = acx + aky = a(cx+ky) = c\text{,}
+\end{equation*}
+</div>
+<p>so \(a|c\text{.}\)</p></article><span class="incontext"><a href="SubSec-Divisibility-in-the-Integers.html#proof-7">in-context</a></span>
 </body>
 </html>

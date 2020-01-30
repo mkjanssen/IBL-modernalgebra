@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-15T12:58:11-07:00    *-->
+<!--*    on 2020-01-24T12:43:59-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,19 +12,7 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p>We write</p>
-<div class="displaymath">
-\begin{align*}
-18489 \amp = 17304 \cdot 1 +1185\\
-17304 \amp = 1185\cdot 14 +714\\
-1185 \amp = 714 \cdot 1 + 471\\
-714 \amp = 471 \cdot 1+ 243\\
-471 \amp = 243\cdot 1 + 228\\
-243 \amp = 228 \cdot 1+ 15\\
-228 \amp = 15 \cdot 15 + 3\\
-15 \amp = 3\cdot 5 + 0\text{.}
-\end{align*}
-</div>
-<p>So \(\gcd(18489,17304)=3\text{.}\)</p>
+<p>Let \(a,b\in \N\text{.}\) Write \(a = bq_1+r_1\text{.}\) By <a class="xref" data-knowl="./knowl/theorem_gcdremainder.html" title="Theorem 1.2.7">Theorem 1.2.7</a>, \((a,b) = (b,r_1)\text{.}\)</p>
+<p>Then, write \(b = r_1 q_2 + r_2\) using the Division algorithm. Observe \((b,r_1) = (r_1,r_2)\text{.}\) Continue until there is a \(k\) for which \(r_k = 0\text{,}\) so \((r_k,r_{k-1}) = r_{k-1}\text{.}\) Then \(r_{k-1}= (r_k, r_{k-1}) = (r_{k-1},r_{k-2}) = \cdots = (a,b)\text{.}\)</p>
 </div></body>
 </html>

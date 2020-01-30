@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-03T15:52:02-06:00    *-->
+<!--*    on 2020-01-24T11:19:43-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -150,6 +150,7 @@ var js_version = 0.13;
 <li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction">Introduction</a></li>
 <li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents">A Note to Students</a></li>
 <li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors">A Note to Instructors</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
 </ul>
 </li>
 <li class="link">
@@ -192,84 +193,90 @@ var js_version = 0.13;
 <a href="SubSec-Homomorphisms.html" class="permalink">¶</a><article class="definition definition-like" id="definition-39"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.3.1</span><span class="period">.</span>
 </h6>
-<p id="p-617">Let \(R\) and \(S\) be commutative rings with identity. A function \(\p : R\to S\) is a called <dfn class="terminology">ring homomorphism</dfn> if it preserves addition and multiplication. That is, for all \(x,y\in R\text{,}\) \(\p(x+y) = \p(x) + \p(y)\) and \(\p(xy) = \p(x)\p(y)\text{.}\) If \(\p\) is a bijection, we say that \(\p\) is an <dfn class="terminology">isomorphism</dfn> and write \(R\cong S\text{.}\) If \(\p : R\to R\) is an isomorphism, we say \(\p\) is an <dfn class="terminology">automorphism</dfn> of \(R\text{.}\)</p></article><article class="activity project-like" id="activity-15"><h6 class="heading">
+<p id="p-625">Let \(R\) and \(S\) be commutative rings with identity. A function \(\p : R\to S\) is a called <dfn class="terminology">ring homomorphism</dfn> if it preserves addition, multiplication, and sends the identity of \(R\) to the identity of \(S\text{.}\) That is, for all \(x,y\in R\text{:}\)</p>
+<ul class="disc">
+<li id="li-137">\(\p(x+y) = \p(x) + \p(y)\text{,}\)</li>
+<li id="li-138">\(\p(xy) = \p(x)\p(y)\text{,}\) and</li>
+<li id="li-139">\(\p(1_R) = 1_S\text{.}\)</li>
+</ul>
+<p>If \(\p\) is a bijection, we say that \(\p\) is an <dfn class="terminology">isomorphism</dfn> and write \(R\cong S\text{.}\) If \(\p : R\to R\) is an isomorphism, we say \(\p\) is an <dfn class="terminology">automorphism</dfn> of \(R\text{.}\)</p></article><article class="activity project-like" id="activity-15"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.1</span><span class="period">.</span>
 </h6>
-<p id="p-618">Show that the function \(\p : Z\to \Z_{5}\) defined by \(\p(x) = \overline{x}\) is a homomorphism. Is it an isomorphism? Why or why not?</p>
+<p id="p-626">Show that the function \(\p : Z\to \Z_{5}\) defined by \(\p(x) = \overline{x}\) is a homomorphism. Is it an isomorphism? Why or why not?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-20" id="solution-20"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-20"><div class="solution solution-like"><p id="p-619">Note that \(\p(x+y) = \overline{x+y} = \overline{x} + \overline{y} = \p(x) + \p(y)\text{,}\) and similarly for multiplication. We observe that \(\p\) is not an isomorphism, as \(\p(2) = \p(7) = \overline{2}\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-21" id="solution-21"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-21"><div class="solution solution-like"><p id="p-627">Note that \(\p(x+y) = \overline{x+y} = \overline{x} + \overline{y} = \p(x) + \p(y)\text{,}\) and similarly for multiplication. We observe that \(\p\) is not an isomorphism, as \(\p(2) = \p(7) = \overline{2}\text{.}\)</p></div></div>
 </div></article><article class="theorem theorem-like" id="theorem-75"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.2</span><span class="period">.</span>
 </h6>
-<p id="p-620">Let \(R\) be commutative with identity and \(I\) an ideal of \(R\text{.}\) Define \(\p: R\to R/I\) by \(\p(r) = r+I\text{.}\) Then \(\p\) is a homomorphism.</p></article><article class="investigation project-like" id="investigation-18"><h6 class="heading">
+<p id="p-628">Let \(R\) be commutative with identity and \(I\) an ideal of \(R\text{.}\) Define \(\p: R\to R/I\) by \(\p(r) = r+I\text{.}\) Then \(\p\) is a homomorphism.</p></article><article class="investigation project-like" id="investigation-18"><h6 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">4.3.2</span><span class="period">.</span>
 </h6>
-<p id="p-621">Let \(R = \Z_2[x]\) and consider the map \(F: R \to R\) given by \(F(p) = p^2\text{.}\) Is \(F\) a homomorphism? An isomorphism?</p></article><article class="exploration project-like" id="exploration-20"><h6 class="heading">
+<p id="p-629">Let \(R = \Z_2[x]\) and consider the map \(F: R \to R\) given by \(F(p) = p^2\text{.}\) Is \(F\) a homomorphism? An isomorphism?</p></article><article class="exploration project-like" id="exploration-20"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.3.3</span><span class="period">.</span>
 </h6>
-<p id="p-622">Give an example of other rings \(R\) and \(S\) and a homomorphism \(\p : R\to S\text{.}\) Show that your function is a homomorphism and determine whether or not it is an isomorphism. Multiple presentations (of different homomorphisms) are possible.</p>
+<p id="p-630">Give an example of other rings \(R\) and \(S\) and a homomorphism \(\p : R\to S\text{.}\) Show that your function is a homomorphism and determine whether or not it is an isomorphism. Multiple presentations (of different homomorphisms) are possible.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-21" id="solution-21"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-21"><div class="solution solution-like"><p id="p-623">One is complex conjugation, which is an isomorphism \(\C\to\C\text{.}\) Another is \(\p : \Z_5 \to \Z_{10}\) given by \(\p(x) = 5x\) (this isn't easy).</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-22" id="solution-22"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-22"><div class="solution solution-like"><p id="p-631">One is complex conjugation, which is an isomorphism \(\C\to\C\text{.}\) Another is \(\p : \Z_5 \to \Z_{10}\) given by \(\p(x) = 5x\) (this isn't easy).</p></div></div>
 </div></article><article class="definition definition-like" id="definition-40"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.3.3</span><span class="period">.</span>
 </h6>
-<p id="p-624">Let \(\p : R \to S\) be a ring homomorphism. Then \(\ker \p =\setof{r\in R}{\p(r)=0_S}\) is the <dfn class="terminology">kernel</dfn> of \(\p\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-76"><h6 class="heading">
+<p id="p-632">Let \(\p : R \to S\) be a ring homomorphism. Then \(\ker \p =\setof{r\in R}{\p(r)=0_S}\) is the <dfn class="terminology">kernel</dfn> of \(\p\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-76"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.4</span><span class="period">.</span>
 </h6>
-<p id="p-625">Let \(R\) be commutative with identity and \(r\in R\text{.}\) The <em class="emphasis">\(r\)-evaluation map</em> \(\p_r : R[x] \to R\) defined by \(\p_r(p(x)) = p(r)\) is a homomorphism.</p>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-22" id="solution-22"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-22"><div class="solution solution-like"><p id="p-626">This follows from the way sums and products of polynomials are evaluated.</p></div></div></article><article class="exploration project-like" id="exploration-21"><h6 class="heading">
+<p id="p-633">Let \(R\) be commutative with identity and \(r\in R\text{.}\) The <em class="emphasis">\(r\)-evaluation map</em> \(\p_r : R[x] \to R\) defined by \(\p_r(p(x)) = p(r)\) is a homomorphism.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-23" id="solution-23"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-23"><div class="solution solution-like"><p id="p-634">This follows from the way sums and products of polynomials are evaluated.</p></div></div></article><article class="exploration project-like" id="exploration-21"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.3.4</span><span class="period">.</span>
 </h6>
-<p id="p-627">What is \(\ker \p_r\text{?}\)</p>
+<p id="p-635">What is \(\ker \p_r\text{?}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-23" id="solution-23"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-23"><div class="solution solution-like">By definition, \(\ker \p_r\) is the set of all \(p(x)\in R[x]\) such that \(p(r) =0\text{,}\) that is, the set of all polynomials which have \(r\) as a zero.</div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-24" id="solution-24"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-24"><div class="solution solution-like">By definition, \(\ker \p_r\) is the set of all \(p(x)\in R[x]\) such that \(p(r) =0\text{,}\) that is, the set of all polynomials which have \(r\) as a zero.</div></div>
 </div></article><article class="activity project-like" id="activity-16"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.5</span><span class="period">.</span>
 </h6>
-<p id="p-628">Find the kernels of other homomorphisms we've looked at so far.</p>
+<p id="p-636">Find the kernels of other homomorphisms we've looked at so far.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-24" id="solution-24"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-24"><div class="solution solution-like">Answers will vary.</div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-solution-25" id="solution-25"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-25"><div class="solution solution-like">Answers will vary.</div></div>
 </div></article><article class="theorem theorem-like" id="theorem-77"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.5</span><span class="period">.</span>
 </h6>
-<p id="p-629">Given a ring homomorphism \(\p : R\to S\text{,}\) \(\ker\p\) is an ideal.</p></article><article class="hiddenproof" id="proof-71"><a data-knowl="" class="id-ref original" data-refid="hk-proof-71"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-71"><article class="hiddenproof"><p id="p-630">If \(x,y\in \ker\p\text{,}\) \(\p(x+y) = \p(x) + \p(y) = 0_S + 0_S = 0_S\text{.}\) Similarly, if \(x\in \ker \p\) and \(r\in R\text{,}\) \(\p(rx) = \p(r) \p(x) = \p(r) 0_S = 0_S\text{.}\)</p></article></div>
+<p id="p-637">Given a ring homomorphism \(\p : R\to S\text{,}\) \(\ker\p\) is an ideal.</p></article><article class="hiddenproof" id="proof-70"><a data-knowl="" class="id-ref original" data-refid="hk-proof-70"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-70"><article class="hiddenproof"><p id="p-638">If \(x,y\in \ker\p\text{,}\) \(\p(x+y) = \p(x) + \p(y) = 0_S + 0_S = 0_S\text{.}\) Similarly, if \(x\in \ker \p\) and \(r\in R\text{,}\) \(\p(rx) = \p(r) \p(x) = \p(r) 0_S = 0_S\text{.}\)</p></article></div>
 <article class="theorem theorem-like" id="theorem-78"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.6</span><span class="period">.</span>
 </h6>
-<p id="p-631">Let \(\p : R\to S\) be a homomorphism. Then \(\p\) is one-to-one if and only if \(\ker\p = \set{0}\text{.}\)</p></article><p id="p-632">In what follows, we work toward a proof of the First Isomorphism Theorem for Rings.</p>
-<p id="p-633">Throughout, let \(R\) and \(S\) be commutative rings with identity, and let \(\p : R\to S\) be a homomorphism. Recall that \(\im \p = \setof{s\in S}{\p(r) = s\text{ for some } r\in R}\text{.}\)</p>
-<p id="p-634">Define \(f: R/\ker \p \to \im \p\) by \(f(r+\ker \p) = \p(r)\text{.}\)</p>
+<p id="p-639">Let \(\p : R\to S\) be a homomorphism. Then \(\p\) is one-to-one if and only if \(\ker\p = \set{0}\text{.}\)</p></article><p id="p-640">In what follows, we work toward a proof of the First Isomorphism Theorem for Rings.</p>
+<p id="p-641">Throughout, let \(R\) and \(S\) be commutative rings with identity, and let \(\p : R\to S\) be a homomorphism. Recall that \(\im \p = \setof{s\in S}{\p(r) = s\text{ for some } r\in R}\text{.}\)</p>
+<p id="p-642">Define \(f: R/\ker \p \to \im \p\) by \(f(r+\ker \p) = \p(r)\text{.}\)</p>
 <article class="lemma theorem-like" id="lemma-8"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.3.7</span><span class="period">.</span>
 </h6>
-<p id="p-635">Using the notation from above, \(f\) is a well-defined function.</p></article><article class="hiddenproof" id="proof-72"><a data-knowl="" class="id-ref original" data-refid="hk-proof-72"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-72"><article class="hiddenproof"><p id="p-636">Suppose that \(r_1 + \ker\p = r_2 + \ker\p\text{.}\) Then \(r_2-r_1 \in \ker\p\text{,}\) so \(\p(r_2-r_1) = 0_S\text{,}\) and thus \(\p(r_1) = \p(r_2)\text{.}\) Therefore, \(f(r_1+\ker\p) = f(r_2+\ker\p)\text{,}\) and \(f\) is well-defined.</p></article></div>
+<p id="p-643">Using the notation from above, \(f\) is a well-defined function.</p></article><article class="hiddenproof" id="proof-71"><a data-knowl="" class="id-ref original" data-refid="hk-proof-71"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-71"><article class="hiddenproof"><p id="p-644">Suppose that \(r_1 + \ker\p = r_2 + \ker\p\text{.}\) Then \(r_2-r_1 \in \ker\p\text{,}\) so \(\p(r_2-r_1) = 0_S\text{,}\) and thus \(\p(r_1) = \p(r_2)\text{.}\) Therefore, \(f(r_1+\ker\p) = f(r_2+\ker\p)\text{,}\) and \(f\) is well-defined.</p></article></div>
 <article class="lemma theorem-like" id="lemma-9"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.3.8</span><span class="period">.</span>
 </h6>
-<p id="p-637">Using the notation above, \(f\) is a homomorphism.</p></article><article class="hiddenproof" id="proof-73"><a data-knowl="" class="id-ref original" data-refid="hk-proof-73"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-73"><article class="hiddenproof"><p id="p-638">We show that \(f\) preserves addition. That it preserves multiplication will follow similarly. Observe that \(f((x+\ker\p) + (y+\ker\p)) = f((x+y)+\ker\p) = \p(x+y) = \p(x)+\p(y) = f(x+\ker\p) + f(y+\ker\p)\text{.}\)</p></article></div>
+<p id="p-645">Using the notation above, \(f\) is a homomorphism.</p></article><article class="hiddenproof" id="proof-72"><a data-knowl="" class="id-ref original" data-refid="hk-proof-72"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-72"><article class="hiddenproof"><p id="p-646">We show that \(f\) preserves addition. That it preserves multiplication will follow similarly. Observe that \(f((x+\ker\p) + (y+\ker\p)) = f((x+y)+\ker\p) = \p(x+y) = \p(x)+\p(y) = f(x+\ker\p) + f(y+\ker\p)\text{.}\)</p></article></div>
 <article class="lemma theorem-like" id="lemma-10"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.3.9</span><span class="period">.</span>
 </h6>
-<p id="p-639">Using the notation above, \(f\) is one-to-one.</p></article><article class="hiddenproof" id="proof-74"><a data-knowl="" class="id-ref original" data-refid="hk-proof-74"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-74"><article class="hiddenproof"><p id="p-640">Suppose that \(f(r_1 + \ker\p) = f(r_2 + \ker\p)\text{.}\) That is, \(\p(r_1) = \p(r_2)\text{.}\) Then \(\p(r_1 - r_2) = 0_S\text{,}\) so \(r_1 -r_2 \in \ker\p\text{,}\) and therefore \(r_1 + \ker\p = r_2 + \ker \p\text{.}\) Thus, \(f\) is one-to-one.</p></article></div>
+<p id="p-647">Using the notation above, \(f\) is one-to-one.</p></article><article class="hiddenproof" id="proof-73"><a data-knowl="" class="id-ref original" data-refid="hk-proof-73"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-73"><article class="hiddenproof"><p id="p-648">Suppose that \(f(r_1 + \ker\p) = f(r_2 + \ker\p)\text{.}\) That is, \(\p(r_1) = \p(r_2)\text{.}\) Then \(\p(r_1 - r_2) = 0_S\text{,}\) so \(r_1 -r_2 \in \ker\p\text{,}\) and therefore \(r_1 + \ker\p = r_2 + \ker \p\text{.}\) Thus, \(f\) is one-to-one.</p></article></div>
 <article class="lemma theorem-like" id="lemma-11"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.3.10</span><span class="period">.</span>
 </h6>
-<p id="p-641">Using the notation above, \(f\) is onto.</p></article><article class="hiddenproof" id="proof-75"><a data-knowl="" class="id-ref original" data-refid="hk-proof-75"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-75"><article class="hiddenproof"><p id="p-642">Since \(\p\) is onto \(\im \p\) by definition, given any \(s\in \im \p\) there is some \(r\in R\) such that \(\p(r) = s\text{.}\) Then \(f(r+\ker\p) = \p(r)\text{.}\)</p></article></div>
-<p id="p-643">We thus obtain:</p>
+<p id="p-649">Using the notation above, \(f\) is onto.</p></article><article class="hiddenproof" id="proof-74"><a data-knowl="" class="id-ref original" data-refid="hk-proof-74"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-74"><article class="hiddenproof"><p id="p-650">Since \(\p\) is onto \(\im \p\) by definition, given any \(s\in \im \p\) there is some \(r\in R\) such that \(\p(r) = s\text{.}\) Then \(f(r+\ker\p) = \p(r)\text{.}\)</p></article></div>
+<p id="p-651">We thus obtain:</p>
 <article class="theorem theorem-like" id="theorem-79"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.11</span><span class="period">.</span><span class="space"> </span><span class="title">(First Isomorphism Theorem).</span>
 </h6>
-<p id="p-644">Let \(\p : R\to S\) be a homomorphism of commutative rings. Then \(R/\ker \p \cong \im \p\text{.}\)</p>
-<p id="p-645">In particular, if \(\p : R\to S\) is onto, \(R/\ker \p \cong S\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-80"><h6 class="heading">
+<p id="p-652">Let \(\p : R\to S\) be a homomorphism of commutative rings. Then \(R/\ker \p \cong \im \p\text{.}\)</p>
+<p id="p-653">In particular, if \(\p : R\to S\) is onto, \(R/\ker \p \cong S\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-80"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.12</span><span class="period">.</span>
 </h6>
-<p id="p-646">We have the following isomorphisms of rings.</p>
+<p id="p-654">We have the following isomorphisms of rings.</p>
 <ol class="decimal">
-<li id="li-137"><p id="p-647">\(\Z/\ideal{m} \cong \Z_m\)</p></li>
-<li id="li-138"><p id="p-648">\(\Q[x]/\ideal{x-5} \cong \Q\)</p></li>
-<li id="li-139"><p id="p-649">\(\R[x]/\ideal{x^2+1} \cong \C\)</p></li>
-</ol></article><article class="hiddenproof" id="proof-76"><a data-knowl="" class="id-ref original" data-refid="hk-proof-76"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-76"><article class="hiddenproof"><p id="p-650">Define \(\p: \R[x] \to \C\) by \(\p(p(x)) = p(i)\text{.}\) We saw earlier that this evaluation map is a homomorphism. It is easy to see that \(\p\) is onto as \(\p(a+bx) = a+bi\) for any \(a,b\in \R\text{.}\) Thus, \(\R[x]/\ker\p \cong \C\text{.}\)</p>
-<p id="p-651">We claim that \(\ker\p = \ideal{x^2+1}\text{.}\) Clearly, \(\ideal{x^2+1} \subseteq \ker\p\text{.}\) Moreover, \(\ker\p \subsetneq \R[x]\text{.}\) Finally, \(\ideal{x^2+1}\) is prime and thus maximal, as \(\R[x]\) is a PID. Thus, \(\ker\p = \ideal{x^2+1}\text{.}\)</p></article></div></section></div></main>
+<li id="li-140"><p id="p-655">\(\Z/\ideal{m} \cong \Z_m\)</p></li>
+<li id="li-141"><p id="p-656">\(\Q[x]/\ideal{x-5} \cong \Q\)</p></li>
+<li id="li-142"><p id="p-657">\(\R[x]/\ideal{x^2+1} \cong \C\)</p></li>
+</ol></article><article class="hiddenproof" id="proof-75"><a data-knowl="" class="id-ref original" data-refid="hk-proof-75"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-75"><article class="hiddenproof"><p id="p-658">Define \(\p: \R[x] \to \C\) by \(\p(p(x)) = p(i)\text{.}\) We saw earlier that this evaluation map is a homomorphism. It is easy to see that \(\p\) is onto as \(\p(a+bx) = a+bi\) for any \(a,b\in \R\text{.}\) Thus, \(\R[x]/\ker\p \cong \C\text{.}\)</p>
+<p id="p-659">We claim that \(\ker\p = \ideal{x^2+1}\text{.}\) Clearly, \(\ideal{x^2+1} \subseteq \ker\p\text{.}\) Moreover, \(\ker\p \subsetneq \R[x]\text{.}\) Finally, \(\ideal{x^2+1}\) is prime and thus maximal, as \(\R[x]\) is a PID. Thus, \(\ker\p = \ideal{x^2+1}\text{.}\)</p></article></div></section></div></main>
 </div>
 <div class="login-link"><span id="loginlogout" class="login">login</span></div>
 <script src="https://pretextbook.org/js/0.13/login.js"></script>

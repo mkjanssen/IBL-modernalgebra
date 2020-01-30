@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-03T15:52:03-06:00    *-->
+<!--*    on 2020-01-24T11:19:44-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,6 +11,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>Let \(p\) be prime and suppose \(m\in \N\) divides \(p\text{,}\) so \(p = mk\) for some \(k\in \N\text{.}\) By definition, \(p|m\) or \(p|k\text{.}\) If \(p|m\text{,}\) then \(pj = m\text{,}\) so \(p = pjk\text{,}\) and \(jk=1\text{,}\) which means \(j=k=1\) and thus \(m=p\text{.}\) If \(p|k\text{,}\) then \(pj=k\text{,}\) so \(p = mpj\text{,}\) and \(mj=1\text{,}\) so \(m = j = 1\text{.}\)</p>
-<p>Conversely, assume \(p\in \N\) has the property that whenever an integer \(m\) exists with \(m|p\text{,}\) then \(m= p\) or \(m =1\text{.}\) Suppose \(p|ab\text{,}\) so there exists a \(k\in\N\) such that \(pk = ab\text{.}\) Note that if \(\gcd(a,p) = d &gt; 1\text{,}\) then \(d|p\text{,}\) and so \(d = p\text{,}\) and then \(p|a\text{.}\) If \(\gcd(a,p) = 1\text{,}\) then by Bézout's Identity there are integers \(x\) and \(y\) such that \(ax + py = 1\text{,}\) so we may multiply by \(b\) to obtain \(abx + pby = b\text{,}\) whence \(p|b\text{.}\)</p></article></body>
+<body><article class="hiddenproof"><p>We proceed by mathematical induction. Note that when \(a = 2\text{,}\) the statement holds.</p>
+<p>Assume that there is a \(k\in\N\) such that for all \(a\le k\text{,}\) the statement holds. Consider \(k+1\text{.}\) If \(k+1\) is prime, we are done. If not, then \(k+1\) is composite, and by the answer to <a class="xref" data-knowl="./knowl/question_compositecharacterization.html" title="Exploration 1.3.1">Question 1.3.1</a>, there are integers \(a,b\ne 1\) such that \(k+1 = ab\text{.}\) By induction, there is a prime \(p\) such that \(p|a\text{,}\) so \(p|k+1\text{.}\)</p></article></body>
 </html>
