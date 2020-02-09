@@ -20,7 +20,7 @@
 
 <colophon xmlns:xi="http://www.w3.org/2001/XInclude">
 
-  <edition>2019 Beta 1</edition>
+  <edition>2019 Preview Edition</edition>
   <website>
     <name>https://ringswithinquiry.org</name>
     <address>https://ringswithinquiry.org</address>
@@ -42,6 +42,7 @@
 
   </copyright>
 </colophon>
+
 
 
 <preface xml:id="Sec-Introduction">

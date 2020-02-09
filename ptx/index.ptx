@@ -74,6 +74,7 @@
 </search>
 
         <rename element="principle">Challenge</rename>
+        <rename element="insight">Notation</rename>
   </docinfo>
   <book>
     <title>Rings With Inquiry</title>
@@ -88,11 +89,6 @@
     <xi:include href="./Fields-and-Rings.ptx" />
     <xi:include href="./Factorization.ptx" />
     <xi:include href="./Ideals.ptx" />
-    <backmatter>
-      <index>
-        <title>Index</title>
-        <index-list />
-      </index>
-    </backmatter>
+    <xi:include href="./backmatter.ptx" />
   </book>
 </pretext>

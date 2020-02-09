@@ -1,6 +1,6 @@
 %**************************************%
 %*    Generated from PreTeXt source   *%
-%*    on 2019-11-25T12:06:06-06:00    *%
+%*    on 2020-02-05T08:14:40-06:00    *%
 %*                                    *%
 %*      https://pretextbook.org       *%
 %*                                    *%
@@ -58,6 +58,8 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %% See:  https://tug.org/TUGboat/tb36-3/tb114ltnews22.pdf
 %% and read "Fewer fragile commands" in distribution's  latexchanges.pdf
 \IfFileExists{latexrelease.sty}{}{\usepackage{fixltx2e}}
+%% shorter subnumbers in some side-by-side require manipulations
+\usepackage{xstring}
 %% Footnote counters and part/chapter counters are manipulated
 %% April 2018:  chngcntr  commands now integrated into the kernel,
 %% but circa 2018/2019 the package would still try to redefine them,
@@ -77,7 +79,7 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %% LuaTeX is not explicitly supported, but we do accept additions from knowledgeable users
 %% The conditional below provides  pdflatex  specific configuration last
 %% The following provides engine-specific capabilities
-%% Generally, xelatex is necessary non-Western fonts
+%% Generally, xelatex is necessary for non-Western fonts
 \ifthenelse{\boolean{xetex} \or \boolean{luatex}}{%
 %% begin: xelatex and lualatex-specific configuration
 \ifxetex\usepackage{xltxtra}\fi
@@ -86,8 +88,21 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %% fontspec package provides extensive control of system fonts,
 %% meaning *.otf (OpenType), and apparently *.ttf (TrueType)
 %% that live *outside* your TeX/MF tree, and are controlled by your *system*
-%% fontspec will make Latin Modern (lmodern) the default font
+%% (it is possible that a TeX distribution will place fonts in a system location)
 \usepackage{fontspec}
+%% We use Latin Modern (lmodern) as the default font
+%% So we check that it is available as a system font
+\IfFontExistsTF{Latin Modern Roman}{}{\GenericError{}{The font "Latin Modern Roman" requested by PreTeXt output is not available as a system font}{Consult the PreTeXt Guide for help with LaTeX fonts.}{}}
+%% We then define various font family commands using a vanilla version,
+%% with the intention of letting a style override these choices
+%% \setmainfont can be re-issued, and \renewfontfamily can redefine others
+\setmainfont{Latin Modern Roman}[SmallCapsFont={Latin Modern Roman Caps}, SlantedFont={Latin Modern Roman Slanted}]
+\newfontfamily{\divisionfont}{Latin Modern Roman}
+\newfontfamily{\contentsfont}{Latin Modern Roman}
+\newfontfamily{\pagefont}{Latin Modern Roman}[SlantedFont={Latin Modern Roman Slanted}]
+\newfontfamily{\tabularfont}{Latin Modern Roman}[SmallCapsFont={Latin Modern Roman Caps}]
+%% begin: font information supplied by "font-xelatex-style" template
+%% end: font information supplied by "font-xelatex-style" template
 %% 
 %% Extensive support for other languages
 \usepackage{polyglossia}
@@ -104,8 +119,17 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \usepackage[utf8]{inputenc}
 %% PreTeXt will create a UTF-8 encoded file
 %% begin: font setup and configuration for use with pdflatex
+%% Portions of a document, are, or may, be affected by font-changing commands
+%% These are more robust when using  xelatex  but may be employed with  pdflatex
+%% The following definitons are meant to be re-defined in a style with \renewcommand
+\newcommand{\divisionfont}{\relax}
+\newcommand{\contentsfont}{\relax}
+\newcommand{\pagefont}{\relax}
+\newcommand{\tabularfont}{\relax}
+%% begin: font information supplied by "font-pdflatex-style" template
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
+%% begin: font information supplied by "font-pdflatex-style" template
 %% end: font setup and configuration for use with pdflatex
 %% end: pdflatex-specific configuration
 }
@@ -125,12 +149,28 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %%
 %% Division Titles, and Page Headers/Footers
 %% titlesec package, loading "titleps" package cooperatively
-%% See code comments about the necessity and purpose of "explicit" option
-\usepackage[explicit, pagestyles]{titlesec}
+%% See code comments about the necessity and purpose of "explicit" option.
+%% The "newparttoc" option causes a consistent entry for parts in the ToC 
+%% file, but it is only effective if there is a \titleformat for \part.
+%% "pagestyles" loads the  titleps  package cooperatively.
+\usepackage[explicit, newparttoc, pagestyles]{titlesec}
+%% The companion titletoc package for the ToC.
+\usepackage{titletoc}
+%% Fixes a bug with transition from chapters to appendices in a "book"
+%% See generating XSL code for more details about necessity
 \newtitlemark{\chaptertitlename}
-%% Set global/default page style for document due
-%% to potential re-definitions after documentclass
+%% begin: customizations of page styles via the modal "titleps-style" template
+%% Designed to use commands from the LaTeX "titleps" package
+%% Plain pages should have the same font for page numbers
+\renewpagestyle{plain}{%
+\setfoot{}{\pagefont\thepage}{}%
+}%
+%% Single pages as in default LaTeX
+\renewpagestyle{headings}{%
+\sethead{\pagefont\slshape\MakeUppercase{\ifthechapter{\chaptertitlename\space\thechapter.\space}{}\chaptertitle}}{}{\pagefont\thepage}%
+}%
 \pagestyle{headings}
+%% end: customizations of page styles via the modal "titleps-style" template
 %%
 %% Create globally-available macros to be provided for style writers
 %% These are redefined for each occurence of each division
@@ -145,6 +185,19 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \NewDocumentEnvironment{preface}{mmmmmm}
 {%
 \renewcommand{\divisionnameptx}{Preface}%
+\renewcommand{\titleptx}{#1}%
+\renewcommand{\subtitleptx}{#2}%
+\renewcommand{\shortitleptx}{#3}%
+\renewcommand{\authorsptx}{#4}%
+\renewcommand{\epigraphptx}{#5}%
+\chapter*{#1}%
+\addcontentsline{toc}{chapter}{#3}
+\label{#6}%
+}{}%
+%% Environment for a PTX "acknowledgement" at the level of a LaTeX "chapter"
+\NewDocumentEnvironment{acknowledgement}{mmmmmm}
+{%
+\renewcommand{\divisionnameptx}{Acknowledgements}%
 \renewcommand{\titleptx}{#1}%
 \renewcommand{\subtitleptx}{#2}%
 \renewcommand{\shortitleptx}{#3}%
@@ -178,6 +231,31 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \section[{#3}]{#1}%
 \label{#6}%
 }{}%
+%% Environment for a PTX "references" at the level of a LaTeX "subsection"
+\NewDocumentEnvironment{references-subsection}{mmmmmm}
+{%
+\renewcommand{\divisionnameptx}{References}%
+\renewcommand{\titleptx}{#1}%
+\renewcommand{\subtitleptx}{#2}%
+\renewcommand{\shortitleptx}{#3}%
+\renewcommand{\authorsptx}{#4}%
+\renewcommand{\epigraphptx}{#5}%
+\subsection[{#3}]{#1}%
+\label{#6}%
+}{}%
+%% Environment for a PTX "references" at the level of a LaTeX "subsection"
+\NewDocumentEnvironment{references-subsection-numberless}{mmmmmm}
+{%
+\renewcommand{\divisionnameptx}{References}%
+\renewcommand{\titleptx}{#1}%
+\renewcommand{\subtitleptx}{#2}%
+\renewcommand{\shortitleptx}{#3}%
+\renewcommand{\authorsptx}{#4}%
+\renewcommand{\epigraphptx}{#5}%
+\subsection*{#1}%
+\addcontentsline{toc}{subsection}{#3}
+\label{#6}%
+}{}%
 %% Environment for a PTX "index" at the level of a LaTeX "chapter"
 \NewDocumentEnvironment{indexptx}{mmmmmm}
 {%
@@ -193,41 +271,59 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 }{}%
 %%
 %% Styles for six traditional LaTeX divisions
+\titleformat{\part}[display]
+{\divisionfont\Huge\bfseries\centering}{\divisionnameptx\space\thepart}{30pt}{\Huge#1}
+[{\Large\centering\authorsptx}]
 \titleformat{\chapter}[display]
-{\normalfont\huge\bfseries}{\divisionnameptx\space\thechapter}{20pt}{\Huge#1}
+{\divisionfont\huge\bfseries}{\divisionnameptx\space\thechapter}{20pt}{\Huge#1}
 [{\Large\authorsptx}]
 \titleformat{name=\chapter,numberless}[display]
-{\normalfont\huge\bfseries}{}{0pt}{#1}
+{\divisionfont\huge\bfseries}{}{0pt}{#1}
 [{\Large\authorsptx}]
 \titlespacing*{\chapter}{0pt}{50pt}{40pt}
 \titleformat{\section}[hang]
-{\normalfont\Large\bfseries}{\thesection}{1ex}{#1}
+{\divisionfont\Large\bfseries}{\thesection}{1ex}{#1}
 [{\large\authorsptx}]
 \titleformat{name=\section,numberless}[block]
-{\normalfont\Large\bfseries}{}{0pt}{#1}
+{\divisionfont\Large\bfseries}{}{0pt}{#1}
 [{\large\authorsptx}]
 \titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
 \titleformat{\subsection}[hang]
-{\normalfont\large\bfseries}{\thesubsection}{1ex}{#1}
+{\divisionfont\large\bfseries}{\thesubsection}{1ex}{#1}
 [{\normalsize\authorsptx}]
 \titleformat{name=\subsection,numberless}[block]
-{\normalfont\large\bfseries}{}{0pt}{#1}
+{\divisionfont\large\bfseries}{}{0pt}{#1}
 [{\normalsize\authorsptx}]
 \titlespacing*{\subsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 \titleformat{\subsubsection}[hang]
-{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{#1}
+{\divisionfont\normalsize\bfseries}{\thesubsubsection}{1em}{#1}
 [{\small\authorsptx}]
 \titleformat{name=\subsubsection,numberless}[block]
-{\normalfont\normalsize\bfseries}{}{0pt}{#1}
+{\divisionfont\normalsize\bfseries}{}{0pt}{#1}
 [{\normalsize\authorsptx}]
 \titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 \titleformat{\paragraph}[hang]
-{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{#1}
+{\divisionfont\normalsize\bfseries}{\theparagraph}{1em}{#1}
 [{\small\authorsptx}]
 \titleformat{name=\paragraph,numberless}[block]
-{\normalfont\normalsize\bfseries}{}{0pt}{#1}
+{\divisionfont\normalsize\bfseries}{}{0pt}{#1}
 [{\normalsize\authorsptx}]
 \titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5em}
+%%
+%% Styles for five traditional LaTeX divisions
+\titlecontents{part}%
+[0pt]{\contentsmargin{0em}\addvspace{1pc}\contentsfont\bfseries}%
+{\Large\thecontentslabel\enspace}{\Large}%
+{}%
+[\addvspace{.5pc}]%
+\titlecontents{chapter}%
+[0pt]{\contentsmargin{0em}\addvspace{1pc}\contentsfont\bfseries}%
+{\large\thecontentslabel\enspace}{\large}%
+{\hfill\bfseries\thecontentspage}%
+[\addvspace{.5pc}]%
+\dottedcontents{section}[3.8em]{\contentsfont}{2.3em}{1pc}%
+\dottedcontents{subsection}[6.1em]{\contentsfont}{3.2em}{1pc}%
+\dottedcontents{subsubsection}[9.3em]{\contentsfont}{4.3em}{1pc}%
 %%
 %% Semantic Macros
 %% To preserve meaning in a LaTeX file
@@ -250,70 +346,80 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %% removing this command may make some cross-references ambiguous
 %% The precursor variable $numbering-maxlevel is checked for consistency in the common XSL file
 \setcounter{secnumdepth}{3}
-%% begin: General AMS environment setup
-%% Environments built with amsthm package
-\usepackage{amsthm}
-%% Numbering for Theorems, Conjectures, Examples, Figures, etc
-%% Controlled by  numbering.theorems.level  processing parameter
-%% Numbering: all theorem-like numbered consecutively
-%% i.e. Corollary 4.3 follows Theorem 4.2
-%% Always need some theorem environment to set base numbering scheme
-%% even if document has no theorems (but has other environments)
-%% Create a never-used style first, always
-%% simply to provide a global counter to use, namely "cthm"
-\newtheorem{cthm}{BadTheoremStringName}[section]
-%% AMS "proof" environment is not used, but we leave previously
+%%
+%% AMS "proof" environment is no longer used, but we leave previously
 %% implemented \qedhere in place, should the LaTeX be recycled
-\renewcommand{\qedhere}{\relax}
-%% end: General AMS environment setup
+\newcommand{\qedhere}{\relax}
+%%
+%% A faux tcolorbox whose only purpose is to provide common numbering
+%% facilities for most blocks (possibly not projects, 2D displays)
+%% Controlled by  numbering.theorems.level  processing parameter
+\newtcolorbox[auto counter, number within=section]{block}{}
+%%
+%% This document is set to number PROJECT-LIKE on a separate numbering scheme
+%% So, a faux tcolorbox whose only purpose is to provide this numbering
+%% Controlled by  numbering.projects.level  processing parameter
+\newtcolorbox[auto counter, number within=section]{project-distinct}{}
+%% A faux tcolorbox whose only purpose is to provide common numbering
+%% facilities for 2D displays which are subnumbered as part of a "sidebyside"
+\newtcolorbox[auto counter, number within=tcb@cnt@block, number freestyle={\noexpand\thetcb@cnt@block(\noexpand\alph{\tcbcounter})}]{subdisplay}{}
 %%
 %% tcolorbox, with styles, for THEOREM-LIKE
 %%
 %% theorem: fairly simple numbered block/structure
 \tcbset{ theoremstyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, } }
-\newtcolorbox[use counter*=cthm]{theorem}[3]{title={{Theorem~\thecthm\notblank{#1#2}{\space}{}\notblank{#1}{\space#1}{}\notblank{#2}{\space(#2)}{}}}, phantomlabel={#3}, breakable, parbox=false, fontupper=\itshape, theoremstyle, }
+\newtcolorbox[use counter from=block]{theorem}[3]{title={{Theorem~\thetcbcounter\notblank{#1#2}{\space}{}\notblank{#1}{\space#1}{}\notblank{#2}{\space(#2)}{}}}, phantomlabel={#3}, breakable, parbox=false, after={\par}, fontupper=\itshape, theoremstyle, }
 %% lemma: fairly simple numbered block/structure
 \tcbset{ lemmastyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, } }
-\newtcolorbox[use counter*=cthm]{lemma}[3]{title={{Lemma~\thecthm\notblank{#1#2}{\space}{}\notblank{#1}{\space#1}{}\notblank{#2}{\space(#2)}{}}}, phantomlabel={#3}, breakable, parbox=false, fontupper=\itshape, lemmastyle, }
+\newtcolorbox[use counter from=block]{lemma}[3]{title={{Lemma~\thetcbcounter\notblank{#1#2}{\space}{}\notblank{#1}{\space#1}{}\notblank{#2}{\space(#2)}{}}}, phantomlabel={#3}, breakable, parbox=false, after={\par}, fontupper=\itshape, lemmastyle, }
 %%
 %% tcolorbox, with styles, for AXIOM-LIKE
 %%
 %% axiom: fairly simple numbered block/structure
 \tcbset{ axiomstyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, } }
-\newtcolorbox[use counter*=cthm]{axiom}[3]{title={{Axiom~\thecthm\notblank{#1#2}{\space}{}\notblank{#1}{\space#1}{}\notblank{#2}{\space(#2)}{}}}, phantomlabel={#3}, breakable, parbox=false, fontupper=\itshape, axiomstyle, }
+\newtcolorbox[use counter from=block]{axiom}[3]{title={{Axiom~\thetcbcounter\notblank{#1#2}{\space}{}\notblank{#1}{\space#1}{}\notblank{#2}{\space(#2)}{}}}, phantomlabel={#3}, breakable, parbox=false, after={\par}, fontupper=\itshape, axiomstyle, }
 %%
 %% tcolorbox, with styles, for DEFINITION-LIKE
 %%
 %% definition: fairly simple numbered block/structure
 \tcbset{ definitionstyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, after upper={\space\space\hspace*{\stretch{1}}\(\lozenge\)}, } }
-\newtcolorbox[use counter*=cthm]{definition}[2]{title={{Definition~\thecthm\notblank{#1}{\space\space#1}{}}}, phantomlabel={#2}, breakable, parbox=false, definitionstyle, }
-%%
-%% tcolorbox, with styles, for EXAMPLE-LIKE
-%%
-%% question: fairly simple numbered block/structure
-\tcbset{ questionstyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, after upper={\space\space\hspace*{\stretch{1}}\(\square\)}, } }
-\newtcolorbox[use counter*=cthm]{question}[2]{title={{Question~\thecthm\notblank{#1}{\space\space#1}{}}}, phantomlabel={#2}, breakable, parbox=false, questionstyle, }
+\newtcolorbox[use counter from=block]{definition}[2]{title={{Definition~\thetcbcounter\notblank{#1}{\space\space#1}{}}}, phantomlabel={#2}, breakable, parbox=false, after={\par}, definitionstyle, }
 %%
 %% tcolorbox, with styles, for inline exercises
 %%
 %% inlineexercise: fairly simple numbered block/structure
 \tcbset{ inlineexercisestyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, } }
-\newtcolorbox[use counter*=cthm]{inlineexercise}[2]{title={{Checkpoint~\thecthm\notblank{#1}{\space\space#1}{}}}, phantomlabel={#2}, breakable, parbox=false, inlineexercisestyle, }
+\newtcolorbox[use counter from=block]{inlineexercise}[2]{title={{Checkpoint~\thetcbcounter\notblank{#1}{\space\space#1}{}}}, phantomlabel={#2}, breakable, parbox=false, after={\par}, inlineexercisestyle, }
 %%
 %% tcolorbox, with styles, for PROJECT-LIKE
 %%
 %% exploration: fairly simple numbered block/structure
 \tcbset{ explorationstyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, } }
-\newtcolorbox[use counter*=cpjt]{exploration}[2]{title={{Exploration~\thecpjt\notblank{#1}{\space\space#1}{}}}, phantomlabel={#2}, breakable, parbox=false, explorationstyle, }
+\newtcolorbox[use counter from=project-distinct]{exploration}[2]{title={{Exploration~\thetcbcounter\notblank{#1}{\space\space#1}{}}}, phantomlabel={#2}, breakable, parbox=false, after={\par}, explorationstyle, }
+%% investigation: fairly simple numbered block/structure
+\tcbset{ investigationstyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, } }
+\newtcolorbox[use counter from=project-distinct]{investigation}[2]{title={{Investigation~\thetcbcounter\notblank{#1}{\space\space#1}{}}}, phantomlabel={#2}, breakable, parbox=false, after={\par}, investigationstyle, }
+%% activity: fairly simple numbered block/structure
+\tcbset{ activitystyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, } }
+\newtcolorbox[use counter from=project-distinct]{activity}[2]{title={{Activity~\thetcbcounter\notblank{#1}{\space\space#1}{}}}, phantomlabel={#2}, breakable, parbox=false, after={\par}, activitystyle, }
+%%
+%% tcolorbox, with styles, for ASIDE-LIKE
+%%
+%% aside: fairly simple un-numbered block/structure
+\tcbset{ asidestyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, } }
+\newtcolorbox{aside}[2]{title={\notblank{#1}{#1}{}}, phantomlabel={#2}, breakable, parbox=false, asidestyle}
+%%
+%% tcolorbox, with styles, for FIGURE-LIKE
+%%
+%% tableptx: 2-D display structure
+\tcbset{ tableptxstyle/.style={bwminimalstyle, middle=1ex, blockspacingstyle, coltitle=black, bottomtitle=2ex, titlerule=-0.3pt} }
+\newtcolorbox[use counter from=block]{tableptx}[3]{title={{\textbf{Table~\thetcbcounter}\space#1}}, phantomlabel={#2}, unbreakable, parbox=false, tableptxstyle, }
 %%
 %% xparse environments for introductions and conclusions of divisions
 %%
 %% introduction: in a structured division
 \NewDocumentEnvironment{introduction}{m}
 {\notblank{#1}{\noindent\textbf{#1}\space}{}}{\par\medskip}
-%% conclusion: in a structured division
-\NewDocumentEnvironment{conclusion}{m}
-{\par\medskip\noindent\notblank{#1}{\textbf{#1}\space}{}}{}
 %%
 %% tcolorbox, with styles, for miscellaneous environments
 %%
@@ -321,15 +427,9 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \tcbset{ assemblagestyle/.style={size=normal, colback=white, colbacktitle=white, coltitle=black, colframe=black, rounded corners, titlerule=0.0pt, center title, fonttitle=\normalfont\bfseries, blockspacingstyle, } }
 \newtcolorbox{assemblage}[2]{title={\notblank{#1}{#1}{}}, phantomlabel={#2}, breakable, parbox=false, assemblagestyle}
 %% proof: title is a replacement
-\tcbset{ proofstyle/.style={bwminimalstyle, fonttitle=\normalfont\itshape, attach title to upper, after title={\space}, after upper={\space\space\hspace*{\stretch{1}}\(\blacksquare\)}
+\tcbset{ proofstyle/.style={bwminimalstyle, fonttitle=\normalfont\itshape, attach title to upper, after title={\space}, after upper={\space\space\hspace*{\stretch{1}}\(\blacksquare\)},
 } }
-\newtcolorbox{proofptx}[2]{title={\notblank{#1}{#1}{Proof.}}, phantom={\hypertarget{#2}{}}, breakable, parbox=false, proofstyle }
-%% Numbering for Projects (independent of others)
-%% Controlled by  numbering.projects.level  processing parameter
-%% Always need a project environment to set base numbering scheme
-%% even if document has no projectss (but has other blocks)
-%% So "cpjt" environment produces "cpjt" counter
-\newtheorem{cpjt}{BadProjectNameString}[section]
+\newtcolorbox{proofptx}[2]{title={\notblank{#1}{#1}{Proof.}}, phantom={\hypertarget{#2}{}}, breakable, parbox=false, after={\par}, proofstyle }
 %% Localize LaTeX supplied names (possibly none)
 \renewcommand*{\chaptername}{Chapter}
 %% Equation Numbering
@@ -371,31 +471,6 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \newcolumntype{A}{!{\vrule width 0.04em}}
 \newcolumntype{B}{!{\vrule width 0.07em}}
 \newcolumntype{C}{!{\vrule width 0.11em}}
-%% Figures, Tables, Listings, Named Lists, Floats
-%% The [H]ere option of the float package fixes floats in-place,
-%% in deference to web usage, where floats are totally irrelevant
-%% You can remove some of this setup, to restore standard LaTeX behavior
-%% HOWEVER, numbering of figures/tables AND theorems/examples/remarks, etc
-%% may de-synchronize with the numbering in the HTML version
-%% You can remove the "placement={H}" option to allow flotation and
-%% preserve numbering, BUT the numbering may then appear "out-of-order"
-%% Floating environments: http://tex.stackexchange.com/questions/95631/
-\usepackage{float}
-\usepackage{newfloat}
-\usepackage{caption}%% Adjust stock figure environment so that it no longer floats
-\SetupFloatingEnvironment{figure}{fileext=lof,placement={H},within=section,name=Figure}
-\captionsetup[figure]{labelfont=bf,justification=raggedright}
-%% http://tex.stackexchange.com/questions/16195
-\makeatletter
-\let\c@figure\c@cthm
-\makeatother
-%% Adjust stock table environment so that it no longer floats
-\SetupFloatingEnvironment{table}{fileext=lot,placement={H},within=section,name=Table}
-\captionsetup[table]{labelfont=bf}
-%% http://tex.stackexchange.com/questions/16195
-\makeatletter
-\let\c@table\c@cthm
-\makeatother
 %% Footnote Numbering
 %% Specified by numbering.footnotes.level
 %% Undo counter reset by chapter for a book
@@ -426,7 +501,7 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \renewcommand\UrlFont{\small\ttfamily}
 %% Hyperlinking active in electronic PDFs, all links solid and blue
 \hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue}
-\hypersetup{pdftitle={Modern Algebra}}
+\hypersetup{pdftitle={Rings With Inquiry}}
 %% If you manually remove hyperref, leave in this next command
 \providecommand\phantomsection{}
 %% Graphics Preamble Entries
@@ -442,10 +517,8 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \usepackage{pgfplots}
 %% If tikz has been loaded, replace ampersand with \amp macro
 %% tcolorbox styles for sidebyside layout
-\tcbset{ sbsstyle/.style={raster equal height=rows,raster force size=false} }
-\tcbset{ sbsheadingstyle/.style={bwminimalstyle, halign=center, fontupper=\bfseries} }
+\tcbset{ sbsstyle/.style={raster before skip=2.0ex, raster equal height=rows, raster force size=false} }
 \tcbset{ sbspanelstyle/.style={bwminimalstyle} }
-\tcbset{ sbscaptionstyle/.style={bwminimalstyle, halign=center} }
 %% Enviroments for side-by-side and components
 %% Necessary to use \NewTColorBox for boxes of the panels
 %% "newfloat" environment to squash page-breaks within a single sidebyside
@@ -455,10 +528,8 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
     [sbsstyle,raster columns=#1,
     raster left skip=#2\linewidth,raster right skip=#3\linewidth,raster column skip=#4\linewidth]}
   {\end{tcbraster}}
-%% "tcolorbox" environments for three components of a panel
-\NewTColorBox{sbsheading}{m}{sbsheadingstyle,width=#1\linewidth}
+%% "tcolorbox" environment for a panel of sidebyside
 \NewTColorBox{sbspanel}{mO{top}}{sbspanelstyle,width=#1\linewidth,valign=#2}
-\NewTColorBox{sbscaption}{m}{sbscaptionstyle,width=#1\linewidth}
 %% extpfeil package for certain extensible arrows,
 %% as also provided by MathJax extension of the same name
 %% NB: this package loads mtools, which loads calc, which redefines
@@ -538,7 +609,7 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \thispagestyle{empty}
 {\centering
 \vspace*{0.28\textheight}
-{\Huge Modern Algebra}\\}
+{\Huge Rings With Inquiry}\\}
 \clearpage
 %% end:   half-title
 %% begin: adcard
@@ -552,8 +623,8 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 {\centering
 \vspace*{0.14\textheight}
 %% Target for xref to top-level element is ToC
-\addtocontents{toc}{\protect\hypertarget{g:book:idm416660612560}{}}
-{\Huge Modern Algebra}\\[3\baselineskip]
+\addtocontents{toc}{\protect\hypertarget{g:book:idm270003639184}{}}
+{\Huge Rings With Inquiry}\\[3\baselineskip]
 {\Large Michael Janssen}\\[0.5\baselineskip]
 {\Large Dordt University}\\[3\baselineskip]
 {\Large Melissa Lindsey}\\[0.5\baselineskip]
@@ -562,13 +633,13 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %% end:   title page
 %% begin: copyright-page
 \thispagestyle{empty}
-\hypertarget{g:colophon:idm416673761568}{}\vspace*{\stretch{2}}
+\hypertarget{g:colophon:idm269944732912}{}\vspace*{\stretch{2}}
 \noindent{\bfseries Edition}: 2019 Beta 1\par\medskip
-\noindent{\bfseries Website}: \href{https:\slash{}\slash{}book.mkjanssen.org}{https:\slash{}\slash{}book.mkjanssen.org}\par\medskip
+\noindent{\bfseries Website}: \href{https:\slash{}\slash{}ringswithinquiry.org}{https:\slash{}\slash{}ringswithinquiry.org}\par\medskip
 \noindent\textcopyright{}2019\textendash{}\quad{}\\[0.5\baselineskip]
 Permission is granted to copy and (re)distribute this material in any format and\slash{}or adapt it (even commercially) under the terms of the Creative Commons Attribution-ShareAlike 4.0 International License.  The work may be used for free in any way by any party so long as attribution is given to the author(s) and if the material is modified, the resulting contributions are distributed under the same license as this original.  All trademarks\texttrademark{} are the registered\textregistered{} marks of their respective owners. The graphic \begin{sidebyside}{1}{0.375}{0.375}{0}%
 \begin{sbspanel}{0.25}%
-\includegraphics[width=1\linewidth]{images/CC-BY-SA-license}
+\includegraphics[width=\linewidth]{./images/CC-BY-SA-license.svg}
 \end{sbspanel}%
 \end{sidebyside}%
  that may appear in other locations in the text shows that the work is licensed with the Creative Commons and that the work may be used for free by any party so long as attribution is given to the author(s) and if the material is modified, the resulting contributions are distributed under the same license as this original. Full details may be found by visiting \href{https://creativecommons.org/licenses/by-sa/4.0/}{https:\slash{}\slash{}creativecommons.org\slash{}licenses\slash{}by-sa\slash{}4.0\slash{}}  or sending a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.\par\medskip
@@ -584,7 +655,7 @@ Permission is granted to copy and (re)distribute this material in any format and
 \begin{preface}{Introduction}{}{Introduction}{}{}{x:preface:Sec-Introduction}
 While it is difficult to intuitively define the way in which mathematics is structural, its concern with \emph{number} is clear, especially for students of elementary mathematics such as arithmetic. However, the study of \emph{number} rapidly leads one to structural questions regarding the properties of numbers themselves, which has historically been the domain of \emph{algebra}.%
 \par
-In~{(((Unresolved xref, reference "franklin2014aristotelian"; check spelling or use "provisional" attribute)))}\hyperlink{}{~}, the author defines a \emph{purely structural property} as one that ``can be defined wholly in terms of the concepts same and different, and part and whole (along with purely logical concepts).'' This definition and its reference to parts and wholes calls to mind the history of the word \emph{algebra} itself, which comes from the Arabic \emph{al-jabr}, literally meaning ``the reunion of broken parts''. One of the concepts fundamental to the historical development of algebra is the notion of \emph{factorization}; closely related questions that have driven the development of algebra over the centuries are: when does a polynomial equation have solutions in a particular number system, and is there a systematic way to find them?%
+In~\hyperlink{x:biblio:franklin2014aristotelian}{[1]}, the author defines a \emph{purely structural property} as one that ``can be defined wholly in terms of the concepts same and different, and part and whole (along with purely logical concepts).'' This definition and its reference to parts and wholes calls to mind the history of the word \emph{algebra} itself, which comes from the Arabic \emph{al-jabr}, literally meaning ``the reunion of broken parts''. One of the concepts fundamental to the historical development of algebra is the notion of \emph{factorization}; closely related questions that have driven the development of algebra over the centuries are: when does a polynomial equation have solutions in a particular number system, and is there a systematic way to find them?%
 \par
 The goal of these notes is to explore the idea of factorization from an abstract perspective. We will first give attention to factorization in the integers, and then factorization properties of polynomials. Our larger goal is to precisely describe deep structural properties common to both the integers and polynomials that guarantee that factorization into fundamental pieces, like primes and irreducibles, can be done \emph{uniquely}. In order to accomplish this goal, we will walk in the realms of abstraction, and catch glimpses of the beauty and incredible power of this perspective on mathematics.%
 %
@@ -593,8 +664,8 @@ The goal of these notes is to explore the idea of factorization from an abstract
 \typeout{References  References}
 \typeout{************************************************}
 %
-\begin{references--numberless}{References}{}{References}{}{}{g:references:idm416673863728}
-\end{references--numberless}
+\begin{references--numberless}{References}{}{References}{}{}{g:references:idm269944717424}
+J. Franklin, \emph{An Aristotelian Realist Philosophy of Mathematics: Mathematics as the Science of Quantity and Structure}, Palgrave Macmillan UK, 2014\end{references--numberless}
 \end{preface}
 %
 %
@@ -629,6 +700,23 @@ Brief attention is paid to fields before we dive in to rings. Other than mention
 \par
 Groups are not present in these notes. Depending on personal preference, with the time left at the end of the semester (often approximately 1\textendash{}3 weeks, depending on your class's pace), you could present an introduction to groups directly to your students, or use freely available IBL material from the \href{http://jiblm.org/}{\emph{Journal of Inquiry-Based Learning in Mathematics}}.%
 \end{preface}
+%
+%
+\typeout{************************************************}
+\typeout{Acknowledgements  Acknowledgements}
+\typeout{************************************************}
+%
+\begin{acknowledgement}{Acknowledgements}{}{Acknowledgements}{}{}{g:acknowledgement:idm269944699392}
+There are several people we wish to thank. In no particular order:%
+\par
+David Farmer, for handling the initial conversion of the \(\LaTeX\) code to PreTeXt.%
+\par
+Mitch Keller, for his help with PreTeXt (especially creating the Student Version of the book) and for being willing to take a chance using this book for his Fall 2019 modern algebra course at Morningside College.%
+\par
+The Network of IBL Communities (and NSF-DUE \#1925188) and the UNO STEM TRAIL Center for supporting the collaboration with Mitch Keller.%
+\par
+Rob Beezer and the PreTeXt team for creating this wonderful authoring language.%
+\end{acknowledgement}
 %% begin: table of contents
 %% Adjust Table of Contents
 \setcounter{tocdepth}{1}
@@ -644,7 +732,7 @@ Groups are not present in these notes. Depending on personal preference, with th
 %
 \begin{chapterptx}{The Integers}{}{The Integers}{}{}{x:chapter:Sec-Integers}
 \begin{introduction}{}%
-As children we start exploring the properties and structure of the positive integers as soon as we learn to count and we extend our understanding throughout our schooling as we learn about new operations and collections of numbers. We begin our journey into abstract algebra with an overview of familiar properties of the integers that are relevant to our course of inquiry. With this foundation set, we will see in later chapters just how far we can extend these properties in more abstract setting.%
+As children we start exploring the properties and structure of the positive integers as soon as we learn to count and we extend our understanding throughout our schooling as we learn about new operations and collections of numbers. We begin our journey into abstract algebra with an overview of some familiar (and some possibly unfamiliar) properties of the integers that are relevant to our course of inquiry. With this foundation set, we will see in later chapters just how far we can extend these properties in more abstract setting.%
 \end{introduction}%
 %
 %
@@ -654,10 +742,10 @@ As children we start exploring the properties and structure of the positive inte
 %
 \begin{sectionptx}{Induction and Well-Ordering}{}{Induction and Well-Ordering}{}{}{x:section:SubSec-WellOrdering}
 \begin{introduction}{}%
-Note that in this section we will assume the basic algebraic\slash{}arithmetic properties of the integers, most of which we will formalize via axioms in subsequent sections.%
+In this section we will assume the basic algebraic\slash{}arithmetic properties of the integers such as closure under addition, subtraction, and multiplication, most of which we will formalize via axioms in subsequent sections. \hyperref[x:axiom:axiom_wellordering]{Axiom~\ref{x:axiom:axiom_wellordering}} formalizes the familiar notion that nonempty subsets of the positive integers have a smallest element, which will be used repeatedly throughout the text. We then explore a closely related idea, mathematical induction, via an example and an exercise.%
 \end{introduction}%
 \begin{definition}{}{x:definition:def_naturalnumbers}%
-\index{natural numbers} \index{\(\N\)} The collection of \terminology{natural numbers} is denoted by \(\N\), and is the set%
+\index{natural numbers}\index{\(\N\)} The collection of \terminology{natural numbers} is denoted by \(\N\), and is the set%
 \begin{equation*}
 \N = \set{1, 2, 3, \ldots}\text{.}
 \end{equation*}
@@ -667,10 +755,11 @@ By \(\N_0\) we mean the set \(\N\cup \set{0} = \set{0, 1, 2, 3, \ldots}\).%
 \end{definition}
 In some sense, the fundamental properties of \(\N\) are (a) there is a smallest natural number, and (b) there is always a next natural number. (A model of \(\N\) via set theory and the Peano axioms describes this order using \emph{successors}.) A consequence of the Peano postulates is the \emph{well-ordering principle}, which we take as an axiom.%
 \begin{axiom}{Well-Ordering Principle.}{}{x:axiom:axiom_wellordering}%
-\index{Well-Ordering Axiom} Every nonempty subset of \(\N_0\) contains a least (smallest) element under the usual ordering, \(\le\).%
+\index{Well-Ordering Axiom} Every nonempty subset of \(\N_0\) contains a least (smallest) element under the usual ordering, \(\le\)\footnotemark{}.%
 \end{axiom}
+\footnotetext[1]{Our word choice is suggestive. In fact, other orderings do exist, and while the set of nonnegative real numbers \(\mathbb{R}\) does not satisfy the well-ordering principle under the usual ordering \(\le\), the Well Ordering Axiom asserts that there exists a well ordering on \emph{any} set, including \(\mathbb{R}\). Accepting this axiom is equivalent to accepting the \href{https://plato.stanford.edu/entries/axiom-choice/}{axiom of choice}.\label{g:fn:idm269943758720}}%
 \begin{definition}{}{x:definition:def_integers}%
-\index{integers} \index{\(\Z\)} The set of integers consists of the positive and negative natural numbers, together with zero, and is denoted by \(\Z\):%
+\index{integers}\index{\(\Z\)} The set of integers consists of the positive and negative natural numbers, together with zero, and is denoted by \(\Z\):%
 \begin{equation*}
 \Z = \set{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots}\text{.}
 \end{equation*}
@@ -679,21 +768,20 @@ In some sense, the fundamental properties of \(\N\) are (a) there is a smallest 
 \begin{assemblage}{Mathematical Induction.}{x:assemblage:induction}%
 Let \(P(m)\) be a statement about the natural number \(m\)\footnotemark{}. Let \(k_0\in \N\) be such that the statement \(P(k_0)\) is true (the \emph{base case}), and suppose there is an \(n\ge k_0\) such that for all \(k\) satisfying \(k_0 \le k \le n\), \(P(k)\) is true (the \emph{inductive hypothesis}). Then \(P(n+1)\) is true, and thus \(P(m)\) is true for all \(m\ge k_0\) (the \emph{inductive step}).%
 \end{assemblage}
-\footnotetext[1]{Sample statements could include ``\(m\) is really interesting'' or ``\(3m^2 + m + 2\) is even''.\label{g:fn:idm416656474368}}%
+\footnotetext[2]{Sample statements could include ``\(m\) is really interesting'' or ``\(3m^2 + m + 2\) is even''.\label{g:fn:idm269943750528}}%
 Mathematical induction is like climbing an infinite staircase. The \emph{base case} tells us that we can take a first step on the staircase (\(k_0\)). In the \emph{inductive hypothesis}, we assume we can take all the steps up to a certain height (\(n\)). In the \emph{inductive step}, we prove that this allows us to take the \((n+1)\)st step.%
 \par
 Thus, if we can take step \(k_0\), we can (by the inductive step) take step \(k_0 + 1\). And since we can take step \(k_0 + 1\), we can (again by the inductive step) take step \(k_0 + 2\). And so on, forever (or, if the notion of actual infinity makes you uncomfortable, as far as we want to go).%
 \par
 It can be proved that the principle of mathematical induction is logically equivalent to the well-ordering principle. That is, if we assume either one to be true, we can deduce the other. We will generally take the well-ordering principle on \(\N\) to be an axiom, and treat induction as a theorem.%
-\begin{assemblage}{Example.}{g:assemblage:idm416604619760}%
+\begin{assemblage}{Example.}{g:assemblage:idm269943738080}%
 For all \(n \ge 1\),%
 \begin{equation*}
 1+ 2 + 3 + \cdots + n = \frac{n(n+1)}{2}\text{.}
 \end{equation*}
 %
-\end{assemblage}
-\begin{proofptx}{}{g:proof:idm416604617184}
-\emph{Base case:} When \(n = 1\), the equation \(1 = \frac{1\cdot (1+1)}{2}\) is true.%
+\par
+\emph{Proof.} Base case: When \(n = 1\), the equation \(1 = \frac{1\cdot (1+1)}{2}\) is true.%
 \par
 \emph{Inductive Hypothesis:} Assume that there exists a \(n\) such that whenever \(k \le n\), the equation%
 \begin{equation}
@@ -711,8 +799,6 @@ We begin on the left-hand side of \hyperref[x:men:ex_indhyp]{(\ref{x:men:ex_indh
 \begin{equation}
 1+ 2 + 3 + \cdots + n + (n+1) = \left[\frac{n(n+1)}{2}\right] + (n+1)\text{.}\label{x:men:ex_indstep1}
 \end{equation}
-%
-\par
 Through the use of straightforward algebra, the right-hand side becomes%
 \begin{equation}
 \frac{n(n+1)}{2} + \frac{2(n+1)}{2} = \frac{n(n+1) + 2(n+1)}{2} = \frac{(n+1)(n+2)}{2}\text{.}\label{x:men:ex_indstep2}
@@ -724,18 +810,40 @@ Putting \hyperref[x:men:ex_indstep1]{(\ref{x:men:ex_indstep1})} and \hyperref[x:
 1+ 2 + 3 + \cdots + n + (n+1) = \frac{(n+1)((n+1)+1)}{2}\text{,}
 \end{equation*}
 which is exactly the goal we stated in \hyperref[x:men:ex_indgoal]{(\ref{x:men:ex_indgoal})}.%
-\end{proofptx}
+\end{assemblage}
 We conclude with opportunities to practice induction.%
-\begin{exploration}{Induction on the sum of cubes.}{g:exploration:idm416604604352}%
+\begin{exploration}{Induction on the sum of cubes.}{g:exploration:idm269943726816}%
 Prove that the sum of the first \(n\) cubes is \(\dfrac{n^2(n+1)^2}{4}\).%
-\end{exploration}
-\begin{inlineexercise}{de Moivre's formula.}{g:exercise:idm416604601792}%
-Prove that, for all \(n\ge 1\), \((\cos(x) + i\sin (x))^n = \cos(nx) + i \sin(nx)\).%
 \par\smallskip%
-\noindent\textbf{Hint}.\hypertarget{g:hint:idm416604599376}{}\quad{}You'll need some trig identities!%
-\end{inlineexercise}
-\begin{conclusion}{}%
-Write a conclusion!\end{conclusion}%
+\noindent\textbf{Solution}.\hypertarget{g:solution:idm269943724640}{}\quad{}We wish to prove that%
+\begin{equation*}
+1^3 + 2^3 + 3^3 + \cdots + n^3 = \frac{n^2(n+1)^2}{4}.
+\end{equation*}
+%
+\par
+\emph{Base Case:} When \(n=1\), the theorem clearly holds.%
+\par
+\emph{Inductive Hypothesis:} Assume for all \(k\le n\) that we have%
+\begin{equation}
+1^3 + 2^3 + 3^3 + \cdots + k^3 = \frac{k^2(k+1)^2}{4}.\label{x:men:eq-sum-of-cubes-ind-hyp}
+\end{equation}
+%
+\par
+\emph{Inductive Step:} We wish to prove that%
+\begin{equation*}
+1^3 + 2^3 + 3^3 + \cdots + n^3 +(n+1)^3 = \frac{(n+1)^2((n+1)+1)^2}{4} = \frac{(n+1)^2(n+2)^2}{4}.
+\end{equation*}
+We apply \hyperref[x:men:eq-sum-of-cubes-ind-hyp]{(\ref{x:men:eq-sum-of-cubes-ind-hyp})} to obtain%
+\begin{align*}
+1^3 + 2^3 + 3^3 + \cdots + n^3 +(n+1)^3 \amp = \frac{n^2(n+1)^2}{4} + (n+1)^3 \\
+\amp = \frac{n^2(n+1)^2}{4} + \frac{4(n+1)^3}{4}\\
+\amp = \frac{n^2(n+1)^2 + 4(n+1)^3}{4}\\
+\amp = \frac{(n+1)^2 (n^2+4(n+1))}{4}\\
+\amp = \frac{(n+1)^2 (n^2+4n+4)}{4}\\
+\amp = \frac{(n+1)^2 (n+2)^2}{4}.
+\end{align*}
+The theorem is proved.%
+\end{exploration}
 \end{sectionptx}
 %
 %
@@ -745,11 +853,11 @@ Write a conclusion!\end{conclusion}%
 %
 \begin{sectionptx}{Divisibility in the integers}{}{Divisibility in the integers}{}{}{x:section:SubSec-Divisibility-in-the-Integers}
 In this section, we begin to explore some of the arithmetic and algebraic properties of \(\Z\). One of the primary goals of this sections is to formalize definitions that you've been using and have an intuitive understanding of. At first glance, this might seem to add an unnecessary layer of complication. However, it will be abundantly clear as we move forward that a formalized mathematical language and notation are necessary to extend these properties to a more abstract setting. We begin with a twist on a familiar notion.%
-\begin{definition}{}{g:definition:idm416604595264}%
-Let \(a,b\in \Z\). We say that \(a\) \terminology{divides} \(b\), and write \(a\mid b\), if there is an integer \(c\) such that \(ac = b\). If no such \(c\in Z\) exists, we write \(a\nmid b\).%
+\begin{definition}{}{g:definition:idm269943713920}%
+Let \(a,b\in \Z\). We say that \(a\) \terminology{divides} \(b\), and write \(a\mid b\), if there is an integer \(c\) such that \(ac = b\). If no such \(c\in \Z\) exists, we write \(a\nmid b\).%
 \end{definition}
 Note that the symbol \(|\) is a \emph{verb}; it is therefore correct to say, e.g., \(2|4\), as 2 \emph{does} divide 4. However, it is an abuse of notation to say that \(2\mid 4 = 2\). Instead, we likely mean \(4\div 2 = 2\) or \(\frac{4}{2} = 2\) (though we will not deal in fractions just yet).%
-\begin{inlineexercise}{}{g:exercise:idm416604586704}%
+\begin{investigation}{}{g:investigation:idm269943706240}%
 Determine whether \(a\mid b\) if:%
 \begin{enumerate}
 \item{}\(a = 3\), \(b = -15\)%
@@ -758,31 +866,33 @@ Determine whether \(a\mid b\) if:%
 \item{}\(a = 0\), \(b = 0\)%
 \end{enumerate}
 %
-\end{inlineexercise}
-\begin{theorem}{}{}{g:theorem:idm416604577888}%
+\end{investigation}
+\begin{theorem}{}{}{g:theorem:idm269943698176}%
 Let \(a,b\), and \(c\) be integers. If \(a\mid b\) and \(a\mid c\), then \(a\mid (b+c)\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416604574544}
+\begin{proofptx}{}{g:proof:idm269943695104}
 Our hypothesis means that there exist integers \(k_1\) and \(k_2\) such that \(b = a k_1\) and \(c = a k_2\). Then \(b+c = a k_1 + a k_2 = a(k_1 + k_2)\). Let \(k' = k_1 + k_2\), and observe that \(k'\) is an integer; then \(b+c = a k'\), so \(a\mid (b+c)\).%
 \end{proofptx}
-\begin{theorem}{}{}{g:theorem:idm416604569840}%
+\begin{theorem}{}{}{g:theorem:idm269943690880}%
 Let \(a\), \(b\), and \(c\) be integers. If \(a\mid b\), then \(a\mid bc\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416604566496}
+\begin{proofptx}{}{g:proof:idm269943687808}
 Our hypotheses means there is an integer \(k\) for which \(b = ak\). Then \(bc = (ak)c = a(kc)\). We observe that \(k' = kc\) is an integer, so \(bc = ak'\), and therefore \(a\mid bc\).%
 \end{proofptx}
-\begin{definition}{}{g:definition:idm416604563056}%
-Let \(a,b\in \Z\) such that \(a\) and \(b\) are not both 0. A \terminology{greatest common divisor} of \(a\) and \(b\), denoted \(\gcd(a,b)\), is a natural number \(d\) satisfying \textbackslash{}marginpar\textbraceleft{}\textbackslash{}setstretch\textbraceleft{}0.7\textbraceright{}\terminology{This formalizes the idea of greatest common factors that is introduced around \href{http://www.corestandards.org/Math/Content/6/NS/B/4/}{sixth grade} .}\textbraceright{}%
+\begin{definition}{}{x:definition:gcd-definition}%
+Let \(a,b\in \Z\) such that \(a\) and \(b\) are not both 0. A \terminology{greatest common divisor} of \(a\) and \(b\), denoted \(\gcd(a,b)\), is a natural number \(d\) satisfying%
 \begin{enumerate}
 \item{}\(d\mid a\) and \(d\mid b\)%
 \item{}if \(e\in \N\) and \(e\mid a\) and \(e\mid b\), then \(e\mid d\).%
 \end{enumerate}
 %
 \par
-If \(\gcd(a,b) = 1\), we say that \(a\) and \(b\) are \terminology{relatively prime} or \terminology{coprime}.%
+If \(\gcd(a,b) = 1\), we say that \(a\) and \(b\) are \terminology{relatively prime} or \terminology{coprime}. \begin{aside}{}{g:aside:idm269943674240}%
+\end{aside}
+%
 \end{definition}
-This definition may be different than the one you are used to, which likely stated that \(d \ge e\). It can be proved using the order relations of \(\Z\) that the definition given here is equivalent to that one. However, we will prefer this definition, as it generalizes naturally to other number systems which do not have an order relation like \(\Z\).%
-\begin{inlineexercise}{}{g:exercise:idm416604548016}%
+This definition may be different than the one you are used to, which likely stated that \(d \ge e\) rather than condition 2 in \hyperref[x:definition:gcd-definition]{Definition~\ref{x:definition:gcd-definition}}. It can be proved using the order relations of \(\Z\) that the definition given here is equivalent to that one. However, we will prefer this definition, as it generalizes naturally to other number systems which do not have an order relation like \(\Z\).%
+\begin{activity}{}{g:activity:idm269943670832}%
 Compute \(\gcd(a,b)\) if:%
 \begin{enumerate}
 \item{}\(a = 123\), \(b = 141\)%
@@ -790,14 +900,15 @@ Compute \(\gcd(a,b)\) if:%
 \item{}\(a= 85\), \(b = 48\)%
 \end{enumerate}
 %
-\end{inlineexercise}
+\end{activity}
 As we saw above, not all pairs of integers \(a,b\) satisfy \(a\mid b\) or \(b\mid a\). However, \href{http://www.corestandards.org/Math/Content/4/NBT/B/6/}{our experience in elementary mathematics does apply: there is often something left over (a remainder)}. The following theorem formalizes this idea for \(a,b\in \N\).%
-\begin{theorem}{The Division algorithm.}{}{x:theorem:thm_divalg}%
+\begin{theorem}{The Division Algorithm.}{}{x:theorem:thm_divalg}%
 Let \(a,b\in \N\). Then there exist unique integers \(q,r\) such that \(a = bq + r\), where \(0 \le r \lt b\).%
-\par
-\emph{Note that this theorem has two parts: existence and uniqueness. Don't try to do them both at once!}%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416604533248}
+\begin{aside}{Warning!}{g:aside:idm269943657696}%
+This theorem has two parts: existence and uniqueness. Do not try to prove them both at the same time.%
+\end{aside}
+\begin{proofptx}{}{g:proof:idm269943656336}
 First, assume that \(a \lt b\). Then \(q = 0\) and \(r = a\) are sufficient. If \(a = b\), then \(q = 1\) and \(r = 0\) will work.%
 \par
 Now, assume that \(a > b\). Then the set \(S = \setof{s\in\N}{a-bs \ge 0}\) is nonempty. Further, note that \(S\) has a largest element: every element \(x\in S\) satisfies \(x \le a\), since \(a,b\in\N\). Let \(q\) be the largest element of \(S\), and set \(r = a - bq\).%
@@ -813,7 +924,7 @@ Thus, \(r' = r\), so \(b(q-q') = 0\), and since \(b > 0\), \(q - q'= 0\), i.e., 
 \begin{theorem}{}{}{x:theorem:theorem_23lemmageneralization}%
 Let \(a,b,c,d\in \Z\). If \(a = b+c\) and \(d\) divides any two of \(a,b,c\), then \(d\) divides the third.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416604507680}
+\begin{proofptx}{}{g:proof:idm269943630720}
 We consider two cases.%
 \par
 \emph{Case 1:} Assume without loss of generality that \(d|a\) and \(d|b\). Then there are integers \(k_1, k_2\) such that \(d k_1 = a\) and \(d k_2 = b\). We observe that \(c = a - b = d k_1 - d k_2 = d(k_1 - k_2)\), so \(d|c\).%
@@ -823,34 +934,33 @@ We consider two cases.%
 \begin{theorem}{}{}{x:theorem:theorem_gcdremainder}%
 Let \(a,b,n\), and \(r\) be integers with \(a\) and \(b\) not both 0. If \(a = n b + r\), then \(\gcd(a,b) = \gcd(b,r)\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416604494992}
+\begin{proofptx}{}{g:proof:idm269943618032}
 By the previous theorem, if \(d\) is a common divisor of \(a\) and \(b\), then \(d\) also divides \(r\), and \(d \le \gcd(b,r)\). Suppose \(d = \gcd(a,b)\), and \(\gcd(b,r)= e > d\) is an integer that divides both \(b\) and \(r\), say \(e q_1 = b\) and \(e q_2 = r\). Then \(a = n b + r = n (e q_1) + (e q_2)= e (n q_1 + q_2)\), so \(e|a\), contradicting the assumption that \(d = \gcd(a,b)\). Thus \(e = \gcd(b,r) \le d\), hence \(e = d\).%
 \end{proofptx}
-\begin{inlineexercise}{}{g:exercise:idm416604486880}%
-As an illustration of the above theorem, note that%
+\begin{activity}{}{g:activity:idm269943609920}%
+As an illustration of \hyperref[x:theorem:theorem_gcdremainder]{Theorem~\ref{x:theorem:theorem_gcdremainder}}, note that%
 \begin{align*}
-56 \amp = 3\cdot 12 + 8,\\
+56 \amp = 4\cdot 12 + 8,\\
 12 \amp = 1\cdot 8 +4,\\
 8 \amp = 2\cdot 4 + 0\text{.}
 \end{align*}
 %
 \par
-Use the preceding theorem to show that if \(a = 56\) and \(b = 12\), then \(\gcd(56, 12) = \gcd(8, 4) = 3\).%
+Use the preceding theorem to show that if \(a = 56\) and \(b = 12\), then \(\gcd(56, 12) = \gcd(8, 4) = 4\).%
 \par\smallskip%
-\noindent\textbf{Solution}.\hypertarget{g:solution:idm416604482256}{}\quad{}Applying the previous theorem to line 1 tells us that \(\gcd(51,15) = \gcd(15, 6)\). The second line tells us that \(\gcd(15,6) = \gcd(6,3)\). The third line tells us that \(\gcd(6,3) = \gcd(3,0) = 3\). The result follows by transitivity.%
-\end{inlineexercise}
-\begin{inlineexercise}{}{g:exercise:idm416604479808}%
-\footnotemark{} (Euclidean algorithm.) Using the previous theorem and the Division algorithm successively, devise a procedure for finding the greatest common divisor of two integers.%
+\noindent\textbf{Solution}.\hypertarget{g:solution:idm269943604784}{}\quad{}Applying the previous theorem to line 1 tells us that \(\gcd(51,15) = \gcd(15, 6)\). The second line tells us that \(\gcd(15,6) = \gcd(6,3)\). The third line tells us that \(\gcd(6,3) = \gcd(3,0) = 3\). The result follows by transitivity.%
+\end{activity}
+\begin{investigation}{(Euclidean Algorithm).}{g:investigation:idm269943602336}%
+Using \hyperref[x:theorem:thm_divalg]{Theorem~\ref{x:theorem:thm_divalg}} and \hyperref[x:theorem:theorem_gcdremainder]{Theorem~\ref{x:theorem:theorem_gcdremainder}}, devise a procedure for finding the greatest common divisor of two integers.%
 \par\smallskip%
-\noindent\textbf{Solution}.\hypertarget{g:solution:idm416604477552}{}\quad{}Let \(a,b\in \N\). Write \(a = bq_1+r_1\). By \hyperref[x:theorem:theorem_gcdremainder]{Theorem~\ref{x:theorem:theorem_gcdremainder}}, \((a,b) = (b,r_1)\).%
+\noindent\textbf{Solution}.\hypertarget{g:solution:idm269943599680}{}\quad{}Let \(a,b\in \N\). Write \(a = bq_1+r_1\). By \hyperref[x:theorem:theorem_gcdremainder]{Theorem~\ref{x:theorem:theorem_gcdremainder}}, \((a,b) = (b,r_1)\).%
 \par
 Then, write \(b = r_1 q_2 + r_2\) using the Division algorithm. Observe \((b,r_1) = (r_1,r_2)\). Continue until there is a \(k\) for which \(r_k = 0\), so \((r_k,r_{k-1}) = r_{k-1}\). Then \(r_{k-1}= (r_k, r_{k-1}) = (r_{k-1},r_{k-2}) = \cdots = (a,b)\).%
-\end{inlineexercise}
-\footnotetext[1]{The lead-up to the Euclidean algorithm has been adapted from~{(((Unresolved xref, reference "NTI"; check spelling or use "provisional" attribute)))}\hyperlink{}{~}.\label{g:fn:idm416604479136}}%
-\begin{inlineexercise}{}{g:exercise:idm416604471520}%
+\end{investigation}
+\begin{activity}{}{g:activity:idm269943593648}%
 Use the Euclidean algorithm to compute \(\gcd(18489,17304)\).%
 \par\smallskip%
-\noindent\textbf{Solution}.\hypertarget{g:solution:idm416604469936}{}\quad{}We write%
+\noindent\textbf{Solution}.\hypertarget{g:solution:idm269943592064}{}\quad{}We write%
 \begin{align*}
 18489 \amp = 17304 \cdot 1 +1185\\
 17304 \amp = 1185\cdot 14 +714\\
@@ -864,7 +974,7 @@ Use the Euclidean algorithm to compute \(\gcd(18489,17304)\).%
 %
 \par
 So \(\gcd(18489,17304)=3\).%
-\end{inlineexercise}
+\end{activity}
 The following identity provides a useful characterization of the greatest common divisor of two integers, not both zero.%
 \begin{theorem}{Bézout's Identity.}{}{x:theorem:theorem_bezoutint}%
 For any integers \(a\) and \(b\) not both 0, there are integers \(x\) and \(y\) such that%
@@ -873,7 +983,7 @@ ax + by = \gcd(a,b)\text{.}
 \end{equation*}
 %
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416658557776}
+\begin{proofptx}{}{g:proof:idm269943581600}
 If, e.g., \(a = 0\) and \(b\ne 0\), then \(\gcd(a,b) = b\) and \(x=0,y=1\) suffices. If \(a = b\), then \(\gcd(a,b) = a = b\), so \(x = 0, y = 1\) suffices.%
 \par
 So, suppose \(a,b\ne 0\), and let \(d = \gcd(a,b)\). Without loss of generality assume \(|a| > |b|\). The EA provides a sequence of integers \(r_1, r_2, \ldots,
@@ -891,7 +1001,7 @@ where \(0\le r_i \lt  |b|\) and \(r_k \ne 0\). Then \(r_k = \gcd(a,b)\) and we m
 \begin{theorem}{}{}{x:theorem:theorem_relprimecancel}%
 Let \(a, b\), and \(c\) be integers. If \(a|bc\) and \(\gcd(a,b) = 1\), then \(a|c\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416604465088}
+\begin{proofptx}{}{g:proof:idm269943566288}
 Suppose \(\gcd(a,b) = 1\). By \hyperref[x:theorem:theorem_bezoutint]{Theorem~\ref{x:theorem:theorem_bezoutint}}, there are integers \(x\) and \(y\) such that%
 \begin{equation*}
 ax+by = 1\text{.}
@@ -919,38 +1029,39 @@ so \(a|c\).%
 %
 \begin{sectionptx}{Primes and Factorization}{}{Primes and Factorization}{}{}{x:section:SubSec-Primes-and-Factorization}
 As described in the Introduction, our main goal is to build a deep structural understanding of the notion of \emph{factorization}. That is, splitting objects (e.g., numbers, polynomials, matrices) into products of other numbers. One of the most familiar examples of this process involves factoring integers into products of primes.%
-\begin{definition}{}{g:definition:idm416604455600}%
+\begin{definition}{}{g:definition:idm269943556800}%
 Let \(p > 1\) be a natural number. We say \(p\) is \terminology{prime} if whenever \(a,b\in \Z\) such that \(p\mid ab\), either \(p\mid a\) or \(p\mid b\).%
 \par
 A natural number \(m > 1\) is said to be \terminology{composite} if it is not prime.%
 \end{definition}
+This is almost certainly not the definition of prime that you are familiar with from your school days. However, it is often more useful than the usual definition. And, as \hyperref[x:theorem:theorem_euclidslemma]{Theorem~\ref{x:theorem:theorem_euclidslemma}} demonstrates, the two notions are equivalent.%
 \begin{theorem}{}{}{x:theorem:theorem_euclidslemma}%
 Given any \(p\in \N\), \(p > 1\), \(p\) is prime if and only if whenever \(m\in \N\) divides \(p\), either \(m = p\) or \(m = 1\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416604445520}
+\begin{proofptx}{}{g:proof:idm269943545552}
 Let \(p\) be prime and suppose \(m\in \N\) divides \(p\), so \(p = mk\) for some \(k\in \N\). By definition, \(p|m\) or \(p|k\). If \(p|m\), then \(pj = m\), so \(p = pjk\), and \(jk=1\), which means \(j=k=1\) and thus \(m=p\). If \(p|k\), then \(pj=k\), so \(p = mpj\), and \(mj=1\), so \(m = j = 1\).%
 \par
 Conversely, assume \(p\in \N\) has the property that whenever an integer \(m\) exists with \(m|p\), then \(m= p\) or \(m =1\). Suppose \(p|ab\), so there exists a \(k\in\N\) such that \(pk = ab\). Note that if \(\gcd(a,p) = d > 1\), then \(d|p\), and so \(d = p\), and then \(p|a\). If \(\gcd(a,p) = 1\), then by Bézout's Identity there are integers \(x\) and \(y\) such that \(ax + py = 1\), so we may multiply by \(b\) to obtain \(abx + pby = b\), whence \(p|b\).%
 \end{proofptx}
-\begin{question}{}{x:question:question_compositecharacterization}%
-Using the previous theorem as a guide, give a biconditional characterization for composite numbers. That is, fill in the blank: ``A number \(m\in\N\) is composite if and only if \textbackslash{}makebox[0.75in]\textbraceleft{}\textbackslash{}hrulefill\textbraceright{}.''%
+\begin{exploration}{}{x:exploration:question_compositecharacterization}%
+Using \hyperref[x:theorem:theorem_euclidslemma]{Theorem~\ref{x:theorem:theorem_euclidslemma}} as a guide, give a biconditional characterization for composite numbers. That is, finish the sentence: ``A number \(m\in\N\) is composite if and only if ....''%
 \par\smallskip%
-\noindent\textbf{Answer}.\hypertarget{g:answer:idm416604426080}{}\quad{}``A number \(m\in\N\) is composite if and only if there exist natural numbers \(a,b\ne 1\) such that \(m = ab\).''%
-\end{question}
-\begin{theorem}{}{}{g:theorem:idm416604423376}%
+\noindent\textbf{Answer}.\hypertarget{g:answer:idm269943525664}{}\quad{}``A number \(m\in\N\) is composite if and only if there exist natural numbers \(a,b\ne 1\) such that \(m = ab\).''%
+\end{exploration}
+\begin{theorem}{}{}{g:theorem:idm269943522960}%
 Let \(a\in \N\) such that \(a > 1\). Then there is a prime \(p\) such that \(p\mid a\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416604420480}
+\begin{proofptx}{}{g:proof:idm269943520016}
 We proceed by mathematical induction. Note that when \(a = 2\), the statement holds.%
 \par
-Assume that there is a \(k\in\N\) such that for all \(a\le k\), the statement holds. Consider \(k+1\). If \(k+1\) is prime, we are done. If not, then \(k+1\) is composite, and by the answer to \hyperref[x:question:question_compositecharacterization]{Question~\ref{x:question:question_compositecharacterization}}, there are integers \(a,b\ne 1\) such that \(k+1 = ab\). By induction, there is a prime \(p\) such that \(p|a\), so \(p|k+1\).%
+Assume that there is a \(k\in\N\) such that for all \(a\le k\), the statement holds. Consider \(k+1\). If \(k+1\) is prime, we are done. If not, then \(k+1\) is composite, and by the answer to \hyperref[x:exploration:question_compositecharacterization]{Question~\ref{x:exploration:question_compositecharacterization}}, there are integers \(a,b\ne 1\) such that \(k+1 = ab\). By induction, there is a prime \(p\) such that \(p|a\), so \(p|k+1\).%
 \end{proofptx}
-Our first major theorem of the semester makes two claims: that positive integers greater than 1 \emph{can} be factored into products of primes, and that this factorization can happen in only one way. As the semester progresses, we will see other theorems like this one, and catch glimpses of other ways to think about the \emph{unique factorization property}.%
-\begin{theorem}{Fundamental Theorem of Arithmetic.}{}{g:theorem:idm416604412064}%
+Our first major theorem makes two claims: that positive integers greater than 1 \emph{can} be factored into products of primes, and that this factorization can happen in only one way. As the semester progresses, we will see other theorems like this one, and catch glimpses of other ways to think about the \emph{unique factorization property}.%
+\begin{assemblage}{Fundamental Theorem of Arithmetic.}{g:assemblage:idm269943511616}%
 Every natural number greater than 1 is either a prime number or it can be expressed as a finite product of prime numbers where the expression is unique up to the order of the factors.%
-\end{theorem}
-\begin{theorem}{}{}{g:theorem:idm416604410176}%
-(Fundamental Theorem of Arithmetic\textendash{}Existence Part.)\footnotemark{} Every natural number \(n > 1\) is either a prime number or it can be expressed as a finite product of prime numbers. That is, for every natural number \(n > 1\), there exist primes \(p_1, p_2, \ldots,
+\end{assemblage}
+ The proof is broken into two parts: existence (\hyperref[x:theorem:theorem_FTAexistence]{Theorem~\ref{x:theorem:theorem_FTAexistence}}) and uniqueness (\hyperref[x:theorem:theorem_FTAuniqueness]{Theorem~\ref{x:theorem:theorem_FTAuniqueness}}). \begin{theorem}{Fundamental Theorem of Arithmetic\textendash{}Existence Part\footnotemark{}.}{}{x:theorem:theorem_FTAexistence}%
+Every natural number \(n > 1\) is either a prime number or it can be expressed as a finite product of prime numbers. That is, for every natural number \(n > 1\), there exist primes \(p_1, p_2, \ldots,
 p_m\) and natural numbers \(r_1, r_2, \ldots, r_m\) such that%
 \begin{equation*}
 n = p_1^{r_1} p_2^{r_2} \cdots p_m^{r_m}\text{.}
@@ -958,17 +1069,17 @@ n = p_1^{r_1} p_2^{r_2} \cdots p_m^{r_m}\text{.}
 %
 \textbf{Hint}.\quad{}Use the Well-Ordering Principle (or something equivalent to it.)%
 \end{theorem}
-\footnotetext[1]{This approach to the Fundamental Theorem of Arithmetic is adapted from~{(((Unresolved xref, reference "NTI"; check spelling or use "provisional" attribute)))}\hyperlink{}{~}.\label{g:fn:idm416604409040}}%
-\begin{proofptx}{}{g:proof:idm416604404192}
+\footnotetext[1]{This approach to the Fundamental Theorem of Arithmetic is adapted from~[1.3.1].\label{g:fn:idm269943507392}}%
+\begin{proofptx}{}{g:proof:idm269943501872}
 It is enough to show that, if \(n > 1\), we may write \(n = p_1 p_2 \cdots p_k\), where the \(p_i\)'s are not necessarily distinct primes. Then we can collect the common primes and write them with exponent notation.%
 \par
 Note that when \(n = 2\), there is such an expression, so let \(k > 2\) be the least positive integer that fails to be expressed as above. We note that \(k\) cannot be prime, or it could be expressed as above. Thus, by Theorem 2.1, there is a prime \(p\) such that \(k = p b\), where \(1 \lt p, b \lt k\). Since \(k\) was the least positive integer that cannot be factored as a product of primes, \(b\) has a prime factorization. But then so does \(k\), a contradiction.%
 \end{proofptx}
-\begin{lemma}{}{}{g:lemma:idm416604397344}%
+\begin{lemma}{}{}{g:lemma:idm269943495024}%
 Let \(p\) and \(q_1, q_2,\ldots,
 q_n\) all be primes and let \(k\) be a natural number such that \(pk = q_1 q_2 \ldots q_n\). Then \(p = q_i\) for some \(i\).%
 \end{lemma}
-\begin{proofptx}{}{g:proof:idm416604393520}
+\begin{proofptx}{}{g:proof:idm269943491200}
 We first state a claim that will be useful.%
 \par
 \emph{Claim 1:} If \(p,q\) are primes such that \(p|q\), then \(p = q\).%
@@ -980,18 +1091,18 @@ Now assume that \(pk = q_1 q_2 \cdots q_n = (q_1 q_2 \cdots q_{n-1}) q_n\). If \
 \par
 Repeating this process, we see that either \(p|q_i\) for some \(i > 2\), or \(p|q_1 q_2\). Now the definition of a prime guarantees that \(p|q_1\) or \(p|q_2\), in which case Claim 1 requires that \(p = q_1\) or \(p = q_2\).%
 \end{proofptx}
-\begin{theorem}{}{}{g:theorem:idm416604381392}%
-(Fundamental Theorem of Arithmetic\textendash{}Uniqueness part.) Let \(n\) be a natural number. Let \(\set{p_1,p_2,\ldots,p_m}\) and \(\set{q_1,q_2,\ldots,q_s}\) be sets of primes with \(p_i\ne p_j\) if \(i\ne j\) and \(q_i\ne q_j\) if \(i\ne j\). Let \(\set{r_1,r_2,\ldots,r_m}\) and \(\set{t_1,t_2,\ldots,t_s}\) be sets of natural numbers such that%
+\begin{theorem}{Fundamental Theorem of Arithmetic\textendash{}Uniqueness Part.}{}{x:theorem:theorem_FTAuniqueness}%
+Let \(n\) be a natural number. Let \(\set{p_1,p_2,\ldots,p_m}\) and \(\set{q_1,q_2,\ldots,q_s}\) be sets of primes with \(p_i\ne p_j\) if \(i\ne j\) and \(q_i\ne q_j\) if \(i\ne j\). Let \(\set{r_1,r_2,\ldots,r_m}\) and \(\set{t_1,t_2,\ldots,t_s}\) be sets of natural numbers such that%
 \begin{align*}
 n \amp = p_1^{r_1} p_2^{r_2} \cdots p_m^{r_m}\\
 \amp = q_1^{t_1} q_2^{t_2} \cdots q_s^{t_s}\text{.}
 \end{align*}
 %
 \par
-Then \(m = s\) and \(\set{p_1,p_2,\ldots,p_m} = \set{q_1,q_2,\ldots,q_s}\). That is, the sets of primes are equal but their elements are not necessarily listed in the same order; that is, \(p_i\) may or may not equal \(q_i\). Moreover, if \(p_i = q_j\), then \(r_i = t_j\). In other words, if we express the same natural number as a product of distinct primes, then the expressions are identical except for the ordering of the factors.%
+Then \(m = s\) and \(\set{p_1,p_2,\ldots,p_m} = \set{q_1,q_2,\ldots,q_s}\). That is, the sets of primes are equal but their elements are not necessarily listed in the same order (i.e., \(p_i\) may or may not equal \(q_i\)). Moreover, if \(p_i = q_j\), then \(r_i = t_j\). In other words, if we express the same natural number as a product of distinct primes, then the expressions are identical except for the ordering of the factors.%
 \textbf{Hint}.\quad{}Argue that the two sets are equal. Then argue that the exponents must also be equal.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416604370304}
+\begin{proofptx}{}{g:proof:idm269943467248}
 Without loss of generality, assume \(p_1 \lt  p_2 \lt  \cdots \lt  p_m\) and \(q_1 \lt  q_2 \lt  \cdots \lt  q_s\). Given a \(p_i\), we know that \(p_i | q_1^{t_1} q_2^{t_2} \cdots q_s^{t_s}\), which implies that \(p_i | q_j\) for some \(j\) by Claim 2 in the proof of Lemma 2.8. Further, Lemma 2.8 implies that \(p_i = q_j\), and similarly, given a \(q_j\), \(q_j = p_i\) for some \(i\). Thus, \(m =s\), and by the ordering of the \(p_i\)'s and \(q_j\)'s, we have \(p_i = q_j\), \(i = 1, 2, \ldots, m\). Therefore,%
 \begin{equation*}
 n = p_1^{r_1} p_2^{r_2} \cdots p_m^{r_m} = p_1^{t_1} p_2^{t_2} \cdots p_m^{t_m}\text{.}
@@ -1010,6 +1121,14 @@ p_i  | p_1^{r_1} p_2^{r_2} \cdots \hat{p}_i^{r_i} \cdots p_m^{r_m}\text{,}
 \end{equation*}
 from which \(p_i | p_j\) for some \(j\ne i\) by Lemma 2.8. This is a contradiction, so \(r_i = t_i\) for \(i = 1, 2, \ldots, m\).%
 \end{proofptx}
+%
+%
+\typeout{************************************************}
+\typeout{References 1.3 References}
+\typeout{************************************************}
+%
+\begin{references-subsection-numberless}{References}{}{References}{}{}{g:references:idm269943453440}
+D. Marshall, E. Odell, M. Starbird, \emph{Number Theory Through Inquiry}, MAA Textbooks, Mathematical Association of America, 2007\end{references-subsection-numberless}
 \end{sectionptx}
 %
 %
@@ -1019,10 +1138,10 @@ from which \(p_i | p_j\) for some \(j\ne i\) by Lemma 2.8. This is a contradicti
 %
 \begin{sectionptx}{The Integers modulo \(m\)}{}{The Integers modulo \(m\)}{}{}{x:section:SubSec-Integers-Mod-m}
 If you are familiar with 'military time' then you understand that eighteen hundred hours and 6:00pm are equivalent ways of representing the same time. Similarly, it is common knowledge that if it is 10:00am now, it will again be 10:00am in 24 hours (though on a different day). Whether you realize it or not, when you are working with time (in hours) you are working in the integers modulo 12, a concept that is rooted in the mathematical idea of equivalence classes.%
-\begin{definition}{}{g:definition:idm416604354112}%
+\begin{definition}{}{g:definition:idm269943449344}%
 Let \(S\) be a nonempty set. A \terminology{relation} \(R\) on \(S\) is a subset of \(S\times S\). If \(x,y\in S\) such that \((x,y)\in R\), we usually write \(xRy\) and say that \(x\) and \(y\) are \terminology{related under \(R\)}.%
 \end{definition}
-\begin{definition}{}{g:definition:idm416604347952}%
+\begin{definition}{}{g:definition:idm269943443184}%
 Let \(S\) be a nonempty set. We say a relation \(\sim\) on \(S\) is an \terminology{equivalence relation} if the following properties hold:%
 \begin{itemize}[label=\textbullet]
 \item{}\(\sim\) is \emph{reflexive}: if \(a\in S\), then \(a\sim a\).%
@@ -1037,27 +1156,27 @@ Given \(x\in S\), the set%
 \end{equation*}
 is called the \terminology{equivalence class of \(x\)}. Any element \(z\in \overline{x}\) is called a \terminology{representative} of the equivalence class.%
 \end{definition}
-\begin{inlineexercise}{}{g:exercise:idm416604336368}%
+\begin{activity}{}{g:activity:idm269943427872}%
 Prove that ``has the same birthday as'' is an equivalence relation on the set \(P\) of all people.%
 \par\smallskip%
-\noindent\textbf{Solution}.\hypertarget{g:solution:idm416604334320}{}\quad{}Given any \(x\in P\), clearly \(x\) has the same birthday as \(x\).%
+\noindent\textbf{Solution}.\hypertarget{g:solution:idm269943425824}{}\quad{}Given any \(x\in P\), clearly \(x\) has the same birthday as \(x\).%
 \par
 Moreover, if \(x,y\in P\) such that \(x\) has the same birthday as \(y\), then it is clear that \(y\) has the same birthday as \(x\).%
 \par
 Finally, if \(x,y,z\in P\) such that \(x\) has the same birthday as \(y\) and \(y\) has the same birthday as \(z\), then \(x\) must have the same birthday as \(z\).%
-\end{inlineexercise}
-\begin{question}{}{g:question:idm416660392480}%
+\end{activity}
+\begin{exploration}{}{g:exploration:idm269943417552}%
 What other relations can you think of? Write down one example and one non-example of an equivalence relation.%
-\end{question}
-\begin{inlineexercise}{}{g:exercise:idm416660391104}%
+\end{exploration}
+\begin{activity}{}{g:activity:idm269943416176}%
 Prove that \(\le\) is \emph{not} an equivalence relation on \(\Z\).%
 \par\smallskip%
-\noindent\textbf{Solution}.\hypertarget{g:solution:idm416660388704}{}\quad{}The relation \(\le\) fails the symmetry condition. As an example, note that \(2 \le 3\), but \(3\not\le 2\).%
-\end{inlineexercise}
-\begin{definition}{}{g:definition:idm416660386400}%
+\noindent\textbf{Solution}.\hypertarget{g:solution:idm269943413776}{}\quad{}The relation \(\le\) fails the symmetry condition. As an example, note that \(2 \le 3\), but \(3\not\le 2\).%
+\end{activity}
+\begin{definition}{}{g:definition:idm269943411472}%
 Let \(a,b\in \Z\) and \(m \in \N\), \(m > 1\). We say \terminology{\(a\) is congruent to \(b\) modulo \(m\)} if \(m\mid a-b\). We write \(a \equiv_m b\).%
 \end{definition}
-\begin{inlineexercise}{}{g:exercise:idm416660381648}%
+\begin{activity}{}{g:activity:idm269943406720}%
 Justify the following congruences.%
 \begin{enumerate}
 \item{}\(18 \equiv_{12} 6\)%
@@ -1066,21 +1185,21 @@ Justify the following congruences.%
 \item{}\(21 \equiv_{11} -1\)%
 \end{enumerate}
 %
-\end{inlineexercise}
-\begin{theorem}{}{}{g:theorem:idm416660373168}%
+\end{activity}
+\begin{theorem}{}{}{g:theorem:idm269943398240}%
 Given an integer \(m > 1\), congruence modulo \(m\) is an equivalence relation on \(\Z\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416660370624}
+\begin{proofptx}{}{g:proof:idm269943395696}
 Let \(a\in \Z\). Then \(m|a-a\), so \(a \equiv_m a\). Thus, \(\equiv_m\) is reflexive.%
 \par
 Let \(a,b\in \Z\) such that \(a\equiv_m b\). This means that \(m|a-b\), so there is some \(k\in \Z\) such that \(mk = a-b\). Then \(m(-k) = b-a\), so \(m|b-a\) and \(b \equiv_m a\). Thus, \(\equiv_m\) is symmetric.%
 \par
 Finally, let \(a,b,c\in \Z\) such that \(a\equiv_m b\) and \(b\equiv_m c\). Then \(m|a-b\) and \(m|b-c\), so there are integers \(k_1, k_2\) such that \(m k_1 = a-b\) and \(m k_2 = b-c\). Summing these equations yields \(m(k_1 + k_2) = (a-b) + (b-c) = a-c\), so \(m|a-c\) and \(a\equiv_m c\).%
 \end{proofptx}
-\begin{question}{}{g:question:idm416660358736}%
-What are the equivalence classes of \(\Z\) under the relation \(\equiv_5\)?%
+\begin{exploration}{}{g:exploration:idm269943383808}%
+Find all of the equivalence classes of \(\Z\) under the relation \(\equiv_5\).%
 \par\smallskip%
-\noindent\textbf{Answer}.\hypertarget{g:answer:idm416660356752}{}\quad{}The equivalence classes are%
+\noindent\textbf{Answer}.\hypertarget{g:answer:idm269943381808}{}\quad{}The equivalence classes are%
 \begin{align*}
 \overline{0} \amp = \setof{7k}{k\in\Z} = \set{\ldots, -5, 0, 5, 10, \ldots}\\
 \overline{1} \amp = \setof{7k+1}{k\in\Z} = \set{\ldots, -4, 1, 6, 11, \ldots}\\
@@ -1088,22 +1207,22 @@ What are the equivalence classes of \(\Z\) under the relation \(\equiv_5\)?%
 \overline{3} \amp = \setof{7k+3}{k\in\Z} = \set{\ldots, -2, 3, 8, 13, \ldots}\\
 \overline{4} \amp = \setof{7k+4}{k\in\Z} = \set{\ldots, -1, 4, 9, 14, \ldots}
 \end{align*}
-%
-\end{question}
-\label{g:notation:idm416660352912}%
-\begin{inlineexercise}{}{g:exercise:idm416660350800}%
+Since every integer is in one of the above equivalence classes, we know we have found them all.%
+\end{exploration}
+\label{g:notation:idm269943377856}%
+\begin{activity}{}{g:activity:idm269943375744}%
 List the elements of \(\Z_7\).%
-\end{inlineexercise}
-\begin{theorem}{}{}{g:theorem:idm416660349104}%
+\end{activity}
+\begin{theorem}{}{}{g:theorem:idm269943374048}%
 Let \(a,b, c,d\in \Z\) and \(m > 1\) such that \(a\equiv_m c\) and \(b\equiv_m d\). Then \(a+b \equiv_m c + d\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416660345728}
+\begin{proofptx}{}{g:proof:idm269943370672}
 Write \(mk_1 = a-c\) and \(m k_2 = b-d\) for some \(k_1,k_2\in \Z\). Then \(m(k_1 + k_2) = (a-c) + (b-d) = (a+b) - (c+d)\), so \(a+b \equiv_m c+d\).%
 \end{proofptx}
-\begin{theorem}{}{}{g:theorem:idm416660342768}%
+\begin{theorem}{}{}{g:theorem:idm269943367712}%
 Let \(a,b, c,d\in \Z\) and \(m > 1\) such that \(a\equiv_m c\) and \(b\equiv_m d\). Then \(ab \equiv_m c d\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416660339408}
+\begin{proofptx}{}{g:proof:idm269943364352}
 Write \(mk_1 = a-c\) and \(m k_2 = b-d\) for some \(k_1,k_2\in \Z\). Observe%
 \begin{align*}
 ab -cd \amp = ab - bc + bc - cd\\
@@ -1115,29 +1234,31 @@ ab -cd \amp = ab - bc + bc - cd\\
 \par
 Thus, \(m|ab-cd\) and \(ab \equiv_m cd\).%
 \end{proofptx}
-\begin{definition}{}{g:definition:idm416660333920}%
+\begin{definition}{}{g:definition:idm269943358864}%
 Let \(S\) be a set and \(\sim\) an equivalence relation on \(S\). Then a statement \(P\) about the equivalence classes of \(S\) is \terminology{well-defined} if the representative of the equivalence class does not matter. That is, whenever \(\overline{x} = \overline{y}\), \(P(\overline{x}) = P(\overline{y})\).%
 \end{definition}
 The previous exercises justify the following definitions.%
-\begin{definition}{}{g:definition:idm416660328656}%
+\begin{definition}{}{g:definition:idm269943353600}%
 Let \(m > 1\) and \(a,b\in \Z_m\). Then the following are well-defined operations on the equivalence classes:%
 \begin{enumerate}
-\item{}\emph{Addition modulo \(m\)}: \(\overline{a} + \overline{b} := \overline{a+b}\).\textbackslash{}marginpar\textbraceleft{}\textbackslash{}setstretch\textbraceleft{}0.7\textbraceright{}\emph{The symbol \(:=\) is often used to indicate that we are \emph{defining} the expression on the left to equal the expression on the right.}\textbraceright{}%
+\item{}\emph{Addition modulo \(m\)}: \(\overline{a} + \overline{b} := \overline{a+b}\). \begin{aside}{}{g:aside:idm269943349840}%
+\end{aside}
+%
 \item{}\emph{Multiplication modulo \(m\)}: \(\overline{a}\cdot \overline{b} := \overline{a\cdot b}\).%
 \end{enumerate}
 %
 \end{definition}
-\begin{question}{}{x:question:q_zmodmcancel}%
+\begin{investigation}{}{x:investigation:q_zmodmcancel}%
 Let \(\overline{a},\overline{b}\in \Z_m\) and \(m > 1\). If \(\overline{a}\cdot \overline{c} = \overline{b}\cdot \overline{c}\), is it true that \(\overline{a} = \overline{b}\)? If so, prove it. If not, find an example of when the statement fails to hold.%
 \par\smallskip%
-\noindent\textbf{Answer}.\hypertarget{g:answer:idm416660317328}{}\quad{}It is not true. For example, in \(\Z_{12}\), \(\overline{6}\cdot \overline{3} = \overline{6}\cdot\overline{1}\), but \(\overline{3}\ne \overline{1}\).%
-\end{question}
-\begin{theorem}{}{}{g:theorem:idm416660314976}%
+\noindent\textbf{Answer}.\hypertarget{g:answer:idm269943342272}{}\quad{}It is not true. For example, in \(\Z_{12}\), \(\overline{6}\cdot \overline{3} = \overline{6}\cdot\overline{1}\), but \(\overline{3}\ne \overline{1}\).%
+\end{investigation}
+\begin{theorem}{}{}{x:theorem:theorem_cancelrelprime}%
 Let \(a,b,c\), and \(m\) be integers with \(m > 1\) and \(\gcd(c,m)=1\). Then there is some \(x\in \Z\) such that \(\overline{c} \overline{x} = \overline{1}\).%
 \par
 Conclude that if \(\overline{a} \cdot\overline{c} = \overline{b}\cdot\overline{c}\) in \(\Z_m\) that \(\overline{a} = \overline{b}\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416660309408}
+\begin{proofptx}{}{g:proof:idm269943334016}
 We know that \(m|ac-bc\), i.e., that \(m|c(a-b)\). By \hyperref[x:theorem:theorem_relprimecancel]{Theorem~\ref{x:theorem:theorem_relprimecancel}}, \(m|a-b\).%
 \end{proofptx}
 \begin{theorem}{}{}{x:theorem:theorem_cancelinZp}%
@@ -1148,8 +1269,8 @@ Let \(p\in \N\) be prime and \(\overline{a},\overline{b},\overline{c}\in \Z_p\) 
 \end{enumerate}
 %
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416660299792}
-In \(\Z_p\), every nonzero equivalence class is represented by an \(x\) for which \(\gcd(x,p) = 1\). Apply the previous theorem.%
+\begin{proofptx}{}{g:proof:idm269943324400}
+In \(\Z_p\), every nonzero equivalence class is represented by an \(x\) for which \(\gcd(x,p) = 1\). Apply \hyperref[x:theorem:theorem_cancelrelprime]{Theorem~\ref{x:theorem:theorem_cancelrelprime}}.%
 \end{proofptx}
 \end{sectionptx}
 \end{chapterptx}
@@ -1171,7 +1292,7 @@ You have been exploring numbers and the patterns they hide within them since you
 %
 \begin{sectionptx}{Fields}{}{Fields}{}{}{x:section:SubSec-Fields}
 We now begin the process of abstraction. We will do this in stages, beginning with the concept of a \emph{field}. First, we need to formally define some familiar sets of numbers.%
-\begin{definition}{}{g:definition:idm416661727504}%
+\begin{definition}{}{g:definition:idm269942873888}%
 The rational numbers, denoted by \(\Q\), is the set%
 \begin{equation*}
 \Q = \setof{\frac{a}{b}}{a,b\in \Z, \ b\ne 0}\text{.}
@@ -1179,19 +1300,19 @@ The rational numbers, denoted by \(\Q\), is the set%
 %
 \end{definition}
 Recall that in elementary school, you learned that two fractions \(\frac{a}{b}, \frac{c}{d} \in \Q\) are equivalent if and only if \(ad=bc\).%
-\begin{inlineexercise}{}{g:exercise:idm416661696576}%
+\begin{activity}{}{g:activity:idm269942870400}%
 Prove that our elementary school definition of equivalent fractions is an equivalence relation.%
-\end{inlineexercise}
+\end{activity}
 We likely have an intuitive idea of what is meant by \(\R\), the set of real numbers. Defining \(\R\) rigorously is actually quite difficult, and will occupy a significant amount of time in a first course in real analysis. Thus, we will make use of your intuition. It is certainly the case that \(\N\subseteq \Z\subseteq \Q\subseteq \R\), but \(\R\) also contains many irrational numbers, such as \(\pi\), \(e\), \(\sqrt{2}\), and so on.%
 \par
 Out of \(\R\) we may build the complex numbers.%
-\begin{definition}{}{g:definition:idm416661434208}%
+\begin{definition}{}{g:definition:idm269942864448}%
 The \terminology{complex numbers} consist of all expressions of the form \(a+bi\), where \(a,b\in \R\) and \(i^2 = -1\). Given \(z = a+bi\), we say \(a\) is the \terminology{real part} of \(z\) and \(b\) is the \terminology{imaginary part}. The set of complex numbers is denoted \(\C\).%
 \end{definition}
 \begin{definition}{}{x:definition:def_binaryoperation}%
 \index{binary operation} Let \(X\) be a nonempty set. A function \(\star : X \times X \to X\) is called a \terminology{binary operation}. If \(\star\) is a binary operation on \(X\), we say that \(X\) is \terminology{closed under the operation \(\star\)}. [Given \(a,b\in X\), we usually write \(a\star b\) in place of \(\star(a,b)\).]%
 \end{definition}
-\begin{question}{}{g:question:idm416661192400}%
+\begin{investigation}{}{g:investigation:idm269942851728}%
 Which of \(+, -, \cdot, \div\) are binary operations:%
 \begin{enumerate}
 \item{}on \(\R\)?%
@@ -1202,13 +1323,11 @@ Which of \(+, -, \cdot, \div\) are binary operations:%
 \end{enumerate}
 %
 \par\smallskip%
-\noindent\textbf{Answer}.\hypertarget{g:answer:idm416661048464}{}\quad{}Division is never a binary operation. The others are binary operations on \(\C\), \(\R, \Q\), and \(\Z\). The only binary operation on \(\N\) is addition.%
-\end{question}
+\noindent\textbf{Answer}.\hypertarget{g:answer:idm269942843328}{}\quad{}Division is never a binary operation. The others are binary operations on \(\C\), \(\R, \Q\), and \(\Z\). The only binary operation on \(\N\) is addition.%
+\end{investigation}
 The hallmark of modern pure mathematics is the use of \emph{axioms}. An axiom is essentially an unproved assertion of truth. Our use of axioms serves several purposes.%
 \par
 From a logical perspective, axioms help us avoid the problem of infinite regression (e.g., asking \emph{How do you know?} over and over again). That is, axioms give us very clear starting points from which to make our deductions.%
-\par
-More generally, the use of any hypotheses when asking mathematical or scientific questions is a form of creativity, and even \emph{play}. God has created us in His image, and he is a creative being. The definitions we make and the theorems we prove are reflections of the \emph{imago Dei} in us. Of course, we do not have the power to create \emph{ex nihilo}; instead, our tools are the mathematical \emph{aspects} God has imbued in his creation. We can postulate structures with whichever axioms we like, but our creativity is most valuable if it reflects the world \emph{as it is}.%
 \par
 To that end, our first abstract algebraic structure captures and axiomatizes familiar behavior about how numbers can be combined to produce other numbers of the same type.%
 \begin{definition}{}{x:definition:def_field}%
@@ -1227,8 +1346,8 @@ A \terminology{field} is a nonempty set \(F\) with at least two elements and bin
 \end{enumerate}
 %
 \end{definition}
-For brevity's sake, we will usually write \(a\cdot b\) as \(ab\).%
-\begin{inlineexercise}{}{x:exercise:exer_fieldexamples}%
+For brevity's sake, we will usually write \(a\cdot b\) as \(ab\). Additionally, we will usually drop the subscripts on \(0,1\) unless we need to distinguish between fundamentally different identities in different fields.%
+\begin{investigation}{}{x:investigation:exer_fieldexamples}%
 Which of the following are fields? If no operations are specified, assume the most obvious operations (e.g., the addition and multiplication you have known for years). For most, a short justification or counterexample is sufficient.%
 \begin{enumerate}
 \item{}\(\N\)%
@@ -1242,10 +1361,9 @@ Which of the following are fields? If no operations are specified, assume the mo
 \item{}\(\mathcal{M}_2(\R) := \setof{\left(\begin{matrix}a \amp b \\ c \amp d \end{matrix} \right)}{a,b,c,d\in\R}\)\footnotemark{}, the set of \(2\times 2\) matrices with real coefficients using the usual definition of matrix multiplication\footnotemark{} and matrix addition.%
 \end{enumerate}
 %
-\end{inlineexercise}
-\footnotetext[1]{For students who have taken a linear algebra course.\label{g:fn:idm416604327616}}%
-\footnotetext[2]{Recall that, if \(\left(\begin{matrix}a_1 \amp b_1 \\ c_1 \amp d_1 \end{matrix} \right), \left(\begin{matrix}a_2 \amp b_2 \\ c_2 \amp d_2 \end{matrix} \right)\in \mathcal{M}_2(\R)\), then \(\left(\begin{matrix}a_1 \amp b_1 \\ c_1 \amp d_1 \end{matrix} \right) \cdot \left(\begin{matrix}a_2 \amp b_2 \\ c_2 \amp d_2 \end{matrix} \right) = \left(\begin{matrix}a_1 a_2 + b_1 c_2 \amp a_1 b_2 + b_1 d_2 \\ c_1 a_2 + d_1 c_2 \amp c_1 b_2 + d_1 d_2 \end{matrix} \right)\).\label{g:fn:idm416604326592}}%
-In the previous exercise, you determined which of sets of familiar mathematical objects are and are not fields. Notice that you have been working with fields for years and years and that our abstraction of language to that of fields is simply to allow us to explore the common features at the same time - it is inefficient to prove the same statement about every single field when we can prove it once and for all about fields in general.%
+\end{investigation}
+\footnotetext[1]{For students who have taken a linear algebra course.\label{g:fn:idm269942793616}}%
+\footnotetext[2]{Recall that, if \(\left(\begin{matrix}a_1 \amp b_1 \\ c_1 \amp d_1 \end{matrix} \right), \left(\begin{matrix}a_2 \amp b_2 \\ c_2 \amp d_2 \end{matrix} \right)\in \mathcal{M}_2(\R)\), then \(\left(\begin{matrix}a_1 \amp b_1 \\ c_1 \amp d_1 \end{matrix} \right) \cdot \left(\begin{matrix}a_2 \amp b_2 \\ c_2 \amp d_2 \end{matrix} \right) = \left(\begin{matrix}a_1 a_2 + b_1 c_2 \amp a_1 b_2 + b_1 d_2 \\ c_1 a_2 + d_1 c_2 \amp c_1 b_2 + d_1 d_2 \end{matrix} \right)\).\label{g:fn:idm269942792592}}%
 \textbf{Solution}.\quad{}%
 \begin{enumerate}
 \item{}\(\N\) is not closed under taking additive inverses, so is not a field.%
@@ -1259,29 +1377,30 @@ In the previous exercise, you determined which of sets of familiar mathematical 
 \item{}\(\mathcal{M}_2(\R)\) is not a field. Matrix multiplication is not commutative.%
 \end{enumerate}
 %
-\begin{theorem}{properties of fields.}{}{x:theorem:thm_fieldproperties}%
+In the \hyperref[x:investigation:exer_fieldexamples]{Investigation~\ref{x:investigation:exer_fieldexamples}}, you determined which of sets of familiar mathematical objects are and are not fields. Notice that you have been working with fields for years and years and that our abstraction of language to that of fields is simply to allow us to explore the common features at the same time - it is inefficient to prove the same statement about every single field when we can prove it once and for all about fields in general.%
+\begin{theorem}{Properties of Fields.}{}{x:theorem:thm_fieldproperties}%
 Let \(F\) be a field.%
 \begin{enumerate}
-\item{}The additive identity \(0_F\) is unique.%
-\item{}For all \(a\in F\), \(a \cdot 0_F = 0_F\cdot a = 0_F\).%
+\item{}The additive identity \(0\) is unique.%
+\item{}For all \(a\in F\), \(a \cdot 0 = 0\cdot a = 0\).%
 \item{}Additive inverses are unique.%
-\item{}The multiplicative identity \(1_F\) is unique.%
+\item{}The multiplicative identity \(1\) is unique.%
 \item{}Multiplicative inverses are unique.%
 \end{enumerate}
 %
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416604297632}
+\begin{proofptx}{}{g:proof:idm269942763136}
 %
 \begin{enumerate}
-\item{}Assume \(0_F, 0_F'\) both satisfy the additive identity axiom. Observe that \(0_F = 0_F + 0_F' = 0_F'\).%
-\item{}As \(0_F = 0_F + 0_F\), we may write \(a\cdot 0_F = a\cdot (0_F + 0_F) = a\cdot 0_F + a \cdot 0_F\). Now add the additive inverse of \(a\cdot 0_F\) to both sides to obtain \(0_F = a \cdot 0_F = 0_F\cdot a\).%
-\item{}Let \(a\in F\) and suppose \(b\) and \(c\) are such that \(a+c = 0_F\) and \(a+b = 0_F\). Then \(a+c = a+b\), and we may add \(b\) (or \(c\)) to both sides to obtain \(b+(a+b) = (b+a)+b = 0_F + b = b\) and \(c+(a+c) = (c+a)+c = 0_F + c = c\). Thus \(b=c\).%
-\item{}Suppose \(1_F\) and \(1_F'\) are multiplicative identities. Then \(1_F = 1_F 1_F' = 1_F'\).%
-\item{}Let \(a\in F\) be nonzero and suppose \(b,c\) are multiplicative inverses for \(a\). Then \(ab = 1_F = ac\), and we may multiply by \(b\) (or \(c\)) to obtain \(b(ab) = (ba)b = 1_F b = b = b(ac) = (ba)c = 1_F c = c\).%
+\item{}Assume \(0, 0'\) both satisfy the additive identity axiom. Observe that \(0 = 0 + 0' = 0'\).%
+\item{}As \(0 = 0 + 0\), we may write \(a\cdot 0 = a\cdot (0 + 0) = a\cdot 0 + a \cdot 0\). Now add the additive inverse of \(a\cdot 0\) to both sides to obtain \(0 = a \cdot 0 = 0\cdot a\).%
+\item{}Let \(a\in F\) and suppose \(b\) and \(c\) are such that \(a+c = 0\) and \(a+b = 0\). Then \(a+c = a+b\), and we may add \(b\) (or \(c\)) to both sides to obtain \(b+(a+b) = (b+a)+b = 0 + b = b\) and \(c+(a+c) = (c+a)+c = 0 + c = c\). Thus \(b=c\).%
+\item{}Suppose \(1\) and \(1'\) are multiplicative identities. Then \(1 = 1 \cdot 1' = 1'\).%
+\item{}Let \(a\in F\) be nonzero and suppose \(b,c\) are multiplicative inverses for \(a\). Then \(ab = 1 = ac\), and we may multiply by \(b\) (or \(c\)) to obtain \(b(ab) = (ba)b = 1\cdot b = b = b(ac) = (ba)c = 1\cdot c = c\).%
 \end{enumerate}
 \end{proofptx}
 One consequence of \hyperref[x:theorem:thm_fieldproperties]{Theorem~\ref{x:theorem:thm_fieldproperties}} is that, given \(a\in F\), \(b\in F\setminus \set{0}\), we may refer to \(-a\) as \emph{the} additive inverse of \(a\), and \(b^{-1}\) as \emph{the} multiplicative inverse of \(b\). We will thus employ this familiar terminology henceforth.%
-\begin{definition}{}{g:definition:idm416604276144}%
+\begin{definition}{}{g:definition:idm269942741808}%
 Let \(K\) be a field. If \(F\) is a nonempty subset satisfying%
 \begin{enumerate}
 \item{}\(F\subseteq K\) and%
@@ -1291,10 +1410,10 @@ Let \(K\) be a field. If \(F\) is a nonempty subset satisfying%
 \par
 then we call \(F\) a \terminology{subfield} of \(K\), and \(K\) an \terminology{extension field} of \(F\), and say ``\(K/F\) is a \terminology{field extension}.''%
 \end{definition}
-\begin{inlineexercise}{}{g:exercise:idm416604266528}%
+ Many of the number sets with which you are familiar are fields. \begin{theorem}{}{}{g:theorem:idm269942732128}%
 The set of complex numbers \(\C\) is an extension field of \(\R\).%
-\end{inlineexercise}
-\begin{theorem}{}{}{g:theorem:idm416604264400}%
+\end{theorem}
+\begin{theorem}{}{}{g:theorem:idm269942730000}%
 For all primes \(p\), \(\Z_p\) is a field.%
 \end{theorem}
 \end{sectionptx}
@@ -1306,7 +1425,7 @@ For all primes \(p\), \(\Z_p\) is a field.%
 %
 \begin{sectionptx}{Rings}{}{Rings}{}{}{x:section:SubSec-Rings}
 In the previous section, we observed that many familiar number systems are fields but that some are not. In this section we will explore which field properties usually hold for familiar sets of numbers and which ones are more specialized. Before we proceed with that endeavor we will give a formal definition of polynomial so that we can include it in our exploration.%
-\begin{definition}{}{g:definition:idm416604260352}%
+\begin{definition}{}{g:definition:idm269942725952}%
 Let \(A\) be a set, and \(x\) a variable. We define a \terminology{polynomial in \(x\) with coefficients in \(A\)} to be an expression of the form%
 \begin{equation*}
 p = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n\text{,}
@@ -1318,13 +1437,14 @@ A[x] := \setof{a_0 + a_1 x + a_2 x + \cdots + a_n x^n}{n\in \N_0, \ a_i\in A}
 \end{equation*}
 we denote the set of all polynomials with coefficients in \(A\). If \(A\) has an additive identity \(0\), then \(A[x]\) has a \terminology{zero polynomial}, the polynomial whose coefficients are all \(0\). The zero polynomial is also often denoted by \(0\). The degree of the zero polynomial is \(-\infty\).%
 \end{definition}
-\begin{inlineexercise}{}{g:exercise:idm416604247344}%
+\begin{exploration}{}{g:exploration:idm269942712944}%
 Give some examples of polynomials in \(A[x]\) for various choices of number systems \(A\). Identify their coefficients and degrees.%
-\end{inlineexercise}
-\begin{inlineexercise}{}{g:exercise:idm416604245136}%
+\end{exploration}
+\begin{exploration}{}{g:exploration:idm269942710736}%
 In the following table, fill in a \emph{Y} if the set has the property; fill in a \emph{N} if it does not.%
-\begin{table}
+\begin{tableptx}{\textbf{A list of properties and sets.}}{x:table:table_propertiessandsets}{}%
 \centering
+{\tabularfont%
 \begin{tabular}{lllllllllll}
 &&&&&&&&&&\tabularnewline\hrulethin
 &\(\N\)&\(\Z\)&\(2\Z\)&\(\Q\)&\(\Q[x]\)&\(\Z_{8}\)&\(\Z_{2}\)&\(\R\)&\(\C\)&\(\mathcal{M}_2(\R)\)\tabularnewline[0pt]
@@ -1352,47 +1472,46 @@ There is an multiplicative identity&&&&&&&&&&\tabularnewline[0pt]
 All nonzero elements have mult.~inverses&&&&&&&&&&\tabularnewline[0pt]
 &&&&&&&&&&\tabularnewline\hrulethin
 \end{tabular}
-\caption{A list of properties and sets.\label{x:table:table_propertiessandsets}}
-\end{table}
-\end{inlineexercise}
-\begin{question}{}{x:question:q_fieldaxiomspolyring}%
+}%
+\end{tableptx}%
+\end{exploration}
+\begin{exploration}{}{x:exploration:q_fieldaxiomspolyring}%
 Which of the field axioms hold for \(F[x]\), where \(F\) is a field, and which fail to hold in general?%
 \par\smallskip%
-\noindent\textbf{Answer}.\hypertarget{g:answer:idm416604144592}{}\quad{}All the axioms hold, except F8. For instance, there is no polynomial \(f(x)\in \Q[x]\) for which \(x f(x) = 1\).%
-\end{question}
-As a result of the answer to \hyperref[x:question:q_fieldaxiomspolyring]{Question~\ref{x:question:q_fieldaxiomspolyring}} and the completed \hyperref[x:table:table_propertiessandsets]{Table~\ref{x:table:table_propertiessandsets}}, we make the following definition.%
+\noindent\textbf{Answer}.\hypertarget{g:answer:idm269942610192}{}\quad{}All the axioms hold, except F8. For instance, there is no polynomial \(f(x)\in \Q[x]\) for which \(x f(x) = 1\).%
+\end{exploration}
+As a result of the answer to \hyperref[x:exploration:q_fieldaxiomspolyring]{Exploration~\ref{x:exploration:q_fieldaxiomspolyring}} and the completed \hyperref[x:table:table_propertiessandsets]{Table~\ref{x:table:table_propertiessandsets}}, we make the following definition.%
 \begin{definition}{}{x:definition:def_ring}%
 A ring \(R\) is a nonempty set, together with binary operations \(+\) and \(\cdot\) satisfying the following axioms.%
 \begin{enumerate}
 \item{}Given any \(a,b,c\in R\), \((a+b)+c = a+(b+c)\).%
 \item{}Given any \(a,b\in R\), \(a+b= b+a\).%
-\item{}There exists an element \(0_R\in R\) such that for all \(a\in R\), \(a+0_R = 0_R + a = a\)\footnotemark{}.%
+\item{}There exists an element \(0_R\in R\) such that for all \(a\in R\), \(a+0_R = 0_R + a = a\).%
 \item{}Given any \(a\in R\) there exists a \(b\in R\) such that \(a+b = b + a =0_R\).%
 \item{}Given any \(a,b,c\in R\), \((a\cdot b)\cdot c = a\cdot (b\cdot c)\).%
 \item{}For all \(a,b,c\in R\), \(a\cdot (b+c) = a\cdot b + a\cdot c\).%
 \item{}For all \(a,b,c\in R\), \((a+b)\cdot c = a\cdot c + b\cdot c\).%
 \end{enumerate}
-%
+As with fields, when the ring \(R\) is clear from context, we will often write \(0\) and \(1\) in place of \(0_R\) and \(1_R\).%
 \end{definition}
-\footnotetext[1]{When the ring \(R\) is clear from context, we will often write \(0\) in place of \(0_R\).\label{g:fn:idm416604131728}}%
-\begin{inlineexercise}{}{g:exercise:idm416604103600}%
+\begin{investigation}{}{g:investigation:idm269942585296}%
 Compare and contrast \hyperref[x:definition:def_field]{Definitions~\ref{x:definition:def_field}} and \hyperref[x:definition:def_ring]{Definition~\ref{x:definition:def_ring}}. What are the similarities? What are the differences?%
-\end{inlineexercise}
-While rings seem even more complicated than fields, they are incredibly useful even in applied mathematics (see, e.g., {(((Unresolved xref, reference "Curto2013"; check spelling or use "provisional" attribute)))}\hyperlink{}{~}).%
-\begin{definition}{}{g:definition:idm416604100016}%
+\end{investigation}
+While rings do not enjoy all the properties of fields, they are incredibly useful even in applied mathematics (see, e.g., \hyperlink{x:biblio:Curto2013}{[2.2.1]} for one recent example).%
+\begin{definition}{}{g:definition:idm269942581696}%
 A ring \(R\) is said to be \terminology{commutative} if, for all \(a,b\in R\), \(ab = ba\). Additionally, \(R\) is said to have a \terminology{unity} or \terminology{multiplicative identity} if there is an element \(1_R\in R\) such that for all \(a\in R\), \(a \cdot 1_R = 1_R \cdot a= a\).%
 \end{definition}
 If \(R\) is noncommutative, it may have a left (respectively, right) identity, i.e., an element \(e\in R\) such that for all \(r\in R\), \(er = r\) (respectively, \(re = r\)). If \(R\) has an element \(e\) for which \(er = re = r\) for all \(r\in R\), \(e\) is often called a two-sided identity. In short, noncommutative rings may have left, right, or two-sided identities (or none at all).%
-\begin{inlineexercise}{}{g:exercise:idm416604089584}%
+\begin{exploration}{}{g:exploration:idm269942571264}%
 Consider the sets given in \hyperref[x:table:table_propertiessandsets]{Table~\ref{x:table:table_propertiessandsets}}. Which are rings? Which are commutative rings with identity?%
-\end{inlineexercise}
-\begin{question}{}{g:question:idm416604087552}%
+\end{exploration}
+\begin{exploration}{}{g:exploration:idm269942569232}%
 Which properties of fields in \hyperref[x:theorem:thm_fieldproperties]{Theorem~\ref{x:theorem:thm_fieldproperties}} hold for (commutative) rings?%
-\end{question}
-\begin{question}{}{g:question:idm416604085568}%
+\end{exploration}
+\begin{investigation}{}{g:investigation:idm269942567248}%
 Are all rings fields? Are all fields rings? Justify.%
-\end{question}
-\begin{inlineexercise}{}{g:exercise:idm416604084240}%
+\end{investigation}
+\begin{investigation}{}{g:investigation:idm269942565920}%
 Most familiar rings are commutative, though not all. Most familiar (commutative) rings have identities, but not all. Find:%
 \begin{enumerate}
 \item{}A ring that does not have an identity\footnotemark{}.%
@@ -1400,24 +1519,24 @@ Most familiar rings are commutative, though not all. Most familiar (commutative)
 \end{enumerate}
 %
 \par\smallskip%
-\noindent\textbf{Solution}.\hypertarget{g:solution:idm416604078608}{}\quad{}%
+\noindent\textbf{Solution}.\hypertarget{g:solution:idm269942560288}{}\quad{}%
 \begin{enumerate}
 \item{}\(2\Z\)%
 \item{}\(\mathcal{M}_2(\R)\); the \(2\times 2\) identity matrix is a two-sided identity.%
 \end{enumerate}
 %
-\end{inlineexercise}
-\footnotetext[2]{Sometimes called a \href{https://en.wikipedia.org/wiki/Rng_(algebra)}{\emph{rng}}. \(\ddot\smile\)\label{g:fn:idm416604082400}}%
-In the 1920s, Emmy Noether was the first to describe the ring axioms as we know them today, and her definition of a (not-necessarily-commutative) ring has led to a great deal of interesting work in algebra, number theory, and geometry, including the (see \hyperref[x:section:SubSec-Nonunique-Factorization]{§~\ref{x:section:SubSec-Nonunique-Factorization}} for more on the historical development of the proof of Fermat's Last Theorem). Most modern definitions of \emph{ring} agree with our \hyperref[x:definition:def_ring]{Definition~\ref{x:definition:def_ring}} and allow for rings with noncommutative multiplication and no multiplicative identity.%
+\end{investigation}
+\footnotetext[1]{Sometimes called a \href{https://en.wikipedia.org/wiki/Rng_(algebra)}{\emph{rng}}. \(\ddot\smile\)\label{g:fn:idm269942564080}}%
+In the 1920s, Emmy Noether was the first to explicitly describe the ring axioms as we know them today, and her definition of a (not-necessarily-commutative) ring has led to a great deal of interesting work in algebra, number theory, and geometry, including the (see \hyperref[x:section:SubSec-Nonunique-Factorization]{Section~\ref{x:section:SubSec-Nonunique-Factorization}} for more on the historical development of the proof of Fermat's Last Theorem). Most modern definitions of \emph{ring} agree with our \hyperref[x:definition:def_ring]{Definition~\ref{x:definition:def_ring}} and allow for rings with noncommutative multiplication and no multiplicative identity.%
 \par
-The following theorem states that the set of polynomials with coefficients in a ring \(R\) is itself a ring under the usual operations of polynomial addition of like terms, and multiplication via distribution. The proof is not tricky, but a rigorous justification (especially of, e.g., the associativity of multiplication) is tedious, and thus is omitted.%
-\begin{theorem}{}{}{g:theorem:idm416604070336}%
-If \(R\) is a (commutative) ring (with identity \(1_R\)), then \(R[x]\) is a (commutative) ring (with identity \(1_R\)).%
-\end{theorem}
+The following theorem states that the set of polynomials with coefficients in a ring \(R\) is itself a ring under the usual operations of polynomial addition of like terms, and multiplication via distribution. The proof is not tricky, but a rigorous justification (especially of, e.g., the associativity of polynomial multiplication) is tedious, and thus is omitted.%
+\begin{assemblage}{Theorem.}{g:assemblage:idm269942552128}%
+If \(R\) is a (commutative) ring (with identity \(1_R\)), then \(R[x]\) is a (commutative) ring (with identity \(1_{R[x]} = 1_R\)).%
+\end{assemblage}
 One of the ways to better understand mathematical structures is to understand their similar substructures (e.g., subspaces of vector spaces in linear algebra). Again, this is a formalization of an idea that you have been using since you were a child. There are certain properties of the rational numbers that you understand because you understand the real numbers - this is because the rational numbers are a subring of the real numbers.%
 \par
-In our study of rings, we are primarily interested in special types of subrings, to be studied in more depth in \hyperref[x:chapter:Sec-Ideals]{Section~\ref{x:chapter:Sec-Ideals}}.%
-\begin{definition}{}{g:definition:idm416604065248}%
+In our study of rings, we are primarily interested in special types of subrings, to be studied in more depth in \hyperref[x:chapter:Sec-Ideals]{Chapter~\ref{x:chapter:Sec-Ideals}}.%
+\begin{definition}{}{g:definition:idm269942546768}%
 Let \((R,+,\cdot)\) be a ring and let \(S\subseteq R\). If \(S\) is itself a ring under \(+\) and \(\cdot\), we say \(S\) is a \terminology{subring} of \(R\). In this case, \(R\) is often called an \terminology{overring} of \(S\).%
 \end{definition}
 The following theorem provides a nice encapsulation of what needs to be checked to see if a subset \(S\) of a ring \(R\) is in fact a subring of \(R\).%
@@ -1430,7 +1549,7 @@ Let \(R\) be a ring and \(S\) a subset of \(R\). Then \(S\) is a subring if and 
 \end{enumerate}
 %
 \end{theorem}
-\begin{inlineexercise}{}{g:exercise:idm416604049968}%
+\begin{inlineexercise}{}{g:exercise:idm269942531488}%
 Determine whether the following rings \(S\) are subrings of the given rings \(R\).%
 \begin{enumerate}
 \item{}\(S = \Z\), \(R = \Q\)%
@@ -1440,61 +1559,61 @@ Determine whether the following rings \(S\) are subrings of the given rings \(R\
 \end{enumerate}
 %
 \end{inlineexercise}
-\begin{definition}{}{g:definition:idm416604040672}%
-Let \(R\) be a ring and let \(u\in R\) be nonzero. If there is a \(v\in R\) such that \(uv = vu = 1_R\), we say \(u\) is \terminology{unit} of \(R\). We denote the set of units of \(R\) by \(R^\times\). We say \(x,y\in R\) are \terminology{associates} if there exists some \(u\in R^\times\) such that \(x = uy\).%
+\begin{definition}{}{g:definition:idm269942522192}%
+Let \(R\) be a ring and let \(u\in R\) be nonzero. If there is a \(v\in R\) such that \(uv = vu = 1\), we say \(u\) is \terminology{unit} of \(R\). We denote the set of units of \(R\) by \(R^\times\). We say \(x,y\in R\) are \terminology{associates} if there exists some \(u\in R^\times\) such that \(x = uy\).%
 \end{definition}
 That is, a unit in a ring is a nonzero element with a multiplicative inverse.%
-\begin{inlineexercise}{}{g:exercise:idm416604033376}%
+\begin{exploration}{}{g:exploration:idm269942514896}%
 Explicitly describe the set \(\Z^\times\). What are the associates of 7 in \(\Z\)?%
-\end{inlineexercise}
-\begin{theorem}{}{}{g:theorem:idm416604031232}%
+\end{exploration}
+\begin{theorem}{}{}{g:theorem:idm269942512752}%
 A commutative ring with identity \(R\) in which every nonzero element is a unit is a field.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416604029488}
+\begin{proofptx}{}{g:proof:idm269942511008}
 Compare the axioms for a commutative ring with identity and a field. The only thing missing from the ring axioms is the existence of multiplicative inverses for nonzero elements.%
 \end{proofptx}
 One of the interesting side effects of our abstract definition of \emph{ring} is that it allows for behavior that may at first appear unintuitive or downright weird.%
-\begin{definition}{}{g:definition:idm416604027472}%
+\begin{definition}{}{g:definition:idm269942508992}%
 A \terminology{zero divisor} in a ring \(R\) is a nonzero element \(z\in R\) such that there is a nonzero \(x\in R\) with \(xz = zx = 0\).%
 \end{definition}
 Notice that the reason the idea of zero divisors at first appears weird is that they're not something we encounter when working with numbers. In fact, we specifically use the fact that there are no zero divisors in our familiar numbers systems to solve equations in high school algebra (If \((x-2)(x+5)=0\), then \((x-2)=0\) or \(x+5=0\)). The lack of zero divisors is one of the properties that doesn't persist in our abstraction from the integers to rings in general.%
-\begin{inlineexercise}{}{g:exercise:idm416604022032}%
+\begin{exploration}{}{g:exploration:idm269942503552}%
 Find, with justification, the zero divisors in \(\Z_{10}\) and \(\Z_{11}\). Make and prove a conjecture about zero divisors in \(\Z_m\), where \(m > 1\).%
 \par\smallskip%
-\noindent\textbf{Solution}.\hypertarget{g:solution:idm416604019136}{}\quad{}The zero divisors in \(\Z_{10}\) are \(\overline{2}, \overline{4}, \overline{5}, \overline{6},\overline{8}\). There are no zero divisors in \(\Z_{11}\).%
+\noindent\textbf{Solution}.\hypertarget{g:solution:idm269942500656}{}\quad{}The zero divisors in \(\Z_{10}\) are \(\overline{2}, \overline{4}, \overline{5}, \overline{6},\overline{8}\). There are no zero divisors in \(\Z_{11}\).%
 \par
 conjecture. \(\overline{x}\in \Z_m\) is a zero divisor if and only if \(\gcd(x,m) \ne 1\).%
-\end{inlineexercise}
-\begin{question}{}{g:question:idm416604015072}%
+\end{exploration}
+\begin{investigation}{}{g:investigation:idm269942496592}%
 Are there any other rings in which you've seen zero divisors?%
 \par\smallskip%
-\noindent\textbf{Answer}.\hypertarget{g:answer:idm416604013888}{}\quad{}Matrix rings?%
-\end{question}
-\begin{theorem}{}{}{g:theorem:idm416604012880}%
+\noindent\textbf{Answer}.\hypertarget{g:answer:idm269942495408}{}\quad{}Matrix rings, if students have had linear algebra (and\slash{}or completed \hyperref[x:table:table_propertiessandsets]{Table~\ref{x:table:table_propertiessandsets}}). Otherwise, this may be a new concept.%
+\end{investigation}
+\begin{theorem}{}{}{g:theorem:idm269942493792}%
 Let \(R\) be a ring and suppose \(a,b\in R\) such that \(ab\) is a zero divisor. Then either \(a\) or \(b\) is a zero divisor.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416604009472}
+\begin{proofptx}{}{g:proof:idm269942490384}
 Let \(a,b\in R\) such that \(ab\) is a zero divisor. Then \(a,b\ne 0\) (else \(ab = 0\)). Since \(ab\) is a zero divisor, there is some \(c\ne 0\) such that \((ab) c = 0\). If \(bc\ne 0\), then \(a\) is a zero divisor, as \(a(bc) = 0\). On the other hand, if \(bc=0\), then \(b\) is a zero divisor, as \(b,c\ne 0\).%
 \end{proofptx}
 \begin{theorem}{}{}{x:theorem:theorem_unitnotazd}%
 Let \(R\) be a ring and \(u\in R^\times\). Then \(u\) is not a zero divisor.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416604000160}
+\begin{proofptx}{}{g:proof:idm269942481120}
 Let \(u\in R^\times\) and suppose \(u\) is a zero divisor. Then there is some \(v\ne 0\) such that \(uv = 0\). But then \(0_R = u^{-1} 0_R = u^{-1} (uv) = (u^{-1} u) v = 1_R v = v\). \textbackslash{}Lightning%
 \end{proofptx}
-\begin{question}{}{g:question:idm416603997136}%
-How can we reinterpret \hyperref[x:question:q_zmodmcancel]{Question~\ref{x:question:q_zmodmcancel}} in light of our new language of units and zero divisors? State a theorem that uses this new language.%
+\begin{investigation}{}{g:investigation:idm269942478096}%
+How can we reinterpret \hyperref[x:investigation:q_zmodmcancel]{Investigation~\ref{x:investigation:q_zmodmcancel}} in light of our new language of units and zero divisors? State a theorem that uses this new language.%
 \par\smallskip%
-\noindent\textbf{Answer}.\hypertarget{g:answer:idm416603995216}{}\quad{}How about this: Let \(\overline{a},\overline{b},\overline{c}\in \Z_m\) such that \(\overline{a}\cdot \overline{c} = \overline{b}\cdot \overline{c}\). Then \(\overline{a} = \overline{b}\) if and only if \(\overline{c}\) is not a zero divisor.%
-\end{question}
-While there is a well-developed body of literature on (noncommutative) rings (possibly without identity), from this point on (for the sake of brevity), and unless stated otherwise, when we use the word \emph{ring} we mean \emph{commutative ring with identity}.%
+\noindent\textbf{Answer}.\hypertarget{g:answer:idm269942476320}{}\quad{}Answers may vary, but how about this: Let \(\overline{a},\overline{b},\overline{c}\in \Z_m\) such that \(\overline{a}\cdot \overline{c} = \overline{b}\cdot \overline{c}\). Then \(\overline{a} = \overline{b}\) if \(\overline{c}\) is not a zero divisor.%
+\end{investigation}
+While there is a well-developed body of literature on (noncommutative) rings (possibly without identity), from this point on, and unless stated otherwise, when we use the word \emph{ring} we mean \emph{commutative ring with identity}.%
 \par
-Moreover, while even commutative rings with identity and zero divisors are useful in many realms of mathematics, we will focus our study on rings with no zero divisors. As these rings share many (though not all) properties of the integers, they are known as integral domains.%
-\begin{definition}{}{g:definition:idm416603990192}%
+Moreover, while even commutative rings with identity and zero divisors are useful in many realms of mathematics, we will focus our study on rings with no zero divisors. As these rings share many (though not all) properties of the integers, they are known as \terminology{integral domains}.%
+\begin{definition}{}{g:definition:idm269942470896}%
 A commutative ring with identity \(R\) is an \terminology{integral domain}, or just \terminology{domain}, if \(R\) has no zero divisors.%
 \end{definition}
 You have already seen several domains.%
-\begin{inlineexercise}{}{g:exercise:idm416603986736}%
+\begin{activity}{}{g:activity:idm269942467440}%
 Which of the following rings are domains? Justify your answers.%
 \begin{enumerate}
 \item{}\(\Z\)%
@@ -1504,17 +1623,17 @@ Which of the following rings are domains? Justify your answers.%
 \item{}\(\Q[x]\)%
 \end{enumerate}
 %
-\end{inlineexercise}
+\end{activity}
 \begin{theorem}{}{}{x:theorem:theorem_everyfieldisadomain}%
 Every field is a domain.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416603977024}
+\begin{proofptx}{}{g:proof:idm269942457728}
 If \(F\) is a field, the nonzero elements of \(F\) are units, which cannot be zero divisors. Thus, \(F\) has no zero divisors.%
 \end{proofptx}
-\begin{theorem}{}{}{g:theorem:idm416603974864}%
+\begin{theorem}{}{}{g:theorem:idm269942455568}%
 Let \(m > 1\) and \(R = \Z_m\). Then \(R\) is a field if and only if \(R\) is a domain.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416603971904}
+\begin{proofptx}{}{g:proof:idm269942452608}
 The forward direction holds by \hyperref[x:theorem:theorem_everyfieldisadomain]{Theorem~\ref{x:theorem:theorem_everyfieldisadomain}}.%
 \par
 For the reverse, assume \(R\) is a domain. Then \(R\) has no zero divisors. If \(m\) is composite, there exist integers \(a,b\) satisfying \(1 \lt a,b \lt m\) such that \(m=ab\). Then \(\overline{a},\overline{b}\ne \overline{0}\) in \(\Z_m\), but \(\overline{a}\cdot \overline{b} = \overline{0}\). Thus, \(m\) may not be composite, and is therefore prime. By an earlier theorem, \(\Z_p\) is a field.%
@@ -1522,34 +1641,42 @@ For the reverse, assume \(R\) is a domain. Then \(R\) has no zero divisors. If \
 \begin{theorem}{}{}{x:theorem:theorem_subringsaredomains}%
 If \(R\) is a domain and \(S\) is a subring of \(R\), then \(S\) is a domain.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416603961776}
+\begin{proofptx}{}{g:proof:idm269942442480}
 Any zero divisors in \(S\) are also zero divisors in \(R\). Since \(R\) has no zero divisors, neither does \(S\).%
 \end{proofptx}
 \begin{theorem}{}{}{x:theorem:theorem_domainimpliespolynomialdomain}%
 If \(R\) is a domain, then so is \(R[x]\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416603956688}
+\begin{proofptx}{}{g:proof:idm269942437392}
 Let \(f(x) = a_i x^i + a_{i+1} x^{i+1} + \cdots a_n x^n\) and \(g(x) = b_j x^j + b_{j+1} x^{j+1} + \cdots b_k x^k\) be nonzero polynomials in \(R[x]\), where \(a_i, b_j \ne 0\). Then the lowest-degree term in \(f(x) g(x)\) is \(a_i b_j x^{i+j}\). Since \(R\) is a domain, \(a_i b_j\ne 0\), and thus \(f(x)g(x)\) is not the zero polynomial.%
 \end{proofptx}
-\begin{question}{}{g:question:idm416603951920}%
+\begin{investigation}{}{g:investigation:idm269942432624}%
 Is the converse of \hyperref[x:theorem:theorem_domainimpliespolynomialdomain]{Theorem~\ref{x:theorem:theorem_domainimpliespolynomialdomain}} true? If so, give a short proof. If not, find a counterexample.%
 \par\smallskip%
-\noindent\textbf{Answer}.\hypertarget{g:answer:idm416603950032}{}\quad{}Yes. Apply \hyperref[x:theorem:theorem_subringsaredomains]{Theorem~\ref{x:theorem:theorem_subringsaredomains}}.%
-\end{question}
+\noindent\textbf{Answer}.\hypertarget{g:answer:idm269942430736}{}\quad{}Yes. Apply \hyperref[x:theorem:theorem_subringsaredomains]{Theorem~\ref{x:theorem:theorem_subringsaredomains}}.%
+\end{investigation}
 When considering sets of polynomials, as we do in \hyperref[x:chapter:Sec-Factorization]{§~\ref{x:chapter:Sec-Factorization}}, the following results will be quite useful.%
 \begin{theorem}{}{}{x:theorem:theorem_degreeofproductinfield}%
 Let \(F\) be a field, and let \(p(x),q(x)\in F[x]\) be nonzero polynomials. Then \(\deg(p(x) q(x)) = \deg(p(x)) + \deg(q(x))\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416603944240}
+\begin{proofptx}{}{g:proof:idm269942424944}
 Let the leading term of \(p(x)\) be \(a_n x^n\) and the leading term of \(q(x)\) be \(b_m x^m\). Then the leading term of \(p(x) q(x)\) is \(a_n b_m x^{n+m}\). Thus, \(\deg(p(x) q(x)) = n+m = \deg(p(x)) + \deg(q(x))\).%
 \end{proofptx}
-\begin{question}{}{g:question:idm416603940368}%
+\begin{investigation}{}{g:investigation:idm269942421072}%
 What are the units of \(F[x]\)? Prove your answer.%
 \par\smallskip%
-\noindent\textbf{Answer}.\hypertarget{g:answer:idm416603938784}{}\quad{}The units are \(F^\times\).%
+\noindent\textbf{Answer}.\hypertarget{g:answer:idm269942419488}{}\quad{}The units are \(F^\times\).%
 \par
 Suppose \(p(x),q(x)\in F\times\) such that \(p(x) q(x) = 1\). Then \(\deg p(x) + \deg q(x) = \deg(p(x) q(x)) = \deg(1) = 0\). Thus \(\deg p(x) = \deg q(x) = 0\).%
-\end{question}
+\end{investigation}
+%
+%
+\typeout{************************************************}
+\typeout{References 2.2 References}
+\typeout{************************************************}
+%
+\begin{references-subsection-numberless}{References}{}{References}{}{}{g:references:idm269942415872}
+C. Curto, V. Itskov, A. Veliz-Cuba, N. Youngs, \emph{The Neural Ring: An Algebraic Tool for Analyzing the Intrinsic Structurle of Neural Codes}, Bull. Math. Bio. 75 (2013), 1571-1611, \href{https://doi.org/10.1007/s11538-013-9860-3}{DOI 10.1007\slash{}s11538-013-9860-3}\end{references-subsection-numberless}
 \end{sectionptx}
 %
 %
@@ -1559,20 +1686,20 @@ Suppose \(p(x),q(x)\in F\times\) such that \(p(x) q(x) = 1\). Then \(\deg p(x) +
 %
 \begin{sectionptx}{Divisibility in Integral Domains}{}{Divisibility in Integral Domains}{}{}{x:section:SubSec-Divisibility-in-Domains}
 When we introduced the notion of integral domain, we said that part of the reason for the definition was to capture some of the most essential properties of the integers. One such idea is that of cancellation.%
-\begin{theorem}{}{}{g:theorem:idm416603933248}%
+\begin{theorem}{}{}{g:theorem:idm269942411584}%
 Let \(R\) be a ring. Then \(R\) is a domain if and only if for all \(a,b,c\in R\) with \(c\ne 0_R\) and \(ac = bc\), we have \(a = b\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416603929472}
+\begin{proofptx}{}{g:proof:idm269942407808}
 Assume \(R\) is a domain and \(ac = bc\). Then \(ac - bc = 0\), so \(c(a-b) = 0\). Since \(R\) is a domain, it has no zero divisors, and therefore either \(c = 0\) or \(a-b=0\). The first possibility is ruled out by our assumptions on \(a,b,c\), so we must have \(a-b = 0\), or \(a =b\).%
 \par
 Conversely, assume that \(R\) is not a domain. Let \(z\in R\) be a zero divisor; then there is a nonzero \(x\in R\) such that \(xz = 0 = 0 z\). This implies that \(x = 0\), a contradiction.%
 \end{proofptx}
 Thus, the defining property of an integral domain is the ability to \emph{cancel} common nonzero factors. Note that we have not \emph{divided}; division is not a binary operation in rings! However, as was the case in \(\Z\), there are notions of \emph{divisibility} and \emph{factorization} in rings.%
-\begin{definition}{}{g:definition:idm416603918944}%
+\begin{definition}{}{g:definition:idm269942397280}%
 Let \(R\) be a commutative ring with identity, and let \(a,b\in R\). We say \(a\) \terminology{divides} \(b\) and write \(a\mid b\) if there is a \(c\in R\) such that \(ac = b\). We then say that \(a\) is a \terminology{factor} of \(b\).%
 \end{definition}
 Our notion of primality also extends nicely to domains.%
-\begin{definition}{}{g:definition:idm416603912576}%
+\begin{definition}{}{g:definition:idm269942390912}%
 Let \(R\) be a domain. We say a nonzero nonunit element \(a\in R\) is \terminology{prime} if whenever \(a\mid bc\) for some \(b,c\in R\), either \(a|b\) or \(a|c\).%
 \end{definition}
 A notion related to primality is irreducibility.%
@@ -1580,35 +1707,35 @@ A notion related to primality is irreducibility.%
 Let \(R\) be a domain. We say a nonzero nonunit element \(a\in R\) is \terminology{irreducible} if whenever \(a = bc\) for some \(b,c\in R\), one of \(b\) or \(c\) is a unit.%
 \end{definition}
 In familiar settings, the notion of prime and irreducible exactly coincide.%
-\begin{theorem}{}{}{g:theorem:idm416603902736}%
+\begin{theorem}{}{}{g:theorem:idm269942381120}%
 Let \(R\) be a domain. If \(a\in R\) is prime, then \(a\) is irreducible.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416603900192}
+\begin{proofptx}{}{g:proof:idm269942378576}
 Compare to the proof of \hyperref[x:theorem:theorem_euclidslemma]{Theorem~\ref{x:theorem:theorem_euclidslemma}}.%
 \par
 Let \(a\in R\) be prime, and suppose that \(a = bc\) for some \(b,c\in R\). Then \(a|bc\), so by definition either \(a|b\) or \(a|c\). Without loss of generality, assume \(a|b\). Then there is a \(k\in R\) such that \(ak=b\), so \(a = (ak)c\), and we may cancel \(a\) to obtain \(1_R = kc\). Thus, \(c\) is a unit, making \(a\) irreducible.%
 \end{proofptx}
-\begin{theorem}{}{}{g:theorem:idm416603892256}%
+\begin{theorem}{}{}{g:theorem:idm269942370640}%
 Every irreducible in \(\Z\) is prime.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416603890544}
+\begin{proofptx}{}{g:proof:idm269942368928}
 Let \(p\in \Z\) be irreducible, and suppose that \(d|p\). Then \(p = de\). Since \(p\) is irreducible, either \(d\) or \(e\) is a unit. However, the only units are \(\pm 1\), so either one of \(d\) or \(e\) is \(p\) or \(-p\). In either case, \(p\) is prime.%
 \end{proofptx}
-It is not the case in all domains that irreducibles are primes, as the next exercise illustrates.%
-\begin{inlineexercise}{}{x:exercise:exer_irreduciblenotprime}%
+It is not the case in all domains that irreducibles are primes, as \hyperref[x:exploration:exer_irreduciblenotprime]{Exploration~\ref{x:exploration:exer_irreduciblenotprime}} illustrates.%
+\begin{exploration}{}{x:exploration:exer_irreduciblenotprime}%
 Consider the set \(R\) of all polynomials in \(\Z[x]\) for which the coefficient on the linear term is zero. That is,%
 \begin{equation*}
 R = \setof{a_0 + a_2 x^2 + \cdots + a_{n-1} x^{n-1} + a_n x^n}{a_i\in \Z,\ n\in\N}\text{.}
 \end{equation*}
 %
 \par
-(You should convince yourself that \(R\) is an integral domain, but do not need to prove it.) Find a polynomial of the form \(x^n\) in \(R\) that is irreducible, but not prime.%
+(You should convince yourself that \(R\) is an integral domain, but do not need to prove it.) Then, find a polynomial of the form \(x^n\) in \(R\) that is irreducible, but not prime.%
 \par\smallskip%
-\noindent\textbf{Solution}.\hypertarget{g:solution:idm416603879296}{}\quad{}Consider \(f(x) = x^2\). Then \(f(x)\) is irreducible, as it cannot be factored into a product of linear polynomials (there aren't any in \(R\)), so any factorization of \(f\) is degree 2 times degree 0. Then the leading coefficients must be units, i.e., both 1 or both \(-1\).%
+\noindent\textbf{Solution}.\hypertarget{g:solution:idm269942357152}{}\quad{}Consider \(f(x) = x^2\). Then \(f(x)\) is irreducible, as it cannot be factored into a product of linear polynomials (there aren't any in \(R\)), so any factorization of \(f\) is degree 2 times degree 0. Then the leading coefficients must be units, i.e., both 1 or both \(-1\).%
 \par
 However, \(f\) is not prime, as \(f| x^3 \cdot x^3\) but \(f\nmid x^3\).%
-\end{inlineexercise}
-\begin{definition}{}{g:definition:idm416603874240}%
+\end{exploration}
+\begin{definition}{}{g:definition:idm269942352096}%
 Let \(R\) be a domain, and let \(a,b\in R\). A nonzero element \(d\in R\) is a \terminology{greatest common divisor} of \(a\) and \(b\) if%
 \begin{enumerate}
 \item{}\(d\mid a\) and \(d\mid b\) and,%
@@ -1616,10 +1743,10 @@ Let \(R\) be a domain, and let \(a,b\in R\). A nonzero element \(d\in R\) is a \
 \end{enumerate}
 %
 \end{definition}
-\begin{theorem}{}{}{g:theorem:idm416603865776}%
+\begin{theorem}{}{}{g:theorem:idm269942343632}%
 Let \(R\) be a domain and \(a,b\in R\) and suppose \(d\) is a greatest common divisor of \(a\) and \(b\). Then any associate of \(d\) is also a greatest common divisor of \(a\) and \(b\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416603861088}
+\begin{proofptx}{}{g:proof:idm269942338944}
 Let \(d\) be a gcd of \(a\) and \(b\), let \(u\in R^\times\), and \(e =ud\). We claim \(e\) is also a gcd of \(a\) and \(b\).%
 \par
 Since \(d|a\) and \(d|b\) there are \(k_1,k_2\in R\) such that \(d k_1 = a\) and \(d k_2 = b\). Then \(e (u^{-1} k_1) = a\) and \(e (u^{-1} k_2) = b\), so \(e|a\) and \(e|b\).%
@@ -1628,18 +1755,18 @@ Let \(f\) be a common divisor of \(a\) and \(b\). Since \(d\) is a gcd, \(f|d\),
 \par
 Thus, \(e\) is a gcd of \(a\) and \(b\).%
 \end{proofptx}
-\begin{inlineexercise}{}{g:exercise:idm416603847248}%
-In most familiar domains, GCDs exist. However, they don't always! Find an example of elements in the ring from \hyperref[x:exercise:exer_irreduciblenotprime]{Exercise~\ref{x:exercise:exer_irreduciblenotprime}} which do not have a GCD. Justify your assertion.%
+\begin{exploration}{}{g:exploration:idm269942325104}%
+In most familiar domains, GCDs exist. However, they don't always! Find an example of elements in the ring from \hyperref[x:exploration:exer_irreduciblenotprime]{Exercise~\ref{x:exploration:exer_irreduciblenotprime}} which do not have a GCD. Justify your assertion.%
 \par\smallskip%
-\noindent\textbf{Solution}.\hypertarget{g:solution:idm416603845280}{}\quad{}Consider \(x^5\) and \(x^6\). First note that \(x^4\) is not a common divisor in \(R\).%
+\noindent\textbf{Solution}.\hypertarget{g:solution:idm269942323136}{}\quad{}Consider \(x^5\) and \(x^6\). First note that \(x^4\) is not a common divisor in \(R\).%
 \par
 Both \(x^5\) and \(x^6\) are divisible by \(x^3\) and \(x^2\) in \(R\). However, neither can be the gcd, as \(x^2\nmid x^3\) and \(x^3\nmid x^2\).%
-\end{inlineexercise}
-\begin{inlineexercise}{}{x:exercise:exer_ringgeneralityone}%
+\end{exploration}
+\begin{exploration}{}{x:exploration:exer_ringgeneralityone}%
 Fill in the following blanks in order of increasing generality with the words \emph{ring}, \emph{integral domain}, \emph{field}, and \emph{commutative ring}.%
 \par
-\textbackslash{}makebox[0.75in]\textbraceleft{}\textbackslash{}hrulefill\textbraceright{} \(\Rightarrow\) \textbackslash{}makebox[0.75in]\textbraceleft{}\textbackslash{}hrulefill\textbraceright{} \(\Rightarrow\) \textbackslash{}makebox[0.75in]\textbraceleft{}\textbackslash{}hrulefill\textbraceright{} \(\Rightarrow\) \textbackslash{}makebox[0.75in]\textbraceleft{}\textbackslash{}hrulefill\textbraceright{}%
-\end{inlineexercise}
+\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{} \(\Rightarrow\) \textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{} \(\Rightarrow\) \textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{} \(\Rightarrow\) \textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}\textunderscore{}%
+\end{exploration}
 \end{sectionptx}
 %
 %
@@ -1653,7 +1780,7 @@ One of the ways in which mathematicians study the \emph{structure} of an abstrac
 In this section, we begin a set-theoretic structural exploration of the notion of ring by considering a particularly important class of subring which will be integral to our understanding of factorization.%
 \par
 These subrings are called \emph{ideals}. They arose in the work of Kummer and Dedekind as a way of trying to recover some notion of unique factorization in rings that do not have properties like the fundamental theorem of arithmetic in \(\Z\).%
-\begin{definition}{}{g:definition:idm416603828416}%
+\begin{definition}{}{g:definition:idm269942306336}%
 A subset \(I\) of a (not necessarily commutative) ring \(R\) is called an \terminology{ideal} if:%
 \begin{enumerate}
 \item{}\(0\in I\)%
@@ -1665,64 +1792,64 @@ A subset \(I\) of a (not necessarily commutative) ring \(R\) is called an \termi
 Observe that the third requirement for a set \(I\) to be an ideal of \(R\) is simplified slightly if \(R\) is commutative (which, we recall, all of our rings are).%
 \par
 There are many important examples and types of ideals, but there are also some trivial ideals contained in every ring.%
-\begin{theorem}{}{}{g:theorem:idm416603817584}%
+\begin{theorem}{}{}{g:theorem:idm269942295504}%
 Let \(R\) be a ring. Then \(R\) and \(\set{0}\) are ideals of \(R\).%
 \end{theorem}
-\begin{theorem}{}{}{g:theorem:idm416603814656}%
+\begin{theorem}{}{}{g:theorem:idm269942292576}%
 All ideals are subrings.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416603813376}
+\begin{proofptx}{}{g:proof:idm269942291296}
 It is straightforward to check that all conditions of \hyperref[x:theorem:theorem_subringtest]{Theorem~\ref{x:theorem:theorem_subringtest}} are satisfied.%
 \end{proofptx}
 The following theorem provides a useful characterization of when an ideal \(I\) is in fact the whole ring.%
-\begin{theorem}{}{}{g:theorem:idm416603810864}%
+\begin{theorem}{}{}{g:theorem:idm269942288784}%
 Let \(R\) be a ring and \(I\) an ideal of \(R\). Then \(I = R\) if and only \(I\) contains a unit of \(R\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416603807088}
-If \(I = R\), \(1_R\in R\) will do.%
+\begin{proofptx}{}{g:proof:idm269942285008}
+If \(I = R\), \(1\in R\) will do.%
 \par
 If there is a unit \(u\in I\), then given any \(r\in R\), \(r = r u^{-1} u = (ru^{-1}) u \in I\), so \(I = R\).%
 \end{proofptx}
 The most important type of ideals (for our work, at least), are those which are the sets of all multiples of a single element in the ring. Such ideals are called \emph{principal ideals}.%
-\begin{theorem}{}{}{g:theorem:idm416603802240}%
+\begin{theorem}{}{}{g:theorem:idm269942280160}%
 Let \(R\) be commutative with identity and let \(a\in R\). The set%
 \begin{equation*}
 \ideal{a} = \setof{ra}{r\in R}
 \end{equation*}
 is an ideal (called the \emph{principal ideal generated by \(a\)}).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416603798912}
-Observe that \(0_R = 0_R a \in \ideal{a}\).%
+\begin{proofptx}{}{g:proof:idm269942276832}
+Observe that \(0 = 0\cdot a \in \ideal{a}\).%
 \par
 Moreover, if \(r_1 a, r_2 a\in \ideal{a}\), \(r_1 a - r_2 a = (r_1 - r_2)a \in \ideal{a}\). Finally, if \(x\in R\) and \(r a\in \ideal{a}\), \(x (ra) = (xr) a \in \ideal{a}\).%
 \par
 Thus, \(\ideal{a}\) is an ideal.%
 \end{proofptx}
 The element \(a\) in the theorem is known as the \emph{generator} of \(\ideal{a}\).%
-\begin{question}{}{g:question:idm416603792464}%
+\begin{investigation}{}{g:investigation:idm269942270384}%
 Let \(R\) be commutative with identity, and let \(x,y,z\in R\). Give necessary and sufficient conditions for \(z\in \ideal{x}\) and, separately, \(\ideal{x} \subseteq \ideal{y}\).%
 \par
 That is, fill in the blanks: ``\(z\in \ideal{x} \Leftrightarrow\) \textbackslash{}makebox[0.75in]\textbraceleft{}\textbackslash{}hrulefill\textbraceright{}'' and ``\(\ideal{x}\subseteq \ideal{y} \Leftrightarrow\) \textbackslash{}makebox[0.75in]\textbraceleft{}\textbackslash{}hrulefill\textbraceright{}.''%
 \par
 Justify your answers.%
 \par\smallskip%
-\noindent\textbf{Answer}.\hypertarget{g:answer:idm416603787168}{}\quad{}We have ``\(z\in \ideal{x} \Leftrightarrow x|z\)'' and ``\(\ideal{x}\subseteq \ideal{y} \Leftrightarrow y|x\)''\footnotemark{}.%
+\noindent\textbf{Answer}.\hypertarget{g:answer:idm269942265088}{}\quad{}We have ``\(z\in \ideal{x} \Leftrightarrow x|z\)'' and ``\(\ideal{x}\subseteq \ideal{y} \Leftrightarrow y|x\)''\footnotemark{}.%
 \par
 Note that \(z\in \ideal{x} \Leftrightarrow \exists r\in R, z = xr \Leftrightarrow x|z\).%
 \par
 Similarly, suppose \(\ideal{x}\subseteq \ideal{y}\). Then \(x\in \ideal{y}\), so \(y|x\). Conversely, if \(y|x\), then there is some \(r\in R\) such that \(x = yr\), and thus for all \(ax\in \ideal{x}\), \(ax = (ar)y \in \ideal{y}\).%
 \par
 Note that this means that if we want to know if \(\ideal{x}\subseteq \ideal{y}\), it's enough to check that \(x\in \ideal{y}\).%
-\end{question}
-\footnotetext[1]{An acceptable alternative would be: \(x\in \ideal{y}\). Make sure students are aware of this!\label{g:fn:idm416603785568}}%
+\end{investigation}
+\footnotetext[1]{An acceptable alternative would be: \(x\in \ideal{y}\). Make sure students are aware of this!\label{g:fn:idm269942263488}}%
 Principal ideals may have more than one generator.%
-\begin{theorem}{}{}{g:theorem:idm416603777632}%
+\begin{theorem}{}{}{g:theorem:idm269942255552}%
 Let \(R\) be a ring and \(a\in R\). Then \(\ideal{a} = \ideal{ua}\), where \(u\) is any unit of \(R\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416603774240}
+\begin{proofptx}{}{g:proof:idm269942252160}
 Apply the answer to the question.%
 \end{proofptx}
-\begin{inlineexercise}{}{g:exercise:idm416603773360}%
+\begin{activity}{}{g:activity:idm269942251280}%
 In \(R = \Z\), describe the principal ideals generated by%
 \begin{enumerate}
 \item{}2%
@@ -1736,7 +1863,7 @@ In \(R = \Z\), describe the principal ideals generated by%
 \par
 Determine the subset relations among the above ideals.%
 \par\smallskip%
-\noindent\textbf{Solution}.\hypertarget{g:solution:idm416603765312}{}\quad{}%
+\noindent\textbf{Solution}.\hypertarget{g:solution:idm269942243232}{}\quad{}%
 \begin{enumerate}
 \item{}All multiples of 2%
 \item{}All multiples of \(-9\)%
@@ -1746,16 +1873,16 @@ Determine the subset relations among the above ideals.%
 \item{}All multiples of 3%
 \end{enumerate}
 We have \(\ideal{0}\subsetneq \ideal{27}\subsetneq \ideal{-9} = \ideal{9} \subsetneq \ideal{3}\). The ideal \(\ideal{2}\) only contains \(\ideal{0}\), which is a subset of all ideals.%
-\end{inlineexercise}
+\end{activity}
 It is the case in many familiar settings that all ideals are principal. Such domains are given a special name.%
-\begin{definition}{}{g:definition:idm416603755952}%
+\begin{definition}{}{g:definition:idm269942233872}%
 An integral domain \(R\) in which every ideal is principal is known as a \terminology{principal ideal domain (PID)}.%
 \end{definition}
 \begin{theorem}{}{}{x:theorem:thm_ZisPID}%
 The ring \(\Z\) is a principal ideal domain.%
 \textbf{Hint}.\quad{}Use properties specific to \(\Z\), perhaps from \hyperref[x:chapter:Sec-Integers]{Section~\ref{x:chapter:Sec-Integers}}.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416603749824}
+\begin{proofptx}{}{g:proof:idm269942227744}
 Let \(I\subseteq Z\) be an ideal. If \(I = \set{0}\), then \(I = \ideal{0}\), so suppose there is some nonzero \(x\in I\). Define \(S = \setof{m\in \Z}{m > 0}\). Note that \(S\ne \emptyset\), as if \(m\in I\), \((-1)m \in I\) also.%
 \par
 By WOP, \(S\) has a least element, call it \(d\).%
@@ -1764,7 +1891,7 @@ By WOP, \(S\) has a least element, call it \(d\).%
 \par
 It is clear that \(\ideal{d}\subseteq I\). Now let \(x\in I\) be nonzero, and write \(x = dq + r\) using the division algorithm. Observe that \(0 \le r = x - dq \lt d\), but as \(x\in I\) and \(-dq \in I\), we must have \(r\in I\). To avoid contradicting the WOP, we must have \(r = 0\). Thus, \(x = dq\) and \(x\in \ideal{d}\).%
 \end{proofptx}
-\begin{inlineexercise}{}{g:exercise:idm416603738224}%
+\begin{activity}{}{g:activity:idm269942216144}%
 Find an integer \(d\) such that \(I = \ideal{d}\subseteq \Z\), if%
 \begin{enumerate}
 \item{}\(I = \setof{4x+10y}{x,y\in\Z}\)%
@@ -1776,7 +1903,7 @@ Find an integer \(d\) such that \(I = \ideal{d}\subseteq \Z\), if%
 \par
 You do not need to prove that each of the sets above are ideals (though you should make sure you can do it).%
 \par\smallskip%
-\noindent\textbf{Solution}.\hypertarget{g:solution:idm416603730176}{}\quad{}We see:%
+\noindent\textbf{Solution}.\hypertarget{g:solution:idm269942208096}{}\quad{}We see:%
 \begin{enumerate}
 \item{}\(I= \ideal{2}\)%
 \item{}\(I = \ideal{1} = \Z\)%
@@ -1784,8 +1911,8 @@ You do not need to prove that each of the sets above are ideals (though you shou
 \item{}\(I = \ideal{\gcd(a,b)}\)%
 \end{enumerate}
 %
-\end{inlineexercise}
-\begin{theorem}{}{}{g:theorem:idm416603723680}%
+\end{activity}
+\begin{theorem}{}{}{g:theorem:idm269942201600}%
 Let \(R\) be a principal ideal domain and \(x,y\in R\) be not both zero. Let \(I = \setof{xm+yn}{m,n\in R}\). Then:%
 \begin{enumerate}
 \item{}\(I\) is an ideal, and%
@@ -1795,7 +1922,7 @@ Let \(R\) be a principal ideal domain and \(x,y\in R\) be not both zero. Let \(I
 \par
 We conclude that there exist \(s,t\in R\) such that \(d = xs + yt\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416603715504}
+\begin{proofptx}{}{g:proof:idm269942193424}
 Observe that \(0 = x0 + y0 \in I\). Additionally, if \(x m_1 + y n_1, x m_2 + y n_2\in I\), then \((x m_1 + y n_1) + (x m_2 + y n_2) = x (m_1 + m_2) + y (n_1 + n_2) \in I\), and \(r(x m_1 + y n_1) = x (rm_1) + y(rn_1) \in I\). Thus, \(I\) is an ideal.%
 \par
 Since \(R\) is a PID, there exists \(d\in R\) such that \(I = \ideal{d}\). We claim that \(d\) is a GCD of \(x\) and \(y\).%
@@ -1809,44 +1936,48 @@ In particular, there exist \(s,t\in R\) such that a GCD \(d\) of \(x\) and \(y\)
 We have so far abstracted and axiomatized several important algebraic properties of \(\Z\) that we discussed in \hyperref[x:chapter:Sec-Integers]{§~\ref{x:chapter:Sec-Integers}}. In particular, we have our usual operations of addition and multiplication, and their interactions; we have notions of divisibility\slash{}factorization, irreducibility, and primality; we also have cancellation and greatest common divisors.%
 \par
 Our last major abstraction from \(\Z\) is the division algorithm. The main obstacle to postulating domains with a division algorithm is a clear notion of comparison relations. That is, if \(R\) is an arbitrary domain with \(r,s\in R\), is it possible to clearly and sensibly say which of \(r\) or \(s\) is ``bigger'' ? (Recall that this was a requirement for the division algorithm with nonzero remainders.) However, if there is a way to relate elements of a domain \(R\) to \(\N_0\), we can sensibly define a division algorithm.%
-\begin{definition}{}{g:definition:idm416603694336}%
-Let \(R\) be an integral domain. We call \(R\) a \terminology{Euclidean domain} if there is a function \(\delta : R\setminus \set{0_R} \to \N_0\) such that: \textbackslash{}marginpar\textbraceleft{}\textbackslash{}setstretch\textbraceleft{}0.7\textbraceright{}\terminology{This is the lowercase Greek letter \terminology{delta}.}\textbraceright{}%
+\begin{definition}{}{g:definition:idm269942172256}%
+Let \(R\) be an integral domain. We call \(R\) a \terminology{Euclidean domain} if there is a function \(\delta : R\setminus \set{0} \to \N_0\) such that: \begin{aside}{}{g:aside:idm269942169664}%
+\end{aside}
+\textbraceright{}%
 \begin{enumerate}
 \item{}If \(a,b\in R\setminus \set{0}\), then \(\delta(a) \le \delta(ab)\).%
-\item{}If \(a,b\in R\), \(b\ne 0\), then there exist \(q,r\in R\) such that \(a = bq+r\), where either \(r = 0_R\) or \(\delta(r) \lt \delta(b)\).%
+\item{}If \(a,b\in R\), \(b\ne 0\), then there exist \(q,r\in R\) such that \(a = bq+r\), where either \(r = 0\) or \(\delta(r) \lt \delta(b)\).%
 \end{enumerate}
 %
 \par
 We call the function \(\delta\) a \terminology{norm} for \(R\).%
 \end{definition}
 Thus, a Euclidean domain is an integral domain with a division algorithm that behaves in a familiar way.%
-\begin{question}{}{g:question:idm416603682608}%
+\begin{investigation}{}{g:investigation:idm269942160560}%
 Is \(\Z\) a Euclidean domain? If so, what is the norm function \(\delta\), and why does this function have the required properties of a norm?%
 \par\smallskip%
-\noindent\textbf{Answer}.\hypertarget{g:answer:idm416603680528}{}\quad{}Yes. The norm is the absolute value function.%
-\end{question}
+\noindent\textbf{Answer}.\hypertarget{g:answer:idm269942158480}{}\quad{}Yes. The norm is the absolute value function.%
+\end{investigation}
 \begin{lemma}{}{}{x:lemma:lem_minimaldegreepoly}%
-Let \(S\subseteq F[x]\) be a set containing a nonzero polynomial. Prove that \(S\) contains a polynomial \(f\) such that \(\deg(f) \le \deg(g)\) for all \(g\in S\).%
+Let \(F\) be a field and \(S\subseteq F[x]\) a set containing a nonzero polynomial. Prove that \(S\) contains a polynomial \(f\) such that \(\deg(f) \le \deg(g)\) for all nonzero \(g\in S\).%
 \end{lemma}
-\begin{proofptx}{}{g:proof:idm416603675712}
+\begin{proofptx}{}{g:proof:idm269942153232}
 Let \(T = \setof{\deg g}{g\in S}\). Since \(S\) contains a nonzero polynomial, \(T\ne \emptyset\). By WOP, \(T\) contains a minimal element \(d \ge 0\), which must be the degree of some polynomial in \(S\).%
 \end{proofptx}
 \begin{lemma}{}{}{x:lemma:lem_polydivalglem}%
 Let \(F\) be a field and \(f(x),g(x)\in F[x]\) with \(g(x)\ne 0\). If \(\deg f(x) \ge \deg g(x) > 0\), and \(f(x) = a_0 + a_1 x + \cdots + a_m x^m\) and \(g(x) = b_0 + b_1 x + \cdots + b_n x^n\), then \(h(x) = f(x) - a_m b_n^{-1} x^{m-n} g(x)\) has degree strictly less than \(\deg f(x)\).%
 \end{lemma}
-\begin{proofptx}{}{g:proof:idm416603667136}
+\begin{proofptx}{}{g:proof:idm269942144656}
 The leading term of \(f(x)\) is \(a_m x^m\), while the leading term of \(a_m b_n^{-1} x^{m-n} g(x)\) is \(a_m b_n^{-1} x^{m-n} (b_n x^n) = a_m x^m\). Thus, the leading term of \(h\) has degree less than \(m\).%
 \end{proofptx}
-\begin{theorem}{Polynomial Division algorithm.}{}{x:theorem:theorem_polydivalg}%
+\begin{theorem}{(Polynomial Division Algorithm).}{}{x:theorem:theorem_polydivalg}%
+\begin{aside}{}{g:aside:idm269942140096}%
+\end{aside}
 Let \(F\) be a field and \(f(x),g(x)\in F[x]\) with \(g(x)\ne 0\). Then there exist unique \(q(x),
 r(x) \in F[x]\) such that%
 \begin{equation*}
 f(x) = g(x) q(x) + r(x)\text{,}
 \end{equation*}
 where \(\deg(r(x)) \lt  \deg g(x)\).%
-\textbf{Hint}.\quad{}For existence, consider three cases: \(f(x) = 0\); \(f(x) \ne 0\) and \(\deg f \lt \deg g\); \(f(x) \ne 0\) and \(\deg f \ge \deg g\). In the last case, use induction on \(m = \deg f(x)\). For uniqueness, mimic the uniqueness proof of \hyperref[x:theorem:thm_divalg]{Theorem~\ref{x:theorem:thm_divalg}}%
+\textbf{Hint}.\quad{}For existence, consider three cases: \(f(x) = 0\); \(f(x) \ne 0\) and \(\deg f \lt \deg g\); \(f(x) \ne 0\) and \(\deg f \ge \deg g\). In the last case, use induction on \(m = \deg f(x)\). For uniqueness, mimic the uniqueness proof of \hyperref[x:theorem:thm_divalg]{Theorem~\ref{x:theorem:thm_divalg}}.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416603654128}
+\begin{proofptx}{}{g:proof:idm269942131184}
 \emph{Existence:} If \(f(x) = 0\), then \(q(x) = 0\) and \(r(x) = 0\) will do. If \(f(x)\ne 0\) and \(\deg f \lt \deg g\), then \(q(x) = 0\) and \(r(x) = f(x)\) will suffice. Thus, we need only consider the case in which \(f(x) \ne 0\) and \(\deg f \ge \deg g\). We use induction on \(\deg f = m\).%
 \par
 When \(m = 0\), \(\deg g \le 0 = \deg f\), and as \(g(x) \ne 0\), both \(f\) and \(g\) are nonzero constants. Then \(r = 0\) and \(q = fg^{-1}\) will work.%
@@ -1867,25 +1998,25 @@ where \(q = a_m b_n^{-1} x^{m-n} + q_1(x)\) and \(r = r_1(x)\) have the desired 
 \end{equation*}
 or \(\hat{r} - r = g [q - \hat{q}]\). Thus either \(\hat{r} - r = 0\), or \(\hat{r} - r\) has degree at least \(\deg g\). The latter is clearly impossible, so \(\hat{r} = r\) and \(\hat{q} = q\).%
 \end{proofptx}
-\begin{theorem}{}{}{g:theorem:idm416603630432}%
-The ring \(F[x]\) is a principal ideal domain.%
+\begin{theorem}{}{}{g:theorem:idm269942107488}%
+Let \(F\) be a field. Then the ring \(F[x]\) is a principal ideal domain.%
 \textbf{Hint}.\quad{}Mimic the proof of \hyperref[x:theorem:thm_ZisPID]{Theorem~\ref{x:theorem:thm_ZisPID}} and use \hyperref[x:lemma:lem_minimaldegreepoly]{Lemma~\ref{x:lemma:lem_minimaldegreepoly}}!%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416603626528}
+\begin{proofptx}{}{g:proof:idm269942103168}
 Let \(I\) be a nonzero ideal of \(F[x]\) and let \(f(x)\in I\) be a polynomial of smallest degree. We claim \(I = \ideal{f(x)}\).%
 \par
 Clearly \(\ideal{f(x)}\subseteq I\).%
 \par
 Let \(g(x)\in I\) and use \hyperref[x:theorem:theorem_polydivalg]{Theorem~\ref{x:theorem:theorem_polydivalg}} to write \(g(x) = f(x) q(x) + r(x)\), where \(\deg r(x) \lt \deg f(x)\) or \(r(x) = 0\). As in \hyperref[x:theorem:thm_ZisPID]{Theorem~\ref{x:theorem:thm_ZisPID}}, write \(r(x) = g(x) - f(x) q(x) \in I\), so we must have that \(r(x) = 0\). Thus, \(f(x) | g(x)\) and \(g(x)\in \ideal{f(x)}\).%
 \end{proofptx}
-\begin{question}{}{g:question:idm416603617840}%
-Is \(F[x]\) a Euclidean domain? If so, what is the norm function \(\delta\), and why does this function have the required properties of a norm?%
+\begin{investigation}{}{g:investigation:idm269942094480}%
+Is \(F[x]\) a Euclidean domain for all fields \(F\)? If so, what is the norm function \(\delta\), and why does this function have the required properties of a norm?%
 \par\smallskip%
-\noindent\textbf{Answer}.\hypertarget{g:answer:idm416603615760}{}\quad{}Yes. It's the degree function.%
-\end{question}
-\begin{question}{}{g:question:idm416603614736}%
-Where do Euclidean domains and PIDs fit in the hierarchy of abstraction found in \hyperref[x:exercise:exer_ringgeneralityone]{Question~\ref{x:exercise:exer_ringgeneralityone}}?%
-\end{question}
+\noindent\textbf{Answer}.\hypertarget{g:answer:idm269942091984}{}\quad{}Yes. It's the degree function.%
+\end{investigation}
+\begin{exploration}{}{g:exploration:idm269942090960}%
+Where do Euclidean domains and PIDs fit in the hierarchy of abstraction found in \hyperref[x:exploration:exer_ringgeneralityone]{Question~\ref{x:exploration:exer_ringgeneralityone}}?%
+\end{exploration}
 \end{sectionptx}
 \end{chapterptx}
 %
@@ -1902,80 +2033,80 @@ Where do Euclidean domains and PIDs fit in the hierarchy of abstraction found in
 \typeout{************************************************}
 %
 \begin{sectionptx}{Factoring Polynomials}{}{Factoring Polynomials}{}{}{x:section:SubSec-Factoring-Polynomials}
-One of the most beautiful consequences of an abstract study of algebra is the fact that both \(\Z\) and \(F[x]\) are Euclidean domains. While they are not ``the same'', we can expect them to share many of the same properties. In this section, our first goal will be to extend familiar properties from \hyperref[x:chapter:Sec-Integers]{§~\ref{x:chapter:Sec-Integers}} to \(F[x]\). We will also see that the particular nature of a polynomial allows for additional criteria for, e.g., its irreducibility to be discovered.%
+One of the most beautiful consequences of an abstract study of algebra is the fact that both \(\Z\) and \(F[x]\) are Euclidean domains. While they are not ``the same'', we can expect them to share many of the same properties. In this section, our first goal will be to extend familiar properties from \hyperref[x:chapter:Sec-Integers]{§~\ref{x:chapter:Sec-Integers}} to \(F[x]\). We will also see that the particular nature of a polynomial allows for additional criteria for, e.g., its irreducibility to be decided.%
 \par
 We saw in \hyperref[x:theorem:thm_divalg]{Theorem~\ref{x:theorem:thm_divalg}} and \hyperref[x:theorem:theorem_polydivalg]{Theorem~\ref{x:theorem:theorem_polydivalg}} that both \(\Z\) and \(F[x]\) have a division algorithm. It is reasonable (and correct) to expect that similar to the integers we can also investigate the greatest common divisor of polynomials.%
-\begin{inlineexercise}{}{g:exercise:idm416653998032}%
+\begin{investigation}{}{g:investigation:idm270003301856}%
 Given \(f(x),g(x)\in F[x]\), state a conjecture that gives a means for finding \(\gcd(f(x),g(x))\). Prove your conjecture is correct.%
 \par\smallskip%
-\noindent\textbf{Solution}.\hypertarget{g:solution:idm416653995968}{}\quad{}The Euclidean algorithm! Apply the division algorithm for polynomials and mimic the proof of the Euclidean algorithm in \(\Z\).%
-\end{inlineexercise}
-\begin{inlineexercise}{}{g:exercise:idm416653994448}%
+\noindent\textbf{Solution}.\hypertarget{g:solution:idm270000862672}{}\quad{}The Euclidean algorithm! Apply the division algorithm for polynomials and mimic the proof of the Euclidean algorithm in \(\Z\).%
+\end{investigation}
+\begin{investigation}{}{g:investigation:idm269948457776}%
 Carefully state and prove a Bézout-like theorem (recall \hyperref[x:theorem:theorem_bezoutint]{Theorem~\ref{x:theorem:theorem_bezoutint}}) for polynomials in \(F[x]\).%
 \par\smallskip%
-\noindent\textbf{Solution}.\hypertarget{g:solution:idm416653992176}{}\quad{}Let \(f(x),
+\noindent\textbf{Solution}.\hypertarget{g:solution:idm269948380880}{}\quad{}Let \(f(x),
 g(x)\in F[x]\) such that \(f\) and \(g\) are not both the zero polynomial. Then there exist polynomials \(s(x),
 t(x)\in F[x]\) such that \(f(x) s(x) + g(x) t(x) = \gcd(f(x),g(x))\).%
-\end{inlineexercise}
+\end{investigation}
 We next make the somewhat pedantic \textemdash{} yet valuable \textemdash{} distinction between the polynomial \(p(x)\in R[x]\) and the function \(p_f : R\to R\) defined by the polynomial.%
-\begin{definition}{}{g:definition:idm416653987072}%
+\begin{definition}{}{g:definition:idm269947848096}%
 Let \(R\) be a commutative ring with identity and \(p(x) = a_0 + a_1 x + \cdots + a_n x^n \in R[x]\). A \terminology{polynomial function} \(p_f : R \to R\) is defined, for all \(r\in R\), by \(p_f(r) = a_0 + a_1 r + \cdots + a_n r^n \in R\). We usually denote \(p_f(r)\) by \(p(r)\), and say that \(p(r)\) is the polynomial \(p\) evaluated at \(r\).%
 \end{definition}
-\begin{definition}{}{g:definition:idm416653981072}%
-Let \(R\) be commutative with identity and suppose \(p(x) \in R[x]\). We say \(r\in R\) is a \terminology{zero} or \terminology{root} of \(p(x)\) if \(p(r) = 0_R\).%
+\begin{definition}{}{g:definition:idm269948419776}%
+Let \(R\) be commutative with identity and suppose \(p(x) \in R[x]\). We say \(r\in R\) is a \terminology{zero} or \terminology{root} of \(p(x)\) if \(p(r) = 0\).%
 \end{definition}
 The following theorem is \href{http://www.corestandards.org/Math/Content/HSA/APR/B/2/}{a result that you learned in high school algebra} (and have likely used countless times since then), but as with the other familiar topics we have explored so far, it is necessary to formalize prior to continuing.%
-\begin{theorem}{}{}{g:theorem:idm416653975488}%
+\begin{theorem}{}{}{g:theorem:idm270003071232}%
 Let \(F\) be a field, and \(p(x)\in F[x]\). Then \(\alpha\in F\) is a root of \(p(x)\) if and only if \(x-\alpha\) divides \(p(x)\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653971696}
+\begin{proofptx}{}{g:proof:idm269949199248}
 If \(x-\alpha\) divides \(p(x)\), then \(p(x) = q(x) (x-\alpha)\) and \(p(\alpha) = q(\alpha) (\alpha - \alpha) = 0\), so \(\alpha\) is a root.%
 \par
 Otherwise, use the division algorithm to divide \(p(x)\) by \(x-\alpha\). Then \(p(x) = q(x)(x-\alpha) + r\), where \(\deg r \lt \deg (x-\alpha) = 1\). Thus, \(r\) is a nonzero constant. If \(\alpha\) is a root of \(p\), then \(0 = p(\alpha) = q(\alpha) (\alpha - \alpha) + r = 0 + r = r\), so \(r=0\) and \(x-\alpha | p(x)\).%
 \end{proofptx}
-\begin{inlineexercise}{}{g:exercise:idm416653963952}%
+\begin{exploration}{}{g:exploration:idm269947909152}%
 Given a field \(F\), define an irreducible element of \(F[x]\), keeping in view \hyperref[x:theorem:theorem_degreeofproductinfield]{Theorem~\ref{x:theorem:theorem_degreeofproductinfield}} and \hyperref[x:definition:def_irreducibleelement]{Definition~\ref{x:definition:def_irreducibleelement}}.%
 \par\smallskip%
-\noindent\textbf{Solution}.\hypertarget{g:solution:idm416653960608}{}\quad{}An irreducible polynomial is a nonzero nonconstant \(p(x)\in F[x]\) such that whenever \(p(x) = a(x) b(x)\), where \(a(x), b(x) \in F[x]\), either \(a(x)\) or \(b(x)\) is a nonzero constant.%
-\end{inlineexercise}
-\begin{definition}{}{g:definition:idm416653957376}%
+\noindent\textbf{Solution}.\hypertarget{g:solution:idm270001183200}{}\quad{}An irreducible polynomial is a nonzero nonconstant \(p(x)\in F[x]\) such that whenever \(p(x) = a(x) b(x)\), where \(a(x), b(x) \in F[x]\), either \(a(x)\) or \(b(x)\) is a nonzero constant.%
+\end{exploration}
+\begin{definition}{}{g:definition:idm270001491616}%
 A polynomial \(f(x)\in F[x]\) is \terminology{reducible} if it is not irreducible.%
 \end{definition}
-\begin{inlineexercise}{}{g:exercise:idm416653955248}%
+\begin{exploration}{}{g:exploration:idm270001458928}%
 State a positive definition for a reducible polynomial with coefficients in a field \(F\).%
 \par\smallskip%
-\noindent\textbf{Solution}.\hypertarget{g:solution:idm416653953648}{}\quad{}A polynomial \(r(x)\) is reducible if it can be written as \(r(x) = s(x) t(x)\), where \(1 \le \deg s(x) \lt \deg r(x)\) and \(1 \le \deg t(x) \lt \deg r(x)\).%
-\end{inlineexercise}
-\begin{theorem}{}{}{g:theorem:idm416653950896}%
+\noindent\textbf{Solution}.\hypertarget{g:solution:idm270001419312}{}\quad{}A polynomial \(r(x)\) is reducible if it can be written as \(r(x) = s(x) t(x)\), where \(1 \le \deg s(x) \lt \deg r(x)\) and \(1 \le \deg t(x) \lt \deg r(x)\).%
+\end{exploration}
+\begin{theorem}{}{}{g:theorem:idm270001329120}%
 Every polynomial of degree 1 in \(F[x]\) is irreducible.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653949184}
+\begin{proofptx}{}{g:proof:idm269948445456}
 Let \(f(x)\) be degree 1 and write \(f(x) = s(x) t(x)\). Then \(\deg f = 1 = \deg s + \deg t\). Since \(\deg s, \deg t \ge 0\), one of \(\deg s\) or \(\deg t\) is 0, hence \(s\) or \(t\) is constant.%
 \end{proofptx}
-\begin{theorem}{}{}{g:theorem:idm416653944912}%
+\begin{theorem}{}{}{g:theorem:idm269948540848}%
 A nonconstant polynomial \(f(x)\in F[x]\) of degree 2 or 3 is irreducible over \(F\) if and only if it has no zeros in \(F\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653942320}
+\begin{proofptx}{}{g:proof:idm269948557968}
 We prove the double contrapositive: \(f(x)\in F[x]\) of degree 2 or 3 is reducible if and only if it has a zero in \(F\).%
 \par
 If \(f(x)\) is reducible there exist nonconstant \(s(x),t(x)\in F[x]\) such that \(f(x) = s(x) t(x)\). Since \(\deg f = 2\) or 3, one of \(s(x)\) or \(t(x)\) has degree 1, and is thus of the form \(x-\alpha\), where \(\alpha \in F\). Thus, \(f\) has a zero.%
 \par
 Similarly, if \(f\) has a zero \(\alpha\in F\), \(f(x) = (x-\alpha)g(x)\), where \(\deg g \ge 1\). Thus, \(f\) is reducible over \(F\).%
 \end{proofptx}
-\begin{theorem}{}{}{g:theorem:idm416653933248}%
+\begin{theorem}{}{}{g:theorem:idm270000725360}%
 Let \(F\) be a field and \(p(x),f(x),g(x)\in F[x]\) such that \(p(x)\) is irreducible and \(p(x)\) divides \(f(x) g(x)\). Then \(p(x)\) divides \(f(x)\) or \(p(x)\) divides \(g(x)\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653928192}
+\begin{proofptx}{}{g:proof:idm269948526144}
 Assume \(p(x)\) does not divede \(f(x)\). Then \(\gcd(p(x),f(x)=1\) and \(1=s(x)p(x)+t(x)f(x)\). Multiplying by \(g(x)\) yields \(g(x)=g(x)s(x)p(x)+g(x)t(x)f(x)\) which implies that \(p(x)\) divides \(g(x)\) (since \(p(x)\) divides \(f(x)g(x)\)) .%
 \end{proofptx}
-\begin{theorem}{}{}{g:theorem:idm416653923072}%
+\begin{theorem}{}{}{g:theorem:idm269947663360}%
 Every nonconstant polynomial with coefficients in \(\C\) has a root in \(\C\).%
 \end{theorem}
-\begin{theorem}{}{}{g:theorem:idm416653920944}%
+\begin{theorem}{}{}{g:theorem:idm269947420960}%
 Every nonconstant polynomial in \(\C[x]\) can be written as a product of linear polynomials.%
 \textbf{Hint}.\quad{}What are the irreducibles in \(\C[x]\)?%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653917920}
+\begin{proofptx}{}{g:proof:idm270000875360}
 Induction on degree of polynomial using previous theorem.%
 \end{proofptx}
 \end{sectionptx}
@@ -1986,7 +2117,7 @@ Induction on degree of polynomial using previous theorem.%
 \typeout{************************************************}
 %
 \begin{sectionptx}{Factorization in Euclidean Domains}{}{Factorization in Euclidean Domains}{}{}{x:section:SubSec-Factorization-in-Euclidean-Domains}
-\begin{definition}{}{g:definition:idm416653915792}%
+\begin{definition}{}{g:definition:idm270001645216}%
 An integral domain \(R\) is called a \terminology{unique factorization domain} (or \terminology{UFD}) if the following conditions hold.%
 \begin{enumerate}
 \item{}Every nonzero nonunit element of \(R\) is either irreducible or can be written as a finite product of irreducibles in \(R\).%
@@ -1998,32 +2129,32 @@ for some irreducibles \(p_i, q_j\in R\), then \(k=m\) and, after reordering, \(p
 \end{enumerate}
 %
 \end{definition}
-\begin{inlineexercise}{}{g:exercise:idm416653907344}%
+\begin{activity}{}{g:activity:idm269948758320}%
 Using \(\Z\) as an example, illustrate the definition of UFD by factoring 20 into two sets of \emph{different} irreducibles which nonetheless can be paired up as associates.%
-\end{inlineexercise}
-\begin{theorem}{}{}{g:theorem:idm416653905088}%
+\end{activity}
+\begin{theorem}{}{}{g:theorem:idm269949222464}%
 Every field is a UFD.%
 \end{theorem}
 Our next main goal is to prove \hyperref[x:theorem:theorem_everyedisufd]{Theorem~\ref{x:theorem:theorem_everyedisufd}}. In order to do that, we need some information about the ideal-theoretic structure of Euclidean domains.%
-\begin{definition}{}{g:definition:idm416653902576}%
+\begin{definition}{}{g:definition:idm269949056848}%
 A commutative ring \(R\) is called \terminology{Noetherian} if it satisfies the \terminology{ascending chain condition} on ideals. That is, if%
 \begin{equation*}
 I_1 \subseteq I_2\subseteq I_3\subseteq \cdots
 \end{equation*}
 is an ascending chain of ideals in \(R\), then there exists some \(n\) for which \(I_n = I_{n+1} = I_{n+2} = \cdots\).%
 \end{definition}
-\begin{theorem}{}{}{g:theorem:idm416653898176}%
+\begin{theorem}{}{}{g:theorem:idm269948059568}%
 Every principal ideal domain is Noetherian.%
 \textbf{Hint}.\quad{}Let \(I_1\subseteq I_2\subseteq I_3 \subseteq \cdots\) and set \(I = \cup I_j\). Show that \(I\) is an ideal, and use your assumptions!%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653894704}
+\begin{proofptx}{}{g:proof:idm269943866080}
 It is ``clear'' that \(I\) is an ideal. That we are in a PID means there exists \(a\) such that \(I=\cup I_j=\ideal{a}\). Therefore there exists \(j\) such that \(a\in I_j\). It follows that \(I=I_j\) and in particular that \(I=I_k\) for all \(k\geq j\).%
 \end{proofptx}
 \begin{lemma}{}{}{x:lemma:lem_divisiblebyirred}%
 Let \(R\) be a principal ideal domain, and \(r\in R\) a nonzero nonunit. Then \(r\) is divisible by an irreducible.%
 \textbf{Hint}.\quad{}Let \(r\in R\) be reducible and write \(r = r_1 r_2\). Continue to factor reducibles and build an ascending chain of ideals.%
 \end{lemma}
-\begin{proofptx}{}{g:proof:idm416653885248}
+\begin{proofptx}{}{g:proof:idm269943857888}
 Suppose that \(r\) is not irreducible. Write \(r = r_1 r_2\), where the \(r_i\) are nonzero nonunits. Then \(\ideal{r} \subsetneq \ideal{r_1}\). If \(r_1\) is not irreducible, we may write \(r_1 = r_{1,1}r_{1,2}\), where \(r_{1,1},r_{1,2}\) are nonzero nonunits, and observe that%
 \begin{equation*}
 \ideal{r} \subsetneq \ideal{r_1}\subsetneq \ideal{r_{1,1}}\text{.}
@@ -2034,36 +2165,36 @@ Suppose that \(r\) is not irreducible. Write \(r = r_1 r_2\), where the \(r_i\) 
 \par
 Continuing in this way, we may continue to factor the reducible factors of \(r_1\); since \(R\) is a PID and thus has the ascending chain condition, we must eventually reach a point where the chain stabilizes, i.e., that we have found an irreducible factor of \(r_1\).%
 \end{proofptx}
-\begin{theorem}{}{}{g:theorem:idm416653874992}%
+\begin{theorem}{}{}{g:theorem:idm269943848864}%
 Let \(R\) be a PID. Then every nonzero nonunit element of \(R\) is either irreducible or can be written as a finite product of irreducibles in \(R\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653872368}
+\begin{proofptx}{}{g:proof:idm269943846560}
 We may perform the analysis from \hyperref[x:lemma:lem_divisiblebyirred]{Lemma~\ref{x:lemma:lem_divisiblebyirred}} for all factors of \(r\), and thus \(r\) can be factored into a product of irreducibles.%
 \end{proofptx}
-\begin{lemma}{}{}{g:lemma:idm416653869920}%
-Let \(R\) be a PID and let \(p\in R\) be irreducible. Let \(a\in R\) be such that \(p\nmid a\). Then \(1\in I = \setof{ax+py}{x,y\in R}\) and thus there exist \(s,t\in R\) such that \(1 = as+bt\).%
+\begin{lemma}{}{}{g:lemma:idm269943844512}%
+Let \(R\) be a PID and let \(p\in R\) be irreducible. Let \(a\in R\) be such that \(p\nmid a\). Then \(1\in I = \setof{ax+py}{x,y\in R}\) and thus there exist \(s,t\in R\) such that \(1 = as+pt\).%
 \end{lemma}
-\begin{proofptx}{}{g:proof:idm416653865648}
+\begin{proofptx}{}{g:proof:idm269943840672}
 Assume that \(p\) is irreducible. Suppose that \(p\) divides \(ab\) for some \(a,b \in R\) and that \(p\) does not divide \(a\). Since \(R\) is a PID, \(I = \ideal{\gcd(a,p)} = \ideal{1}\). Thus there exists \(s,t\in R\) such that \(1=as+pt\).%
 \end{proofptx}
-\begin{theorem}{}{}{g:theorem:idm416653860512}%
+\begin{theorem}{}{}{g:theorem:idm269943836064}%
 Let \(R\) be a PID and let \(p\in R\). Then \(p\) is prime if and only if \(p\) is irreducible.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653857536}
+\begin{proofptx}{}{g:proof:idm269943833376}
 Assume that \(p\) is prime. Suppose that \(p=ab\) for some \(a,b \in R\). Then \(p\) divides \(ab\) which implies that \(p\) divides \(a\) or \(p\) divides \(b\). WLOG, assume that \(p\) divides \(a\). Then there exists \(c\in R\) such that \(a=pc\) which implies that \(p=pcb\). Therefore \(cb=1\) and \(b\) is a unit which implies that \(p\) is irreducible.%
 \par
 Assume that \(p\) is irreducible. Suppose that \(p\) divides \(ab\) for some \(a,b \in R\) and that \(p\) does not divide \(a\). Then \(\ideal{a,p}=R\) and there exists \(x,y\in R\) such that \(1=ax+py\). Multiplying boths sides by \(b\) yiels \(b=abx+pby=p(cx+by)\) which implies that \(p\) divides \(b\) and therefore \(p\) is prime.%
 \end{proofptx}
-\begin{theorem}{}{}{g:theorem:idm416653843056}%
+\begin{theorem}{}{}{g:theorem:idm269943820320}%
 Let \(R\) be a PID and \(p\in R\) be irreducible. If \(a,b\in R\) with \(p\mid ab\), then \(p\mid a\) or \(p\mid b\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653839280}
+\begin{proofptx}{}{g:proof:idm269943816864}
 Irreducible implies prime (use the previous theorem).%
 \end{proofptx}
 \begin{theorem}{}{}{x:theorem:thm_pidisufd}%
 Every PID is a UFD.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653836800}
+\begin{proofptx}{}{g:proof:idm269943814816}
 Let \(R\) be a PID and suppose that a non-zero non-unit element \(a\in R\) can be factored in two different ways as a product of irreducibles.%
 \begin{equation*}
 a=p_1p_2\cdots p_r=q_1q_2\cdots q_s
@@ -2094,7 +2225,7 @@ Since the \(q_j\)'s are non-units, this means that \(r=s\) and that the \(p_i\)'
 Every Euclidean domain is a principal ideal domain.%
 \textbf{Hint}.\quad{}Mimic the proof of \hyperref[x:theorem:thm_ZisPID]{Theorem~\ref{x:theorem:thm_ZisPID}}.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653823024}
+\begin{proofptx}{}{g:proof:idm269943801488}
 Let \(R\) be a euclidean domain, and \(I\) an ideal of \(R\). If \(I = \set{0}\), then \(I\) is principal, so assume that \(I\ne \set{0}\).%
 \par
 Define \(S = \setof{\delta(x)>0}{x\in I}\). Then the Well-Ordering Principle guarantees that \(S\) has a least element. Let \(d\in I\) be such that \(\delta(d) > 0\) is minimal. We claim that \(I = \ideal{d}\).%
@@ -2106,10 +2237,10 @@ Therefore, \(R\) is a PID.%
 \begin{theorem}{}{}{x:theorem:theorem_everyedisufd}%
 Every Euclidean domain is a unique factorization domain.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653809280}
+\begin{proofptx}{}{g:proof:idm269943787744}
 Apply \hyperref[x:theorem:thm_edispid]{Theorems~\ref{x:theorem:thm_edispid}} and \hyperref[x:theorem:thm_pidisufd]{Theorem~\ref{x:theorem:thm_pidisufd}}.%
 \end{proofptx}
-\begin{theorem}{Unique Factorization of polynomials.}{}{g:theorem:idm416653807280}%
+\begin{theorem}{(Unique Factorization of Polynomials).}{}{g:theorem:idm269943785744}%
 Let \(F\) be a field. Then \(F[x]\) is a UFD.%
 \par
 That is, if \(f(x) \in F[x]\) with \(\deg(f(x)) \ge 1\), then \(f(x)\) is either irreducible or a product of irreducibles in \(F[x]\). What is more, if%
@@ -2120,10 +2251,10 @@ are two factorizations of \(f\) into irreducibles \(p_i, q_j\), then \(m=k\) and
 \textbf{Hint}.\quad{}Handle existence and uniqueness separately. For each, (strong) induction on \(\deg(f(x))\) will work. Or do something entirely different.%
 \end{theorem}
 Thus, we see that the existence of a well-behaved division algorithm and (a lack of zero divisors) is sufficient to guarantee unique factorization. However, it is not necessary.%
-\begin{theorem}{}{}{g:theorem:idm416653797824}%
+\begin{theorem}{}{}{g:theorem:idm269943776288}%
 If \(R\) is a UFD, then \(R[x]\) is a UFD.%
 \end{theorem}
-Thus, \(\Z[x]\) is a UFD. However, as we will see later, \(\Z[x]\) is not a PID.%
+Thus, \(\Z[x]\) is a UFD. That is, every nonconstant polynomial in \(\Z[x]\) is either irreducible or can be factored uniquely into a product of irreducibles.  However, as we will see later, \(\Z[x]\) is not a PID.%
 \end{sectionptx}
 %
 %
@@ -2132,37 +2263,37 @@ Thus, \(\Z[x]\) is a UFD. However, as we will see later, \(\Z[x]\) is not a PID.
 \typeout{************************************************}
 %
 \begin{sectionptx}{Nonunique Factorization}{}{Nonunique Factorization}{}{}{x:section:SubSec-Nonunique-Factorization}
-If every ring had the unique factorization property, life would be very boring indeed. And in fact, the failure of certain rings in algebraic number theory to have the unique factorization property played a role in several failed attempts to prove Fermat's Last Theorem, which says that there are no nontrivial integer solutions to the equation \(x^n + y^n = z^n\) if \(n \ge 3\).%
+Despite the evidence to the contrary, not every ring has the unique factorization property. That is, there are commutative rings with identity which are not UFDs.  In fact, the failure of certain rings in algebraic number theory to have the unique factorization property played a role in several failed attempts to prove Fermat's Last Theorem, which says that there are no nontrivial integer solutions \((x,y,z)\) to the equation \(x^n + y^n = z^n\) if \(n \ge 3\). Pierre de Fermat famously claimed that he had a ``marvelous proof'' of this fact, but the margin of the book in which he was writing was ``too narrow to contain it.'' Fermat's supposed proof was never found, and many now doubt that he had one. The search for a valid proof would not be complete until the work of Andrew Wiles and Richard Taylor in the mid-1990s.%
 \par
-In 1847, Gabriel Lamé claimed he had complete solved the problem. His solution relied on the factorization of \(x^p + y^p\), where \(p\) is an odd prime, as%
+In 1847, Gabriel Lamé claimed he had completely solved the problem. His solution relied on the factorization of \(x^p + y^p\), where \(p\) is an odd prime, as%
 \begin{equation*}
 x^p + y^p = (x+y)(x+\zeta y) \cdots (x+\zeta^{p-1}y)\text{,}
 \end{equation*}
 where \(\zeta = e^{2\pi i/p}\) is a primitive \(p\)-th root of unity in \(\C\). However, the ring \(\Z[\zeta] = \setof{a_0 + a_1 \zeta + a_2 \zeta^2 + \cdots + a_{p-1} \zeta^{p-1}}{a_i\in\Z}\) is not a unique factorization domain.%
 \par
 In the following exercises, we explore factorization in a similar integral domain, \(R = \Z[\sqrt{-7}] = \setof{a+b\sqrt{-7}}{a,b\in\Z}\).%
-\begin{inlineexercise}{}{g:exercise:idm416653786928}%
+\begin{activity}{}{g:activity:idm269943312192}%
 Verify that \(8 = (1+\sqrt{-7})(1-\sqrt{-7})\).%
-\end{inlineexercise}
-\begin{inlineexercise}{}{g:exercise:idm416653785232}%
-Define a function \(\delta : R \to \N_0\) by \(\delta(a+b\sqrt{-7}) = a^2 + 7 b^2\). Prove that if \(x,y\in R\), \(\delta(xy) = \delta(x)\delta(y)\).%
-\end{inlineexercise}
-\begin{theorem}{}{}{g:theorem:idm416653782224}%
+\end{activity}
+\begin{theorem}{}{}{g:theorem:idm269943310496}%
+Define \(\delta : R \to \N_0\) by \(\delta(a+b\sqrt{-7}) = a^2 + 7 b^2\). Then for all \(x,y\in R\), \(\delta(xy) = \delta(x)\delta(y)\).%
+\end{theorem}
+\begin{theorem}{}{}{g:theorem:idm269943307488}%
 An element \(u\in R\) is a unit if and only if \(\delta(u) = 1\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653780112}
+\begin{proofptx}{}{g:proof:idm269943305376}
 Observe that \(u\) is a unit if and only if \(uv = 1\) for some \(v\), which menas that \(1 = \delta(1) = \delta(u) \delta(v)\), so \(\delta(u) = \delta(v) = 1\).%
 \end{proofptx}
-\begin{lemma}{}{}{g:lemma:idm416653777104}%
+\begin{lemma}{}{}{g:lemma:idm269943302368}%
 There do not exist \(x,y\in \N_0\) such that \(2 = x^2 + 7y^2\).%
 \end{lemma}
-\begin{proofptx}{}{g:proof:idm416653775008}
+\begin{proofptx}{}{g:proof:idm269943300272}
 Suppose there exist \(x,y\in \N_0\) such that \(2 = x^2 + y^2\). Then we must have \(y = 0\), which means that \(x^2 = 2\), a contradiction.%
 \end{proofptx}
-\begin{theorem}{}{}{g:theorem:idm416653772448}%
-The elements 2, \(1+ \sqrt{-7}\), and \(1-\sqrt{-7}\) are irreducible in \(R\). Thus, \(R\) is not a UFD.%
+\begin{theorem}{}{}{g:theorem:idm269943297712}%
+The elements 2, \(1+ \sqrt{-7}\), and \(1-\sqrt{-7}\) are irreducible in \(R\). We conclude that \(R\) is not a UFD.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653769456}
+\begin{proofptx}{}{g:proof:idm269943294720}
 Suppose \(2 = ab\). Then \(4 = \delta(2) = \delta(a)\delta(b)\). By the lemma, we may not have \(\delta(a) = 2\), which means without loss of generality that \(\delta(a) = 1\), and thus \(a\) is a unit. Therefore, 2 is irreducible.%
 \par
 Now suppose that \(1 + \sqrt{-7} = ab\). Then \(8 = \delta(1+\sqrt{-7}) = \delta(a) \delta(b)\). The possible values for \(\delta(a)\) are 1, 2, 4, and 8. If \(\delta(a) = 1\) or 8, then \(1+\sqrt{-7}\) is irreducible, as either \(a\) or \(b\) is necessarily a unit. By the lemma, we may not have \(\delta(a) = 2\) or \(\delta(b) = 2\), so in fact either \(\delta(a) = 1\) or 8. Therefore, \(1\pm \sqrt{-7}\) is irreducible.%
@@ -2185,50 +2316,54 @@ Since we have factored 8 into two different products of irreducibles, \(R\) is n
 \typeout{************************************************}
 %
 \begin{sectionptx}{Ideals in general}{}{Ideals in general}{}{}{x:section:SubSec-Ideals-In-General}
-\begin{theorem}{}{}{g:theorem:idm416654044256}%
+\begin{theorem}{}{}{g:theorem:idm269946378272}%
 Let \(R\) be commutative with identity and let \(\set{I_{\alpha}}_{\alpha\in \Gamma}\) be a family of ideals. Then \(I = \bigcap\limits_{\alpha\in \Gamma} I_\alpha\) is an ideal.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653725472}
+\begin{proofptx}{}{g:proof:idm269946469248}
 It is clear that \(0\in I\). Moreover, if \(x,y\in I\), then \(x,y\in I_\alpha\) for all \(\alpha\), so \(x-y\in I_\alpha\) and thus \(x-y\in I\). Finally, if \(x\in I\) and \(r\in R\), \(rx\in I_\alpha\) for all \(\alpha\), and thus \(rx\in I\).%
 \end{proofptx}
 We can extend the notion of a principal ideal to ideals generated by any subset.%
-\begin{definition}{}{g:definition:idm416653719520}%
+\begin{definition}{}{x:definition:def_idealgeneration}%
 Let \(R\) be a commutative ring with identity, and let \(S\subseteq R\) be a subset. Then%
 \begin{equation}
 \langle S \rangle := \bigcap\limits_{\substack{J\supseteq S\\\text{ \(J\) is an ideal } } } J\label{x:men:eq_idealgeneratedbyset}
 \end{equation}
 is called the \terminology{ideal generated by \(S\)}.%
 \end{definition}
+A consequence of \hyperref[x:definition:def_idealgeneration]{Definition~\ref{x:definition:def_idealgeneration}} is the following theorem.%
+\begin{theorem}{}{}{g:theorem:idm269946458800}%
+Let \(R\) be a ring. Then \(\ideal{\emptyset} = \set{0}\).\end{theorem}
+\begin{proofptx}{}{g:proof:idm269946457200}
+Observe that for all ideals \(J\) in \(R\), \(\emptyset\subseteq J\). In particular, one of the ideals in the right-hand side of \hyperref[x:men:eq_idealgeneratedbyset]{(\ref{x:men:eq_idealgeneratedbyset})} is the zero ideal. Since the zero ideal is a subset of all ideals, the theorem follows.%
+\end{proofptx}
 One way to think of \(\ideal{S}\) is given in the following theorem.%
-\begin{theorem}{}{}{g:theorem:idm416653714896}%
-Given a commutative ring \(R\) and a subset \(S\) of \(R\), \(\ideal{S}\) is the smallest ideal containing \(S\).%
+\begin{theorem}{}{}{g:theorem:idm269946453664}%
+Given a commutative ring \(R\) and a subset \(S\) of \(R\), \(\ideal{S}\) is the smallest ideal containing \(S\) in the sense that, if \(J\) is any ideal of \(R\) containing \(S\), \(\ideal{S}\subseteq J\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653711504}
+\begin{proofptx}{}{g:proof:idm269946448864}
 Let \(I\) be any ideal containing \(S\). Thus, \(I\) is one of the ideals on the right-hand side of \hyperref[x:men:eq_idealgeneratedbyset]{(\ref{x:men:eq_idealgeneratedbyset})}. Since \(\ideal{S}\) is formed by the intersection of \(I\) with other ideals, \(\ideal{S}\subseteq I\).%
 \end{proofptx}
+Another (often more useful) way to think about \(\ideal{S}\) follows.%
 \begin{theorem}{}{}{x:theorem:thm_idealgeneratingset}%
-Given a commutative ring with identity \(R\) and a subset \(S\) of \(R\),%
-\begin{equation*}
-\langle S \rangle = \setof{r_1 s_1 + r_2 s_2 + \cdots + r_n s_n}{r_i\in R, \ s_j \in S,\ n\ge 0}\text{.}
-\end{equation*}
+Given a commutative ring with identity \(R\) and a nonempty subset \(S\) of \(R\):%
+\begin{enumerate}
+\item{}The set \(I = \setof{r_1 s_1 + r_2 s_2 + \cdots + r_n s_n}{r_i\in R, \ s_j \in S,\ n\ge 1}\) is an ideal of \(R\);%
+\item{}\(S\subseteq I\); and%
+\item{}\(\displaystyle I = \ideal{S}\)%
+.\end{enumerate}
 %
-\textbf{Hint}.\quad{}Begin by showing that \(I=\setof{r_1 s_1 + r_2 s_2 + \cdots + r_n s_n}{r_i\in R, \ s_j \in S,\ n\ge 0}\) is an ideal containing \(S\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653702304}
-For the ease of notation, let%
-\begin{equation*}
-I= \setof{r_1 s_1 + r_2 s_2 + \cdots + r_n s_n}{r_i\in R, \ s_j \in S,\ n\ge 0}\text{.}
-\end{equation*}
-%
-\par
+\begin{proofptx}{}{g:proof:idm269946437904}
 It is clear that \(0\in I\), and that if \(r\in R\) and \(x\in I\), \(rx\in I\). Moreover, the sum of two \(R\)-linear combinations of elements of \(S\) is yet another \(R\)-linear combination of elements of \(S\). Thus, \(I\) is an ideal. Further, if \(s\in S\), \(1\cdot s \in I\), so \(S\subseteq I\). Therefore, \(\ideal{S}\subseteq I\).%
 \par
-Now assume that \(x\in I\). Then \(x\) has the form \(x = r_1 s_1 + \cdots + r_n s_n\). Each \(s_i \in S\), so each \(r_i s_i \in J\) if \(J\) is any ideal containing \(S\). In articular, \(r_i s_i \in \ideal{S}\), and thus the sum \(x = \sum r_i s_i \in \ideal{S}\).%
+Now assume that \(x\in I\). Then \(x\) has the form \(x = r_1 s_1 + \cdots + r_n s_n\). Each \(s_i \in S\), so each \(r_i s_i \in J\) if \(J\) is any ideal containing \(S\). In particular, \(r_i s_i \in \ideal{S}\), and thus the sum \(x = \sum r_i s_i \in \ideal{S}\).%
 \end{proofptx}
-\label{g:notation:idm416653690592}%
+\label{g:notation:idm269946488672}%
+\begin{assemblage}{Challenge.}{g:assemblage:idm269946485696}%
 The ring \(\Z[x]\) is not a PID.%
+\end{assemblage}
 \textbf{Hint}.\quad{}Consider the ideal \(I = \langle 2, x \rangle\).%
-\begin{proofptx}{}{g:proof:idm416653684960}
+\begin{proofptx}{}{g:proof:idm269946482304}
 Suppose that \(I = \ideal{a(x)}\). Since \(2\in I\), \(2 = c(x) a(x)\) for some \(c(x)\in \Z[x]\), so \(\deg c(x) = \deg a(x) = 0\), and thus \(a(x) = a\in \Z\). We also have \(x\in I\), so \(x = b(x) a\), which implies that \(\deg b(x) = 1\), so \(b(x) = b_1 x + b_0\) for some \(b_1,b_0\in \Z\). Then \(x = (b_1 x + b_0)a\) implies \(b_1 a = 1\). Thus, \(a = 1\) or \(a = -1\). In either case, \(a\) is a unit in \(\Z[x]\) so \(1\in I\). By \hyperref[x:theorem:thm_idealgeneratingset]{Theorem~\ref{x:theorem:thm_idealgeneratingset}}, there are polynomials \(p(x),q(x)\in\Z[x]\) such that \(1 = 2p(x) + xq(x)\). If \(p_0\) is the constant term of \(p(x)\), it follows that the constant term of \(2p(x) + xq(x)\) is \(2p_0 = 1\), which is a contradiction.%
 \par
 Thus, \(I\) is not principal.%
@@ -2241,54 +2376,54 @@ Thus, \(I\) is not principal.%
 \typeout{************************************************}
 %
 \begin{sectionptx}{Quotient Rings}{}{Quotient Rings}{}{}{x:section:SubSec-Quotient-Rings}
-\begin{definition}{}{g:definition:idm416653671040}%
+\begin{definition}{}{g:definition:idm269946513504}%
 Let \(R\) be a ring and \(I\) an ideal of \(R\). Then elements \(r,s\in R\) are said to be \terminology{congruent modulo \(I\)} if \(b-a\in I\). If this is the case, we write \(a + I = b + I\).%
 \end{definition}
-\begin{question}{}{g:question:idm416653666560}%
+\begin{exploration}{}{g:exploration:idm269946509024}%
 Given a ring \(R\), ideal \(I\), and \(r\in R\), when is it the case that \(r + I = 0 + I = I\)?%
 \par\smallskip%
-\noindent\textbf{Answer}.\hypertarget{g:answer:idm416653663728}{}\quad{}When \(r\in I\).%
-\end{question}
+\noindent\textbf{Answer}.\hypertarget{g:answer:idm269946506192}{}\quad{}When \(r\in I\).%
+\end{exploration}
 Observe that if \(b-a \in I\), then there is some \(x\in I\) such that \(b-a = x\), and so \(b = a+x\).%
-\begin{theorem}{}{}{g:theorem:idm416653660208}%
+\begin{theorem}{}{}{g:theorem:idm269946502672}%
 Let \(R\) be a ring and \(I\) an ideal of \(R\). Then congruence modulo \(I\) is an equivalence relation on \(R\).%
 \end{theorem}
 The set of equivalence classes under this relation is denoted \(R/I\).%
-\begin{proofptx}{}{g:proof:idm416653655936}
+\begin{proofptx}{}{g:proof:idm269946498400}
 Since \(0\in I\), \(a-a \in I\) for all \(a\), so \(a + I = a+I\) and the relation is reflexive.%
 \par
 Moreover, if \(b-a \in I\), then \(-1(b-a) = a-b \in I\), so the relation is symmetric.%
 \par
 If \(b-a \in I\) and \(c-b\in I\), then \((b-a) + (c-b) = c-a \in I\), so the relation is transitive.%
 \end{proofptx}
-\begin{theorem}{}{}{g:theorem:idm416653650384}%
+\begin{theorem}{}{}{g:theorem:idm269946628928}%
 Let \(R\) be a ring and \(I\) an ideal of \(R\). If \(a,b,c,d\in R\) such that \(a+I = b+I\) and \(c+I = d+I\), then \((a+c) + I = (b+d) + I\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653646176}
+\begin{proofptx}{}{g:proof:idm269946624720}
 Suppose \(a+I = b+I\) and \(c+I = d+I\). Then \(b-a =x \in I\) and \(d-c = y \in I\). Adding, we have \((b-a) + (d-c) = (b+d) - (a+c) = x+y \in I\). Thus, \((b+d) + I = (a+c) + I\).%
 \end{proofptx}
-\begin{theorem}{}{}{g:theorem:idm416653642752}%
+\begin{theorem}{}{}{g:theorem:idm269946621296}%
 Let \(R\) be a ring and \(I\) an ideal of \(R\). If \(a,b,c,d\in R\) such that \(a+I = b+I\) and \(c+I = d+I\), then \(ac + I = bd + I\).%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653638560}
+\begin{proofptx}{}{g:proof:idm269946617104}
 As before, we observe that \(b-a = x\in I\) and \(d-c = y\in I\). Write \(b = x+a\) and \(d = c+y\). Then \(bd = (x+a)(c+y) = xc + xy + ac + ay = ac + \underbrace{(xc+xy+ay)}_{\in I}\), so \(bd - ac \in I\), and thus \(bd + I = ac + I\).%
 \end{proofptx}
 The previous two theorems together show that addition and multiplication on the set \(R/I\) is well-defined.%
-\begin{theorem}{}{}{g:theorem:idm416653633776}%
+\begin{theorem}{}{}{g:theorem:idm269946612320}%
 Let \(R\) be a commutative ring with identity \(1_R\) and \(I\) an ideal of \(R\). The set of equivalence classes modulo \(I\), denoted \(R/I\), is a commutative ring with identity \(1_R + I\).%
 \end{theorem}
-\begin{inlineexercise}{}{g:exercise:idm416653629488}%
+\begin{exploration}{}{g:exploration:idm269946608032}%
 Let \(R = \Z\) and \(I = \ideal{7}\). Find at least three distinct integers \(x\) such that \(9 + I = x + I\).%
 \par\smallskip%
-\noindent\textbf{Solution}.\hypertarget{g:solution:idm416653626672}{}\quad{}Such \(x\) include \(-5, 2, 16\), and anything in \(\setof{2+7m}{m\in\Z}\).%
-\end{inlineexercise}
-\begin{definition}{}{g:definition:idm416653624400}%
+\noindent\textbf{Solution}.\hypertarget{g:solution:idm269946605216}{}\quad{}Such \(x\) include \(-5, 2, 16\), and anything in \(\setof{2+7m}{m\in\Z}\).%
+\end{exploration}
+\begin{definition}{}{g:definition:idm269946602944}%
 Let \(R\) be commutative with identity and \(P\subsetneq R\) a nonzero ideal. We say \(P\) is \terminology{prime} if whenever \(a,b\in R\) such that \(ab\in P\), we have \(a\in P\) or \(b\in P\).%
 \end{definition}
-\begin{theorem}{}{}{g:theorem:idm416653619728}%
+\begin{theorem}{}{}{g:theorem:idm269946598272}%
 Let \(R\) be a domain and \(p\in R\) be prime. Then \(\ideal{p}\) is a prime ideal.%
 \end{theorem}
-\begin{inlineexercise}{}{g:exercise:idm416653617184}%
+\begin{activity}{}{g:activity:idm269946595728}%
 Which of the following ideals are prime?%
 \begin{enumerate}
 \item{}\(\ideal{9}\) in \(\Z\)%
@@ -2299,7 +2434,7 @@ Which of the following ideals are prime?%
 \end{enumerate}
 %
 \par\smallskip%
-\noindent\textbf{Solution}.\hypertarget{g:solution:idm416653607184}{}\quad{}%
+\noindent\textbf{Solution}.\hypertarget{g:solution:idm269946585728}{}\quad{}%
 \begin{enumerate}
 \item{}Not prime. \(3\cdot 3= 9\in \ideal{9}\), but \(3\notin\ideal{9}\).%
 \item{}Prime. If \(x\in \ideal{11}\), then \(11|x\) and 11 is prime.%
@@ -2308,29 +2443,29 @@ Which of the following ideals are prime?%
 \item{}One may use the EA to show that \(\gcd(x^2-5x+6,x^4+2x^3-10x^2+5x-2) = x-2\), so \(\ideal{x^2-5x+6, x^4+2x^3-10x^2+5x-2} = \ideal{x-2}\). This is prime.%
 \end{enumerate}
 %
-\end{inlineexercise}
-\begin{definition}{}{g:definition:idm416653595552}%
+\end{activity}
+\begin{definition}{}{g:definition:idm269946574096}%
 Let \(R\) be commutative with identity and let \(M\subsetneq R\) be a nonzero ideal. We say that \(M\) is a \terminology{maximal ideal} if no proper ideal of \(R\) properly contains \(M\). That is, if \(J\) is an ideal satisfying \(M\subseteq J\subseteq R\), either \(J=M\) or \(J=R\).%
 \end{definition}
 It is a fact that any ring \(R\) with \(0_R\ne 1_R\) has a maximal ideal. This follows from \emph{Zorn's Lemma}; a rigorous exploration of Zorn's Lemma lies outside of the scope of these notes, but suffice it to say that Zorn's Lemma is incredibly useful in all areas of algebra for proving existence theorems. For example, a proof that every vector space has a basis relies on Zorn's Lemma.%
 \par
 Rings with only one maximal ideal are said to be \emph{local rings}, and are actively studied in modern research in commutative algebra (the study of commutative rings and their properties).%
-\begin{theorem}{}{}{g:theorem:idm416653586928}%
+\begin{theorem}{}{}{g:theorem:idm269946565472}%
 Let \(R\) be commutative with identity and \(I\) an ideal of \(R\). Then \(I\) is prime if and only if \(R/I\) is an integral domain.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653583504}
+\begin{proofptx}{}{g:proof:idm269946562048}
 Begin by assuming that \(I\) is prime, and suppose \((a+I)(b+I) = 0+I = I\). Then \(ab \in I\), and since \(I\) is prime, either \(a\in I\) or \(b\in I\). Thus either \(a+I = 0+I\) or \(b+I = 0+I\).%
 \par
 Now assume that \(R/I\) is a domain. Further, let \(a,b\in R\) be such that \((a+I)(b+I) = ab+I = 0+I\). Then \(ab\in I\), and since \(R/I\) is a domain, \(a+I = 0+I\) or \(b+I = 0+I\), i.e., \(a\in I\) or \(b\in I\). Thus, \(I\) is prime.%
 \end{proofptx}
-\begin{lemma}{}{}{g:lemma:idm416653574544}%
+\begin{lemma}{}{}{g:lemma:idm269946553088}%
 Let \(R\) be commutative with identity and \(M\) a maximal ideal of \(R\). Let \(x\in R\setminus M\), and set \(J = \setof{xr+y}{r\in R, \ y\in M}\). Then \(M\subsetneq J\), and thus there exist \(r'\in R\), \(y'\in M\) such that \(1 = xr'+y'\).%
 \end{lemma}
-\begin{theorem}{}{}{g:theorem:idm416653569376}%
+\begin{theorem}{}{}{g:theorem:idm269946547920}%
 Let \(R\) be commutative with identity and \(I\) an ideal of \(R\). Then \(I\) is maximal if and only if \(R/I\) is a field.%
 \textbf{Hint}.\quad{}For the forward direction, apply the previous lemma.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653565072}
+\begin{proofptx}{}{g:proof:idm269946543616}
 If \(R/I\) is a field, assume \(J\) is an ideal of \(R\) that properly contains \(I\). Let \(x\in J\setminus I\); then \(x+I\) is a nonzero element of \(R/I\), and since \(R/I\) is a field, there is some \(y+I\) such that \((xy)+I = 1+I\). Since \(x\in J\), \(xy\in J\). As \(1+I = (x+I)(y+I) = xy+I\), we have \(1-xy\in I\subsetneq J\), and thus \(1 = (1-xy)+xy \in J\), which means \(J = R\). Thus, \(I\) is maximal.%
 \par
 Now, suppose that \(I\) is maximal and let \(x\in R\setminus I\). Apply the previous lemma to obtain \(1 = xr' + y'\), where \(y'\in I\). Then%
@@ -2339,21 +2474,23 @@ Now, suppose that \(I\) is maximal and let \(x\in R\setminus I\). Apply the prev
 \end{equation*}
 %
 \end{proofptx}
-\begin{theorem}{}{}{g:theorem:idm416653554256}%
+\begin{theorem}{}{}{g:theorem:idm269946532800}%
 Every maximal ideal is prime.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653552960}
+\begin{proofptx}{}{g:proof:idm269946531504}
 All fields are integral domains. Thus, if \(I\) is maximal, \(R/I\) is a field, thus a domain, and thus \(I\) is prime.%
 \end{proofptx}
-\begin{theorem}{}{}{g:theorem:idm416653550768}%
+\begin{theorem}{}{}{g:theorem:idm269946529312}%
 In a principal ideal domain, every prime ideal is maximal.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653549456}
+\begin{proofptx}{}{g:proof:idm269946528000}
 Let \(R\) be a PID and \(\ideal{p}\) a prime ideal. By previous work, \(p\) is prime. Suppose that \(\ideal{p} \subseteq \ideal{m}\). Thus, \(p\in \ideal{m}\), so \(m|p\). That is, \(p = mk\). Since \(p\) is prime and \(R\) is a domain, it is irreducible. Thus, either \(m\) or \(k\) is a unit. If \(m\) is a unit, then \(\ideal{m} = R\). If \(k\) is a unit, then \(m = k^{-1} p\), and thus \(m\in \ideal{p}\), which means that \(\ideal{m} = \ideal{p}\).%
 \par
 Thus, \(\ideal{p}\) is maximal.%
 \end{proofptx}
-Find a non-maximal prime ideal.%
+\begin{assemblage}{Challenge.}{g:assemblage:idm269946518976}%
+Find a commutative ring with identity, \(R\), and a non-maximal prime ideal \(P\) of \(R\).%
+\end{assemblage}
 \textbf{Solution}.\quad{}In \(\Z[x]\), it is straightforward to see that \(\ideal{x}\) is prime. Moreover, \(\ideal{x}\subsetneq \ideal{2,x}\), and thus is not maximal.%
 \end{sectionptx}
 %
@@ -2363,43 +2500,53 @@ Find a non-maximal prime ideal.%
 \typeout{************************************************}
 %
 \begin{sectionptx}{Homomorphisms}{}{Homomorphisms}{}{}{x:section:SubSec-Homomorphisms}
-\begin{definition}{}{g:definition:idm416653536192}%
-Let \(R\) and \(S\) be commutative rings with identity. A function \(\p : R\to S\) is a called \terminology{ring homomorphism} if it preserves addition and multiplication. That is, for all \(x,y\in R\), \(\p(x+y) = \p(x) + \p(y)\) and \(\p(xy) = \p(x)\p(y)\). If \(\p\) is a bijection, we say that \(\p\) is an \terminology{isomorphism} and write \(R\cong S\). If \(\p : R\to R\) is an isomorphism, we say \(\p\) is an \terminology{automorphism} of \(R\).%
+\begin{definition}{}{g:definition:idm269946662000}%
+Let \(R\) and \(S\) be commutative rings with identity. A function \(\p : R\to S\) is a called \terminology{ring homomorphism} if it preserves addition, multiplication, and sends the identity of \(R\) to the identity of \(S\). That is, for all \(x,y\in R\):%
+\begin{itemize}[label=\textbullet]
+\item{}\(\p(x+y) = \p(x) + \p(y)\),%
+\item{}\(\p(xy) = \p(x)\p(y)\), and%
+\item{}\(\p(1_R) = 1_S\).%
+\end{itemize}
+If \(\p\) is a bijection, we say that \(\p\) is an \terminology{isomorphism} and write \(R\cong S\). If \(\p : R\to R\) is an isomorphism, we say \(\p\) is an \terminology{automorphism} of \(R\).%
 \end{definition}
-\begin{inlineexercise}{}{g:exercise:idm416653528464}%
+\begin{activity}{}{g:activity:idm269946651776}%
 Show that the function \(\p : Z\to \Z_{5}\) defined by \(\p(x) = \overline{x}\) is a homomorphism. Is it an isomorphism? Why or why not?%
 \par\smallskip%
-\noindent\textbf{Solution}.\hypertarget{g:solution:idm416653526384}{}\quad{}Note that \(\p(x+y) = \overline{x+y} = \overline{x} + \overline{y} = \p(x) + \p(y)\), and similarly for multiplication. We observe that \(\p\) is not an isomorphism, as \(\p(2) = \p(7) = \overline{2}\).%
-\end{inlineexercise}
-\begin{theorem}{}{}{g:theorem:idm416653523968}%
+\noindent\textbf{Solution}.\hypertarget{g:solution:idm269946649696}{}\quad{}Note that \(\p(x+y) = \overline{x+y} = \overline{x} + \overline{y} = \p(x) + \p(y)\), and similarly for multiplication. We observe that \(\p\) is not an isomorphism, as \(\p(2) = \p(7) = \overline{2}\).%
+\end{activity}
+\begin{theorem}{}{}{g:theorem:idm269946647280}%
 Let \(R\) be commutative with identity and \(I\) an ideal of \(R\). Define \(\p: R\to R/I\) by \(\p(r) = r+I\). Then \(\p\) is a homomorphism.%
 \end{theorem}
-\begin{inlineexercise}{}{g:exercise:idm416653520144}%
+\begin{investigation}{}{g:investigation:idm269946643456}%
 Let \(R = \Z_2[x]\) and consider the map \(F: R \to R\) given by \(F(p) = p^2\). Is \(F\) a homomorphism? An isomorphism?%
-\end{inlineexercise}
-\begin{inlineexercise}{}{g:exercise:idm416653517152}%
+\end{investigation}
+\begin{exploration}{}{g:exploration:idm269946640464}%
 Give an example of other rings \(R\) and \(S\) and a homomorphism \(\p : R\to S\). Show that your function is a homomorphism and determine whether or not it is an isomorphism. Multiple presentations (of different homomorphisms) are possible.%
 \par\smallskip%
-\noindent\textbf{Solution}.\hypertarget{g:solution:idm416653514544}{}\quad{}One is complex conjugation, which is an isomorphism \(\C\to\C\). Another is \(\p : \Z_5 \to \Z_{10}\) given by \(\p(x) = 5x\) (this isn't easy).%
-\end{inlineexercise}
-\begin{definition}{}{g:definition:idm416653512208}%
+\noindent\textbf{Solution}.\hypertarget{g:solution:idm269946637856}{}\quad{}One is complex conjugation, which is an isomorphism \(\C\to\C\). Another is \(\p : \Z_5 \to \Z_{10}\) given by \(\p(x) = 5x\) (this isn't easy).%
+\end{exploration}
+\begin{definition}{}{g:definition:idm269946635520}%
 Let \(\p : R \to S\) be a ring homomorphism. Then \(\ker \p =\setof{r\in R}{\p(r)=0_S}\) is the \terminology{kernel} of \(\p\).%
 \end{definition}
-\begin{inlineexercise}{}{g:exercise:idm416653509216}%
-Let \(R\) be commutative with identity and \(r\in R\). The \emph{\(r\)-evaluation homomorphism} is the map \(\p_r : R[x] \to R\) defined by \(\p_r(p(x)) = p(r)\). Prove that \(\p_r\) is a homomorphism. What is \(\ker \p_r\)?%
+\begin{theorem}{}{}{g:theorem:idm269946632528}%
+Let \(R\) be commutative with identity and \(r\in R\). The \emph{\(r\)-evaluation map} \(\p_r : R[x] \to R\) defined by \(\p_r(p(x)) = p(r)\) is a homomorphism.%
+\textbf{Solution}.\quad{}This follows from the way sums and products of polynomials are evaluated.%
+\end{theorem}
+\begin{exploration}{}{g:exploration:idm269946666688}%
+What is \(\ker \p_r\)?%
 \par\smallskip%
-\noindent\textbf{Solution}.\hypertarget{g:solution:idm416653504768}{}\quad{}This follows from the way sums and products of polynomials are evaluated. By definition, \(\ker \p_r\) is the set of all \(p(x)\in R[x]\) such that \(p(r) =0\), that is, the set of all polynomials which have \(r\) as a zero.%
-\end{inlineexercise}
-\begin{inlineexercise}{}{g:exercise:idm416653501952}%
+\noindent\textbf{Solution}.\hypertarget{g:solution:idm269946672000}{}\quad{}By definition, \(\ker \p_r\) is the set of all \(p(x)\in R[x]\) such that \(p(r) =0\), that is, the set of all polynomials which have \(r\) as a zero.\end{exploration}
+\begin{activity}{}{g:activity:idm269946690976}%
 Find the kernels of other homomorphisms we've looked at so far.%
-\end{inlineexercise}
-\begin{theorem}{}{}{g:theorem:idm416653500624}%
+\par\smallskip%
+\noindent\textbf{Solution}.\hypertarget{g:solution:idm269946689792}{}\quad{}Answers will vary.\end{activity}
+\begin{theorem}{}{}{g:theorem:idm269946689200}%
 Given a ring homomorphism \(\p : R\to S\), \(\ker\p\) is an ideal.%
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653498496}
+\begin{proofptx}{}{g:proof:idm269946687072}
 If \(x,y\in \ker\p\), \(\p(x+y) = \p(x) + \p(y) = 0_S + 0_S = 0_S\). Similarly, if \(x\in \ker \p\) and \(r\in R\), \(\p(rx) = \p(r) \p(x) = \p(r) 0_S = 0_S\).%
 \end{proofptx}
-\begin{theorem}{}{}{g:theorem:idm416653495504}%
+\begin{theorem}{}{}{g:theorem:idm269946684080}%
 Let \(\p : R\to S\) be a homomorphism. Then \(\p\) is one-to-one if and only if \(\ker\p = \set{0}\).%
 \end{theorem}
 In what follows, we work toward a proof of the First Isomorphism Theorem for Rings.%
@@ -2407,37 +2554,37 @@ In what follows, we work toward a proof of the First Isomorphism Theorem for Rin
 Throughout, let \(R\) and \(S\) be commutative rings with identity, and let \(\p : R\to S\) be a homomorphism. Recall that \(\im \p = \setof{s\in S}{\p(r) = s\text{ for some } r\in R}\).%
 \par
 Define \(f: R/\ker \p \to \im \p\) by \(f(r+\ker \p) = \p(r)\).%
-\begin{lemma}{}{}{g:lemma:idm416653488928}%
+\begin{lemma}{}{}{g:lemma:idm269946677504}%
 Using the notation from above, \(f\) is a well-defined function.%
 \end{lemma}
-\begin{proofptx}{}{g:proof:idm416653487184}
+\begin{proofptx}{}{g:proof:idm269946675760}
 Suppose that \(r_1 + \ker\p = r_2 + \ker\p\). Then \(r_2-r_1 \in \ker\p\), so \(\p(r_2-r_1) = 0_S\), and thus \(\p(r_1) = \p(r_2)\). Therefore, \(f(r_1+\ker\p) = f(r_2+\ker\p)\), and \(f\) is well-defined.%
 \end{proofptx}
-\begin{lemma}{}{}{g:lemma:idm416653483728}%
+\begin{lemma}{}{}{g:lemma:idm269946710992}%
 Using the notation above, \(f\) is a homomorphism.%
 \end{lemma}
-\begin{proofptx}{}{g:proof:idm416653482016}
+\begin{proofptx}{}{g:proof:idm269946709392}
 We show that \(f\) preserves addition. That it preserves multiplication will follow similarly. Observe that \(f((x+\ker\p) + (y+\ker\p)) = f((x+y)+\ker\p) = \p(x+y) = \p(x)+\p(y) = f(x+\ker\p) + f(y+\ker\p)\).%
 \end{proofptx}
-\begin{lemma}{}{}{g:lemma:idm416653480144}%
+\begin{lemma}{}{}{g:lemma:idm269946707520}%
 Using the notation above, \(f\) is one-to-one.%
 \end{lemma}
-\begin{proofptx}{}{g:proof:idm416653478432}
+\begin{proofptx}{}{g:proof:idm269946705808}
 Suppose that \(f(r_1 + \ker\p) = f(r_2 + \ker\p)\). That is, \(\p(r_1) = \p(r_2)\). Then \(\p(r_1 - r_2) = 0_S\), so \(r_1 -r_2 \in \ker\p\), and therefore \(r_1 + \ker\p = r_2 + \ker \p\). Thus, \(f\) is one-to-one.%
 \end{proofptx}
-\begin{lemma}{}{}{g:lemma:idm416653474928}%
+\begin{lemma}{}{}{g:lemma:idm269946702304}%
 Using the notation above, \(f\) is onto.%
 \end{lemma}
-\begin{proofptx}{}{g:proof:idm416653473216}
+\begin{proofptx}{}{g:proof:idm269946700592}
 Since \(\p\) is onto \(\im \p\) by definition, given any \(s\in \im \p\) there is some \(r\in R\) such that \(\p(r) = s\). Then \(f(r+\ker\p) = \p(r)\).%
 \end{proofptx}
 We thus obtain:%
-\begin{theorem}{First Isomorphism Theorem.}{}{g:theorem:idm416653469408}%
+\begin{theorem}{(First Isomorphism Theorem).}{}{g:theorem:idm269946696784}%
 Let \(\p : R\to S\) be a homomorphism of commutative rings. Then \(R/\ker \p \cong \im \p\).%
 \par
 In particular, if \(\p : R\to S\) is onto, \(R/\ker \p \cong S\).%
 \end{theorem}
-\begin{theorem}{}{}{g:theorem:idm416653465536}%
+\begin{theorem}{}{}{g:theorem:idm269946692912}%
 We have the following isomorphisms of rings.%
 \begin{enumerate}
 \item{}\(\Z/\ideal{m} \cong \Z_m\)%
@@ -2446,7 +2593,7 @@ We have the following isomorphisms of rings.%
 \end{enumerate}
 %
 \end{theorem}
-\begin{proofptx}{}{g:proof:idm416653459968}
+\begin{proofptx}{}{g:proof:idm269946729840}
 Define \(\p: \R[x] \to \C\) by \(\p(p(x)) = p(i)\). We saw earlier that this evaluation map is a homomorphism. It is easy to see that \(\p\) is onto as \(\p(a+bx) = a+bi\) for any \(a,b\in \R\). Thus, \(\R[x]/\ker\p \cong \C\).%
 \par
 We claim that \(\ker\p = \ideal{x^2+1}\). Clearly, \(\ideal{x^2+1} \subseteq \ker\p\). Moreover, \(\ker\p \subsetneq \R[x]\). Finally, \(\ideal{x^2+1}\) is prime and thus maximal, as \(\R[x]\) is a PID. Thus, \(\ker\p = \ideal{x^2+1}\).%

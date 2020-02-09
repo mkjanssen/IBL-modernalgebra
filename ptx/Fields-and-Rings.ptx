@@ -1764,7 +1764,7 @@
       These subrings are called <em>ideals</em>.
       They arose in the work of Kummer and Dedekind as a way of trying to recover some notion of unique factorization in rings that do not have properties like the fundamental theorem of arithmetic in <m>\Z</m>.
     </p>
-    <definition>
+    <definition xml:id="def-ideal">
       <statement>
         <p>
           A subset <m>I</m> of a

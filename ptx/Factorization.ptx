@@ -286,7 +286,7 @@
       In order to do that,
       we need some information about the ideal-theoretic structure of Euclidean domains.
     </p>
-    <definition>
+    <definition xml:id="def-noetherian">
       <statement>
         <p>
           A commutative ring <m>R</m> is called <term>Noetherian</term>
@@ -300,7 +300,7 @@
         </p>
       </statement>
     </definition>
-    <theorem>
+    <theorem xml:id="theorem-pidisnoetherian">
       <statement>
         <p>
           Every principal ideal domain is Noetherian.
@@ -316,8 +316,8 @@
     <proof>
       <p>
         It is
-        <q>clear</q>
-        that <m>I</m> is an ideal.
+        a straightforward definition check to see
+        that <m>I</m> as defined in the hint is an ideal.
         That we are in a PID means there exists <m>a</m> such that <m>I=\cup I_j=\ideal{a}</m>.
         Therefore there exists <m>j</m> such that <m>a\in I_j</m>.
         It follows that <m>I=I_j</m> and in particular that <m>I=I_k</m> for all <m>k\geq j</m>.
