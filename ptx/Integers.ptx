@@ -43,13 +43,25 @@
       <title>Well-Ordering Principle</title>
       <statement>
         <p>
-              <idx><h>Well-Ordering Axiom</h></idx>
+              <idx><h>Well-Ordering Principle</h></idx>
           Every nonempty subset of <m>\N_0</m> contains a least (smallest) element under the usual ordering, <m>\le</m><fn>
 Our word choice is suggestive. In fact, other orderings do exist, and while the set of nonnegative real numbers <m>\mathbb{R}</m> does not satisfy the well-ordering principle under the usual ordering <m>\le</m>, the Well Ordering Axiom asserts that there exists a well ordering on <em>any</em> set, including <m>\mathbb{R}</m>. Accepting this axiom is equivalent to accepting the <url href="https://plato.stanford.edu/entries/axiom-choice/">axiom of choice</url>.
 </fn>.
         </p>
       </statement>
     </axiom>
+    
+    <p>
+    		The Well-Ordering Principle is useful for producing smallest elements of nonempty subsets defined to have certain properties.
+    		We will use this principle throughout the text; our first example will come in <xref ref="thm_divalg" />.
+    	</p>
+    	
+    	<figure>
+    <image xml:id="xkcd-wellordering" width="65%" source="https://imgs.xkcd.com/comics/well_ordering_principle.png" />
+    <caption><url href="https://www.xkcd.com/2193/">A suspect use of the Well-Ordering Principle.</url></caption>
+	</figure>
+
+    
     <definition xml:id="def_integers">
       <statement>
         <p>
@@ -66,6 +78,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
     
     <assemblage xml:id="induction">
       <title>Mathematical Induction</title>
+      	<idx>induction</idx>
 		<p>     		
       		<statement>	
        		   Let <m>P(m)</m> be a statement about the natural number <m>m</m><fn>
@@ -223,6 +236,20 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
       </solution>
 
     </exploration>
+    
+    <theorem>
+    		<statement>
+    			<p>
+    				For all <m>k\ge 1</m>, <m>3^k > k</m>.
+    			</p>
+    		</statement>
+    		<proof>
+    			<p>
+    				TBD.
+    			</p>
+		</proof>
+	</theorem>
+
 <!-- 
 
 2020/01/24: Removed DeMoivre's formula. Doesn't serve the larger narrative.
@@ -283,6 +310,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
     </p>
     <definition>
       <statement>
+      <idx>divides (integers)</idx>
         <p>
           Let <m>a,b\in \Z</m>.
           We say that <m>a</m> <term>divides</term>
@@ -328,6 +356,12 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
           </ol>
         </p>
       </statement>
+      <solution>
+      	<p>
+      		TBD.
+      	</p>
+      </solution>
+
     </investigation>
     <theorem>
       <statement>
@@ -336,8 +370,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
           If <m>a\mid b</m> and <m>a\mid c</m>, then <m>a\mid (b+c)</m>.
         </p>
       </statement>
-    </theorem>
-    <proof>
+      <proof>
       <p>
         Our hypothesis means that there exist integers <m>k_1</m> and <m>k_2</m> such that
         <m>b = a k_1</m> and <m>c = a k_2</m>.
@@ -346,6 +379,8 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
         then <m>b+c = a k'</m>, so <m>a\mid (b+c)</m>.
       </p>
     </proof>
+    </theorem>
+    
     <theorem>
       <statement>
         <p>
@@ -353,8 +388,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
           If <m>a\mid b</m>, then <m>a\mid bc</m>.
         </p>
       </statement>
-    </theorem>
-    <proof>
+      <proof>
       <p>
         Our hypotheses means there is an integer <m>k</m> for which <m>b = ak</m>.
         Then <m>bc = (ak)c = a(kc)</m>.
@@ -362,6 +396,8 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
         so <m>bc = ak'</m>, and therefore <m>a\mid bc</m>.
       </p>
     </proof>
+    </theorem>
+    
     <definition xml:id="gcd-definition">
       <statement>
         <p>
@@ -424,6 +460,11 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
           </ol>
         </p>
       </statement>
+      <solution>
+      	<p>
+      		TBD.
+      	</p>
+      </solution>
     </activity>
     <p>
       As we saw above,
@@ -442,14 +483,22 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
           where <m>0 \le r \lt b</m>.
         </p>
       </statement>
-    </theorem>
-    <aside>
-    	<title>Warning!</title>
-    	<p>
-    		This theorem has two parts: existence and uniqueness. Do not try to prove them both at the same time.
-    	</p>
-    </aside>
-    <proof>
+      <hint>
+      	<p>
+      		There are two parts to this theorem. First, you must establish that <m>q</m> and <m>r</m> exist. This is best done via <xref ref="axiom_wellordering" />. If you're stuck on that, check the second hint.
+      	</p>
+      	<p>
+      		Once you have established that <m>q</m> and <m>r</m> exist, show that they are unique but assuming <m>a = bq+r</m> and <m>a = bq' + r'</m>, where <m>r,r'</m> both satisfy the conditions of the theorem. Argue that <m>q = q'</m> and <m>r = r'</m>.
+      	</p>
+      </hint>
+      <hint>
+      	<p>
+      		Let <m>S = \setof{a-bs}{s\in \N_0, a-bs\ge 0}</m>.
+      	</p>
+
+      </hint>
+
+      <proof>
       <p>
         First, assume that <m>a \lt b</m>.
         Then <m>q = 0</m> and <m>r = a</m> are sufficient.
@@ -457,11 +506,9 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
       </p>
       <p>
         Now, assume that <m>a > b</m>.
-        Then the set <m>S = \setof{s\in\N}{a-bs \ge 0}</m> is nonempty.
-        Further, note that <m>S</m> has a largest element:
-        every element <m>x\in S</m> satisfies <m>x \le a</m>, since <m>a,b\in\N</m>.
-        Let <m>q</m> be the largest element of <m>S</m>,
-        and set <m>r = a - bq</m>.
+        Then the set <m>S = \setof{s\in\N}{a-bs \ge 0}</m> is nonempty, as <m>a-b\in S</m>.
+        By <xref ref="axiom_wellordering" />, <m>S</m> has a least element, which we will call <m>r</m>.
+        Let <m>q\in \N_0</m> be such that <m>r = a-bq</m>; then <m>a = bq + r</m>.
       </p>
       <p>
         To finish the proof,
@@ -491,6 +538,20 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
         and since <m>b > 0</m>, <m>q - q'= 0</m>, i.e., <m>q = q'</m>.
       </p>
     </proof>
+    </theorem>
+    
+    <aside>
+    	<title>Warning!</title>
+    	<p>
+    		This theorem has two parts: existence and uniqueness. Do not try to prove them both at the same time.
+    	</p>
+    </aside>
+    
+    <p>
+    		Though we only prove the Division Algorithm for <m>a,b\in\N</m>, it is the case that it holds for any <m>a,b\in\Z</m> where <m>b\ne 0</m>, and we will assume this going forward.
+    	</p>
+
+    
     <theorem xml:id="theorem_23lemmageneralization">
       <statement>
         <p>
@@ -499,8 +560,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
           then <m>d</m> divides the third.
         </p>
       </statement>
-    </theorem>
-    <proof>
+       <proof>
       <p>
         We consider two cases.
       </p>
@@ -518,12 +578,53 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
         Then <m>a = b+ c = dk_1 + dk_2 = d(k_1 + k_2)</m>, so <m>d|a</m>.
       </p>
     </proof>
-    <theorem xml:id="theorem_gcdremainder">
+    </theorem>
+   
+    
+    
+    <theorem>
+    		<statement>
+    			<p>
+    				Let <m>a,b,c\in\Z</m> such that <m>a = b+c</m> with <m>a</m> and <m>b</m> not both zero.
+    				Then <m>\gcd(a,b) = \gcd(b,c)</m>.
+    			</p>
+    		</statement>
+    		<proof>
+    			<p>
+    				Let <m>d = \gcd(a,b)</m> and <m>e = \gcd(b,c)</m>.
+    				Since <m>d|a</m> and <m>d|b</m>, <m>d|c</m>, and so <m>d|e</m> by definition.
+    			</p>
+    			<p>
+    				Similarly, since <m>e|b</m> and <m>e|c</m>, <m>e|a</m>, so <m>e|d</m> by definition.
+    			</p>
+			<p>
+				Thus, <m>e = d</m>.
+			</p>
+		</proof>
+    </theorem>
+    
+    <investigation xml:id="invest_gcdremainder">
+    		<statement>
+    			<p>
+    				Suppose <m>a,b,c\in\Z</m> such that there exists <m>q\in\Z</m> with <m>a = bq + c</m> and <m>a</m> and <m>b</m> not both zero.
+    				Prove or disprove: <m>\gcd(a,b)=\gcd(a,c)</m>.
+    			</p>
+    		</statement>
+		<solution>
+			TBD.
+		</solution>
+
+    </investigation>
+
+
+    
+ <!-- 
+   <theorem xml:id="invest_gcdremainder">
       <statement>
         <p>
-          Let <m>a,b,n</m>,
+          Let <m>a,b,q</m>,
           and <m>r</m> be integers with <m>a</m> and <m>b</m> not both 0.
-          If <m>a = n b + r</m>, then <m>\gcd(a,b) = \gcd(b,r)</m>.
+          If <m>a = n q + r</m>, then <m>\gcd(a,b) = \gcd(b,r)</m>.
         </p>
       </statement>
     </theorem>
@@ -542,10 +643,13 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
         Thus <m>e = \gcd(b,r) \le d</m>, hence <m>e = d</m>.
       </p>
     </proof>
-    <activity>
+ -->
+
+ <!-- 
+   <activity>
       <statement>
         <p>
-          As an illustration of <xref ref="theorem_gcdremainder" />, note that
+          As an illustration of <xref ref="invest_gcdremainder" />, note that
           <md>
             <mrow>56 \amp = 4\cdot 12 + 8,</mrow>
             <mrow>12 \amp = 1\cdot 8 +4,</mrow>
@@ -566,24 +670,27 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
         </p>
       </solution>
     </activity>
+ -->
+ 
     <investigation>
 	    <title>(Euclidean Algorithm)</title>
+	    <idx>Euclidean Algorithm</idx>
       <statement>
-        <p>Using <xref ref="thm_divalg" /> and <xref ref="theorem_gcdremainder" />, devise a procedure for finding the greatest common divisor of two integers.
+        <p> Let <m>a,b\in \N</m>. Use <xref ref="thm_divalg" /> and <xref ref="invest_gcdremainder" /> to determine an algorithm for computing <m>\gcd(a,b)</m>.
         </p>
       </statement>
       <solution>
         <p>
           Let <m>a,b\in \N</m>.
           Write <m>a = bq_1+r_1</m>.
-          By <xref ref="theorem_gcdremainder">Theorem</xref>, <m>(a,b) = (b,r_1)</m>.
+          By <xref ref="invest_gcdremainder">Theorem</xref>, <m>\gcd(a,b) = \gcd(b,r_1)</m>.
         </p>
         <p>
           Then, write <m>b = r_1 q_2 + r_2</m> using the Division algorithm.
-          Observe <m>(b,r_1) = (r_1,r_2)</m>.
+          Observe <m>\gcd(b,r_1) = \gcd(r_1,r_2)</m>.
           Continue until there is a <m>k</m> for which <m>r_k = 0</m>,
-          so <m>(r_k,r_{k-1}) = r_{k-1}</m>.
-          Then <m>r_{k-1}= (r_k, r_{k-1}) = (r_{k-1},r_{k-2}) = \cdots = (a,b)</m>.
+          so <m>\gcd(r_k,r_{k-1}) = r_{k-1}</m>.
+          Then <m>r_{k-1}= \gcd(r_k, r_{k-1}) = \gcd(r_{k-1},r_{k-2}) = \cdots = \gcd(a,b)</m>.
         </p>
       </solution>
     </investigation>
@@ -618,6 +725,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
     </p>
     <theorem xml:id="theorem_bezoutint">
       <title>B&#xe9;zout's Identity</title>
+      <idx>B&#xe9;zout's Identity</idx>
       <statement>
         <p>
           For any integers <m>a</m> and <m>b</m> not both 0, there are integers <m>x</m> and <m>y</m> such that
@@ -626,8 +734,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
           </me>.
         </p>
       </statement>
-    </theorem>
-    <proof>
+      <proof>
       <p>
         If, e.g., <m>a = 0</m> and <m>b\ne 0</m>,
         then <m>\gcd(a,b) = b</m> and <m>x=0,y=1</m> suffices.
@@ -637,7 +744,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
       <p>
         So, suppose <m>a,b\ne 0</m>, and let <m>d = \gcd(a,b)</m>.
         Without loss of generality assume <m>|a| > |b|</m>.
-        The EA provides a sequence of integers <m>r_1, r_2, \ldots,
+        The Euclidean Algoirthm provides a sequence of integers <m>r_1, r_2, \ldots,
         r_k, q_1, q_2, \ldots, q_{k+1}</m> and equations
         <md>
           <mrow>|a| \amp = |b| q_1 + r_1</mrow>
@@ -651,6 +758,8 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
         Then <m>r_k = \gcd(a,b)</m> and we may back-substitute to find integers <m>x</m> and <m>y</m> such that <m>ax + by = r_k = \gcd(a,b)</m>.
       </p>
     </proof>
+    </theorem>
+    
     <theorem xml:id="theorem_relprimecancel">
       <statement>
         <p>
@@ -658,8 +767,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
           If <m>a|bc</m> and <m>\gcd(a,b) = 1</m>, then <m>a|c</m>.
         </p>
       </statement>
-    </theorem>
-    <proof>
+      <proof>
       <p>
         Suppose <m>\gcd(a,b) = 1</m>.
         By <xref ref="theorem_bezoutint">Theorem</xref>,
@@ -684,11 +792,22 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
         so <m>a|c</m>.
       </p>
     </proof>
+    </theorem>
+    
+    <conclusion>
+    		<p>
+    			In this section, we have collected some initial results about divisibility in the integers.
+    			We'll next explore the multiplicative building blocks of the integers, the primes, in preparation for a deeper exploration of factorization.
+    		</p>
+    	</conclusion>
+
+    			
+    
   </section>
   <section xml:id="SubSec-Primes-and-Factorization">
     <title>Primes and Factorization</title>
     <p>
-      As described in the Introduction,
+      As described in <xref ref="Sec-Introduction" />,
       our main goal is to build a deep structural understanding of the notion of <em>factorization</em>.
       That is, splitting objects (e.g., numbers,
       polynomials, matrices) into products of other numbers.

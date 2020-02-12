@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-05T21:42:33-06:00    *-->
+<!--*    on 2020-02-12T10:05:44-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,16 +11,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>Assume that \(R\) is Noetherian. Inductively build an ascending chain of ideals as follows:</p>
-<ul class="disc">
-<li>Let \(x_1 \in I\) be arbitrary.</li>
-<li>For all \(i\ge 2\text{,}\) let \(x_i \in I\setminus \ideal{x_1, \ldots, x_{i-1}}\) be arbitrary.</li>
-</ul>
-<p>We thus obtain an ascending chain of ideals</p>
-<div class="displaymath">
-\begin{equation*}
-\ideal{x_1} \subseteq \ideal{x_1, x_2}\subseteq \ideal{x_1,x_2,x_3}\subseteq \cdots
-\end{equation*}
-</div>
-<p>which must stabilize at \(\ideal{x_1, x_2,\ldots, x_n}\text{.}\) That is, at some point, \(I\setminus \ideal{x_1, x_2,\ldots, x_n} = \emptyset\text{,}\) and since \(\ideal{x_1, x_2,\ldots, x_n}\subseteq I\text{,}\) we have \(I = \ideal{x_1, x_2,\ldots, x_n}\text{.}\)</p></article></body>
+<body><article class="hiddenproof"><p>Suppose that \(I = \ideal{a(x)}\text{.}\) Since \(2\in I\text{,}\) \(2 = c(x) a(x)\) for some \(c(x)\in \Z[x]\text{,}\) so \(\deg c(x) = \deg a(x) = 0\text{,}\) and thus \(a(x) = a\in \Z\text{.}\) We also have \(x\in I\text{,}\) so \(x = b(x) a\text{,}\) which implies that \(\deg b(x) = 1\text{,}\) so \(b(x) = b_1 x + b_0\) for some \(b_1,b_0\in \Z\text{.}\) Then \(x = (b_1 x + b_0)a\) implies \(b_1 a = 1\text{.}\) Thus, \(a = 1\) or \(a = -1\text{.}\) In either case, \(a\) is a unit in \(\Z[x]\) so \(1\in I\text{.}\) By <a class="xref" data-knowl="./knowl/thm_idealgeneratingset.html" title="Theorem 4.1.6">Theorem 4.1.6</a>, there are polynomials \(p(x),q(x)\in\Z[x]\) such that \(1 = 2p(x) + xq(x)\text{.}\) If \(p_0\) is the constant term of \(p(x)\text{,}\) it follows that the constant term of \(2p(x) + xq(x)\) is \(2p_0 = 1\text{,}\) which is a contradiction.</p>
+<p>Thus, \(I\) is not principal.</p></article></body>
 </html>

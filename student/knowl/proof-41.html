@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-05T21:42:32-06:00    *-->
+<!--*    on 2020-02-12T10:05:43-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,8 @@
 </head>
 <body>
 <article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>
-<p>If \(x-\alpha\) divides \(p(x)\text{,}\) then \(p(x) = q(x) (x-\alpha)\) and \(p(\alpha) = q(\alpha) (\alpha - \alpha) = 0\text{,}\) so \(\alpha\) is a root.</p>
-<p>Otherwise, use the division algorithm to divide \(p(x)\) by \(x-\alpha\text{.}\) Then \(p(x) = q(x)(x-\alpha) + r\text{,}\) where \(\deg r \lt \deg (x-\alpha) = 1\text{.}\) Thus, \(r\) is a nonzero constant. If \(\alpha\) is a root of \(p\text{,}\) then \(0 = p(\alpha) = q(\alpha) (\alpha - \alpha) + r = 0 + r = r\text{,}\) so \(r=0\) and \(x-\alpha | p(x)\text{.}\)</p></article><span class="incontext"><a href="SubSec-Factoring-Polynomials.html#proof-41">in-context</a></span>
+<p>Let \(I\) be a nonzero ideal of \(F[x]\) and let \(f(x)\in I\) be a polynomial of smallest degree. We claim \(I = \ideal{f(x)}\text{.}\)</p>
+<p>Clearly \(\ideal{f(x)}\subseteq I\text{.}\)</p>
+<p>Let \(g(x)\in I\) and use <a class="xref" data-knowl="./knowl/theorem_polydivalg.html" title="Theorem 2.4.13: (Polynomial Division Algorithm)">Theorem 2.4.13</a> to write \(g(x) = f(x) q(x) + r(x)\text{,}\) where \(\deg r(x) \lt \deg f(x)\) or \(r(x) = 0\text{.}\) As in <a class="xref" data-knowl="./knowl/thm_ZisPID.html" title="Theorem 2.4.8">Theorem 2.4.8</a>, write \(r(x) = g(x) - f(x) q(x) \in I\text{,}\) so we must have that \(r(x) = 0\text{.}\) Thus, \(f(x) | g(x)\) and \(g(x)\in \ideal{f(x)}\text{.}\)</p></article><span class="incontext"><a href="SubSec-Principal-Ideals.html#proof-41">in-context</a></span>
 </body>
 </html>

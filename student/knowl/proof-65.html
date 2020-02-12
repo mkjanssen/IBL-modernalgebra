@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-05T21:42:33-06:00    *-->
+<!--*    on 2020-02-12T10:05:44-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,6 +13,17 @@
 </head>
 <body>
 <article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>
-<p>Straightforward definition check. Nearly identical to <a class="xref" data-knowl="./knowl/theorem-pidisnoetherian.html" title="Theorem 3.2.4">Theorem 3.2.4</a>.</p></article><span class="incontext"><a href="SubSec-Ideals-In-General.html#proof-65">in-context</a></span>
+<p>Assume that \(R\) is Noetherian. Inductively build an ascending chain of ideals as follows:</p>
+<ul class="disc">
+<li>Let \(x_1 \in I\) be arbitrary.</li>
+<li>For all \(i\ge 2\text{,}\) let \(x_i \in I\setminus \ideal{x_1, \ldots, x_{i-1}}\) be arbitrary.</li>
+</ul>
+<p>We thus obtain an ascending chain of ideals</p>
+<div class="displaymath">
+\begin{equation*}
+\ideal{x_1} \subseteq \ideal{x_1, x_2}\subseteq \ideal{x_1,x_2,x_3}\subseteq \cdots
+\end{equation*}
+</div>
+<p>which must stabilize at \(\ideal{x_1, x_2,\ldots, x_n}\text{.}\) That is, at some point, \(I\setminus \ideal{x_1, x_2,\ldots, x_n} = \emptyset\text{,}\) and since \(\ideal{x_1, x_2,\ldots, x_n}\subseteq I\text{,}\) we have \(I = \ideal{x_1, x_2,\ldots, x_n}\text{.}\)</p></article><span class="incontext"><a href="SubSec-Ideals-In-General.html#proof-65">in-context</a></span>
 </body>
 </html>
