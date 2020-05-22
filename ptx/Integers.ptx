@@ -298,15 +298,34 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
     
   </section>
   <section xml:id="SubSec-Divisibility-in-the-Integers">
-    <title>Divisibility in the integers</title>
+    <title>Divisibility and GCDs in the Integers</title>
+    
+        <assemblage>
+      <title>Learning Objectives</title>
+		<p>
+      		<statement>
+      		In this section, students will:
+      		<ul>
+      			<li>Prove basic facts about divisibility in <m>\Z</m>.</li>
+      			<li>Prove the Euclidean algorithm.</li>
+      			<li>Prove basic facts about greatest common divisors.</li>
+      			<li>Devise a procedure for computing the greatest common divisor of two integers.</li>
+      		</ul>
+
+	      </statement>
+      </p>
+    </assemblage>
+    
+    <subsection>
+    		<title>Divisibility and the Division Algorithm</title>
     <p>
       In this section,
-      we begin to explore some of the arithmetic and algebraic properties of <m>\Z</m>.
-      One of the primary goals of this sections is to formalize definitions that you've been using and have an intuitive understanding of.
-      At first glance,
-      this might seem to add an unnecessary layer of complication.
-      However, it will be abundantly clear as we move forward that a formalized mathematical language and notation are necessary to extend these properties to a more abstract setting.
-      We begin with a twist on a familiar notion.
+      we begin to explore some of the arithmetic and algebraic properties of <m>\Z</m>. We focus specifically on the divisibility and factorization properties of the integers, as these are the main focus of the text as a whole.
+      One of the primary goals of this section is to formalize definitions that you are likely already familiar with and of which you have an intuitive understanding.
+      At first,
+      this might seem to unnecessarily complicate matters. 
+      However, it will become clear as we move forward that formal mathematical language and notation are necessary to extend these properties to a more abstract setting.
+      We begin with a familiar notion.
     </p>
     <definition>
       <statement>
@@ -354,6 +373,8 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
               </p>
             </li>
           </ol>
+          
+          Comment briefly on the results of this investigation. What did you notice? What do you still wonder?
         </p>
       </statement>
       <solution>
@@ -363,10 +384,15 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
       </solution>
 
     </investigation>
+    
+    <p>
+    		We next collect several standard results about divisibility in <m>\Z</m> which will be used extensively in the remainder of this text.
+    </p>
+
     <theorem>
       <statement>
         <p>
-          Let <m>a,b</m>, and <m>c</m> be integers.
+          Let <m>a,b,c\in\Z</m>.
           If <m>a\mid b</m> and <m>a\mid c</m>, then <m>a\mid (b+c)</m>.
         </p>
       </statement>
@@ -381,10 +407,10 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
     </proof>
     </theorem>
     
-    <theorem>
+    <theorem xml:id="thm-divideproduct">
       <statement>
         <p>
-          Let <m>a</m>, <m>b</m>, and <m>c</m> be integers.
+          Let <m>a,b,c\in\Z</m>.
           If <m>a\mid b</m>, then <m>a\mid bc</m>.
         </p>
       </statement>
@@ -398,74 +424,51 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
     </proof>
     </theorem>
     
-    <definition xml:id="gcd-definition">
+    <investigation xml:id="invest-divideproduct">
+    		<statement>
+    			<p>
+    				Consider the following partial converse to <xref ref="thm-divideproduct" />:
+    				If <m>a,b,c\in\Z</m> with <m>a|bc</m>, must <m>a|b</m> or <m>a|c</m>?
+    				Supply a proof or give a counterexample.
+    			</p>
+    		</statement>
+		<solution>
+			<p>
+				The converse is false: <m>6| 3\cdot 4</m>, but <m>6\nmid 3</m> and <m>6\nmid 4</m>.
+			</p>
+		</solution>
+	</investigation>
+
+	
+	<theorem xml:id="theorem_23lemmageneralization">
       <statement>
         <p>
-          Let <m>a,b\in \Z</m> such that <m>a</m> and <m>b</m> are not both 0.
-          A <term>greatest common divisor</term>
-          of <m>a</m> and <m>b</m>, denoted <m>\gcd(a,b)</m>,
-          is a natural number <m>d</m> satisfying 
-          <ol>
-            <li>
-              <p>
-                <m>d\mid a</m> and <m>d\mid b</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                if <m>e\in \N</m> and <m>e\mid a</m> and <m>e\mid b</m>,
-                then <m>e\mid d</m>.
-              </p>
-            </li>
-          </ol>
-        </p>
-        <p>
-          If <m>\gcd(a,b) = 1</m>,
-          we say that <m>a</m> and <m>b</m> are
-          <term>relatively prime</term> or <term>coprime</term>.
-          <aside>
-          	This formalizes the idea of greatest common factors that is introduced around
-          <url href="http://www.corestandards.org/Math/Content/6/NS/B/4/">sixth grade</url>.
-          </aside>
+          Let <m>a,b,c,d\in \Z</m>.
+          If <m>a = b+c</m> and <m>d</m> divides any two of <m>a,b,c</m>,
+          then <m>d</m> divides the third.
         </p>
       </statement>
-    </definition>
-    <p>
-      This definition may be different than the one you are used to,
-      which likely stated that <m>d \ge e</m> rather than condition 2 in <xref ref="gcd-definition" />.
-      It can be proved using the order relations of <m>\Z</m> that the definition given here is equivalent to that one.
-      However, we will prefer this definition,
-      as it generalizes naturally to other number systems which do not have an order relation like <m>\Z</m>.
-    </p>
-    <activity>
-      <statement>
-        <p>
-          Compute <m>\gcd(a,b)</m> if:
-          <ol>
-            <li>
-              <p>
-                <m>a = 123</m>, <m>b = 141</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>a = 0</m>, <m>b = 169</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>a= 85</m>, <m>b = 48</m>
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-      <solution>
-      	<p>
-      		TBD.
-      	</p>
-      </solution>
-    </activity>
+       <proof>
+      <p>
+        We consider two cases.
+      </p>
+      <p>
+        <em>Case 1:</em> Assume without loss of generality that <m>d|a</m> and <m>d|b</m>.
+        Then there are integers <m>k_1, k_2</m> such that
+        <m>d k_1 = a</m> and <m>d k_2 = b</m>.
+        We observe that <m>c = a - b = d k_1 - d k_2 = d(k_1 - k_2)</m>,
+        so <m>d|c</m>.
+      </p>
+      <p>
+        <em>Case 2:</em> Assume that <m>d| b</m> and <m>d|c</m>,
+        so there are <m>k_1,k_2\in \Z</m> such that
+        <m>d k_1 = b</m> and <m>d k_2 = c</m>.
+        Then <m>a = b+ c = dk_1 + dk_2 = d(k_1 + k_2)</m>, so <m>d|a</m>.
+      </p>
+    </proof>
+    </theorem>
+    
+    
     <p>
       As we saw above,
       not all pairs of integers <m>a,b</m> satisfy <m>a\mid b</m> or <m>b\mid a</m>.
@@ -474,8 +477,10 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
       there is often something left over (a remainder)</url>.
       The following theorem formalizes this idea for <m>a,b\in \N</m>.
     </p>
+    
     <theorem xml:id="thm_divalg">
-      <title>The Division Algorithm</title>
+      <title>The Division Algorithm for <m>\N</m></title>
+      <idx>Division Algorithm (<m>\N</m>)</idx>
       <statement>
         <p>
           Let <m>a,b\in \N</m>.
@@ -547,38 +552,127 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
     	</p>
     </aside>
     
+    
+    
     <p>
-    		Though we only prove the Division Algorithm for <m>a,b\in\N</m>, it is the case that it holds for any <m>a,b\in\Z</m> where <m>b\ne 0</m>, and we will assume this going forward.
+    		Unsurprisingly, the Division Algorithm also holds in <m>\Z</m>, though the existence of negative integers requires a careful restatement.
+    		<!-- Though we only prove the Division Algorithm for <m>a,b\in\N</m>, it is the case that it holds for any <m>a,b\in\Z</m> where <m>b\ne 0</m>, and we will assume this going forward. -->
     	</p>
+    	
+    	<corollary>
+    		<title>The Division Algorithm for <m>\Z</m></title>
+    		<idx>Division Algorithm (<m>\Z</m>)</idx>
+    		<statement>
+    			<p>
+          		Let <m>a,b\in \Z</m> with <m>b\ne 0</m>.
+          		Then there exist unique integers <m>q,r</m> such that <m>a = bq + r</m>,
+          		where <m>0 \le r \lt |b|</m>.
+        		</p>
+        	</statement>
+        	<hint>
+        		<p>
+        			Consider cases, and apply <xref ref="thm_divalg" /> wherever possible.
+        		</p>
+        	</hint>
+        <proof>
+        		<p>
+        			TBD.
+        		</p>
+        	</proof>
+    </corollary>
+    
+    </subsection>
+
+
+		<subsubsection>
+			<title>Greatest Common Divisors</title>
+			
+			<p>
+				We next turn to another familiar property of the integers: the existence of greatest common divisors.
+			</p>
 
     
-    <theorem xml:id="theorem_23lemmageneralization">
+    
+    <definition xml:id="gcd-definition">
+    		<idx>greatest common divisor (<m>\Z</m>)</idx>
       <statement>
         <p>
-          Let <m>a,b,c,d\in \Z</m>.
-          If <m>a = b+c</m> and <m>d</m> divides any two of <m>a,b,c</m>,
-          then <m>d</m> divides the third.
+          Let <m>a,b\in \Z</m> such that <m>a</m> and <m>b</m> are not both 0.
+          A <term>greatest common divisor</term>
+          of <m>a</m> and <m>b</m>, denoted <m>\gcd(a,b)</m>,
+          is a natural number <m>d</m> satisfying 
+          <ol>
+            <li>
+              <p>
+                <m>d\mid a</m> and <m>d\mid b</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                if <m>e\in \N</m> and <m>e\mid a</m> and <m>e\mid b</m>,
+                then <m>e\mid d</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+        <p>
+          If <m>\gcd(a,b) = 1</m>,
+          we say that <m>a</m> and <m>b</m> are
+          <term>relatively prime</term> or <term>coprime</term>.
+          <aside>
+          	This formalizes the idea of greatest common factors that is introduced around
+          <url href="http://www.corestandards.org/Math/Content/6/NS/B/4/">sixth grade</url>.
+          </aside>
         </p>
       </statement>
-       <proof>
-      <p>
-        We consider two cases.
-      </p>
-      <p>
-        <em>Case 1:</em> Assume without loss of generality that <m>d|a</m> and <m>d|b</m>.
-        Then there are integers <m>k_1, k_2</m> such that
-        <m>d k_1 = a</m> and <m>d k_2 = b</m>.
-        We observe that <m>c = a - b = d k_1 - d k_2 = d(k_1 - k_2)</m>,
-        so <m>d|c</m>.
-      </p>
-      <p>
-        <em>Case 2:</em> Assume that <m>d| b</m> and <m>d|c</m>,
-        so there are <m>k_1,k_2\in \Z</m> such that
-        <m>d k_1 = b</m> and <m>d k_2 = c</m>.
-        Then <m>a = b+ c = dk_1 + dk_2 = d(k_1 + k_2)</m>, so <m>d|a</m>.
-      </p>
-    </proof>
-    </theorem>
+    </definition>
+    <p>
+      This definition may be different than the one you are used to,
+      which likely stated that <m>d \ge e</m> rather than condition 2 in <xref ref="gcd-definition" />.
+      It can be proved using the order relations of <m>\Z</m> that the definition given here is equivalent to that one.
+      However, we will prefer this definition,
+      as it generalizes naturally to other number systems which do not have an order relation like <m>\Z</m>.
+    </p>
+    <activity xml:id="act-gcdcomputations">
+      <statement>
+        <p>
+          Compute <m>\gcd(a,b)</m> if:
+          <ol>
+            <li>
+              <p>
+                <m>a = 123</m>, <m>b = 141</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>a = 0</m>, <m>b = 169</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>a= 85</m>, <m>b = 48</m>
+              </p>
+            </li>
+          </ol>
+          Now that you have had a bit of practice computing gcds, describe your method for finding them in a sentence or two.
+        </p>
+      </statement>
+      <solution>
+      	<p>
+      		TBD.
+      	</p>
+      </solution>
+    </activity>
+    
+
+    
+    <p>
+    		How did you answer the last question in <xref ref="act-gcdcomputations" />? If you are like the authors' classes, the answers probably varied, though you have referred at some point to a "prime" (<xref ref="def-primeinteger" text="custom">whatever those are</xref>), or possibly some other ad hoc method for finding the gcd.
+    		Most such methods rely in some form on our ability to factor integers.
+    		However, the problem of factoring arbitrary integers is actually surprisingly computationally intensive. 
+    		Thankfully, there is another way to compute <m>\gcd(a,b)</m>, to which we now turn.
+    	</p>
+
    
     
     
@@ -677,6 +771,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
 	    <idx>Euclidean Algorithm</idx>
       <statement>
         <p> Let <m>a,b\in \N</m>. Use <xref ref="thm_divalg" /> and <xref ref="invest_gcdremainder" /> to determine an algorithm for computing <m>\gcd(a,b)</m>.
+        How could your method be modified to compute <m>\gcd(a,b)</m> for <m>a,b\in\Z</m>?
         </p>
       </statement>
       <solution>
@@ -722,6 +817,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
     <p>
       The following identity provides a useful characterization of the greatest common divisor of two integers,
       not both zero.
+      We will return to this idea several times, even after we have left the familiar realm of the integers.
     </p>
     <theorem xml:id="theorem_bezoutint">
       <title>B&#xe9;zout's Identity</title>
@@ -734,31 +830,47 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
           </me>.
         </p>
       </statement>
+      <hint>
+      	<p>Apply <xref ref="axiom_wellordering" /> to a well-chosen set.</p>
+      </hint>
+      
+      <hint>
+      	<p>Apply <xref ref="axiom_wellordering" /> to <m>S = \setof{as+bt}{s,t\in\Z, \ as+bt \gt 0}</m>.</p>
+      </hint>
+
       <proof>
-      <p>
-        If, e.g., <m>a = 0</m> and <m>b\ne 0</m>,
-        then <m>\gcd(a,b) = b</m> and <m>x=0,y=1</m> suffices.
-        If <m>a = b</m>, then <m>\gcd(a,b) = a = b</m>,
-        so <m>x = 0, y = 1</m> suffices.
+      
+      	<p>
+      		Consider the set <m>S = \setof{as+bt}{s,t\in\Z, \ as+bt \gt 0}</m>.
+      		We first show that <m>S\ne \emptyset</m>.
+      	</p>
+		<p>      		
+      		Suppose without loss of generality that <m>a\ne 0</m>, and consider <m>a \gt 0</m>; then <m>s=1, t = 0</m> is sufficient to guarantee <m>as+bt\in S</m>.
+      		If <m>a \lt 0</m>, then <m>s = -1, t= 0</m> is sufficient.
+      		Regardless, <m>S\ne \emptyset</m>, and by the Well-Ordering Principle, <m>S</m> has a least element, <m>d = ax+by</m>.
+      		We claim <m>d = \gcd(a,b)</m>.
+      	</p>
+		
+		<p>
+			We first show that <m>d|a</m>
+			Use the division algorithm to write <m>a = dq + r</m>, where <m>r \lt d</m>.
+			We find <m>r = a - dq = a - (ax+by)q = a(1-xq) + by</m>, and if <m>r\gt 0</m>, <m>r\in S</m>, contradicting the status of <m>d</m> as the least element of <m>S</m>.
+			Thus, <m>r = 0</m>, and <m>d|a</m>.
+			By a symmetric proof, <m>d|b</m>.
       </p>
       <p>
-        So, suppose <m>a,b\ne 0</m>, and let <m>d = \gcd(a,b)</m>.
-        Without loss of generality assume <m>|a| > |b|</m>.
-        The Euclidean Algoirthm provides a sequence of integers <m>r_1, r_2, \ldots,
-        r_k, q_1, q_2, \ldots, q_{k+1}</m> and equations
-        <md>
-          <mrow>|a| \amp = |b| q_1 + r_1</mrow>
-          <mrow>|b| \amp = r_1 q_2 + r_2</mrow>
-          <mrow>r_1 \amp = r_2 q_3 + r_3</mrow>
-          <mrow>\amp \vdots</mrow>
-          <mrow>r_{k-2} \amp = r_{k-1} q_k + r_k</mrow>
-          <mrow>r_{k-1} \amp = r_k q_{k+1}</mrow>
-        </md>,
-        where <m>0\le r_i \lt  |b|</m> and <m>r_k \ne 0</m>.
-        Then <m>r_k = \gcd(a,b)</m> and we may back-substitute to find integers <m>x</m> and <m>y</m> such that <m>ax + by = r_k = \gcd(a,b)</m>.
+      	Suppose then that <m>e</m> is a common divisor of <m>a</m> and <m>b</m>; write <m>a = e k_1</m> and <m>b = e k_2</m>.
+      	Then <m>d = ax + by = (ek_1)x + (ek_2)y = e(k_1x + k_2 y)</m>, whence <m>e|d</m>.
+      	Therefore, <m>d = \gcd(a,b)</m>.
       </p>
+
     </proof>
     </theorem>
+    
+    <p>
+    		We conclude with an answer to the questions raised by <xref ref="invest-divideproduct" />.
+    	</p>
+
     
     <theorem xml:id="theorem_relprimecancel">
       <statement>
@@ -794,12 +906,20 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
     </proof>
     </theorem>
     
+    </subsubsection>
+
+    
     <conclusion>
     		<p>
     			In this section, we have collected some initial results about divisibility in the integers.
     			We'll next explore the multiplicative building blocks of the integers, the primes, in preparation for a deeper exploration of factorization.
     		</p>
     	</conclusion>
+    	
+    	<exercises>
+    		<exercise>test</exercise>
+    	</exercises>
+
 
     			
     
@@ -813,7 +933,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
       polynomials, matrices) into products of other numbers.
       One of the most familiar examples of this process involves factoring integers into products of primes.
     </p>
-    <definition>
+    <definition xml:id="def-primeinteger">
       <statement>
         <p>
           Let <m>p > 1</m> be a natural number.

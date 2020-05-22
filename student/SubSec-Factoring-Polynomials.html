@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-16T18:33:16-06:00    *-->
+<!--*    on 2020-05-22T10:55:37-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Factoring Polynomials</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -61,13 +61,6 @@ MathJax.Hub.Config({
 <link href="https://pretextbook.org/css/0.31/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.13;
-</script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\labelitemi}{$\diamond$}
@@ -144,7 +137,7 @@ var js_version = 0.13;
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction">Introduction</a></li>
@@ -156,7 +149,7 @@ var js_version = 0.13;
 <li class="link">
 <a href="Sec-Integers.html" data-scroll="Sec-Integers"><span class="codenumber">1</span> <span class="title">The Integers</span></a><ul>
 <li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering">Induction and Well-Ordering</a></li>
-<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers">Divisibility in the integers</a></li>
+<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers">Divisibility and GCDs in the Integers</a></li>
 <li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization">Primes and Factorization</a></li>
 <li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m">The Integers modulo \(m\)</a></li>
 </ul>
@@ -183,60 +176,58 @@ var js_version = 0.13;
 <li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms">Homomorphisms</a></li>
 </ul>
 </li>
-<li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="SubSec-Factoring-Polynomials"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.1</span> <span class="title">Factoring Polynomials</span>
 </h2>
-<a href="SubSec-Factoring-Polynomials.html" class="permalink">¶</a><p id="p-479">One of the most beautiful consequences of an abstract study of algebra is the fact that both \(\Z\) and \(F[x]\) are Euclidean domains. While they are not “the same”, we can expect them to share many of the same properties. In this section, our first goal will be to extend familiar properties from <a href="Sec-Integers.html" class="internal" title="Chapter 1: The Integers">§ 1</a> to \(F[x]\text{.}\) We will also see that the particular nature of a polynomial allows for additional criteria for, e.g., its irreducibility to be decided.</p>
-<p id="p-480">We saw in <a class="xref" data-knowl="./knowl/thm_divalg.html" title="Theorem 1.2.5: The Division Algorithm">Theorem 1.2.5</a> and <a class="xref" data-knowl="./knowl/theorem_polydivalg.html" title="Theorem 2.4.13: (Polynomial Division Algorithm)">Theorem 2.4.13</a> that both \(\Z\) and \(F[x]\) have a division algorithm. It is reasonable (and correct) to expect that similar to the integers we can also investigate the greatest common divisor of polynomials.</p>
-<article class="investigation project-like" id="investigation-17"><h6 class="heading">
+<p id="p-493">One of the most beautiful consequences of an abstract study of algebra is the fact that both \(\Z\) and \(F[x]\) are Euclidean domains. While they are not “the same”, we can expect them to share many of the same properties. In this section, our first goal will be to extend familiar properties from <a href="Sec-Integers.html" class="internal" title="Chapter 1: The Integers">§ 1</a> to \(F[x]\text{.}\) We will also see that the particular nature of a polynomial allows for additional criteria for, e.g., its irreducibility to be decided.</p>
+<p id="p-494">We saw in <a class="xref" data-knowl="./knowl/thm_divalg.html" title="Theorem 1.2.5: The Division Algorithm for \(\N\)">Theorem 1.2.5</a> and <a class="xref" data-knowl="./knowl/theorem_polydivalg.html" title="Theorem 2.4.13: (Polynomial Division Algorithm)">Theorem 2.4.13</a> that both \(\Z\) and \(F[x]\) have a division algorithm. It is reasonable (and correct) to expect that similar to the integers we can also investigate the greatest common divisor of polynomials.</p>
+<article class="investigation project-like" id="investigation-18"><h6 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span>
 </h6>
-<p id="p-481">Given \(f(x),g(x)\in F[x]\text{,}\) state a conjecture that gives a means for finding \(\gcd(f(x),g(x))\text{.}\) Prove your conjecture is correct.</p></article><article class="investigation project-like" id="investigation-18"><h6 class="heading">
+<p id="p-495">Given \(f(x),g(x)\in F[x]\text{,}\) state a conjecture that gives a means for finding \(\gcd(f(x),g(x))\text{.}\) Prove your conjecture is correct.</p></article><article class="investigation project-like" id="investigation-19"><h6 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span>
 </h6>
-<p id="p-483">Carefully state and prove a Bézout-like theorem (recall <a class="xref" data-knowl="./knowl/theorem_bezoutint.html" title="Theorem 1.2.8: Bézout's Identity">Theorem 1.2.8</a>) for polynomials in \(F[x]\text{.}\)</p></article><p id="p-485">We next make the somewhat pedantic — yet valuable — distinction between the polynomial \(p(x)\in R[x]\) and the function \(p_f : R\to R\) defined by the polynomial.</p>
+<p id="p-497">Carefully state and prove a Bézout-like theorem (recall <a class="xref" data-knowl="./knowl/theorem_bezoutint.html" title="Theorem 1.2.9: Bézout's Identity">Theorem 1.2.9</a>) for polynomials in \(F[x]\text{.}\)</p></article><p id="p-499">We next make the somewhat pedantic — yet valuable — distinction between the polynomial \(p(x)\in R[x]\) and the function \(p_f : R\to R\) defined by the polynomial.</p>
 <article class="definition definition-like" id="definition-30"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span>
 </h6>
-<p id="p-486">Let \(R\) be a commutative ring with identity and \(p(x) = a_0 + a_1 x + \cdots + a_n x^n \in R[x]\text{.}\) A <dfn class="terminology">polynomial function</dfn> \(p_f : R \to R\) is defined, for all \(r\in R\text{,}\) by \(p_f(r) = a_0 + a_1 r + \cdots + a_n r^n \in R\text{.}\) We usually denote \(p_f(r)\) by \(p(r)\text{,}\) and say that \(p(r)\) is the polynomial \(p\) evaluated at \(r\text{.}\)</p></article><article class="definition definition-like" id="definition-31"><h6 class="heading">
+<p id="p-500">Let \(R\) be a commutative ring with identity and \(p(x) = a_0 + a_1 x + \cdots + a_n x^n \in R[x]\text{.}\) A <dfn class="terminology">polynomial function</dfn> \(p_f : R \to R\) is defined, for all \(r\in R\text{,}\) by \(p_f(r) = a_0 + a_1 r + \cdots + a_n r^n \in R\text{.}\) We usually denote \(p_f(r)\) by \(p(r)\text{,}\) and say that \(p(r)\) is the polynomial \(p\) evaluated at \(r\text{.}\)</p></article><article class="definition definition-like" id="definition-31"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span>
 </h6>
-<p id="p-487">Let \(R\) be commutative with identity and suppose \(p(x) \in R[x]\text{.}\) We say \(r\in R\) is a <dfn class="terminology">zero</dfn> or <dfn class="terminology">root</dfn> of \(p(x)\) if \(p(r) = 0\text{.}\)</p></article><p id="p-488">The following theorem is <a class="external" href="http://www.corestandards.org/Math/Content/HSA/APR/B/2/" target="_blank">a result that you learned in high school algebra</a> (and have likely used countless times since then), but as with the other familiar topics we have explored so far, it is necessary to formalize prior to continuing.</p>
+<p id="p-501">Let \(R\) be commutative with identity and suppose \(p(x) \in R[x]\text{.}\) We say \(r\in R\) is a <dfn class="terminology">zero</dfn> or <dfn class="terminology">root</dfn> of \(p(x)\) if \(p(r) = 0\text{.}\)</p></article><p id="p-502">The following theorem is <a class="external" href="http://www.corestandards.org/Math/Content/HSA/APR/B/2/" target="_blank">a result that you learned in high school algebra</a> (and have likely used countless times since then), but as with the other familiar topics we have explored so far, it is necessary to formalize prior to continuing.</p>
 <article class="theorem theorem-like" id="theorem-43"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span>
 </h6>
-<p id="p-489">Let \(F\) be a field, and \(p(x)\in F[x]\text{.}\) Then \(\alpha\in F\) is a root of \(p(x)\) if and only if \(x-\alpha\) divides \(p(x)\text{.}\)</p></article><article class="exploration project-like" id="exploration-16"><h6 class="heading">
+<p id="p-503">Let \(F\) be a field, and \(p(x)\in F[x]\text{.}\) Then \(\alpha\in F\) is a root of \(p(x)\) if and only if \(x-\alpha\) divides \(p(x)\text{.}\)</p></article><article class="exploration project-like" id="exploration-16"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span>
 </h6>
-<p id="p-492">Given a field \(F\text{,}\) define an irreducible element of \(F[x]\text{,}\) keeping in view <a class="xref" data-knowl="./knowl/theorem_degreeofproductinfield.html" title="Theorem 2.2.18">Theorem 2.2.18</a> and <a class="xref" data-knowl="./knowl/def_irreducibleelement.html" title="Definition 2.3.4">Definition 2.3.4</a>.</p></article><article class="definition definition-like" id="definition-32"><h6 class="heading">
+<p id="p-506">Given a field \(F\text{,}\) define an irreducible element of \(F[x]\text{,}\) keeping in view <a class="xref" data-knowl="./knowl/theorem_degreeofproductinfield.html" title="Theorem 2.2.18">Theorem 2.2.18</a> and <a class="xref" data-knowl="./knowl/def_irreducibleelement.html" title="Definition 2.3.4">Definition 2.3.4</a>.</p></article><article class="definition definition-like" id="definition-32"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span>
 </h6>
-<p id="p-494">A polynomial \(f(x)\in F[x]\) is <dfn class="terminology">reducible</dfn> if it is not irreducible.</p></article><article class="exploration project-like" id="exploration-17"><h6 class="heading">
+<p id="p-508">A polynomial \(f(x)\in F[x]\) is <dfn class="terminology">reducible</dfn> if it is not irreducible.</p></article><article class="exploration project-like" id="exploration-17"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span>
 </h6>
-<p id="p-495">State a positive definition for a reducible polynomial with coefficients in a field \(F\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-44"><h6 class="heading">
+<p id="p-509">State a positive definition for a reducible polynomial with coefficients in a field \(F\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-44"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span>
 </h6>
-<p id="p-497">Every polynomial of degree 1 in \(F[x]\) is irreducible.</p></article><article class="theorem theorem-like" id="theorem-45"><h6 class="heading">
+<p id="p-511">Every polynomial of degree 1 in \(F[x]\) is irreducible.</p></article><article class="theorem theorem-like" id="theorem-45"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span>
 </h6>
-<p id="p-499">A nonconstant polynomial \(f(x)\in F[x]\) of degree 2 or 3 is irreducible over \(F\) if and only if it has no zeros in \(F\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-46"><h6 class="heading">
+<p id="p-513">A nonconstant polynomial \(f(x)\in F[x]\) of degree 2 or 3 is irreducible over \(F\) if and only if it has no zeros in \(F\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-46"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="period">.</span>
 </h6>
-<p id="p-503">Let \(F\) be a field and \(p(x),f(x),g(x)\in F[x]\) such that \(p(x)\) is irreducible and \(p(x)\) divides \(f(x) g(x)\text{.}\) Then \(p(x)\) divides \(f(x)\) or \(p(x)\) divides \(g(x)\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-47"><h6 class="heading">
+<p id="p-517">Let \(F\) be a field and \(p(x),f(x),g(x)\in F[x]\) such that \(p(x)\) is irreducible and \(p(x)\) divides \(f(x) g(x)\text{.}\) Then \(p(x)\) divides \(f(x)\) or \(p(x)\) divides \(g(x)\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-47"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.8</span><span class="period">.</span>
 </h6>
-<p id="p-505">Every nonconstant polynomial with coefficients in \(\C\) has a root in \(\C\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-48"><h6 class="heading">
+<p id="p-519">Every nonconstant polynomial with coefficients in \(\C\) has a root in \(\C\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-48"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.9</span><span class="period">.</span>
 </h6>
-<p id="p-506">Every nonconstant polynomial in \(\C[x]\) can be written as a product of linear polynomials.</p>
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-8" id="hint-8"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like"><p id="p-507">What are the irreducibles in \(\C[x]\text{?}\)</p></div></div></article></section></div></main>
+<p id="p-520">Every nonconstant polynomial in \(\C[x]\) can be written as a product of linear polynomials.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-11" id="hint-11"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-11"><div class="hint solution-like"><p id="p-521">What are the irreducibles in \(\C[x]\text{?}\)</p></div></div></article></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.13/login.js"></script>
 </body>
 </html>

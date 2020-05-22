@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-16T18:33:15-06:00    *-->
+<!--*    on 2020-05-22T10:55:35-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Primes and Factorization</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -61,13 +61,6 @@ MathJax.Hub.Config({
 <link href="https://pretextbook.org/css/0.31/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.13;
-</script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\labelitemi}{$\diamond$}
@@ -144,7 +137,7 @@ var js_version = 0.13;
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction">Introduction</a></li>
@@ -156,7 +149,7 @@ var js_version = 0.13;
 <li class="link">
 <a href="Sec-Integers.html" data-scroll="Sec-Integers"><span class="codenumber">1</span> <span class="title">The Integers</span></a><ul>
 <li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering">Induction and Well-Ordering</a></li>
-<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers">Divisibility in the integers</a></li>
+<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers">Divisibility and GCDs in the Integers</a></li>
 <li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization" class="active">Primes and Factorization</a></li>
 <li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m">The Integers modulo \(m\)</a></li>
 </ul>
@@ -183,61 +176,59 @@ var js_version = 0.13;
 <li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms">Homomorphisms</a></li>
 </ul>
 </li>
-<li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="SubSec-Primes-and-Factorization"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">Primes and Factorization</span>
 </h2>
-<a href="SubSec-Primes-and-Factorization.html" class="permalink">¶</a><p id="p-105">As described in <a href="Sec-Introduction.html" class="internal" title="Preface: Introduction">Preface </a>, our main goal is to build a deep structural understanding of the notion of <em class="emphasis">factorization</em>. That is, splitting objects (e.g., numbers, polynomials, matrices) into products of other numbers. One of the most familiar examples of this process involves factoring integers into products of primes.</p>
-<article class="definition definition-like" id="definition-5"><h6 class="heading">
+<p id="p-119">As described in <a href="Sec-Introduction.html" class="internal" title="Preface: Introduction">Preface </a>, our main goal is to build a deep structural understanding of the notion of <em class="emphasis">factorization</em>. That is, splitting objects (e.g., numbers, polynomials, matrices) into products of other numbers. One of the most familiar examples of this process involves factoring integers into products of primes.</p>
+<article class="definition definition-like" id="def-primeinteger"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span>
 </h6>
-<p id="p-106">Let \(p &gt; 1\) be a natural number. We say \(p\) is <dfn class="terminology">prime</dfn> if whenever \(a,b\in \Z\) such that \(p\mid ab\text{,}\) either \(p\mid a\) or \(p\mid b\text{.}\)</p>
-<p id="p-107">A natural number \(m &gt; 1\) is said to be <dfn class="terminology">composite</dfn> if it is not prime.</p></article><p id="p-108">This is almost certainly not the definition of prime that you are familiar with from your school days. However, it is often more useful than the usual definition. And, as <a class="xref" data-knowl="./knowl/theorem_euclidslemma.html" title="Theorem 1.3.2">Theorem 1.3.2</a> demonstrates, the two notions are equivalent.</p>
+<p id="p-120">Let \(p &gt; 1\) be a natural number. We say \(p\) is <dfn class="terminology">prime</dfn> if whenever \(a,b\in \Z\) such that \(p\mid ab\text{,}\) either \(p\mid a\) or \(p\mid b\text{.}\)</p>
+<p id="p-121">A natural number \(m &gt; 1\) is said to be <dfn class="terminology">composite</dfn> if it is not prime.</p></article><p id="p-122">This is almost certainly not the definition of prime that you are familiar with from your school days. However, it is often more useful than the usual definition. And, as <a class="xref" data-knowl="./knowl/theorem_euclidslemma.html" title="Theorem 1.3.2">Theorem 1.3.2</a> demonstrates, the two notions are equivalent.</p>
 <article class="theorem theorem-like" id="theorem_euclidslemma"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="period">.</span>
 </h6>
-<p id="p-109">Given any \(p\in \N\text{,}\) \(p &gt; 1\text{,}\) \(p\) is prime if and only if whenever \(m\in \N\) divides \(p\text{,}\) either \(m = p\) or \(m = 1\text{.}\)</p></article><article class="exploration project-like" id="question_compositecharacterization"><h6 class="heading">
+<p id="p-123">Given any \(p\in \N\text{,}\) \(p &gt; 1\text{,}\) \(p\) is prime if and only if whenever \(m\in \N\) divides \(p\text{,}\) either \(m = p\) or \(m = 1\text{.}\)</p></article><article class="exploration project-like" id="question_compositecharacterization"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span>
 </h6>
-<p id="p-112">Using <a class="xref" data-knowl="./knowl/theorem_euclidslemma.html" title="Theorem 1.3.2">Theorem 1.3.2</a> as a guide, give a biconditional characterization for composite numbers. That is, finish the sentence: “A number \(m\in\N\) is composite if and only if ....”</p></article><article class="theorem theorem-like" id="theorem-10"><h6 class="heading">
+<p id="p-126">Using <a class="xref" data-knowl="./knowl/theorem_euclidslemma.html" title="Theorem 1.3.2">Theorem 1.3.2</a> as a guide, give a biconditional characterization for composite numbers. That is, finish the sentence: “A number \(m\in\N\) is composite if and only if ....”</p></article><article class="theorem theorem-like" id="theorem-10"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.3.3</span><span class="period">.</span>
 </h6>
-<p id="p-114">Let \(a\in \N\) such that \(a &gt; 1\text{.}\) Then there is a prime \(p\) such that \(p\mid a\text{.}\)</p></article><p id="p-117">Our first major theorem makes two claims: that positive integers greater than 1 <em class="emphasis">can</em> be factored into products of primes, and that this factorization can happen in only one way. As the semester progresses, we will see other theorems like this one, and catch glimpses of other ways to think about the <em class="emphasis">unique factorization property</em>.</p>
-<article class="assemblage assemblage-like" id="assemblage-3"><h6 class="heading"><span class="title">Fundamental Theorem of Arithmetic.</span></h6>
-<p id="p-118">Every natural number greater than 1 is either a prime number or it can be expressed as a finite product of prime numbers where the expression is unique up to the order of the factors.</p></article> The proof is broken into two parts: existence (<a class="xref" data-knowl="./knowl/theorem_FTAexistence.html" title="Theorem 1.3.4: Fundamental Theorem of Arithmetic–Existence Part">Theorem 1.3.4</a>) and uniqueness (<a class="xref" data-knowl="./knowl/theorem_FTAuniqueness.html" title="Theorem 1.3.6: Fundamental Theorem of Arithmetic–Uniqueness Part">Theorem 1.3.6</a>). <article class="theorem theorem-like" id="theorem_FTAexistence"><h6 class="heading">
+<p id="p-128">Let \(a\in \N\) such that \(a &gt; 1\text{.}\) Then there is a prime \(p\) such that \(p\mid a\text{.}\)</p></article><p id="p-131">Our first major theorem makes two claims: that positive integers greater than 1 <em class="emphasis">can</em> be factored into products of primes, and that this factorization can happen in only one way. As the semester progresses, we will see other theorems like this one, and catch glimpses of other ways to think about the <em class="emphasis">unique factorization property</em>.</p>
+<article class="assemblage assemblage-like" id="assemblage-4"><h6 class="heading"><span class="title">Fundamental Theorem of Arithmetic.</span></h6>
+<p id="p-132">Every natural number greater than 1 is either a prime number or it can be expressed as a finite product of prime numbers where the expression is unique up to the order of the factors.</p></article> The proof is broken into two parts: existence (<a class="xref" data-knowl="./knowl/theorem_FTAexistence.html" title="Theorem 1.3.4: Fundamental Theorem of Arithmetic–Existence Part">Theorem 1.3.4</a>) and uniqueness (<a class="xref" data-knowl="./knowl/theorem_FTAuniqueness.html" title="Theorem 1.3.6: Fundamental Theorem of Arithmetic–Uniqueness Part">Theorem 1.3.6</a>). <article class="theorem theorem-like" id="theorem_FTAexistence"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental Theorem of Arithmetic–Existence Part<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-3" id="fn-3"><sup> 1 </sup></a>.</span>
 </h6>
-<p id="p-119">Every natural number \(n &gt; 1\) is either a prime number or it can be expressed as a finite product of prime numbers. That is, for every natural number \(n &gt; 1\text{,}\) there exist primes \(p_1, p_2, \ldots,
+<p id="p-133">Every natural number \(n &gt; 1\) is either a prime number or it can be expressed as a finite product of prime numbers. That is, for every natural number \(n &gt; 1\text{,}\) there exist primes \(p_1, p_2, \ldots,
 p_m\) and natural numbers \(r_1, r_2, \ldots, r_m\) such that</p>
 <div class="displaymath">
 \begin{equation*}
 n = p_1^{r_1} p_2^{r_2} \cdots p_m^{r_m}\text{.}
 \end{equation*}
 </div>
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-3" id="hint-3"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-120">Use the Well-Ordering Principle (or something equivalent to it.)</p></div></div></article><article class="lemma theorem-like" id="lemma-1"><h6 class="heading">
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-6" id="hint-6"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like"><p id="p-134">Use the Well-Ordering Principle (or something equivalent to it.)</p></div></div></article><article class="lemma theorem-like" id="lemma-1"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">1.3.5</span><span class="period">.</span>
 </h6>
-<p id="p-123">Let \(p\) and \(q_1, q_2,\ldots,
+<p id="p-137">Let \(p\) and \(q_1, q_2,\ldots,
 q_n\) all be primes and let \(k\) be a natural number such that \(pk = q_1 q_2 \ldots q_n\text{.}\) Then \(p = q_i\) for some \(i\text{.}\)</p></article><article class="theorem theorem-like" id="theorem_FTAuniqueness"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental Theorem of Arithmetic–Uniqueness Part.</span>
 </h6>
-<p id="p-129">Let \(n\) be a natural number. Let \(\set{p_1,p_2,\ldots,p_m}\) and \(\set{q_1,q_2,\ldots,q_s}\) be sets of primes with \(p_i\ne p_j\) if \(i\ne j\) and \(q_i\ne q_j\) if \(i\ne j\text{.}\) Let \(\set{r_1,r_2,\ldots,r_m}\) and \(\set{t_1,t_2,\ldots,t_s}\) be sets of natural numbers such that</p>
+<p id="p-143">Let \(n\) be a natural number. Let \(\set{p_1,p_2,\ldots,p_m}\) and \(\set{q_1,q_2,\ldots,q_s}\) be sets of primes with \(p_i\ne p_j\) if \(i\ne j\) and \(q_i\ne q_j\) if \(i\ne j\text{.}\) Let \(\set{r_1,r_2,\ldots,r_m}\) and \(\set{t_1,t_2,\ldots,t_s}\) be sets of natural numbers such that</p>
 <div class="displaymath">
 \begin{align*}
 n \amp = p_1^{r_1} p_2^{r_2} \cdots p_m^{r_m}\\
 \amp = q_1^{t_1} q_2^{t_2} \cdots q_s^{t_s}\text{.}
 \end{align*}
 </div>
-<p id="p-130">Then \(m = s\) and \(\set{p_1,p_2,\ldots,p_m} = \set{q_1,q_2,\ldots,q_s}\text{.}\) That is, the sets of primes are equal but their elements are not necessarily listed in the same order (i.e., \(p_i\) may or may not equal \(q_i\)). Moreover, if \(p_i = q_j\text{,}\) then \(r_i = t_j\text{.}\) In other words, if we express the same natural number as a product of distinct primes, then the expressions are identical except for the ordering of the factors.</p>
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-4" id="hint-4"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-131">Argue that the two sets are equal. Then argue that the exponents must also be equal.</p></div></div></article><section class="references" id="references-2"><h3 class="heading hide-type">
+<p id="p-144">Then \(m = s\) and \(\set{p_1,p_2,\ldots,p_m} = \set{q_1,q_2,\ldots,q_s}\text{.}\) That is, the sets of primes are equal but their elements are not necessarily listed in the same order (i.e., \(p_i\) may or may not equal \(q_i\)). Moreover, if \(p_i = q_j\text{,}\) then \(r_i = t_j\text{.}\) In other words, if we express the same natural number as a product of distinct primes, then the expressions are identical except for the ordering of the factors.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-7" id="hint-7"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><p id="p-145">Argue that the two sets are equal. Then argue that the exponents must also be equal.</p></div></div></article><section class="references" id="references-2"><h3 class="heading hide-type">
 <span class="type">References</span> <span class="codenumber"></span> <span class="title">References</span>
 </h3>
 <article class="bib" id="NTI"><div class="bibitem">[1]</div>  <div class="bibentry">D. Marshall, E. Odell, M. Starbird, <em class="emphasis">Number Theory Through Inquiry</em>, MAA Textbooks, Mathematical Association of America, 2007</div></article></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.13/login.js"></script>
 </body>
 </html>

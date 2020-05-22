@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-16T18:33:17-06:00    *-->
+<!--*    on 2020-05-22T10:55:40-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,23 +11,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>Suppose \(\gcd(a,b) = 1\text{.}\) By <a class="xref" data-knowl="./knowl/theorem_bezoutint.html" title="Theorem 1.2.8: Bézout's Identity">Theorem 1.2.8</a>, there are integers \(x\) and \(y\) such that</p>
-<div class="displaymath">
-\begin{equation*}
-ax+by = 1\text{.}
-\end{equation*}
-</div>
-<p>Multiply by \(c\) to get</p>
-<div class="displaymath">
-\begin{equation*}
-acx + bcy = c\text{.}
-\end{equation*}
-</div>
-<p>Since \(a|bc\) by assumption, there is an integer \(k\) such that \(ak = bc\text{,}\) so we have</p>
-<div class="displaymath">
-\begin{equation*}
-acx + bcy = acx + aky = a(cx+ky) = c\text{,}
-\end{equation*}
-</div>
-<p>so \(a|c\text{.}\)</p></article></body>
+<body><article class="hiddenproof"><p>Consider the set \(S = \setof{as+bt}{s,t\in\Z, \ as+bt \gt 0}\text{.}\) We first show that \(S\ne \emptyset\text{.}\)</p>
+<p>Suppose without loss of generality that \(a\ne 0\text{,}\) and consider \(a \gt 0\text{;}\) then \(s=1, t = 0\) is sufficient to guarantee \(as+bt\in S\text{.}\) If \(a \lt 0\text{,}\) then \(s = -1, t= 0\) is sufficient. Regardless, \(S\ne \emptyset\text{,}\) and by the Well-Ordering Principle, \(S\) has a least element, \(d = ax+by\text{.}\) We claim \(d = \gcd(a,b)\text{.}\)</p>
+<p>We first show that \(d|a\) Use the division algorithm to write \(a = dq + r\text{,}\) where \(r \lt d\text{.}\) We find \(r = a - dq = a - (ax+by)q = a(1-xq) + by\text{,}\) and if \(r\gt 0\text{,}\) \(r\in S\text{,}\) contradicting the status of \(d\) as the least element of \(S\text{.}\) Thus, \(r = 0\text{,}\) and \(d|a\text{.}\) By a symmetric proof, \(d|b\text{.}\)</p>
+<p>Suppose then that \(e\) is a common divisor of \(a\) and \(b\text{;}\) write \(a = e k_1\) and \(b = e k_2\text{.}\) Then \(d = ax + by = (ek_1)x + (ek_2)y = e(k_1x + k_2 y)\text{,}\) whence \(e|d\text{.}\) Therefore, \(d = \gcd(a,b)\text{.}\)</p></article></body>
 </html>

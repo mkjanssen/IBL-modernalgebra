@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-16T18:33:15-06:00    *-->
+<!--*    on 2020-05-22T10:55:35-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -9,9 +9,9 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Divisibility in the integers</title>
+<title>Divisibility and GCDs in the Integers</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -61,13 +61,6 @@ MathJax.Hub.Config({
 <link href="https://pretextbook.org/css/0.31/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.13;
-</script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\labelitemi}{$\diamond$}
@@ -144,7 +137,7 @@ var js_version = 0.13;
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction">Introduction</a></li>
@@ -156,7 +149,7 @@ var js_version = 0.13;
 <li class="link">
 <a href="Sec-Integers.html" data-scroll="Sec-Integers"><span class="codenumber">1</span> <span class="title">The Integers</span></a><ul>
 <li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering">Induction and Well-Ordering</a></li>
-<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers" class="active">Divisibility in the integers</a></li>
+<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers" class="active">Divisibility and GCDs in the Integers</a></li>
 <li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization">Primes and Factorization</a></li>
 <li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m">The Integers modulo \(m\)</a></li>
 </ul>
@@ -183,91 +176,119 @@ var js_version = 0.13;
 <li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms">Homomorphisms</a></li>
 </ul>
 </li>
-<li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="SubSec-Divisibility-in-the-Integers"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Divisibility in the integers</span>
+<span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Divisibility and GCDs in the Integers</span>
 </h2>
-<a href="SubSec-Divisibility-in-the-Integers.html" class="permalink">¶</a><p id="p-45">In this section, we begin to explore some of the arithmetic and algebraic properties of \(\Z\text{.}\) One of the primary goals of this sections is to formalize definitions that you've been using and have an intuitive understanding of. At first glance, this might seem to add an unnecessary layer of complication. However, it will be abundantly clear as we move forward that a formalized mathematical language and notation are necessary to extend these properties to a more abstract setting. We begin with a twist on a familiar notion.</p>
+<article class="assemblage assemblage-like" id="assemblage-3"><h6 class="heading"><span class="title">Learning Objectives.</span></h6>
+<p id="p-45">In this section, students will: <ul class="disc">
+<li id="li-5">Prove basic facts about divisibility in \(\Z\text{.}\)</li>
+<li id="li-6">Prove the Euclidean algorithm.</li>
+<li id="li-7">Prove basic facts about greatest common divisors.</li>
+<li id="li-8">Devise a procedure for computing the greatest common divisor of two integers.</li>
+</ul></p></article><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.1</span> <span class="title">Divisibility and the Division Algorithm</span>
+</h3>
+<p id="p-46">In this section, we begin to explore some of the arithmetic and algebraic properties of \(\Z\text{.}\) We focus specifically on the divisibility and factorization properties of the integers, as these are the main focus of the text as a whole. One of the primary goals of this section is to formalize definitions that you are likely already familiar with and of which you have an intuitive understanding. At first, this might seem to unnecessarily complicate matters. However, it will become clear as we move forward that formal mathematical language and notation are necessary to extend these properties to a more abstract setting. We begin with a familiar notion.</p>
 <article class="definition definition-like" id="definition-3"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span>
 </h6>
-<p id="p-46">Let \(a,b\in \Z\text{.}\) We say that \(a\) <dfn class="terminology">divides</dfn> \(b\text{,}\) and write \(a\mid b\text{,}\) if there is an integer \(c\) such that \(ac = b\text{.}\) If no such \(c\in \Z\) exists, we write \(a\nmid b\text{.}\)</p></article><p id="p-47">Note that the symbol \(|\) is a <em class="emphasis">verb</em>; it is therefore correct to say, e.g., \(2|4\text{,}\) as 2 <em class="emphasis">does</em> divide 4. However, it is an abuse of notation to say that \(2\mid 4 = 2\text{.}\) Instead, we likely mean \(4\div 2 = 2\) or \(\frac{4}{2} = 2\) (though we will not deal in fractions just yet).</p>
+<p id="p-47">Let \(a,b\in \Z\text{.}\) We say that \(a\) <dfn class="terminology">divides</dfn> \(b\text{,}\) and write \(a\mid b\text{,}\) if there is an integer \(c\) such that \(ac = b\text{.}\) If no such \(c\in \Z\) exists, we write \(a\nmid b\text{.}\)</p></article><p id="p-48">Note that the symbol \(|\) is a <em class="emphasis">verb</em>; it is therefore correct to say, e.g., \(2|4\text{,}\) as 2 <em class="emphasis">does</em> divide 4. However, it is an abuse of notation to say that \(2\mid 4 = 2\text{.}\) Instead, we likely mean \(4\div 2 = 2\) or \(\frac{4}{2} = 2\) (though we will not deal in fractions just yet).</p>
 <article class="investigation project-like" id="investigation-1"><h6 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span>
 </h6>
-<p id="p-48">Determine whether \(a\mid b\) if:</p>
+<p id="p-49">Determine whether \(a\mid b\) if:</p>
 <ol class="decimal">
-<li id="li-5"><p id="p-49">\(a = 3\text{,}\) \(b = -15\)</p></li>
-<li id="li-6"><p id="p-50">\(a = 4\text{,}\) \(b = 18\)</p></li>
-<li id="li-7"><p id="p-51">\(a = -7\text{,}\) \(b = 0\)</p></li>
-<li id="li-8"><p id="p-52">\(a = 0\text{,}\) \(b = 0\)</p></li>
-</ol></article><article class="theorem theorem-like" id="theorem-2"><h6 class="heading">
+<li id="li-9"><p id="p-50">\(a = 3\text{,}\) \(b = -15\)</p></li>
+<li id="li-10"><p id="p-51">\(a = 4\text{,}\) \(b = 18\)</p></li>
+<li id="li-11"><p id="p-52">\(a = -7\text{,}\) \(b = 0\)</p></li>
+<li id="li-12"><p id="p-53">\(a = 0\text{,}\) \(b = 0\)</p></li>
+</ol>
+<p data-braille="continuation">Comment briefly on the results of this investigation. What did you notice? What do you still wonder?</p></article><p id="p-55">We next collect several standard results about divisibility in \(\Z\) which will be used extensively in the remainder of this text.</p>
+<article class="theorem theorem-like" id="theorem-2"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
 </h6>
-<p id="p-54">Let \(a,b\text{,}\) and \(c\) be integers. If \(a\mid b\) and \(a\mid c\text{,}\) then \(a\mid (b+c)\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-3"><h6 class="heading">
+<p id="p-56">Let \(a,b,c\in\Z\text{.}\) If \(a\mid b\) and \(a\mid c\text{,}\) then \(a\mid (b+c)\text{.}\)</p></article><article class="theorem theorem-like" id="thm-divideproduct"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
 </h6>
-<p id="p-56">Let \(a\text{,}\) \(b\text{,}\) and \(c\) be integers. If \(a\mid b\text{,}\) then \(a\mid bc\text{.}\)</p></article><article class="definition definition-like" id="gcd-definition"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
+<p id="p-58">Let \(a,b,c\in\Z\text{.}\) If \(a\mid b\text{,}\) then \(a\mid bc\text{.}\)</p></article><article class="investigation project-like" id="invest-divideproduct"><h6 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
 </h6>
-<p id="p-58">Let \(a,b\in \Z\) such that \(a\) and \(b\) are not both 0. A <dfn class="terminology">greatest common divisor</dfn> of \(a\) and \(b\text{,}\) denoted \(\gcd(a,b)\text{,}\) is a natural number \(d\) satisfying</p>
-<ol class="decimal">
-<li id="li-9"><p id="p-59">\(d\mid a\) and \(d\mid b\)</p></li>
-<li id="li-10"><p id="p-60">if \(e\in \N\) and \(e\mid a\) and \(e\mid b\text{,}\) then \(e\mid d\text{.}\)</p></li>
-</ol>
-<p id="p-61">If \(\gcd(a,b) = 1\text{,}\) we say that \(a\) and \(b\) are <dfn class="terminology">relatively prime</dfn> or <dfn class="terminology">coprime</dfn>. <aside class="aside aside-like" id="aside-1">This formalizes the idea of greatest common factors that is introduced around <a class="external" href="http://www.corestandards.org/Math/Content/6/NS/B/4/" target="_blank">sixth grade</a>.</aside></p></article><p id="p-62">This definition may be different than the one you are used to, which likely stated that \(d \ge e\) rather than condition 2 in <a class="xref" data-knowl="./knowl/gcd-definition.html" title="Definition 1.2.4">Definition 1.2.4</a>. It can be proved using the order relations of \(\Z\) that the definition given here is equivalent to that one. However, we will prefer this definition, as it generalizes naturally to other number systems which do not have an order relation like \(\Z\text{.}\)</p>
-<article class="activity project-like" id="activity-1"><h6 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
+<p id="p-60">Consider the following partial converse to <a class="xref" data-knowl="./knowl/thm-divideproduct.html" title="Theorem 1.2.3">Theorem 1.2.3</a>: If \(a,b,c\in\Z\) with \(a|bc\text{,}\) must \(a|b\) or \(a|c\text{?}\) Supply a proof or give a counterexample.</p></article><article class="theorem theorem-like" id="theorem_23lemmageneralization"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
 </h6>
-<p id="p-63">Compute \(\gcd(a,b)\) if:</p>
-<ol class="decimal">
-<li id="li-11"><p id="p-64">\(a = 123\text{,}\) \(b = 141\)</p></li>
-<li id="li-12"><p id="p-65">\(a = 0\text{,}\) \(b = 169\)</p></li>
-<li id="li-13"><p id="p-66">\(a= 85\text{,}\) \(b = 48\)</p></li>
-</ol></article><p id="p-68">As we saw above, not all pairs of integers \(a,b\) satisfy \(a\mid b\) or \(b\mid a\text{.}\) However, <a class="external" href="http://www.corestandards.org/Math/Content/4/NBT/B/6/" target="_blank">our experience in elementary mathematics does apply: there is often something left over (a remainder)</a>. The following theorem formalizes this idea for \(a,b\in \N\text{.}\)</p>
+<p id="p-62">Let \(a,b,c,d\in \Z\text{.}\) If \(a = b+c\) and \(d\) divides any two of \(a,b,c\text{,}\) then \(d\) divides the third.</p></article><p id="p-66">As we saw above, not all pairs of integers \(a,b\) satisfy \(a\mid b\) or \(b\mid a\text{.}\) However, <a class="external" href="http://www.corestandards.org/Math/Content/4/NBT/B/6/" target="_blank">our experience in elementary mathematics does apply: there is often something left over (a remainder)</a>. The following theorem formalizes this idea for \(a,b\in \N\text{.}\)</p>
 <article class="theorem theorem-like" id="thm_divalg"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">The Division Algorithm.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">The Division Algorithm for \(\N\).</span>
 </h6>
-<p id="p-69">Let \(a,b\in \N\text{.}\) Then there exist unique integers \(q,r\) such that \(a = bq + r\text{,}\) where \(0 \le r \lt b\text{.}\)</p>
+<p id="p-67">Let \(a,b\in \N\text{.}\) Then there exist unique integers \(q,r\) such that \(a = bq + r\text{,}\) where \(0 \le r \lt b\text{.}\)</p>
 <a data-knowl="" class="id-ref original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like">
-<p id="p-70">There are two parts to this theorem. First, you must establish that \(q\) and \(r\) exist. This is best done via <a class="xref" data-knowl="./knowl/axiom_wellordering.html" title="Axiom 1.1.2: Well-Ordering Principle">Axiom 1.1.2</a>. If you're stuck on that, check the second hint.</p>
-<p id="p-71">Once you have established that \(q\) and \(r\) exist, show that they are unique but assuming \(a = bq+r\) and \(a = bq' + r'\text{,}\) where \(r,r'\) both satisfy the conditions of the theorem. Argue that \(q = q'\) and \(r = r'\text{.}\)</p>
+<p id="p-68">There are two parts to this theorem. First, you must establish that \(q\) and \(r\) exist. This is best done via <a class="xref" data-knowl="./knowl/axiom_wellordering.html" title="Axiom 1.1.2: Well-Ordering Principle">Axiom 1.1.2</a>. If you're stuck on that, check the second hint.</p>
+<p id="p-69">Once you have established that \(q\) and \(r\) exist, show that they are unique but assuming \(a = bq+r\) and \(a = bq' + r'\text{,}\) where \(r,r'\) both satisfy the conditions of the theorem. Argue that \(q = q'\) and \(r = r'\text{.}\)</p>
 </div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-72">Let \(S = \setof{a-bs}{s\in \N_0, a-bs\ge 0}\text{.}\)</p></div></div></article><aside class="aside aside-like" id="aside-2"><h6 class="heading"><span class="title">Warning!</span></h6>
-<p id="p-79">This theorem has two parts: existence and uniqueness. Do not try to prove them both at the same time.</p></aside><p id="p-80">Though we only prove the Division Algorithm for \(a,b\in\N\text{,}\) it is the case that it holds for any \(a,b\in\Z\) where \(b\ne 0\text{,}\) and we will assume this going forward.</p>
-<article class="theorem theorem-like" id="theorem_23lemmageneralization"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-70">Let \(S = \setof{a-bs}{s\in \N_0, a-bs\ge 0}\text{.}\)</p></div></div></article><aside class="aside aside-like" id="aside-1"><h6 class="heading"><span class="title">Warning!</span></h6>
+<p id="p-77">This theorem has two parts: existence and uniqueness. Do not try to prove them both at the same time.</p></aside><p id="p-78">Unsurprisingly, the Division Algorithm also holds in \(\Z\text{,}\) though the existence of negative integers requires a careful restatement. </p>
+<article class="corollary theorem-like" id="corollary-1"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">The Division Algorithm for \(\Z\).</span>
 </h6>
-<p id="p-81">Let \(a,b,c,d\in \Z\text{.}\) If \(a = b+c\) and \(d\) divides any two of \(a,b,c\text{,}\) then \(d\) divides the third.</p></article><article class="theorem theorem-like" id="theorem-6"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
+<p id="p-79">Let \(a,b\in \Z\) with \(b\ne 0\text{.}\) Then there exist unique integers \(q,r\) such that \(a = bq + r\text{,}\) where \(0 \le r \lt |b|\text{.}\)</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-3" id="hint-3"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-80">Consider cases, and apply <a class="xref" data-knowl="./knowl/thm_divalg.html" title="Theorem 1.2.5: The Division Algorithm for \(\N\)">Theorem 1.2.5</a> wherever possible.</p></div></div></article></section><section class="subsubsection" id="subsubsection-1"><h3 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber">1.2.1</span> <span class="title">Greatest Common Divisors</span>
+</h3>
+<p id="p-82">We next turn to another familiar property of the integers: the existence of greatest common divisors.</p>
+<article class="definition definition-like" id="gcd-definition"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
 </h6>
-<p id="p-85">Let \(a,b,c\in\Z\) such that \(a = b+c\) with \(a\) and \(b\) not both zero. Then \(\gcd(a,b) = \gcd(b,c)\text{.}\)</p></article><article class="investigation project-like" id="invest_gcdremainder"><h6 class="heading">
-<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
+<p id="p-83">Let \(a,b\in \Z\) such that \(a\) and \(b\) are not both 0. A <dfn class="terminology">greatest common divisor</dfn> of \(a\) and \(b\text{,}\) denoted \(\gcd(a,b)\text{,}\) is a natural number \(d\) satisfying</p>
+<ol class="decimal">
+<li id="li-13"><p id="p-84">\(d\mid a\) and \(d\mid b\)</p></li>
+<li id="li-14"><p id="p-85">if \(e\in \N\) and \(e\mid a\) and \(e\mid b\text{,}\) then \(e\mid d\text{.}\)</p></li>
+</ol>
+<p id="p-86">If \(\gcd(a,b) = 1\text{,}\) we say that \(a\) and \(b\) are <dfn class="terminology">relatively prime</dfn> or <dfn class="terminology">coprime</dfn>. <aside class="aside aside-like" id="aside-2">This formalizes the idea of greatest common factors that is introduced around <a class="external" href="http://www.corestandards.org/Math/Content/6/NS/B/4/" target="_blank">sixth grade</a>.</aside></p></article><p id="p-87">This definition may be different than the one you are used to, which likely stated that \(d \ge e\) rather than condition 2 in <a class="xref" data-knowl="./knowl/gcd-definition.html" title="Definition 1.2.7">Definition 1.2.7</a>. It can be proved using the order relations of \(\Z\) that the definition given here is equivalent to that one. However, we will prefer this definition, as it generalizes naturally to other number systems which do not have an order relation like \(\Z\text{.}\)</p>
+<article class="activity project-like" id="act-gcdcomputations"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
 </h6>
-<p id="p-89">Suppose \(a,b,c\in\Z\) such that there exists \(q\in\Z\) with \(a = bq + c\) and \(a\) and \(b\) not both zero. Prove or disprove: \(\gcd(a,b)=\gcd(a,c)\text{.}\)</p></article><article class="investigation project-like" id="investigation-3"><h6 class="heading">
-<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">(Euclidean Algorithm).</span>
+<p id="p-88">Compute \(\gcd(a,b)\) if:</p>
+<ol class="decimal">
+<li id="li-15"><p id="p-89">\(a = 123\text{,}\) \(b = 141\)</p></li>
+<li id="li-16"><p id="p-90">\(a = 0\text{,}\) \(b = 169\)</p></li>
+<li id="li-17"><p id="p-91">\(a= 85\text{,}\) \(b = 48\)</p></li>
+</ol>
+<p data-braille="continuation">Now that you have had a bit of practice computing gcds, describe your method for finding them in a sentence or two.</p></article><p id="p-93">How did you answer the last question in <a class="xref" data-knowl="./knowl/act-gcdcomputations.html" title="Activity 1.2.3">Activity 1.2.3</a>? If you are like the authors' classes, the answers probably varied, though you have referred at some point to a "prime" (<a class="xref" data-knowl="./knowl/def-primeinteger.html" title="Definition 1.3.1">whatever those are</a>), or possibly some other ad hoc method for finding the gcd. Most such methods rely in some form on our ability to factor integers. However, the problem of factoring arbitrary integers is actually surprisingly computationally intensive. Thankfully, there is another way to compute \(\gcd(a,b)\text{,}\) to which we now turn.</p>
+<article class="theorem theorem-like" id="theorem-6"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.8</span><span class="period">.</span>
 </h6>
-<p id="p-90">Let \(a,b\in \N\text{.}\) Use <a class="xref" data-knowl="./knowl/thm_divalg.html" title="Theorem 1.2.5: The Division Algorithm">Theorem 1.2.5</a> and <a class="xref" data-knowl="./knowl/invest_gcdremainder.html" title="Investigation 1.2.3">Investigation 1.2.3</a> to determine an algorithm for computing \(\gcd(a,b)\text{.}\)</p></article><article class="activity project-like" id="activity-2"><h6 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span>
+<p id="p-94">Let \(a,b,c\in\Z\) such that \(a = b+c\) with \(a\) and \(b\) not both zero. Then \(\gcd(a,b) = \gcd(b,c)\text{.}\)</p></article><article class="investigation project-like" id="invest_gcdremainder"><h6 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
 </h6>
-<p id="p-93">Use the Euclidean algorithm to compute \(\gcd(18489,17304)\text{.}\)</p></article><p id="p-96">The following identity provides a useful characterization of the greatest common divisor of two integers, not both zero.</p>
+<p id="p-98">Suppose \(a,b,c\in\Z\) such that there exists \(q\in\Z\) with \(a = bq + c\) and \(a\) and \(b\) not both zero. Prove or disprove: \(\gcd(a,b)=\gcd(a,c)\text{.}\)</p></article><article class="investigation project-like" id="investigation-4"><h6 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">(Euclidean Algorithm).</span>
+</h6>
+<p id="p-99">Let \(a,b\in \N\text{.}\) Use <a class="xref" data-knowl="./knowl/thm_divalg.html" title="Theorem 1.2.5: The Division Algorithm for \(\N\)">Theorem 1.2.5</a> and <a class="xref" data-knowl="./knowl/invest_gcdremainder.html" title="Investigation 1.2.4">Investigation 1.2.4</a> to determine an algorithm for computing \(\gcd(a,b)\text{.}\) How could your method be modified to compute \(\gcd(a,b)\) for \(a,b\in\Z\text{?}\)</p></article><article class="activity project-like" id="activity-2"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span>
+</h6>
+<p id="p-102">Use the Euclidean algorithm to compute \(\gcd(18489,17304)\text{.}\)</p></article><p id="p-105">The following identity provides a useful characterization of the greatest common divisor of two integers, not both zero. We will return to this idea several times, even after we have left the familiar realm of the integers.</p>
 <article class="theorem theorem-like" id="theorem_bezoutint"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Bézout's Identity.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Bézout's Identity.</span>
 </h6>
-<p id="p-97">For any integers \(a\) and \(b\) not both 0, there are integers \(x\) and \(y\) such that</p>
+<p id="p-106">For any integers \(a\) and \(b\) not both 0, there are integers \(x\) and \(y\) such that</p>
 <div class="displaymath">
 \begin{equation*}
 ax + by = \gcd(a,b)\text{.}
 \end{equation*}
-</div></article><article class="theorem theorem-like" id="theorem_relprimecancel"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.9</span><span class="period">.</span>
-</h6>
-<p id="p-100">Let \(a, b\text{,}\) and \(c\) be integers. If \(a|bc\) and \(\gcd(a,b) = 1\text{,}\) then \(a|c\text{.}\)</p></article><section class="conclusion" id="conclusion-1"><p id="p-104">In this section, we have collected some initial results about divisibility in the integers. We'll next explore the multiplicative building blocks of the integers, the primes, in preparation for a deeper exploration of factorization.</p></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.13/login.js"></script>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-4" id="hint-4"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-107">Apply <a class="xref" data-knowl="./knowl/axiom_wellordering.html" title="Axiom 1.1.2: Well-Ordering Principle">Axiom 1.1.2</a> to a well-chosen set.</p></div></div>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-5" id="hint-5"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><p id="p-108">Apply <a class="xref" data-knowl="./knowl/axiom_wellordering.html" title="Axiom 1.1.2: Well-Ordering Principle">Axiom 1.1.2</a> to \(S = \setof{as+bt}{s,t\in\Z, \ as+bt \gt 0}\text{.}\)</p></div></div></article><p id="p-113">We conclude with an answer to the questions raised by <a class="xref" data-knowl="./knowl/invest-divideproduct.html" title="Investigation 1.2.2">Investigation 1.2.2</a>.</p>
+<article class="theorem theorem-like" id="theorem_relprimecancel"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.10</span><span class="period">.</span>
+</h6>
+<p id="p-114">Let \(a, b\text{,}\) and \(c\) be integers. If \(a|bc\) and \(\gcd(a,b) = 1\text{,}\) then \(a|c\text{.}\)</p></article></section><section class="conclusion" id="conclusion-1"><p id="p-118">In this section, we have collected some initial results about divisibility in the integers. We'll next explore the multiplicative building blocks of the integers, the primes, in preparation for a deeper exploration of factorization.</p></section><section class="exercises" id="exercises-1"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">1.2.3</span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>test</article></section></section></div></main>
+</div>
 </body>
 </html>

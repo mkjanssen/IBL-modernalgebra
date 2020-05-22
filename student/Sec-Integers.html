@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-16T18:33:15-06:00    *-->
+<!--*    on 2020-05-22T10:55:35-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>The Integers</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +24,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -61,13 +61,6 @@ MathJax.Hub.Config({
 <link href="https://pretextbook.org/css/0.31/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.13;
-</script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\labelitemi}{$\diamond$}
@@ -144,7 +137,7 @@ var js_version = 0.13;
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
 <li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction">Introduction</a></li>
@@ -156,7 +149,7 @@ var js_version = 0.13;
 <li class="link active">
 <a href="Sec-Integers.html" data-scroll="Sec-Integers"><span class="codenumber">1</span> <span class="title">The Integers</span></a><ul>
 <li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering">Induction and Well-Ordering</a></li>
-<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers">Divisibility in the integers</a></li>
+<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers">Divisibility and GCDs in the Integers</a></li>
 <li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization">Primes and Factorization</a></li>
 <li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m">The Integers modulo \(m\)</a></li>
 </ul>
@@ -183,21 +176,19 @@ var js_version = 0.13;
 <li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms">Homomorphisms</a></li>
 </ul>
 </li>
-<li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="chapter" id="Sec-Integers"><h2 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">1</span> <span class="title">The Integers</span>
 </h2>
-<a href="Sec-Integers.html" class="permalink">¶</a><section class="introduction" id="introduction-1"><p id="p-19">As children we start exploring the properties and structure of the positive integers as soon as we learn to count and we extend our understanding throughout our schooling as we learn about new operations and collections of numbers. We begin our journey into abstract algebra with an overview of some familiar (and some possibly unfamiliar) properties of the integers that are relevant to our course of inquiry. With this foundation set, we will see in later chapters just how far we can extend these properties in more abstract setting.</p></section><nav class="summary-links"><ul>
+<section class="introduction" id="introduction-1"><p id="p-19">As children we start exploring the properties and structure of the positive integers as soon as we learn to count and we extend our understanding throughout our schooling as we learn about new operations and collections of numbers. We begin our journey into abstract algebra with an overview of some familiar (and some possibly unfamiliar) properties of the integers that are relevant to our course of inquiry. With this foundation set, we will see in later chapters just how far we can extend these properties in more abstract setting.</p></section><nav class="summary-links"><ul>
 <li><a href="SubSec-WellOrdering.html"><span class="codenumber">1.1</span> <span class="title">Induction and Well-Ordering</span></a></li>
-<li><a href="SubSec-Divisibility-in-the-Integers.html"><span class="codenumber">1.2</span> <span class="title">Divisibility in the integers</span></a></li>
+<li><a href="SubSec-Divisibility-in-the-Integers.html"><span class="codenumber">1.2</span> <span class="title">Divisibility and GCDs in the Integers</span></a></li>
 <li><a href="SubSec-Primes-and-Factorization.html"><span class="codenumber">1.3</span> <span class="title">Primes and Factorization</span></a></li>
 <li><a href="SubSec-Integers-Mod-m.html"><span class="codenumber">1.4</span> <span class="title">The Integers modulo \(m\)</span></a></li>
 </ul></nav></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.13/login.js"></script>
 </body>
 </html>

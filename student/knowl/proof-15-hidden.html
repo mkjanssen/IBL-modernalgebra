@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-16T18:33:17-06:00    *-->
+<!--*    on 2020-05-22T10:55:41-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,5 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>Write \(mk_1 = a-c\) and \(m k_2 = b-d\) for some \(k_1,k_2\in \Z\text{.}\) Then \(m(k_1 + k_2) = (a-c) + (b-d) = (a+b) - (c+d)\text{,}\) so \(a+b \equiv_m c+d\text{.}\)</p></article></body>
+<body><article class="hiddenproof"><p>Let \(a\in \Z\text{.}\) Then \(m|a-a\text{,}\) so \(a \equiv_m a\text{.}\) Thus, \(\equiv_m\) is reflexive.</p>
+<p>Let \(a,b\in \Z\) such that \(a\equiv_m b\text{.}\) This means that \(m|a-b\text{,}\) so there is some \(k\in \Z\) such that \(mk = a-b\text{.}\) Then \(m(-k) = b-a\text{,}\) so \(m|b-a\) and \(b \equiv_m a\text{.}\) Thus, \(\equiv_m\) is symmetric.</p>
+<p>Finally, let \(a,b,c\in \Z\) such that \(a\equiv_m b\) and \(b\equiv_m c\text{.}\) Then \(m|a-b\) and \(m|b-c\text{,}\) so there are integers \(k_1, k_2\) such that \(m k_1 = a-b\) and \(m k_2 = b-c\text{.}\) Summing these equations yields \(m(k_1 + k_2) = (a-b) + (b-c) = a-c\text{,}\) so \(m|a-c\) and \(a\equiv_m c\text{.}\)</p></article></body>
 </html>
