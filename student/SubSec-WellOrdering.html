@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-22T10:55:35-05:00    *-->
+<!--*    on 2020-05-25T11:11:06-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -183,57 +183,70 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="SubSec-WellOrdering"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Induction and Well-Ordering</span>
 </h2>
-<section class="introduction" id="introduction-2"><p id="p-20">In this section we will assume the basic algebraic/arithmetic properties of the integers such as closure under addition, subtraction, and multiplication, most of which we will formalize via axioms in subsequent sections. <a class="xref" data-knowl="./knowl/axiom_wellordering.html" title="Axiom 1.1.2: Well-Ordering Principle">Axiom 1.1.2</a> formalizes the familiar notion that nonempty subsets of the positive integers have a smallest element, which will be used repeatedly throughout the text. We then explore a closely related idea, mathematical induction, via an example and an exercise.</p></section><article class="definition definition-like" id="def_naturalnumbers"><h6 class="heading">
+<article class="assemblage assemblage-like" id="assemblage-1"><h6 class="heading"><span class="title">Guiding Questions.</span></h6>
+<p id="p-20">In this section, we'll seek to answer the questions: <ul class="disc">
+<li id="li-5">What is the Well-Ordering Principle?</li>
+<li id="li-6">What is mathematical induction, and how can we use it to prove statements about \(\N\text{?}\)</li>
+</ul></p></article><section class="introduction" id="introduction-2"><p id="p-21">In this section we will assume the basic algebraic/arithmetic properties of the integers such as closure under addition, subtraction, and multiplication, most of which we will formalize via axioms in subsequent sections. <a class="xref" data-knowl="./knowl/axiom_wellordering.html" title="Axiom 1.1.2: Well-Ordering Principle">Axiom 1.1.2</a> formalizes the familiar notion that nonempty subsets of the positive integers have a smallest element, which will be used repeatedly throughout the text. We then explore a closely related idea, mathematical induction, via an example and exercises.</p></section><article class="definition definition-like" id="def_naturalnumbers"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span>
 </h6>
-<p id="p-21"> The collection of <dfn class="terminology">natural numbers</dfn> is denoted by \(\N\text{,}\) and is the set</p>
+<p id="p-22"> The collection of <dfn class="terminology">natural numbers</dfn> is denoted by \(\N\text{,}\) and is the set</p>
 <div class="displaymath">
 \begin{equation*}
 \N = \set{1, 2, 3, \ldots}\text{.}
 \end{equation*}
 </div>
-<p id="p-22">By \(\N_0\) we mean the set \(\N\cup \set{0} = \set{0, 1, 2, 3, \ldots}\text{.}\)</p></article><p id="p-23">In some sense, the fundamental properties of \(\N\) are (a) there is a smallest natural number, and (b) there is always a next natural number. (A model of \(\N\) via set theory and the Peano axioms describes this order using <em class="emphasis">successors</em>.) A consequence of the Peano postulates is the <em class="emphasis">well-ordering principle</em>, which we take as an axiom.</p>
+<p id="p-23">By \(\N_0\) we mean the set \(\N\cup \set{0} = \set{0, 1, 2, 3, \ldots}\text{.}\)</p></article><p id="p-24">In some sense, the fundamental properties of \(\N\) are (a) there is a smallest natural number, and (b) there is always a next natural numberIn fact, one can build a model of \(\N\) with set theory and the Peano axioms, which utilize the notion of a <em class="emphasis">successor</em>--the next natural number.). A consequence of the Peano postulates is the <em class="emphasis">well-ordering principle</em>, which we state as an axiom.</p>
 <article class="axiom theorem-like" id="axiom_wellordering"><h6 class="heading">
 <span class="type">Axiom</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Well-Ordering Principle.</span>
 </h6>
-<p id="p-24"> Every nonempty subset of \(\N_0\) contains a least (smallest) element under the usual ordering, \(\le\)<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a>.</p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">Our word choice is suggestive. In fact, other orderings do exist, and while the set of nonnegative real numbers \(\mathbb{R}\) does not satisfy the well-ordering principle under the usual ordering \(\le\text{,}\) the Well Ordering Axiom asserts that there exists a well ordering on <em class="emphasis">any</em> set, including \(\mathbb{R}\text{.}\) Accepting this axiom is equivalent to accepting the <a class="external" href="https://plato.stanford.edu/entries/axiom-choice/" target="_blank">axiom of choice</a>.</div></div></article><p id="p-25">The Well-Ordering Principle is useful for producing smallest elements of nonempty subsets defined to have certain properties. We will use this principle throughout the text; our first example will come in <a class="xref" data-knowl="./knowl/thm_divalg.html" title="Theorem 1.2.5: The Division Algorithm for \(\N\)">Theorem 1.2.5</a>.</p>
+<p id="p-25"> Every nonempty subset of \(\N_0\) contains a least (smallest) element under the usual ordering, \(\le\)<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a>.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">Our word choice is suggestive. In fact, other orderings do exist, and while the set of nonnegative real numbers \(\mathbb{R}\) does not satisfy the well-ordering principle under the usual ordering \(\le\text{,}\) the Well Ordering Axiom asserts that there exists a well ordering on <em class="emphasis">any</em> set, including \(\mathbb{R}\text{.}\) Accepting this axiom is equivalent to accepting the <a class="external" href="https://plato.stanford.edu/entries/axiom-choice/" target="_blank">axiom of choice</a>.</div></div></article><p id="p-26">The Well-Ordering Principle is useful for producing smallest elements of nonempty subsets defined to have certain properties, as the following example demonstrates.</p>
+<article class="exploration project-like" id="exploration-1"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span>
+</h6>
+<p id="p-27">In this exploration, we investigate polynomials with real coefficients, as well as their degrees. We will define these terms more formally in <a class="xref" data-knowl="./knowl/def-polynomial.html" title="Definition 2.2.1">Definition 2.2.1</a>, but for now you may use your intuition from previous courses in algebra.</p>
+<p id="p-28">Let \(S\) be the set of all polynomials \(f\) in the variable \(x\) with real coefficients such that \(f(2) = f(-2) = 0\) and \(f(0) = -4\text{.}\)</p>
+<ol class="decimal">
+<li id="li-7">Give an example of an \(f\in S\) and \(g\notin S\text{.}\)</li>
+<li id="li-8">Let \(D = \setof{\deg f}{f\in S}\) be the set of possible degrees of polynomials in \(S\text{.}\) Show that \(D\ne emptyset\) and \(D\subseteq \N_0\text{.}\)</li>
+<li id="li-9">Apply the Well-Ordering Principle to argue that \(D\) has a least element. To what does this correspond in \(S\text{?}\)</li>
+</ol></article><p id="p-29">We will use this principle throughout the text, next in <a class="xref" data-knowl="./knowl/thm_divalg.html" title="Theorem 1.2.5: The Division Algorithm for \(\N\)">Theorem 1.2.5</a>.</p>
 <figure class="figure figure-like" id="figure-1"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="https://imgs.xkcd.com/comics/well_ordering_principle.png" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.3<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://www.xkcd.com/2193/" target="_blank">A suspect use of the Well-Ordering Principle.</a></figcaption></figure><article class="definition definition-like" id="def_integers"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span>
 </h6>
-<p id="p-26"> The set of integers consists of the positive and negative natural numbers, together with zero, and is denoted by \(\Z\text{:}\)</p>
+<p id="p-30"> The set of integers consists of the positive and negative natural numbers, together with zero, and is denoted by \(\Z\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \Z = \set{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots}\text{.}
 \end{equation*}
 </div></article><article class="assemblage assemblage-like" id="induction"><h6 class="heading"><span class="title">Mathematical Induction.</span></h6>
-<p id="p-27">Let \(P(m)\) be a statement about the natural number \(m\)<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a>. Let \(k_0\in \N\) be such that the statement \(P(k_0)\) is true (the <em class="emphasis">base case</em>), and suppose there is an \(n\ge k_0\) such that for all \(k\) satisfying \(k_0 \le k \le n\text{,}\) \(P(k)\) is true (the <em class="emphasis">inductive hypothesis</em>). Then \(P(n+1)\) is true, and thus \(P(m)\) is true for all \(m\ge k_0\) (the <em class="emphasis">inductive step</em>).</p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">Sample statements could include “\(m\) is really interesting” or “\(3m^2 + m + 2\) is even”.</div></div></article><p id="p-28">Mathematical induction is like climbing an infinite staircase. The <em class="emphasis">base case</em> tells us that we can take a first step on the staircase (\(k_0\)). In the <em class="emphasis">inductive hypothesis</em>, we assume we can take all the steps up to a certain height (\(n\)). In the <em class="emphasis">inductive step</em>, we prove that this allows us to take the \((n+1)\)st step.</p>
-<p id="p-29">Thus, if we can take step \(k_0\text{,}\) we can (by the inductive step) take step \(k_0 + 1\text{.}\) And since we can take step \(k_0 + 1\text{,}\) we can (again by the inductive step) take step \(k_0 + 2\text{.}\) And so on, forever (or, if the notion of actual infinity makes you uncomfortable, as far as we want to go).</p>
-<p id="p-30">It can be proved that the principle of mathematical induction is logically equivalent to the well-ordering principle. That is, if we assume either one to be true, we can deduce the other. We will generally take the well-ordering principle on \(\N\) to be an axiom, and treat induction as a theorem.</p>
-<article class="assemblage assemblage-like" id="assemblage-2"><h6 class="heading"><span class="title">Example.</span></h6>
-<p id="p-31">For all \(n \ge 1\text{,}\)</p>
+<p id="p-31">Let \(P(m)\) be a statement about the natural number \(m\)<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a>. Let \(k_0\in \N\) be such that the statement \(P(k_0)\) is true (the <em class="emphasis">base case</em>), and suppose there is an \(n\ge k_0\) such that for all \(k\) satisfying \(k_0 \le k \le n\text{,}\) \(P(k)\) is true (the <em class="emphasis">inductive hypothesis</em>). Then \(P(n+1)\) is true, and thus \(P(m)\) is true for all \(m\ge k_0\) (the <em class="emphasis">inductive step</em>).</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">Sample statements could include “\(m\) is really interesting” or “\(3m^2 + m + 2\) is even”.</div></div></article><p id="p-32">Mathematical induction is like climbing an infinite staircase. The <em class="emphasis">base case</em> tells us that we can take a first step on the staircase (\(k_0\)). In the <em class="emphasis">inductive hypothesis</em>, we assume we can take all the steps up to a certain height (\(n\)). In the <em class="emphasis">inductive step</em>, we prove that this allows us to take the \((n+1)\)st step.</p>
+<p id="p-33">Thus, if we can take step \(k_0\text{,}\) we can (by the inductive step) take step \(k_0 + 1\text{.}\) And since we can take step \(k_0 + 1\text{,}\) we can (again by the inductive step) take step \(k_0 + 2\text{.}\) And so on, forever (or, if the notion of actual infinity makes you uncomfortable, as far as we want to go).</p>
+<article class="assemblage assemblage-like" id="assemblage-3"><h6 class="heading"><span class="title">Example.</span></h6>
+<p id="p-34">For all \(n \ge 1\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 1+ 2 + 3 + \cdots + n = \frac{n(n+1)}{2}\text{.}
 \end{equation*}
 </div>
-<p id="p-32"><em class="emphasis">Proof.</em> Base case: When \(n = 1\text{,}\) the equation \(1 = \frac{1\cdot (1+1)}{2}\) is true.</p>
-<p id="p-33"><em class="emphasis">Inductive Hypothesis:</em> Assume that there exists a \(n\) such that whenever \(k \le n\text{,}\) the equation</p>
+<p id="p-35"><em class="emphasis">Proof.</em> Base case: When \(n = 1\text{,}\) the equation \(1 = \frac{1\cdot (1+1)}{2}\) is true.</p>
+<p id="p-36"><em class="emphasis">Inductive Hypothesis:</em> Assume that there exists a \(n\) such that whenever \(k \le n\text{,}\) the equation</p>
 <div class="displaymath">
 \begin{equation}
 1+ 2 + 3 + \cdots + k = \frac{k(k+1)}{2}\label{ex_indhyp}\tag{1.1.1}
 \end{equation}
 </div>
 <p data-braille="continuation">is true.</p>
-<p id="p-34"><em class="emphasis">Inductive Step:</em> Our goal is to show that \(P(n+1)\) is true. That is, we wish to establish that</p>
+<p id="p-37"><em class="emphasis">Inductive Step:</em> Our goal is to show that \(P(n+1)\) is true. That is, we wish to establish that</p>
 <div class="displaymath">
 \begin{equation}
 1+ 2 + 3 + \cdots + n + (n+1) = \frac{(n+1)((n+1)+1)}{2}\text{.}\label{ex_indgoal}\tag{1.1.2}
 \end{equation}
 </div>
-<p id="p-35">We begin on the left-hand side of <a class="xref" data-knowl="./knowl/ex_indhyp.html" title="Equation 1.1.1">(1.1.1)</a>, where we may apply the inductive hypothesis to see that</p>
+<p id="p-38">We begin on the left-hand side of <a class="xref" data-knowl="./knowl/ex_indhyp.html" title="Equation 1.1.1">(1.1.1)</a>, where we may apply the inductive hypothesis to see that</p>
 <div class="displaymath">
 \begin{equation}
 1+ 2 + 3 + \cdots + n + (n+1) = \left[\frac{n(n+1)}{2}\right] + (n+1)\text{.}\label{ex_indstep1}\tag{1.1.3}
@@ -245,20 +258,27 @@ MathJax.Hub.Config({
 \frac{n(n+1)}{2} + \frac{2(n+1)}{2} = \frac{n(n+1) + 2(n+1)}{2} = \frac{(n+1)(n+2)}{2}\text{.}\label{ex_indstep2}\tag{1.1.4}
 \end{equation}
 </div>
-<p id="p-36">Putting <a class="xref" data-knowl="./knowl/ex_indstep1.html" title="Equation 1.1.3">(1.1.3)</a> and <a class="xref" data-knowl="./knowl/ex_indstep2.html" title="Equation 1.1.4">(1.1.4)</a> together, we obtain</p>
+<p id="p-39">Putting <a class="xref" data-knowl="./knowl/ex_indstep1.html" title="Equation 1.1.3">(1.1.3)</a> and <a class="xref" data-knowl="./knowl/ex_indstep2.html" title="Equation 1.1.4">(1.1.4)</a> together, we obtain</p>
 <div class="displaymath">
 \begin{equation*}
 1+ 2 + 3 + \cdots + n + (n+1) = \frac{(n+1)((n+1)+1)}{2}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">which is exactly the goal we stated in <a class="xref" data-knowl="./knowl/ex_indgoal.html" title="Equation 1.1.2">(1.1.2)</a>.</p></article><p id="p-37">We conclude with opportunities to practice induction.</p>
-<article class="exploration project-like" id="exploration-1"><h6 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Induction on the sum of cubes.</span>
-</h6>
-<p id="p-38">Prove that the sum of the first \(n\) cubes is \(\dfrac{n^2(n+1)^2}{4}\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-1"><h6 class="heading">
+<p data-braille="continuation">which is exactly the goal we stated in <a class="xref" data-knowl="./knowl/ex_indgoal.html" title="Equation 1.1.2">(1.1.2)</a>.</p></article><p id="p-40">We conclude with opportunities to practice induction.</p>
+<article class="theorem theorem-like" id="theorem-1"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="period">.</span>
 </h6>
-<p id="p-43">For all \(k\ge 1\text{,}\) \(3^k &gt; k\text{.}\)</p></article></section></div></main>
+<p id="p-41">For all \(k\ge 1\text{,}\) \(3^k &gt; k\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-2"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.6</span><span class="period">.</span>
+</h6>
+<p id="p-43">Prove that the sum of the first \(n\) cubes is \(\dfrac{n^2(n+1)^2}{4}\text{.}\) That is,</p>
+<div class="displaymath">
+\begin{equation*}
+1^3 + 2^3 + 3^3 + \cdots + n^3 = \dfrac{n^2(n+1)^2}{4}.
+\end{equation*}
+</div></article><article class="theorem theorem-like" id="theorem-3"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">(Bernoulli's Inequality).</span>
+</h6>Given a real number \(b &gt; -1\text{,}\) \((1+b)^n \ge 1 + bn\) for all \(n\in \N_0\text{.}\)</article></section></div></main>
 </div>
 </body>
 </html>

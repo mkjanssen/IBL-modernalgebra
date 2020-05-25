@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-22T10:55:40-05:00    *-->
+<!--*    on 2020-05-25T11:11:11-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,11 +13,7 @@
 </head>
 <body>
 <article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>
-<p>We first state a claim that will be useful.</p>
-<p><em class="emphasis">Claim 1:</em> If \(p,q\) are primes such that \(p|q\text{,}\) then \(p = q\text{.}\)</p>
-<p><em class="emphasis">Proof of Claim 1:</em> Since \(p,
-q &gt; 1\) and both \(p\) and \(q\) are prime, \(p = q\) by the definition of primality. \(\checkmark\)</p>
-<p>Now assume that \(pk = q_1 q_2 \cdots q_n = (q_1 q_2 \cdots q_{n-1}) q_n\text{.}\) If \(p|q_n\text{,}\) we're done by Claim 1. If not, the definition of a prime guarantees that \(p| q_1 q_2 \cdots q_{n-1}\text{.}\) If \(p|q_{n-1}\text{,}\) we're done by Claim 1. Otherwise, \(p|q_1 q_2 \cdots q_{n-2}\text{.}\)</p>
-<p>Repeating this process, we see that either \(p|q_i\) for some \(i &gt; 2\text{,}\) or \(p|q_1 q_2\text{.}\) Now the definition of a prime guarantees that \(p|q_1\) or \(p|q_2\text{,}\) in which case Claim 1 requires that \(p = q_1\) or \(p = q_2\text{.}\)</p></article><span class="incontext"><a href="SubSec-Primes-and-Factorization.html#proof-13">in-context</a></span>
+<p>We proceed by mathematical induction. Note that when \(a = 2\text{,}\) the statement holds.</p>
+<p>Assume that there is a \(k\in\N\) such that for all \(a\le k\text{,}\) the statement holds. Consider \(k+1\text{.}\) If \(k+1\) is prime, we are done. If not, then \(k+1\) is composite, and by the answer to <a class="xref" data-knowl="./knowl/question_compositecharacterization.html" title="Exploration 1.3.1">Question 1.3.1</a>, there are integers \(a,b\ne 1\) such that \(k+1 = ab\text{.}\) By induction, there is a prime \(p\) such that \(p|a\text{,}\) so \(p|k+1\text{.}\)</p></article><span class="incontext"><a href="SubSec-Primes-and-Factorization.html#proof-13">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-22T10:55:46-05:00    *-->
+<!--*    on 2020-05-25T11:11:16-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,23 +11,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p><em class="emphasis">Existence:</em> If \(f(x) = 0\text{,}\) then \(q(x) = 0\) and \(r(x) = 0\) will do. If \(f(x)\ne 0\) and \(\deg f \lt \deg g\text{,}\) then \(q(x) = 0\) and \(r(x) = f(x)\) will suffice. Thus, we need only consider the case in which \(f(x) \ne 0\) and \(\deg f \ge \deg g\text{.}\) We use induction on \(\deg f = m\text{.}\)</p>
-<p>When \(m = 0\text{,}\) \(\deg g \le 0 = \deg f\text{,}\) and as \(g(x) \ne 0\text{,}\) both \(f\) and \(g\) are nonzero constants. Then \(r = 0\) and \(q = fg^{-1}\) will work.</p>
-<p>Now assume \(q\) and \(r\) exist whenever \(\deg f \lt m\text{.}\) Assume \(\deg f = m\) and write \(f(x) = a_0 + a_1 x + \cdots + a_m x^m\) and \(g(x) = b_0 + b_1 x + \cdots + b_n x^n\text{.}\) Use <a class="xref" data-knowl="./knowl/lem_polydivalglem.html" title="Lemma 2.4.12">Lemma 2.4.12</a> and set \(h(x) = f(x) - a_m b_n^{-1} x^{m-n} g(x)\text{,}\) which must have degree less than \(f\text{.}\) Thus, by induction, there exist \(q_1, r_1\in F[x]\) such that \(h = g q_1 + r_1\text{,}\) with \(r_1 = 0\) or \(\deg r_1 \lt \deg g\text{.}\)</p>
-<p>We therefore have</p>
-<div class="displaymath">
-\begin{align*}
-f(x) \amp = a_m b_n^{-1} x^{m-n} g(x) + h(x)\\
-\amp = a_m b_n^{-1} x^{m-n} g(x) + g(x) q_1(x) + r_1(x)\\
-\amp = (a_m b_n^{-1} x^{m-n} + q_1(x)) g(x) + r_1(x)\text{,}
-\end{align*}
-</div>
-<p data-braille="continuation">where \(q = a_m b_n^{-1} x^{m-n} + q_1(x)\) and \(r = r_1(x)\) have the desired properties.</p>
-<p><em class="emphasis">Uniqueness:</em> Suppose \(f = gq + r\) and \(f = g\hat{q} + \hat{r}\text{,}\) where \(r,\hat{r}\) both have the desired properties. Then</p>
-<div class="displaymath">
-\begin{equation*}
-0 = g[q - \hat{q}] + [r - \hat{r}]\text{,}
-\end{equation*}
-</div>
-<p data-braille="continuation">or \(\hat{r} - r = g [q - \hat{q}]\text{.}\) Thus either \(\hat{r} - r = 0\text{,}\) or \(\hat{r} - r\) has degree at least \(\deg g\text{.}\) The latter is clearly impossible, so \(\hat{r} = r\) and \(\hat{q} = q\text{.}\)</p></article></body>
+<body><article class="hiddenproof"><p>Observe that \(0 = x0 + y0 \in I\text{.}\) Additionally, if \(x m_1 + y n_1, x m_2 + y n_2\in I\text{,}\) then \((x m_1 + y n_1) + (x m_2 + y n_2) = x (m_1 + m_2) + y (n_1 + n_2) \in I\text{,}\) and \(r(x m_1 + y n_1) = x (rm_1) + y(rn_1) \in I\text{.}\) Thus, \(I\) is an ideal.</p>
+<p>Since \(R\) is a PID, there exists \(d\in R\) such that \(I = \ideal{d}\text{.}\) We claim that \(d\) is a GCD of \(x\) and \(y\text{.}\)</p>
+<p>It is clear that \(d|x\text{,}\) as \(x\cdot 1 + y\cdot 0\in I = \ideal{d}\text{.}\) Similarly, \(d|y\text{.}\)</p>
+<p>Now let \(e\in R\) be a common divisor of \(x\) and \(y\text{.}\) We wish to show that \(e|d\text{.}\) Write \(x = e k_1\) and \(y = e k_2\text{.}\) Since \(d\in \ideal{d}\text{,}\) there exist \(s,t\in R\) such that \(d = x s + yt = (e k_1) s + (e k_2)t = e(k_1 s + k_2 t)\text{,}\) and thus \(e|d\text{.}\)</p>
+<p>In particular, there exist \(s,t\in R\) such that a GCD \(d\) of \(x\) and \(y\) can be written as \(d = xs + yt\text{.}\)</p></article></body>
 </html>

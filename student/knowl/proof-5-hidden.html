@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-22T10:55:39-05:00    *-->
+<!--*    on 2020-05-25T11:11:10-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,10 +11,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>First, assume that \(a \lt b\text{.}\) Then \(q = 0\) and \(r = a\) are sufficient. If \(a = b\text{,}\) then \(q = 1\) and \(r = 0\) will work.</p>
-<p>Now, assume that \(a &gt; b\text{.}\) Then the set \(S = \setof{s\in\N}{a-bs \ge 0}\) is nonempty, as \(a-b\in S\text{.}\) By <a class="xref" data-knowl="./knowl/axiom_wellordering.html" title="Axiom 1.1.2: Well-Ordering Principle">Axiom 1.1.2</a>, \(S\) has a least element, which we will call \(r\text{.}\) Let \(q\in \N_0\) be such that \(r = a-bq\text{;}\) then \(a = bq + r\text{.}\)</p>
-<p>To finish the proof, it is enough to show that this choice of \(r\) satisfies \(0\le r \le b-1\text{.}\) Observe that \(r\in S\text{,}\) so \(r\ge 0\text{.}\) If \(r \ge b\text{,}\) then \(a - b(q+1) = a-bq -b = r -b \ge 0\text{.}\) Since \(q+1 &gt; q\text{,}\) this is a contradiction to the assumption that \(q\) was the largest element of \(S\text{.}\) Thus, \(r \lt b\text{,}\) i.e., \(r \le b-1\text{.}\)</p>
-<p>Let \(q,q',r,r'\) be such that \(a = bq+r\) and \(a=bq'+r'\text{.}\) We see that \(bq+r = bq' + r'\text{,}\) so \(b(q-q') = r'-r\text{,}\) so \(b|r'-r\text{.}\) If \(r'-r = 0\text{,}\) we are done.</p>
-<p>Otherwise, \(r'-r\) is a nonzero multiple of \(n\text{.}\) If \(r' \ge r\text{,}\) then \(0\le b(q-q') = r' - r \le b-1 - r\text{,}\) a contradiction. Similarly, if \(r' \le r\text{,}\) write \(b(q'-q) = r-r' \ge 0\text{,}\) and a symmetric argument leads to a contradiction.</p>
-<p>Thus, \(r' = r\text{,}\) so \(b(q-q') = 0\text{,}\) and since \(b &gt; 0\text{,}\) \(q - q'= 0\text{,}\) i.e., \(q = q'\text{.}\)</p></article></body>
+<body><article class="hiddenproof"><p>Our hypotheses means there is an integer \(k\) for which \(b = ak\text{.}\) Then \(bc = (ak)c = a(kc)\text{.}\) We observe that \(k' = kc\) is an integer, so \(bc = ak'\text{,}\) and therefore \(a\mid bc\text{.}\)</p></article></body>
 </html>

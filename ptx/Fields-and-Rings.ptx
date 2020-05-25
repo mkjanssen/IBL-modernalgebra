@@ -497,7 +497,7 @@
       In this section we will explore which field properties usually hold for familiar sets of numbers and which ones are more specialized.
       Before we proceed with that endeavor we will give a formal definition of polynomial so that we can include it in our exploration.
     </p>
-    <definition>
+    <definition xml:id="def-polynomial">
       <statement>
         <p>
           Let <m>A</m> be a set, and <m>x</m> a variable.
@@ -1163,7 +1163,7 @@
         </p>
       </statement>
     </exercise>
-    <definition>
+    <definition xml:id="def-unit">
       <statement>
         <p>
           Let <m>R</m> be a ring and let <m>u\in R</m> be nonzero.

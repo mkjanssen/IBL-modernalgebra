@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-05-22T10:55:47-05:00    *-->
+<!--*    on 2020-05-25T11:11:16-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,15 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We saw in <a class="xref" data-knowl="./knowl/thm_divalg.html" title="Theorem 1.2.5: The Division Algorithm for \(\N\)">Theorem 1.2.5</a> and <a class="xref" data-knowl="./knowl/theorem_polydivalg.html" title="Theorem 2.4.13: (Polynomial Division Algorithm)">Theorem 2.4.13</a> that both \(\Z\) and \(F[x]\) have a division algorithm. It is reasonable (and correct) to expect that similar to the integers we can also investigate the greatest common divisor of polynomials.</p>
-<span class="incontext"><a href="SubSec-Factoring-Polynomials.html#p-494">in-context</a></span>
+<p>We therefore have</p>
+<div class="displaymath">
+\begin{align*}
+f(x) \amp = a_m b_n^{-1} x^{m-n} g(x) + h(x)\\
+\amp = a_m b_n^{-1} x^{m-n} g(x) + g(x) q_1(x) + r_1(x)\\
+\amp = (a_m b_n^{-1} x^{m-n} + q_1(x)) g(x) + r_1(x)\text{,}
+\end{align*}
+</div>
+<p data-braille="continuation">where \(q = a_m b_n^{-1} x^{m-n} + q_1(x)\) and \(r = r_1(x)\) have the desired properties.</p>
+<span class="incontext"><a href="SubSec-Principal-Ideals.html#p-494">in-context</a></span>
 </body>
 </html>
