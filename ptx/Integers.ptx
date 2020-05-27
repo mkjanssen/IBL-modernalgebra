@@ -1018,7 +1018,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
   <section xml:id="SubSec-Primes-and-Factorization">
     <title>Primes and Factorization</title>
     
-            <assemblage>
+    <assemblage>
       <title>Guiding Questions</title>
 		<p>
       		<statement>
@@ -1026,7 +1026,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
       		<ul>
       			<li>What are primes? What properties do they have?</li>
       			<li>What does the Fundamental Theorem of Arithmetic say?</li>
-      			<li>How is the Fundamental Theorem of Arithmetic proved?</li>
+      			<li>Why is the Fundamental Theorem of Arithmetic true?</li>
       		</ul>
 
 	      </statement>
@@ -1348,19 +1348,37 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
   </section>
   <section xml:id="SubSec-Integers-Mod-m">
     <title>The Integers modulo <m>m</m></title>
+    
+    <assemblage>
+      <title>Guiding Questions</title>
+		<p>
+      		<statement>
+      		In this section, we'll seek to answer the questions:
+      		<ul>
+      			<li>What are equivalence relations?</li>
+      			<li>What is congruence modulo <m>m</m>?</li>
+      			<li>How does arithmetic in <m>\Z_m</m> compare to arithmetic in <m>\Z</m>?</li>
+      		</ul>
+
+	      </statement>
+      </p>
+    </assemblage>    
+    
     <p>
-      If you are familiar with 'military time' then you understand that eighteen hundred hours and 6:00pm are equivalent ways of representing the same time.
-      Similarly, it is common knowledge that if it is 10:00am now,
-      it will again be 10:00am in 24 hours
-      (though on a different day).
-      Whether you realize it or not,
-      when you are working with time
-      (in hours)
-      you are working in the integers modulo 12,
-      a concept that is rooted in the mathematical idea of equivalence classes.
+    		The foundation for our exploration of abstract algebra is nearly complete. 
+    		We need the basics of one more "number system" in order to appreciate the abstract approach developed in subsequent chapters.
+    		To build that number system, a brief review of relations and equivalence relations is required.
+    		Recall that given sets <m>S</m> and <m>T</m>, the Cartesian product of <m>S</m> with <m>T</m>, denoted <m>S\times T</m> ("<m>S</m> cross <m>T</m>"), is the set of all possible ordered pairs whose first element is from <m>S</m> and second element is from <m>T</m>. Symbolically,
     </p>
+    <me>
+    		S\times T = \setof{(s,t)}{s\in S, \ t\in T}.
+    </me>
+
+
+   
     <definition>
-      <statement>
+    		<idx>relation</idx>
+    		<statement>
         <p>
           Let <m>S</m> be a nonempty set.
           A <term>relation</term> <m>R</m> on <m>S</m> is a subset of <m>S\times S</m>.
@@ -1370,7 +1388,17 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
         </p>
       </statement>
     </definition>
+    <p>
+    		The notion of a relation as presented above is extremely open-ended.
+    		<em>Any</em> subset of ordered pairs of <m>S\times S</m> describes a relation on the set <m>S</m>.
+    		Of course, some relations are more meaningful than others; the branch of mathematics known as <url href="https://en.wikipedia.org/wiki/Order_theory">order theory</url> studies <em>order</em> relations (such as the familiar <m>\lt</m>).
+    		Our focus will be on <em>equivalence relations</em>, which isolate the important features of <m>=</m>.
+    </p>
+
     <definition>
+    <idx>equivalence relation</idx>
+    <idx>equivalence class</idx>
+    <idx>equivalence class, representative of</idx>
       <statement>
         <p>
           Let <m>S</m> be a nonempty set.
@@ -1456,44 +1484,33 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
         </p>
       </solution>
     </activity>
+    
+     <p>
+     	For our purposes, a particularly important equivalence relation is congruence modulo <m>m</m> on the set of integers.
+    </p>
+    
     <definition>
+    	<idx>congruence modulo <m>m</m></idx>
       <statement>
         <p>
           Let <m>a,b\in \Z</m> and <m>m \in \N</m>, <m>m > 1</m>.
           We say <term><m>a</m> is congruent to <m>b</m> modulo <m>m</m></term> if <m>m\mid a-b</m>.
-          We write <m>a \equiv_m b</m>.
+          We write <m>a \equiv b\mod m</m>.
         </p>
       </statement>
     </definition>
+    
+
     <activity>
       <statement>
         <p>
           Justify the following congruences.
           <ol>
-            <li>
-              <title>(a)</title>
-              <p>
-                <m>18 \equiv_{12} 6</m>
-              </p>
-            </li>
-            <li>
-              <title>(b)</title>
-              <p>
-                <m>47 \equiv_{13} 8</m>
-              </p>
-            </li>
-            <li>
-              <title>(c)</title>
-              <p>
-                <m>71 \equiv_5 1</m>
-              </p>
-            </li>
-            <li>
-              <title>(d)</title>
-              <p>
-                <m>21 \equiv_{11} -1</m>
-              </p>
-            </li>
+          	<li><m>18 \equiv 6\mod 12</m></li>
+          	<li><m>47 \equiv 8\mod 13</m></li>
+          	<li><m>71 \equiv 1\mod 5</m></li>
+          	<li><m>21 \equiv -1 \mod 11</m></li>
+          	<li><m>24 \equiv 0\mod 6</m></li>
           </ol>
         </p>
       </statement>
@@ -1505,8 +1522,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
           congruence modulo <m>m</m> is an equivalence relation on <m>\Z</m>.
         </p>
       </statement>
-    </theorem>
-    <proof>
+      <proof>
       <p>
         Let <m>a\in \Z</m>.
         Then <m>m|a-a</m>, so <m>a \equiv_m a</m>.
@@ -1529,15 +1545,25 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
         so <m>m|a-c</m> and <m>a\equiv_m c</m>.
       </p>
     </proof>
+    </theorem>
+    
+    <notation>
+    <idx><m>\Z_m</m></idx>
+      <p>
+        The set of equivalence classes of <m>\Z</m> under
+        <m>\equiv_m</m> is denoted <m>\Z_m</m> (pronounced "Z mod m").
+      </p>
+    </notation>
+
     <exploration>
       <statement>
         <p>
-          Find all of the equivalence classes of <m>\Z</m> under the relation <m>\equiv_5</m>.
+          Find all of the equivalence classes of <m>\Z_5</m> and <m>\Z_7</m>. 
         </p>
       </statement>
       <answer>
         <p>
-          The equivalence classes are
+          The equivalence classes of <m>\Z_5</m> are
           <md>
             <mrow>\overline{0} \amp = \setof{7k}{k\in\Z} = \set{\ldots, -5, 0, 5, 10, \ldots}</mrow>
             <mrow>\overline{1} \amp = \setof{7k+1}{k\in\Z} = \set{\ldots, -4, 1, 6, 11, \ldots}</mrow>
@@ -1549,42 +1575,32 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
         </p>
       </answer>
     </exploration>
-    <notation>
-      <p>
-        The set of equivalence classes of <m>\Z</m> under
-        <m>\equiv_m</m> is denoted <m>\Z_m</m>.
-      </p>
-    </notation>
-    <activity>
-      <statement>
-        <p>
-          List the elements of <m>\Z_7</m>.
-        </p>
-      </statement>
-    </activity>
-    <theorem>
+    
+    
+    <theorem xml:id="thm-additionmodulom">
       <statement>
         <p>
           Let <m>a,b, c,d\in \Z</m> and <m>m > 1</m> such that
-          <m>a\equiv_m c</m> and <m>b\equiv_m d</m>.
-          Then <m>a+b \equiv_m c + d</m>.
+          <m>a\equiv c\mod m</m> and <m>b\equiv d\mod m</m>.
+          Then <m>a+b \equiv c + d \mod m</m>.
         </p>
       </statement>
-    </theorem>
-    <proof>
+      <proof>
       <p>
         Write <m>mk_1 = a-c</m> and
         <m>m k_2 = b-d</m> for some <m>k_1,k_2\in \Z</m>.
         Then <m>m(k_1 + k_2) = (a-c) + (b-d) = (a+b) - (c+d)</m>,
-        so <m>a+b \equiv_m c+d</m>.
+        so <m>a+b \equiv c+d\mod m</m>.
       </p>
     </proof>
+    </theorem>
+    
     <theorem>
       <statement>
         <p>
           Let <m>a,b, c,d\in \Z</m> and <m>m > 1</m> such that
-          <m>a\equiv_m c</m> and <m>b\equiv_m d</m>.
-          Then <m>ab \equiv_m c d</m>.
+          <m>a\equiv c\mod m</m> and <m>b\equiv d\mod m</m>.
+          Then <m>ab \equiv c d\mod m</m>.
         </p>
       </statement>
     </theorem>
@@ -1601,10 +1617,11 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
         </md>.
       </p>
       <p>
-        Thus, <m>m|ab-cd</m> and <m>ab \equiv_m cd</m>.
+        Thus, <m>m|ab-cd</m> and <m>ab \equiv cd\mod m</m>.
       </p>
     </proof>
     <definition>
+    <idx>well-defined statement</idx>
       <statement>
         <p>
           Let <m>S</m> be a set and <m>\sim</m> an equivalence relation on <m>S</m>.
@@ -1618,7 +1635,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
     <p>
       The previous exercises justify the following definitions.
     </p>
-    <definition>
+    <definition xml:id="def-arithemticmodm">
       <statement>
         <p>
           Let <m>m > 1</m> and <m>a,b\in \Z_m</m>.
@@ -1643,6 +1660,39 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
         </p>
       </statement>
     </definition>
+    
+    <p>
+    		Most elementary propositions about <m>\Z_m</m> can be recast as statements about <m>\Z</m>.
+    		For instance, in proving <xref ref="thm-additionmodulom" /> you likely proved that if <m>m|a-c</m> and <m>m|b-d</m> that <m>m|(a+b)-(c+d)</m>.
+    		However, as the statements become more complex, repeatedly reshaping statements about <m>Z_m</m> as statements about <m>\Z</m> becomes cumbersome and unhelpful.
+    		Instead, you are encouraged to become comfortable doing arithmetic modulo <m>m</m> or, put another way, arithmetic with the equivalence classes of <m>\Z_m</m> as defined in <xref ref="def-arithemticmodm" />.
+    </p>
+    
+    <activity>
+    		<statement>
+    			<p>
+    				Without passing back to <m>\Z</m>, find the smallest nonnegative integer representative of the resulting equivalence classes. 
+    			</p>
+    			<ol>
+    				<li><m>\overline{5}+\overline{11}</m> in <m>\Z_{9}</m></li>
+    				<li><m>\overline{-3}+\overline{-3}</m> in <m>\Z_{6}</m></li>
+    				<li><m>\overline{8}\cdot\overline{3}</m> in <m>\Z_{19}</m></li>
+    				<li><m>\overline{-1}\cdot(\overline{3}+\overline{8})</m> in <m>\Z_{7}</m></li>
+    				<li><m>\overline{3}\cdot(\overline{5}^2+\overline{3}^3)</m> in <m>\Z_{20}</m></li>
+    			</ol>
+    		</statement>
+    		<solution>
+    			TBD
+    		</solution>
+
+    	</activity>
+
+	<p>
+		In the remainder of this section, we investigate fundamental properties of arithmetic in <m>\Z_m</m>.
+	</p>
+
+
+    
     <investigation xml:id="q_zmodmcancel">
       <statement>
         <p>
@@ -1673,13 +1723,14 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
           Conclude that if <m>\overline{a} \cdot\overline{c} = \overline{b}\cdot\overline{c}</m> in <m>\Z_m</m> that <m>\overline{a} = \overline{b}</m>.
         </p>
       </statement>
-    </theorem>
-    <proof>
+      <proof>
       <p>
         We know that <m>m|ac-bc</m>, i.e., that <m>m|c(a-b)</m>.
         By <xref ref="theorem_relprimecancel">Theorem</xref>, <m>m|a-b</m>.
       </p>
     </proof>
+    </theorem>
+    
     <theorem xml:id="theorem_cancelinZp">
       <statement>
         <p>
@@ -1701,13 +1752,14 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
           </ol>
         </p>
       </statement>
-    </theorem>
-    <proof>
+      <proof>
       <p>
         In <m>\Z_p</m>,
         every nonzero equivalence class is represented by an <m>x</m> for which <m>\gcd(x,p) = 1</m>.
         Apply <xref ref="theorem_cancelrelprime" />.
       </p>
     </proof>
+    </theorem>
+    
   </section>
 </chapter>
