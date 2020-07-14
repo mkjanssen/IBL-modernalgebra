@@ -2,9 +2,8 @@
   <title>Fields and Rings</title>
   <introduction>
     <p>
-      You have been exploring numbers and the patterns they hide within them since you began elementary school
-      (if not before).
-      In Chapter 1 we reminded ourselves about what some of those patterns are in the integers
+      You have been exploring numbers and the patterns they hide within them since your earliest school days.
+      In Chapter 1 we reminded ourselves about some of those patterns
       (with the goal of understanding factorization)
       and worked to express them in a more formal way.
       You may find yourself wondering why we are going out of our way to complicate ideas you have understood since elementary school.
@@ -12,11 +11,27 @@
       (and the reason for this course!)
       is so that we can explore just how far we can push these patterns.
       How far does our understanding of factorization in the integers stretch to other types of numbers and other mathematical objects (like polynomials)?
-      In this chapter we will set the ground work for answering that question by introducing more formal notation that will assist us in streamlining our investigation into factorization.
+      In this chapter we will set the ground work for answering that question by introducing ideas that will assist us in streamlining our investigation into factorization.
     </p>
   </introduction>
   <section xml:id="SubSec-Fields">
     <title>Fields</title>
+    
+    <assemblage>
+      <title>Guiding Questions</title>
+		<p>
+      		<statement>
+      		In this section, we'll seek to answer the questions:
+      		<ul>
+      			<li>What are binary operations?</li>
+      			<li>What is a field? What sorts of things can one do in a field?</li>
+      			<li>What are examples of fields?</li>
+      		</ul>
+
+	      </statement>
+      </p>
+    </assemblage> 
+    
     <p>
       We now begin the process of abstraction.
       We will do this in stages, beginning with the concept of a <em>field</em>.
@@ -40,7 +55,7 @@
     <activity>
       <statement>
         <p>
-          Prove that our elementary school definition of equivalent fractions is an equivalence relation.
+          Prove that our elementary school definition of equivalent fractions is an equivalence relation. Recall <xref ref="def-eqrel" />.
         </p>
       </statement>
     </activity>
@@ -48,12 +63,12 @@
       We likely have an intuitive idea of what is meant by <m>\R</m>,
       the set of real numbers.
       Defining <m>\R</m> rigorously is actually quite difficult,
-      and will occupy a significant amount of time in a first course in real analysis.
+      and occupies a significant amount of time in a first course in real analysis.
       Thus, we will make use of your intuition.
-      It is certainly the case that <m>\N\subseteq \Z\subseteq \Q\subseteq \R</m>,
+      <!--It is certainly the case that <m>\N\subseteq \Z\subseteq \Q\subseteq \R</m>,
       but <m>\R</m> also contains many irrational numbers,
       such as <m>\pi</m>, <m>e</m>,
-      <m>\sqrt{2}</m>, and so on.
+      <m>\sqrt{2}</m>, and so on.-->
     </p>
     <p>
       Out of <m>\R</m> we may build the complex numbers.
@@ -70,7 +85,14 @@
         </p>
       </statement>
     </definition>
+    
+    <p>
+    As was mentioned in the <xref ref="Sec-Introduction" text="custom">Introduction</xref>, <em>algebra</em> comes from an Arabic word meaning <q>the reunion of broken parts</q>.
+    We therefore need a way of combining two elements of a set into one; we turn to a particular type of function, known as a binary operation, to accomplish this.
+    	</p>
+    	
     <definition xml:id="def_binaryoperation">
+    <idx>binary operation</idx>
       <statement>
         <p>
               <idx><h>binary operation</h></idx>
@@ -79,11 +101,14 @@
           <term>binary operation</term>.
           If <m>\star</m> is a binary operation on <m>X</m>,
           we say that <m>X</m> is <term>closed under the operation <m>\star</m></term>. [Given <m>a,b\in X</m>,
-          we usually write <m>a\star b</m> in place of <m>\star(a,b)</m>.]
+          we usually write <m>a\star b</m> in place of the typical function notation, <m>\star(a,b)</m>.]
         </p>
       </statement>
     </definition>
-    <investigation>
+   
+    
+
+    <investigation xml:id="invest-binop">
       <statement>
         <p>
           Which of <m>+, -, \cdot, \div</m> are binary operations:
@@ -110,7 +135,8 @@
             </li>
             <li>
               <p>
-                on <m>\C</m>?
+                on <m>\C</m>? (Recall that for <m>a_1 + b_1 i, a_2 + b_2 i \in \C</m>, <m>(a_1 + b_1 i) + (a_2 + b_2 i) := (a_1 + a_2) + (b_1 + b_2)i</m>
+                and  <m>(a_1 + b_1 i)(a_2 + b_2 i) := (a_1 a_2 - b_1 b_2) + (a_1 b_2 + b_1 a_2) i</m>.)
               </p>
             </li>
           </ol>
@@ -125,6 +151,22 @@
         </p>
       </answer>
     </investigation>
+    
+    <activity>
+    		<statement>
+    			<p>
+    				Choose your favorite nonempty set <m>X</m> and describe a binary operation different than those in <xref ref="invest-binop" />.
+    			</p>
+	</statement>
+	<answer>
+    			<p>
+    				Answers vary, but one option is to define <m>\min : \Z\times \Z \to \Z</m> by 
+    			</p>
+    			<me>\min(a,b) := \begin{cases} a \amp \text{if } a \le b\\ b \amp \text{if } b\le a\end{cases.}</me>
+		</answer>
+	</activity>
+
+    
     <p>
       The hallmark of modern pure mathematics is the use of <em>axioms</em>.
       An axiom is essentially an unproved assertion of truth.
@@ -155,130 +197,129 @@
       our first abstract algebraic structure captures and axiomatizes familiar behavior about how numbers can be combined to produce other numbers of the same type.
     </p>
     <definition xml:id="def_field">
+    <idx>field</idx>
       <statement>
         <p>
-          A <term>field</term> is a nonempty set <m>F</m> with at least two elements and binary operations <m>+</m> and <m>\cdot</m>,
+          A <term>field</term> is a nonempty set <m>F</m> with at least two elements and binary operations <m>+</m> and <m>\cdot</m>, denoted <m>(F,+,\cdot)</m>, and
           satisfying the following <term>field axioms</term>:
           <ol>
             <li>
-              <title>F1.</title>
+
               <p>
                 Given any <m>a,b,c\in F</m>, <m>(a+b)+c = a+(b+c)</m>.
               </p>
             </li>
             <li>
-              <title>F2.</title>
+
               <p>
                 Given any <m>a,b\in F</m>, <m>a+b= b+a</m>.
               </p>
             </li>
             <li>
-              <title>F3.</title>
+
               <p>
                 There exists an element <m>0_F\in F</m> such that for all <m>a\in F</m>,
                 <m>a+0_F = 0_F + a = a</m>.
               </p>
             </li>
             <li>
-              <title>F4.</title>
+
               <p>
                 Given any <m>a\in F</m> there exists a <m>b\in F</m> such that <m>a+b = b + a =0_F</m>.
               </p>
             </li>
             <li>
-              <title>F5.</title>
+
               <p>
                 Given any <m>a,b,c\in F</m>, <m>(a\cdot b)\cdot c = a\cdot (b\cdot c)</m>.
               </p>
             </li>
             <li>
-              <title>F6.</title>
+
               <p>
                 Given any <m>a,b\in F</m>, <m>a\cdot b = b\cdot a</m>.
               </p>
             </li>
             <li>
-              <title>F7.</title>
+
               <p>
                 There exists an element <m>1_F\in F</m> such that for all <m>a\in F</m>,
                 <m>1_F\cdot a = a\cdot 1_F = a</m>.
               </p>
             </li>
             <li>
-              <title>F8.</title>
+
               <p>
                 For all <m>a\in F</m>, <m>a\ne 0_F</m>,
                 there exists a <m>b\in F</m> such that <m>a\cdot b = b\cdot a = 1_F</m>.
               </p>
             </li>
             <li>
-              <title>F9.</title>
+
               <p>
                 For all <m>a,b,c\in F</m>, <m>a\cdot (b+c) = a\cdot b + a\cdot c</m>.
               </p>
             </li>
             <li>
-              <title>F10.</title>
+
               <p>
                 For all <m>a,b,c\in F</m>, <m>(a+b)\cdot c = a\cdot c + b\cdot c</m>.
               </p>
             </li>
           </ol>
+          	
         </p>
       </statement>
     </definition>
     <p>
-      For brevity's sake,
-      we will usually write <m>a\cdot b</m> as <m>ab</m>.
+      We will usually write <m>a\cdot b</m> as <m>ab</m>.
       Additionally, we will usually drop the subscripts on <m>0,1</m> unless we need to distinguish between fundamentally different identities in different fields.
+      
     </p>
     <investigation xml:id="exer_fieldexamples">
       <statement>
         <p>
-          Which of the following are fields?
-          If no operations are specified,
-          assume the most obvious operations (e.g., the addition and multiplication you have known for years).
+          Which of the following are fields under the specified operations?
           For most, a short justification or counterexample is sufficient.
           <ol>
             <li>
               <p>
-                <m>\N</m>
+                <m>\N</m> under the usual addition and multiplication operations
               </p>
             </li>
             <li>
               <p>
-                <m>\Z</m>
+                <m>\Z</m> under the usual addition and multiplication operations
               </p>
             </li>
             <li>
               <p>
-                <m>2\Z</m>, the set of even integers
+                <m>2\Z</m>, the set of even integers, under the usual addition and multiplication operations
               </p>
             </li>
             <li>
               <p>
-                <m>\Q</m>
+                <m>\Q</m> under the usual addition and multiplication operations
               </p>
             </li>
             <li>
               <p>
-                <m>\Z_{10}</m>
+                <m>\Z_{6}</m> under addition and multiplication modulo 10
               </p>
             </li>
             <li>
               <p>
-                <m>\Z_{11}</m>
+                <m>\Z_{5}}</m> under addition and multiplication modulo 11
               </p>
             </li>
             <li>
               <p>
-                <m>\R</m>
+                <m>\R</m> under the usual addition and multiplication operations
               </p>
             </li>
             <li>
               <p>
-                <m>\C</m>, with addition defined as <m>(a_1 + b_1 i) + (a_2 + b_2 i) := (a_1 + a_2) + (b_1 + b_2)i</m>,
-                and multiplication defined as <m>(a_1 + b_1 i)(a_2 + b_2 i) := (a_1 a_2 - b_1 b_2) + (a_1 b_2 + b_1 a_2) i</m>.
+                <m>\C</m> under the complex addition and multiplication defined in <xref ref="invest-binop" />
               </p>
             </li>
             <li>
@@ -297,8 +338,7 @@
           </ol>
         </p>
       </statement>
-    </investigation>
-    <solution>
+          <solution>
       <p>
         <ol>
           <li>
@@ -325,14 +365,14 @@
           </li>
           <li>
             <p>
-              <m>\Z_{10}</m> is not a field;
-              there is no <m>\overline{a}\in \Z_{10}</m> for which <m>\overline{5}\cdot \overline{a} = \overline{1}</m>
-              (you can check them all; there are only 9 viable options).
+              <m>\Z_{6}</m> is not a field;
+              there is no <m>\overline{a}\in \Z_{10}</m> for which <m>\overline{2}\cdot \overline{a} = \overline{1}</m>
+              (you can check them all; there are only 4 viable options).
             </p>
           </li>
           <li>
             <p>
-              <m>\Z_{11}</m> <em>is</em> a field.
+              <m>\Z_{5}</m> <em>is</em> a field.
               The axioms pertaining to addition and multiplication were established earlier or rely on the same axioms holding for <m>\Z</m>.
             </p>
           </li>
@@ -357,10 +397,12 @@
         </ol>
       </p>
     </solution>
+    </investigation>
+
 	<p>
       In the <xref ref="exer_fieldexamples" />,
       you determined which of sets of familiar mathematical objects are and are not fields.
-      Notice that you have been working with fields for years and years and that our abstraction of language to that of fields is simply to allow us to explore the common features at the same time - it is inefficient to prove the same statement about every single field when we can prove it once and for all about fields in general.
+      Notice that you have been working with fields for years and that our abstraction of language to that of fields is simply to allow us to explore the common features at the same time - it is inefficient to prove the same statement about every single field when we can prove it once and for all about fields in general.
     </p>
     <theorem xml:id="thm_fieldproperties">
       <title>Properties of Fields</title>
@@ -391,6 +433,15 @@
             <li>
               <p>
                 Multiplicative inverses are unique.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>(-1)\cdot (-1) = 1</m> <hint><p>
+Note that we are saying that the additive inverse of the multiplicative identity times itself equals the multiplicative identity. You should use only the field axioms and the properties previously established in this theorem.
+</p>
+</hint><aside><q>Minus times Minus equals Plus:
+The reason for this we need not discuss.</q> -W.H. Auden</aside>
               </p>
             </li>
           </ol>
@@ -437,6 +488,14 @@
             to obtain <m>b(ab) = (ba)b = 1\cdot b = b = b(ac) = (ba)c = 1\cdot c = c</m>.
           </p>
         </li>
+        <li>
+        	<p>
+        		Observe that <m>(-1) + 1 = 0</m> by the definition of additive inverses. Multiply both sides by <m>-1</m> and distribute to obtain <m>(-1)(-1) + (-1)\cdot 1 = (-1)\cdot 0</m>.
+        		By part 2 of this theorem and the definition of a multiplicative identity, we obtain <m>(-1)(-1) + (-1) = 0</m>. We now add the multiplicative identity to obtain <m>(-1)(-1) + (-1) + 1 = 0 + 1</m>, which simplifies to <m>(-1)(-1) = 1</m>.
+        	</p>
+
+        </li>
+
       </ol>
     </proof>
     <p>
@@ -448,7 +507,8 @@
       multiplicative inverse of <m>b</m>.
       We will thus employ this familiar terminology henceforth.
     </p>
-    <definition>
+    <!-- 
+<definition>
       <statement>
         <p>
           Let <m>K</m> be a field.
@@ -481,36 +541,55 @@
         </p>
       </statement>
     </theorem>
-    <theorem>
+ -->
+    <investigation>
       <statement>
         <p>
-          For all primes <m>p</m>, <m>\Z_p</m> is a field.
+          For which <m>n > 1</m> is <m>\Z_n</m> a field?
+          Compute some examples, form a conjecture, and prove your conjecture.
         </p>
       </statement>
-    </theorem>
+    </investigation>
   </section>
   <section xml:id="SubSec-Rings">
     <title>Rings</title>
+    
+    <assemblage>
+      <title>Guiding Questions</title>
+		<p>
+      		<statement>
+      		In this section, we'll seek to answer the questions:
+      		<ul>
+      			<li>What are rings and integral domains, and how do they relate to fields?</li>
+      			<li>What are subrings, and how can we tell if a given subset of a ring is a subring?</li>
+      			<li>What special types of elements do rings have?</li>
+      		</ul>
+
+	      </statement>
+      </p>
+    </assemblage> 
+    
     <p>
       In the previous section,
       we observed that many familiar number systems are fields but that some are not.
-      In this section we will explore which field properties usually hold for familiar sets of numbers and which ones are more specialized.
-      Before we proceed with that endeavor we will give a formal definition of polynomial so that we can include it in our exploration.
+      As we will see, these non-fields are often more structurally interesting, at least from the perspective of factorization; thus, in this section, we explore them in more detail.
+      Before we proceed with that endeavor we will give a formal definition of polynomial so that we can include it in our work.
     </p>
     <definition xml:id="def-polynomial">
       <statement>
         <p>
-          Let <m>A</m> be a set, and <m>x</m> a variable.
+          Let <m>A</m> be a set with a well-defined addition operation <m>+</m> and additive identity <m>0</m>, and <m>x</m> a variable.
           We define a <term>polynomial in <m>x</m> with coefficients in <m>A</m></term>
           to be an expression of the form
           <me>
             p = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n
           </me>,
-          where <m>n\in \N_0</m> is the <term>degree</term>
+          where <m>a_n\ne 0</m>.
+          We call <m>n\in \N_0</m> the <term>degree</term>
           of the polynomial <m>p</m>,
           denoted <m>\deg(p) = n</m>, and
           <m>a_0,a_1,\ldots,
-          a_n</m> are the <term>coefficients</term> of the polynomial.
+          a_n</m> the <term>coefficients</term> of the polynomial.
           The coefficient <m>a_n</m> is known as the
           <term>leading coefficient</term> of <m>p</m>,
           and <m>a_n x^n</m> is the <term>leading term</term> of <m>p</m>.
@@ -519,10 +598,8 @@
             A[x] := \setof{a_0 + a_1 x + a_2 x + \cdots + a_n x^n}{n\in \N_0, \ a_i\in A}
           </me>
           we denote the set of all polynomials with coefficients in <m>A</m>.
-          If <m>A</m> has an additive identity <m>0</m>,
-          then <m>A[x]</m> has a <term>zero polynomial</term>,
+          The additive identity of <m>A[x]</m> is <m>0</m>, called the <term>zero polynomial</term>, and is
           the polynomial whose coefficients are all <m>0</m>.
-          The zero polynomial is also often denoted by <m>0</m>.
           The degree of the zero polynomial is <m>-\infty</m>.
         </p>
       </statement>
@@ -531,7 +608,7 @@
       <statement>
         <p>
           Give some examples of polynomials in <m>A[x]</m> for various choices of number systems <m>A</m>.
-          Identify their coefficients and degrees.
+          Identify their coefficients, leading terms, and degrees.
         </p>
       </statement>
     </exploration>
@@ -877,7 +954,7 @@
     <exploration xml:id="q_fieldaxiomspolyring">
       <statement>
         <p>
-          Which of the field axioms hold for <m>F[x]</m>,
+          Which of the field axioms in <xref ref="def_field" /> hold for <m>F[x]</m>,
           where <m>F</m> is a field, and which fail to hold in general?
         </p>
       </statement>
@@ -895,57 +972,58 @@
       we make the following definition.
     </p>
     <definition xml:id="def_ring">
+    <idx>ring</idx>
       <statement>
         <p>
-          A ring <m>R</m> is a nonempty set,
-          together with binary operations <m>+</m> and <m>\cdot</m> satisfying the following axioms.
+          A <term>ring</term> <m>R</m> is a nonempty set,
+          together with binary operations <m>+</m> and <m>\cdot</m>, denoted <m>(R,+,\cdot)</m>, and satisfying the following axioms.
           <ol>
             <li>
-              <title>R1.</title>
+
               <p>
                 Given any <m>a,b,c\in R</m>, <m>(a+b)+c = a+(b+c)</m>.
               </p>
             </li>
             <li>
-              <title>R2.</title>
+
               <p>
                 Given any <m>a,b\in R</m>, <m>a+b= b+a</m>.
               </p>
             </li>
             <li>
-              <title>R3.</title>
+
               <p>
                 There exists an element <m>0_R\in R</m> such that for all <m>a\in R</m>,
                 <m>a+0_R = 0_R + a = a</m>.
               </p>
             </li>
             <li>
-              <title>R4.</title>
+
               <p>
                 Given any <m>a\in R</m> there exists a <m>b\in R</m> such that <m>a+b = b + a =0_R</m>.
               </p>
             </li>
             <li>
-              <title>R5.</title>
+
               <p>
                 Given any <m>a,b,c\in R</m>, <m>(a\cdot b)\cdot c = a\cdot (b\cdot c)</m>.
               </p>
             </li>
             <li>
-              <title>R6.</title>
+
               <p>
                 For all <m>a,b,c\in R</m>, <m>a\cdot (b+c) = a\cdot b + a\cdot c</m>.
               </p>
             </li>
             <li>
-              <title>R7.</title>
+
               <p>
                 For all <m>a,b,c\in R</m>, <m>(a+b)\cdot c = a\cdot c + b\cdot c</m>.
               </p>
             </li>
           </ol>
           As with fields, when the ring <m>R</m> is clear from context,
-                we will often write <m>0</m> and <m>1</m> in place of <m>0_R</m> and <m>1_R</m>.
+                we will often write <m>0</m> in place of <m>0_R</m>.
         </p>
       </statement>
     </definition>
@@ -966,6 +1044,9 @@
     </p>
     <definition>
       <statement>
+      <idx>commutative ring</idx>
+      <idx>unity</idx>
+      <idx>commutative ring with identity</idx>
         <p>
           A ring <m>R</m> is said to be <term>commutative</term> if,
           for all <m>a,b\in R</m>, <m>ab = ba</m>.
@@ -989,7 +1070,7 @@
       right, or two-sided identities
       (or none at all).
     </p>
-    <exploration>
+    <exploration xml:id="expl-rings-examples">
       <statement>
         <p>
           Consider the sets given in <xref ref="table_propertiessandsets">Table</xref>.
@@ -1086,16 +1167,16 @@
      </p>
     </assemblage>
     <p>
-      One of the ways to better understand mathematical structures is to understand their similar substructures (e.g., subspaces of vector spaces in linear algebra).
-      Again, this is a formalization of an idea that you have been using since you were a child.
+      One of the ways to better understand mathematical structures is to understand their similar substructures (e.g., given a vector space <m>V\subseteq \R^n</m> and a subspace <m>W\subseteq V</m>, we may write <m>V = W + W^\perp</m>).
+      <!-- 
+Again, this is a formalization of an idea that you have been using since you were a child.
       There are certain properties of the rational numbers that you understand because you understand the real numbers - this is because the rational numbers are a subring of the real numbers.
+ -->
     </p>
-    <p>
-      In our study of rings,
-      we are primarily interested in special types of subrings,
-      to be studied in more depth in <xref ref="Sec-Ideals" />.
-    </p>
+    
     <definition>
+    <idx>subring</idx>
+    <idx>overring</idx>
       <statement>
         <p>
           Let <m>(R,+,\cdot)</m> be a ring and let <m>S\subseteq R</m>.
@@ -1107,9 +1188,10 @@
       </statement>
     </definition>
     <p>
-      The following theorem provides a nice encapsulation of what needs to be checked to see if a subset <m>S</m> of a ring <m>R</m> is in fact a subring of <m>R</m>.
+      The following theorem provides a easy-to-apply test to check if a given subset <m>S</m> of a ring <m>R</m> is in fact a subring of <m>R</m>.
     </p>
     <theorem xml:id="theorem_subringtest">
+    <idx>subring test</idx>
       <statement>
         <p>
           Let <m>R</m> be a ring and <m>S</m> a subset of <m>R</m>.
@@ -1133,8 +1215,16 @@
           </ol>
         </p>
       </statement>
+      <proof>
+      	<p>
+      		TBD.
+      	</p>
+
+      </proof>
+
     </theorem>
-    <exercise>
+    
+    <activity>
       <statement>
         <p>
           Determine whether the following rings <m>S</m> are subrings of the given rings <m>R</m>.
@@ -1162,8 +1252,19 @@
           </ol>
         </p>
       </statement>
-    </exercise>
+      <answer>
+      
+      </answer>
+
+    </activity>
+    <p>
+      In our study of rings,
+      we are primarily interested in special types of subrings known as <em>ideals</em>,
+      to be studied in more depth in <xref ref="Sec-Ideals" />.
+    </p>
     <definition xml:id="def-unit">
+    <idx>unit</idx>
+    <idx>associates</idx>
       <statement>
         <p>
           Let <m>R</m> be a ring and let <m>u\in R</m> be nonzero.
@@ -1175,9 +1276,7 @@
         </p>
       </statement>
     </definition>
-    <p>
-      That is, a unit in a ring is a nonzero element with a multiplicative inverse.
-    </p>
+    
     <exploration>
       <statement>
         <p>
@@ -1186,7 +1285,11 @@
         </p>
       </statement>
     </exploration>
-    <theorem>
+    <p>
+      In other words, a unit in a ring is a nonzero element with a multiplicative inverse.
+      The existence of units is the primary difference between fields and commutative rings with identity: in a field, all nonzero elements are units, while in a commutative ring with identity, no nonzero elements need be units, as <xref ref="thm-cri-field" /> demonstrates.
+    </p>
+    <theorem xml:id="thm-cri-field">
       <statement>
         <p>
           A commutative ring with identity <m>R</m> in which every nonzero element is a unit is a field.
@@ -1200,10 +1303,11 @@
       </p>
     </proof>
     <p>
-      One of the interesting side effects of our abstract definition of <em>ring</em>
+      One of the interesting side effects of our definition of <em>ring</em>
       is that it allows for behavior that may at first appear unintuitive or downright weird.
     </p>
     <definition>
+    <idx>zero divisor</idx>
       <statement>
         <p>
           A <term>zero divisor</term> in a ring <m>R</m> is a nonzero element <m>z\in R</m> such that there is a nonzero <m>x\in R</m> with <m>xz = zx = 0</m>.
@@ -1211,17 +1315,17 @@
       </statement>
     </definition>
     <p>
-      Notice that the reason the idea of zero divisors at first appears weird is that they're not something we encounter when working with numbers.
-      In fact, we specifically use the fact that there are no zero divisors in our familiar numbers systems to solve equations in high school algebra (If <m>(x-2)(x+5)=0</m>,
+      Notice that the reason the idea of zero divisors at first appears weird is that they are not something we encounter when working with our familiar sets of numbers, such as <m>\Z</m> or <m>\R</m>.
+      In fact, we specifically use the fact that there are no zero divisors in our familiar numbers systems to solve equations in high school algebra (e.g., if <m>(x-2)(x+5)=0</m>,
       then <m>(x-2)=0</m> or <m>x+5=0</m>).
-      The lack of zero divisors is one of the properties that doesn't persist in our abstraction from the integers to rings in general.
+      The lack of zero divisors is one of the properties that does not persist in our abstraction from the integers to rings in general.
     </p>
     <exploration>
       <statement>
         <p>
-          Find, with justification,
+          Find, with justification, all of
           the zero divisors in <m>\Z_{10}</m> and <m>\Z_{11}</m>.
-          Make and prove a conjecture about zero divisors in <m>\Z_m</m>,
+          Make and prove a conjecture about the existence of zero divisors in <m>\Z_m</m>,
           where <m>m > 1</m>.
         </p>
       </statement>
@@ -1239,6 +1343,7 @@
       <statement>
         <p>
           Are there any other rings in which you've seen zero divisors?
+          Recall your answers to <xref ref="expl-rings-examples" />.
         </p>
       </statement>
       <answer>
@@ -1309,13 +1414,14 @@
       we mean <em>commutative ring with identity</em>.
     </p>
     <p>
-      Moreover, while even commutative rings with identity and zero divisors are useful in many realms of mathematics,
+      Moreover, while even commutative rings with identity and zero divisors are of interest to mathematicians,
       we will focus our study on rings with no zero divisors.
       As these rings share many
-      (though not all)
       properties of the integers, they are known as <term>integral domains</term>.
     </p>
     <definition>
+    <idx>integral domain</idx>
+    <idx>domain</idx>
       <statement>
         <p>
           A commutative ring with identity <m>R</m> is an
@@ -1325,7 +1431,7 @@
       </statement>
     </definition>
     <p>
-      You have already seen several domains.
+      The next activities and theorems help us identify examples of domains, as well as situate the notion of a domain in its proper place relative to fields and rings in general.
     </p>
     <activity>
       <statement>
@@ -1447,48 +1553,78 @@
         </p>
       </answer>
     </investigation>
-    <p>
+   
+    <corollary>
+    		<statement>
+    			<p>
+    				Given a field <m>F</m>, the set of polynomials <m>F[x]</m> is a domain.
+    			</p>
+    		</statement>
+    </corollary>
+    
+ <p>
       When considering sets of polynomials,
-      as we do in <xref ref="Sec-Factorization">&#xa7;</xref>,
+      as we do in <xref ref="Sec-Factorization" /> (particularly in <xref ref="SubSec-Factoring-Polynomials" />),
       the following results will be quite useful.
     </p>
+
     <theorem xml:id="theorem_degreeofproductinfield">
       <statement>
         <p>
-          Let <m>F</m> be a field,
-          and let <m>p(x),q(x)\in F[x]</m> be nonzero polynomials.
+          Let <m>R</m> be a domain,
+          and let <m>p(x),q(x)\in R[x]</m> be nonzero polynomials.
           Then <m>\deg(p(x) q(x)) = \deg(p(x)) + \deg(q(x))</m>.
         </p>
       </statement>
-    </theorem>
-    <proof>
+      <proof>
       <p>
         Let the leading term of <m>p(x)</m> be <m>a_n x^n</m> and the leading term of <m>q(x)</m> be <m>b_m x^m</m>.
         Then the leading term of <m>p(x) q(x)</m> is <m>a_n b_m x^{n+m}</m>.
+        (Observe that since <m>R</m> is a domain, <m>a_n b_m \ne 0</m>.)
         Thus, <m>\deg(p(x) q(x)) = n+m = \deg(p(x)) + \deg(q(x))</m>.
       </p>
     </proof>
+    </theorem>
+    
+    <exploration>
+    		<statement>
+    			<p>
+    				Can the hypotheses of <xref ref="theorem_degreeofproductinfield" /> be relaxed? If so, provide more general hypotheses and adapt the proof.
+    				If not, give an illustrative example.
+    			</p>
+    		</statement>
+    		<solution>
+    			<p>
+    				No; let <m>p = \overline{1} + \overline{2}x, q = \overline{2} + \overline{3}x\in \Z_6[x]</m>.
+    				Observe that <m>\deg(p) + \deg(q) = 1 + 1</m>, but <m>pq = \overline{2} + \overline{5}x</m> has degree 1. 
+    			</p>
+    		</solution>
+    	</exploration>
+
+    
     <investigation>
       <statement>
         <p>
-          What are the units of <m>F[x]</m>?
+          Let <m>R</m> be a domain.
+          What are the units of <m>R[x]</m>?
           Prove your answer.
         </p>
       </statement>
       <answer>
         <p>
-          The units are <m>F^\times</m>.
+          The units are <m>R^\times</m>.
+          Clearly, <m>R^\times\subseteq R[x]^\times</m>.
         </p>
         <p>
-          Suppose <m>p(x),q(x)\in F\times</m> such that <m>p(x) q(x) = 1</m>.
+          Suppose <m>p(x),q(x)\in R[x]^\times</m> such that <m>p(x) q(x) = 1</m>.
           Then <m>\deg p(x) + \deg q(x) = \deg(p(x) q(x)) = \deg(1) = 0</m>.
-          Thus <m>\deg p(x) = \deg q(x) = 0</m>.
+          Thus <m>\deg p(x) = \deg q(x) = 0</m>, and consequently, <m>p(x),q(x)\in R^\times</m>.
         </p>
       </answer>
     </investigation>
     <references>
     	<biblio xml:id="Curto2013">
-    		C. Curto, V. Itskov, A. Veliz-Cuba, N. Youngs, <em>The Neural Ring: An Algebraic Tool for Analyzing the Intrinsic Structurle of Neural Codes</em>, Bull. Math. Bio. 75 (2013), 1571-1611, <url href="https://doi.org/10.1007/s11538-013-9860-3">DOI 10.1007/s11538-013-9860-3</url>
+    		C. Curto, V. Itskov, A. Veliz-Cuba, N. Youngs, <em>The Neural Ring: An Algebraic Tool for Analyzing the Intrinsic Structure of Neural Codes</em>, Bull. Math. Bio. 75 (2013), 1571-1611, <url href="https://doi.org/10.1007/s11538-013-9860-3">DOI 10.1007/s11538-013-9860-3</url>
     	</biblio>
     </references>
   </section>

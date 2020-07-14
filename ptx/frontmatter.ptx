@@ -10,9 +10,9 @@
         
         <author>
             <personname>Melissa Lindsey</personname>
-            <department>Mathematics and Statistics Department</department>
-            <institution>Dordt University</institution>
-            <email>melissa.lindsey@dordt.edu</email>
+            <department>Department of Mathematics</department>
+            <institution>University of Wisconsin-Madison</institution>
+            <email>mlindsey3@math.wisc.edu</email>
         </author>
       
       </titlepage>
@@ -73,7 +73,7 @@
     The goal of these notes is to explore the idea of factorization from an abstract perspective.
     We will first give attention to factorization in the integers,
     and then factorization properties of polynomials.
-    Our larger goal is to precisely describe deep structural properties common to both the integers and polynomials that guarantee that factorization into fundamental pieces,
+    Our larger goal is to precisely describe structural properties common to both the integers and polynomials that guarantee that factorization into fundamental pieces,
     like primes and irreducibles,
     can be done <em>uniquely</em>.
     In order to accomplish this goal,
@@ -91,7 +91,7 @@
 <preface xml:id="Sec-NoteToStudents">
 	<title>A Note to Students</title>
 		<p>
-			The note will go here.
+			the note goes here
 		</p>
 </preface>
 

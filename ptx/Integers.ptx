@@ -1395,7 +1395,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
     		Our focus will be on <em>equivalence relations</em>, which isolate the important features of <m>=</m>.
     </p>
 
-    <definition>
+    <definition xml:id="def-eqrel">
     <idx>equivalence relation</idx>
     <idx>equivalence class</idx>
     <idx>equivalence class, representative of</idx>
