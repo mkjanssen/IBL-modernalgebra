@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-14T14:13:35-05:00    *-->
+<!--*    on 2020-07-18T14:07:39-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -183,57 +183,83 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="SubSec-Divisibility-in-Domains"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Divisibility in Integral Domains</span>
 </h2>
-<p id="p-375">When we introduced the notion of integral domain, we said that part of the reason for the definition was to capture some of the most essential properties of the integers. One such idea is that of cancellation.</p>
-<article class="theorem theorem-like" id="theorem-30"><h6 class="heading">
+<article class="assemblage assemblage-like" id="assemblage-11"><h6 class="heading"><span class="title">Guiding Questions.</span></h6>
+<p id="p-379">In this section, we'll seek to answer the questions: <ul class="disc">
+<li id="li-122">What multiplicative properties can we generalize from \(\Z\) to any integral domain?</li>
+<li id="li-123">What are the differences between a prime and irreducible element in a commutative ring?</li>
+</ul></p></article><p id="p-380">When we introduced the notion of integral domain, we said that part of the reason for the definition was to capture some of the most essential properties of the integers. This is the heart of abstraction and generalization in mathematics: to distill the important properties of our objects of interest and explore the consequences of <em class="emphasis">those</em> properties. One such important property of \(\Z\) is <em class="emphasis">cancellation</em>.</p>
+<article class="theorem theorem-like" id="thm-domaincancel"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
 </h6>
-<p id="p-376">Let \(R\) be a ring. Then \(R\) is a domain if and only if for all \(a,b,c\in R\) with \(c\ne 0_R\) and \(ac = bc\text{,}\) we have \(a = b\text{.}\)</p></article><p id="p-379">Thus, the defining property of an integral domain is the ability to <em class="emphasis">cancel</em> common nonzero factors. Note that we have not <em class="emphasis">divided</em>; division is not a binary operation in rings! However, as was the case in \(\Z\text{,}\) there are notions of <em class="emphasis">divisibility</em> and <em class="emphasis">factorization</em> in rings.</p>
+<p id="p-381">Let \(R\) be a ring. Then \(R\) is a domain if and only if for all \(a,b,c\in R\) with \(c\ne 0\) and \(ac = bc\text{,}\) we have \(a = b\text{.}\)</p></article><p id="p-384">We may read <a class="xref" data-knowl="./knowl/thm-domaincancel.html" title="Theorem 2.3.1">Theorem 2.3.1</a> as saying that the defining property of an integral domain is the ability to cancel common nonzero factors. Note that we have not <em class="emphasis">divided</em>; division is not a binary operation, and nonzero elements of rings need not be units. However, as was the case in \(\Z\text{,}\) there are notions of <em class="emphasis">divisibility</em> and <em class="emphasis">factorization</em> in rings.</p>
 <article class="definition definition-like" id="definition-22"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
 </h6>
-<p id="p-380">Let \(R\) be a commutative ring with identity, and let \(a,b\in R\text{.}\) We say \(a\) <dfn class="terminology">divides</dfn> \(b\) and write \(a\mid b\) if there is a \(c\in R\) such that \(ac = b\text{.}\) We then say that \(a\) is a <dfn class="terminology">factor</dfn> of \(b\text{.}\)</p></article><p id="p-381">Our notion of primality also extends nicely to domains.</p>
+<p id="p-385">Let \(R\) be a commutative ring with identity, and let \(a,b\in R\text{.}\) We say \(a\) <dfn class="terminology">divides</dfn> \(b\) and write \(a\mid b\) if there is a \(c\in R\) such that \(ac = b\text{.}\) We then say that \(a\) is a <dfn class="terminology">factor</dfn> of \(b\text{.}\)</p></article><article class="investigation project-like" id="investigation-18"><h6 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
+</h6>
+<p id="p-386">Find all factors of \(\overline{2}\) in the following rings:</p>
+<ol class="decimal">
+<li id="li-124">\(\displaystyle \Z_5\)</li>
+<li id="li-125">\(\displaystyle \Z_6\)</li>
+<li id="li-126">\(\displaystyle \Z_{10}\)</li>
+</ol></article><p id="p-388">Our definition of prime also extends nicely to domains. Indeed, the desire to extend the familiar notion of prime from \(\Z\) to any ring is the reason for our less-familiar definition given in <a class="xref" data-knowl="./knowl/def-primeinteger.html" title="Definition 1.3.1">Definition 1.3.1</a>.</p>
 <article class="definition definition-like" id="definition-23"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
 </h6>
-<p id="p-382">Let \(R\) be a domain. We say a nonzero nonunit element \(a\in R\) is <dfn class="terminology">prime</dfn> if whenever \(a\mid bc\) for some \(b,c\in R\text{,}\) either \(a|b\) or \(a|c\text{.}\)</p></article><p id="p-383">A notion related to primality is irreducibility.</p>
+<p id="p-389">Let \(R\) be a domain. We say a nonzero nonunit element \(a\in R\) is <dfn class="terminology">prime</dfn> if whenever \(a\mid bc\) for some \(b,c\in R\text{,}\) either \(a|b\) or \(a|c\text{.}\)</p></article><p id="p-390">A notion related to primality is irreducibility.</p>
 <article class="definition definition-like" id="def_irreducibleelement"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span>
 </h6>
-<p id="p-384">Let \(R\) be a domain. We say a nonzero nonunit element \(a\in R\) is <dfn class="terminology">irreducible</dfn> if whenever \(a = bc\) for some \(b,c\in R\text{,}\) one of \(b\) or \(c\) is a unit.</p></article><p id="p-385">In familiar settings, the notion of prime and irreducible exactly coincide.</p>
+<p id="p-391">Let \(R\) be a domain. We say a nonzero nonunit element \(a\in R\) is <dfn class="terminology">irreducible</dfn> if whenever \(a = bc\) for some \(b,c\in R\text{,}\) one of \(b\) or \(c\) is a unit.</p></article><article class="exploration project-like" id="expl-unit-prime-irred"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
+</h6>
+<p id="p-392">Find the units, primes, and irreducibles in the following rings.</p>
+<ol class="decimal">
+<li id="li-127">\(\displaystyle \R\)</li>
+<li id="li-128">\(\displaystyle \Z\)</li>
+<li id="li-129">\(\displaystyle \Z_{5}\)</li>
+<li id="li-130">\(\displaystyle \Z_6\)</li>
+</ol></article><p id="p-394">In domains, all primes are irreducible.</p>
 <article class="theorem theorem-like" id="theorem-31"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span>
 </h6>
-<p id="p-386">Let \(R\) be a domain. If \(a\in R\) is prime, then \(a\) is irreducible.</p></article><article class="theorem theorem-like" id="theorem-32"><h6 class="heading">
+<p id="p-395">Let \(R\) be a domain. If \(a\in R\) is prime, then \(a\) is irreducible.</p></article><p id="p-398">In familiar settings, the notion of prime and irreducible exactly coincide.</p>
+<article class="theorem theorem-like" id="theorem-32"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span>
 </h6>
-<p id="p-389">Every irreducible in \(\Z\) is prime.</p></article><p id="p-391">It is not the case in all domains that irreducibles are primes, as <a class="xref" data-knowl="./knowl/exer_irreduciblenotprime.html" title="Exploration 2.3.1">Exploration 2.3.1</a> illustrates.</p>
-<article class="exploration project-like" id="exer_irreduciblenotprime"><h6 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
+<p id="p-399">Every irreducible in \(\Z\) is prime.</p></article><p id="p-401">Despite their overlap in familiar settings, primes and irreducibles are distinct types of elements. As the next exploration demonstrates, not all primes are irreducible. What is more, <a class="xref" data-knowl="./knowl/exer_irreduciblenotprime.html" title="Exploration 2.3.4">Exploration 2.3.4</a> will show that not all irreducibles are primes, even in domains!</p>
+<article class="exploration project-like" id="expl-prime-not-irred"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
 </h6>
-<p id="p-392">Consider the set \(R\) of all polynomials in \(\Z[x]\) for which the coefficient on the linear term is zero. That is,</p>
+<p id="p-402">Find an example of a ring \(R\) and prime \(p\in R\) such that \(p\) is not irreducible.</p></article><article class="exploration project-like" id="exer_irreduciblenotprime"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span>
+</h6>
+<p id="p-404">Consider the set \(R\) of all polynomials in \(\Z[x]\) for which the coefficient on the linear term is zero. That is,</p>
 <div class="displaymath">
 \begin{equation*}
 R = \setof{a_0 + a_2 x^2 + \cdots + a_{n-1} x^{n-1} + a_n x^n}{a_i\in \Z,\ n\in\N}\text{.}
 \end{equation*}
 </div>
-<p id="p-393">(You should convince yourself that \(R\) is an integral domain, but do not need to prove it.) Then, find a polynomial of the form \(x^n\) in \(R\) that is irreducible, but not prime.</p></article><article class="definition definition-like" id="definition-25"><h6 class="heading">
+<p id="p-405">(You should convince yourself that \(R\) is an integral domain, but do not need to prove it.) Then, find a polynomial of the form \(x^n\) in \(R\) that is irreducible, but not prime.</p></article><p id="p-408">Our last straightforward generalization from the multiplicative structure of \(\Z\) is the notion of greatest common divisor. As our next definition again demonstrates, our careful work in the context of \(\Z\) generalizes nicely to all domains. Indeed, we intentionally did not appeal to \(\le\) to define the greatest common divisor in <a class="xref" data-knowl="./knowl/gcd-definition.html" title="Definition 1.2.7">Definition 1.2.7</a>, as not all rings have a natural order relation like \(\Z\) does.</p>
+<article class="definition definition-like" id="definition-25"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.7</span><span class="period">.</span>
 </h6>
-<p id="p-396">Let \(R\) be a domain, and let \(a,b\in R\text{.}\) A nonzero element \(d\in R\) is a <dfn class="terminology">greatest common divisor</dfn> of \(a\) and \(b\) if</p>
+<p id="p-409">Let \(R\) be a domain, and let \(a,b\in R\text{.}\) A nonzero element \(d\in R\) is a <dfn class="terminology">greatest common divisor</dfn> of \(a\) and \(b\) if</p>
 <ol class="decimal">
-<li id="li-120"><p id="p-397">\(d\mid a\) and \(d\mid b\) and,</p></li>
-<li id="li-121"><p id="p-398">if \(e\in R\) with \(e\mid a\) and \(e\mid b\text{,}\) then \(e\mid d\text{.}\)</p></li>
+<li id="li-131"><p id="p-410">\(d\mid a\) and \(d\mid b\) and,</p></li>
+<li id="li-132"><p id="p-411">if \(e\in R\) with \(e\mid a\) and \(e\mid b\text{,}\) then \(e\mid d\text{.}\)</p></li>
 </ol></article><article class="theorem theorem-like" id="theorem-33"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.8</span><span class="period">.</span>
 </h6>
-<p id="p-399">Let \(R\) be a domain and \(a,b\in R\) and suppose \(d\) is a greatest common divisor of \(a\) and \(b\text{.}\) Then any associate of \(d\) is also a greatest common divisor of \(a\) and \(b\text{.}\)</p></article><article class="exploration project-like" id="exploration-14"><h6 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
+<p id="p-412">Let \(R\) be a domain and \(a,b\in R\) and suppose \(d\) is a greatest common divisor of \(a\) and \(b\text{.}\) Then any associate of \(d\) is also a greatest common divisor of \(a\) and \(b\text{.}\) (Recall <a class="xref" data-knowl="./knowl/def-unit.html" title="Definition 2.2.7">Definition 2.2.7</a>.)</p></article><article class="exploration project-like" id="exploration-16"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span>
 </h6>
-<p id="p-404">In most familiar domains, GCDs exist. However, they don't always! Find an example of elements in the ring from <a class="xref" data-knowl="./knowl/exer_irreduciblenotprime.html" title="Exploration 2.3.1">Exercise 2.3.1</a> which do not have a GCD. Justify your assertion.</p></article><article class="exploration project-like" id="exer_ringgeneralityone"><h6 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
+<p id="p-417">In most familiar domains, GCDs exist. However, they don't always! Find an example of elements in the ring from <a class="xref" data-knowl="./knowl/exer_irreduciblenotprime.html" title="Exploration 2.3.4">Exercise 2.3.4</a> which do not have a GCD. Justify your assertion.</p></article><article class="exploration project-like" id="exer_ringgeneralityone"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span>
 </h6>
-<p id="p-407">Fill in the following blanks in order of increasing generality with the words <em class="emphasis">ring</em>, <em class="emphasis">integral domain</em>, <em class="emphasis">field</em>, and <em class="emphasis">commutative ring</em>.</p>
-<p id="p-408">__________ \(\Rightarrow\) __________ \(\Rightarrow\) __________ \(\Rightarrow\) __________</p></article></section></div></main>
+<p id="p-420">Fill in the following blanks in order of increasing generality with the words <em class="emphasis">ring</em>, <em class="emphasis">integral domain</em>, <em class="emphasis">field</em>, and <em class="emphasis">commutative ring</em>.</p>
+<p id="p-421">__________ \(\Rightarrow\) __________ \(\Rightarrow\) __________ \(\Rightarrow\) __________</p></article></section></div></main>
 </div>
 </body>
 </html>

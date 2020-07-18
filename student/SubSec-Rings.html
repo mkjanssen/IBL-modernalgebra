@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-14T14:13:35-05:00    *-->
+<!--*    on 2020-07-18T14:07:38-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -616,71 +616,130 @@ A[x] := \setof{a_0 + a_1 x + a_2 x + \cdots + a_n x^n}{n\in \N_0, \ a_i\in A}
 <article class="theorem theorem-like" id="thm-cri-field"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.8</span><span class="period">.</span>
 </h6>
-<p id="p-329">A commutative ring with identity \(R\) in which every nonzero element is a unit is a field.</p></article><p id="p-331">One of the interesting side effects of our definition of <em class="emphasis">ring</em> is that it allows for behavior that may at first appear unintuitive or downright weird.</p>
+<p id="p-329">A commutative ring with identity \(R\) in which every nonzero element is a unit is a field.</p></article><p id="p-331">A useful tool for analyzing the structure of rings with finitely many elements are addition and multiplication tables. As an example, consider the addition and multiplication tables for \(R = \Z_3\) shown in <a href="SubSec-Rings.html#table-z3addition" class="internal" title="[caption] [STRUCT].[NUM]">[caption] [STRUCT].[NUM]</a> and <a class="xref" data-knowl="./knowl/table-z3multiplication.html" title="Table 2.2.10">Table 2.2.10</a>.</p>
+<figure class="table table-like" id="table-2"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.9<span class="period">.</span></span><span class="space"> </span>Addition table for \(R=\Z_3\text{.}\)</figcaption><table>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">\(​+\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\overline{0}​\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\overline{1}​\)</td>
+<td class="l m b2 r0 l0 t0 lines" data-braille="last-cell">\(\overline{2}​\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(​\overline{0}\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(​\overline{0}\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\overline{1}​\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(​\overline{2}\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(​\overline{1}\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\overline{1}​\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\overline{2}​\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(\overline{0}​\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(​\overline{2}\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\overline{2}​\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\overline{0}​\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(\overline{1}​\)</td>
+</tr>
+</table></figure><figure class="table table-like" id="table-z3multiplication"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.10<span class="period">.</span></span><span class="space"> </span>Multiplication table for \(R=\Z_3\text{.}\)</figcaption><table>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(​\cdot\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\overline{0}​\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\overline{1}​\)</td>
+<td class="l m b2 r0 l0 t0 lines" data-braille="last-cell">\(\overline{2}​\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(​\overline{0}\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(​\overline{0}\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\overline{0}​\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(​\overline{0}\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(​\overline{1}\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\overline{0}​\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\overline{1}​\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(\overline{2}​\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(​\overline{2}\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\overline{0}​\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\overline{2}​\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(\overline{1}​\)</td>
+</tr>
+</table></figure><article class="investigation project-like" id="invest-tables"><h6 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.11</span><span class="period">.</span>
+</h6>
+<p id="p-332">Calculate addition and multiplication tables for the following rings.</p>
+<ol class="decimal">
+<li id="li-115">\(\displaystyle R = \Z_5\)</li>
+<li id="li-116">\(\displaystyle R = \Z_6\)</li>
+</ol>
+<p id="p-333">List 2-3 observations about your tables.</p></article><p id="p-335">One of the interesting side effects of our definition of <em class="emphasis">ring</em> is that it allows for behavior that may at first appear unintuitive or downright weird.</p>
 <article class="definition definition-like" id="definition-20"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.9</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.11</span><span class="period">.</span>
 </h6>
-<p id="p-332">A <dfn class="terminology">zero divisor</dfn> in a ring \(R\) is a nonzero element \(z\in R\) such that there is a nonzero \(x\in R\) with \(xz = zx = 0\text{.}\)</p></article><p id="p-333">Notice that the reason the idea of zero divisors at first appears weird is that they are not something we encounter when working with our familiar sets of numbers, such as \(\Z\) or \(\R\text{.}\) In fact, we specifically use the fact that there are no zero divisors in our familiar numbers systems to solve equations in high school algebra (e.g., if \((x-2)(x+5)=0\text{,}\) then \((x-2)=0\) or \(x+5=0\)). The lack of zero divisors is one of the properties that does not persist in our abstraction from the integers to rings in general.</p>
+<p id="p-336">A <dfn class="terminology">zero divisor</dfn> in a ring \(R\) is a nonzero element \(z\in R\) such that there is a nonzero \(x\in R\) with \(xz = zx = 0\text{.}\)</p></article><p id="p-337">Notice that the reason the idea of zero divisors at first appears weird is that they are not something we encounter when working with our familiar sets of numbers, such as \(\Z\) or \(\R\text{.}\) In fact, we specifically use the fact that there are no zero divisors in our familiar numbers systems to solve equations in high school algebra (e.g., if \((x-2)(x+5)=0\text{,}\) then \((x-2)=0\) or \(x+5=0\)). The lack of zero divisors is one of the properties that does not persist in our abstraction from the integers to rings in general.</p>
 <article class="exploration project-like" id="exploration-11"><h6 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.2.11</span><span class="period">.</span>
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.2.12</span><span class="period">.</span>
 </h6>
-<p id="p-334">Find, with justification, all of the zero divisors in \(\Z_{10}\) and \(\Z_{11}\text{.}\) Make and prove a conjecture about the existence of zero divisors in \(\Z_m\text{,}\) where \(m &gt; 1\text{.}\)</p></article><article class="investigation project-like" id="investigation-13"><h6 class="heading">
-<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.12</span><span class="period">.</span>
-</h6>
-<p id="p-337">Are there any other rings in which you've seen zero divisors? Recall your answers to <a class="xref" data-knowl="./knowl/expl-rings-examples.html" title="Exploration 2.2.5">Exploration 2.2.5</a>.</p></article><article class="theorem theorem-like" id="theorem-23"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.10</span><span class="period">.</span>
-</h6>
-<p id="p-339">Let \(R\) be a ring and suppose \(a,b\in R\) such that \(ab\) is a zero divisor. Then either \(a\) or \(b\) is a zero divisor.</p></article><article class="theorem theorem-like" id="theorem_unitnotazd"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.11</span><span class="period">.</span>
-</h6>
-<p id="p-341">Let \(R\) be a ring and \(u\in R^\times\text{.}\) Then \(u\) is not a zero divisor.</p></article><article class="investigation project-like" id="investigation-14"><h6 class="heading">
+<p id="p-338">Find, with justification, all of the zero divisors in \(\Z_{10}\) and \(\Z_{11}\text{.}\) Make and prove a conjecture about the existence of zero divisors in \(\Z_m\text{,}\) where \(m &gt; 1\text{.}\)</p></article><article class="investigation project-like" id="investigation-14"><h6 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.13</span><span class="period">.</span>
 </h6>
-<p id="p-343">How can we reinterpret <a class="xref" data-knowl="./knowl/q_zmodmcancel.html" title="Investigation 1.4.7">Investigation 1.4.7</a> in light of our new language of units and zero divisors? State a theorem that uses this new language.</p></article><p id="p-345">While there is a well-developed body of literature on (noncommutative) rings (possibly without identity), from this point on, and unless stated otherwise, when we use the word <em class="emphasis">ring</em> we mean <em class="emphasis">commutative ring with identity</em>.</p>
-<p id="p-346">Moreover, while even commutative rings with identity and zero divisors are of interest to mathematicians, we will focus our study on rings with no zero divisors. As these rings share many properties of the integers, they are known as <dfn class="terminology">integral domains</dfn>.</p>
-<article class="definition definition-like" id="definition-21"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.12</span><span class="period">.</span>
+<p id="p-341">Are there any other rings in which you've seen zero divisors? Recall your answers to <a class="xref" data-knowl="./knowl/expl-rings-examples.html" title="Exploration 2.2.5">Exploration 2.2.5</a>.</p></article><article class="theorem theorem-like" id="theorem-23"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.12</span><span class="period">.</span>
 </h6>
-<p id="p-347">A commutative ring with identity \(R\) is an <dfn class="terminology">integral domain</dfn>, or just <dfn class="terminology">domain</dfn>, if \(R\) has no zero divisors.</p></article><p id="p-348">The next activities and theorems help us identify examples of domains, as well as situate the notion of a domain in its proper place relative to fields and rings in general.</p>
-<article class="activity project-like" id="activity-10"><h6 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.14</span><span class="period">.</span>
-</h6>
-<p id="p-349">Which of the following rings are domains? Justify your answers.</p>
-<ol class="decimal">
-<li id="li-115"><p id="p-350">\(\Z\)</p></li>
-<li id="li-116"><p id="p-351">\(\Z_{8}\)</p></li>
-<li id="li-117"><p id="p-352">\(\Z_{19}\)</p></li>
-<li id="li-118"><p id="p-353">\(\R\)</p></li>
-<li id="li-119"><p id="p-354">\(\Q[x]\)</p></li>
-</ol></article><article class="theorem theorem-like" id="theorem_everyfieldisadomain"><h6 class="heading">
+<p id="p-343">Let \(R\) be a ring and suppose \(a,b\in R\) such that \(ab\) is a zero divisor. Then either \(a\) or \(b\) is a zero divisor.</p></article><article class="theorem theorem-like" id="theorem_unitnotazd"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.13</span><span class="period">.</span>
 </h6>
-<p id="p-355">Every field is a domain.</p></article><article class="theorem theorem-like" id="theorem-26"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.14</span><span class="period">.</span>
+<p id="p-345">Let \(R\) be a ring and \(u\in R^\times\text{.}\) Then \(u\) is not a zero divisor.</p></article><article class="investigation project-like" id="investigation-15"><h6 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.14</span><span class="period">.</span>
 </h6>
-<p id="p-357">Let \(m &gt; 1\) and \(R = \Z_m\text{.}\) Then \(R\) is a field if and only if \(R\) is a domain.</p></article><article class="theorem theorem-like" id="theorem_subringsaredomains"><h6 class="heading">
+<p id="p-347">How can we reinterpret <a class="xref" data-knowl="./knowl/q_zmodmcancel.html" title="Investigation 1.4.7">Investigation 1.4.7</a> in light of our new language of units and zero divisors? State a theorem that uses this new language.</p></article><p id="p-349">While there is a well-developed body of literature on (noncommutative) rings (possibly without identity), from this point on, and unless stated otherwise, when we use the word <em class="emphasis">ring</em> we mean <em class="emphasis">commutative ring with identity</em>.</p>
+<p id="p-350">Moreover, while even commutative rings with identity and zero divisors are of interest to mathematicians, we will focus our study on rings with no zero divisors. As these rings share many properties of the integers, they are known as <dfn class="terminology">integral domains</dfn>.</p>
+<article class="definition definition-like" id="definition-21"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.14</span><span class="period">.</span>
+</h6>
+<p id="p-351">A commutative ring with identity \(R\) is an <dfn class="terminology">integral domain</dfn>, or just <dfn class="terminology">domain</dfn>, if \(R\) has no zero divisors.</p></article><p id="p-352">The next activities and theorems help us identify examples of domains, as well as situate the notion of a domain in its proper place relative to fields and rings in general.</p>
+<article class="activity project-like" id="activity-10"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.15</span><span class="period">.</span>
+</h6>
+<p id="p-353">Which of the following rings are domains? Justify your answers.</p>
+<ol class="decimal">
+<li id="li-117"><p id="p-354">\(\Z\)</p></li>
+<li id="li-118"><p id="p-355">\(\Z_{8}\)</p></li>
+<li id="li-119"><p id="p-356">\(\Z_{19}\)</p></li>
+<li id="li-120"><p id="p-357">\(\R\)</p></li>
+<li id="li-121"><p id="p-358">\(\Q[x]\)</p></li>
+</ol></article><article class="theorem theorem-like" id="theorem_everyfieldisadomain"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.15</span><span class="period">.</span>
 </h6>
-<p id="p-360">If \(R\) is a domain and \(S\) is a subring of \(R\text{,}\) then \(S\) is a domain.</p></article><article class="theorem theorem-like" id="theorem_domainimpliespolynomialdomain"><h6 class="heading">
+<p id="p-359">Every field is a domain.</p></article><article class="theorem theorem-like" id="theorem-26"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.16</span><span class="period">.</span>
 </h6>
-<p id="p-362">If \(R\) is a domain, then so is \(R[x]\text{.}\)</p></article><article class="investigation project-like" id="investigation-15"><h6 class="heading">
-<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.15</span><span class="period">.</span>
+<p id="p-361">Let \(m &gt; 1\) and \(R = \Z_m\text{.}\) Then \(R\) is a field if and only if \(R\) is a domain.</p></article><article class="theorem theorem-like" id="theorem_subringsaredomains"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.17</span><span class="period">.</span>
 </h6>
-<p id="p-364">Is the converse of <a class="xref" data-knowl="./knowl/theorem_domainimpliespolynomialdomain.html" title="Theorem 2.2.16">Theorem 2.2.16</a> true? If so, give a short proof. If not, find a counterexample.</p></article><article class="corollary theorem-like" id="corollary-2"><h6 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">2.2.17</span><span class="period">.</span>
-</h6>
-<p id="p-366">Given a field \(F\text{,}\) the set of polynomials \(F[x]\) is a domain.</p></article><p id="p-367">When considering sets of polynomials, as we do in <a href="Sec-Factorization.html" class="internal" title="Chapter 3: Factorization">Chapter 3</a> (particularly in <a href="SubSec-Factoring-Polynomials.html" class="internal" title="Section 3.1: Factoring Polynomials">Section 3.1</a>), the following results will be quite useful.</p>
-<article class="theorem theorem-like" id="theorem_degreeofproductinfield"><h6 class="heading">
+<p id="p-364">If \(R\) is a domain and \(S\) is a subring of \(R\text{,}\) then \(S\) is a domain.</p></article><article class="theorem theorem-like" id="theorem_domainimpliespolynomialdomain"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.18</span><span class="period">.</span>
 </h6>
-<p id="p-368">Let \(R\) be a domain, and let \(p(x),q(x)\in R[x]\) be nonzero polynomials. Then \(\deg(p(x) q(x)) = \deg(p(x)) + \deg(q(x))\text{.}\)</p></article><article class="exploration project-like" id="exploration-12"><h6 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.2.16</span><span class="period">.</span>
+<p id="p-366">If \(R\) is a domain, then so is \(R[x]\text{.}\)</p></article><article class="investigation project-like" id="investigation-16"><h6 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.16</span><span class="period">.</span>
 </h6>
-<p id="p-370">Can the hypotheses of <a class="xref" data-knowl="./knowl/theorem_degreeofproductinfield.html" title="Theorem 2.2.18">Theorem 2.2.18</a> be relaxed? If so, provide more general hypotheses and adapt the proof. If not, give an illustrative example.</p></article><article class="investigation project-like" id="investigation-16"><h6 class="heading">
-<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.17</span><span class="period">.</span>
+<p id="p-368">Is the converse of <a class="xref" data-knowl="./knowl/theorem_domainimpliespolynomialdomain.html" title="Theorem 2.2.18">Theorem 2.2.18</a> true? If so, give a short proof. If not, find a counterexample.</p></article><article class="corollary theorem-like" id="corollary-2"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">2.2.19</span><span class="period">.</span>
 </h6>
-<p id="p-372">Let \(R\) be a domain. What are the units of \(R[x]\text{?}\) Prove your answer.</p></article><section class="references" id="references-3"><h3 class="heading hide-type">
+<p id="p-370">Given a field \(F\text{,}\) the set of polynomials \(F[x]\) is a domain.</p></article><p id="p-371">When considering sets of polynomials, as we do in <a href="Sec-Factorization.html" class="internal" title="Chapter 3: Factorization">Chapter 3</a> (particularly in <a href="SubSec-Factoring-Polynomials.html" class="internal" title="Section 3.1: Factoring Polynomials">Section 3.1</a>), the following results will be quite useful.</p>
+<article class="theorem theorem-like" id="theorem_degreeofproductinfield"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.20</span><span class="period">.</span>
+</h6>
+<p id="p-372">Let \(R\) be a domain, and let \(p(x),q(x)\in R[x]\) be nonzero polynomials. Then \(\deg(p(x) q(x)) = \deg(p(x)) + \deg(q(x))\text{.}\)</p></article><article class="exploration project-like" id="exploration-12"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.2.17</span><span class="period">.</span>
+</h6>
+<p id="p-374">Can the hypotheses of <a class="xref" data-knowl="./knowl/theorem_degreeofproductinfield.html" title="Theorem 2.2.20">Theorem 2.2.20</a> be relaxed? If so, provide more general hypotheses and adapt the proof. If not, give an illustrative example.</p></article><article class="investigation project-like" id="investigation-17"><h6 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.18</span><span class="period">.</span>
+</h6>
+<p id="p-376">Let \(R\) be a domain. What are the units of \(R[x]\text{?}\) Prove your answer.</p></article><section class="references" id="references-3"><h3 class="heading hide-type">
 <span class="type">References</span> <span class="codenumber"></span> <span class="title">References</span>
 </h3>
 <article class="bib" id="Curto2013"><div class="bibitem">[1]</div>  <div class="bibentry">C. Curto, V. Itskov, A. Veliz-Cuba, N. Youngs, <em class="emphasis">The Neural Ring: An Algebraic Tool for Analyzing the Intrinsic Structure of Neural Codes</em>, Bull. Math. Bio. 75 (2013), 1571-1611, <a class="external" href="https://doi.org/10.1007/s11538-013-9860-3" target="_blank">DOI 10.1007/s11538-013-9860-3</a>

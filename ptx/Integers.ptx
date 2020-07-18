@@ -84,7 +84,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
     			</p>
 			<ol>
 				<li>Give an example of an <m>f\in S</m> and <m>g\notin S</m>.</li>
-				<li>Let <m>D = \setof{\deg f}{f\in S}</m> be the set of possible degrees of polynomials in <m>S</m>. Show that <m>D\ne emptyset</m> and <m>D\subseteq \N_0</m>.</li>
+				<li>Let <m>D = \setof{\deg f}{f\in S}</m> be the set of possible degrees of polynomials in <m>S</m>. Show that <m>D\ne \emptyset</m> and <m>D\subseteq \N_0</m>.</li>
 				<li>Apply the Well-Ordering Principle to argue that <m>D</m> has a least element. To what does this correspond in <m>S</m>?</li>
 			</ol>
 		</statement>

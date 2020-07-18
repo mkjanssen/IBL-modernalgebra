@@ -1302,6 +1302,160 @@ Again, this is a formalization of an idea that you have been using since you wer
         The only thing missing from the ring axioms is the existence of multiplicative inverses for nonzero elements.
       </p>
     </proof>
+    
+
+    		<p>
+    			A useful tool for analyzing the structure of rings with finitely many elements are addition and multiplication tables. As an example, consider the addition and multiplication tables for <m>R = \Z_3</m> shown in <xref ref="table-z3addition" /> and <xref ref="table-z3multiplication" />.
+		</p>
+		
+		<table>
+  <caption xml:id="table-z3addition">
+    Addition table for <m>R=\Z_3</m>.
+  </caption>
+  <tabular>
+    <row bottom="medium">
+      <cell right="medium">
+        <m>​+</m>
+      </cell>
+      <cell>
+        <m>\overline{0}​</m>
+      </cell>
+      <cell>
+        <m>\overline{1}​</m>
+      </cell>
+      <cell>
+        <m>\overline{2}​</m>
+      </cell>
+    </row>
+    <row>
+      <cell right="medium">
+        <m>​\overline{0}</m>
+      </cell>
+      <cell>
+        <m>​\overline{0}</m>
+      </cell>
+      <cell>
+        <m>\overline{1}​</m>
+      </cell>
+      <cell>
+        <m>​\overline{2}</m>
+      </cell>
+    </row>
+    <row>
+      <cell right="medium">
+        <m>​\overline{1}</m>
+      </cell>
+      <cell>
+        <m>\overline{1}​</m>
+      </cell>
+      <cell>
+        <m>\overline{2}​</m>
+      </cell>
+      <cell>
+        <m>\overline{0}​</m>
+      </cell>
+    </row>
+    <row>
+      <cell right="medium">
+        <m>​\overline{2}</m>
+      </cell>
+      <cell>
+        <m>\overline{2}​</m>
+      </cell>
+      <cell>
+        <m>\overline{0}​</m>
+      </cell>
+      <cell>
+        <m>\overline{1}​</m>
+      </cell>
+    </row>
+  </tabular>
+</table>
+
+<table xml:id="table-z3multiplication">
+  <caption>
+    Multiplication table for <m>R=\Z_3</m>.
+  </caption>
+  <tabular>
+    <row>
+      <cell right="medium">
+        <m>​\cdot</m>
+      </cell>
+      <cell bottom="medium">
+        <m>\overline{0}​</m>
+      </cell>
+      <cell bottom="medium">
+        <m>\overline{1}​</m>
+      </cell>
+      <cell bottom="medium">
+        <m>\overline{2}​</m>
+      </cell>
+    </row>
+    <row>
+      <cell right="medium">
+        <m>​\overline{0}</m>
+      </cell>
+      <cell>
+        <m>​\overline{0}</m>
+      </cell>
+      <cell>
+        <m>\overline{0}​</m>
+      </cell>
+      <cell>
+        <m>​\overline{0}</m>
+      </cell>
+    </row>
+    <row>
+      <cell right="medium">
+        <m>​\overline{1}</m>
+      </cell>
+      <cell>
+        <m>\overline{0}​</m>
+      </cell>
+      <cell>
+        <m>\overline{1}​</m>
+      </cell>
+      <cell>
+        <m>\overline{2}​</m>
+      </cell>
+    </row>
+    <row>
+      <cell right="medium">
+        <m>​\overline{2}</m>
+      </cell>
+      <cell>
+        <m>\overline{0}​</m>
+      </cell>
+      <cell>
+        <m>\overline{2}​</m>
+      </cell>
+      <cell>
+        <m>\overline{1}​</m>
+      </cell>
+    </row>
+  </tabular>
+</table>
+
+
+<investigation xml:id="invest-tables">
+	<statement>
+		<p>
+			Calculate addition and multiplication tables for the following rings.
+		</p>
+		<ol>
+			<li> <m>R = \Z_5</m></li>
+			<li> <m>R = \Z_6</m></li>
+		</ol>
+		<p>List 2-3 observations about your tables.</p>
+		</statement>	
+	<solution>
+		<p>
+			TBD.
+		</p>
+	</solution>
+</investigation>
+
+    
     <p>
       One of the interesting side effects of our definition of <em>ring</em>
       is that it allows for behavior that may at first appear unintuitive or downright weird.
@@ -1630,20 +1784,36 @@ Again, this is a formalization of an idea that you have been using since you wer
   </section>
   <section xml:id="SubSec-Divisibility-in-Domains">
     <title>Divisibility in Integral Domains</title>
+    
+    <assemblage>
+      <title>Guiding Questions</title>
+		<p>
+      		<statement>
+      		In this section, we'll seek to answer the questions:
+      		<ul>
+      			<li>What multiplicative properties can we generalize from <m>\Z</m> to any integral domain?</li>
+      			<li>What are the differences between a prime and irreducible element in a commutative ring?</li>
+
+      		</ul>
+
+	      </statement>
+      </p>
+    </assemblage> 
+    
+    
     <p>
       When we introduced the notion of integral domain,
-      we said that part of the reason for the definition was to capture some of the most essential properties of the integers.
-      One such idea is that of cancellation.
+      we said that part of the reason for the definition was to capture some of the most essential properties of the integers. This is the heart of abstraction and generalization in mathematics: to distill the important properties of our objects of interest and explore the consequences of <em>those</em> properties.
+      One such important property of <m>\Z</m> is <em>cancellation</em>.
     </p>
-    <theorem>
+    <theorem xml:id="thm-domaincancel">
       <statement>
         <p>
           Let <m>R</m> be a ring.
           Then <m>R</m> is a domain if and only if for all <m>a,b,c\in R</m> with
-          <m>c\ne 0_R</m> and <m>ac = bc</m>, we have <m>a = b</m>.
+          <m>c\ne 0</m> and <m>ac = bc</m>, we have <m>a = b</m>.
         </p>
       </statement>
-    </theorem>
     <proof>
       <p>
         Assume <m>R</m> is a domain and <m>ac = bc</m>.
@@ -1659,17 +1829,21 @@ Again, this is a formalization of an idea that you have been using since you wer
         then there is a nonzero <m>x\in R</m> such that <m>xz = 0 = 0 z</m>.
         This implies that <m>x = 0</m>, a contradiction.
       </p>
-    </proof>
+    </proof>      
+    </theorem>
+
     <p>
-      Thus, the defining property of an integral domain is the ability to
-      <em>cancel</em> common nonzero factors.
+      We may read <xref ref="thm-domaincancel" /> as saying that the defining property of an integral domain is the ability to
+      cancel common nonzero factors.
       Note that we have not <em>divided</em>;
-      division is not a binary operation in rings!
+      division is not a binary operation, and nonzero elements of rings need not be units.
       However, as was the case in <m>\Z</m>,
       there are notions of <em>divisibility</em>
       and <em>factorization</em> in rings.
     </p>
     <definition>
+    <idx>divides (ring)</idx>
+    <idx>factor (ring)</idx>
       <statement>
         <p>
           Let <m>R</m> be a commutative ring with identity, and let <m>a,b\in R</m>.
@@ -1679,8 +1853,28 @@ Again, this is a formalization of an idea that you have been using since you wer
         </p>
       </statement>
     </definition>
+    
+    <investigation>
+    		<statement>
+    			<p>
+    				Find all factors of <m>\overline{2}</m> in the following rings:
+    			</p>
+			<ol>
+				<li><m>\Z_5</m></li>
+				<li><m>\Z_6</m></li>
+				<li><m>\Z_{10}</m></li>
+			</ol>
+		</statement>
+		<solution>
+			<p>TBD.</p>
+		</solution>
+
+    	</investigation>
+
+    
     <p>
-      Our notion of primality also extends nicely to domains.
+      Our definition of prime also extends nicely to domains.
+      Indeed, the desire to extend the familiar notion of prime from <m>\Z</m> to any ring is the reason for our less-familiar definition given in <xref ref="def-primeinteger" />.
     </p>
     <definition>
       <statement>
@@ -1696,6 +1890,7 @@ Again, this is a formalization of an idea that you have been using since you wer
       A notion related to primality is irreducibility.
     </p>
     <definition xml:id="def_irreducibleelement">
+    <idx>irreducible (ring element)</idx>
       <statement>
         <p>
           Let <m>R</m> be a domain.
@@ -1705,10 +1900,31 @@ Again, this is a formalization of an idea that you have been using since you wer
         </p>
       </statement>
     </definition>
+    
+    <exploration xml:id="expl-unit-prime-irred">
+    		<statement>
+    			<p>
+    				Find the units, primes, and irreducibles in the following rings.
+    			</p>
+			<ol>
+				<li><m>\R</m></li>
+				<li><m>\Z</m></li>
+				<li><m>\Z_{5}</m></li>
+				<li><m>\Z_6</m></li>
+			</ol>
+		</statement>
+		<solution>
+			<p>
+				TBD.
+			</p>
+		</solution>
+    </exploration>
+
     <p>
-      In familiar settings,
-      the notion of prime and irreducible exactly coincide.
-    </p>
+    		In domains, all primes are irreducible.
+    	</p>
+
+    
     <theorem>
       <statement>
         <p>
@@ -1731,6 +1947,16 @@ Again, this is a formalization of an idea that you have been using since you wer
         Thus, <m>c</m> is a unit, making <m>a</m> irreducible.
       </p>
     </proof>
+    
+    
+
+
+    
+    <p>
+      In familiar settings,
+      the notion of prime and irreducible exactly coincide.
+    </p>
+    
     <theorem>
       <statement>
         <p>
@@ -1751,9 +1977,23 @@ Again, this is a formalization of an idea that you have been using since you wer
       </p>
     </proof>
     <p>
-      It is not the case in all domains that irreducibles are primes,
-      as <xref ref="exer_irreduciblenotprime" /> illustrates.
+    	  Despite their overlap in familiar settings, primes and irreducibles are distinct types of elements. As the next exploration demonstrates, not all primes are irreducible.
+      What is more, <xref ref="exer_irreduciblenotprime" /> will show that not all irreducibles are primes, even in domains!
     </p>
+    
+    <exploration xml:id="expl-prime-not-irred">
+    		<statement>
+    			<p>
+    				Find an example of a ring <m>R</m> and prime <m>p\in R</m> such that <m>p</m> is not irreducible.
+    			</p>
+    		</statement>
+    		<solution>
+    			<p>
+    				In <m>R = \Z_6</m>, <m>p = \overline{3}</m> is prime by <xref ref="expl-unit-prime-irred" /> but not irreducible as <m>\overline{3}^2 = \overline{3}</m> and <m>\overline{3}</m> is not a unit.
+    			</p>
+    		</solution>
+    	</exploration>
+    	
     <exploration xml:id="exer_irreduciblenotprime">
       <statement>
         <p>
@@ -1785,8 +2025,14 @@ Again, this is a formalization of an idea that you have been using since you wer
         </p>
       </solution>
     </exploration>
+    
+    <p>
+    	  Our last straightforward generalization from the multiplicative structure of <m>\Z</m> is the notion of greatest common divisor. As our next definition again demonstrates, our careful work in the context of <m>\Z</m> generalizes nicely to all domains. Indeed, we intentionally did not appeal to <m>\le</m> to define the greatest common divisor in <xref ref="gcd-definition" />, as not all rings have a natural order relation like <m>\Z</m> does.
+    	</p>
+
 
     <definition>
+    <idx>greatest common divisor (integral domain)</idx>
       <statement>
         <p>
           Let <m>R</m> be a domain, and let <m>a,b\in R</m>.
@@ -1814,7 +2060,7 @@ Again, this is a formalization of an idea that you have been using since you wer
         <p>
           Let <m>R</m> be a domain and
           <m>a,b\in R</m> and suppose <m>d</m> is a greatest common divisor of <m>a</m> and <m>b</m>.
-          Then any associate of <m>d</m> is also a greatest common divisor of <m>a</m> and <m>b</m>.
+          Then any associate of <m>d</m> is also a greatest common divisor of <m>a</m> and <m>b</m>. (Recall <xref ref="def-unit" />.)
         </p>
       </statement>
     </theorem>
