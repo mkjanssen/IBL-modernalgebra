@@ -1,24 +1,52 @@
 <chapter xml:id="Sec-Factorization">
   <title>Factorization</title>
+  <introduction>
+  	<p>
+  		In this chapter, we come to the heart of the text: a structural investigation of unique factorization in the familiar contexts of <m>\Z</m> and <m>F[x]</m>.
+  		In <xref ref="SubSec-Factoring-Polynomials" />, we explore theorems that formalize much of our understanding of that quintessential high school algebra problem: factoring polynomials.
+  		As we saw in <xref ref="thm_divalg" /> and <xref ref="theorem_polydivalg" />, both <m>\Z</m> and <m>F[x]</m> have a division algorithm and, thus, are Euclidean domains.
+  		In <xref ref="SubSec-Factorization-in-Euclidean-Domains" />, we explore the implications for multiplication in Euclidean domains. That is: given that we have a well-behaved division algorithm in an integral domain, what can we say about the factorization properties of the domain?
+  		
+  	</p>
+  	
+  	<p>
+  		Finally, in the optional <xref ref="SubSec-Nonunique-Factorization" />, we explore contexts in which unique factorization into products of irreducibles need not hold.
+  	</p>
+
+
+  </introduction>
+
   <section xml:id="SubSec-Factoring-Polynomials">
     <title>Factoring Polynomials</title>
+    
+    <assemblage>
+      <title>Guiding Questions</title>
+		<p>
+      		<statement>
+      		In this section, we'll seek to answer the questions:
+      		<ul>
+      			<li>What properties of divisibility in <m>\Z</m> extend to <m>F[x]</m>?</li>
+      			<li>What is an irreducible polynomial? Are there any tools we can use to determine if a given polynomial is irreducible?</li>
+      		</ul>
+
+	      </statement>
+      </p>
+    </assemblage> 
+    
     <p>
       One of the most beautiful consequences of an abstract study of algebra is the fact that both <m>\Z</m> and <m>F[x]</m> are Euclidean domains.
       While they are not
       <q>the same</q>,
       we can expect them to share many of the same properties.
       In this section,
-      our first goal will be to extend familiar properties from <xref ref="Sec-Integers">&#xa7;</xref> to <m>F[x]</m>.
-      We will also see that the particular nature of a polynomial allows for additional criteria for,
-      e.g., its irreducibility to be decided.
+      our first goal will be to extend familiar properties from <m>\Z</m> to <m>F[x]</m>.
+      We will also see that particular features of a polynomial (e.g., its degree, or the existence of roots) allows for additional criteria for its irreducibility to be decided.
     </p>
     <p>
-      We saw in <xref ref="thm_divalg"></xref>
-      and <xref ref="theorem_polydivalg"></xref>
-      that both <m>\Z</m> and <m>F[x]</m> have a division algorithm.
-      It is reasonable
-      (and correct)
-      to expect that similar to the integers we can also investigate the greatest common divisor of polynomials.
+      Since both <m>\Z</m> and <m>F[x]</m> have a division algorithm,
+      it is reasonable
+      to expect that, similar to the integers, we can also investigate the greatest common divisor of polynomials.
+      In fact, <xref ref="invest-euclid-alg-integers" text="custom">our method</xref> for finding the greatest common divisor of two integers extends nicely to polynomials.
     </p>
     <investigation>
       <statement>
@@ -54,24 +82,48 @@
         </p>
       </solution>
     </investigation>
+    
+    <p>
+    		One of the most useful things we can do with polynomials is <em>evaluate</em> them by <q>plugging in</q> elements from our coefficient set (or some superset that contains it) and performing the resulting arithmetic in an appropriate ring.
+    		We can make this completely rigorous using the language of functions: given a commutative ring <m>R</m> and all polynomials <m>p(x) = a_0 + a_1 x + \cdots + a_n x^n \in R[x]</m>, we define the function <m>p_f : R\to R</m> by <m>p_f(r) = a_0 + a_1 r + \cdots + a_n r^n </m>.
+    		However, we will not belabor this point; instead, we will generally write <m>p(r)</m> in place of <m>p_f(r)</m> and appeal to our common notions of evaluating polynomials.
+    	</p>
+    	
+    	<p>
+    		Given a polynomial <m>p(x)\in R[x]</m>, we have frequently been interested in finding all <m>r\in R</m> for which <m>p(r) = 0</m>.
+    	</p>
 
+
+
+<!-- 
     <p>
       We next make the somewhat pedantic <mdash/> yet valuable <mdash/> distinction between the polynomial <m>p(x)\in R[x]</m> and the function
       <m>p_f : R\to R</m> defined by the polynomial.
     </p>
+ -->
+ 
+<!-- 
     <definition>
       <statement>
         <p>
-          Let <m>R</m> be a commutative ring with identity and <m>p(x) = a_0 + a_1 x + \cdots + a_n x^n \in R[x]</m>.
+          Let <m>R</m> be a commutative ring with identity and <m>.
           A <term>polynomial function</term>
           <m>p_f : R \to R</m> is defined, for all <m>r\in R</m>,
-          by <m>p_f(r) = a_0 + a_1 r + \cdots + a_n r^n \in R</m>.
+          by \in R</m>.
           We usually denote <m>p_f(r)</m> by <m>p(r)</m>,
           and say that <m>p(r)</m> is the polynomial <m>p</m> evaluated at <m>r</m>.
         </p>
       </statement>
     </definition>
+ -->
+    
+    
+
+ 
+ 
     <definition>
+    <idx>zero (of a polynomial)</idx>
+    <idx>root</idx>
       <statement>
         <p>
           Let <m>R</m> be commutative with identity and suppose <m>p(x) \in R[x]</m>.
@@ -80,7 +132,61 @@
         </p>
       </statement>
     </definition>
+    
     <p>
+    		When considering polynomials with integer coefficients, any rational roots are particularly well-behaved.
+    	</p>
+
+
+    
+    <theorem xml:id="thm-rational-root">
+			<statement>
+				<p>
+					Let <m>p(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n \in \Z[x]</m> with <m>a_0,a_n\ne 0</m>.
+					If <m>r,s\in\Z</m> such that <m>s\ne 0, \gcd(r,s)=1</m>, and <m>p(r/s)=0</m>, then <m>r|a_0</m> and <m>s|a_n</m>.
+				</p>
+			</statement>
+		<proof>
+			TBD.
+		</proof> 
+    </theorem>
+    
+    <activity>
+    		<statement>
+    			<p>
+    				Use <xref ref="thm-rational-root" /> to find the <em>possible</em> rational roots of <m>p(x) = 3 - x + x^2 + 5x^3 - 10x^4 - 6x^5</m>. Which of the possibilities you found are actually roots? Justify.
+    			</p>
+    		</statement>
+    		<solution>
+    			<p>
+    				TBD.
+    			</p>
+		</solution>
+	</activity>
+
+    		
+    <p>
+    		<xref ref="thm-rational-root" /> gave a condition to check to see if polynomials in <m>\Z[x]</m> had roots in <m>\Q</m>.
+    		However, the lack of a rational root for a polynomial <m>q(x)\in \Z[x]</m> is not sufficient to say that a polynomial is irreducible in <m>\Z[x]</m> according to <xref ref="def_irreducibleelement" />.
+    	</p>
+    	
+    	<activity>
+    		<statement>
+    			<p>
+    				Find a polynomial <m>q(x) \in \Z[x]</m> that has no roots in <m>\Q</m> but is nonetheless reducible <em>over <m>\Z</m></em>.
+    			</p>
+    		</statement>
+		<solution>
+			<p>	
+				Any polynomial with a nonunit integer factor will do, such as <m>q(x) = 4x^2 + 2</m>.
+			</p>
+		</solution>
+	</activity>
+
+
+    
+    <p>
+    	To simplify matters, we will focus henceforth on polynomials with coefficients in a field.
       The following theorem is
       <url href="http://www.corestandards.org/Math/Content/HSA/APR/B/2/">a result that you learned in high school algebra</url>
       (and have likely used countless times since then),
@@ -88,14 +194,14 @@
       it is necessary to formalize prior to continuing.
     </p>
     <theorem>
+    <title>Factor Theorem</title>
       <statement>
         <p>
           Let <m>F</m> be a field, and <m>p(x)\in F[x]</m>.
           Then <m>\alpha\in F</m> is a root of <m>p(x)</m> if and only if <m>x-\alpha</m> divides <m>p(x)</m>.
         </p>
       </statement>
-    </theorem>
-    <proof>
+      <proof>
       <p>
         If <m>x-\alpha</m> divides <m>p(x)</m>,
         then <m>p(x) = q(x) (x-\alpha)</m> and <m>p(\alpha) = q(\alpha) (\alpha - \alpha) = 0</m>,
@@ -111,12 +217,27 @@
         so <m>r=0</m> and <m>x-\alpha | p(x)</m>.
       </p>
     </proof>
+    </theorem>
+    
+
+
+    
+    <p>
+    		Note that while <m>F[x]</m> is a ring, and we already have a <xref ref="def_irreducibleelement" text="custom">definition of an irreducible element of a ring</xref>, we will find it useful to have a ready definition of irreducible in the context of polynomials with coefficients in a field. It is to that task that we now turn.
+    	</p>
+
+    
     <exploration>
+    <idx>irreducible (polynomial)</idx>
       <statement>
         <p>
           Given a field <m>F</m>, define an irreducible element of <m>F[x]</m>,
           keeping in view <xref ref="theorem_degreeofproductinfield">Theorem</xref>
           and <xref ref="def_irreducibleelement">Definition</xref>.
+          <hint>
+          	What are the units in <m>F[x]</m>?
+          </hint>
+
         </p>
       </statement>
       <solution>
@@ -130,6 +251,7 @@
     </exploration>
 
     <definition>
+    <idx>reducible (polynomial)</idx>
       <statement>
         <p>
           A polynomial <m>f(x)\in F[x]</m> is <term>reducible</term>
@@ -141,6 +263,7 @@
       <statement>
         <p>
           State a positive definition for a reducible polynomial with coefficients in a field <m>F</m>.
+          That is, state a definition which does not refer to the notion of irreducibility.
         </p>
       </statement>
       <solution>
@@ -157,8 +280,7 @@
           Every polynomial of degree 1 in <m>F[x]</m> is irreducible.
         </p>
       </statement>
-    </theorem>
-    <proof>
+      <proof>
       <p>
         Let <m>f(x)</m> be degree 1 and write <m>f(x) = s(x) t(x)</m>.
         Then <m>\deg f = 1 = \deg s + \deg t</m>.
@@ -166,14 +288,15 @@
         one of <m>\deg s</m> or <m>\deg t</m> is 0, hence <m>s</m> or <m>t</m> is constant.
       </p>
     </proof>
+    </theorem>
+    
     <theorem>
       <statement>
         <p>
           A nonconstant polynomial <m>f(x)\in F[x]</m> of degree 2 or 3 is irreducible over <m>F</m> if and only if it has no zeros in <m>F</m>.
         </p>
       </statement>
-    </theorem>
-    <proof>
+      <proof>
       <p>
         We prove the double contrapositive:
         <m>f(x)\in F[x]</m> of degree 2 or 3 is reducible if and only if it has a zero in <m>F</m>.
@@ -192,6 +315,55 @@
         Thus, <m>f</m> is reducible over <m>F</m>.
       </p>
     </proof>
+    </theorem>
+    
+    
+    <p>
+    		The preceding theorems allow us to explore the (ir)reducibility of polynomials of small degree with coefficients in <em>any field</em>.
+    	</p>
+
+	<activity>
+		<statement>
+			<p>
+				Determine which of the following polynomials are irreducible over the given fields. Justify your answer.
+			</p>
+			<ol>
+				<li> <p>Over <m>\Z_2</m>:</p>
+				<ol>
+					<li><m>x^2 + 1</m>,</li> 
+					<li><m>x^2 + x</m>,</li> 
+					<li><m>x^2 +x +1</m>,</li>
+					<li><m>x^3 + x^2 + 1</m>,</li>
+					<li><m>x^4 + x^2 + 1</m>.</li>
+				</ol>
+				</li>
+
+				<li><p>Over <m>\Z_3</m>:</p> 
+					<ol>
+					<li><m>x^2 + 1</m>,</li> 
+					<li><m>x^2 + x</m>,</li> 
+					<li><m>x^2 +x +1</m>,</li> 
+					<li><m>x^2 +x +2</m>,</li> 
+					<li><m>x^3 + x +1</m>,</li> 
+					<li><m>x^3 + x^2 + 1</m>,</li> 
+					<li><m>x^3 + x^2 + x + 1</m>.</li>
+				</ol>
+				</li>
+			</ol>
+		</statement>
+		<solution>
+			<p>
+				TBD.
+			</p>
+		</solution>
+	</activity>
+
+
+    <p>
+    	As the following theorem illustrates, in <m>F[x]</m>, all irreducibles are primes.
+    </p>
+
+    
     <theorem>
       <statement>
         <p>
@@ -200,8 +372,7 @@
           Then <m>p(x)</m> divides <m>f(x)</m> or <m>p(x)</m> divides <m>g(x)</m>.
         </p>
       </statement>
-    </theorem>
-    <proof>
+      <proof>
       <p>
         Assume <m>p(x)</m> does not divede <m>f(x)</m>.
         Then <m>\gcd(p(x),f(x)=1</m> and <m>1=s(x)p(x)+t(x)f(x)</m>.
@@ -209,13 +380,30 @@
         <m>g(x)=g(x)s(x)p(x)+g(x)t(x)f(x)</m> which implies that <m>p(x)</m> divides <m>g(x)</m> (since <m>p(x)</m> divides <m>f(x)g(x)</m>) .
       </p>
     </proof>
-    <theorem>
-      <statement>
-        <p>
-          Every nonconstant polynomial with coefficients in <m>\C</m> has a root in <m>\C</m>.
-        </p>
-      </statement>
     </theorem>
+    
+    <p>
+    We next state the Fundamental Theorem of Algebra.
+    Despite its name, its proof relies on analytic properties of the real numbers; there is no purely algebraic proof.
+    Moreover, it is not essential for the work we do in following sections, but given its close relationship to the question of factorization, we include it here for completeness.
+	</p>
+
+    
+    <assemblage xml:id="ftalg">
+      <title>Fundamental Theorem of Algebra</title>
+      	<idx>Fundamental Theorem of Algebra</idx>
+		<p>     		
+      		<statement>	
+       		  	Every nonconstant polynomial with coefficients in <m>\C</m> has a root in <m>\C</m>.
+      		</statement>
+      	</p>
+    </assemblage>
+    
+    <p>
+    	We conclude with one consequence of the Fundamental Theorem of Algebra.
+    </p>
+
+    
     <theorem>
       <statement>
         <p>
@@ -233,10 +421,63 @@
         Induction on degree of polynomial using previous theorem.
       </p>
     </proof>
+    
+    <p>
+    	Thus, the multiplicative structure of <m>\C[x]</m> is straightforward: everything can be factored as a product of linear polynomials.
+    	Fields of coefficients like <m>\C</m> for which this is true are said to be <term>algebraically closed</term>; not all fields satisfy this property.
+    	For instance, <m>x^2 + 1\in \R[x]</m> does not factor into a product of linear polynomials. Consequently, <m>\R</m> is not algebraically closed.
+    	</p>
+
+	<p>
+		However, regardless of whether our field is algebraically closed, we have not yet determined that any <m>p\in F[x]</m> can be factored uniquely into a product of irreducibles, or even that such factorizations into irreducibles exist.
+		In <xref ref="SubSec-Factorization-in-Euclidean-Domains" />, we do just that.
+	</p>
+
+    
+    
   </section>
+  
   <section xml:id="SubSec-Factorization-in-Euclidean-Domains">
     <title>Factorization in Euclidean Domains</title>
-    <definition>
+    
+    <assemblage>
+      <title>Guiding Questions</title>
+		<p>
+      		<statement>
+      		In this section, we'll seek to answer the questions:
+      		<ul>
+      			<li>What is a unique factorization domain? What examples of UFDs do we possess?</li>
+      			<li>What is the ascending chain condition on ideals? What are Noetherian rings?</li>
+      			<li>What does the ascending chain condition have to do with unique factorization?</li>
+      			
+      		</ul>
+
+	      </statement>
+      </p>
+    </assemblage> 
+    
+    <introduction>
+    <p>
+    		In this section, our explorations of the structural arithmetic properties that guarantee unique factorization culminate in <xref ref="thm_everyedisufd" />.
+    		Specifically, we'll see that all Euclidean domains possess the unique factorization property.
+    		To prove this theorem, we will rely in part on an interesting property of <em>chains</em> of ideals in Euclidean domains.
+    		
+    </p>
+    </introduction>
+    
+    <subsection>
+    	<title>Unique Factorization Domains</title>
+    
+    
+    <p>
+   	 	We begin by describing exactly what we mean by unique factorization.
+    		The reader may find it helpful to compare <xref ref="def-ufd" /> to <xref ref="ftarith" text="custom">The Fundamental Theorem of Arithmetic</xref>.
+    	</p>
+
+
+
+    <definition xml:id="def-ufd">
+    <idx>unique factorization domain (UFD)</idx>
       <statement>
         <p>
           An integral domain <m>R</m> is called a
@@ -273,6 +514,22 @@
         </p>
       </statement>
     </activity>
+    
+    <p>
+    		We are already familiar with several examples.
+    	</p>
+	<theorem>
+		<statement>
+			<p>
+				The integers <m>\Z</m> form a UFD.
+			</p>
+		</statement>
+		<proof>
+			We have already seen that primes and irreducibles coincide in <m>\Z</m> (see <xref ref="thm-primesareirredindomains" /> and <xref ref="thm-irredisprimeinZ" />).
+			The result follows from the Fundamental Theorem of Algebra.
+		</proof>
+	</theorem>
+
 
     <theorem>
       <statement>
@@ -280,18 +537,31 @@
           Every field is a UFD.
         </p>
       </statement>
+      <proof>
+      	There are no nonzero nonunits in a field.
+      	The UFD conditions are therefore trivially satisfied.
+      </proof>
+
     </theorem>
+    
+    </subsection>
+    
+    <subsection>
+    	<title>The Ascending Chain Condition and Noetherian Rings</title>
+
     <p>
-      Our next main goal is to prove <xref ref="theorem_everyedisufd">Theorem</xref>.
-      In order to do that,
-      we need some information about the ideal-theoretic structure of Euclidean domains.
+      We now set our sights on a proof of <xref ref="theorem_everyedisufd" />.
+      In order to prove it, we will make use of an important property of ideals in Euclidean domains.
+      First, a definition.
     </p>
     <definition xml:id="def-noetherian">
       <statement>
         <p>
           A commutative ring <m>R</m> is called <term>Noetherian</term>
-          if it satisfies the <term>ascending chain condition</term> on ideals.
-          That is, if
+          if it satisfies the <term>ascending chain condition</term> on ideals. <aside>
+These rings are named in honor of <url href="https://en.wikipedia.org/wiki/Emmy_Noether">Emmy Noether</url>, one of the preeminent mathematicians of the 20th century. In addition to making substantial contributions to physics, she formalized the axiomatic definition of <em>ring</em> that is still in use today.
+</aside>
+          That is, <m>R</m> is Noetherian if whenever
           <me>
             I_1 \subseteq I_2\subseteq I_3\subseteq \cdots
           </me>
@@ -300,6 +570,25 @@
         </p>
       </statement>
     </definition>
+    
+    <exploration>
+    		<statement>
+    			<p>
+    				Consider the ideals <m>I_1 = \ideal{30}</m> in <m>\Z</m> and <m>J_1 = \ideal{32}</m>. Find the longest ascending chains of ideals starting first with <m>I_1</m> and then with <m>J_1</m> that you can.
+    				When does each chain stabilize?
+    			</p>
+    		</statement>
+    		<solution>
+    			TBD.
+    		</solution>
+    	</exploration>
+    	
+    	<p>
+    		We next show that every PID is Noetherian.
+    	</p>
+
+
+    
     <theorem xml:id="theorem-pidisnoetherian">
       <statement>
         <p>
@@ -312,8 +601,7 @@
           Show that <m>I</m> is an ideal, and use your assumptions!
         </p>
       </hint>
-    </theorem>
-    <proof>
+      <proof>
       <p>
         It is
         a straightforward definition check to see
@@ -323,6 +611,36 @@
         It follows that <m>I=I_j</m> and in particular that <m>I=I_k</m> for all <m>k\geq j</m>.
       </p>
     </proof>
+    </theorem>
+    
+    <corollary>
+    	<statement>
+    		<p>
+    			Every Euclidean domain is Noetherian.
+    		</p>
+    	</statement>
+    	<proof>
+    		<p>
+    			Every ED is a PID.
+    		</p>
+    	</proof>
+    </corollary>
+    
+    </subsection>
+    
+    
+    <subsection>
+    	<title>Euclidean Domains are UFDs</title>
+
+    
+    <p>
+    	We now begin collecting results to prove that every Euclidean domain is a UFD.
+    	The first condition in the UFD definition is that every nonzero nonunit factors as a product of irreducibles.
+    	We first show that every nonzero nonunit is divisible by at least one irreducible (<xref ref="lem_divisiblebyirred" />), which we apply to show that every nonzero nonunit can be written as a finite product of irreducibles (<xref ref="thm-writeasprodofirred" />).
+    	</p>
+
+
+    
     <lemma xml:id="lem_divisiblebyirred">
       <statement>
         <p>
@@ -337,8 +655,7 @@
           Continue to factor reducibles and build an ascending chain of ideals.
         </p>
       </hint>
-    </lemma>
-    <proof>
+      <proof>
       <p>
         Suppose that <m>r</m> is not irreducible.
         Write <m>r = r_1 r_2</m>, where the <m>r_i</m> are nonzero nonunits.
@@ -363,19 +680,28 @@
         i.e., that we have found an irreducible factor of <m>r_1</m>.
       </p>
     </proof>
-    <theorem>
+    </lemma>
+    
+    <theorem xml:id="thm-writeasprodofirred">
       <statement>
         <p>
           Let <m>R</m> be a PID. Then every nonzero nonunit element of <m>R</m> is either irreducible or can be written as a finite product of irreducibles in <m>R</m>.
         </p>
       </statement>
-    </theorem>
-    <proof>
+      <proof>
       <p>
         We may perform the analysis from <xref ref="lem_divisiblebyirred">Lemma</xref> for all factors of <m>r</m>,
         and thus <m>r</m> can be factored into a product of irreducibles.
       </p>
     </proof>
+    </theorem>
+    
+    <p>
+    	The second condition that must be satisfied for a domain to be a UFD is that the product of irreducibles must be unique (up to associates).
+    	In order to prove that, we will make use of <xref ref="thm-primesareirredinPID" />, which states that in PIDs, primes and irreducibles are identical concepts.
+    	</p>
+
+    
     <lemma>
       <statement>
         <p>
@@ -385,8 +711,7 @@
           <m>s,t\in R</m> such that <m>1 = as+pt</m>.
         </p>
       </statement>
-    </lemma>
-    <proof>
+      <proof>
       <p>
         Assume that <m>p</m> is irreducible.
         Suppose that <m>p</m> divides <m>ab</m> for some
@@ -395,15 +720,16 @@
         Thus there exists <m>s,t\in R</m> such that <m>1=as+pt</m>.
       </p>
     </proof>
-    <theorem>
+    </lemma>
+    
+    <theorem xml:id="thm-primesareirredinPID">
       <statement>
         <p>
           Let <m>R</m> be a PID and let <m>p\in R</m>.
           Then <m>p</m> is prime if and only if <m>p</m> is irreducible.
         </p>
       </statement>
-    </theorem>
-    <proof>
+      <proof>
       <p>
         Assume that <m>p</m> is prime.
         Suppose that <m>p=ab</m> for some <m>a,b \in R</m>.
@@ -422,7 +748,15 @@
         <m>b=abx+pby=p(cx+by)</m> which implies that <m>p</m> divides <m>b</m> and therefore <m>p</m> is prime.
       </p>
     </proof>
-    <theorem>
+    </theorem>
+    
+    <p>
+    	Observe that <xref ref="thm-primesareirredinPID" /> implies that if <m>R</m> is a PID and <m>p\in R</m> is irreducible with <m>p|ab</m>, then <m>p|a</m> or <m>p|b</m>.
+    </p>
+
+    
+    <!-- 
+<theorem>
       <statement>
         <p>
           Let <m>R</m> be a PID and <m>p\in R</m> be irreducible.
@@ -437,14 +771,57 @@
         (use the previous theorem).
       </p>
     </proof>
+ -->
+ 	
+ 	<p>
+ 		Our crucial final step on the road to <xref ref="theorem_everyedisufd" /> is the following.
+ 	</p>
+
+ 
     <theorem xml:id="thm_pidisufd">
       <statement>
         <p>
           Every PID is a UFD.
         </p>
       </statement>
-    </theorem>
-    <proof>
+      <hint>
+      	For part 2 of the definition, use induction on the number of irreducible divisors of an arbitrary nonzero nonunit.
+      	Mimic the proof of <xref ref="theorem_FTAuniqueness" />.
+      </hint>
+      <proof>
+      	<p>
+      		Let <m>R</m> be a PID, and observe that by <xref ref="thm-writeasprodofirred" /> every nonzero nonunit can be written as a product of irreducibles.
+      		We thus need only show that this product is unique (up to associates).
+      	</p>
+      	<p>
+      		To that end, we adopt the notation of <xref ref="def-ufd" />.
+      		Let <m>s\in R</m>.
+      		We perform induction on the number of irreducible factors <m>k</m> of <m>s</m>.
+      		If <m>k=0</m>, then <m>s</m> is a unit.
+      		If we had <m>s = pa</m> for some irreducible <m>p</m>, then <m>p</m> divides a unit and would thus be a unit itself, which is a contradiction.
+      		</p>
+			<p>
+			Suppose now that <m>k\ge 1</m> and we write
+			<me>
+                  s = p_1 p_2 \cdots p_k \text{ and }  s = q_1 q_2 \cdots q_m, \ m \ge k,
+                </me>
+            where the <m>p_i</m> and <m>q_j</m> are not necessarily distinct irreducibles.
+            Since <m>p_1 | q_1 q_2 \cdots q_m</m>, we know by <xref ref="thm-primesareirredinPID" /> that <m>p_1</m> must divide one of the factors.
+			</p>
+			<p>
+				Renumbering, we may assume that <m>p_1 | q_1</m>, whence <m>q_1 = p_1 v_1</m>, where <m>v_1</m> must be a unit as <m>q_1</m> is irreducible.
+				Canceling <m>p_1</m> yields
+				<me>
+					p_2 p_3 \cdots p_k = v_1 q_2 q_3 \cdots q_n, m\ge k.
+				</me>
+			By induction on <m>k</m> we conclude that each of the irreducible factors on the left matches with precisely one factor on the right (up to associates).
+			This completes the inductive step, and thus the proof.
+		</p>
+
+      </proof>
+
+ <!-- 
+     <proof>
       <p>
         Let <m>R</m> be a PID and suppose that a non-zero non-unit element <m>a\in R</m> can be factored in two different ways as a product of irreducibles.
         <me>
@@ -455,9 +832,9 @@
         Assume that <m>s\geq r</m>.
         Since <m>p_1</m> is irreducible
         (and therefore prime),
-        there exists <m>j</m> such that <m>p_1 \mid q_j</m>.
-        Since <m>q_j</m> is irreducible as well,
-        there is a unit <m>u_1</m> such that <m>p_1=u_1 q_j</m>.
+        there exists <m>j</m> such that <m>p_1 \mid q_j</m>, so <m>q_j = p_1 v_1</m>.
+        Since <m>q_j</m> and <m>p_1</m> are irreducible,
+        there is a unit <m>u_1 = v_1^{-1}</m> such that <m>p_1=u_1 q_j</m>.
         Up to reordering we have
         <me>
           p_1p_2\cdots p_r=u_1p_1q_2\cdots q_s
@@ -481,45 +858,11 @@
         Therefore <m>R</m> is a UFD.
       </p>
     </proof>
-    <theorem xml:id="thm_edispid">
-      <statement>
-        <p>
-          Every Euclidean domain is a principal ideal domain.
-        </p>
-      </statement>
-      <hint>
-        <p>
-          Mimic the proof of <xref ref="thm_ZisPID">Theorem</xref>.
-        </p>
-      </hint>
+ -->
+
     </theorem>
-    <proof>
-      <p>
-        Let <m>R</m> be a euclidean domain,
-        and <m>I</m> an ideal of <m>R</m>.
-        If <m>I = \set{0}</m>, then <m>I</m> is principal,
-        so assume that <m>I\ne \set{0}</m>.
-      </p>
-      <p>
-        Define <m>S = \setof{\delta(x)>0}{x\in I}</m>.
-        Then the Well-Ordering Principle guarantees that <m>S</m> has a least element.
-        Let <m>d\in I</m> be such that <m>\delta(d) > 0</m> is minimal.
-        We claim that <m>I = \ideal{d}</m>.
-      </p>
-      <p>
-        Clearly <m>\ideal{d}\subseteq I</m>.
-        Now assume that <m>a\in I</m>,
-        and write <m>a = dq + r</m>,
-        where either <m>r = 0</m> or <m>r\ne 0</m> and <m>\delta(r) \lt \delta(d)</m>.
-        If <m>\delta(r) \lt \delta(d)</m>,
-        then <m>r = a - dq \in I</m>,
-        contradicting the minimality of <m>\delta(d)</m>.
-        Thus, <m>r = 0</m>, and <m>a\in \ideal{d}</m>.
-      </p>
-      <p>
-        Therefore, <m>R</m> is a PID.
-      </p>
-    </proof>
+    
+    
     <theorem xml:id="theorem_everyedisufd">
       <statement>
         <p>
@@ -563,21 +906,50 @@
     <p>
       Thus, we see that the existence of a well-behaved division algorithm and (a lack of zero divisors) is sufficient to guarantee unique factorization.
       However, it is not necessary.
+      The following theorem is included for reference, but is not intended to be proved.
     </p>
-    <theorem>
+    <assemblage xml:id="thm-polyringisUFD">
+      <title>Theorem</title>
+
+		<p>     		
+      		If <m>R</m> is a UFD, then <m>R[x]</m> is a UFD.
+      	</p>
+    </assemblage>
+    <!-- 
+<theorem>
       <statement>
         <p>
           If <m>R</m> is a UFD, then <m>R[x]</m> is a UFD.
         </p>
       </statement>
     </theorem>
+     -->
     <p>
       Thus, <m>\Z[x]</m> is a UFD. That is, every nonconstant polynomial in <m>\Z[x]</m> is either irreducible or can be factored uniquely into a product of irreducibles.  However,
       as we will see later, <m>\Z[x]</m> is not a PID.
     </p>
+
+    </subsection>
+
   </section>
+  
   <section xml:id="SubSec-Nonunique-Factorization">
     <title>Nonunique Factorization</title>
+    
+    <assemblage>
+      <title>Guiding Questions</title>
+		<p>
+      		<statement>
+      		In this section, we'll seek to answer the questions:
+      		<ul>
+      			<li>How can unique factorization fail, and why does it matter?</li>
+      			<li>What is an example of a nonatomic domain?</li>
+      			<li>What is an example of an element that does not factor uniquely into a product of irreducibles?</li>
+      		</ul>
+
+	      </statement>
+      </p>
+    </assemblage> 
     <p>
       Despite the evidence to the contrary, not every ring has the unique factorization property. That is, there are commutative rings with identity which are not UFDs. <!-- 
 If every ring had the unique factorization property,
@@ -601,9 +973,42 @@ If every ring had the unique factorization property,
       However, the ring <m>\Z[\zeta] = \setof{a_0 + a_1 \zeta + a_2 \zeta^2 + \cdots + a_{p-1} \zeta^{p-1}}{a_i\in\Z}</m> is not a unique factorization domain.
     </p>
     <p>
-      In the following exercises,
-      we explore factorization in a similar integral domain,
-      <m>R = \Z[\sqrt{-7}] = \setof{a+b\sqrt{-7}}{a,b\in\Z}</m>.
+     There are two ways that unique factorization in an integral domain can fail: there can be a failure of a nonzero nonunit to factor into irreducibles, or there can be nonassociate factorizations of the same element. We investigate each in turn.
+     </p>
+
+
+     
+     <exploration>
+     	<title>A non-atomic domain</title>
+     	<statement>
+     		<p>
+     			We say an integral domain <m>R</m> is <term>atomic</term> if every nonzero nonunit can be written as a finite product of irreducibles in <m>R</m>. <aside>
+The term <em>atom</em> was suggested by <url href="https://en.wikipedia.org/wiki/Paul_Cohn">Paul Cohn</url> as a synonym for irreducible.
+</aside>
+     			In this exploration, we encounter a non-atomic domain.
+     		</p>
+			<p>
+				Let <m>R = \Z + x\Q[x] = \setof{a + b_1 x + b_2 x^2 + \cdots + b_n x^n}{a\in \Z, b_1,\ldots, b_n \in \Q, n\ge 0}</m>, the set of polynomials with integer constant terms and rational coefficients.
+			</p>
+			<ol>
+				<li>Convince yourself that <m>R</m> is an integral domain. You do not need to prove it in detail, but you should at least argue that <m>R</m> is closed under the usual polynomial addition and multiplication.</li>
+				<li>Describe the irreducibles in <m>R</m>.</li>
+				<li>Use the notion of degree to argue that any factorization of <m>x</m> in <m>R</m> has the form 
+				<me>
+					x = m\left(\frac{x}{m}\right).
+				</me>
+			</li>
+				<li>Explain why the factorization in the previous part cannot lead to a factorization of <m>x</m> into irreducibles in <m>R</m>.</li>
+			</ol>
+			</statement>
+			<solution>
+				TBD.
+			</solution>
+		</exploration>
+
+<p>
+      We now explore the atomic domain <m>R = \Z[\sqrt{-7}] = \setof{a+b\sqrt{-7}}{a,b\in\Z}</m>.
+      As we will see, even when a nonzero nonunit can be written as a product of irreducibles, it may be the case that this factorization is not unique. 
     </p>
     <activity>
       <statement>
@@ -612,6 +1017,11 @@ If every ring had the unique factorization property,
         </p>
       </statement>
     </activity>
+    
+    <p>
+    	Next, we develop a multiplicative function <m>\delta</m> which enables us to explore the multiplicative properties of <m>\Z[\sqrt{-7}]</m>.
+    	</p>
+
 
     <theorem>
       <statement>

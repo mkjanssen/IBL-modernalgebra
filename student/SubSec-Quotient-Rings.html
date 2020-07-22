@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-18T14:07:40-05:00    *-->
+<!--*    on 2020-07-22T11:26:24-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -159,7 +159,7 @@ MathJax.Hub.Config({
 <li><a href="SubSec-Fields.html" data-scroll="SubSec-Fields">Fields</a></li>
 <li><a href="SubSec-Rings.html" data-scroll="SubSec-Rings">Rings</a></li>
 <li><a href="SubSec-Divisibility-in-Domains.html" data-scroll="SubSec-Divisibility-in-Domains">Divisibility in Integral Domains</a></li>
-<li><a href="SubSec-Principal-Ideals.html" data-scroll="SubSec-Principal-Ideals">Principal Ideals</a></li>
+<li><a href="SubSec-Principal-Ideals.html" data-scroll="SubSec-Principal-Ideals">Principal Ideals and Euclidean Domains</a></li>
 </ul>
 </li>
 <li class="link">
@@ -183,69 +183,69 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="SubSec-Quotient-Rings"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.2</span> <span class="title">Quotient Rings</span>
 </h2>
-<article class="definition definition-like" id="definition-37"><h6 class="heading">
+<article class="definition definition-like" id="definition-36"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span>
 </h6>
-<p id="p-653">Let \(R\) be a ring and \(I\) an ideal of \(R\text{.}\) Then elements \(r,s\in R\) are said to be <dfn class="terminology">congruent modulo \(I\)</dfn> if \(b-a\in I\text{.}\) If this is the case, we write \(a + I = b + I\text{.}\)</p></article><article class="exploration project-like" id="exploration-21"><h6 class="heading">
+<p id="p-695">Let \(R\) be a ring and \(I\) an ideal of \(R\text{.}\) Then elements \(r,s\in R\) are said to be <dfn class="terminology">congruent modulo \(I\)</dfn> if \(b-a\in I\text{.}\) If this is the case, we write \(a + I = b + I\text{.}\)</p></article><article class="exploration project-like" id="exploration-24"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span>
 </h6>
-<p id="p-654">Given a ring \(R\text{,}\) ideal \(I\text{,}\) and \(r\in R\text{,}\) when is it the case that \(r + I = 0 + I = I\text{?}\)</p></article><p id="p-656">Observe that if \(b-a \in I\text{,}\) then there is some \(x\in I\) such that \(b-a = x\text{,}\) and so \(b = a+x\text{.}\)</p>
+<p id="p-696">Given a ring \(R\text{,}\) ideal \(I\text{,}\) and \(r\in R\text{,}\) when is it the case that \(r + I = 0 + I = I\text{?}\)</p></article><p id="p-698">Observe that if \(b-a \in I\text{,}\) then there is some \(x\in I\) such that \(b-a = x\text{,}\) and so \(b = a+x\text{.}\)</p>
 <article class="theorem theorem-like" id="theorem-69"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span>
 </h6>
-<p id="p-657">Let \(R\) be a ring and \(I\) an ideal of \(R\text{.}\) Then congruence modulo \(I\) is an equivalence relation on \(R\text{.}\)</p></article><p id="p-658">The set of equivalence classes under this relation is denoted \(R/I\text{.}\)</p>
+<p id="p-699">Let \(R\) be a ring and \(I\) an ideal of \(R\text{.}\) Then congruence modulo \(I\) is an equivalence relation on \(R\text{.}\)</p></article><p id="p-700">The set of equivalence classes under this relation is denoted \(R/I\text{.}\)</p>
 <article class="theorem theorem-like" id="theorem-70"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span>
 </h6>
-<p id="p-662">Let \(R\) be a ring and \(I\) an ideal of \(R\text{.}\) If \(a,b,c,d\in R\) such that \(a+I = b+I\) and \(c+I = d+I\text{,}\) then \((a+c) + I = (b+d) + I\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-71"><h6 class="heading">
+<p id="p-704">Let \(R\) be a ring and \(I\) an ideal of \(R\text{.}\) If \(a,b,c,d\in R\) such that \(a+I = b+I\) and \(c+I = d+I\text{,}\) then \((a+c) + I = (b+d) + I\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-71"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span>
 </h6>
-<p id="p-664">Let \(R\) be a ring and \(I\) an ideal of \(R\text{.}\) If \(a,b,c,d\in R\) such that \(a+I = b+I\) and \(c+I = d+I\text{,}\) then \(ac + I = bd + I\text{.}\)</p></article><p id="p-666">The previous two theorems together show that addition and multiplication on the set \(R/I\) is well-defined.</p>
+<p id="p-706">Let \(R\) be a ring and \(I\) an ideal of \(R\text{.}\) If \(a,b,c,d\in R\) such that \(a+I = b+I\) and \(c+I = d+I\text{,}\) then \(ac + I = bd + I\text{.}\)</p></article><p id="p-708">The previous two theorems together show that addition and multiplication on the set \(R/I\) is well-defined.</p>
 <article class="theorem theorem-like" id="theorem-72"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.5</span><span class="period">.</span>
 </h6>
-<p id="p-667">Let \(R\) be a commutative ring with identity \(1_R\) and \(I\) an ideal of \(R\text{.}\) The set of equivalence classes modulo \(I\text{,}\) denoted \(R/I\text{,}\) is a commutative ring with identity \(1_R + I\text{.}\)</p></article><article class="exploration project-like" id="exploration-22"><h6 class="heading">
+<p id="p-709">Let \(R\) be a commutative ring with identity \(1_R\) and \(I\) an ideal of \(R\text{.}\) The set of equivalence classes modulo \(I\text{,}\) denoted \(R/I\text{,}\) is a commutative ring with identity \(1_R + I\text{.}\)</p></article><article class="exploration project-like" id="exploration-25"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span>
 </h6>
-<p id="p-668">Let \(R = \Z\) and \(I = \ideal{7}\text{.}\) Find at least three distinct integers \(x\) such that \(9 + I = x + I\text{.}\)</p></article><article class="definition definition-like" id="definition-38"><h6 class="heading">
+<p id="p-710">Let \(R = \Z\) and \(I = \ideal{7}\text{.}\) Find at least three distinct integers \(x\) such that \(9 + I = x + I\text{.}\)</p></article><article class="definition definition-like" id="definition-37"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.6</span><span class="period">.</span>
 </h6>
-<p id="p-670">Let \(R\) be commutative with identity and \(P\subsetneq R\) a nonzero ideal. We say \(P\) is <dfn class="terminology">prime</dfn> if whenever \(a,b\in R\) such that \(ab\in P\text{,}\) we have \(a\in P\) or \(b\in P\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-73"><h6 class="heading">
+<p id="p-712">Let \(R\) be commutative with identity and \(P\subsetneq R\) a nonzero ideal. We say \(P\) is <dfn class="terminology">prime</dfn> if whenever \(a,b\in R\) such that \(ab\in P\text{,}\) we have \(a\in P\) or \(b\in P\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-73"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.7</span><span class="period">.</span>
 </h6>
-<p id="p-671">Let \(R\) be a domain and \(p\in R\) be prime. Then \(\ideal{p}\) is a prime ideal.</p></article><article class="activity project-like" id="activity-16"><h6 class="heading">
+<p id="p-713">Let \(R\) be a domain and \(p\in R\) be prime. Then \(\ideal{p}\) is a prime ideal.</p></article><article class="activity project-like" id="activity-19"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span>
 </h6>
-<p id="p-672">Which of the following ideals are prime?</p>
+<p id="p-714">Which of the following ideals are prime?</p>
 <ol class="decimal">
-<li id="li-167"><p id="p-673">\(\ideal{9}\) in \(\Z\)</p></li>
-<li id="li-168"><p id="p-674">\(\ideal{11}\) in \(\Z\)</p></li>
-<li id="li-169"><p id="p-675">\(\ideal{x^2+1}\) in \(\R[x]\)</p></li>
-<li id="li-170"><p id="p-676">\(\ideal{x^2-1}\) in \(\R[x]\)</p></li>
-<li id="li-171"><p id="p-677">\(\ideal{x^2-5x+6, x^4+2x^3-10x^2+5x-2}\) in \(\R[x]\)</p></li>
-</ol></article><article class="definition definition-like" id="definition-39"><h6 class="heading">
+<li id="li-195"><p id="p-715">\(\ideal{9}\) in \(\Z\)</p></li>
+<li id="li-196"><p id="p-716">\(\ideal{11}\) in \(\Z\)</p></li>
+<li id="li-197"><p id="p-717">\(\ideal{x^2+1}\) in \(\R[x]\)</p></li>
+<li id="li-198"><p id="p-718">\(\ideal{x^2-1}\) in \(\R[x]\)</p></li>
+<li id="li-199"><p id="p-719">\(\ideal{x^2-5x+6, x^4+2x^3-10x^2+5x-2}\) in \(\R[x]\)</p></li>
+</ol></article><article class="definition definition-like" id="definition-38"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.8</span><span class="period">.</span>
 </h6>
-<p id="p-684">Let \(R\) be commutative with identity and let \(M\subsetneq R\) be a nonzero ideal. We say that \(M\) is a <dfn class="terminology">maximal ideal</dfn> if no proper ideal of \(R\) properly contains \(M\text{.}\) That is, if \(J\) is an ideal satisfying \(M\subseteq J\subseteq R\text{,}\) either \(J=M\) or \(J=R\text{.}\)</p></article><p id="p-685">It is a fact that any ring \(R\) with \(0_R\ne 1_R\) has a maximal ideal. This follows from <em class="emphasis">Zorn's Lemma</em>; a rigorous exploration of Zorn's Lemma lies outside of the scope of these notes, but suffice it to say that Zorn's Lemma is incredibly useful in all areas of algebra for proving existence theorems. For example, a proof that every vector space has a basis relies on Zorn's Lemma.</p>
-<p id="p-686">Rings with only one maximal ideal are said to be <em class="emphasis">local rings</em>, and are actively studied in modern research in commutative algebra (the study of commutative rings and their properties).</p>
+<p id="p-726">Let \(R\) be commutative with identity and let \(M\subsetneq R\) be a nonzero ideal. We say that \(M\) is a <dfn class="terminology">maximal ideal</dfn> if no proper ideal of \(R\) properly contains \(M\text{.}\) That is, if \(J\) is an ideal satisfying \(M\subseteq J\subseteq R\text{,}\) either \(J=M\) or \(J=R\text{.}\)</p></article><p id="p-727">It is a fact that any ring \(R\) with \(0_R\ne 1_R\) has a maximal ideal. This follows from <em class="emphasis">Zorn's Lemma</em>; a rigorous exploration of Zorn's Lemma lies outside of the scope of these notes, but suffice it to say that Zorn's Lemma is incredibly useful in all areas of algebra for proving existence theorems. For example, a proof that every vector space has a basis relies on Zorn's Lemma.</p>
+<p id="p-728">Rings with only one maximal ideal are said to be <em class="emphasis">local rings</em>, and are actively studied in modern research in commutative algebra (the study of commutative rings and their properties).</p>
 <article class="theorem theorem-like" id="theorem-74"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.9</span><span class="period">.</span>
 </h6>
-<p id="p-687">Let \(R\) be commutative with identity and \(I\) an ideal of \(R\text{.}\) Then \(I\) is prime if and only if \(R/I\) is an integral domain.</p></article><article class="lemma theorem-like" id="lemma-9"><h6 class="heading">
+<p id="p-729">Let \(R\) be commutative with identity and \(I\) an ideal of \(R\text{.}\) Then \(I\) is prime if and only if \(R/I\) is an integral domain.</p></article><article class="lemma theorem-like" id="lemma-9"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.2.10</span><span class="period">.</span>
 </h6>
-<p id="p-690">Let \(R\) be commutative with identity and \(M\) a maximal ideal of \(R\text{.}\) Let \(x\in R\setminus M\text{,}\) and set \(J = \setof{xr+y}{r\in R, \ y\in M}\text{.}\) Then \(M\subsetneq J\text{,}\) and thus there exist \(r'\in R\text{,}\) \(y'\in M\) such that \(1 = xr'+y'\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-75"><h6 class="heading">
+<p id="p-732">Let \(R\) be commutative with identity and \(M\) a maximal ideal of \(R\text{.}\) Let \(x\in R\setminus M\text{,}\) and set \(J = \setof{xr+y}{r\in R, \ y\in M}\text{.}\) Then \(M\subsetneq J\text{,}\) and thus there exist \(r'\in R\text{,}\) \(y'\in M\) such that \(1 = xr'+y'\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-75"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.11</span><span class="period">.</span>
 </h6>
-<p id="p-691">Let \(R\) be commutative with identity and \(I\) an ideal of \(R\text{.}\) Then \(I\) is maximal if and only if \(R/I\) is a field.</p>
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-20" id="hint-20"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-20"><div class="hint solution-like"><p id="p-692">For the forward direction, apply the previous lemma.</p></div></div></article><article class="theorem theorem-like" id="theorem-76"><h6 class="heading">
+<p id="p-733">Let \(R\) be commutative with identity and \(I\) an ideal of \(R\text{.}\) Then \(I\) is maximal if and only if \(R/I\) is a field.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-22" id="hint-22"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-22"><div class="hint solution-like"><p id="p-734">For the forward direction, apply the previous lemma.</p></div></div></article><article class="theorem theorem-like" id="theorem-76"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.12</span><span class="period">.</span>
 </h6>
-<p id="p-695">Every maximal ideal is prime.</p></article><article class="theorem theorem-like" id="theorem-77"><h6 class="heading">
+<p id="p-737">Every maximal ideal is prime.</p></article><article class="theorem theorem-like" id="theorem-77"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.13</span><span class="period">.</span>
 </h6>
-<p id="p-697">In a principal ideal domain, every prime ideal is maximal.</p></article><article class="assemblage assemblage-like" id="assemblage-12"><h6 class="heading"><span class="title">Challenge.</span></h6>
-<p id="p-700">Find a commutative ring with identity, \(R\text{,}\) and a non-maximal prime ideal \(P\) of \(R\text{.}\)</p></article><a data-knowl="" class="id-ref original" data-refid="hk-solution-31" id="solution-31"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-31"><div class="solution solution-like"><p id="p-701">In \(\Z[x]\text{,}\) it is straightforward to see that \(\ideal{x}\) is prime. Moreover, \(\ideal{x}\subsetneq \ideal{2,x}\text{,}\) and thus is not maximal.</p></div></div></section></div></main>
+<p id="p-739">In a principal ideal domain, every prime ideal is maximal.</p></article><article class="assemblage assemblage-like" id="assemblage-18"><h6 class="heading"><span class="title">Challenge.</span></h6>
+<p id="p-742">Find a commutative ring with identity, \(R\text{,}\) and a non-maximal prime ideal \(P\) of \(R\text{.}\)</p></article><a data-knowl="" class="id-ref original" data-refid="hk-solution-37" id="solution-37"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-37"><div class="solution solution-like"><p id="p-743">In \(\Z[x]\text{,}\) it is straightforward to see that \(\ideal{x}\) is prime. Moreover, \(\ideal{x}\subsetneq \ideal{2,x}\text{,}\) and thus is not maximal.</p></div></div></section></div></main>
 </div>
 </body>
 </html>

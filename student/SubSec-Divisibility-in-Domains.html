@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-18T14:07:39-05:00    *-->
+<!--*    on 2020-07-22T11:26:22-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -159,7 +159,7 @@ MathJax.Hub.Config({
 <li><a href="SubSec-Fields.html" data-scroll="SubSec-Fields">Fields</a></li>
 <li><a href="SubSec-Rings.html" data-scroll="SubSec-Rings">Rings</a></li>
 <li><a href="SubSec-Divisibility-in-Domains.html" data-scroll="SubSec-Divisibility-in-Domains" class="active">Divisibility in Integral Domains</a></li>
-<li><a href="SubSec-Principal-Ideals.html" data-scroll="SubSec-Principal-Ideals">Principal Ideals</a></li>
+<li><a href="SubSec-Principal-Ideals.html" data-scroll="SubSec-Principal-Ideals">Principal Ideals and Euclidean Domains</a></li>
 </ul>
 </li>
 <li class="link">
@@ -207,11 +207,11 @@ MathJax.Hub.Config({
 <article class="definition definition-like" id="definition-23"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
 </h6>
-<p id="p-389">Let \(R\) be a domain. We say a nonzero nonunit element \(a\in R\) is <dfn class="terminology">prime</dfn> if whenever \(a\mid bc\) for some \(b,c\in R\text{,}\) either \(a|b\) or \(a|c\text{.}\)</p></article><p id="p-390">A notion related to primality is irreducibility.</p>
+<p id="p-389">Let \(R\) be a domain. We say a nonzero nonunit element \(a\in R\) is <dfn class="terminology">prime</dfn> if whenever \(a\mid bc\) for some \(b,c\in R\text{,}\) either \(a|b\) or \(a|c\text{.}\)</p></article><p id="p-390">A notion related to primality is irreducibility. In fact, one might reasonably say that irreducibility is the natural generalization of the typical definition of prime one encounters in school mathematics.</p>
 <article class="definition definition-like" id="def_irreducibleelement"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span>
 </h6>
-<p id="p-391">Let \(R\) be a domain. We say a nonzero nonunit element \(a\in R\) is <dfn class="terminology">irreducible</dfn> if whenever \(a = bc\) for some \(b,c\in R\text{,}\) one of \(b\) or \(c\) is a unit.</p></article><article class="exploration project-like" id="expl-unit-prime-irred"><h6 class="heading">
+<p id="p-391">Let \(R\) be a domain. We say a nonzero nonunit element \(a\in R\) is <dfn class="terminology">irreducible</dfn> if whenever \(a = bc\) for some \(b,c\in R\text{,}\) one of \(b\) or \(c\) is a unit. (Note that in some areas of the literature, the word <dfn class="terminology">atom</dfn> is used interchangeably with irreducible.)</p></article><article class="exploration project-like" id="expl-unit-prime-irred"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
 </h6>
 <p id="p-392">Find the units, primes, and irreducibles in the following rings.</p>
@@ -221,11 +221,11 @@ MathJax.Hub.Config({
 <li id="li-129">\(\displaystyle \Z_{5}\)</li>
 <li id="li-130">\(\displaystyle \Z_6\)</li>
 </ol></article><p id="p-394">In domains, all primes are irreducible.</p>
-<article class="theorem theorem-like" id="theorem-31"><h6 class="heading">
+<article class="theorem theorem-like" id="thm-primesareirredindomains"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span>
 </h6>
 <p id="p-395">Let \(R\) be a domain. If \(a\in R\) is prime, then \(a\) is irreducible.</p></article><p id="p-398">In familiar settings, the notion of prime and irreducible exactly coincide.</p>
-<article class="theorem theorem-like" id="theorem-32"><h6 class="heading">
+<article class="theorem theorem-like" id="thm-irredisprimeinZ"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span>
 </h6>
 <p id="p-399">Every irreducible in \(\Z\) is prime.</p></article><p id="p-401">Despite their overlap in familiar settings, primes and irreducibles are distinct types of elements. As the next exploration demonstrates, not all primes are irreducible. What is more, <a class="xref" data-knowl="./knowl/exer_irreduciblenotprime.html" title="Exploration 2.3.4">Exploration 2.3.4</a> will show that not all irreducibles are primes, even in domains!</p>

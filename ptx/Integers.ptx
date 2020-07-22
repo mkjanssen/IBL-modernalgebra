@@ -859,7 +859,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
     </activity>
  -->
  
-    <investigation>
+    <investigation xml:id="invest-euclid-alg-integers">
 	    <title>(Euclidean Algorithm)</title>
 	    <idx>Euclidean Algorithm</idx>
       <statement>
@@ -1172,7 +1172,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
       and catch glimpses of other ways to think about the
       <em>unique factorization property</em>.
     </p>
-    <assemblage>
+    <assemblage xml:id="ftarith">
       <title>Fundamental Theorem of Arithmetic</title>
 		<p>
       		<statement>

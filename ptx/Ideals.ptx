@@ -331,6 +331,24 @@
     </theorem>
     
     <p>
+    		As one might expect, not every ring is Noetherian. However, most familiar rings are.
+    	</p>
+
+	<exploration>
+		<statement>
+			<p>
+				Show that the ring <m>R = \Q[x_1, x_2, x_3, \ldots]</m> of polynomials in infinitely many variables over <m>\Q</m> is not Noetherian either by exhibiting an ascending chain of ideals that never stabilizes, or an ideal without a finite generating set.
+			</p>
+		</statement>
+		<solution>
+			<p>
+				TBD.
+			</p>
+		</solution>
+	</exploration>
+
+    
+    <p>
     		We close with a discussion of a class of ideals which are the object of active mathematical research.
     		Recall that a (simple) graph <m>G</m> consists of a set <m>V = \set{x_1, x_2, \ldots, x_n}</m> of <em>vertices</em> together with a collection <m>E</m> of <em>edges</em>, which are just pairs of vertices and can be written <m>x_i x_j</m>.
     		This notation suggests the following definition.

@@ -1309,9 +1309,9 @@ Again, this is a formalization of an idea that you have been using since you wer
 		</p>
 		
 		<table>
-  <caption xml:id="table-z3addition">
+  <title xml:id="table-z3addition">
     Addition table for <m>R=\Z_3</m>.
-  </caption>
+  </title>
   <tabular>
     <row bottom="medium">
       <cell right="medium">
@@ -1373,9 +1373,9 @@ Again, this is a formalization of an idea that you have been using since you wer
 </table>
 
 <table xml:id="table-z3multiplication">
-  <caption>
+  <title>
     Multiplication table for <m>R=\Z_3</m>.
-  </caption>
+  </title>>
   <tabular>
     <row>
       <cell right="medium">
@@ -1888,15 +1888,18 @@ Again, this is a formalization of an idea that you have been using since you wer
     </definition>
     <p>
       A notion related to primality is irreducibility.
+      In fact, one might reasonably say that irreducibility is the natural generalization of the typical definition of prime one encounters in school mathematics.
     </p>
     <definition xml:id="def_irreducibleelement">
     <idx>irreducible (ring element)</idx>
+    <idx>atom</idx>
       <statement>
         <p>
           Let <m>R</m> be a domain.
           We say a nonzero nonunit element <m>a\in R</m> is <term>irreducible</term>
           if whenever <m>a = bc</m> for some <m>b,c\in R</m>,
           one of <m>b</m> or <m>c</m> is a unit.
+          (Note that in some areas of the literature, the word <term>atom</term> is used interchangeably with irreducible.)
         </p>
       </statement>
     </definition>
@@ -1925,7 +1928,7 @@ Again, this is a formalization of an idea that you have been using since you wer
     	</p>
 
     
-    <theorem>
+    <theorem xml:id="thm-primesareirredindomains">
       <statement>
         <p>
           Let <m>R</m> be a domain.
@@ -1957,7 +1960,7 @@ Again, this is a formalization of an idea that you have been using since you wer
       the notion of prime and irreducible exactly coincide.
     </p>
     
-    <theorem>
+    <theorem xml:id="thm-irredisprimeinZ">
       <statement>
         <p>
           Every irreducible in <m>\Z</m> is prime.
@@ -2124,7 +2127,22 @@ Again, this is a formalization of an idea that you have been using since you wer
     </exploration>
   </section>
   <section xml:id="SubSec-Principal-Ideals">
-    <title>Principal Ideals</title>
+    <title>Principal Ideals and Euclidean Domains</title>
+    
+    <assemblage>
+      <title>Guiding Questions</title>
+		<p>
+      		<statement>
+      		In this section, we'll seek to answer the questions:
+      		<ul>
+      			<li>What are principal ideals, and what are principal ideal domains?</li>
+      			<li>What are Euclidean domains, and how are they related to PIDs?</li>
+      		</ul>
+
+	      </statement>
+      </p>
+    </assemblage> 
+    
     <p>
       One of the ways in which mathematicians study the <em>structure</em>
       of an abstract object is by considering how it interacts with other (related) objects.
@@ -2256,7 +2274,7 @@ Again, this is a formalization of an idea that you have been using since you wer
       </p>
     </proof>
     <p>
-      The element <m>a</m> in the theorem is known as the
+      The element <m>a</m> in the theorem is known as a
       <em>generator</em> of <m>\ideal{a}</m>.
     </p>
     <investigation>
@@ -2270,9 +2288,9 @@ Again, this is a formalization of an idea that you have been using since you wer
         </p>
         <p>
           That is, fill in the blanks:
-          <q><m>z\in \ideal{x} \Leftrightarrow</m> \makebox[0.75in]{\hrulefill}</q>
+          <q><m>z\in \ideal{x} \Leftrightarrow</m> _________</q>
           and
-          <q><m>\ideal{x}\subseteq \ideal{y} \Leftrightarrow</m> \makebox[0.75in]{\hrulefill}.</q>
+          <q><m>\ideal{x}\subseteq \ideal{y} \Leftrightarrow</m> _________.</q>
         </p>
         <p>
           Justify your answers.
@@ -2318,12 +2336,13 @@ Again, this is a formalization of an idea that you have been using since you wer
           where <m>u</m> is any unit of <m>R</m>.
         </p>
       </statement>
-    </theorem>
-    <proof>
+      <proof>
       <p>
         Apply the answer to the question.
       </p>
     </proof>
+    </theorem>
+    
     <activity>
       <statement>
         <p>
@@ -2599,7 +2618,7 @@ Again, this is a formalization of an idea that you have been using since you wer
           Let <m>R</m> be an integral domain.
           We call <m>R</m> a <term>Euclidean domain</term>
           if there is a function <m>\delta : R\setminus \set{0} \to \N_0</m> such that: <aside>This is the lowercase Greek letter
-          <term>delta</term>.</aside>}
+          <term>delta</term>.</aside>
           <ol>
             <li>
               <p>
@@ -2623,8 +2642,22 @@ Again, this is a formalization of an idea that you have been using since you wer
       </statement>
     </definition>
     <p>
-      Thus, a Euclidean domain is an integral domain with a division algorithm that behaves in a familiar way.
+      Thus, a Euclidean domain is an integral domain with a division algorithm that behaves in a familiar way. In the remainder of this section, we will investigate the properties of Euclidean domains.
+      First, we consider some examples.
     </p>
+    
+    <theorem>
+	    	<statement>
+	    		<p>
+	    			The field <m>\Q</m> is a Euclidean domain under ordinary addition and multiplication, with <m>\delta(x) = 0</m> for all <m>x\in \Q</m>.
+	    		</p>
+	    	</statement>
+	    	<proof>
+	    		TBD.
+	    	</proof>
+	</theorem>
+
+    
     <investigation>
       <statement>
         <p>
@@ -2675,6 +2708,12 @@ Again, this is a formalization of an idea that you have been using since you wer
         Thus, the leading term of <m>h</m> has degree less than <m>m</m>.
       </p>
     </proof>
+    
+    
+    
+    
+    
+    
     <theorem xml:id="theorem_polydivalg">
       <title>
       (Polynomial Division Algorithm)
@@ -2794,6 +2833,7 @@ Again, this is a formalization of an idea that you have been using since you wer
           Is <m>F[x]</m> a Euclidean domain for all fields <m>F</m>?
           If so, what is the norm function <m>\delta</m>,
           and why does this function have the required properties of a norm?
+          If not, why not? Prove your answer.
         </p>
       </statement>
       <answer>
@@ -2803,6 +2843,50 @@ Again, this is a formalization of an idea that you have been using since you wer
         </p>
       </answer>
     </investigation>
+    
+    <p>
+    	In fact, every Euclidean domain is a PID.
+    	</p>
+
+<theorem xml:id="thm_edispid">
+      <statement>
+        <p>
+          Every Euclidean domain is a principal ideal domain.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Mimic the proof of <xref ref="thm_ZisPID">Theorem</xref>.
+        </p>
+      </hint>
+    <proof>
+      <p>
+        Let <m>R</m> be a euclidean domain,
+        and <m>I</m> an ideal of <m>R</m>.
+        If <m>I = \set{0}</m>, then <m>I</m> is principal,
+        so assume that <m>I\ne \set{0}</m>.
+      </p>
+      <p>
+        Define <m>S = \setof{\delta(x)>0}{x\in I}</m>.
+        Then the Well-Ordering Principle guarantees that <m>S</m> has a least element.
+        Let <m>d\in I</m> be such that <m>\delta(d) > 0</m> is minimal.
+        We claim that <m>I = \ideal{d}</m>.
+      </p>
+      <p>
+        Clearly <m>\ideal{d}\subseteq I</m>.
+        Now assume that <m>a\in I</m>,
+        and write <m>a = dq + r</m>,
+        where either <m>r = 0</m> or <m>r\ne 0</m> and <m>\delta(r) \lt \delta(d)</m>.
+        If <m>\delta(r) \lt \delta(d)</m>,
+        then <m>r = a - dq \in I</m>,
+        contradicting the minimality of <m>\delta(d)</m>.
+        Thus, <m>r = 0</m>, and <m>a\in \ideal{d}</m>.
+      </p>
+      <p>
+        Therefore, <m>R</m> is a PID.
+      </p>
+    </proof>
+    </theorem>
 
     <exploration>
       <statement>

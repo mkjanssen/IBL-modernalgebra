@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-18T14:07:48-05:00    *-->
+<!--*    on 2020-07-22T11:26:36-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,6 +13,9 @@
 </head>
 <body>
 <article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>
-<p>Let \(f(x)\) be degree 1 and write \(f(x) = s(x) t(x)\text{.}\) Then \(\deg f = 1 = \deg s + \deg t\text{.}\) Since \(\deg s, \deg t \ge 0\text{,}\) one of \(\deg s\) or \(\deg t\) is 0, hence \(s\) or \(t\) is constant.</p></article><span class="incontext"><a href="SubSec-Factoring-Polynomials.html#proof-48">in-context</a></span>
+<p>Let \(R\) be a euclidean domain, and \(I\) an ideal of \(R\text{.}\) If \(I = \set{0}\text{,}\) then \(I\) is principal, so assume that \(I\ne \set{0}\text{.}\)</p>
+<p>Define \(S = \setof{\delta(x)&gt;0}{x\in I}\text{.}\) Then the Well-Ordering Principle guarantees that \(S\) has a least element. Let \(d\in I\) be such that \(\delta(d) &gt; 0\) is minimal. We claim that \(I = \ideal{d}\text{.}\)</p>
+<p>Clearly \(\ideal{d}\subseteq I\text{.}\) Now assume that \(a\in I\text{,}\) and write \(a = dq + r\text{,}\) where either \(r = 0\) or \(r\ne 0\) and \(\delta(r) \lt \delta(d)\text{.}\) If \(\delta(r) \lt \delta(d)\text{,}\) then \(r = a - dq \in I\text{,}\) contradicting the minimality of \(\delta(d)\text{.}\) Thus, \(r = 0\text{,}\) and \(a\in \ideal{d}\text{.}\)</p>
+<p>Therefore, \(R\) is a PID.</p></article><span class="incontext"><a href="SubSec-Principal-Ideals.html#proof-48">in-context</a></span>
 </body>
 </html>
