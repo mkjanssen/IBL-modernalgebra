@@ -1,7 +1,36 @@
 <chapter xml:id="Sec-Ideals">
   <title>Ideals and Homomorphisms</title>
+  <introduction>
+  	<p>
+  		The first three chapters of this text was oriented toward proving that every Euclidean domain is a unique factorization domain.
+  		That is, an integral domain with a well-behaved division algorithm necessarily possesses the property of unique factorization into irreducibles.
+  		Toward that end, we developed definitions and results we needed without spending additional time with superfluous ideas, regardless of how interesting or otherwise useful they may be.
+  		This chapter, while not needed for the exploration of factorization already undertaken, seeks to fill in some important gaps.
+  	</p>
+  	<p>
+  		We begin in <xref ref="SubSec-Ideals-In-General" /> with a treatment of ideals that expands beyond only considering principal ideals.
+  		In <xref ref="SubSec-Quotient-Rings" />, we explore one of ideals in the modern study of algebra: to build new rings. We thus explore the notions of prime and maximal ideal, congruence modulo <m>I</m>, and quotient rings.
+  		Finally, no upper-level math course is complete without a discussion of functions.
+  		We explore the concept of homomorphism, and conclude with a discussion of the <xref ref="thm-first-isomorphism" text="custom">First Isomorphism Theorem</xref>.
+  	</p>
+
+  </introduction>
+
   <section xml:id="SubSec-Ideals-In-General">
     <title>Ideals in general</title>
+    <assemblage>
+      <title>Guiding Questions</title>
+		<p>
+      		<statement>
+      		In this section, we'll seek to answer the questions:
+      		<ul>
+      			<li>How can we create new ideals from existing ideals?</li>
+      			<li>How can we produce new ideals from sets of elements?</li>
+      			<li>How can ideals build connections to other fields of mathematics?</li>
+      		</ul>
+	      </statement>
+      </p>
+    </assemblage> 
     <introduction>
 	    	<p>
 	    		Recall that one of the ways in which we understand a mathematical object is to study its relationship to other mathematical objects.
@@ -1027,7 +1056,7 @@
     <p>
       We thus obtain:
     </p>
-    <theorem>
+    <theorem xml:id="thm-first-isomorphism">
       <title>(First Isomorphism Theorem)</title>
       <statement>
         <p>
