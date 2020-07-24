@@ -1,0 +1,266 @@
+<html>
+  <head>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-07-24T13:51:21-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<link href="../css/pretext-epub.css" rel="stylesheet" type="text/css"/></head>
+  <body>
+    <div class="hidden-content" style="display:none">\(\renewcommand{\labelitemi}{$\diamond$}
+\def\arraystretch{1.5}
+\newcommand{\contentsfinish}{}
+\newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
+\newcommand{\tosay}[1]{\begin{center}\text{\fbox{\scriptsize{#1}}}\end{center}}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsecpagefont}{}
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\smallcaps{#1}}
+\def\oldequation{\equation}
+\def\endoldequation{\endequation}
+\newcommand{\nl}{
+}
+\newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\thesection}.\ \smallcaps{#1}}{\thesection.\ \smallcaps{#1}}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\scriptsize\thesection}.\ \smallcaps{#1}}{}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0.5pt}
+\newcommand{\makedefaultsection}[2][true]{
+}
+\newcommand{\timestamp}{{\color{red}Last updated: {\currenttime\ (UTC), \today}}}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\ideal}[1]{\left\langle\, #1 \,\right\rangle}
+\newcommand{\subgp}[1]{\left\langle\, #1 \,\right\rangle}
+\def\p{\varphi}
+\def\isomorphic{\cong}
+\def\Gal{\text{Gal}}
+\def\im{\text{im}}
+\def\normal{\vartriangleleft}
+\renewcommand{\qedsymbol}{$\checkmark$}
+\def\lcm{{\text{lcm}\,}}
+\newcommand{\q}[1]{{\color{red} {#1}}}
+\newcommand{\startimportant}[1]{\end{[{Hint:} #1]\end}}
+\renewcommand{\textcircled}[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt,color=red] (char) {#1};}}
+\newcommand{\crossout}[1]{\tikz[baseline=(char.base)]{\node[mynode, cross out,draw] (char) {#1};}}
+\newcommand{\set}[1]{\left\{ {#1} \right\}}
+\newcommand{\setof}[2]{{\left\{#1\,\colon\,#2\right\}}}
+\def\C{{\mathbb C}}
+\def\Z{{\mathbb Z}}
+\def\bF{{\mathbb F}}
+\def\Q{{\mathbb Q}}
+\def\N{{\mathbb N}}
+\def\R{{\mathbb R}}
+\newcommand{\h}[1]{{\textbf{#1}}}
+\def\presnotes{}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+    <section class="section" id="SubSec-Primes-and-Factorization">
+      <h2 class="heading hide-type"><span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">Primes and Factorization</span></h2>
+      <article class="assemblage assemblage-like" id="assemblage-5">
+        <h6 class="heading">
+          <span class="title">Guiding Questions.</span>
+        </h6>
+        <p id="p-131">In this section, we'll seek to answer the questions: <ul class="disc"><li id="li-23">What are primes? What properties do they have?</li><li id="li-24">What does the Fundamental Theorem of Arithmetic say?</li><li id="li-25">Why is the Fundamental Theorem of Arithmetic true?</li></ul></p>
+      </article>
+      <p id="p-132">As described in the <a href="Sec-Introduction.xhtml" class="internal" title="Preface: Introduction">Preface </a>, our main goal is to build a deep structural understanding of the notion of <em class="emphasis">factorization</em>. That is, splitting objects (e.g., numbers, polynomials, matrices) into products of other objects. One of the most familiar examples of this process involves factoring integers into products of primes.</p>
+      <article class="definition definition-like" id="def-primeinteger">
+        <h6 class="heading">
+          <span class="type">Definition</span>
+          <span class="space"> </span>
+          <span class="codenumber">1.3.1</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-133">Let \(p &gt; 1\) be a natural number. We say \(p\) is <dfn class="terminology">prime</dfn> if whenever \(a,b\in \Z\) such that \(p\mid ab\text{,}\) either \(p\mid a\) or \(p\mid b\text{.}\)</p>
+        <p id="p-134">A natural number \(m &gt; 1\) is said to be <dfn class="terminology">composite</dfn> if it is not prime.</p>
+      </article>
+      <p id="p-135">This is almost certainly not the definition of prime that you are familiar with from your school days, which likely said something to the effect that a prime \(p &gt; 1\) is a natural number only divisible by 1 and itself. However, <a href="SubSec-Primes-and-Factorization.xhtml#def-primeinteger" class="internal" title="Definition 1.3.1">Definition 1.3.1</a> is often more useful than the usual definition. And, as <a href="SubSec-Primes-and-Factorization.xhtml#theorem_euclidslemma" class="internal" title="Lemma 1.3.2: Euclid's Lemma">Lemma 1.3.2</a> demonstrates, the two notions are equivalent.</p>
+      <article class="lemma theorem-like" id="theorem_euclidslemma">
+        <h6 class="heading">
+          <span class="type">Lemma</span>
+          <span class="space"> </span>
+          <span class="codenumber">1.3.2</span>
+          <span class="period">.</span>
+          <span class="space"> </span>
+          <span class="title">Euclid's Lemma.</span>
+        </h6>
+        <p id="p-136">Given any \(p\in \N\text{,}\) \(p &gt; 1\text{,}\) \(p\) is prime if and only if whenever \(m\in \N\) divides \(p\text{,}\) either \(m = p\) or \(m = 1\text{.}\)</p>
+      </article>
+      <article class="proof" id="proof-12">
+        <h6 class="heading">
+          <span class="type">Proof<span class="period">.</span></span>
+        </h6>
+        <p id="p-137">Let \(p\) be prime and suppose \(m\in \N\) divides \(p\text{,}\) so \(p = mk\) for some \(k\in \N\text{.}\) By definition, \(p|m\) or \(p|k\text{.}\) If \(p|m\text{,}\) then \(pj = m\text{,}\) so \(p = pjk\text{,}\) and \(jk=1\text{,}\) which means \(j=k=1\) and thus \(m=p\text{.}\) If \(p|k\text{,}\) then \(pj=k\text{,}\) so \(p = mpj\text{,}\) and \(mj=1\text{,}\) so \(m = j = 1\text{.}\)</p>
+        <p id="p-138">Conversely, assume \(p\in \N\) has the property that whenever an integer \(m\) exists with \(m|p\text{,}\) then \(m= p\) or \(m =1\text{.}\) Suppose \(p|ab\text{,}\) so there exists a \(k\in\N\) such that \(pk = ab\text{.}\) Note that if \(\gcd(a,p) = d &gt; 1\text{,}\) then \(d|p\text{,}\) and so \(d = p\text{,}\) and then \(p|a\text{.}\) If \(\gcd(a,p) = 1\text{,}\) then by Bézout's Identity there are integers \(x\) and \(y\) such that \(ax + py = 1\text{,}\) so we may multiply by \(b\) to obtain \(abx + pby = b\text{,}\) whence \(p|b\text{.}\)</p>
+      </article>
+      <article class="exploration project-like" id="question_compositecharacterization">
+        <h6 class="heading">
+          <span class="type">Exploration</span>
+          <span class="space"> </span>
+          <span class="codenumber">1.3.1</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-139">Using <a href="SubSec-Primes-and-Factorization.xhtml#theorem_euclidslemma" class="internal" title="Lemma 1.3.2: Euclid's Lemma">Lemma 1.3.2</a> as a guide, give a biconditional characterization for composite numbers. That is, finish the sentence: “A number \(m\in\N\) is composite if and only if ....”</p>
+        <div class="solutions">
+          <div class="answer solution-like" id="answer-1">
+            <span class="type">Answer</span>
+            <p id="p-140">“A number \(m\in\N\) is composite if and only if there exist natural numbers \(a,b\ne 1\) such that \(m = ab\text{.}\)”</p>
+          </div>
+        </div>
+      </article>
+      <article class="remark remark-like" id="remark-1">
+        <h6 class="heading">
+          <span class="type">Remark</span>
+          <span class="space"> </span>
+          <span class="codenumber">1.3.3</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-141">How does your definition treat the number 1? The primality of 1 has been the subject of much debate stretching back to the Greeks (most of whom did not consider 1 to be a number). Throughout history, mathematicians have at times viewed 1 as prime, and at other times, not prime. The main argument for the non-primality of 1 is that if 1 were taken to be prime, we would need to word theorems like the Fundamental Theorem of Arithmetic (below) in such a way that only prime factorizations not including 1 can be considered. For, if 1 is prime, we would have to consider, e.g., \(6 = 2\cdot 3 = 1\cdot 2 \cdot 3 = 1\cdot 1\cdot 2\cdot 3\) as three different factorizations of 6 into primes.</p>
+        <p id="p-142">However, neither is 1 composite (your definition should rule this out in some way). Instead, we call 1 a <dfn class="terminology">unit</dfn>, which we'll explore more fully in <a href="SubSec-Rings.xhtml#def-unit" class="internal" title="Definition 2.2.7">Definition 2.2.7</a> and the following; consequently, the opposite of "prime" is not "composite", but "not prime".</p>
+      </article>
+      <article class="theorem theorem-like" id="theorem-11">
+        <h6 class="heading">
+          <span class="type">Theorem</span>
+          <span class="space"> </span>
+          <span class="codenumber">1.3.4</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-143">Let \(a\in \N\) such that \(a &gt; 1\text{.}\) Then there is a prime \(p\) such that \(p\mid a\text{.}\)</p>
+      </article>
+      <article class="proof" id="proof-13">
+        <h6 class="heading">
+          <span class="type">Proof<span class="period">.</span></span>
+        </h6>
+        <p id="p-144">We proceed by mathematical induction. Note that when \(a = 2\text{,}\) the statement holds.</p>
+        <p id="p-145">Assume that there is a \(k\in\N\) such that for all \(a\le k\text{,}\) the statement holds. Consider \(k+1\text{.}\) If \(k+1\) is prime, we are done. If not, then \(k+1\) is composite, and by the answer to <a href="SubSec-Primes-and-Factorization.xhtml#question_compositecharacterization" class="internal" title="Exploration 1.3.1">Question 1.3.1</a>, there are integers \(a,b\ne 1\) such that \(k+1 = ab\text{.}\) By induction, there is a prime \(p\) such that \(p|a\text{,}\) so \(p|k+1\text{.}\)</p>
+      </article>
+      <article class="theorem theorem-like" id="theorem-12">
+        <h6 class="heading">
+          <span class="type">Theorem</span>
+          <span class="space"> </span>
+          <span class="codenumber">1.3.5</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-146">Suppose \(p\) and \(q\) are primes with \(p|q\text{.}\) Then \(p = q\text{.}\)</p>
+      </article>
+      <article class="proof" id="proof-14"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>TBD.</article>
+      <p id="p-147">Our first major theorem makes two claims: that positive integers greater than 1 <em class="emphasis">can</em> be factored into products of primes, and that this factorization can happen in only one way. As the semester progresses, we will see other theorems like this one, and catch glimpses of other ways to think about the <em class="emphasis">unique factorization property</em>.</p>
+      <article class="assemblage assemblage-like" id="ftarith">
+        <h6 class="heading">
+          <span class="title">Fundamental Theorem of Arithmetic.</span>
+        </h6>
+        <p id="p-148">Every natural number greater than 1 is either a prime number or it can be expressed as a finite product of prime numbers where the expression is unique up to the order of the factors.</p>
+      </article>
+      <p id="p-149">The proof is broken into two parts: existence (<a href="SubSec-Primes-and-Factorization.xhtml#theorem_FTAexistence" class="internal" title="Theorem 1.3.6: Fundamental Theorem of Arithmetic–Existence Part">Theorem 1.3.6</a>) and uniqueness (<a href="SubSec-Primes-and-Factorization.xhtml#theorem_FTAuniqueness" class="internal" title="Theorem 1.3.8: Fundamental Theorem of Arithmetic–Uniqueness Part">Theorem 1.3.8</a>).</p>
+      <article class="theorem theorem-like" id="theorem_FTAexistence">
+        <h6 class="heading">
+          <span class="type">Theorem</span>
+          <span class="space"> </span>
+          <span class="codenumber">1.3.6</span>
+          <span class="period">.</span>
+          <span class="space"> </span>
+          <span class="title">Fundamental Theorem of Arithmetic–Existence Part<sup><a xmlns:epub="http://www.idpf.org/2007/ops" epub:type="noteref" href="#fn-3">1</a></sup><aside xmlns:epub="http://www.idpf.org/2007/ops" epub:type="footnote" id="fn-3">This approach to the Fundamental Theorem of Arithmetic is adapted from [1.3.1].</aside>.</span>
+        </h6>
+        <p id="p-150">Every natural number \(n &gt; 1\) is either a prime number or it can be expressed as a finite product of prime numbers. That is, for every natural number \(n &gt; 1\text{,}\) there exist primes \(p_1, p_2, \ldots,
+p_m\) and natural numbers \(r_1, r_2, \ldots, r_m\) such that</p>
+        <div class="displaymath">
+\begin{equation*}
+n = p_1^{r_1} p_2^{r_2} \cdots p_m^{r_m}\text{.}
+\end{equation*}
+</div>
+        <div class="hint solution-like" id="hint-6">
+          <span class="type">Hint</span>
+          <p id="p-151">Induction!</p>
+        </div>
+      </article>
+      <article class="proof" id="proof-15">
+        <h6 class="heading">
+          <span class="type">Proof<span class="period">.</span></span>
+        </h6>
+        <p id="p-152">It is enough to show that, if \(n &gt; 1\text{,}\) we may write \(n = p_1 p_2 \cdots p_k\text{,}\) where the \(p_i\)'s are not necessarily distinct primes. Then we can collect the common primes and write them with exponent notation.</p>
+        <p id="p-153">Note that when \(n = 2\text{,}\) there is such an expression, so let \(k &gt; 2\) be the least positive integer that fails to be expressed as above. We note that \(k\) cannot be prime, or it could be expressed as above. Thus, by Theorem 2.1, there is a prime \(p\) such that \(k = p b\text{,}\) where \(1 \lt p, b \lt k\text{.}\) Since \(k\) was the least positive integer that cannot be factored as a product of primes, \(b\) has a prime factorization. But then so does \(k\text{,}\) a contradiction.</p>
+      </article>
+      <article class="lemma theorem-like" id="lemma-2">
+        <h6 class="heading">
+          <span class="type">Lemma</span>
+          <span class="space"> </span>
+          <span class="codenumber">1.3.7</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-154">Let \(p\) and \(q_1, q_2,\ldots,
+q_n\) all be primes and let \(k\) be a natural number such that \(pk = q_1 q_2 \ldots q_n\text{.}\) Then \(p = q_i\) for some \(i\text{.}\)</p>
+      </article>
+      <article class="proof" id="proof-16">
+        <h6 class="heading">
+          <span class="type">Proof<span class="period">.</span></span>
+        </h6>
+        <p id="p-155">We first state a claim that will be useful.</p>
+        <p id="p-156"><em class="emphasis">Claim 1:</em> If \(p,q\) are primes such that \(p|q\text{,}\) then \(p = q\text{.}\)</p>
+        <p id="p-157"><em class="emphasis">Proof of Claim 1:</em> Since \(p,
+q &gt; 1\) and both \(p\) and \(q\) are prime, \(p = q\) by the definition of primality. \(\checkmark\)</p>
+        <p id="p-158">Now assume that \(pk = q_1 q_2 \cdots q_n = (q_1 q_2 \cdots q_{n-1}) q_n\text{.}\) If \(p|q_n\text{,}\) we're done by Claim 1. If not, the definition of a prime guarantees that \(p| q_1 q_2 \cdots q_{n-1}\text{.}\) If \(p|q_{n-1}\text{,}\) we're done by Claim 1. Otherwise, \(p|q_1 q_2 \cdots q_{n-2}\text{.}\)</p>
+        <p id="p-159">Repeating this process, we see that either \(p|q_i\) for some \(i &gt; 2\text{,}\) or \(p|q_1 q_2\text{.}\) Now the definition of a prime guarantees that \(p|q_1\) or \(p|q_2\text{,}\) in which case Claim 1 requires that \(p = q_1\) or \(p = q_2\text{.}\)</p>
+      </article>
+      <article class="theorem theorem-like" id="theorem_FTAuniqueness">
+        <h6 class="heading">
+          <span class="type">Theorem</span>
+          <span class="space"> </span>
+          <span class="codenumber">1.3.8</span>
+          <span class="period">.</span>
+          <span class="space"> </span>
+          <span class="title">Fundamental Theorem of Arithmetic–Uniqueness Part.</span>
+        </h6>
+        <p id="p-160">Let \(n\) be a natural number. Let \(\set{p_1,p_2,\ldots,p_m}\) and \(\set{q_1,q_2,\ldots,q_s}\) be sets of primes with \(p_i\ne p_j\) if \(i\ne j\) and \(q_i\ne q_j\) if \(i\ne j\text{.}\) Let \(\set{r_1,r_2,\ldots,r_m}\) and \(\set{t_1,t_2,\ldots,t_s}\) be sets of natural numbers such that</p>
+        <div class="displaymath">
+\begin{align*}
+n \amp = p_1^{r_1} p_2^{r_2} \cdots p_m^{r_m}\\
+\amp = q_1^{t_1} q_2^{t_2} \cdots q_s^{t_s}\text{.}
+\end{align*}
+</div>
+        <p id="p-161">Then \(m = s\) and \(\set{p_1,p_2,\ldots,p_m} = \set{q_1,q_2,\ldots,q_s}\text{.}\) That is, the sets of primes are equal but their elements are not necessarily listed in the same order (i.e., \(p_i\) may or may not equal \(q_i\)). Moreover, if \(p_i = q_j\text{,}\) then \(r_i = t_j\text{.}\) In other words, if we express the same natural number as a product of distinct primes, then the expressions are identical except for the ordering of the factors.</p>
+        <div class="hint solution-like" id="hint-7">
+          <span class="type">Hint</span>
+          <p id="p-162">Argue that the two sets are equal (how do we do that?). Then argue that the exponents must also be equal.</p>
+        </div>
+      </article>
+      <article class="proof" id="proof-17">
+        <h6 class="heading">
+          <span class="type">Proof<span class="period">.</span></span>
+        </h6>
+        <p id="p-163">Without loss of generality, assume \(p_1 \lt  p_2 \lt  \cdots \lt  p_m\) and \(q_1 \lt  q_2 \lt  \cdots \lt  q_s\text{.}\) Given a \(p_i\text{,}\) we know that \(p_i | q_1^{t_1} q_2^{t_2} \cdots q_s^{t_s}\text{,}\) which implies that \(p_i | q_j\) for some \(j\) by Claim 2 in the proof of Lemma 2.8. Further, Lemma 2.8 implies that \(p_i = q_j\text{,}\) and similarly, given a \(q_j\text{,}\) \(q_j = p_i\) for some \(i\text{.}\) Thus, \(m =s\text{,}\) and by the ordering of the \(p_i\)'s and \(q_j\)'s, we have \(p_i = q_j\text{,}\) \(i = 1, 2, \ldots, m\text{.}\) Therefore,</p>
+        <div class="displaymath">
+\begin{equation*}
+n = p_1^{r_1} p_2^{r_2} \cdots p_m^{r_m} = p_1^{t_1} p_2^{t_2} \cdots p_m^{t_m}\text{.}
+\end{equation*}
+</div>
+        <p id="p-164">Now, assume by way of contradiction, that \(r_i \ne t_i\) for some \(i\text{.}\) Without loss of generality, we may assume \(r_i \lt  t_i\text{.}\) Then \(p_i^{t_i} | p_1^{r_1} p_2^{r_2} \cdots p_m^{r_m}\text{,}\) which implies that</p>
+        <div class="displaymath">
+\begin{equation*}
+p_i^{t_i - r_i} | p_1^{r_1} p_2^{r_2} \cdots \hat{p}_i^{r_i} \cdots p_m^{r_m}\text{.}
+\end{equation*}
+</div>
+        <p id="p-165">Since \(t_i - r_i &gt; 0\text{,}\) we have that</p>
+        <div class="displaymath">
+\begin{equation*}
+p_i  | p_1^{r_1} p_2^{r_2} \cdots \hat{p}_i^{r_i} \cdots p_m^{r_m}\text{,}
+\end{equation*}
+</div>
+        <p data-braille="continuation">from which \(p_i | p_j\) for some \(j\ne i\) by Lemma 2.8. This is a contradiction, so \(r_i = t_i\) for \(i = 1, 2, \ldots, m\text{.}\)</p>
+      </article>
+      <p id="p-166">Our first major result is in hand: we can factor natural numbers \(n &gt; 2\) uniquely as a product of primes. Much of the rest of this book seeks to deduce a generalization of this result that relies on structural arithmetic properties enjoyed by \(\Z\) and similar objects.</p>
+      <section class="references" id="references-2">
+        <h3 class="heading hide-type"><span class="type">References</span> <span class="codenumber"/> <span class="title">References</span></h3>
+        <article class="bib" id="NTI"><div class="bibitem">[1]</div>  <div class="bibentry">D. Marshall, E. Odell, M. Starbird, <em class="emphasis">Number Theory Through Inquiry</em>, MAA Textbooks, Mathematical Association of America, 2007</div></article>
+      </section>
+    </section>
+  </body>
+</html>

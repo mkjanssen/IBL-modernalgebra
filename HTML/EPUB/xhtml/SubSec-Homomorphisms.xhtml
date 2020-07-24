@@ -1,0 +1,201 @@
+<html>
+  <head>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-07-24T13:51:22-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<link href="../css/pretext-epub.css" rel="stylesheet" type="text/css"/></head>
+  <body>
+    <div class="hidden-content" style="display:none">\(\renewcommand{\labelitemi}{$\diamond$}
+\def\arraystretch{1.5}
+\newcommand{\contentsfinish}{}
+\newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
+\newcommand{\tosay}[1]{\begin{center}\text{\fbox{\scriptsize{#1}}}\end{center}}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsecpagefont}{}
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\smallcaps{#1}}
+\def\oldequation{\equation}
+\def\endoldequation{\endequation}
+\newcommand{\nl}{
+}
+\newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\thesection}.\ \smallcaps{#1}}{\thesection.\ \smallcaps{#1}}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\scriptsize\thesection}.\ \smallcaps{#1}}{}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0.5pt}
+\newcommand{\makedefaultsection}[2][true]{
+}
+\newcommand{\timestamp}{{\color{red}Last updated: {\currenttime\ (UTC), \today}}}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\ideal}[1]{\left\langle\, #1 \,\right\rangle}
+\newcommand{\subgp}[1]{\left\langle\, #1 \,\right\rangle}
+\def\p{\varphi}
+\def\isomorphic{\cong}
+\def\Gal{\text{Gal}}
+\def\im{\text{im}}
+\def\normal{\vartriangleleft}
+\renewcommand{\qedsymbol}{$\checkmark$}
+\def\lcm{{\text{lcm}\,}}
+\newcommand{\q}[1]{{\color{red} {#1}}}
+\newcommand{\startimportant}[1]{\end{[{Hint:} #1]\end}}
+\renewcommand{\textcircled}[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt,color=red] (char) {#1};}}
+\newcommand{\crossout}[1]{\tikz[baseline=(char.base)]{\node[mynode, cross out,draw] (char) {#1};}}
+\newcommand{\set}[1]{\left\{ {#1} \right\}}
+\newcommand{\setof}[2]{{\left\{#1\,\colon\,#2\right\}}}
+\def\C{{\mathbb C}}
+\def\Z{{\mathbb Z}}
+\def\bF{{\mathbb F}}
+\def\Q{{\mathbb Q}}
+\def\N{{\mathbb N}}
+\def\R{{\mathbb R}}
+\newcommand{\h}[1]{{\textbf{#1}}}
+\def\presnotes{}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+    <section class="section" id="SubSec-Homomorphisms">
+      <h2 class="heading hide-type"><span class="type">Section</span> <span class="codenumber">4.2</span> <span class="title">Homomorphisms</span></h2>
+      <article class="assemblage assemblage-like" id="assemblage-19">
+        <h6 class="heading">
+          <span class="title">Guiding Questions.</span>
+        </h6>
+        <p id="p-705">In this section, we'll seek to answer the questions: <ul class="disc"><li id="li-197"/><li id="li-198">What are subrings, and how can we tell if a given subset of a ring is a subring?</li></ul></p>
+      </article>
+      <article class="definition definition-like" id="definition-36">
+        <h6 class="heading">
+          <span class="type">Definition</span>
+          <span class="space"> </span>
+          <span class="codenumber">4.2.1</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-706">Let \(R\) and \(S\) be commutative rings with identity. A function \(\p : R\to S\) is a called <dfn class="terminology">ring homomorphism</dfn> if it preserves addition, multiplication, and sends the identity of \(R\) to the identity of \(S\text{.}\) That is, for all \(x,y\in R\text{:}\)</p>
+        <ul class="disc">
+          <li id="li-199">\(\p(x+y) = \p(x) + \p(y)\text{,}\)</li>
+          <li id="li-200">\(\p(xy) = \p(x)\p(y)\text{,}\) and</li>
+          <li id="li-201">\(\p(1_R) = 1_S\text{.}\)</li>
+        </ul>
+        <p data-braille="continuation">If \(\p\) is a bijection, we say that \(\p\) is an <dfn class="terminology">isomorphism</dfn> and write \(R\cong S\text{.}\) If \(\p : R\to R\) is an isomorphism, we say \(\p\) is an <dfn class="terminology">automorphism</dfn> of \(R\text{.}\)</p>
+      </article>
+      <article class="activity project-like" id="activity-19">
+        <h6 class="heading">
+          <span class="type">Activity</span>
+          <span class="space"> </span>
+          <span class="codenumber">4.2.1</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-707">Show that the function \(\p : Z\to \Z_{5}\) defined by \(\p(x) = \overline{x}\) is a homomorphism. Is it an isomorphism? Why or why not?</p>
+        <div class="solutions">
+          <div class="solution solution-like" id="solution-35">
+            <span class="type">Solution</span>
+            <p id="p-708">Note that \(\p(x+y) = \overline{x+y} = \overline{x} + \overline{y} = \p(x) + \p(y)\text{,}\) and similarly for multiplication. We observe that \(\p\) is not an isomorphism, as \(\p(2) = \p(7) = \overline{2}\text{.}\)</p>
+          </div>
+        </div>
+      </article>
+      <article class="investigation project-like" id="investigation-25">
+        <h6 class="heading">
+          <span class="type">Investigation</span>
+          <span class="space"> </span>
+          <span class="codenumber">4.2.2</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-709">Let \(R = \Z_2[x]\) and consider the map \(F: R \to R\) given by \(F(p) = p^2\text{.}\) Is \(F\) a homomorphism? An isomorphism?</p>
+      </article>
+      <article class="exploration project-like" id="exploration-24">
+        <h6 class="heading">
+          <span class="type">Exploration</span>
+          <span class="space"> </span>
+          <span class="codenumber">4.2.3</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-710">Give an example of other rings \(R\) and \(S\) and a homomorphism \(\p : R\to S\text{.}\) Show that your function is a homomorphism and determine whether or not it is an isomorphism. Multiple presentations (of different homomorphisms) are possible.</p>
+        <div class="solutions">
+          <div class="solution solution-like" id="solution-36">
+            <span class="type">Solution</span>
+            <p id="p-711">One is complex conjugation, which is an isomorphism \(\C\to\C\text{.}\) Another is \(\p : \Z_5 \to \Z_{10}\) given by \(\p(x) = 5x\) (this isn't easy).</p>
+          </div>
+        </div>
+      </article>
+      <article class="definition definition-like" id="definition-37">
+        <h6 class="heading">
+          <span class="type">Definition</span>
+          <span class="space"> </span>
+          <span class="codenumber">4.2.2</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-712">Let \(\p : R \to S\) be a ring homomorphism. Then \(\ker \p =\setof{r\in R}{\p(r)=0_S}\) is the <dfn class="terminology">kernel</dfn> of \(\p\text{.}\)</p>
+      </article>
+      <article class="theorem theorem-like" id="theorem-69">
+        <h6 class="heading">
+          <span class="type">Theorem</span>
+          <span class="space"> </span>
+          <span class="codenumber">4.2.3</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-713">Let \(R\) be commutative with identity and \(r\in R\text{.}\) The <em class="emphasis">\(r\)-evaluation map</em> \(\p_r : R[x] \to R\) defined by \(\p_r(p(x)) = p(r)\) is a homomorphism.</p>
+        <div class="solution solution-like" id="solution-37">
+          <span class="type">Solution</span>
+          <p id="p-714">This follows from the way sums and products of polynomials are evaluated.</p>
+        </div>
+      </article>
+      <article class="exploration project-like" id="exploration-25">
+        <h6 class="heading">
+          <span class="type">Exploration</span>
+          <span class="space"> </span>
+          <span class="codenumber">4.2.4</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-715">What is \(\ker \p_r\text{?}\)</p>
+        <div class="solutions">
+          <div class="solution solution-like" id="solution-38"><span class="type">Solution</span>By definition, \(\ker \p_r\) is the set of all \(p(x)\in R[x]\) such that \(p(r) =0\text{,}\) that is, the set of all polynomials which have \(r\) as a zero.</div>
+        </div>
+      </article>
+      <article class="activity project-like" id="activity-20">
+        <h6 class="heading">
+          <span class="type">Activity</span>
+          <span class="space"> </span>
+          <span class="codenumber">4.2.5</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-716">Find the kernels of other homomorphisms we've looked at so far.</p>
+        <div class="solutions">
+          <div class="solution solution-like" id="solution-39"><span class="type">Solution</span>Answers will vary.</div>
+        </div>
+      </article>
+      <article class="theorem theorem-like" id="theorem-70">
+        <h6 class="heading">
+          <span class="type">Theorem</span>
+          <span class="space"> </span>
+          <span class="codenumber">4.2.4</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-717">Given a ring homomorphism \(\p : R\to S\text{,}\) \(\ker\p\) is an ideal.</p>
+      </article>
+      <article class="proof" id="proof-77">
+        <h6 class="heading">
+          <span class="type">Proof<span class="period">.</span></span>
+        </h6>
+        <p id="p-718">If \(x,y\in \ker\p\text{,}\) \(\p(x+y) = \p(x) + \p(y) = 0_S + 0_S = 0_S\text{.}\) Similarly, if \(x\in \ker \p\) and \(r\in R\text{,}\) \(\p(rx) = \p(r) \p(x) = \p(r) 0_S = 0_S\text{.}\)</p>
+      </article>
+      <article class="theorem theorem-like" id="theorem-71">
+        <h6 class="heading">
+          <span class="type">Theorem</span>
+          <span class="space"> </span>
+          <span class="codenumber">4.2.5</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-719">Let \(\p : R\to S\) be a homomorphism. Then \(\p\) is one-to-one if and only if \(\ker\p = \set{0}\text{.}\)</p>
+      </article>
+    </section>
+  </body>
+</html>

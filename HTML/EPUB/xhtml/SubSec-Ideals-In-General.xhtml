@@ -1,0 +1,355 @@
+<html>
+  <head>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-07-24T13:51:22-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<link href="../css/pretext-epub.css" rel="stylesheet" type="text/css"/></head>
+  <body>
+    <div class="hidden-content" style="display:none">\(\renewcommand{\labelitemi}{$\diamond$}
+\def\arraystretch{1.5}
+\newcommand{\contentsfinish}{}
+\newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
+\newcommand{\tosay}[1]{\begin{center}\text{\fbox{\scriptsize{#1}}}\end{center}}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsecpagefont}{}
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\smallcaps{#1}}
+\def\oldequation{\equation}
+\def\endoldequation{\endequation}
+\newcommand{\nl}{
+}
+\newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\thesection}.\ \smallcaps{#1}}{\thesection.\ \smallcaps{#1}}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\scriptsize\thesection}.\ \smallcaps{#1}}{}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0.5pt}
+\newcommand{\makedefaultsection}[2][true]{
+}
+\newcommand{\timestamp}{{\color{red}Last updated: {\currenttime\ (UTC), \today}}}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\ideal}[1]{\left\langle\, #1 \,\right\rangle}
+\newcommand{\subgp}[1]{\left\langle\, #1 \,\right\rangle}
+\def\p{\varphi}
+\def\isomorphic{\cong}
+\def\Gal{\text{Gal}}
+\def\im{\text{im}}
+\def\normal{\vartriangleleft}
+\renewcommand{\qedsymbol}{$\checkmark$}
+\def\lcm{{\text{lcm}\,}}
+\newcommand{\q}[1]{{\color{red} {#1}}}
+\newcommand{\startimportant}[1]{\end{[{Hint:} #1]\end}}
+\renewcommand{\textcircled}[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt,color=red] (char) {#1};}}
+\newcommand{\crossout}[1]{\tikz[baseline=(char.base)]{\node[mynode, cross out,draw] (char) {#1};}}
+\newcommand{\set}[1]{\left\{ {#1} \right\}}
+\newcommand{\setof}[2]{{\left\{#1\,\colon\,#2\right\}}}
+\def\C{{\mathbb C}}
+\def\Z{{\mathbb Z}}
+\def\bF{{\mathbb F}}
+\def\Q{{\mathbb Q}}
+\def\N{{\mathbb N}}
+\def\R{{\mathbb R}}
+\newcommand{\h}[1]{{\textbf{#1}}}
+\def\presnotes{}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+    <section class="section" id="SubSec-Ideals-In-General">
+      <h2 class="heading hide-type"><span class="type">Section</span> <span class="codenumber">4.1</span> <span class="title">Ideals in general</span></h2>
+      <article class="assemblage assemblage-like" id="assemblage-18">
+        <h6 class="heading">
+          <span class="title">Guiding Questions.</span>
+        </h6>
+        <p id="p-660">In this section, we'll seek to answer the questions: <ul class="disc"><li id="li-190">What operations can we perform on existing ideals to create new ideals?</li><li id="li-191">How can we describe (non-principal) ideals in general?</li></ul></p>
+      </article>
+      <section class="introduction" id="introduction-7">
+        <p id="p-661">Recall that one of the ways in which we understand a mathematical object is to study its relationship to other mathematical objects. In algebra, we learn about a ring by studying its relationship to other rings via functions (introduced in <a href="SubSec-Homomorphisms.xhtml" class="internal" title="Section 4.2: Homomorphisms">Section 4.2</a>) and to its ideals, introduced in <a href="SubSec-Principal-Ideals.xhtml#def-ideal" class="internal" title="Definition 2.4.1">Definition 2.4.1</a>.</p>
+        <p id="p-662">The notion of an ideal number was first introduced by Ernst Kummer in the middle of the nineteenth century. Kummer was studying the cyclotomic integers in connection to work on Fermat's Last Theorem and reciprocity laws in number theory, and discovered, to use our modern terminology, that these rings of cyclotomic integers were not UFDs. In particular, he found irreducible cyclotomic integers that were not prime. His work, which was finished by Richard Dedekind by 1871, was to define a new class of complex number, an <em class="emphasis">ideal number</em> for which unique factorization into prime ideal numbers held. This notion of ideal number was later elaborated on by David Hilbert and Emmy Noether into the more general version which we stated in <a href="SubSec-Principal-Ideals.xhtml#def-ideal" class="internal" title="Definition 2.4.1">Definition 2.4.1</a>.</p>
+        <p id="p-663">In this section, we explore ways of describing non-principal ideals. We also explore properties of ideals, as well as their connections to other fields of mathematics.</p>
+      </section>
+      <p id="p-664">We first explore the behavior of ideals under the usual set-theoretic operations of intersection and union.</p>
+      <article class="theorem theorem-like" id="thm-idealintersection">
+        <h6 class="heading">
+          <span class="type">Theorem</span>
+          <span class="space"> </span>
+          <span class="codenumber">4.1.1</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-665">Let \(R\) be a ring and let \(\set{I_{\alpha}}_{\alpha\in \Gamma}\) be a family of ideals. Then \(I = \bigcap\limits_{\alpha\in \Gamma} I_\alpha\) is an ideal.</p>
+      </article>
+      <article class="proof" id="proof-68">
+        <h6 class="heading">
+          <span class="type">Proof<span class="period">.</span></span>
+        </h6>
+        <p id="p-666">It is clear that \(0\in I\text{.}\) Moreover, if \(x,y\in I\text{,}\) then \(x,y\in I_\alpha\) for all \(\alpha\text{,}\) so \(x-y\in I_\alpha\) and thus \(x-y\in I\text{.}\) Finally, if \(x\in I\) and \(r\in R\text{,}\) \(rx\in I_\alpha\) for all \(\alpha\text{,}\) and thus \(rx\in I\text{.}\)</p>
+      </article>
+      <article class="investigation project-like" id="invest-idealunion">
+        <h6 class="heading">
+          <span class="type">Investigation</span>
+          <span class="space"> </span>
+          <span class="codenumber">4.1.1</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-667">Let \(R\) be a ring and \(I,J\subseteq R\) be ideals. Must \(I\cup J\) be an ideal of \(R\text{?}\) Give a proof or counterexample of your assertion.</p>
+        <div class="solutions">
+          <div class="solution solution-like" id="solution-33">
+            <span class="type">Solution</span>
+            <p id="p-668">Given \(R = \Z\text{,}\) \(I = \ideal{2}\text{,}\) and \(J = \ideal{3}\text{,}\) note that since \(5 = 2 + 3\notin I\cup J\text{,}\) the union \(I\cup J\) is not an ideal.</p>
+          </div>
+        </div>
+      </article>
+      <p id="p-669">In addition to the set-theoretic properties described above, we can do arithmetic with ideals.</p>
+      <article class="theorem theorem-like" id="theorem-63">
+        <h6 class="heading">
+          <span class="type">Theorem</span>
+          <span class="space"> </span>
+          <span class="codenumber">4.1.2</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-670">Let \(R\) be a ring and \(I,J\subseteq R\) ideals of \(R\text{.}\) Then the <dfn class="terminology">sum</dfn> of \(I\) and \(J\text{,}\)</p>
+        <div class="displaymath">
+\begin{equation*}
+I+J := \setof{x+y}{x\in I, y\in J},
+\end{equation*}
+</div>
+        <p data-braille="continuation">is an ideal of \(R\text{.}\) Furthermore, the <dfn class="terminology">product</dfn> of \(I\) and \(J\text{,}\)</p>
+        <div class="displaymath">
+\begin{equation*}
+IJ := \setof{x_1 y_1 + x_2 y_2 + \cdots + x_n y_n}{n\ge 1, x_i \in I, y_j\in J}
+\end{equation*}
+</div>
+        <p data-braille="continuation">is an ideal of \(R\text{.}\)</p>
+      </article>
+      <article class="proof" id="proof-69"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>TBD.</article>
+      <p id="p-671">When we studied principal ideals, we were able to describe the principal ideal in terms of a single generating element. However, not every ideal is principal (see the <a href="SubSec-Ideals-In-General.xhtml#challenge-nonprincideal" class="internal" title="Challenge 4.1.8">Challenge 4.1.8</a>). Still, we would like a way to more precisely describe the elements of such ideals; we begin with <a href="SubSec-Ideals-In-General.xhtml#def_idealgeneration" class="internal" title="Definition 4.1.3">Definition 4.1.3</a>.</p>
+      <article class="definition definition-like" id="def_idealgeneration">
+        <h6 class="heading">
+          <span class="type">Definition</span>
+          <span class="space"> </span>
+          <span class="codenumber">4.1.3</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-672">Let \(R\) be a commutative ring with identity, and let \(S\subseteq R\) be a subset. Then</p>
+        <div class="displaymath">
+\begin{equation}
+\langle S \rangle := \bigcap\limits_{\substack{J\supseteq S\\\text{ \(J\) is an ideal } } } J\label{eq_idealgeneratedbyset}\tag{4.1.1}
+\end{equation}
+</div>
+        <p data-braille="continuation">is called the <dfn class="terminology">ideal generated by \(S\)</dfn>, and we call \(S\) the <dfn class="terminology">generating set for the ideal</dfn>.</p>
+      </article>
+      <p id="p-673">A consequence of <a href="SubSec-Ideals-In-General.xhtml#def_idealgeneration" class="internal" title="Definition 4.1.3">Definition 4.1.3</a> is the following theorem.</p>
+      <article class="theorem theorem-like" id="theorem-64"><h6 class="heading"><span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.1.4</span><span class="period">.</span></h6>Let \(R\) be a ring. Then \(\ideal{\emptyset} = \set{0}\text{.}\)</article>
+      <article class="proof" id="proof-70">
+        <h6 class="heading">
+          <span class="type">Proof<span class="period">.</span></span>
+        </h6>
+        <p id="p-674">Observe that for all ideals \(J\) in \(R\text{,}\) \(\emptyset\subseteq J\text{.}\) In particular, one of the ideals in the right-hand side of <a href="SubSec-Ideals-In-General.xhtml#mjx-eqn-eq_idealgeneratedbyset" class="internal" title="Equation 4.1.1">(4.1.1)</a> is the zero ideal. Since the zero ideal is a subset of all ideals, the theorem follows.</p>
+      </article>
+      <p id="p-675">One way to interpret <a href="SubSec-Ideals-In-General.xhtml#def_idealgeneration" class="internal" title="Definition 4.1.3">Definition 4.1.3</a> is that \(\ideal{S}\) is the smallest ideal (with respect to subset inclusion) that contains \(S\text{.}\)</p>
+      <article class="theorem theorem-like" id="theorem-smallestideal">
+        <h6 class="heading">
+          <span class="type">Theorem</span>
+          <span class="space"> </span>
+          <span class="codenumber">4.1.5</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-676">Given a commutative ring \(R\) and a subset \(S\) of \(R\text{,}\) \(\ideal{S}\) is the smallest ideal containing \(S\) in the sense that, if \(J\) is any ideal of \(R\) containing \(S\text{,}\) \(\ideal{S}\subseteq J\text{.}\)</p>
+      </article>
+      <article class="proof" id="proof-71">
+        <h6 class="heading">
+          <span class="type">Proof<span class="period">.</span></span>
+        </h6>
+        <p id="p-677">Let \(I\) be any ideal containing \(S\text{.}\) Thus, \(I\) is one of the ideals on the right-hand side of <a href="SubSec-Ideals-In-General.xhtml#mjx-eqn-eq_idealgeneratedbyset" class="internal" title="Equation 4.1.1">(4.1.1)</a>. Since \(\ideal{S}\) is formed by the intersection of \(I\) with other ideals, \(\ideal{S}\subseteq I\text{.}\)</p>
+      </article>
+      <p id="p-678">The concept elucidated by <a href="SubSec-Ideals-In-General.xhtml#theorem-smallestideal" class="internal" title="Theorem 4.1.5">Theorem 4.1.5</a> is helpful, but does not give us a handle on the structure of the elements of \(\ideal{S}\text{.}\) Such a description is provided by <a href="SubSec-Ideals-In-General.xhtml#thm_idealgeneratingset" class="internal" title="Theorem 4.1.6">Theorem 4.1.6</a>.</p>
+      <article class="theorem theorem-like" id="thm_idealgeneratingset">
+        <h6 class="heading">
+          <span class="type">Theorem</span>
+          <span class="space"> </span>
+          <span class="codenumber">4.1.6</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-679">Given a commutative ring with identity \(R\) and a nonempty subset \(S\) of \(R\text{:}\)</p>
+        <ol class="decimal">
+          <li id="li-192">The set \(I = \setof{r_1 s_1 + r_2 s_2 + \cdots + r_n s_n}{r_i\in R, \ s_j \in S,\ n\ge 1}\) is an ideal of \(R\text{;}\)</li>
+          <li id="li-193">\(S\subseteq I\text{;}\) and</li>
+          <li id="li-194">\(I = \ideal{S}\text{.}\)</li>
+        </ol>
+      </article>
+      <article class="proof" id="proof-72">
+        <h6 class="heading">
+          <span class="type">Proof<span class="period">.</span></span>
+        </h6>
+        <p id="p-680">It is clear that \(0\in I\text{,}\) and that if \(r\in R\) and \(x\in I\text{,}\) \(rx\in I\text{.}\) Moreover, the sum of two \(R\)-linear combinations of elements of \(S\) is yet another \(R\)-linear combination of elements of \(S\text{.}\) Thus, \(I\) is an ideal. Further, if \(s\in S\text{,}\) \(1\cdot s \in I\text{,}\) so \(S\subseteq I\text{.}\) Therefore, \(\ideal{S}\subseteq I\text{.}\)</p>
+        <p id="p-681">Now assume that \(x\in I\text{.}\) Then \(x\) has the form \(x = r_1 s_1 + \cdots + r_n s_n\text{.}\) Each \(s_i \in S\text{,}\) so each \(r_i s_i \in J\) if \(J\) is any ideal containing \(S\text{.}\) In particular, \(r_i s_i \in \ideal{S}\text{,}\) and thus the sum \(x = \sum r_i s_i \in \ideal{S}\text{.}\)</p>
+      </article>
+      <p id="p-682">In other words, the ideal \(\ideal{S}\) contains all possible finite sums of products of ring elements with elements from \(S\text{.}\)</p>
+      <article class="definition definition-like" id="definition-34">
+        <h6 class="heading">
+          <span class="type">Definition</span>
+          <span class="space"> </span>
+          <span class="codenumber">4.1.7</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-683">If \(R\) is a ring and \(S = \set{s_1, s_2, \ldots,
+s_n}\) is a finite subset of \(R\text{,}\) the ideal \(I\) generated by \(R\) is denoted by \(I = \ideal{s_1, s_2, \ldots,
+s_n}\text{,}\) and we say \(I\) is <dfn class="terminology">finitely generated</dfn>.</p>
+      </article>
+      <article class="principle theorem-like" id="challenge-nonprincideal">
+        <h6 class="heading">
+          <span class="type">Challenge</span>
+          <span class="space"> </span>
+          <span class="codenumber">4.1.8</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-684">The ring \(\Z[x]\) is not a PID.</p>
+        <div class="hint solution-like" id="hint-19">
+          <span class="type">Hint</span>
+          <p id="p-685">Consider the ideal \(I = \langle 2, x \rangle\text{.}\)</p>
+        </div>
+      </article>
+      <p id="p-688">Note that the set \(S\) in <a href="SubSec-Ideals-In-General.xhtml#thm_idealgeneratingset" class="internal" title="Theorem 4.1.6">Theorem 4.1.6</a> need not be finite. However, in many familiar rings, every ideal will have a finite generating set, as the next theorem demonstrates.</p>
+      <article class="theorem theorem-like" id="theorem-67">
+        <h6 class="heading">
+          <span class="type">Theorem</span>
+          <span class="space"> </span>
+          <span class="codenumber">4.1.9</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-689">Let \(R\) be a ring. If \(R\) is Noetherian<sup><a xmlns:epub="http://www.idpf.org/2007/ops" epub:type="noteref" href="#fn-8">1</a></sup><aside xmlns:epub="http://www.idpf.org/2007/ops" epub:type="footnote" id="fn-8">Recall <a href="SubSec-Factorization-in-Euclidean-Domains.xhtml#def-noetherian" class="internal" title="Definition 3.2.4">Definition 3.2.4</a>.</aside>, then every ideal \(I\) of \(R\) is finitely generated.</p>
+        <div class="hidden-content tex2jax_ignore" id="hk-fn-8">
+          <div class="fn">Recall <a href="SubSec-Factorization-in-Euclidean-Domains.xhtml#def-noetherian" class="internal" title="Definition 3.2.4">Definition 3.2.4</a>.</div>
+        </div>
+        <div class="hint solution-like" id="hint-20">
+          <span class="type">Hint</span>
+          <p id="p-690">Consider an arbitrary ideal \(I\) and inductively build an ascending chain of finitely generated ideals contained in \(I\text{.}\)</p>
+        </div>
+      </article>
+      <article class="proof" id="proof-74">
+        <h6 class="heading">
+          <span class="type">Proof<span class="period">.</span></span>
+        </h6>
+        <p id="p-691">Assume that \(R\) is Noetherian. Inductively build an ascending chain of ideals as follows:</p>
+        <ul class="disc">
+          <li id="li-195">Let \(x_1 \in I\) be arbitrary.</li>
+          <li id="li-196">For all \(i\ge 2\text{,}\) let \(x_i \in I\setminus \ideal{x_1, \ldots, x_{i-1}}\) be arbitrary.</li>
+        </ul>
+        <p data-braille="continuation">We thus obtain an ascending chain of ideals</p>
+        <div class="displaymath">
+\begin{equation*}
+\ideal{x_1} \subseteq \ideal{x_1, x_2}\subseteq \ideal{x_1,x_2,x_3}\subseteq \cdots
+\end{equation*}
+</div>
+        <p data-braille="continuation">which must stabilize at \(\ideal{x_1, x_2,\ldots, x_n}\text{.}\) That is, at some point, \(I\setminus \ideal{x_1, x_2,\ldots, x_n} = \emptyset\text{,}\) and since \(\ideal{x_1, x_2,\ldots, x_n}\subseteq I\text{,}\) we have \(I = \ideal{x_1, x_2,\ldots, x_n}\text{.}\)</p>
+      </article>
+      <p id="p-692">In fact, we could have used the finite generation of ideals as the definition of Noetherian rings, as the two notions are equivalent. First, a lemma.</p>
+      <article class="lemma theorem-like" id="lemma-ascendingchainideal">
+        <h6 class="heading">
+          <span class="type">Lemma</span>
+          <span class="space"> </span>
+          <span class="codenumber">4.1.10</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-693">Let \(R\) be a ring and \(I_1 \subseteq I_2\subseteq I_3\subseteq \cdots \) an ascending chain of ideals. Then</p>
+        <div class="displaymath">
+\begin{equation*}
+I = \bigcup\limits_{j=1}^\infty I_j
+\end{equation*}
+</div>
+        <p data-braille="continuation">is an ideal.</p>
+      </article>
+      <article class="proof" id="proof-75">
+        <h6 class="heading">
+          <span class="type">Proof<span class="period">.</span></span>
+        </h6>
+        <p id="p-694">Straightforward definition check. Nearly identical to <a href="SubSec-Factorization-in-Euclidean-Domains.xhtml#theorem-pidisnoetherian" class="internal" title="Theorem 3.2.5">Theorem 3.2.5</a>.</p>
+      </article>
+      <article class="theorem theorem-like" id="theorem-68">
+        <h6 class="heading">
+          <span class="type">Theorem</span>
+          <span class="space"> </span>
+          <span class="codenumber">4.1.11</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-695">Let \(R\) be a ring such that every ideal of \(R\) is finitely generated. Then \(R\) is Noetherian.</p>
+        <div class="hint solution-like" id="hint-21">
+          <span class="type">Hint</span>
+          <p id="p-696">Argue that the ideal \(I\) defined in <a href="SubSec-Ideals-In-General.xhtml#lemma-ascendingchainideal" class="internal" title="Lemma 4.1.10">Lemma 4.1.10</a> is a finitely generated ideal of \(R\text{,}\) and use this to conclude that the ascending chain stabilizes.</p>
+        </div>
+      </article>
+      <article class="proof" id="proof-76">
+        <h6 class="heading">
+          <span class="type">Proof<span class="period">.</span></span>
+        </h6>
+        <p id="p-697">Following the hint and <a href="SubSec-Ideals-In-General.xhtml#lemma-ascendingchainideal" class="internal" title="Lemma 4.1.10">Lemma 4.1.10</a>, we have \(I = \ideal{x_1, x_2, \ldots, x_n}\) while \(I_j\subseteq I\) for all \(j\text{.}\) Since \(I = \bigcup\limits_{j=1}^\infty I_j\text{,}\) for each \(k, 1\le k \le n\text{,}\) there is a \(j_k\) satisfying \(x_k \in I_{j_k}\text{.}\) What is more, we may rename \(x_1, x_2, \ldots, x_n\) so that \(j_1 \le j_2 \le \ldots \le j_n\) and thus</p>
+        <div class="displaymath">
+\begin{equation*}
+I_{j_1} \subseteq I_{j_2}\subseteq \cdots \subseteq I_{j_n}.
+\end{equation*}
+</div>
+        <p data-braille="continuation">Observe that this means that \(x_{j_k}\in I_{j_n}\) for all \(k\text{,}\) so that \(I = I_{j_n}\text{.}\) Thus, the chain stabilizes, and \(R\) is Noetherian.</p>
+      </article>
+      <p id="p-698">As one might expect, not every ring is Noetherian. However, most familiar rings are.</p>
+      <article class="exploration project-like" id="exploration-23">
+        <h6 class="heading">
+          <span class="type">Exploration</span>
+          <span class="space"> </span>
+          <span class="codenumber">4.1.2</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-699">Show that the ring \(R = \Q[x_1, x_2, x_3, \ldots]\) of polynomials in infinitely many variables over \(\Q\) is not Noetherian either by exhibiting an ascending chain of ideals that never stabilizes, or an ideal without a finite generating set.</p>
+        <div class="solutions">
+          <div class="solution solution-like" id="solution-34">
+            <span class="type">Solution</span>
+            <p id="p-700">TBD.</p>
+          </div>
+        </div>
+      </article>
+      <p id="p-701">We close with a discussion of a class of ideals which are the object of active mathematical research. Recall that a (simple) graph \(G\) consists of a set \(V = \set{x_1, x_2, \ldots, x_n}\) of <em class="emphasis">vertices</em> together with a collection \(E\) of <em class="emphasis">edges</em>, which are just pairs of vertices and can be written \(x_i x_j\text{.}\) This notation suggests the following definition.</p>
+      <article class="definition definition-like" id="def-edge-ideal">
+        <h6 class="heading">
+          <span class="type">Definition</span>
+          <span class="space"> </span>
+          <span class="codenumber">4.1.12</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-702">Let \(K\) be a field, \(G\) a graph on the vertex set \(V = \set{x_1, x_2, \ldots, x_n}\) with edge set \(E\text{,}\) and let \(R = K[x_1, x_2, \ldots, x_n]\) be the ring of polynomials whose variables are the vertices of \(G\) with coefficients in \(K\text{.}\) Define the <dfn class="terminology">edge ideal</dfn> of \(G\) to be</p>
+        <div class="displaymath">
+\begin{equation*}
+I(G) := \ideal{x_i x_j \mid x_i x_j\in E}.
+\end{equation*}
+</div>
+        <p data-braille="continuation">That is, \(I(G)\) is generated by the products of the variables corresponding to the edges of the graph.</p>
+      </article>
+      <article class="activity project-like" id="activity-18">
+        <h6 class="heading">
+          <span class="type">Activity</span>
+          <span class="space"> </span>
+          <span class="codenumber">4.1.3</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-703">Consider the graph \(G\) in <a href="SubSec-Ideals-In-General.xhtml#graph" class="internal" title="Figure 4.1.13">Figure 4.1.13</a>. List the generators of \(I(G)\) and an appropriate ring in which \(I(G)\) may live.</p>
+      </article>
+      <figure class="figure figure-like" id="graph">
+        <img src="./images/graph.svg" style="width: 50%; margin: 0 auto;"/>
+        <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.13<span class="period">.</span></span><span class="space"> </span>A graph \(G\text{.}\)</figcaption>
+      </figure>
+      <p id="p-704">As one might hope, we do not make <a href="SubSec-Ideals-In-General.xhtml#def-edge-ideal" class="internal" title="Definition 4.1.12">Definition 4.1.12</a> merely for fun; given a graph \(G\text{,}\) it is possible to relate the graph-theoretic properties of \(G\) (e.g., the chromatic number) with the ideal-theoretic properties of \(I(G)\text{.}\) See <a href="SubSec-Ideals-In-General.xhtml#vantuyl-intro" class="internal" title="Bibliographic Entry 4.1.1">[4.1.1]</a> and <a href="SubSec-Ideals-In-General.xhtml#mfo-waldschmidt" class="internal" title="Bibliographic Entry 4.1.2">[4.1.2]</a>, among others, for more.</p>
+      <section class="references" id="references-4">
+        <h3 class="heading hide-type"><span class="type">References</span> <span class="codenumber"/> <span class="title">References</span></h3>
+        <article class="bib" id="vantuyl-intro"><div class="bibitem">[1]</div>  <div class="bibentry">A. Van Tuyl, <em class="emphasis"><a class="external" href="http://dx.doi.org/doi:10.1007/978-3-642-38742-5_3" target="_blank">A Beginner's Guide to Edge and Cover Ideals</a></em>, in <em class="emphasis">Monomial Ideals, Computations, and Applications</em>, Lecture Notes in Mathematics Volume 2083, 2013, pp 63-94</div></article>
+        <article class="bib" id="mfo-waldschmidt"><div class="bibitem">[2]</div>  <div class="bibentry">C. Bocci, S. Cooper, E. Guardo, et al., <em class="emphasis"><a class="external" href="https://doi.org/10.1007/s10801-016-0693-7" target="_blank">The Waldschmidt constant for squarefree monomial ideals</a></em>, <em class="emphasis">J Algebr Comb</em> (2016) 44:875</div></article>
+      </section>
+    </section>
+  </body>
+</html>

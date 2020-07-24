@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-22T11:26:24-05:00    *-->
+<!--*    on 2020-07-24T15:05:17-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -128,11 +128,11 @@ MathJax.Hub.Config({
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="SubSec-Quotient-Rings.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Sec-Ideals.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="backmatter-1.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="SubSec-Ideals-In-General.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Sec-Ideals.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="SubSec-Quotient-Rings.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="SubSec-Quotient-Rings.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Sec-Ideals.html" title="Up">Up</a><a class="next-button button toolbar-item" href="backmatter-1.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="SubSec-Ideals-In-General.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Sec-Ideals.html" title="Up">Up</a><a class="next-button button toolbar-item" href="SubSec-Quotient-Rings.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -172,8 +172,8 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="Sec-Ideals.html" data-scroll="Sec-Ideals"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a><ul>
 <li><a href="SubSec-Ideals-In-General.html" data-scroll="SubSec-Ideals-In-General">Ideals in general</a></li>
-<li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings">Quotient Rings</a></li>
 <li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms" class="active">Homomorphisms</a></li>
+<li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings">Quotient Rings: New Rings from Old</a></li>
 </ul>
 </li>
 <li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
@@ -181,77 +181,53 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="SubSec-Homomorphisms"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">4.3</span> <span class="title">Homomorphisms</span>
+<span class="type">Section</span> <span class="codenumber">4.2</span> <span class="title">Homomorphisms</span>
 </h2>
-<article class="definition definition-like" id="definition-39"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.3.1</span><span class="period">.</span>
+<article class="assemblage assemblage-like" id="assemblage-19"><h6 class="heading"><span class="title">Guiding Questions.</span></h6>
+<p id="p-706">In this section, we'll seek to answer the questions: <ul class="disc">
+<li id="li-205">What is a ring homomorphism?</li>
+<li id="li-206">What are some examples of ring homomorphisms?</li>
+</ul></p></article><section class="introduction" id="introduction-8"><p id="p-707">Central to modern mathematics is the notion of <em class="emphasis">function</em><a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-9" id="fn-9"><sup> 1 </sup></a>. Functions arise in all areas of mathematics, each subdiscipline concerned with certain types of functions. In algebra, our concern is with <em class="emphasis">operation-preserving</em> functions, such as the linear transformations \(L : V\to W\) of vector spaces you have seen in a course in linear algebra. Those linear transformations had the properties that \(L(\mathbf{v}+\mathbf{u}) = L(\mathbf{v})+L(\mathbf{u})\) (addition is preserved) and \(L(c\mathbf{u}) = c L(\mathbf{u})\) (scalar multiplication is preserved).</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-9"><div class="fn">This section assumes a familiarity with the idea of function from a set-theoretic point of view, as well as the concepts of injective (one-to-one), surjective (onto), and bijective functions (one-to-one correspondences).</div></div>
+<p id="p-708">We find something similar at work in the study of homomorphisms of rings, which we define to be functions that preserve both addition and multiplication.</p></section><article class="definition definition-like" id="definition-36"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span>
 </h6>
-<p id="p-744">Let \(R\) and \(S\) be commutative rings with identity. A function \(\p : R\to S\) is a called <dfn class="terminology">ring homomorphism</dfn> if it preserves addition, multiplication, and sends the identity of \(R\) to the identity of \(S\text{.}\) That is, for all \(x,y\in R\text{:}\)</p>
+<p id="p-709">Let \(R\) and \(S\) be commutative rings with identity. A function \(\p : R\to S\) is a called <dfn class="terminology">ring homomorphism</dfn> if it preserves addition, multiplication, and sends the identity of \(R\) to the identity of \(S\text{.}\) That is, for all \(x,y\in R\text{:}\)</p>
 <ul class="disc">
-<li id="li-205">\(\p(x+y) = \p(x) + \p(y)\text{,}\)</li>
-<li id="li-206">\(\p(xy) = \p(x)\p(y)\text{,}\) and</li>
-<li id="li-207">\(\p(1_R) = 1_S\text{.}\)</li>
+<li id="li-207">\(\p(x+y) = \p(x) + \p(y)\text{,}\)</li>
+<li id="li-208">\(\p(xy) = \p(x)\p(y)\text{,}\) and</li>
+<li id="li-209">\(\p(1_R) = 1_S\text{.}\)</li>
 </ul>
-<p data-braille="continuation">If \(\p\) is a bijection, we say that \(\p\) is an <dfn class="terminology">isomorphism</dfn> and write \(R\cong S\text{.}\) If \(\p : R\to R\) is an isomorphism, we say \(\p\) is an <dfn class="terminology">automorphism</dfn> of \(R\text{.}\)</p></article><article class="activity project-like" id="activity-20"><h6 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.1</span><span class="period">.</span>
+<p data-braille="continuation">If \(\p\) is a bijection, we say that \(\p\) is an <dfn class="terminology">isomorphism</dfn> and write \(R\cong S\text{.}\) If \(\p : R\to R\) is an isomorphism, we say \(\p\) is an <dfn class="terminology">automorphism</dfn> of \(R\text{.}\)</p></article><p id="p-710">Our first job when glimpsing a new concept is to collect a stock of examples.</p>
+<article class="exploration project-like" id="expl-homomorphism-examples"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span>
 </h6>
-<p id="p-745">Show that the function \(\p : Z\to \Z_{5}\) defined by \(\p(x) = \overline{x}\) is a homomorphism. Is it an isomorphism? Why or why not?</p></article><article class="theorem theorem-like" id="theorem-78"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.2</span><span class="period">.</span>
-</h6>
-<p id="p-747">Let \(R\) be commutative with identity and \(I\) an ideal of \(R\text{.}\) Define \(\p: R\to R/I\) by \(\p(r) = r+I\text{.}\) Then \(\p\) is a homomorphism.</p></article><article class="investigation project-like" id="investigation-25"><h6 class="heading">
-<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">4.3.2</span><span class="period">.</span>
-</h6>
-<p id="p-748">Let \(R = \Z_2[x]\) and consider the map \(F: R \to R\) given by \(F(p) = p^2\text{.}\) Is \(F\) a homomorphism? An isomorphism?</p></article><article class="exploration project-like" id="exploration-26"><h6 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.3.3</span><span class="period">.</span>
-</h6>
-<p id="p-749">Give an example of other rings \(R\) and \(S\) and a homomorphism \(\p : R\to S\text{.}\) Show that your function is a homomorphism and determine whether or not it is an isomorphism. Multiple presentations (of different homomorphisms) are possible.</p></article><article class="definition definition-like" id="definition-40"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.3.3</span><span class="period">.</span>
-</h6>
-<p id="p-751">Let \(\p : R \to S\) be a ring homomorphism. Then \(\ker \p =\setof{r\in R}{\p(r)=0_S}\) is the <dfn class="terminology">kernel</dfn> of \(\p\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-79"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.4</span><span class="period">.</span>
-</h6>
-<p id="p-752">Let \(R\) be commutative with identity and \(r\in R\text{.}\) The <em class="emphasis">\(r\)-evaluation map</em> \(\p_r : R[x] \to R\) defined by \(\p_r(p(x)) = p(r)\) is a homomorphism.</p>
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-40" id="solution-40"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-40"><div class="solution solution-like"><p id="p-753">This follows from the way sums and products of polynomials are evaluated.</p></div></div></article><article class="exploration project-like" id="exploration-27"><h6 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.3.4</span><span class="period">.</span>
-</h6>
-<p id="p-754">What is \(\ker \p_r\text{?}\)</p></article><article class="activity project-like" id="activity-21"><h6 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.5</span><span class="period">.</span>
-</h6>
-<p id="p-755">Find the kernels of other homomorphisms we've looked at so far.</p></article><article class="theorem theorem-like" id="theorem-80"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.5</span><span class="period">.</span>
-</h6>
-<p id="p-756">Given a ring homomorphism \(\p : R\to S\text{,}\) \(\ker\p\) is an ideal.</p></article><article class="theorem theorem-like" id="theorem-81"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.6</span><span class="period">.</span>
-</h6>
-<p id="p-758">Let \(\p : R\to S\) be a homomorphism. Then \(\p\) is one-to-one if and only if \(\ker\p = \set{0}\text{.}\)</p></article><p id="p-759">In what follows, we work toward a proof of the First Isomorphism Theorem for Rings.</p>
-<p id="p-760">Throughout, let \(R\) and \(S\) be commutative rings with identity, and let \(\p : R\to S\) be a homomorphism. Recall that \(\im \p = \setof{s\in S}{\p(r) = s\text{ for some } r\in R}\text{.}\)</p>
-<p id="p-761">Define \(f: R/\ker \p \to \im \p\) by \(f(r+\ker \p) = \p(r)\text{.}\)</p>
-<article class="lemma theorem-like" id="lemma-10"><h6 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.3.7</span><span class="period">.</span>
-</h6>
-<p id="p-762">Using the notation from above, \(f\) is a well-defined function.</p></article><article class="lemma theorem-like" id="lemma-11"><h6 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.3.8</span><span class="period">.</span>
-</h6>
-<p id="p-764">Using the notation above, \(f\) is a homomorphism.</p></article><article class="lemma theorem-like" id="lemma-12"><h6 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.3.9</span><span class="period">.</span>
-</h6>
-<p id="p-766">Using the notation above, \(f\) is one-to-one.</p></article><article class="lemma theorem-like" id="lemma-13"><h6 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.3.10</span><span class="period">.</span>
-</h6>
-<p id="p-768">Using the notation above, \(f\) is onto.</p></article><p id="p-770">We thus obtain:</p>
-<article class="theorem theorem-like" id="theorem-82"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.11</span><span class="period">.</span><span class="space"> </span><span class="title">(First Isomorphism Theorem).</span>
-</h6>
-<p id="p-771">Let \(\p : R\to S\) be a homomorphism of commutative rings. Then \(R/\ker \p \cong \im \p\text{.}\)</p>
-<p id="p-772">In particular, if \(\p : R\to S\) is onto, \(R/\ker \p \cong S\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-83"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.12</span><span class="period">.</span>
-</h6>
-<p id="p-773">We have the following isomorphisms of rings.</p>
+<p id="p-711">Determine whether the following functions are homomorphisms, isomorphisms, automorphisms, or none of these. Note that \(R\) denotes an arbitrary commutative ring with identity.</p>
 <ol class="decimal">
-<li id="li-208"><p id="p-774">\(\Z/\ideal{m} \cong \Z_m\)</p></li>
-<li id="li-209"><p id="p-775">\(\Q[x]/\ideal{x-5} \cong \Q\)</p></li>
-<li id="li-210"><p id="p-776">\(\R[x]/\ideal{x^2+1} \cong \C\)</p></li>
-</ol></article></section></div></main>
+<li id="li-210">\(\p : R\to R\) defined by \(\p(x)=x\)</li>
+<li id="li-211">\(\psi : R\to R\) defined by \(\psi(x)=-x\)</li>
+<li id="li-212">\(\alpha : \Z\to \Z\) defined by \(\alpha(x)=5x\)</li>
+<li id="li-213">\(F : \Z_2[x]\to \Z_2[x]\) defined by \(F(p) = p^2\)</li>
+<li id="li-214">\(\iota : \C\to \C\) defined by \(\iota(a+bi)=a-bi\text{,}\) where \(a,b\in \R, i^2 = -1\)</li>
+<li id="li-215">\(\beta : \Z\to \Z_{5}\) defined by \(\beta(x) = \overline{x}\)</li>
+<li id="li-216">\(\epsilon_r : R[x] \to R\) defined by \(\epsilon_r(p(x)) = p(r)\) (this is known as the \(r\)-evaluation map)</li>
+<li id="li-217">\(\xi : \Z_5 \to \Z_{10}\) defined by \(\xi(\overline{x}) = \overline{5x}\)</li>
+</ol></article><p id="p-713">Homomorphisms give rise to a particularly important class of subsets: kernels.</p>
+<article class="definition definition-like" id="definition-37"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span>
+</h6>
+<p id="p-714">Let \(\p : R \to S\) be a ring homomorphism. Then \(\ker \p =\setof{r\in R}{\p(r)=0_S}\) is the <dfn class="terminology">kernel</dfn> of \(\p\text{.}\)</p></article><article class="activity project-like" id="activity-19"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span>
+</h6>
+<p id="p-715">For each homomorphism in <a class="xref" data-knowl="./knowl/expl-homomorphism-examples.html" title="Exploration 4.2.1">Exploration 4.2.1</a>, find (with justification), the kernel.</p></article><p id="p-716">In fact, kernels are not just important subsets of rings; they are ideals.</p>
+<article class="theorem theorem-like" id="theorem-69"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span>
+</h6>
+<p id="p-717">Given a ring homomorphism \(\p : R\to S\text{,}\) \(\ker\p\) is an ideal.</p></article><p id="p-719">Kernels also give a useful way of determining whether their defining homomorphisms are one-to-one.</p>
+<article class="theorem theorem-like" id="theorem-70"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span>
+</h6>
+<p id="p-720">Let \(\p : R\to S\) be a homomorphism. Then \(\p\) is one-to-one if and only if \(\ker\p = \set{0}\text{.}\)</p></article></section></div></main>
 </div>
 </body>
 </html>

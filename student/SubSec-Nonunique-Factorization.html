@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-22T11:26:23-05:00    *-->
+<!--*    on 2020-07-24T15:05:16-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -172,8 +172,8 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="Sec-Ideals.html" data-scroll="Sec-Ideals"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a><ul>
 <li><a href="SubSec-Ideals-In-General.html" data-scroll="SubSec-Ideals-In-General">Ideals in general</a></li>
-<li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings">Quotient Rings</a></li>
 <li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms">Homomorphisms</a></li>
+<li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings">Quotient Rings: New Rings from Old</a></li>
 </ul>
 </li>
 <li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
@@ -184,52 +184,59 @@ MathJax.Hub.Config({
 <span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">Nonunique Factorization</span>
 </h2>
 <article class="assemblage assemblage-like" id="assemblage-17"><h6 class="heading"><span class="title">Guiding Questions.</span></h6>
-<p id="p-633">In this section, we'll seek to answer the questions: <ul class="disc">
-<li id="li-183">How can unique factorization fail, and why does it matter?</li>
-<li id="li-184">What is an example of a nonatomic domain?</li>
-<li id="li-185">What is an example of an element that does not factor uniquely into a product of irreducibles?</li>
-</ul></p></article><p id="p-634">Despite the evidence to the contrary, not every ring has the unique factorization property. That is, there are commutative rings with identity which are not UFDs.  In fact, the failure of certain rings in algebraic number theory to have the unique factorization property played a role in several failed attempts to prove Fermat's Last Theorem, which says that there are no nontrivial integer solutions \((x,y,z)\) to the equation \(x^n + y^n = z^n\) if \(n \ge 3\text{.}\) Pierre de Fermat famously claimed that he had a “marvelous proof” of this fact, but the margin of the book in which he was writing was “too narrow to contain it.” Fermat's supposed proof was never found, and many now doubt that he had one. The search for a valid proof would not be complete until the work of Andrew Wiles and Richard Taylor in the mid-1990s.</p>
-<p id="p-635">In 1847, Gabriel Lamé claimed he had completely solved the problem. His solution relied on the factorization of \(x^p + y^p\text{,}\) where \(p\) is an odd prime, as</p>
+<p id="p-641">In this section, we'll seek to answer the questions: <ul class="disc">
+<li id="li-191">How can unique factorization fail, and why does it matter?</li>
+<li id="li-192">What is an example of a nonatomic domain?</li>
+<li id="li-193">What is an example of an element that does not factor uniquely into a product of irreducibles?</li>
+</ul></p></article><p id="p-642">Despite the evidence to the contrary, not every ring has the unique factorization property. That is, there are commutative rings with identity which are not UFDs.  In fact, the failure of certain rings in algebraic number theory to have the unique factorization property played a role in several failed attempts to prove Fermat's Last Theorem, which says that there are no nontrivial integer solutions \((x,y,z)\) to the equation \(x^n + y^n = z^n\) if \(n \ge 3\text{.}\) Pierre de Fermat famously claimed that he had a “marvelous proof” of this fact, but the margin of the book in which he was writing was “too narrow to contain it.” Fermat's supposed proof was never found, and many now doubt that he had one. The search for a valid proof would not be complete until the work of Andrew Wiles and Richard Taylor in the mid-1990s.</p>
+<p id="p-643">In 1847, Gabriel Lamé claimed he had completely solved the problem. His solution relied on the factorization of \(x^p + y^p\text{,}\) where \(p\) is an odd prime, as</p>
 <div class="displaymath">
 \begin{equation*}
 x^p + y^p = (x+y)(x+\zeta y) \cdots (x+\zeta^{p-1}y)\text{,}
 \end{equation*}
 </div>
 <p data-braille="continuation">where \(\zeta = e^{2\pi i/p}\) is a primitive \(p\)-th root of unity in \(\C\text{.}\) However, the ring \(\Z[\zeta] = \setof{a_0 + a_1 \zeta + a_2 \zeta^2 + \cdots + a_{p-1} \zeta^{p-1}}{a_i\in\Z}\) is not a unique factorization domain.</p>
-<p id="p-636">There are two ways that unique factorization in an integral domain can fail: there can be a failure of a nonzero nonunit to factor into irreducibles, or there can be nonassociate factorizations of the same element. We investigate each in turn.</p>
+<p id="p-644">There are two ways that unique factorization in an integral domain can fail: there can be a failure of a nonzero nonunit to factor into irreducibles, or there can be nonassociate factorizations of the same element. We investigate each in turn.</p>
 <article class="exploration project-like" id="exploration-22"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">A non-atomic domain.</span>
 </h6>
-<p id="p-637">We say an integral domain \(R\) is <dfn class="terminology">atomic</dfn> if every nonzero nonunit can be written as a finite product of irreducibles in \(R\text{.}\) <aside class="aside aside-like" id="aside-8">The term <em class="emphasis">atom</em> was suggested by <a class="external" href="https://en.wikipedia.org/wiki/Paul_Cohn" target="_blank">Paul Cohn</a> as a synonym for irreducible.</aside> In this exploration, we encounter a non-atomic domain.</p>
-<p id="p-638">Let \(R = \Z + x\Q[x] = \setof{a + b_1 x + b_2 x^2 + \cdots + b_n x^n}{a\in \Z, b_1,\ldots, b_n \in \Q, n\ge 0}\text{,}\) the set of polynomials with integer constant terms and rational coefficients.</p>
+<p id="p-645">We say an integral domain \(R\) is <dfn class="terminology">atomic</dfn> if every nonzero nonunit can be written as a finite product of irreducibles in \(R\text{.}\) <aside class="aside aside-like" id="aside-8">The term <em class="emphasis">atom</em> was suggested by <a class="external" href="https://en.wikipedia.org/wiki/Paul_Cohn" target="_blank">Paul Cohn</a> as a synonym for irreducible.</aside> In this exploration, we encounter a non-atomic domain.</p>
+<p id="p-646">Let</p>
+<div class="displaymath">
+\begin{align*}
+R \amp = \Z + x\Q[x]\\
+\amp = \setof{a + b_1 x + b_2 x^2 + \cdots + b_n x^n}{a\in \Z, b_1,\ldots, b_n \in \Q, n\ge 0},
+\end{align*}
+</div>
+<p data-braille="continuation">the set of polynomials with integer constant terms and rational coefficients.</p>
 <ol class="decimal">
-<li id="li-186">Convince yourself that \(R\) is an integral domain. You do not need to prove it in detail, but you should at least argue that \(R\) is closed under the usual polynomial addition and multiplication.</li>
-<li id="li-187">Describe the irreducibles in \(R\text{.}\)</li>
-<li id="li-188">Use the notion of degree to argue that any factorization of \(x\) in \(R\) has the form<div class="displaymath">
+<li id="li-194">Convince yourself that \(R\) is an integral domain. You do not need to prove it in detail, but you should at least argue that \(R\) is closed under the usual polynomial addition and multiplication, and that \(R\) is a domain.</li>
+<li id="li-195">Describe the irreducibles in \(R\text{.}\)</li>
+<li id="li-196">Use the notion of degree to argue that any factorization of \(x\) in \(R\) has the form<div class="displaymath">
 \begin{equation*}
 x = m\left(\frac{x}{m}\right).
 \end{equation*}
 </div>
 </li>
-<li id="li-189">Explain why the factorization in the previous part cannot lead to a factorization of \(x\) into irreducibles in \(R\text{.}\)</li>
-</ol></article><p id="p-639">We now explore the atomic domain \(R = \Z[\sqrt{-7}] = \setof{a+b\sqrt{-7}}{a,b\in\Z}\text{.}\) As we will see, even when a nonzero nonunit can be written as a product of irreducibles, it may be the case that this factorization is not unique.</p>
+<li id="li-197">Explain why the factorization in the previous part cannot lead to a factorization of \(x\) into irreducibles in \(R\text{.}\)</li>
+</ol></article><p id="p-647">We now explore the atomic domain \(R = \Z[\sqrt{-7}] = \setof{a+b\sqrt{-7}}{a,b\in\Z}\text{.}\) As we will see, even when a nonzero nonunit can be written as a product of irreducibles, it may be the case that this factorization is not unique.</p>
 <article class="activity project-like" id="activity-17"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
 </h6>
-<p id="p-640">Verify that \(8 = (1+\sqrt{-7})(1-\sqrt{-7})\text{.}\)</p></article><p id="p-641">Next, we develop a multiplicative function \(\delta\) which enables us to explore the multiplicative properties of \(\Z[\sqrt{-7}]\text{.}\)</p>
+<p id="p-648">Verify that \(8 = (1+\sqrt{-7})(1-\sqrt{-7})\text{.}\)</p></article><p id="p-649">Next, we develop a multiplicative function \(\delta\) which enables us to explore the multiplicative properties of \(\Z[\sqrt{-7}]\text{.}\)</p>
 <article class="theorem theorem-like" id="theorem-59"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span>
 </h6>
-<p id="p-642">Define \(\delta : R \to \N_0\) by \(\delta(a+b\sqrt{-7}) = a^2 + 7 b^2\text{.}\) Then for all \(x,y\in R\text{,}\) \(\delta(xy) = \delta(x)\delta(y)\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-60"><h6 class="heading">
+<p id="p-650">Define \(\delta : R \to \N_0\) by \(\delta(a+b\sqrt{-7}) = a^2 + 7 b^2\text{.}\) Then for all \(x,y\in R\text{,}\) \(\delta(xy) = \delta(x)\delta(y)\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-60"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
 </h6>
-<p id="p-643">An element \(u\in R\) is a unit if and only if \(\delta(u) = 1\text{.}\)</p></article><article class="lemma theorem-like" id="lemma-7"><h6 class="heading">
+<p id="p-651">An element \(u\in R\) is a unit if and only if \(\delta(u) = 1\text{.}\)</p></article><article class="lemma theorem-like" id="lemma-7"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span>
 </h6>
-<p id="p-645">There do not exist \(x,y\in \N_0\) such that \(2 = x^2 + 7y^2\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-61"><h6 class="heading">
+<p id="p-653">There do not exist \(x,y\in \N_0\) such that \(2 = x^2 + 7y^2\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-61"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.4</span><span class="period">.</span>
 </h6>
-<p id="p-647">The elements 2, \(1+ \sqrt{-7}\text{,}\) and \(1-\sqrt{-7}\) are irreducible in \(R\text{.}\) We conclude that \(R\) is not a UFD.</p></article></section></div></main>
+<p id="p-655">The elements 2, \(1+ \sqrt{-7}\text{,}\) and \(1-\sqrt{-7}\) are irreducible in \(R\text{.}\) We conclude that \(R\) is not a UFD.</p></article></section></div></main>
 </div>
 </body>
 </html>

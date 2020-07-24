@@ -1,0 +1,365 @@
+<html>
+  <head>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-07-24T13:51:21-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<link href="../css/pretext-epub.css" rel="stylesheet" type="text/css"/></head>
+  <body>
+    <div class="hidden-content" style="display:none">\(\renewcommand{\labelitemi}{$\diamond$}
+\def\arraystretch{1.5}
+\newcommand{\contentsfinish}{}
+\newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
+\newcommand{\tosay}[1]{\begin{center}\text{\fbox{\scriptsize{#1}}}\end{center}}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsecpagefont}{}
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\smallcaps{#1}}
+\def\oldequation{\equation}
+\def\endoldequation{\endequation}
+\newcommand{\nl}{
+}
+\newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\thesection}.\ \smallcaps{#1}}{\thesection.\ \smallcaps{#1}}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\scriptsize\thesection}.\ \smallcaps{#1}}{}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0.5pt}
+\newcommand{\makedefaultsection}[2][true]{
+}
+\newcommand{\timestamp}{{\color{red}Last updated: {\currenttime\ (UTC), \today}}}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\ideal}[1]{\left\langle\, #1 \,\right\rangle}
+\newcommand{\subgp}[1]{\left\langle\, #1 \,\right\rangle}
+\def\p{\varphi}
+\def\isomorphic{\cong}
+\def\Gal{\text{Gal}}
+\def\im{\text{im}}
+\def\normal{\vartriangleleft}
+\renewcommand{\qedsymbol}{$\checkmark$}
+\def\lcm{{\text{lcm}\,}}
+\newcommand{\q}[1]{{\color{red} {#1}}}
+\newcommand{\startimportant}[1]{\end{[{Hint:} #1]\end}}
+\renewcommand{\textcircled}[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt,color=red] (char) {#1};}}
+\newcommand{\crossout}[1]{\tikz[baseline=(char.base)]{\node[mynode, cross out,draw] (char) {#1};}}
+\newcommand{\set}[1]{\left\{ {#1} \right\}}
+\newcommand{\setof}[2]{{\left\{#1\,\colon\,#2\right\}}}
+\def\C{{\mathbb C}}
+\def\Z{{\mathbb Z}}
+\def\bF{{\mathbb F}}
+\def\Q{{\mathbb Q}}
+\def\N{{\mathbb N}}
+\def\R{{\mathbb R}}
+\newcommand{\h}[1]{{\textbf{#1}}}
+\def\presnotes{}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+    <section class="section" id="SubSec-Fields">
+      <h2 class="heading hide-type"><span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">Fields</span></h2>
+      <article class="assemblage assemblage-like" id="assemblage-8">
+        <h6 class="heading">
+          <span class="title">Guiding Questions.</span>
+        </h6>
+        <p id="p-216">In this section, we'll seek to answer the questions: <ul class="disc"><li id="li-46">What are binary operations?</li><li id="li-47">What is a field? What sorts of things can one do in a field?</li><li id="li-48">What are examples of fields?</li></ul></p>
+      </article>
+      <p id="p-217">We now begin the process of abstraction. We will do this in stages, beginning with the concept of a <em class="emphasis">field</em>. First, we need to formally define some familiar sets of numbers.</p>
+      <article class="definition definition-like" id="definition-11">
+        <h6 class="heading">
+          <span class="type">Definition</span>
+          <span class="space"> </span>
+          <span class="codenumber">2.1.1</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-218">The rational numbers, denoted by \(\Q\text{,}\) is the set</p>
+        <div class="displaymath">
+\begin{equation*}
+\Q = \setof{\frac{a}{b}}{a,b\in \Z, \ b\ne 0}\text{.}
+\end{equation*}
+</div>
+      </article>
+      <p id="p-219">Recall that in elementary school, you learned that two fractions \(\frac{a}{b}, \frac{c}{d} \in \Q\) are equivalent if and only if \(ad=bc\text{.}\)</p>
+      <article class="activity project-like" id="activity-7">
+        <h6 class="heading">
+          <span class="type">Activity</span>
+          <span class="space"> </span>
+          <span class="codenumber">2.1.1</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-220">Prove that our elementary school definition of equivalent fractions is an equivalence relation. Recall <a href="SubSec-Integers-Mod-m.xhtml#def-eqrel" class="internal" title="Definition 1.4.2">Definition 1.4.2</a>.</p>
+      </article>
+      <p id="p-221">We likely have an intuitive idea of what is meant by \(\R\text{,}\) the set of real numbers. Defining \(\R\) rigorously is actually quite difficult, and occupies a significant amount of time in a first course in real analysis. Thus, we will make use of your intuition. </p>
+      <p id="p-222">Out of \(\R\) we may build the complex numbers.</p>
+      <article class="definition definition-like" id="definition-12">
+        <h6 class="heading">
+          <span class="type">Definition</span>
+          <span class="space"> </span>
+          <span class="codenumber">2.1.2</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-223">The <dfn class="terminology">complex numbers</dfn> consist of all expressions of the form \(a+bi\text{,}\) where \(a,b\in \R\) and \(i^2 = -1\text{.}\) Given \(z = a+bi\text{,}\) we say \(a\) is the <dfn class="terminology">real part</dfn> of \(z\) and \(b\) is the <dfn class="terminology">imaginary part</dfn>. The set of complex numbers is denoted \(\C\text{.}\)</p>
+      </article>
+      <p id="p-224">As was mentioned in the <a href="Sec-Introduction.xhtml" class="internal" title="Preface: Introduction">Introduction</a>, <em class="emphasis">algebra</em> comes from an Arabic word meaning “the reunion of broken parts”. We therefore need a way of combining two elements of a set into one; we turn to a particular type of function, known as a binary operation, to accomplish this.</p>
+      <article class="definition definition-like" id="def_binaryoperation">
+        <h6 class="heading">
+          <span class="type">Definition</span>
+          <span class="space"> </span>
+          <span class="codenumber">2.1.3</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-225"> Let \(X\) be a nonempty set. A function \(\star : X \times X \to X\) is called a <dfn class="terminology">binary operation</dfn>. If \(\star\) is a binary operation on \(X\text{,}\) we say that \(X\) is <dfn class="terminology">closed under the operation \(\star\)</dfn>. [Given \(a,b\in X\text{,}\) we usually write \(a\star b\) in place of the typical function notation, \(\star(a,b)\text{.}\)]</p>
+      </article>
+      <article class="investigation project-like" id="invest-binop">
+        <h6 class="heading">
+          <span class="type">Investigation</span>
+          <span class="space"> </span>
+          <span class="codenumber">2.1.2</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-226">Which of \(+, -, \cdot, \div\) are binary operations:</p>
+        <ol class="decimal">
+          <li id="li-49">
+            <p id="p-227">on \(\R\text{?}\)</p>
+          </li>
+          <li id="li-50">
+            <p id="p-228">on \(\Q\text{?}\)</p>
+          </li>
+          <li id="li-51">
+            <p id="p-229">on \(\Z\text{?}\)</p>
+          </li>
+          <li id="li-52">
+            <p id="p-230">on \(\N\text{?}\)</p>
+          </li>
+          <li id="li-53">
+            <p id="p-231">on \(\C\text{?}\) (Recall that for \(a_1 + b_1 i, a_2 + b_2 i \in \C\text{,}\) \((a_1 + b_1 i) + (a_2 + b_2 i) := (a_1 + a_2) + (b_1 + b_2)i\) and  \((a_1 + b_1 i)(a_2 + b_2 i) := (a_1 a_2 - b_1 b_2) + (a_1 b_2 + b_1 a_2) i\text{.}\))</p>
+          </li>
+        </ol>
+        <div class="solutions">
+          <div class="answer solution-like" id="answer-4">
+            <span class="type">Answer</span>
+            <p id="p-232">Division is never a binary operation. The others are binary operations on \(\C\text{,}\) \(\R, \Q\text{,}\) and \(\Z\text{.}\) The only binary operation on \(\N\) is addition.</p>
+          </div>
+        </div>
+      </article>
+      <article class="activity project-like" id="activity-8">
+        <h6 class="heading">
+          <span class="type">Activity</span>
+          <span class="space"> </span>
+          <span class="codenumber">2.1.3</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-233">Choose your favorite nonempty set \(X\) and describe a binary operation different than those in <a href="SubSec-Fields.xhtml#invest-binop" class="internal" title="Investigation 2.1.2">Investigation 2.1.2</a>.</p>
+        <div class="solutions">
+          <div class="answer solution-like" id="answer-5">
+            <span class="type">Answer</span>
+            <p id="p-234">Answers vary, but one option is to define \(\min : \Z\times \Z \to \Z\) by</p>
+            <div class="displaymath">
+\begin{equation*}
+\min(a,b) := \begin{cases} a \amp \text{if } a \le b\\ b \amp \text{if } b\le a\end{cases.}
+\end{equation*}
+</div>
+          </div>
+        </div>
+      </article>
+      <p id="p-235">The hallmark of modern pure mathematics is the use of <em class="emphasis">axioms</em>. An axiom is essentially an unproved assertion of truth. Our use of axioms serves several purposes.</p>
+      <p id="p-236">From a logical perspective, axioms help us avoid the problem of infinite regression (e.g., asking <em class="emphasis">How do you know?</em> over and over again). That is, axioms give us very clear starting points from which to make our deductions.</p>
+      <p id="p-237">To that end, our first abstract algebraic structure captures and axiomatizes familiar behavior about how numbers can be combined to produce other numbers of the same type.</p>
+      <article class="definition definition-like" id="def_field">
+        <h6 class="heading">
+          <span class="type">Definition</span>
+          <span class="space"> </span>
+          <span class="codenumber">2.1.4</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-238">A <dfn class="terminology">field</dfn> is a nonempty set \(F\) with at least two elements and binary operations \(+\) and \(\cdot\text{,}\) denoted \((F,+,\cdot)\text{,}\) and satisfying the following <dfn class="terminology">field axioms</dfn>:</p>
+        <ol class="decimal">
+          <li id="li-54">
+            <p id="p-239">Given any \(a,b,c\in F\text{,}\) \((a+b)+c = a+(b+c)\text{.}\)</p>
+          </li>
+          <li id="li-55">
+            <p id="p-240">Given any \(a,b\in F\text{,}\) \(a+b= b+a\text{.}\)</p>
+          </li>
+          <li id="li-56">
+            <p id="p-241">There exists an element \(0_F\in F\) such that for all \(a\in F\text{,}\) \(a+0_F = 0_F + a = a\text{.}\)</p>
+          </li>
+          <li id="li-57">
+            <p id="p-242">Given any \(a\in F\) there exists a \(b\in F\) such that \(a+b = b + a =0_F\text{.}\)</p>
+          </li>
+          <li id="li-58">
+            <p id="p-243">Given any \(a,b,c\in F\text{,}\) \((a\cdot b)\cdot c = a\cdot (b\cdot c)\text{.}\)</p>
+          </li>
+          <li id="li-59">
+            <p id="p-244">Given any \(a,b\in F\text{,}\) \(a\cdot b = b\cdot a\text{.}\)</p>
+          </li>
+          <li id="li-60">
+            <p id="p-245">There exists an element \(1_F\in F\) such that for all \(a\in F\text{,}\) \(1_F\cdot a = a\cdot 1_F = a\text{.}\)</p>
+          </li>
+          <li id="li-61">
+            <p id="p-246">For all \(a\in F\text{,}\) \(a\ne 0_F\text{,}\) there exists a \(b\in F\) such that \(a\cdot b = b\cdot a = 1_F\text{.}\)</p>
+          </li>
+          <li id="li-62">
+            <p id="p-247">For all \(a,b,c\in F\text{,}\) \(a\cdot (b+c) = a\cdot b + a\cdot c\text{.}\)</p>
+          </li>
+          <li id="li-63">
+            <p id="p-248">For all \(a,b,c\in F\text{,}\) \((a+b)\cdot c = a\cdot c + b\cdot c\text{.}\)</p>
+          </li>
+        </ol>
+      </article>
+      <p id="p-249">We will usually write \(a\cdot b\) as \(ab\text{.}\) Additionally, we will usually drop the subscripts on \(0,1\) unless we need to distinguish between fundamentally different identities in different fields.</p>
+      <article class="investigation project-like" id="exer_fieldexamples">
+        <h6 class="heading">
+          <span class="type">Investigation</span>
+          <span class="space"> </span>
+          <span class="codenumber">2.1.4</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-250">Which of the following are fields under the specified operations? For most, a short justification or counterexample is sufficient.</p>
+        <ol class="decimal">
+          <li id="li-64">
+            <p id="p-251">\(\N\) under the usual addition and multiplication operations</p>
+          </li>
+          <li id="li-65">
+            <p id="p-252">\(\Z\) under the usual addition and multiplication operations</p>
+          </li>
+          <li id="li-66">
+            <p id="p-253">\(2\Z\text{,}\) the set of even integers, under the usual addition and multiplication operations</p>
+          </li>
+          <li id="li-67">
+            <p id="p-254">\(\Q\) under the usual addition and multiplication operations</p>
+          </li>
+          <li id="li-68">
+            <p id="p-255">\(\Z_{6}\) under addition and multiplication modulo 10</p>
+          </li>
+          <li id="li-69">
+            <p id="p-256">\(\Z_{5}}\) under addition and multiplication modulo 11</p>
+          </li>
+          <li id="li-70">
+            <p id="p-257">\(\R\) under the usual addition and multiplication operations</p>
+          </li>
+          <li id="li-71">
+            <p id="p-258">\(\C\) under the complex addition and multiplication defined in <a href="SubSec-Fields.xhtml#invest-binop" class="internal" title="Investigation 2.1.2">Investigation 2.1.2</a></p>
+          </li>
+          <li id="li-72">
+            <p id="p-259">\(\mathcal{M}_2(\R) := \setof{\left(\begin{matrix}a \amp b \\ c \amp d \end{matrix} \right)}{a,b,c,d\in\R}\)<sup><a xmlns:epub="http://www.idpf.org/2007/ops" epub:type="noteref" href="#fn-4">1</a></sup><aside xmlns:epub="http://www.idpf.org/2007/ops" epub:type="footnote" id="fn-4">For students who have taken a linear algebra course.</aside>, the set of \(2\times 2\) matrices with real coefficients using the usual definition of matrix multiplication<sup><a xmlns:epub="http://www.idpf.org/2007/ops" epub:type="noteref" href="#fn-5">2</a></sup><aside xmlns:epub="http://www.idpf.org/2007/ops" epub:type="footnote" id="fn-5">Recall that, if \(\left(\begin{matrix}a_1 \amp b_1 \\ c_1 \amp d_1 \end{matrix} \right), \left(\begin{matrix}a_2 \amp b_2 \\ c_2 \amp d_2 \end{matrix} \right)\in \mathcal{M}_2(\R)\text{,}\) then \(\left(\begin{matrix}a_1 \amp b_1 \\ c_1 \amp d_1 \end{matrix} \right) \cdot \left(\begin{matrix}a_2 \amp b_2 \\ c_2 \amp d_2 \end{matrix} \right) = \left(\begin{matrix}a_1 a_2 + b_1 c_2 \amp a_1 b_2 + b_1 d_2 \\ c_1 a_2 + d_1 c_2 \amp c_1 b_2 + d_1 d_2 \end{matrix} \right)\text{.}\)</aside> and matrix addition.</p>
+          </li>
+        </ol>
+        <div class="hidden-content tex2jax_ignore" id="hk-fn-4">
+          <div class="fn">For students who have taken a linear algebra course.</div>
+        </div>
+        <div class="hidden-content tex2jax_ignore" id="hk-fn-5">
+          <div class="fn">Recall that, if \(\left(\begin{matrix}a_1 \amp b_1 \\ c_1 \amp d_1 \end{matrix} \right), \left(\begin{matrix}a_2 \amp b_2 \\ c_2 \amp d_2 \end{matrix} \right)\in \mathcal{M}_2(\R)\text{,}\) then \(\left(\begin{matrix}a_1 \amp b_1 \\ c_1 \amp d_1 \end{matrix} \right) \cdot \left(\begin{matrix}a_2 \amp b_2 \\ c_2 \amp d_2 \end{matrix} \right) = \left(\begin{matrix}a_1 a_2 + b_1 c_2 \amp a_1 b_2 + b_1 d_2 \\ c_1 a_2 + d_1 c_2 \amp c_1 b_2 + d_1 d_2 \end{matrix} \right)\text{.}\)</div>
+        </div>
+        <div class="solutions">
+          <div class="solution solution-like" id="solution-12">
+            <span class="type">Solution</span>
+            <ol id="p-260" class="decimal">
+              <li id="li-73">
+                <p id="p-261">\(\N\) is not closed under taking additive inverses, so is not a field.</p>
+              </li>
+              <li id="li-74">
+                <p id="p-262">\(\Z\) is not a field, as there is no integer \(a\) such that \(2a = 1\text{.}\)</p>
+              </li>
+              <li id="li-75">
+                <p id="p-263">\(2\Z\) is not a field for the same reason.</p>
+              </li>
+              <li id="li-76">
+                <p id="p-264">\(\Q\) is a field.</p>
+              </li>
+              <li id="li-77">
+                <p id="p-265">\(\Z_{6}\) is not a field; there is no \(\overline{a}\in \Z_{10}\) for which \(\overline{2}\cdot \overline{a} = \overline{1}\) (you can check them all; there are only 4 viable options).</p>
+              </li>
+              <li id="li-78">
+                <p id="p-266">\(\Z_{5}\) <em class="emphasis">is</em> a field. The axioms pertaining to addition and multiplication were established earlier or rely on the same axioms holding for \(\Z\text{.}\)</p>
+              </li>
+              <li id="li-79">
+                <p id="p-267">\(\R\) is a field</p>
+              </li>
+              <li id="li-80">
+                <p id="p-268">\(\C\) is a field. Given \(a+bi\ne 0\text{,}\) \((a+bi)^{-1} = \frac{a}{a^2 + b^2} - \frac{b}{a^2 + b^2} i\text{.}\)</p>
+              </li>
+              <li id="li-81">
+                <p id="p-269">\(\mathcal{M}_2(\R)\) is not a field. Matrix multiplication is not commutative.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </article>
+      <p id="p-270">In the <a href="SubSec-Fields.xhtml#exer_fieldexamples" class="internal" title="Investigation 2.1.4">Investigation 2.1.4</a>, you determined which of sets of familiar mathematical objects are and are not fields. Notice that you have been working with fields for years and that our abstraction of language to that of fields is simply to allow us to explore the common features at the same time - it is inefficient to prove the same statement about every single field when we can prove it once and for all about fields in general.</p>
+      <article class="theorem theorem-like" id="thm_fieldproperties">
+        <h6 class="heading">
+          <span class="type">Theorem</span>
+          <span class="space"> </span>
+          <span class="codenumber">2.1.5</span>
+          <span class="period">.</span>
+          <span class="space"> </span>
+          <span class="title">Properties of Fields.</span>
+        </h6>
+        <p id="p-271">Let \(F\) be a field.</p>
+        <ol class="decimal">
+          <li id="li-82">
+            <p id="p-272">The additive identity \(0\) is unique.</p>
+          </li>
+          <li id="li-83">
+            <p id="p-273">For all \(a\in F\text{,}\) \(a \cdot 0 = 0\cdot a = 0\text{.}\)</p>
+          </li>
+          <li id="li-84">
+            <p id="p-274">Additive inverses are unique.</p>
+          </li>
+          <li id="li-85">
+            <p id="p-275">The multiplicative identity \(1\) is unique.</p>
+          </li>
+          <li id="li-86">
+            <p id="p-276">Multiplicative inverses are unique.</p>
+          </li>
+          <li id="li-87">
+            <p id="p-277">\((-1)\cdot (-1) = 1\) <div class="hint solution-like" id="hint-8"><span class="type">Hint</span><p id="p-278">Note that we are saying that the additive inverse of the multiplicative identity times itself equals the multiplicative identity. You should use only the field axioms and the properties previously established in this theorem.</p></div><aside class="aside aside-like" id="aside-4">“Minus times Minus equals Plus: The reason for this we need not discuss.” -W.H. Auden</aside></p>
+          </li>
+        </ol>
+      </article>
+      <article class="proof" id="proof-23">
+        <h6 class="heading">
+          <span class="type">Proof<span class="period">.</span></span>
+        </h6>
+        <ol class="decimal">
+          <li id="li-88">
+            <p id="p-279">Assume \(0, 0'\) both satisfy the additive identity axiom. Observe that \(0 = 0 + 0' = 0'\text{.}\)</p>
+          </li>
+          <li id="li-89">
+            <p id="p-280">As \(0 = 0 + 0\text{,}\) we may write \(a\cdot 0 = a\cdot (0 + 0) = a\cdot 0 + a \cdot 0\text{.}\) Now add the additive inverse of \(a\cdot 0\) to both sides to obtain \(0 = a \cdot 0 = 0\cdot a\text{.}\)</p>
+          </li>
+          <li id="li-90">
+            <p id="p-281">Let \(a\in F\) and suppose \(b\) and \(c\) are such that \(a+c = 0\) and \(a+b = 0\text{.}\) Then \(a+c = a+b\text{,}\) and we may add \(b\) (or \(c\)) to both sides to obtain \(b+(a+b) = (b+a)+b = 0 + b = b\) and \(c+(a+c) = (c+a)+c = 0 + c = c\text{.}\) Thus \(b=c\text{.}\)</p>
+          </li>
+          <li id="li-91">
+            <p id="p-282">Suppose \(1\) and \(1'\) are multiplicative identities. Then \(1 = 1 \cdot 1' = 1'\text{.}\)</p>
+          </li>
+          <li id="li-92">
+            <p id="p-283">Let \(a\in F\) be nonzero and suppose \(b,c\) are multiplicative inverses for \(a\text{.}\) Then \(ab = 1 = ac\text{,}\) and we may multiply by \(b\) (or \(c\)) to obtain \(b(ab) = (ba)b = 1\cdot b = b = b(ac) = (ba)c = 1\cdot c = c\text{.}\)</p>
+          </li>
+          <li id="li-93">
+            <p id="p-284">Observe that \((-1) + 1 = 0\) by the definition of additive inverses. Multiply both sides by \(-1\) and distribute to obtain \((-1)(-1) + (-1)\cdot 1 = (-1)\cdot 0\text{.}\) By part 2 of this theorem and the definition of a multiplicative identity, we obtain \((-1)(-1) + (-1) = 0\text{.}\) We now add the multiplicative identity to obtain \((-1)(-1) + (-1) + 1 = 0 + 1\text{,}\) which simplifies to \((-1)(-1) = 1\text{.}\)</p>
+          </li>
+        </ol>
+      </article>
+      <p id="p-285">One consequence of <a href="SubSec-Fields.xhtml#thm_fieldproperties" class="internal" title="Theorem 2.1.5: Properties of Fields">Theorem 2.1.5</a> is that, given \(a\in F\text{,}\) \(b\in F\setminus \set{0}\text{,}\) we may refer to \(-a\) as <em class="emphasis">the</em> additive inverse of \(a\text{,}\) and \(b^{-1}\) as <em class="emphasis">the</em> multiplicative inverse of \(b\text{.}\) We will thus employ this familiar terminology henceforth.</p>
+      <article class="investigation project-like" id="investigation-9">
+        <h6 class="heading">
+          <span class="type">Investigation</span>
+          <span class="space"> </span>
+          <span class="codenumber">2.1.5</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-286">For which \(n &gt; 1\) is \(\Z_n\) a field? Compute some examples, form a conjecture, and prove your conjecture.</p>
+      </article>
+    </section>
+  </body>
+</html>

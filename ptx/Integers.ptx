@@ -89,7 +89,12 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
 			</ol>
 		</statement>
 		<solution>
-			TBD.
+			<ol>
+				<li>Examples vary, but <m>f(x) = x^2-4</m> and <m>g(x) = x+1</m> suffice.</li>
+				<li>Since <m>f(x) = x^2 - 4\in S</m>, we see that <m>2\in D</m>. Furthermore, the zero polynomial is not in <m>S</m>, so the degrees of polynomials in <m>S</m> are all nonnegative integers. Thus, <m>D\subseteq \N_0</m>.</li>
+				<li>We see that <m>D</m> meets the conditions of the well-ordering principle, and so it has a least element. This least element is the degree of the polynomial of least degree satisfying <m>f(2) = f(-2) = 0</m> and <m>f(0) = -4</m>.</li>
+			</ol>
+
 		</solution>
 	</exploration>
 
@@ -1620,7 +1625,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
         Thus, <m>m|ab-cd</m> and <m>ab \equiv cd\mod m</m>.
       </p>
     </proof>
-    <definition>
+    <definition xml:id="def-well-defined">
     <idx>well-defined statement</idx>
       <statement>
         <p>

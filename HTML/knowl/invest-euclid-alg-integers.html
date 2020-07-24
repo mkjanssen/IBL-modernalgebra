@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-07-24T13:51:23-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="investigation project-like"><h6 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">(Euclidean Algorithm).</span>
+</h6>
+<p>Let \(a,b\in \N\text{.}\) Use <a href="SubSec-Divisibility-in-the-Integers.xhtml#thm_divalg" class="internal" title="Theorem 1.2.5: The Division Algorithm for \(\N\)">Theorem 1.2.5</a> and <a href="SubSec-Divisibility-in-the-Integers.xhtml#invest_gcdremainder" class="internal" title="Investigation 1.2.5">Investigation 1.2.5</a> to determine an algorithm for computing \(\gcd(a,b)\text{.}\) How could your method be modified to compute \(\gcd(a,b)\) for \(a,b\in\Z\text{?}\)</p>
+<div class="solutions"><div class="solution solution-like">
+<span class="type">Solution</span><p>Let \(a,b\in \N\text{.}\) Write \(a = bq_1+r_1\text{.}\) By <a href="SubSec-Divisibility-in-the-Integers.xhtml#invest_gcdremainder" class="internal" title="Investigation 1.2.5">Theorem 1.2.5</a>, \(\gcd(a,b) = \gcd(b,r_1)\text{.}\)</p>
+<p>Then, write \(b = r_1 q_2 + r_2\) using the Division algorithm. Observe \(\gcd(b,r_1) = \gcd(r_1,r_2)\text{.}\) Continue until there is a \(k\) for which \(r_k = 0\text{,}\) so \(\gcd(r_k,r_{k-1}) = r_{k-1}\text{.}\) Then \(r_{k-1}= \gcd(r_k, r_{k-1}) = \gcd(r_{k-1},r_{k-2}) = \cdots = \gcd(a,b)\text{.}\)</p>
+</div></div></article><span class="incontext"><a href="SubSec-Divisibility-in-the-Integers.xhtml#invest-euclid-alg-integers">in-context</a></span>
+</body>
+</html>

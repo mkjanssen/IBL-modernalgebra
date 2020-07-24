@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-05T11:00:44-06:00    *-->
+<!--*    on 2020-07-24T13:51:23-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,8 +13,21 @@
 </head>
 <body>
 <article class="theorem theorem-like"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">The Division Algorithm.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">The Division Algorithm for \(\N\).</span>
 </h6>
-<p>Let \(a,b\in \N\text{.}\) Then there exist unique integers \(q,r\) such that \(a = bq + r\text{,}\) where \(0 \le r \lt b\text{.}\)</p></article><span class="incontext"><a href="SubSec-Divisibility-in-the-Integers.html#thm_divalg">in-context</a></span>
+<p>Let \(a,b\in \N\text{.}\) Then there exist unique integers \(q,r\) such that \(a = bq + r\text{,}\) where \(0 \le r \lt b\text{.}\)</p>
+<div class="hint solution-like">
+<span class="type">Hint</span><span class="space"> </span><span class="codenumber">1</span><p>There are two parts to this theorem. First, you must establish that \(q\) and \(r\) exist. This is best done via <a href="SubSec-WellOrdering.xhtml#axiom_wellordering" class="internal" title="Axiom 1.1.2: Well-Ordering Principle">Axiom 1.1.2</a>. If you're stuck on that, check the second hint.</p>
+<p>Once you have established that \(q\) and \(r\) exist, show that they are unique but assuming \(a = bq+r\) and \(a = bq' + r'\text{,}\) where \(r,r'\) both satisfy the conditions of the theorem. Argue that \(q = q'\) and \(r = r'\text{.}\)</p>
+</div>
+<div class="hint solution-like">
+<span class="type">Hint</span><span class="space"> </span><span class="codenumber">2</span><p>Let \(S = \setof{a-bs}{s\in \N_0, a-bs\ge 0}\text{.}\)</p>
+</div></article><article class="proof"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p>First, assume that \(a \lt b\text{.}\) Then \(q = 0\) and \(r = a\) are sufficient. If \(a = b\text{,}\) then \(q = 1\) and \(r = 0\) will work.</p>
+<p>Now, assume that \(a &gt; b\text{.}\) Then the set \(S = \setof{s\in\N}{a-bs \ge 0}\) is nonempty, as \(a-b\in S\text{.}\) By <a href="SubSec-WellOrdering.xhtml#axiom_wellordering" class="internal" title="Axiom 1.1.2: Well-Ordering Principle">Axiom 1.1.2</a>, \(S\) has a least element, which we will call \(r\text{.}\) Let \(q\in \N_0\) be such that \(r = a-bq\text{;}\) then \(a = bq + r\text{.}\)</p>
+<p>To finish the proof, it is enough to show that this choice of \(r\) satisfies \(0\le r \le b-1\text{.}\) Observe that \(r\in S\text{,}\) so \(r\ge 0\text{.}\) If \(r \ge b\text{,}\) then \(a - b(q+1) = a-bq -b = r -b \ge 0\text{.}\) Since \(q+1 &gt; q\text{,}\) this is a contradiction to the assumption that \(q\) was the largest element of \(S\text{.}\) Thus, \(r \lt b\text{,}\) i.e., \(r \le b-1\text{.}\)</p>
+<p>Let \(q,q',r,r'\) be such that \(a = bq+r\) and \(a=bq'+r'\text{.}\) We see that \(bq+r = bq' + r'\text{,}\) so \(b(q-q') = r'-r\text{,}\) so \(b|r'-r\text{.}\) If \(r'-r = 0\text{,}\) we are done.</p>
+<p>Otherwise, \(r'-r\) is a nonzero multiple of \(n\text{.}\) If \(r' \ge r\text{,}\) then \(0\le b(q-q') = r' - r \le b-1 - r\text{,}\) a contradiction. Similarly, if \(r' \le r\text{,}\) write \(b(q'-q) = r-r' \ge 0\text{,}\) and a symmetric argument leads to a contradiction.</p>
+<p>Thus, \(r' = r\text{,}\) so \(b(q-q') = 0\text{,}\) and since \(b &gt; 0\text{,}\) \(q - q'= 0\text{,}\) i.e., \(q = q'\text{.}\)</p></article><span class="incontext"><a href="SubSec-Divisibility-in-the-Integers.xhtml#thm_divalg">in-context</a></span>
 </body>
 </html>

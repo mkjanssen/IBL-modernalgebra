@@ -1,0 +1,107 @@
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="pub-id" version="3.0">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:epub="http://www.idpf.org/2007/ops">
+    <dc:creator>Michael Janssen</dc:creator>
+    <dc:creator>Melissa Lindsey</dc:creator>
+    <dc:title>Rings With Inquiry</dc:title>
+    <dc:identifier id="pub-id">mock-123456789-0-987654321</dc:identifier>
+    <dc:language>en-US</dc:language>
+    <meta property="dcterms:modified">2020-07-24T13:51:21Z</meta>
+  </metadata>
+  <manifest xmlns:epub="http://www.idpf.org/2007/ops">
+    <item id="css" href="css/pretext-epub.css" media-type="text/css"/>
+    <item id="cover-page" href="xhtml/cover-page.xhtml" media-type="application/xhtml+xml"/>
+    <item id="table-contents" href="xhtml/table-contents.xhtml" properties="nav" media-type="application/xhtml+xml"/>
+    <item id="cover-image" href="xhtml/images/cover.png" properties="cover-image" media-type="image/png"/>
+    <!--Front Matter  Front Matter-->
+    <item id="frontmatter-1" properties="svg" href="xhtml/frontmatter-1.xhtml" media-type="application/xhtml+xml"/>
+    <!--Colophon  Colophon-->
+    <item id="colophon-1" properties="svg" href="xhtml/colophon-1.xhtml" media-type="application/xhtml+xml"/>
+    <item id="CC-BY-SA-license" href="xhtml/./images/CC-BY-SA-license.svg" media-type="image/svg+xml"/>
+    <!--Preface  Introduction-->
+    <item id="Sec-Introduction" properties="svg" href="xhtml/Sec-Introduction.xhtml" media-type="application/xhtml+xml"/>
+    <!--References  References-->
+    <item id="references-1" properties="svg" href="xhtml/references-1.xhtml" media-type="application/xhtml+xml"/>
+    <!--Preface  A Note to Students-->
+    <item id="Sec-NoteToStudents" properties="svg" href="xhtml/Sec-NoteToStudents.xhtml" media-type="application/xhtml+xml"/>
+    <!--Preface  A Note to Instructors-->
+    <item id="Sec-NoteToInstructors" properties="svg" href="xhtml/Sec-NoteToInstructors.xhtml" media-type="application/xhtml+xml"/>
+    <!--Acknowledgements  Acknowledgements-->
+    <item id="acknowledgement-1" properties="svg" href="xhtml/acknowledgement-1.xhtml" media-type="application/xhtml+xml"/>
+    <!--Chapter 1 The Integers-->
+    <item id="Sec-Integers" properties="svg" href="xhtml/Sec-Integers.xhtml" media-type="application/xhtml+xml"/>
+    <!--Section 1.1 Induction and Well-Ordering-->
+    <item id="SubSec-WellOrdering" properties="svg" href="xhtml/SubSec-WellOrdering.xhtml" media-type="application/xhtml+xml"/>
+    <item id="xkcd-wellordering" href="xhtml/https://imgs.xkcd.com/comics/well_ordering_principle.png" media-type="image/png"/>
+    <!--Section 1.2 Divisibility and GCDs in the Integers-->
+    <item id="SubSec-Divisibility-in-the-Integers" properties="svg" href="xhtml/SubSec-Divisibility-in-the-Integers.xhtml" media-type="application/xhtml+xml"/>
+    <!--Section 1.3 Primes and Factorization-->
+    <item id="SubSec-Primes-and-Factorization" properties="svg" href="xhtml/SubSec-Primes-and-Factorization.xhtml" media-type="application/xhtml+xml"/>
+    <!--References 1.3 References-->
+    <!--Section 1.4 The Integers modulo \(m\)-->
+    <item id="SubSec-Integers-Mod-m" properties="svg" href="xhtml/SubSec-Integers-Mod-m.xhtml" media-type="application/xhtml+xml"/>
+    <!--Chapter 2 Fields and Rings-->
+    <item id="Sec-Fields-and-Rings" properties="svg" href="xhtml/Sec-Fields-and-Rings.xhtml" media-type="application/xhtml+xml"/>
+    <!--Section 2.1 Fields-->
+    <item id="SubSec-Fields" properties="svg" href="xhtml/SubSec-Fields.xhtml" media-type="application/xhtml+xml"/>
+    <!--Section 2.2 Rings-->
+    <item id="SubSec-Rings" properties="svg" href="xhtml/SubSec-Rings.xhtml" media-type="application/xhtml+xml"/>
+    <!--References 2.2 References-->
+    <!--Section 2.3 Divisibility in Integral Domains-->
+    <item id="SubSec-Divisibility-in-Domains" properties="svg" href="xhtml/SubSec-Divisibility-in-Domains.xhtml" media-type="application/xhtml+xml"/>
+    <!--Section 2.4 Principal Ideals and Euclidean Domains-->
+    <item id="SubSec-Principal-Ideals" properties="svg" href="xhtml/SubSec-Principal-Ideals.xhtml" media-type="application/xhtml+xml"/>
+    <!--Chapter 3 Factorization-->
+    <item id="Sec-Factorization" properties="svg" href="xhtml/Sec-Factorization.xhtml" media-type="application/xhtml+xml"/>
+    <!--Section 3.1 Factoring Polynomials-->
+    <item id="SubSec-Factoring-Polynomials" properties="svg" href="xhtml/SubSec-Factoring-Polynomials.xhtml" media-type="application/xhtml+xml"/>
+    <!--Section 3.2 Factorization in Euclidean Domains-->
+    <item id="SubSec-Factorization-in-Euclidean-Domains" properties="svg" href="xhtml/SubSec-Factorization-in-Euclidean-Domains.xhtml" media-type="application/xhtml+xml"/>
+    <!--Section 3.3 Nonunique Factorization-->
+    <item id="SubSec-Nonunique-Factorization" properties="svg" href="xhtml/SubSec-Nonunique-Factorization.xhtml" media-type="application/xhtml+xml"/>
+    <!--Chapter 4 Ideals and Homomorphisms-->
+    <item id="Sec-Ideals" properties="svg" href="xhtml/Sec-Ideals.xhtml" media-type="application/xhtml+xml"/>
+    <!--Section 4.1 Ideals in general-->
+    <item id="SubSec-Ideals-In-General" properties="svg" href="xhtml/SubSec-Ideals-In-General.xhtml" media-type="application/xhtml+xml"/>
+    <item id="image-3" href="xhtml/./images/graph.svg" media-type="image/svg+xml"/>
+    <!--References 4.1 References-->
+    <!--Section 4.2 Homomorphisms-->
+    <item id="SubSec-Homomorphisms" properties="svg" href="xhtml/SubSec-Homomorphisms.xhtml" media-type="application/xhtml+xml"/>
+    <!--Section 4.3 Quotient Rings: New Rings from Old-->
+    <item id="SubSec-Quotient-Rings" properties="svg" href="xhtml/SubSec-Quotient-Rings.xhtml" media-type="application/xhtml+xml"/>
+    <!--Index  Index-->
+    <item id="index-1" properties="svg" href="xhtml/index-1.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine xmlns:epub="http://www.idpf.org/2007/ops">
+    <itemref idref="table-contents" linear="yes"/>
+    <itemref idref="cover-page" linear="yes"/>
+    <itemref idref="frontmatter-1" linear="yes"/>
+    <itemref idref="colophon-1" linear="yes"/>
+    <itemref idref="Sec-Introduction" linear="yes"/>
+    <itemref idref="references-1" linear="yes"/>
+    <itemref idref="Sec-NoteToStudents" linear="yes"/>
+    <itemref idref="Sec-NoteToInstructors" linear="yes"/>
+    <itemref idref="acknowledgement-1" linear="yes"/>
+    <itemref idref="Sec-Integers" linear="yes"/>
+    <itemref idref="SubSec-WellOrdering" linear="yes"/>
+    <itemref idref="SubSec-Divisibility-in-the-Integers" linear="yes"/>
+    <itemref idref="SubSec-Primes-and-Factorization" linear="yes"/>
+    <itemref idref="references-2" linear="yes"/>
+    <itemref idref="SubSec-Integers-Mod-m" linear="yes"/>
+    <itemref idref="Sec-Fields-and-Rings" linear="yes"/>
+    <itemref idref="SubSec-Fields" linear="yes"/>
+    <itemref idref="SubSec-Rings" linear="yes"/>
+    <itemref idref="references-3" linear="yes"/>
+    <itemref idref="SubSec-Divisibility-in-Domains" linear="yes"/>
+    <itemref idref="SubSec-Principal-Ideals" linear="yes"/>
+    <itemref idref="Sec-Factorization" linear="yes"/>
+    <itemref idref="SubSec-Factoring-Polynomials" linear="yes"/>
+    <itemref idref="SubSec-Factorization-in-Euclidean-Domains" linear="yes"/>
+    <itemref idref="SubSec-Nonunique-Factorization" linear="yes"/>
+    <itemref idref="Sec-Ideals" linear="yes"/>
+    <itemref idref="SubSec-Ideals-In-General" linear="yes"/>
+    <itemref idref="references-4" linear="yes"/>
+    <itemref idref="SubSec-Homomorphisms" linear="yes"/>
+    <itemref idref="SubSec-Quotient-Rings" linear="yes"/>
+    <itemref idref="index-1" linear="yes"/>
+  </spine>
+</package>

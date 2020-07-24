@@ -1,0 +1,358 @@
+<html>
+  <head>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-07-24T13:51:22-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<link href="../css/pretext-epub.css" rel="stylesheet" type="text/css"/></head>
+  <body>
+    <div class="hidden-content" style="display:none">\(\renewcommand{\labelitemi}{$\diamond$}
+\def\arraystretch{1.5}
+\newcommand{\contentsfinish}{}
+\newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
+\newcommand{\tosay}[1]{\begin{center}\text{\fbox{\scriptsize{#1}}}\end{center}}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsecpagefont}{}
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\smallcaps{#1}}
+\def\oldequation{\equation}
+\def\endoldequation{\endequation}
+\newcommand{\nl}{
+}
+\newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\thesection}.\ \smallcaps{#1}}{\thesection.\ \smallcaps{#1}}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\scriptsize\thesection}.\ \smallcaps{#1}}{}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0.5pt}
+\newcommand{\makedefaultsection}[2][true]{
+}
+\newcommand{\timestamp}{{\color{red}Last updated: {\currenttime\ (UTC), \today}}}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\ideal}[1]{\left\langle\, #1 \,\right\rangle}
+\newcommand{\subgp}[1]{\left\langle\, #1 \,\right\rangle}
+\def\p{\varphi}
+\def\isomorphic{\cong}
+\def\Gal{\text{Gal}}
+\def\im{\text{im}}
+\def\normal{\vartriangleleft}
+\renewcommand{\qedsymbol}{$\checkmark$}
+\def\lcm{{\text{lcm}\,}}
+\newcommand{\q}[1]{{\color{red} {#1}}}
+\newcommand{\startimportant}[1]{\end{[{Hint:} #1]\end}}
+\renewcommand{\textcircled}[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt,color=red] (char) {#1};}}
+\newcommand{\crossout}[1]{\tikz[baseline=(char.base)]{\node[mynode, cross out,draw] (char) {#1};}}
+\newcommand{\set}[1]{\left\{ {#1} \right\}}
+\newcommand{\setof}[2]{{\left\{#1\,\colon\,#2\right\}}}
+\def\C{{\mathbb C}}
+\def\Z{{\mathbb Z}}
+\def\bF{{\mathbb F}}
+\def\Q{{\mathbb Q}}
+\def\N{{\mathbb N}}
+\def\R{{\mathbb R}}
+\newcommand{\h}[1]{{\textbf{#1}}}
+\def\presnotes{}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+    <section class="section" id="SubSec-Factorization-in-Euclidean-Domains">
+      <h2 class="heading hide-type"><span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">Factorization in Euclidean Domains</span></h2>
+      <article class="assemblage assemblage-like" id="assemblage-15">
+        <h6 class="heading">
+          <span class="title">Guiding Questions.</span>
+        </h6>
+        <p id="p-592">In this section, we'll seek to answer the questions: <ul class="disc"><li id="li-178">What is a unique factorization domain? What examples of UFDs do we possess?</li><li id="li-179">What is the ascending chain condition on ideals? What are Noetherian rings?</li><li id="li-180">What does the ascending chain condition have to do with unique factorization?</li></ul></p>
+      </article>
+      <section class="introduction" id="introduction-5">
+        <p id="p-593">In this section, our explorations of the structural arithmetic properties that guarantee unique factorization culminate in <span>(((Unresolved xref, reference "thm_everyedisufd"; check spelling or use "provisional" attribute)))</span><a href="" class="internal" title=""> </a>. Specifically, we'll see that all Euclidean domains possess the unique factorization property. To prove this theorem, we will rely in part on an interesting property of <em class="emphasis">chains</em> of ideals in Euclidean domains.</p>
+      </section>
+      <section class="subsection" id="subsection-2">
+        <h3 class="heading hide-type"><span class="type">Subsection</span> <span class="codenumber">3.2.1</span> <span class="title">Unique Factorization Domains</span></h3>
+        <p id="p-594">We begin by describing exactly what we mean by unique factorization. The reader may find it helpful to compare <a href="SubSec-Factorization-in-Euclidean-Domains.xhtml#def-ufd" class="internal" title="Definition 3.2.1">Definition 3.2.1</a> to <a href="SubSec-Primes-and-Factorization.xhtml#ftarith" class="internal" title="Assemblage: Fundamental Theorem of Arithmetic">The Fundamental Theorem of Arithmetic</a>.</p>
+        <article class="definition definition-like" id="def-ufd">
+          <h6 class="heading">
+            <span class="type">Definition</span>
+            <span class="space"> </span>
+            <span class="codenumber">3.2.1</span>
+            <span class="period">.</span>
+          </h6>
+          <p id="p-595">An integral domain \(R\) is called a <dfn class="terminology">unique factorization domain</dfn> (or <dfn class="terminology">UFD</dfn>) if the following conditions hold.</p>
+          <ol class="decimal">
+            <li id="li-181">
+              <p id="p-596">Every nonzero nonunit element of \(R\) is either irreducible or can be written as a finite product of irreducibles in \(R\text{.}\)</p>
+            </li>
+            <li id="li-182">
+              <p id="p-597">Factorization into irreducibles is unique up to associates. That is, if \(s\in R\) can be written as</p>
+              <div class="displaymath">
+\begin{equation*}
+s = p_1 p_2 \cdots p_k \text{ and }  s = q_1 q_2 \cdots q_m
+\end{equation*}
+</div>
+              <p data-braille="continuation">for some irreducibles \(p_i, q_j\in R\text{,}\) then \(k=m\) and, after reordering, \(p_i\) is an associate of \(q_i\text{.}\)</p>
+            </li>
+          </ol>
+        </article>
+        <article class="activity project-like" id="activity-16">
+          <h6 class="heading">
+            <span class="type">Activity</span>
+            <span class="space"> </span>
+            <span class="codenumber">3.2.1</span>
+            <span class="period">.</span>
+          </h6>
+          <p id="p-598">Using \(\Z\) as an example, illustrate the definition of UFD by factoring 20 into two sets of <em class="emphasis">different</em> irreducibles which nonetheless can be paired up as associates.</p>
+        </article>
+        <p id="p-599">We are already familiar with several examples.</p>
+        <article class="theorem theorem-like" id="theorem-51">
+          <h6 class="heading">
+            <span class="type">Theorem</span>
+            <span class="space"> </span>
+            <span class="codenumber">3.2.2</span>
+            <span class="period">.</span>
+          </h6>
+          <p id="p-600">The integers \(\Z\) form a UFD.</p>
+        </article>
+        <article class="proof" id="proof-55"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>We have already seen that primes and irreducibles coincide in \(\Z\) (see <a href="SubSec-Divisibility-in-Domains.xhtml#thm-primesareirredindomains" class="internal" title="Theorem 2.3.5">Theorem 2.3.5</a> and <a href="SubSec-Divisibility-in-Domains.xhtml#thm-irredisprimeinZ" class="internal" title="Theorem 2.3.6">Theorem 2.3.6</a>). The result follows from the Fundamental Theorem of Algebra.</article>
+        <article class="theorem theorem-like" id="theorem-52">
+          <h6 class="heading">
+            <span class="type">Theorem</span>
+            <span class="space"> </span>
+            <span class="codenumber">3.2.3</span>
+            <span class="period">.</span>
+          </h6>
+          <p id="p-601">Every field is a UFD.</p>
+        </article>
+        <article class="proof" id="proof-56"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>There are no nonzero nonunits in a field. The UFD conditions are therefore trivially satisfied.</article>
+      </section>
+      <section class="subsection" id="subsection-3">
+        <h3 class="heading hide-type"><span class="type">Subsection</span> <span class="codenumber">3.2.2</span> <span class="title">The Ascending Chain Condition and Noetherian Rings</span></h3>
+        <p id="p-602">We now set our sights on a proof of <a href="SubSec-Factorization-in-Euclidean-Domains.xhtml#theorem_everyedisufd" class="internal" title="Theorem 3.2.12">Theorem 3.2.12</a>. In order to prove it, we will make use of an important property of ideals in Euclidean domains. First, a definition.</p>
+        <article class="definition definition-like" id="def-noetherian">
+          <h6 class="heading">
+            <span class="type">Definition</span>
+            <span class="space"> </span>
+            <span class="codenumber">3.2.4</span>
+            <span class="period">.</span>
+          </h6>
+          <p id="p-603">A commutative ring \(R\) is called <dfn class="terminology">Noetherian</dfn> if it satisfies the <dfn class="terminology">ascending chain condition</dfn> on ideals. <aside class="aside aside-like" id="aside-7">These rings are named in honor of <a class="external" href="https://en.wikipedia.org/wiki/Emmy_Noether" target="_blank">Emmy Noether</a>, one of the preeminent mathematicians of the 20th century. In addition to making substantial contributions to physics, she formalized the axiomatic definition of <em class="emphasis">ring</em> that is still in use today.</aside> That is, \(R\) is Noetherian if whenever</p>
+          <div class="displaymath">
+\begin{equation*}
+I_1 \subseteq I_2\subseteq I_3\subseteq \cdots
+\end{equation*}
+</div>
+          <p data-braille="continuation">is an ascending chain of ideals in \(R\text{,}\) then there exists some \(n\) for which \(I_n = I_{n+1} = I_{n+2} = \cdots\text{.}\)</p>
+        </article>
+        <article class="exploration project-like" id="exploration-21">
+          <h6 class="heading">
+            <span class="type">Exploration</span>
+            <span class="space"> </span>
+            <span class="codenumber">3.2.2</span>
+            <span class="period">.</span>
+          </h6>
+          <p id="p-604">Consider the ideals \(I_1 = \ideal{30}\) in \(\Z\) and \(J_1 = \ideal{32}\text{.}\) Find the longest ascending chains of ideals starting first with \(I_1\) and then with \(J_1\) that you can. When does each chain stabilize?</p>
+          <div class="solutions">
+            <div class="solution solution-like" id="solution-31"><span class="type">Solution</span>TBD.</div>
+          </div>
+        </article>
+        <p id="p-605">We next show that every PID is Noetherian.</p>
+        <article class="theorem theorem-like" id="theorem-pidisnoetherian">
+          <h6 class="heading">
+            <span class="type">Theorem</span>
+            <span class="space"> </span>
+            <span class="codenumber">3.2.5</span>
+            <span class="period">.</span>
+          </h6>
+          <p id="p-606">Every principal ideal domain is Noetherian.</p>
+          <div class="hint solution-like" id="hint-15">
+            <span class="type">Hint</span>
+            <p id="p-607">Let \(I_1\subseteq I_2\subseteq I_3 \subseteq \cdots\) and set \(I = \cup I_j\text{.}\) Show that \(I\) is an ideal, and use your assumptions!</p>
+          </div>
+        </article>
+        <article class="proof" id="proof-57">
+          <h6 class="heading">
+            <span class="type">Proof<span class="period">.</span></span>
+          </h6>
+          <p id="p-608">It is a straightforward definition check to see that \(I\) as defined in the hint is an ideal. That we are in a PID means there exists \(a\) such that \(I=\cup I_j=\ideal{a}\text{.}\) Therefore there exists \(j\) such that \(a\in I_j\text{.}\) It follows that \(I=I_j\) and in particular that \(I=I_k\) for all \(k\geq j\text{.}\)</p>
+        </article>
+        <article class="corollary theorem-like" id="corollary-3">
+          <h6 class="heading">
+            <span class="type">Corollary</span>
+            <span class="space"> </span>
+            <span class="codenumber">3.2.6</span>
+            <span class="period">.</span>
+          </h6>
+          <p id="p-609">Every Euclidean domain is Noetherian.</p>
+        </article>
+        <article class="proof" id="proof-58">
+          <h6 class="heading">
+            <span class="type">Proof<span class="period">.</span></span>
+          </h6>
+          <p id="p-610">Every ED is a PID.</p>
+        </article>
+      </section>
+      <section class="subsection" id="subsection-4">
+        <h3 class="heading hide-type"><span class="type">Subsection</span> <span class="codenumber">3.2.3</span> <span class="title">Euclidean Domains are UFDs</span></h3>
+        <p id="p-611">We now begin collecting results to prove that every Euclidean domain is a UFD. The first condition in the UFD definition is that every nonzero nonunit factors as a product of irreducibles. We first show that every nonzero nonunit is divisible by at least one irreducible (<a href="SubSec-Factorization-in-Euclidean-Domains.xhtml#lem_divisiblebyirred" class="internal" title="Lemma 3.2.7">Lemma 3.2.7</a>), which we apply to show that every nonzero nonunit can be written as a finite product of irreducibles (<a href="SubSec-Factorization-in-Euclidean-Domains.xhtml#thm-writeasprodofirred" class="internal" title="Theorem 3.2.8">Theorem 3.2.8</a>).</p>
+        <article class="lemma theorem-like" id="lem_divisiblebyirred">
+          <h6 class="heading">
+            <span class="type">Lemma</span>
+            <span class="space"> </span>
+            <span class="codenumber">3.2.7</span>
+            <span class="period">.</span>
+          </h6>
+          <p id="p-612">Let \(R\) be a principal ideal domain, and \(r\in R\) a nonzero nonunit. Then \(r\) is divisible by an irreducible.</p>
+          <div class="hint solution-like" id="hint-16">
+            <span class="type">Hint</span>
+            <p id="p-613">Let \(r\in R\) be reducible and write \(r = r_1 r_2\text{.}\) Continue to factor reducibles and build an ascending chain of ideals.</p>
+          </div>
+        </article>
+        <article class="proof" id="proof-59">
+          <h6 class="heading">
+            <span class="type">Proof<span class="period">.</span></span>
+          </h6>
+          <p id="p-614">Suppose that \(r\) is not irreducible. Write \(r = r_1 r_2\text{,}\) where the \(r_i\) are nonzero nonunits. Then \(\ideal{r} \subsetneq \ideal{r_1}\text{.}\) If \(r_1\) is not irreducible, we may write \(r_1 = r_{1,1}r_{1,2}\text{,}\) where \(r_{1,1},r_{1,2}\) are nonzero nonunits, and observe that</p>
+          <div class="displaymath">
+\begin{equation*}
+\ideal{r} \subsetneq \ideal{r_1}\subsetneq \ideal{r_{1,1}}\text{.}
+\end{equation*}
+</div>
+          <p id="p-615">(If \(r_1\) <em class="emphasis">is</em> irreducible and we nonetheless write \(r_1 = r_{1,1} r_{1,2}\text{,}\) then either \(\ideal{r_{1,1}} = R\) if \(r_{1,1}\) is a unit, or \(\ideal{r_{1,1}} = \ideal{r_1}\) if \(r_{1,1}\) is associate to \(r_1\text{.}\))</p>
+          <p id="p-616">Continuing in this way, we may continue to factor the reducible factors of \(r_1\text{;}\) since \(R\) is a PID and thus has the ascending chain condition, we must eventually reach a point where the chain stabilizes, i.e., that we have found an irreducible factor of \(r_1\text{.}\)</p>
+        </article>
+        <article class="theorem theorem-like" id="thm-writeasprodofirred">
+          <h6 class="heading">
+            <span class="type">Theorem</span>
+            <span class="space"> </span>
+            <span class="codenumber">3.2.8</span>
+            <span class="period">.</span>
+          </h6>
+          <p id="p-617">Let \(R\) be a PID. Then every nonzero nonunit element of \(R\) is either irreducible or can be written as a finite product of irreducibles in \(R\text{.}\)</p>
+        </article>
+        <article class="proof" id="proof-60">
+          <h6 class="heading">
+            <span class="type">Proof<span class="period">.</span></span>
+          </h6>
+          <p id="p-618">We may perform the analysis from <a href="SubSec-Factorization-in-Euclidean-Domains.xhtml#lem_divisiblebyirred" class="internal" title="Lemma 3.2.7">Lemma 3.2.7</a> for all factors of \(r\text{,}\) and thus \(r\) can be factored into a product of irreducibles.</p>
+        </article>
+        <p id="p-619">The second condition that must be satisfied for a domain to be a UFD is that the product of irreducibles must be unique (up to associates). In order to prove that, we will make use of <a href="SubSec-Factorization-in-Euclidean-Domains.xhtml#thm-primesareirredinPID" class="internal" title="Theorem 3.2.10">Theorem 3.2.10</a>, which states that in PIDs, primes and irreducibles are identical concepts.</p>
+        <article class="lemma theorem-like" id="lemma-6">
+          <h6 class="heading">
+            <span class="type">Lemma</span>
+            <span class="space"> </span>
+            <span class="codenumber">3.2.9</span>
+            <span class="period">.</span>
+          </h6>
+          <p id="p-620">Let \(R\) be a PID and let \(p\in R\) be irreducible. Let \(a\in R\) be such that \(p\nmid a\text{.}\) Then \(1\in I = \setof{ax+py}{x,y\in R}\) and thus there exist \(s,t\in R\) such that \(1 = as+pt\text{.}\)</p>
+        </article>
+        <article class="proof" id="proof-61">
+          <h6 class="heading">
+            <span class="type">Proof<span class="period">.</span></span>
+          </h6>
+          <p id="p-621">Assume that \(p\) is irreducible. Suppose that \(p\) divides \(ab\) for some \(a,b \in R\) and that \(p\) does not divide \(a\text{.}\) Since \(R\) is a PID, \(I = \ideal{\gcd(a,p)} = \ideal{1}\text{.}\) Thus there exists \(s,t\in R\) such that \(1=as+pt\text{.}\)</p>
+        </article>
+        <article class="theorem theorem-like" id="thm-primesareirredinPID">
+          <h6 class="heading">
+            <span class="type">Theorem</span>
+            <span class="space"> </span>
+            <span class="codenumber">3.2.10</span>
+            <span class="period">.</span>
+          </h6>
+          <p id="p-622">Let \(R\) be a PID and let \(p\in R\text{.}\) Then \(p\) is prime if and only if \(p\) is irreducible.</p>
+        </article>
+        <article class="proof" id="proof-62">
+          <h6 class="heading">
+            <span class="type">Proof<span class="period">.</span></span>
+          </h6>
+          <p id="p-623">Assume that \(p\) is prime. Suppose that \(p=ab\) for some \(a,b \in R\text{.}\) Then \(p\) divides \(ab\) which implies that \(p\) divides \(a\) or \(p\) divides \(b\text{.}\) WLOG, assume that \(p\) divides \(a\text{.}\) Then there exists \(c\in R\) such that \(a=pc\) which implies that \(p=pcb\text{.}\) Therefore \(cb=1\) and \(b\) is a unit which implies that \(p\) is irreducible.</p>
+          <p id="p-624">Assume that \(p\) is irreducible. Suppose that \(p\) divides \(ab\) for some \(a,b \in R\) and that \(p\) does not divide \(a\text{.}\) Then \(\ideal{a,p}=R\) and there exists \(x,y\in R\) such that \(1=ax+py\text{.}\) Multiplying boths sides by \(b\) yiels \(b=abx+pby=p(cx+by)\) which implies that \(p\) divides \(b\) and therefore \(p\) is prime.</p>
+        </article>
+        <p id="p-625">Observe that <a href="SubSec-Factorization-in-Euclidean-Domains.xhtml#thm-primesareirredinPID" class="internal" title="Theorem 3.2.10">Theorem 3.2.10</a> implies that if \(R\) is a PID and \(p\in R\) is irreducible with \(p|ab\text{,}\) then \(p|a\) or \(p|b\text{.}\)</p>
+        <p id="p-626">Our crucial final step on the road to <a href="SubSec-Factorization-in-Euclidean-Domains.xhtml#theorem_everyedisufd" class="internal" title="Theorem 3.2.12">Theorem 3.2.12</a> is the following.</p>
+        <article class="theorem theorem-like" id="thm_pidisufd">
+          <h6 class="heading">
+            <span class="type">Theorem</span>
+            <span class="space"> </span>
+            <span class="codenumber">3.2.11</span>
+            <span class="period">.</span>
+          </h6>
+          <p id="p-627">Every PID is a UFD.</p>
+          <div class="hint solution-like" id="hint-17"><span class="type">Hint</span>For part 2 of the definition, use induction on the number of irreducible divisors of an arbitrary nonzero nonunit. Mimic the proof of <a href="SubSec-Primes-and-Factorization.xhtml#theorem_FTAuniqueness" class="internal" title="Theorem 1.3.8: Fundamental Theorem of Arithmetic–Uniqueness Part">Theorem 1.3.8</a>.</div>
+        </article>
+        <article class="proof" id="proof-63">
+          <h6 class="heading">
+            <span class="type">Proof<span class="period">.</span></span>
+          </h6>
+          <p id="p-628">Let \(R\) be a PID, and observe that by <a href="SubSec-Factorization-in-Euclidean-Domains.xhtml#thm-writeasprodofirred" class="internal" title="Theorem 3.2.8">Theorem 3.2.8</a> every nonzero nonunit can be written as a product of irreducibles. We thus need only show that this product is unique (up to associates).</p>
+          <p id="p-629">To that end, we adopt the notation of <a href="SubSec-Factorization-in-Euclidean-Domains.xhtml#def-ufd" class="internal" title="Definition 3.2.1">Definition 3.2.1</a>. Let \(s\in R\text{.}\) We perform induction on the number of irreducible factors \(k\) of \(s\text{.}\) If \(k=0\text{,}\) then \(s\) is a unit. If we had \(s = pa\) for some irreducible \(p\text{,}\) then \(p\) divides a unit and would thus be a unit itself, which is a contradiction.</p>
+          <p id="p-630">Suppose now that \(k\ge 1\) and we write</p>
+          <div class="displaymath">
+\begin{equation*}
+s = p_1 p_2 \cdots p_k \text{ and }  s = q_1 q_2 \cdots q_m, \ m \ge k,
+\end{equation*}
+</div>
+          <p data-braille="continuation">where the \(p_i\) and \(q_j\) are not necessarily distinct irreducibles. Since \(p_1 | q_1 q_2 \cdots q_m\text{,}\) we know by <a href="SubSec-Factorization-in-Euclidean-Domains.xhtml#thm-primesareirredinPID" class="internal" title="Theorem 3.2.10">Theorem 3.2.10</a> that \(p_1\) must divide one of the factors.</p>
+          <p id="p-631">Renumbering, we may assume that \(p_1 | q_1\text{,}\) whence \(q_1 = p_1 v_1\text{,}\) where \(v_1\) must be a unit as \(q_1\) is irreducible. Canceling \(p_1\) yields</p>
+          <div class="displaymath">
+\begin{equation*}
+p_2 p_3 \cdots p_k = v_1 q_2 q_3 \cdots q_n, m\ge k.
+\end{equation*}
+</div>
+          <p data-braille="continuation">By induction on \(k\) we conclude that each of the irreducible factors on the left matches with precisely one factor on the right (up to associates). This completes the inductive step, and thus the proof.</p>
+        </article>
+        <article class="theorem theorem-like" id="theorem_everyedisufd">
+          <h6 class="heading">
+            <span class="type">Theorem</span>
+            <span class="space"> </span>
+            <span class="codenumber">3.2.12</span>
+            <span class="period">.</span>
+          </h6>
+          <p id="p-632">Every Euclidean domain is a unique factorization domain.</p>
+        </article>
+        <article class="proof" id="proof-64">
+          <h6 class="heading">
+            <span class="type">Proof<span class="period">.</span></span>
+          </h6>
+          <p id="p-633">Apply <a href="SubSec-Principal-Ideals.xhtml#thm_edispid" class="internal" title="Theorem 2.4.16">Theorems 2.4.16</a> and <a href="SubSec-Factorization-in-Euclidean-Domains.xhtml#thm_pidisufd" class="internal" title="Theorem 3.2.11">Theorem 3.2.11</a>.</p>
+        </article>
+        <article class="theorem theorem-like" id="theorem-58">
+          <h6 class="heading">
+            <span class="type">Theorem</span>
+            <span class="space"> </span>
+            <span class="codenumber">3.2.13</span>
+            <span class="period">.</span>
+            <span class="space"> </span>
+            <span class="title">(Unique Factorization of Polynomials).</span>
+          </h6>
+          <p id="p-634">Let \(F\) be a field. Then \(F[x]\) is a UFD.</p>
+          <p id="p-635">That is, if \(f(x) \in F[x]\) with \(\deg(f(x)) \ge 1\text{,}\) then \(f(x)\) is either irreducible or a product of irreducibles in \(F[x]\text{.}\) What is more, if</p>
+          <div class="displaymath">
+\begin{equation*}
+f(x) = p_1(x) p_2(x) \cdots p_k(x) \text{ and }  f(x) = q_1(x) q_2(x) \cdots q_m(x)
+\end{equation*}
+</div>
+          <p data-braille="continuation">are two factorizations of \(f\) into irreducibles \(p_i, q_j\text{,}\) then \(m=k\) and after reordering, \(p_j\) and \(q_j\) are associates.</p>
+          <div class="hint solution-like" id="hint-18">
+            <span class="type">Hint</span>
+            <p id="p-636">Handle existence and uniqueness separately. For each, (strong) induction on \(\deg(f(x))\) will work. Or do something entirely different.</p>
+          </div>
+        </article>
+        <p id="p-637">Thus, we see that the existence of a well-behaved division algorithm and (a lack of zero divisors) is sufficient to guarantee unique factorization. However, it is not necessary. The following theorem is included for reference, but is not intended to be proved.</p>
+        <article class="assemblage assemblage-like" id="thm-polyringisUFD">
+          <h6 class="heading">
+            <span class="title">Theorem.</span>
+          </h6>
+          <p id="p-638">If \(R\) is a UFD, then \(R[x]\) is a UFD.</p>
+        </article>
+        <p id="p-639">Thus, \(\Z[x]\) is a UFD. That is, every nonconstant polynomial in \(\Z[x]\) is either irreducible or can be factored uniquely into a product of irreducibles.  However, as we will see later, \(\Z[x]\) is not a PID.</p>
+      </section>
+    </section>
+  </body>
+</html>

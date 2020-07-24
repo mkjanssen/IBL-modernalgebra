@@ -1,0 +1,185 @@
+<html>
+  <head>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-07-24T13:51:22-05:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<link href="../css/pretext-epub.css" rel="stylesheet" type="text/css"/></head>
+  <body>
+    <div class="hidden-content" style="display:none">\(\renewcommand{\labelitemi}{$\diamond$}
+\def\arraystretch{1.5}
+\newcommand{\contentsfinish}{}
+\newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
+\newcommand{\tosay}[1]{\begin{center}\text{\fbox{\scriptsize{#1}}}\end{center}}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsecpagefont}{}
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\smallcaps{#1}}
+\def\oldequation{\equation}
+\def\endoldequation{\endequation}
+\newcommand{\nl}{
+}
+\newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\thesection}.\ \smallcaps{#1}}{\thesection.\ \smallcaps{#1}}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\scriptsize\thesection}.\ \smallcaps{#1}}{}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0.5pt}
+\newcommand{\makedefaultsection}[2][true]{
+}
+\newcommand{\timestamp}{{\color{red}Last updated: {\currenttime\ (UTC), \today}}}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\ideal}[1]{\left\langle\, #1 \,\right\rangle}
+\newcommand{\subgp}[1]{\left\langle\, #1 \,\right\rangle}
+\def\p{\varphi}
+\def\isomorphic{\cong}
+\def\Gal{\text{Gal}}
+\def\im{\text{im}}
+\def\normal{\vartriangleleft}
+\renewcommand{\qedsymbol}{$\checkmark$}
+\def\lcm{{\text{lcm}\,}}
+\newcommand{\q}[1]{{\color{red} {#1}}}
+\newcommand{\startimportant}[1]{\end{[{Hint:} #1]\end}}
+\renewcommand{\textcircled}[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt,color=red] (char) {#1};}}
+\newcommand{\crossout}[1]{\tikz[baseline=(char.base)]{\node[mynode, cross out,draw] (char) {#1};}}
+\newcommand{\set}[1]{\left\{ {#1} \right\}}
+\newcommand{\setof}[2]{{\left\{#1\,\colon\,#2\right\}}}
+\def\C{{\mathbb C}}
+\def\Z{{\mathbb Z}}
+\def\bF{{\mathbb F}}
+\def\Q{{\mathbb Q}}
+\def\N{{\mathbb N}}
+\def\R{{\mathbb R}}
+\newcommand{\h}[1]{{\textbf{#1}}}
+\def\presnotes{}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+    <section class="section" id="SubSec-Nonunique-Factorization">
+      <h2 class="heading hide-type"><span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">Nonunique Factorization</span></h2>
+      <article class="assemblage assemblage-like" id="assemblage-17">
+        <h6 class="heading">
+          <span class="title">Guiding Questions.</span>
+        </h6>
+        <p id="p-640">In this section, we'll seek to answer the questions: <ul class="disc"><li id="li-183">How can unique factorization fail, and why does it matter?</li><li id="li-184">What is an example of a nonatomic domain?</li><li id="li-185">What is an example of an element that does not factor uniquely into a product of irreducibles?</li></ul></p>
+      </article>
+      <p id="p-641">Despite the evidence to the contrary, not every ring has the unique factorization property. That is, there are commutative rings with identity which are not UFDs.  In fact, the failure of certain rings in algebraic number theory to have the unique factorization property played a role in several failed attempts to prove Fermat's Last Theorem, which says that there are no nontrivial integer solutions \((x,y,z)\) to the equation \(x^n + y^n = z^n\) if \(n \ge 3\text{.}\) Pierre de Fermat famously claimed that he had a “marvelous proof” of this fact, but the margin of the book in which he was writing was “too narrow to contain it.” Fermat's supposed proof was never found, and many now doubt that he had one. The search for a valid proof would not be complete until the work of Andrew Wiles and Richard Taylor in the mid-1990s.</p>
+      <p id="p-642">In 1847, Gabriel Lamé claimed he had completely solved the problem. His solution relied on the factorization of \(x^p + y^p\text{,}\) where \(p\) is an odd prime, as</p>
+      <div class="displaymath">
+\begin{equation*}
+x^p + y^p = (x+y)(x+\zeta y) \cdots (x+\zeta^{p-1}y)\text{,}
+\end{equation*}
+</div>
+      <p data-braille="continuation">where \(\zeta = e^{2\pi i/p}\) is a primitive \(p\)-th root of unity in \(\C\text{.}\) However, the ring \(\Z[\zeta] = \setof{a_0 + a_1 \zeta + a_2 \zeta^2 + \cdots + a_{p-1} \zeta^{p-1}}{a_i\in\Z}\) is not a unique factorization domain.</p>
+      <p id="p-643">There are two ways that unique factorization in an integral domain can fail: there can be a failure of a nonzero nonunit to factor into irreducibles, or there can be nonassociate factorizations of the same element. We investigate each in turn.</p>
+      <article class="exploration project-like" id="exploration-22">
+        <h6 class="heading">
+          <span class="type">Exploration</span>
+          <span class="space"> </span>
+          <span class="codenumber">3.3.1</span>
+          <span class="period">.</span>
+          <span class="space"> </span>
+          <span class="title">A non-atomic domain.</span>
+        </h6>
+        <p id="p-644">We say an integral domain \(R\) is <dfn class="terminology">atomic</dfn> if every nonzero nonunit can be written as a finite product of irreducibles in \(R\text{.}\) <aside class="aside aside-like" id="aside-8">The term <em class="emphasis">atom</em> was suggested by <a class="external" href="https://en.wikipedia.org/wiki/Paul_Cohn" target="_blank">Paul Cohn</a> as a synonym for irreducible.</aside> In this exploration, we encounter a non-atomic domain.</p>
+        <p id="p-645">Let</p>
+        <div class="displaymath">
+\begin{align*}
+R \amp = \Z + x\Q[x]\\
+\amp = \setof{a + b_1 x + b_2 x^2 + \cdots + b_n x^n}{a\in \Z, b_1,\ldots, b_n \in \Q, n\ge 0},
+\end{align*}
+</div>
+        <p data-braille="continuation">the set of polynomials with integer constant terms and rational coefficients.</p>
+        <ol class="decimal">
+          <li id="li-186">Convince yourself that \(R\) is an integral domain. You do not need to prove it in detail, but you should at least argue that \(R\) is closed under the usual polynomial addition and multiplication, and that \(R\) is a domain.</li>
+          <li id="li-187">Describe the irreducibles in \(R\text{.}\)</li>
+          <li id="li-188">Use the notion of degree to argue that any factorization of \(x\) in \(R\) has the form<div class="displaymath">
+\begin{equation*}
+x = m\left(\frac{x}{m}\right).
+\end{equation*}
+</div></li>
+          <li id="li-189">Explain why the factorization in the previous part cannot lead to a factorization of \(x\) into irreducibles in \(R\text{.}\)</li>
+        </ol>
+        <div class="solutions">
+          <div class="solution solution-like" id="solution-32"><span class="type">Solution</span>TBD.</div>
+        </div>
+      </article>
+      <p id="p-646">We now explore the atomic domain \(R = \Z[\sqrt{-7}] = \setof{a+b\sqrt{-7}}{a,b\in\Z}\text{.}\) As we will see, even when a nonzero nonunit can be written as a product of irreducibles, it may be the case that this factorization is not unique.</p>
+      <article class="activity project-like" id="activity-17">
+        <h6 class="heading">
+          <span class="type">Activity</span>
+          <span class="space"> </span>
+          <span class="codenumber">3.3.2</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-647">Verify that \(8 = (1+\sqrt{-7})(1-\sqrt{-7})\text{.}\)</p>
+      </article>
+      <p id="p-648">Next, we develop a multiplicative function \(\delta\) which enables us to explore the multiplicative properties of \(\Z[\sqrt{-7}]\text{.}\)</p>
+      <article class="theorem theorem-like" id="theorem-59">
+        <h6 class="heading">
+          <span class="type">Theorem</span>
+          <span class="space"> </span>
+          <span class="codenumber">3.3.1</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-649">Define \(\delta : R \to \N_0\) by \(\delta(a+b\sqrt{-7}) = a^2 + 7 b^2\text{.}\) Then for all \(x,y\in R\text{,}\) \(\delta(xy) = \delta(x)\delta(y)\text{.}\)</p>
+      </article>
+      <article class="theorem theorem-like" id="theorem-60">
+        <h6 class="heading">
+          <span class="type">Theorem</span>
+          <span class="space"> </span>
+          <span class="codenumber">3.3.2</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-650">An element \(u\in R\) is a unit if and only if \(\delta(u) = 1\text{.}\)</p>
+      </article>
+      <article class="proof" id="proof-65">
+        <h6 class="heading">
+          <span class="type">Proof<span class="period">.</span></span>
+        </h6>
+        <p id="p-651">Observe that \(u\) is a unit if and only if \(uv = 1\) for some \(v\text{,}\) which menas that \(1 = \delta(1) = \delta(u) \delta(v)\text{,}\) so \(\delta(u) = \delta(v) = 1\text{.}\)</p>
+      </article>
+      <article class="lemma theorem-like" id="lemma-7">
+        <h6 class="heading">
+          <span class="type">Lemma</span>
+          <span class="space"> </span>
+          <span class="codenumber">3.3.3</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-652">There do not exist \(x,y\in \N_0\) such that \(2 = x^2 + 7y^2\text{.}\)</p>
+      </article>
+      <article class="proof" id="proof-66">
+        <h6 class="heading">
+          <span class="type">Proof<span class="period">.</span></span>
+        </h6>
+        <p id="p-653">Suppose there exist \(x,y\in \N_0\) such that \(2 = x^2 + y^2\text{.}\) Then we must have \(y = 0\text{,}\) which means that \(x^2 = 2\text{,}\) a contradiction.</p>
+      </article>
+      <article class="theorem theorem-like" id="theorem-61">
+        <h6 class="heading">
+          <span class="type">Theorem</span>
+          <span class="space"> </span>
+          <span class="codenumber">3.3.4</span>
+          <span class="period">.</span>
+        </h6>
+        <p id="p-654">The elements 2, \(1+ \sqrt{-7}\text{,}\) and \(1-\sqrt{-7}\) are irreducible in \(R\text{.}\) We conclude that \(R\) is not a UFD.</p>
+      </article>
+      <article class="proof" id="proof-67">
+        <h6 class="heading">
+          <span class="type">Proof<span class="period">.</span></span>
+        </h6>
+        <p id="p-655">Suppose \(2 = ab\text{.}\) Then \(4 = \delta(2) = \delta(a)\delta(b)\text{.}\) By the lemma, we may not have \(\delta(a) = 2\text{,}\) which means without loss of generality that \(\delta(a) = 1\text{,}\) and thus \(a\) is a unit. Therefore, 2 is irreducible.</p>
+        <p id="p-656">Now suppose that \(1 + \sqrt{-7} = ab\text{.}\) Then \(8 = \delta(1+\sqrt{-7}) = \delta(a) \delta(b)\text{.}\) The possible values for \(\delta(a)\) are 1, 2, 4, and 8. If \(\delta(a) = 1\) or 8, then \(1+\sqrt{-7}\) is irreducible, as either \(a\) or \(b\) is necessarily a unit. By the lemma, we may not have \(\delta(a) = 2\) or \(\delta(b) = 2\text{,}\) so in fact either \(\delta(a) = 1\) or 8. Therefore, \(1\pm \sqrt{-7}\) is irreducible.</p>
+        <p id="p-657">Since we have factored 8 into two different products of irreducibles, \(R\) is not a UFD.</p>
+      </article>
+    </section>
+  </body>
+</html>

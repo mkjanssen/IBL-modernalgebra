@@ -1,0 +1,3 @@
+./images/CC-BY-SA-license.svg
+https://imgs.xkcd.com/comics/well_ordering_principle.png
+./images/graph.svg
