@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  24 JUL 2020 14:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  26 JUL 2020 06:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -985,7 +985,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip65
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 583.
+Package hyperref Info: Option `colorlinks' set `true' on input line 582.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/tkz-graph/tkz-graph.sty
 Package: tkz-graph 2018/09/19 ctan v 1.00 d base for graphs
@@ -1397,63 +1397,63 @@ LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 (Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
 ))
 
-./modernalgebra.tex:633: LaTeX Error: Command \contentsfinish already defined.
+./modernalgebra.tex:632: LaTeX Error: Command \contentsfinish already defined.
                Or name \end... illegal, see p.192 of the manual.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.633 \newcommand{\contentsfinish}{}
+l.632 \newcommand{\contentsfinish}{}
                                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./modernalgebra.tex:636: LaTeX Error: Command \cftsecfont undefined.
+./modernalgebra.tex:635: LaTeX Error: Command \cftsecfont undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.636 \renewcommand{\cftsecfont}
+l.635 \renewcommand{\cftsecfont}
                                 {}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./modernalgebra.tex:637: LaTeX Error: Command \cftsecpagefont undefined.
+./modernalgebra.tex:636: LaTeX Error: Command \cftsecpagefont undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.637 \renewcommand{\cftsecpagefont}
+l.636 \renewcommand{\cftsecpagefont}
                                     {}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./modernalgebra.tex:650: LaTeX Error: Command \headrulewidth undefined.
+./modernalgebra.tex:649: LaTeX Error: Command \headrulewidth undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.650 \renewcommand{\headrulewidth}
+l.649 \renewcommand{\headrulewidth}
                                    {0pt}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./modernalgebra.tex:666: LaTeX Error: Command \qedsymbol undefined.
+./modernalgebra.tex:665: LaTeX Error: Command \qedsymbol undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.666 \renewcommand{\qedsymbol}
+l.665 \renewcommand{\qedsymbol}
                                {$\checkmark$}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1461,21 +1461,21 @@ If that doesn't work, type  X <return>  to quit.
 (./modernalgebra.aux)
 \openout1 = `modernalgebra.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 686.
-LaTeX Font Info:    ... okay on input line 686.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 686.
-LaTeX Font Info:    ... okay on input line 686.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 686.
-LaTeX Font Info:    ... okay on input line 686.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 686.
-LaTeX Font Info:    ... okay on input line 686.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 686.
-LaTeX Font Info:    ... okay on input line 686.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 686.
-LaTeX Font Info:    ... okay on input line 686.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 686.
-LaTeX Font Info:    ... okay on input line 686.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 686.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 685.
+LaTeX Font Info:    ... okay on input line 685.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 685.
+LaTeX Font Info:    ... okay on input line 685.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 685.
+LaTeX Font Info:    ... okay on input line 685.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 685.
+LaTeX Font Info:    ... okay on input line 685.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 685.
+LaTeX Font Info:    ... okay on input line 685.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 685.
+LaTeX Font Info:    ... okay on input line 685.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 685.
+LaTeX Font Info:    ... okay on input line 685.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 685.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1545,7 +1545,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box127
-Package hyperref Info: Link coloring ON on input line 686.
+Package hyperref Info: Link coloring ON on input line 685.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1555,9 +1555,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count373
 )
-LaTeX Info: Redefining \ref on input line 686.
-LaTeX Info: Redefining \pageref on input line 686.
-LaTeX Info: Redefining \nameref on input line 686.
+LaTeX Info: Redefining \ref on input line 685.
+LaTeX Info: Redefining \pageref on input line 685.
+LaTeX Info: Redefining \nameref on input line 685.
 
 (./modernalgebra.out) (./modernalgebra.out)
 \@outlinefile=\write7
@@ -1568,7 +1568,7 @@ LaTeX Info: Redefining \nameref on input line 686.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
 your preamble.
- on input line 686.
+ on input line 685.
 
 [1
 
@@ -1579,61 +1579,61 @@ your preamble.
 ] [3
 
 ]
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 720.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 719.
 
  (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 720.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 719.
 
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 720
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 719
 .
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 720
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 719
 .
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 720.
+(Font)              <10> on input line 719.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 720.
+(Font)              <7> on input line 719.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 720.
-LaTeX Font Info:    Try loading font information for U+msa on input line 720.
+(Font)              <5> on input line 719.
+LaTeX Font Info:    Try loading font information for U+msa on input line 719.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 720.
+LaTeX Font Info:    Try loading font information for U+msb on input line 719.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 720.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 719.
 
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 
-LaTeX Warning: File `./images/CC-BY-SA-license.svg' not found on input line 722
+LaTeX Warning: File `./images/CC-BY-SA-license.svg' not found on input line 721
 .
 
 
-./modernalgebra.tex:722: LaTeX Error: Unknown graphics extension: .svg.
+./modernalgebra.tex:721: LaTeX Error: Unknown graphics extension: .svg.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.722 ...linewidth]{./images/CC-BY-SA-license.svg}
+l.721 ...linewidth]{./images/CC-BY-SA-license.svg}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1644,22 +1644,18 @@ If that doesn't work, type  X <return>  to quit.
 ************************************************
 Preface Introduction
 ************************************************
-[5
-
-
-]
 ************************************************
 References References
 ************************************************
 
-./modernalgebra.tex:753: LaTeX Error: Environment references--numberless undefi
+./modernalgebra.tex:752: LaTeX Error: Environment references--numberless undefi
 ned.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.753 \begin{references--numberless}
+l.752 \begin{references--numberless}
                                     {References}{}{References}{}{}{g:referen...
 
 Your command was ignored.
@@ -1667,14 +1663,14 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./modernalgebra.tex:754: LaTeX Error: \begin{preface} on input line 735 ended b
+./modernalgebra.tex:753: LaTeX Error: \begin{preface} on input line 734 ended b
 y \end{references--numberless}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.754 ...llan UK, 2014\end{references--numberless}
+l.753 ...llan UK, 2014\end{references--numberless}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1683,31 +1679,34 @@ or  <return>  to continue without it.
 ************************************************
 Preface A Note to Students
 ************************************************
-[6] [7
+[5
+
 
 ]
 ************************************************
 Preface A Note to Instructors
 ************************************************
-[8]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 784.
+[6
+
+]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 783.
 
  (/usr/local/texlive/2019/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 784.
- [9
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 783.
+ [7
 
 ]
 ************************************************
 Acknowledgements Acknowledgements
 ************************************************
-[10] [11]
-./modernalgebra.tex:816: You can't use `\spacefactor' in math mode.
+[8]
+./modernalgebra.tex:815: You can't use `\spacefactor' in math mode.
 \@ ->\spacefactor 
                   \@m {}
-l.816 ...ng the initial conversion of the \(\LaTeX
+l.815 ...ng the initial conversion of the \(\LaTeX
                                                   \) code to PreTeXt.%
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -1715,15 +1714,15 @@ If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 Missing character: There is no � in font lmex10!
-[12
+[9
 
-] (./modernalgebra.toc [13
-
-])
+] (./modernalgebra.toc)
 \tf@toc=\write8
 \openout8 = `modernalgebra.toc'.
 
- [14]
+ [10
+
+]
 ************************************************
 Chapter 1 The Integers
 ************************************************
@@ -1731,10 +1730,10 @@ Chapter 1.
 ************************************************
 Section 1.1 Induction and Well-Ordering
 ************************************************
-./modernalgebra.tex:847: Undefined control sequence.
+./modernalgebra.tex:848: Undefined control sequence.
 <argument> ...riptsize \thesection }.\ \smallcaps 
                                                   {Induction and Well-Ordering}
-l.847 ...ering}{}{}{x:section:SubSec-WellOrdering}
+l.848 ...ering}{}{}{x:section:SubSec-WellOrdering}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1742,10 +1741,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./modernalgebra.tex:847: Undefined control sequence.
+./modernalgebra.tex:848: Undefined control sequence.
 <argument> ...riptsize \thesection }.\ \smallcaps 
                                                   {Induction and Well-Ordering}
-l.847 ...ering}{}{}{x:section:SubSec-WellOrdering}
+l.848 ...ering}{}{}{x:section:SubSec-WellOrdering}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1753,44 +1752,28 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 873.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 873.
 [1
 
 
 ]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 872.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 872.
-
-
-LaTeX Warning: File `https://imgs.xkcd.com/comics/well_ordering_principle.png' 
-not found on input line 889.
-
-
-./modernalgebra.tex:889: Package pdftex.def Error: File `https://imgs.xkcd.com/
-comics/well_ordering_principle.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.889 ...d.com/comics/well_ordering_principle.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 889.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [2] [3] [4]
+<../images/well_ordering_principle.png, id=257, 726.715pt x 314.17375pt>
+File: ../images/well_ordering_principle.png Graphic file (type png)
+<use ../images/well_ordering_principle.png>
+Package pdftex.def Info: ../images/well_ordering_principle.png  used on input l
+ine 896.
+(pdftex.def)             Requested size: 221.98793pt x 95.96906pt.
+ [2 <../images/well_ordering_principle.png (PNG copy)>] [3]
 ************************************************
 Section 1.2 Divisibility and GCDs in the Integers
 ************************************************
-./modernalgebra.tex:999: Undefined control sequence.
+./modernalgebra.tex:1011: Undefined control sequence.
 <argument> ...riptsize \thesection }.\ \smallcaps 
                                                   {Divisibility and GCDs in ...
-l.999 ...tion:SubSec-Divisibility-in-the-Integers}
+l.1011 ...ion:SubSec-Divisibility-in-the-Integers}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1798,10 +1781,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./modernalgebra.tex:999: Undefined control sequence.
+./modernalgebra.tex:1011: Undefined control sequence.
 <argument> ...riptsize \thesection }.\ \smallcaps 
                                                   {Divisibility and GCDs in ...
-l.999 ...tion:SubSec-Divisibility-in-the-Integers}
+l.1011 ...ion:SubSec-Divisibility-in-the-Integers}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1809,6 +1792,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+[4]
 ************************************************
 Subsection 1.2.1 Divisibility and the Division Algorithm
 ************************************************
@@ -1816,44 +1800,44 @@ pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
 .1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1018 ...inition}{}{g:definition:idm179951587664}
-                                                  % [5]pdfTeX warning (ext4): d
-estination with the same identifier (name{tcb@cnt@project-distinct.1}) has been
- already used, duplicate ignored
+l.1030 ...inition}{}{g:definition:idm484914038720}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@project-distinct.1}) has been alr
+eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1024 ...tion}{}{g:investigation:idm180004552720}
+l.1036 ...tion}{}{g:investigation:idm484913106160}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1037 ...{theorem}{}{}{g:theorem:idm180004511088}
+l.1049 ...{theorem}{}{}{g:theorem:idm484913115088}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1043 ...heorem}{}{}{x:theorem:thm-divideproduct}
-                                                  % [6]pdfTeX warning (ext4): d
+l.1055 ...heorem}{}{}{x:theorem:thm-divideproduct}
+                                                  % [5]pdfTeX warning (ext4): d
 estination with the same identifier (name{tcb@cnt@block.4}) has been already us
 ed, duplicate ignored
 <to be read again> 
                    \relax 
-l.1054 ...x:theorem:theorem_23lemmageneralization}
+l.1066 ...x:theorem:theorem_23lemmageneralization}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.5}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1070 ...thm for \(\N\).}{}{x:theorem:thm_divalg}
-                                                  % [7]pdfTeX warning (ext4): d
-estination with the same identifier (name{tcb@cnt@block.6}) has been already us
-ed, duplicate ignored
+l.1082 ...thm for \(\N\).}{}{x:theorem:thm_divalg}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.6}) has been already used, 
+duplicate ignored
 <to be read again> 
                    \relax 
-l.1096 ... \(\Z\).}{}{g:corollary:idm179999956784}
-                                                  %
+l.1110 ... \(\Z\).}{}{g:corollary:idm484905084144}
+                                                  % [6]
 ************************************************
 Subsubsection 1.2.1 Greatest Common Divisors
 ************************************************
@@ -1861,16 +1845,15 @@ pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
 .7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1113 ...finition}{}{x:definition:gcd-definition}
-                                                  % [8] [9]
+l.1128 ...finition}{}{x:definition:gcd-definition}
+                                                  % [7] [8]
 ************************************************
 Section 1.3 Primes and Factorization
 ************************************************
-[10]
-./modernalgebra.tex:1233: Undefined control sequence.
+./modernalgebra.tex:1250: Undefined control sequence.
 <argument> ...riptsize \thesection }.\ \smallcaps 
                                                   {Primes and Factorization}
-l.1233 ...section:SubSec-Primes-and-Factorization}
+l.1250 ...section:SubSec-Primes-and-Factorization}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1878,10 +1861,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./modernalgebra.tex:1233: Undefined control sequence.
+./modernalgebra.tex:1250: Undefined control sequence.
 <argument> ...riptsize \thesection }.\ \smallcaps 
                                                   {Primes and Factorization}
-l.1233 ...section:SubSec-Primes-and-Factorization}
+l.1250 ...section:SubSec-Primes-and-Factorization}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1893,45 +1876,45 @@ pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
 .1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1244 ...nition}{}{x:definition:def-primeinteger}
+l.1261 ...nition}{}{x:definition:def-primeinteger}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1252 ... Lemma.}{}{x:lemma:theorem_euclidslemma}
-                                                  % [11]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@project-distinct.1}) has bee
-n already used, duplicate ignored
+l.1269 ... Lemma.}{}{x:lemma:theorem_euclidslemma}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@project-distinct.1}) has been alr
+eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1260 ...tion:question_compositecharacterization}
+l.1277 ...tion:question_compositecharacterization}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1265 \begin{remark}{}{g:remark:idm179953456800}
-                                                 %pdfTeX warning (ext4): destin
-ation with the same identifier (name{tcb@cnt@block.4}) has been already used, d
-uplicate ignored
+l.1282 \begin{remark}{}{g:remark:idm484908417920}
+                                                 % [9]pdfTeX warning (ext4): de
+stination with the same identifier (name{tcb@cnt@block.4}) has been already use
+d, duplicate ignored
 <to be read again> 
                    \relax 
-l.1270 ...{theorem}{}{}{g:theorem:idm179953454064}
+l.1287 ...{theorem}{}{}{g:theorem:idm484908407648}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.5}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1278 ...{theorem}{}{}{g:theorem:idm179953451024}
-                                                  % [12]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@block.6}) has been already u
-sed, duplicate ignored
+l.1295 ...{theorem}{}{}{g:theorem:idm484908383824}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.6}) has been already used, 
+duplicate ignored
 <to be read again> 
                    \relax 
-l.1288 ...rk{}.}{}{x:theorem:theorem_FTAexistence}
+l.1305 ...rk{}.}{}{x:theorem:theorem_FTAexistence}
                                                   %
-Overfull \hbox (4.16289pt too wide) in paragraph at lines 1288--1291
+Overfull \hbox (4.16289pt too wide) in paragraph at lines 1305--1308
 []\T1/lmr/bx/n/10 Theorem 1.3.6  Fun-da-men-tal The-o-rem of Arith-metic^^UExis
 tence Part[].
  []
@@ -1940,25 +1923,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
 .7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1303 \begin{lemma}{}{}{g:lemma:idm179953433440}
-                                                 %pdfTeX warning (ext4): destin
-ation with the same identifier (name{tcb@cnt@block.8}) has been already used, d
-uplicate ignored
+l.1321 \begin{lemma}{}{}{g:lemma:idm484907801040}
+                                                 % [10]pdfTeX warning (ext4): d
+estination with the same identifier (name{tcb@cnt@block.8}) has been already us
+ed, duplicate ignored
 <to be read again> 
                    \relax 
-l.1319 ...art.}{}{x:theorem:theorem_FTAuniqueness}
-                                                  % [13]
+l.1337 ...art.}{}{x:theorem:theorem_FTAuniqueness}
+                                                  %
 ************************************************
 References 1.3 References
 ************************************************
 ************************************************
 Section 1.4 The Integers modulo \(m\)
 ************************************************
-[14]
-./modernalgebra.tex:1365: Undefined control sequence.
+./modernalgebra.tex:1384: Undefined control sequence.
 <argument> ...riptsize \thesection }.\ \smallcaps 
                                                   {The Integers modulo \(m\)}
-l.1365 ...\)}{}{}{x:section:SubSec-Integers-Mod-m}
+l.1384 ...\)}{}{}{x:section:SubSec-Integers-Mod-m}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1967,11 +1949,11 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 1365.
-./modernalgebra.tex:1365: Undefined control sequence.
+(Font)              <14.4> on input line 1384.
+./modernalgebra.tex:1384: Undefined control sequence.
 <argument> ...riptsize \thesection }.\ \smallcaps 
                                                   {The Integers modulo \(m\)}
-l.1365 ...\)}{}{}{x:section:SubSec-Integers-Mod-m}
+l.1384 ...\)}{}{}{x:section:SubSec-Integers-Mod-m}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1981,122 +1963,122 @@ and I'll forget about whatever was undefined.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1365.
+(hyperref)                removing `math shift' on input line 1384.
 
-pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
-.1}) has been already used, duplicate ignored
+[11]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1380 ...inition}{}{g:definition:idm179953486960}
+l.1399 ...inition}{}{g:definition:idm484907216128}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1385 ...in{definition}{}{x:definition:def-eqrel}
-                                                  % [15]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@project-distinct.1}) has bee
-n already used, duplicate ignored
+l.1404 ...in{definition}{}{x:definition:def-eqrel}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@project-distinct.1}) has been alr
+eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1403 ...{activity}{}{g:activity:idm180032266192}
+l.1422 ...{activity}{}{g:activity:idm484907476512}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@project-distinct.2}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1412 ...ration}{}{g:exploration:idm180034201792}
+l.1431 ...ration}{}{g:exploration:idm484907575936}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@project-distinct.3}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1415 ...{activity}{}{g:activity:idm180034200896}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
-duplicate ignored
+l.1434 ...{activity}{}{g:activity:idm484907586256}
+                                                  % [12]pdfTeX warning (ext4): 
+destination with the same identifier (name{tcb@cnt@block.3}) has been already u
+sed, duplicate ignored
 <to be read again> 
                    \relax 
-l.1421 ...inition}{}{g:definition:idm180034196592}
+l.1440 ...inition}{}{g:definition:idm484908543760}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@project-distinct.4}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1425 ...{activity}{}{g:activity:idm180034195696}
+l.1444 ...{activity}{}{g:activity:idm484908536352}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.4}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1436 ...{theorem}{}{}{g:theorem:idm180034188848}
-                                                  % [16]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@project-distinct.5}) has bee
-n already used, duplicate ignored
+l.1455 ...{theorem}{}{}{g:theorem:idm484908277440}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@project-distinct.5}) has been alr
+eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1447 ...ration}{}{g:exploration:idm180034219104}
+l.1466 ...ration}{}{g:exploration:idm484906936576}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.5}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1460 ...orem}{}{}{x:theorem:thm-additionmodulom}
+l.1479 ...orem}{}{}{x:theorem:thm-additionmodulom}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.6}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1466 ...{theorem}{}{}{g:theorem:idm180034228128}
+l.1485 ...{theorem}{}{}{g:theorem:idm484907370912}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.7}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1481 ...nition}{}{x:definition:def-well-defined}
+l.1500 ...nition}{}{x:definition:def-well-defined}
+                                                  % [13]pdfTeX warning (ext4): 
+destination with the same identifier (name{tcb@cnt@block.8}) has been already u
+sed, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1505 ...tion}{}{x:definition:def-arithemticmodm}
                                                   %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.8}) has been already used, 
-duplicate ignored
+nation with the same identifier (name{tcb@cnt@project-distinct.6}) has been alr
+eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1486 ...tion}{}{x:definition:def-arithemticmodm}
-                                                  % [17]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@project-distinct.6}) has bee
-n already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1497 ...{activity}{}{g:activity:idm179951580720}
+l.1516 ...{activity}{}{g:activity:idm484907928928}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@project-distinct.7}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1510 ...gation}{}{x:investigation:q_zmodmcancel}
+l.1529 ...gation}{}{x:investigation:q_zmodmcancel}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.9}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1515 ...m}{}{}{x:theorem:theorem_cancelrelprime}
+l.1534 ...m}{}{}{x:theorem:theorem_cancelrelprime}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.10}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.1523 ...eorem}{}{}{x:theorem:theorem_cancelinZp}
+l.1542 ...eorem}{}{}{x:theorem:theorem_cancelinZp}
                                                   %
 ************************************************
 Chapter 2 Fields and Rings
 ************************************************
-[18]
+[14]
 Chapter 2.
 ************************************************
 Section 2.1 Fields
 ************************************************
-./modernalgebra.tex:1552: Undefined control sequence.
+./modernalgebra.tex:1571: Undefined control sequence.
 <argument> ...riptsize \thesection }.\ \smallcaps 
                                                   {Fields}
-l.1552 ...}{}{Fields}{}{}{x:section:SubSec-Fields}
+l.1571 ...}{}{Fields}{}{}{x:section:SubSec-Fields}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2104,10 +2086,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./modernalgebra.tex:1552: Undefined control sequence.
+./modernalgebra.tex:1571: Undefined control sequence.
 <argument> ...riptsize \thesection }.\ \smallcaps 
                                                   {Fields}
-l.1552 ...}{}{Fields}{}{}{x:section:SubSec-Fields}
+l.1571 ...}{}{Fields}{}{}{x:section:SubSec-Fields}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2119,57 +2101,57 @@ pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
 .1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1563 ...inition}{}{g:definition:idm180031674624}
-                                                  % [19
-
-]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@proj
-ect-distinct.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1571 ...{activity}{}{g:activity:idm180031655520}
+l.1582 ...inition}{}{g:definition:idm484913863808}
                                                   %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
-duplicate ignored
+nation with the same identifier (name{tcb@cnt@project-distinct.1}) has been alr
+eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1577 ...inition}{}{g:definition:idm180031747568}
+l.1590 ...{activity}{}{g:activity:idm484913682928}
+                                                  % [15
+
+]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@bloc
+k.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1596 ...inition}{}{g:definition:idm484913679488}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1581 ...ion}{}{x:definition:def_binaryoperation}
+l.1600 ...ion}{}{x:definition:def_binaryoperation}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@project-distinct.2}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1585 ...igation}{}{x:investigation:invest-binop}
+l.1604 ...igation}{}{x:investigation:invest-binop}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@project-distinct.3}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1598 ...{activity}{}{g:activity:idm180031794464}
+l.1617 ...{activity}{}{g:activity:idm484913742400}
                                                   %
 
-./modernalgebra.tex:1604: LaTeX Error: \begin{cases} on input line 1604 ended b
+./modernalgebra.tex:1623: LaTeX Error: \begin{cases} on input line 1623 ended b
 y \end{cases.}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1604 ...b\\ b \amp \text{if } b\le a\end{cases.}
+l.1623 ...b\\ b \amp \text{if } b\le a\end{cases.}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./modernalgebra.tex:1604: Missing $ inserted.
+./modernalgebra.tex:1623: Missing $ inserted.
 <inserted text> 
                 $
-l.1604 ...b\\ b \amp \text{if } b\le a\end{cases.}
+l.1623 ...b\\ b \amp \text{if } b\le a\end{cases.}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2177,10 +2159,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./modernalgebra.tex:1604: Missing } inserted.
+./modernalgebra.tex:1623: Missing } inserted.
 <inserted text> 
                 }
-l.1604 ...b\\ b \amp \text{if } b\le a\end{cases.}
+l.1623 ...b\\ b \amp \text{if } b\le a\end{cases.}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2188,10 +2170,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./modernalgebra.tex:1604: Missing } inserted.
+./modernalgebra.tex:1623: Missing } inserted.
 <inserted text> 
                 }
-l.1604 ...b\\ b \amp \text{if } b\le a\end{cases.}
+l.1623 ...b\\ b \amp \text{if } b\le a\end{cases.}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2199,10 +2181,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./modernalgebra.tex:1604: Missing } inserted.
+./modernalgebra.tex:1623: Missing } inserted.
 <inserted text> 
                 }
-l.1604 ...b\\ b \amp \text{if } b\le a\end{cases.}
+l.1623 ...b\\ b \amp \text{if } b\le a\end{cases.}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2210,35 +2192,35 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./modernalgebra.tex:1604: Missing \cr inserted.
+./modernalgebra.tex:1623: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.1604 ...b\\ b \amp \text{if } b\le a\end{cases.}
+l.1623 ...b\\ b \amp \text{if } b\le a\end{cases.}
                                                   
 I'm guessing that you meant to end an alignment here.
 
-./modernalgebra.tex:1604: Missing { inserted.
+./modernalgebra.tex:1623: Missing { inserted.
 <inserted text> 
                 {
-l.1604 ...b\\ b \amp \text{if } b\le a\end{cases.}
+l.1623 ...b\\ b \amp \text{if } b\le a\end{cases.}
                                                   
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-./modernalgebra.tex:1604: Missing { inserted.
+./modernalgebra.tex:1623: Missing { inserted.
 <inserted text> 
                 {
-l.1604 ...b\\ b \amp \text{if } b\le a\end{cases.}
+l.1623 ...b\\ b \amp \text{if } b\le a\end{cases.}
                                                   
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-./modernalgebra.tex:1604: Extra }, or forgotten $.
+./modernalgebra.tex:1623: Extra }, or forgotten $.
 <template> ...relax $\do@row@strut \hfill \egroup 
                                                   \egroup \begingroup \CT@se...
-l.1604 ...b\\ b \amp \text{if } b\le a\end{cases.}
+l.1623 ...b\\ b \amp \text{if } b\le a\end{cases.}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2246,10 +2228,10 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./modernalgebra.tex:1604: Extra }, or forgotten $.
+./modernalgebra.tex:1623: Extra }, or forgotten $.
 <template> ...do@row@strut \hfill \egroup \egroup 
                                                   \begingroup \CT@setup \CT@...
-l.1604 ...b\\ b \amp \text{if } b\le a\end{cases.}
+l.1623 ...b\\ b \amp \text{if } b\le a\end{cases.}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2257,27 +2239,27 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./modernalgebra.tex:1604: Incompatible list can't be unboxed.
+./modernalgebra.tex:1623: Incompatible list can't be unboxed.
 <template> ...ight\@tempdima width\z@ \unhbox \z@ 
                                                   $\relax $\endtemplate 
-l.1604 ...b\\ b \amp \text{if } b\le a\end{cases.}
+l.1623 ...b\\ b \amp \text{if } b\le a\end{cases.}
                                                   
 Sorry, Pandora. (You sneaky devil.)
 I refuse to unbox an \hbox in vertical mode or vice versa.
 And I can't open any boxes in math mode.
 
-./modernalgebra.tex:1604: Missing $ inserted.
+./modernalgebra.tex:1623: Missing $ inserted.
 <inserted text> 
                 $
-l.1604 ...b\\ b \amp \text{if } b\le a\end{cases.}
+l.1623 ...b\\ b \amp \text{if } b\le a\end{cases.}
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./modernalgebra.tex:1604: Missing } inserted.
+./modernalgebra.tex:1623: Missing } inserted.
 <inserted text> 
                 }
-l.1604 ...b\\ b \amp \text{if } b\le a\end{cases.}
+l.1623 ...b\\ b \amp \text{if } b\le a\end{cases.}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2285,10 +2267,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./modernalgebra.tex:1604: Missing } inserted.
+./modernalgebra.tex:1623: Missing } inserted.
 <inserted text> 
                 }
-l.1604 ...b\\ b \amp \text{if } b\le a\end{cases.}
+l.1623 ...b\\ b \amp \text{if } b\le a\end{cases.}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2296,10 +2278,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./modernalgebra.tex:1604: Missing } inserted.
+./modernalgebra.tex:1623: Missing } inserted.
 <inserted text> 
                 }
-l.1604 ...b\\ b \amp \text{if } b\le a\end{cases.}
+l.1623 ...b\\ b \amp \text{if } b\le a\end{cases.}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2307,156 +2289,138 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./modernalgebra.tex:1604: Missing \right. inserted.
+./modernalgebra.tex:1623: Missing \right. inserted.
 <inserted text> 
                 \right .
-l.1604 ...b\\ b \amp \text{if } b\le a\end{cases.}
+l.1623 ...b\\ b \amp \text{if } b\le a\end{cases.}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
-
-[20]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
-lock.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1612 ...in{definition}{}{x:definition:def_field}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@project-distinct.4}) has been alr
-eady used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1630 ...n}{}{x:investigation:exer_fieldexamples}
-                                                  %
-./modernalgebra.tex:1638: Extra }, or forgotten $.
-l.1638 \item{}\(\Z_{5}}
-                       \) under addition and multiplication modulo 11%
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-[21] [22]pdfTeX warning (ext4): destination with the same identifier (name{tcb@
-cnt@block.5}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1662 ...ields.}{}{x:theorem:thm_fieldproperties}
-                                                  % [23]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@project-distinct.5}) has bee
-n already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1689 ...tion}{}{g:investigation:idm180004073424}
-                                                  %
-************************************************
-Section 2.2 Rings
-************************************************
-./modernalgebra.tex:1699: Undefined control sequence.
-<argument> ...riptsize \thesection }.\ \smallcaps 
-                                                  {Rings}
-l.1699 ...gs}{}{Rings}{}{}{x:section:SubSec-Rings}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./modernalgebra.tex:1699: Undefined control sequence.
-<argument> ...riptsize \thesection }.\ \smallcaps 
-                                                  {Rings}
-l.1699 ...gs}{}{Rings}{}{}{x:section:SubSec-Rings}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
-.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1710 ...finition}{}{x:definition:def-polynomial}
-                                                  % [24]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@project-distinct.1}) has bee
-n already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1722 ...ration}{}{g:exploration:idm180004159168}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@project-distinct.2}) has been alr
-eady used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1725 ...ration}{}{g:exploration:idm180003697664}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
-duplicate ignored
-<to be read again> 
-                   \relax 
-l.1727 ...s.}}{x:table:table_propertiessandsets}{}
-                                                  %
-Overfull \hbox (89.19925pt too wide) in paragraph at lines 1727--1758
- [] 
- []
-
-[25]
-
-Package tcolorbox Warning: The upper box part has become overfull on input line
- 1759.
-
-pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@proje
-ct-distinct.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1760 ...}{}{x:exploration:q_fieldaxiomspolyring}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
-duplicate ignored
-<to be read again> 
-                   \relax 
-l.1766 \begin{definition}{}{x:definition:def_ring}
-                                                  % [26]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@project-distinct.4}) has bee
-n already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1780 ...tion}{}{g:investigation:idm180002997488}
-                                                  %
-Overfull \hbox (9.78246pt too wide) in paragraph at lines 1780--1782
-[]\T1/lmr/bx/n/10 Investigation 2.2.4 []\T1/lmr/m/n/10 Com-pare and con-trast [
-][]Def-i-ni-tions [][]2.1.4[][][][] and [][]Def-i-ni-tion [][]2.2.3[][][][].
- []
 
 pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
 .4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1784 ...inition}{}{g:definition:idm180002945392}
+l.1631 ...in{definition}{}{x:definition:def_field}
+                                                  % [16]pdfTeX warning (ext4): 
+destination with the same identifier (name{tcb@cnt@project-distinct.4}) has bee
+n already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1649 ...n}{}{x:investigation:exer_fieldexamples}
+                                                  % [17]pdfTeX warning (ext4): 
+destination with the same identifier (name{tcb@cnt@block.5}) has been already u
+sed, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1681 ...ields.}{}{x:theorem:thm_fieldproperties}
+                                                  % [18]pdfTeX warning (ext4): 
+destination with the same identifier (name{tcb@cnt@project-distinct.5}) has bee
+n already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1709 ...tion}{}{g:investigation:idm484905248384}
+                                                  %
+************************************************
+Section 2.2 Rings
+************************************************
+./modernalgebra.tex:1719: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Rings}
+l.1719 ...gs}{}{Rings}{}{}{x:section:SubSec-Rings}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./modernalgebra.tex:1719: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Rings}
+l.1719 ...gs}{}{Rings}{}{}{x:section:SubSec-Rings}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[19]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1730 ...finition}{}{x:definition:def-polynomial}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@project-distinct.1}) has been alr
+eady used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1742 ...ration}{}{g:exploration:idm484905242496}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@project-distinct.2}) has been alr
+eady used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1745 ...ration}{}{g:exploration:idm484905230176}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.1747 ...s.}}{x:table:table_propertiessandsets}{}
+                                                  % [20]pdfTeX warning (ext4): 
+destination with the same identifier (name{tcb@cnt@project-distinct.3}) has bee
+n already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1780 ...}{}{x:exploration:q_fieldaxiomspolyring}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.1786 \begin{definition}{}{x:definition:def_ring}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@project-distinct.4}) has been alr
+eady used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1800 ...tion}{}{g:investigation:idm484981971616}
+                                                  %
+Overfull \hbox (9.78246pt too wide) in paragraph at lines 1800--1802
+[]\T1/lmr/bx/n/10 Investigation 2.2.4 []\T1/lmr/m/n/10 Com-pare and con-trast [
+][]Def-i-ni-tions [][]2.1.4[][][][] and [][]Def-i-ni-tion [][]2.2.3[][][][].
+ []
+
+[21]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+lock.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1804 ...inition}{}{g:definition:idm484981953968}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@project-distinct.5}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1791 ...on}{}{x:exploration:expl-rings-examples}
+l.1811 ...on}{}{x:exploration:expl-rings-examples}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@project-distinct.6}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1794 ...ration}{}{g:exploration:idm180002750400}
+l.1814 ...ration}{}{g:exploration:idm484981941936}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@project-distinct.7}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1797 ...tion}{}{g:investigation:idm180002744128}
-                                                  % [27]
-Overfull \hbox (12.72179pt too wide) in paragraph at lines 1816--1817
+l.1817 ...tion}{}{g:investigation:idm484981940576}
+                                                  %
+Overfull \hbox (12.72179pt too wide) in paragraph at lines 1836--1837
 \T1/lmr/m/n/10 ioms as we know them to-day, and her def-i-ni-tion of a (not-nec
 essarily-commutative)
  []
@@ -2465,42 +2429,34 @@ pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
 .5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1823 ...inition}{}{g:definition:idm180004243792}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.6}) has been already used, 
-duplicate ignored
-<to be read again> 
-                   \relax 
-l.1829 ...orem}{}{}{x:theorem:theorem_subringtest}
-                                                  % [28]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@block.7}) has been already u
+l.1843 ...inition}{}{g:definition:idm484981923456}
+                                                  % [22]pdfTeX warning (ext4): 
+destination with the same identifier (name{tcb@cnt@block.6}) has been already u
 sed, duplicate ignored
 <to be read again> 
                    \relax 
-l.1854 \begin{definition}{}{x:definition:def-unit}
+l.1849 ...orem}{}{}{x:theorem:theorem_subringtest}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.7}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.1874 \begin{definition}{}{x:definition:def-unit}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.8}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.1863 ...in{theorem}{}{}{x:theorem:thm-cri-field}
-                                                  %
-
-LaTeX Warning: Hyper reference `x:title:table-z3addition' on page 29 undefined 
-on input line 1869.
-
-
-LaTeX Warning: Reference `x:title:table-z3addition' on page 29 undefined on inp
-ut line 1869.
-
-pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
-.9}) has been already used, duplicate ignored
+l.1883 ...in{theorem}{}{}{x:theorem:thm-cri-field}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.9}) has been already used, 
+duplicate ignored
 <to be read again> 
                    \relax 
-l.1870 ...\(R=\Z_3\).}}{g:table:idm179952477264}{}
+l.1890 ...(R=\Z_3\).}}{x:table:table-z3addition}{}
                                                   %
 
-./modernalgebra.tex:1874: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1894: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2508,14 +2464,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1874 \multicolumn{1}{lB}{\(​+\)}
+l.1894 \multicolumn{1}{lB}{\(​+\)}
                                     &\(\overline{0}​\)&\(\overline{1}​\)...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1874: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1894: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2523,14 +2479,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1874 ...olumn{1}{lB}{\(​+\)}&\(\overline{0}​
+l.1894 ...olumn{1}{lB}{\(​+\)}&\(\overline{0}​
                                                   \)&\(\overline{1}​\)&\(\...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1874: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1894: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2538,14 +2494,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1874 ...)}&\(\overline{0}​\)&\(\overline{1}​
+l.1894 ...)}&\(\overline{0}​\)&\(\overline{1}​
                                                   \)&\(\overline{2}​\)\tab...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1874: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1894: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2553,14 +2509,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1874 ...\)&\(\overline{1}​\)&\(\overline{2}​
+l.1894 ...\)&\(\overline{1}​\)&\(\overline{2}​
                                                   \)\tabularnewline\hrulemedium
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1875: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1895: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2568,14 +2524,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1875 \multicolumn{1}{lB}{\(​\overline{0}\)}
+l.1895 \multicolumn{1}{lB}{\(​\overline{0}\)}
                                                &\(​\overline{0}\)&\(\overl...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1875: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1895: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2583,14 +2539,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1875 ...column{1}{lB}{\(​\overline{0}\)}&\(​
+l.1895 ...column{1}{lB}{\(​\overline{0}\)}&\(​
                                                   \overline{0}\)&\(\overline...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1875: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1895: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2598,14 +2554,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1875 ...)}&\(​\overline{0}\)&\(\overline{1}​
+l.1895 ...)}&\(​\overline{0}\)&\(\overline{1}​
                                                   \)&\(​\overline{2}\)\tab...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1875: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1895: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2613,14 +2569,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1875 ...\overline{0}\)&\(\overline{1}​\)&\(​
+l.1895 ...\overline{0}\)&\(\overline{1}​\)&\(​
                                                   \overline{2}\)\tabularnewl...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1876: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1896: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2628,14 +2584,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1876 \multicolumn{1}{lB}{\(​\overline{1}\)}
+l.1896 \multicolumn{1}{lB}{\(​\overline{1}\)}
                                                &\(\overline{1}​\)&\(\overl...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1876: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1896: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2643,14 +2599,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1876 ...}{\(​\overline{1}\)}&\(\overline{1}​
+l.1896 ...}{\(​\overline{1}\)}&\(\overline{1}​
                                                   \)&\(\overline{2}​\)&\(\...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1876: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1896: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2658,14 +2614,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1876 ...)}&\(\overline{1}​\)&\(\overline{2}​
+l.1896 ...)}&\(\overline{1}​\)&\(\overline{2}​
                                                   \)&\(\overline{0}​\)\tab...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1876: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1896: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2673,13 +2629,13 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1876 ...\)&\(\overline{2}​\)&\(\overline{0}​
+l.1896 ...\)&\(\overline{2}​\)&\(\overline{0}​
                                                   \)\tabularnewline[0pt]
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1877: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1897: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2687,14 +2643,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1877 \multicolumn{1}{lB}{\(​\overline{2}\)}
+l.1897 \multicolumn{1}{lB}{\(​\overline{2}\)}
                                                &\(\overline{2}​\)&\(\overl...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1877: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1897: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2702,14 +2658,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1877 ...}{\(​\overline{2}\)}&\(\overline{2}​
+l.1897 ...}{\(​\overline{2}\)}&\(\overline{2}​
                                                   \)&\(\overline{0}​\)&\(\...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1877: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1897: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2717,13 +2673,13 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1877 ...)}&\(\overline{2}​\)&\(\overline{0}​
+l.1897 ...)}&\(\overline{2}​\)&\(\overline{0}​
                                                   \)&\(\overline{1}​\)
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1877: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1897: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2731,7 +2687,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1877 ...\)&\(\overline{0}​\)&\(\overline{1}​
+l.1897 ...\)&\(\overline{0}​\)&\(\overline{1}​
                                                   \)
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -2740,10 +2696,10 @@ pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
 .10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1881 ...3\).}}{x:table:table-z3multiplication}{}
+l.1901 ...3\).}}{x:table:table-z3multiplication}{}
                                                   %
 
-./modernalgebra.tex:1885: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1905: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2751,14 +2707,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1885 \multicolumn{1}{lB}{\(​\cdot\)}
+l.1905 \multicolumn{1}{lB}{\(​\cdot\)}
                                         &\(\overline{0}​\)&\(\overline{1}�...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1885: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1905: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2766,14 +2722,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1885 ...n{1}{lB}{\(​\cdot\)}&\(\overline{0}​
+l.1905 ...n{1}{lB}{\(​\cdot\)}&\(\overline{0}​
                                                   \)&\(\overline{1}​\)&\(\...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1885: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1905: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2781,14 +2737,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1885 ...)}&\(\overline{0}​\)&\(\overline{1}​
+l.1905 ...)}&\(\overline{0}​\)&\(\overline{1}​
                                                   \)&\(\overline{2}​\)\tab...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1885: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1905: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2796,14 +2752,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1885 ...\)&\(\overline{1}​\)&\(\overline{2}​
+l.1905 ...\)&\(\overline{1}​\)&\(\overline{2}​
                                                   \)\tabularnewline\crulemed...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1886: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1906: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2811,14 +2767,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1886 \multicolumn{1}{lB}{\(​\overline{0}\)}
+l.1906 \multicolumn{1}{lB}{\(​\overline{0}\)}
                                                &\(​\overline{0}\)&\(\overl...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1886: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1906: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2826,14 +2782,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1886 ...column{1}{lB}{\(​\overline{0}\)}&\(​
+l.1906 ...column{1}{lB}{\(​\overline{0}\)}&\(​
                                                   \overline{0}\)&\(\overline...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1886: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1906: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2841,14 +2797,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1886 ...)}&\(​\overline{0}\)&\(\overline{0}​
+l.1906 ...)}&\(​\overline{0}\)&\(\overline{0}​
                                                   \)&\(​\overline{0}\)\tab...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1886: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1906: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2856,14 +2812,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1886 ...\overline{0}\)&\(\overline{0}​\)&\(​
+l.1906 ...\overline{0}\)&\(\overline{0}​\)&\(​
                                                   \overline{0}\)\tabularnewl...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1887: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1907: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2871,14 +2827,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1887 \multicolumn{1}{lB}{\(​\overline{1}\)}
+l.1907 \multicolumn{1}{lB}{\(​\overline{1}\)}
                                                &\(\overline{0}​\)&\(\overl...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1887: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1907: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2886,14 +2842,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1887 ...}{\(​\overline{1}\)}&\(\overline{0}​
+l.1907 ...}{\(​\overline{1}\)}&\(\overline{0}​
                                                   \)&\(\overline{1}​\)&\(\...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1887: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1907: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2901,14 +2857,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1887 ...)}&\(\overline{0}​\)&\(\overline{1}​
+l.1907 ...)}&\(\overline{0}​\)&\(\overline{1}​
                                                   \)&\(\overline{2}​\)\tab...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1887: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1907: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2916,13 +2872,13 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1887 ...\)&\(\overline{1}​\)&\(\overline{2}​
+l.1907 ...\)&\(\overline{1}​\)&\(\overline{2}​
                                                   \)\tabularnewline[0pt]
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1888: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1908: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2930,14 +2886,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1888 \multicolumn{1}{lB}{\(​\overline{2}\)}
+l.1908 \multicolumn{1}{lB}{\(​\overline{2}\)}
                                                &\(\overline{0}​\)&\(\overl...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1888: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1908: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2945,14 +2901,14 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1888 ...}{\(​\overline{2}\)}&\(\overline{0}​
+l.1908 ...}{\(​\overline{2}\)}&\(\overline{0}​
                                                   \)&\(\overline{2}​\)&\(\...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1888: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1908: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2960,13 +2916,13 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1888 ...)}&\(\overline{0}​\)&\(\overline{2}​
+l.1908 ...)}&\(\overline{0}​\)&\(\overline{2}​
                                                   \)&\(\overline{1}​\)
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./modernalgebra.tex:1888: Package inputenc Error: Unicode character ​ (U+200B
+./modernalgebra.tex:1908: Package inputenc Error: Unicode character ​ (U+200B
 )
 (inputenc)                not set up for use with LaTeX.
 
@@ -2974,22 +2930,22 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1888 ...\)&\(\overline{2}​\)&\(\overline{1}​
+l.1908 ...\)&\(\overline{2}​\)&\(\overline{1}​
                                                   \)
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
-[29] [30] [31] [32]
+[23] [24] [25]
 ************************************************
 References 2.2 References
 ************************************************
 ************************************************
 Section 2.3 Divisibility in Integral Domains
 ************************************************
-./modernalgebra.tex:2026: Undefined control sequence.
+./modernalgebra.tex:2046: Undefined control sequence.
 <argument> ...riptsize \thesection }.\ \smallcaps 
                                                   {Divisibility in Integral ...
-l.2026 ...:section:SubSec-Divisibility-in-Domains}
+l.2046 ...:section:SubSec-Divisibility-in-Domains}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2997,10 +2953,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./modernalgebra.tex:2026: Undefined control sequence.
+./modernalgebra.tex:2046: Undefined control sequence.
 <argument> ...riptsize \thesection }.\ \smallcaps 
                                                   {Divisibility in Integral ...
-l.2026 ...:section:SubSec-Divisibility-in-Domains}
+l.2046 ...:section:SubSec-Divisibility-in-Domains}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3012,220 +2968,221 @@ pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
 .1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2036 ...theorem}{}{}{x:theorem:thm-domaincancel}
-                                                  % [33]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@block.2}) has been already u
-sed, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2045 ...inition}{}{g:definition:idm179954405312}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@project-distinct.1}) has been alr
-eady used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2050 ...tion}{}{g:investigation:idm179954401792}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
-duplicate ignored
-<to be read again> 
-                   \relax 
-l.2062 ...inition}{}{g:definition:idm179954345328}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.4}) has been already used, 
-duplicate ignored
-<to be read again> 
-                   \relax 
-l.2066 ...}{}{x:definition:def_irreducibleelement}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@project-distinct.2}) has been alr
-eady used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2071 ...}{}{x:exploration:expl-unit-prime-irred}
-                                                  % [34]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@block.5}) has been already u
-sed, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2084 ...}{x:theorem:thm-primesareirredindomains}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.6}) has been already used, 
-duplicate ignored
-<to be read again> 
-                   \relax 
-l.2093 ...orem}{}{}{x:theorem:thm-irredisprimeinZ}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@project-distinct.3}) has been alr
-eady used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2100 ...n}{}{x:exploration:expl-prime-not-irred}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@project-distinct.4}) has been alr
-eady used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2105 ...{x:exploration:exer_irreduciblenotprime}
-                                                  % [35]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@block.7}) has been already u
-sed, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2119 ...inition}{}{g:definition:idm179948024320}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.8}) has been already used, 
-duplicate ignored
-<to be read again> 
-                   \relax 
-l.2128 ...{theorem}{}{}{g:theorem:idm179948021040}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@project-distinct.5}) has been alr
-eady used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2140 ...ration}{}{g:exploration:idm179947996736}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@project-distinct.6}) has been alr
-eady used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2147 ...{}{x:exploration:exer_ringgeneralityone}
-                                                  %
-Overfull \hbox (17.73332pt too wide) in paragraph at lines 2150--2151
-[]\T1/lmr/m/n/10 __________ $\OMS/lmsy/m/n/10 )$ \T1/lmr/m/n/10 __________ $\OM
-S/lmsy/m/n/10 )$ \T1/lmr/m/n/10 __________ $\OMS/lmsy/m/n/10 )$ \T1/lmr/m/n/10 
-__________ 
- []
-
-************************************************
-Section 2.4 Principal Ideals and Euclidean Domains
-************************************************
-./modernalgebra.tex:2159: Undefined control sequence.
-<argument> ...riptsize \thesection }.\ \smallcaps 
-                                                  {Principal Ideals and Eucl...
-l.2159 ...}{}{}{x:section:SubSec-Principal-Ideals}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./modernalgebra.tex:2159: Undefined control sequence.
-<argument> ...riptsize \thesection }.\ \smallcaps 
-                                                  {Principal Ideals and Eucl...
-l.2159 ...}{}{}{x:section:SubSec-Principal-Ideals}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[36]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
-lock.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2173 ...in{definition}{}{x:definition:def-ideal}
+l.2056 ...theorem}{}{}{x:theorem:thm-domaincancel}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2185 ...{theorem}{}{}{g:theorem:idm179948091520}
+l.2065 ...inition}{}{g:definition:idm484981751040}
+                                                  % [26]pdfTeX warning (ext4): 
+destination with the same identifier (name{tcb@cnt@project-distinct.1}) has bee
+n already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2070 ...tion}{}{g:investigation:idm484981747616}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2188 ...{theorem}{}{}{g:theorem:idm179948089376}
-                                                  % [37]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@block.4}) has been already u
-sed, duplicate ignored
+l.2082 ...inition}{}{g:definition:idm484981738672}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.4}) has been already used, 
+duplicate ignored
 <to be read again> 
                    \relax 
-l.2195 ...{theorem}{}{}{g:theorem:idm179948087104}
+l.2086 ...}{}{x:definition:def_irreducibleelement}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@project-distinct.2}) has been alr
+eady used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2091 ...}{}{x:exploration:expl-unit-prime-irred}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.5}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2204 ...{theorem}{}{}{g:theorem:idm179948079776}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@project-distinct.1}) has been alr
-eady used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2219 ...tion}{}{g:investigation:idm179948104512}
+l.2104 ...}{x:theorem:thm-primesareirredindomains}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.6}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2236 ...{theorem}{}{}{g:theorem:idm179948110064}
-                                                  % [38]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@project-distinct.2}) has bee
+l.2113 ...orem}{}{}{x:theorem:thm-irredisprimeinZ}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@project-distinct.3}) has been alr
+eady used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2120 ...n}{}{x:exploration:expl-prime-not-irred}
+                                                  % [27]pdfTeX warning (ext4): 
+destination with the same identifier (name{tcb@cnt@project-distinct.4}) has bee
 n already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2242 ...{activity}{}{g:activity:idm179948135872}
+l.2125 ...{x:exploration:exer_irreduciblenotprime}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.7}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2268 ...inition}{}{g:definition:idm179948122144}
+l.2139 ...inition}{}{g:definition:idm484981694864}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.8}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2271 \begin{theorem}{}{}{x:theorem:thm_ZisPID}
-                                                % [39]pdfTeX warning (ext4): de
-stination with the same identifier (name{tcb@cnt@project-distinct.3}) has been 
-already used, duplicate ignored
+l.2148 ...{theorem}{}{}{g:theorem:idm484981691664}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@project-distinct.5}) has been alr
+eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2284 ...{activity}{}{g:activity:idm179947509680}
+l.2160 ...ration}{}{g:exploration:idm484981667264}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@project-distinct.6}) has been alr
+eady used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2167 ...{}{x:exploration:exer_ringgeneralityone}
+                                                  %
+Overfull \hbox (17.73332pt too wide) in paragraph at lines 2170--2171
+[]\T1/lmr/m/n/10 __________ $\OMS/lmsy/m/n/10 )$ \T1/lmr/m/n/10 __________ $\OM
+S/lmsy/m/n/10 )$ \T1/lmr/m/n/10 __________ $\OMS/lmsy/m/n/10 )$ \T1/lmr/m/n/10 
+__________ 
+ []
+
+[28]
+************************************************
+Section 2.4 Principal Ideals and Euclidean Domains
+************************************************
+./modernalgebra.tex:2179: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Principal Ideals and Eucl...
+l.2179 ...}{}{}{x:section:SubSec-Principal-Ideals}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./modernalgebra.tex:2179: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Principal Ideals and Eucl...
+l.2179 ...}{}{}{x:section:SubSec-Principal-Ideals}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
+.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2193 ...in{definition}{}{x:definition:def-ideal}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.2205 ...{theorem}{}{}{g:theorem:idm484981639504}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.2208 ...{theorem}{}{}{g:theorem:idm484981637296}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.4}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.2215 ...{theorem}{}{}{g:theorem:idm484981635024}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.5}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.2224 ...{theorem}{}{}{g:theorem:idm484981627760}
+                                                  % [29]pdfTeX warning (ext4): 
+destination with the same identifier (name{tcb@cnt@project-distinct.1}) has bee
+n already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2239 ...tion}{}{g:investigation:idm484981619600}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.6}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.2256 ...{theorem}{}{}{g:theorem:idm484981606800}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@project-distinct.2}) has been alr
+eady used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2262 ...{activity}{}{g:activity:idm484981603616}
+                                                  % [30]pdfTeX warning (ext4): 
+destination with the same identifier (name{tcb@cnt@block.7}) has been already u
+sed, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2288 ...inition}{}{g:definition:idm484981589808}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.8}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.2291 \begin{theorem}{}{}{x:theorem:thm_ZisPID}
+                                                %pdfTeX warning (ext4): destina
+tion with the same identifier (name{tcb@cnt@project-distinct.3}) has been alrea
+dy used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2305 ...{activity}{}{g:activity:idm484981579280}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.9}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2305 ...{theorem}{}{}{g:theorem:idm179947492976}
-                                                  % [40]pdfTeX warning (ext4): 
+l.2326 ...{theorem}{}{}{g:theorem:idm484981562624}
+                                                  % [31]pdfTeX warning (ext4): 
 destination with the same identifier (name{tcb@cnt@block.10}) has been already 
 used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2329 ...inition}{}{g:definition:idm179947470624}
+l.2350 ...inition}{}{g:definition:idm484981540272}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.11}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.2342 ...{theorem}{}{}{g:theorem:idm179947456080}
+l.2363 ...{theorem}{}{}{g:theorem:idm484981525728}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@project-distinct.4}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2347 ...tion}{}{g:investigation:idm179947454000}
+l.2368 ...tion}{}{g:investigation:idm484981523648}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.12}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.2352 ...emma}{}{}{x:lemma:lem_minimaldegreepoly}
+l.2373 ...emma}{}{}{x:lemma:lem_minimaldegreepoly}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.13}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.2358 ...in{lemma}{}{}{x:lemma:lem_polydivalglem}
-                                                  % [41]
-Overfull \hbox (16.46416pt too wide) in paragraph at lines 2361--2363
+l.2379 ...in{lemma}{}{}{x:lemma:lem_polydivalglem}
+                                                  %
+Overfull \hbox (16.46416pt too wide) in paragraph at lines 2382--2384
 []\T1/lmr/m/it/10 Proof. []\T1/lmr/m/n/10 The lead-ing term of $\OML/lmm/m/it/1
 0 f\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 )$ \T1/lmr/m/n/10 is $\OM
 L/lmm/m/it/10 a[]x[]$\T1/lmr/m/n/10 , while the lead-ing term of $\OML/lmm/m/it
@@ -3236,44 +3193,44 @@ pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
 .14}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2364 ...rithm).}{}{x:theorem:theorem_polydivalg}
-                                                  % [42]pdfTeX warning (ext4): 
+l.2385 ...rithm).}{}{x:theorem:theorem_polydivalg}
+                                                  % [32]pdfTeX warning (ext4): 
 destination with the same identifier (name{tcb@cnt@block.15}) has been already 
 used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2396 ...{theorem}{}{}{g:theorem:idm179947412448}
+l.2418 ...{theorem}{}{}{g:theorem:idm484981482000}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@project-distinct.5}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2407 ...tion}{}{g:investigation:idm179947401312}
+l.2430 ...tion}{}{g:investigation:idm484981470864}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.16}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.2413 \begin{theorem}{}{}{x:theorem:thm_edispid}
-                                                 %pdfTeX warning (ext4): destin
-ation with the same identifier (name{tcb@cnt@project-distinct.6}) has been alre
-ady used, duplicate ignored
+l.2436 \begin{theorem}{}{}{x:theorem:thm_edispid}
+                                                 % [33]pdfTeX warning (ext4): d
+estination with the same identifier (name{tcb@cnt@project-distinct.6}) has been
+ already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2426 ...ration}{}{g:exploration:idm179947380464}
+l.2450 ...ration}{}{g:exploration:idm484981449904}
                                                   %
 ************************************************
 Chapter 3 Factorization
 ************************************************
-[43]
+[34]
 Chapter 3.
 ************************************************
 Section 3.1 Factoring Polynomials
 ************************************************
-./modernalgebra.tex:2449: Undefined control sequence.
+./modernalgebra.tex:2473: Undefined control sequence.
 <argument> ...riptsize \thesection }.\ \smallcaps 
                                                   {Factoring Polynomials}
-l.2449 ...{x:section:SubSec-Factoring-Polynomials}
+l.2473 ...{x:section:SubSec-Factoring-Polynomials}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3281,10 +3238,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./modernalgebra.tex:2449: Undefined control sequence.
+./modernalgebra.tex:2473: Undefined control sequence.
 <argument> ...riptsize \thesection }.\ \smallcaps 
                                                   {Factoring Polynomials}
-l.2449 ...{x:section:SubSec-Factoring-Polynomials}
+l.2473 ...{x:section:SubSec-Factoring-Polynomials}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3292,105 +3249,104 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[44
-
-]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@proj
-ect-distinct.1}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@proje
+ct-distinct.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2461 ...tion}{}{g:investigation:idm179947364416}
+l.2485 ...tion}{}{g:investigation:idm484910843456}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@project-distinct.2}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2466 ...tion}{}{g:investigation:idm179947361728}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.1}) has been already used, 
-duplicate ignored
+l.2490 ...tion}{}{g:investigation:idm484910841088}
+                                                  % [35
+
+]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@bloc
+k.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2476 ...inition}{}{g:definition:idm179947351008}
+l.2500 ...inition}{}{g:definition:idm484910761376}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2482 ...heorem}{}{}{x:theorem:thm-rational-root}
+l.2506 ...heorem}{}{}{x:theorem:thm-rational-root}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@project-distinct.3}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2487 ...{activity}{}{g:activity:idm179947342320}
-                                                  % [45]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@project-distinct.4}) has bee
-n already used, duplicate ignored
+l.2511 ...{activity}{}{g:activity:idm484910777920}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@project-distinct.4}) has been alr
+eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2493 ...{activity}{}{g:activity:idm179947339776}
+l.2517 ...{activity}{}{g:activity:idm484910775312}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2499 ...r Theorem.}{}{g:theorem:idm179947332592}
+l.2523 ...r Theorem.}{}{g:theorem:idm484910768192}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@project-distinct.5}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2508 ...ration}{}{g:exploration:idm179947320304}
+l.2532 ...ration}{}{g:exploration:idm484910821632}
+                                                  % [36]pdfTeX warning (ext4): 
+destination with the same identifier (name{tcb@cnt@block.4}) has been already u
+sed, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2538 ...inition}{}{g:definition:idm484910817824}
                                                   %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.4}) has been already used, 
-duplicate ignored
+nation with the same identifier (name{tcb@cnt@project-distinct.6}) has been alr
+eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2513 ...inition}{}{g:definition:idm179947315968}
-                                                  % [46]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@project-distinct.6}) has bee
-n already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2517 ...ration}{}{g:exploration:idm179947311760}
+l.2542 ...ration}{}{g:exploration:idm484910817280}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.5}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2522 ...{theorem}{}{}{g:theorem:idm179947308464}
+l.2547 ...{theorem}{}{}{g:theorem:idm484910809936}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.6}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2528 ...{theorem}{}{}{g:theorem:idm179947307280}
+l.2553 ...{theorem}{}{}{g:theorem:idm484910808608}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@project-distinct.7}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2539 ...{activity}{}{g:activity:idm179947292688}
-                                                  % [47]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@block.7}) has been already u
-sed, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2568 ...{theorem}{}{}{g:theorem:idm179947281456}
+l.2564 ...{activity}{}{g:activity:idm484910794032}
                                                   %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.8}) has been already used, 
+nation with the same identifier (name{tcb@cnt@block.7}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2579 ...{theorem}{}{}{g:theorem:idm179947269040}
+l.2593 ...{theorem}{}{}{g:theorem:idm484910782736}
+                                                  % [37]pdfTeX warning (ext4): 
+destination with the same identifier (name{tcb@cnt@block.8}) has been already u
+sed, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2604 ...{theorem}{}{}{g:theorem:idm484910859760}
                                                   %
 ************************************************
 Section 3.2 Factorization in Euclidean Domains
 ************************************************
-./modernalgebra.tex:2596: Undefined control sequence.
+./modernalgebra.tex:2622: Undefined control sequence.
 <argument> ...riptsize \thesection }.\ \smallcaps 
                                                   {Factorization in Euclidea...
-l.2596 ...bSec-Factorization-in-Euclidean-Domains}
+l.2622 ...bSec-Factorization-in-Euclidean-Domains}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3398,10 +3354,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./modernalgebra.tex:2596: Undefined control sequence.
+./modernalgebra.tex:2622: Undefined control sequence.
 <argument> ...riptsize \thesection }.\ \smallcaps 
                                                   {Factorization in Euclidea...
-l.2596 ...bSec-Factorization-in-Euclidean-Domains}
+l.2622 ...bSec-Factorization-in-Euclidean-Domains}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3410,15 +3366,10 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (3.90022pt too wide) in paragraph at lines 2601--2602
+Overfull \hbox (3.90022pt too wide) in paragraph at lines 2627--2628
 []\T1/lmr/m/n/10 What is the as-cend-ing chain con-di-tion on ide-als? What are
  Noethe-
  []
-
-[48]
-
-Package hyperref Warning: Suppressing link with empty target on input line 2607
-.
 
 ************************************************
 Subsection 3.2.1 Unique Factorization Domains
@@ -3427,31 +3378,31 @@ pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
 .1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2617 \begin{definition}{}{x:definition:def-ufd}
-                                                 %pdfTeX warning (ext4): destin
-ation with the same identifier (name{tcb@cnt@project-distinct.1}) has been alre
-ady used, duplicate ignored
+l.2643 \begin{definition}{}{x:definition:def-ufd}
+                                                 % [38]pdfTeX warning (ext4): d
+estination with the same identifier (name{tcb@cnt@project-distinct.1}) has been
+ already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2630 ...{activity}{}{g:activity:idm179947247568}
-                                                  % [49]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@block.2}) has been already u
-sed, duplicate ignored
+l.2656 ...{activity}{}{g:activity:idm484910927680}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
+duplicate ignored
 <to be read again> 
                    \relax 
-l.2634 ...{theorem}{}{}{g:theorem:idm179947245744}
+l.2660 ...{theorem}{}{}{g:theorem:idm484910926064}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2639 ...{theorem}{}{}{g:theorem:idm179947243184}
+l.2665 ...{theorem}{}{}{g:theorem:idm484910923200}
                                                   %
 ************************************************
 Subsection 3.2.2 The Ascending Chain Condition and Noetherian Rings
 ************************************************
 
-Overfull \hbox (9.4077pt too wide) in paragraph at lines 2651--2651
+Overfull \hbox (9.4077pt too wide) in paragraph at lines 2677--2677
 |[]\T1/lmr/bx/n/12 The As-cend-ing Chain Con-di-tion and Noethe-rian Rings| 
  []
 
@@ -3459,25 +3410,25 @@ pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
 .4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2653 ...finition}{}{x:definition:def-noetherian}
+l.2679 ...finition}{}{x:definition:def-noetherian}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@project-distinct.2}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2662 ...ration}{}{g:exploration:idm179947239984}
+l.2688 ...ration}{}{g:exploration:idm484910921392}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.5}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2667 ...}{}{}{x:theorem:theorem-pidisnoetherian}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.6}) has been already used, 
-duplicate ignored
+l.2693 ...}{}{}{x:theorem:theorem-pidisnoetherian}
+                                                  % [39]pdfTeX warning (ext4): 
+destination with the same identifier (name{tcb@cnt@block.6}) has been already u
+sed, duplicate ignored
 <to be read again> 
                    \relax 
-l.2674 ...ollary}{}{}{g:corollary:idm179947228240}
+l.2701 ...ollary}{}{}{g:corollary:idm484910908208}
                                                   %
 ************************************************
 Subsection 3.2.3 Euclidean Domains are UFDs
@@ -3486,33 +3437,33 @@ pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
 .7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2689 ...lemma}{}{}{x:lemma:lem_divisiblebyirred}
-                                                  % [50]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@block.8}) has been already u
-sed, duplicate ignored
+l.2716 ...lemma}{}{}{x:lemma:lem_divisiblebyirred}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.8}) has been already used, 
+duplicate ignored
 <to be read again> 
                    \relax 
-l.2704 ...m}{}{}{x:theorem:thm-writeasprodofirred}
+l.2732 ...m}{}{}{x:theorem:thm-writeasprodofirred}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.9}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2711 \begin{lemma}{}{}{g:lemma:idm179947203040}
+l.2739 \begin{lemma}{}{}{g:lemma:idm484910882848}
                                                  %pdfTeX warning (ext4): destin
 ation with the same identifier (name{tcb@cnt@block.10}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2717 ...}{}{}{x:theorem:thm-primesareirredinPID}
-                                                  % [51]pdfTeX warning (ext4): 
+l.2745 ...}{}{}{x:theorem:thm-primesareirredinPID}
+                                                  % [40]pdfTeX warning (ext4): 
 destination with the same identifier (name{tcb@cnt@block.11}) has been already 
 used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2728 \begin{theorem}{}{}{x:theorem:thm_pidisufd}
+l.2756 \begin{theorem}{}{}{x:theorem:thm_pidisufd}
                                                   %
-Overfull \hbox (1.1847pt too wide) in paragraph at lines 2739--2741
+Overfull \hbox (1.1847pt too wide) in paragraph at lines 2768--2770
 \T1/lmr/m/n/10 where the $\OML/lmm/m/it/10 p[]$ \T1/lmr/m/n/10 and $\OML/lmm/m/
 it/10 q[]$ \T1/lmr/m/n/10 are not nec-es-sar-ily dis-tinct ir-re-ducibles. Sinc
 e $\OML/lmm/m/it/10 p[]\OMS/lmsy/m/n/10 j\OML/lmm/m/it/10 q[]q[] [] q[]$\T1/lmr
@@ -3523,21 +3474,22 @@ pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
 .12}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2748 ...rem}{}{}{x:theorem:theorem_everyedisufd}
+l.2777 ...rem}{}{}{x:theorem:theorem_everyedisufd}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.13}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.2754 ...ynomials).}{}{g:theorem:idm179947156704}
-                                                  % [52]
+l.2783 ...ynomials).}{}{g:theorem:idm484910964480}
+                                                  %
 ************************************************
 Section 3.3 Nonunique Factorization
 ************************************************
-./modernalgebra.tex:2777: Undefined control sequence.
+[41]
+./modernalgebra.tex:2807: Undefined control sequence.
 <argument> ...riptsize \thesection }.\ \smallcaps 
                                                   {Nonunique Factorization}
-l.2777 ...:section:SubSec-Nonunique-Factorization}
+l.2807 ...:section:SubSec-Nonunique-Factorization}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3545,10 +3497,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./modernalgebra.tex:2777: Undefined control sequence.
+./modernalgebra.tex:2807: Undefined control sequence.
 <argument> ...riptsize \thesection }.\ \smallcaps 
                                                   {Nonunique Factorization}
-l.2777 ...:section:SubSec-Nonunique-Factorization}
+l.2807 ...:section:SubSec-Nonunique-Factorization}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3556,54 +3508,54 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[53]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@p
-roject-distinct.1}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@proje
+ct-distinct.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2796 ... domain.}{g:exploration:idm179947134304}
-                                                  % [54]pdfTeX warning (ext4): 
+l.2826 ... domain.}{g:exploration:idm484911037536}
+                                                  % [42]pdfTeX warning (ext4): 
 destination with the same identifier (name{tcb@cnt@project-distinct.2}) has bee
 n already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2821 ...{activity}{}{g:activity:idm179947122528}
+l.2851 ...{activity}{}{g:activity:idm484911025744}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.1}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2825 ...{theorem}{}{}{g:theorem:idm179947120448}
+l.2855 ...{theorem}{}{}{g:theorem:idm484911023696}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2828 ...{theorem}{}{}{g:theorem:idm179947118064}
+l.2858 ...{theorem}{}{}{g:theorem:idm484911023264}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2834 \begin{lemma}{}{}{g:lemma:idm179947116368}
+l.2864 \begin{lemma}{}{}{g:lemma:idm484911019696}
                                                  %pdfTeX warning (ext4): destin
 ation with the same identifier (name{tcb@cnt@block.4}) has been already used, d
 uplicate ignored
 <to be read again> 
                    \relax 
-l.2840 ...{theorem}{}{}{g:theorem:idm179947110656}
+l.2870 ...{theorem}{}{}{g:theorem:idm484911013776}
                                                   %
 ************************************************
 Chapter 4 Ideals and Homomorphisms
 ************************************************
-[55]
+[43]
 Chapter 4.
 ************************************************
 Section 4.1 Ideals in general
 ************************************************
-./modernalgebra.tex:2870: Undefined control sequence.
+./modernalgebra.tex:2900: Undefined control sequence.
 <argument> ...riptsize \thesection }.\ \smallcaps 
                                                   {Ideals in general}
-l.2870 ...{}{}{x:section:SubSec-Ideals-In-General}
+l.2900 ...{}{}{x:section:SubSec-Ideals-In-General}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3611,10 +3563,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./modernalgebra.tex:2870: Undefined control sequence.
+./modernalgebra.tex:2900: Undefined control sequence.
 <argument> ...riptsize \thesection }.\ \smallcaps 
                                                   {Ideals in general}
-l.2870 ...{}{}{x:section:SubSec-Ideals-In-General}
+l.2900 ...{}{}{x:section:SubSec-Ideals-In-General}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3622,74 +3574,74 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[56
+[44
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@bloc
 k.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2887 ...em}{}{}{x:theorem:thm-idealintersection}
+l.2917 ...em}{}{}{x:theorem:thm-idealintersection}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@project-distinct.1}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2893 ...on}{}{x:investigation:invest-idealunion}
+l.2923 ...on}{}{x:investigation:invest-idealunion}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2899 ...{theorem}{}{}{g:theorem:idm179946008784}
-                                                  % [57]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@block.3}) has been already u
-sed, duplicate ignored
+l.2929 ...{theorem}{}{}{g:theorem:idm484911065296}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
+duplicate ignored
 <to be read again> 
                    \relax 
-l.2913 ...ion}{}{x:definition:def_idealgeneration}
+l.2943 ...ion}{}{x:definition:def_idealgeneration}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.4}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2921 ...{theorem}{}{}{g:theorem:idm179945995440}
+l.2951 ...{theorem}{}{}{g:theorem:idm484911052000}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.5}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2927 ...em}{}{}{x:theorem:theorem-smallestideal}
+l.2957 ...em}{}{}{x:theorem:theorem-smallestideal}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.6}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2934 ...m}{}{}{x:theorem:thm_idealgeneratingset}
+l.2964 ...m}{}{}{x:theorem:thm_idealgeneratingset}
                                                   %
-Overfull \hbox (3.09694pt too wide) in paragraph at lines 2937--2938
+Overfull \hbox (3.09694pt too wide) in paragraph at lines 2967--2968
 []\T1/lmr/m/it/10 The set $\OML/lmm/m/it/10 I \OT1/lmr/m/n/10 = []$ \T1/lmr/m/i
 t/10 is an ideal
  []
 
-[58]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
+[45]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
 lock.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2949 ...inition}{}{g:definition:idm179945962976}
+l.2979 ...inition}{}{g:definition:idm484911149984}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.8}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2954 ...}{}{x:principle:challenge-nonprincideal}
+l.2984 ...}{}{x:principle:challenge-nonprincideal}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.9}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.2959 ...{theorem}{}{}{g:theorem:idm179945943328}
+l.2990 ...{theorem}{}{}{g:theorem:idm484911130192}
                                                   %
-Overfull \hbox (24.66472pt too wide) in paragraph at lines 2972--2974
+Overfull \hbox (24.66472pt too wide) in paragraph at lines 3004--3006
 \T1/lmr/m/n/10 which must sta-bi-lize at $[]$. That is, at some point, $\OML/lm
 m/m/it/10 I \OMS/lmsy/m/n/10 n [] \OT1/lmr/m/n/10 =
  []
@@ -3698,131 +3650,54 @@ pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
 .10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2977 ...}{}{}{x:lemma:lemma-ascendingchainideal}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.11}) has been already used,
- duplicate ignored
+l.3009 ...}{}{}{x:lemma:lemma-ascendingchainideal}
+                                                  % [46]pdfTeX warning (ext4): 
+destination with the same identifier (name{tcb@cnt@block.11}) has been already 
+used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2987 ...{theorem}{}{}{g:theorem:idm179945929648}
-                                                  %
-Overfull \hbox (14.14551pt too wide) in paragraph at lines 2987--2990
-\T1/lmr/m/it/10 ated. Then $\OML/lmm/m/it/10 R$ \T1/lmr/m/it/10 is Noethe-rian.
-\T1/lmr/bx/it/10 Hint\T1/lmr/m/it/10 . Ar-gue that the ideal $\OML/lmm/m/it/10 
-I$ \T1/lmr/m/it/10 de-fined in [][]Lemma [][]4.1.10[][][][]
- []
-
-[59]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@p
-roject-distinct.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2999 ...ration}{}{g:exploration:idm179945918480}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.12}) has been already used,
- duplicate ignored
-<to be read again> 
-                   \relax 
-l.3005 ...finition}{}{x:definition:def-edge-ideal}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@project-distinct.3}) has been alr
-eady used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.3012 ...{activity}{}{g:activity:idm179945913120}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.13}) has been already used,
- duplicate ignored
-<to be read again> 
-                   \relax 
-l.3015 ...reptx}{A graph \(G\).}{x:figure:graph}{}
-                                                  %
-
-LaTeX Warning: File `./images/graph.svg' not found on input line 3017.
-
-
-./modernalgebra.tex:3017: LaTeX Error: Unknown graphics extension: .svg.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.3017 ...cs[width=\linewidth]{./images/graph.svg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-************************************************
-References 4.1 References
-************************************************
-[60]
-************************************************
-Section 4.2 Homomorphisms
-************************************************
-./modernalgebra.tex:3037: Undefined control sequence.
-<argument> ...riptsize \thesection }.\ \smallcaps 
-                                                  {Homomorphisms}
-l.3037 ...sms}{}{}{x:section:SubSec-Homomorphisms}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./modernalgebra.tex:3037: Undefined control sequence.
-<argument> ...riptsize \thesection }.\ \smallcaps 
-                                                  {Homomorphisms}
-l.3037 ...sms}{}{}{x:section:SubSec-Homomorphisms}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
-.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.3051 ...inition}{}{g:definition:idm179945890016}
-                                                  % [61]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@project-distinct.1}) has bee
-n already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.3061 ...:exploration:expl-homomorphism-examples}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
-duplicate ignored
-<to be read again> 
-                   \relax 
-l.3078 ...inition}{}{g:definition:idm179945868624}
+l.3019 ...{theorem}{}{}{g:theorem:idm484911116480}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@project-distinct.2}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3081 ...{activity}{}{g:activity:idm179945866064}
+l.3032 ...ration}{}{g:exploration:idm484911105584}
                                                   %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
-duplicate ignored
+nation with the same identifier (name{tcb@cnt@block.12}) has been already used,
+ duplicate ignored
 <to be read again> 
                    \relax 
-l.3086 ...{theorem}{}{}{g:theorem:idm179945864400}
-                                                  % [62]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@block.4}) has been already u
-sed, duplicate ignored
+l.3038 ...finition}{}{x:definition:def-edge-ideal}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@project-distinct.3}) has been alr
+eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3093 ...{theorem}{}{}{g:theorem:idm179945860048}
+l.3045 ...{activity}{}{g:activity:idm484911100000}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.13}) has been already used,
+ duplicate ignored
+<to be read again> 
+                   \relax 
+l.3048 ...reptx}{A graph \(G\).}{x:figure:graph}{}
                                                   %
+<../images/graph.pdf, id=1275, 184.69pt x 157.58875pt>
+File: ../images/graph.pdf Graphic file (type pdf)
+<use ../images/graph.pdf>
+Package pdftex.def Info: ../images/graph.pdf  used on input line 3050.
+(pdftex.def)             Requested size: 170.90001pt x 145.8226pt.
+ [47]
 ************************************************
-Section 4.3 Quotient Rings: New Rings from Old
+References 4.1 References
 ************************************************
-./modernalgebra.tex:3105: Undefined control sequence.
+************************************************
+Section 4.2 Homomorphisms
+************************************************
+./modernalgebra.tex:3070: Undefined control sequence.
 <argument> ...riptsize \thesection }.\ \smallcaps 
-                                                  {Quotient Rings: New Rings...
-l.3105 ...ld}{}{}{x:section:SubSec-Quotient-Rings}
+                                                  {Homomorphisms}
+l.3070 ...sms}{}{}{x:section:SubSec-Homomorphisms}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3830,10 +3705,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./modernalgebra.tex:3105: Undefined control sequence.
+./modernalgebra.tex:3070: Undefined control sequence.
 <argument> ...riptsize \thesection }.\ \smallcaps 
-                                                  {Quotient Rings: New Rings...
-l.3105 ...ld}{}{}{x:section:SubSec-Quotient-Rings}
+                                                  {Homomorphisms}
+l.3070 ...sms}{}{}{x:section:SubSec-Homomorphisms}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3841,65 +3716,127 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-************************************************
-Subsection 4.3.1 Congruence modulo \(I\)
-************************************************
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 3124.
 pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
 .1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3126 ...inition}{}{g:definition:idm179945851344}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@project-distinct.1}) has been alr
-eady used, duplicate ignored
+l.3084 ...inition}{}{g:definition:idm484911076832}
+                                                  % [48 <../images/graph.pdf>]p
+dfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@projec
+t-distinct.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3130 ...{activity}{}{g:activity:idm179954478128}
-                                                  % [63]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@project-distinct.2}) has bee
-n already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.3142 ...ration}{}{g:exploration:idm179954465824}
+l.3094 ...:exploration:expl-homomorphism-examples}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.3150 ...{theorem}{}{}{g:theorem:idm179950988272}
+l.3111 ...inition}{}{g:definition:idm484911199008}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@project-distinct.2}) has been alr
+eady used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3114 ...{activity}{}{g:activity:idm484911196528}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.3}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.3161 ...eorem}{}{}{x:theorem:thm-addition-mod-I}
+l.3119 ...{theorem}{}{}{g:theorem:idm484911195040}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.4}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.3167 ...{}{}{x:theorem:thm-multiplication-mod-I}
+l.3126 ...{theorem}{}{}{g:theorem:idm484911190576}
+                                                  %
+************************************************
+Section 4.3 Quotient Rings: New Rings from Old
+************************************************
+./modernalgebra.tex:3138: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Quotient Rings: New Rings...
+l.3138 ...ld}{}{}{x:section:SubSec-Quotient-Rings}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./modernalgebra.tex:3138: Undefined control sequence.
+<argument> ...riptsize \thesection }.\ \smallcaps 
+                                                  {Quotient Rings: New Rings...
+l.3138 ...ld}{}{}{x:section:SubSec-Quotient-Rings}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[49]
+************************************************
+Subsection 4.3.1 Congruence modulo \(I\)
+************************************************
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 3157.
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
+.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3159 ...inition}{}{g:definition:idm484911248288}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@project-distinct.1}) has been alr
+eady used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3163 ...{activity}{}{g:activity:idm484911247296}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@project-distinct.2}) has been alr
+eady used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3175 ...ration}{}{g:exploration:idm484911232624}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.2}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.3183 ...{theorem}{}{}{g:theorem:idm484911226672}
+                                                  % [50]pdfTeX warning (ext4): 
+destination with the same identifier (name{tcb@cnt@block.3}) has been already u
+sed, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3194 ...eorem}{}{}{x:theorem:thm-addition-mod-I}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.4}) has been already used, 
+duplicate ignored
+<to be read again> 
+                   \relax 
+l.3200 ...{}{}{x:theorem:thm-multiplication-mod-I}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.5}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.3174 ...{theorem}{}{}{g:theorem:idm179951196160}
-                                                  % [64]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@project-distinct.3}) has bee
-n already used, duplicate ignored
+l.3207 ...{theorem}{}{}{g:theorem:idm484906497312}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@project-distinct.3}) has been alr
+eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3181 ...ration}{}{g:exploration:idm179954472688}
+l.3214 ...ration}{}{g:exploration:idm484906500384}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@project-distinct.4}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3192 ...ration}{}{g:exploration:idm179950961568}
-                                                  % [65]
+l.3225 ...ration}{}{g:exploration:idm484906538384}
+                                                  % [51]
 ************************************************
 Subsection 4.3.2 Prime and Maximal Ideals
 ************************************************
@@ -3907,72 +3844,72 @@ pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
 .6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3214 ...inition}{}{g:definition:idm179950834512}
+l.3247 ...inition}{}{g:definition:idm484906520368}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.7}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.3219 ...{theorem}{}{}{g:theorem:idm179950845632}
+l.3252 ...{theorem}{}{}{g:theorem:idm484906519376}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@project-distinct.5}) has been alr
 eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3224 ...{activity}{}{g:activity:idm179950861824}
-                                                  % [66]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@block.8}) has been already u
-sed, duplicate ignored
-<to be read again> 
-                   \relax 
-l.3246 ...{theorem}{}{}{g:theorem:idm179950830928}
+l.3257 ...{activity}{}{g:activity:idm484906513584}
                                                   %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.9}) has been already used, 
+nation with the same identifier (name{tcb@cnt@block.8}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.3255 ...inition}{}{g:definition:idm179950904464}
+l.3279 ...{theorem}{}{}{g:theorem:idm484906470224}
+                                                  % [52]pdfTeX warning (ext4): 
+destination with the same identifier (name{tcb@cnt@block.9}) has been already u
+sed, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3288 ...inition}{}{g:definition:idm484906459056}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.10}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.3267 \begin{lemma}{}{}{g:lemma:idm179950920432}
+l.3300 \begin{lemma}{}{}{g:lemma:idm484906448464}
                                                  %pdfTeX warning (ext4): destin
 ation with the same identifier (name{tcb@cnt@block.11}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.3272 ...{theorem}{}{}{g:theorem:idm179950931856}
-                                                  % [67]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@block.12}) has been already 
-used, duplicate ignored
+l.3305 ...{theorem}{}{}{g:theorem:idm484906443552}
+                                                  %pdfTeX warning (ext4): desti
+nation with the same identifier (name{tcb@cnt@block.12}) has been already used,
+ duplicate ignored
 <to be read again> 
                    \relax 
-l.3285 ...{theorem}{}{}{g:theorem:idm179950927488}
+l.3319 ...{theorem}{}{}{g:theorem:idm484906439168}
                                                   %pdfTeX warning (ext4): desti
 nation with the same identifier (name{tcb@cnt@block.13}) has been already used,
  duplicate ignored
 <to be read again> 
                    \relax 
-l.3292 ...{}{x:theorem:thm-pid-primes-are-maximal}
-                                                  %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@project-distinct.6}) has been alr
-eady used, duplicate ignored
+l.3326 ...{}{x:theorem:thm-pid-primes-are-maximal}
+                                                  % [53]pdfTeX warning (ext4): 
+destination with the same identifier (name{tcb@cnt@project-distinct.6}) has bee
+n already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3300 ...ration}{}{g:exploration:idm179950871536}
+l.3334 ...ration}{}{g:exploration:idm484906416352}
                                                   %
 ************************************************
 Subsection 4.3.3 Homomorphisms and Quotient Rings
 ************************************************
-[68]pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@b
-lock.14}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
+.14}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3319 ...{theorem}{}{}{g:theorem:idm179950882064}
+l.3354 ...{theorem}{}{}{g:theorem:idm484906406032}
                                                   %
-Overfull \hbox (19.0606pt too wide) in paragraph at lines 3324--3325
+Overfull \hbox (19.0606pt too wide) in paragraph at lines 3359--3360
 \OML/lmm/m/it/10 R \OMS/lmsy/m/n/10 ! \OML/lmm/m/it/10 S$ \T1/lmr/m/n/10 be a h
 o-mo-mor-phism. Re-call that $[]\OML/lmm/m/it/10 ' \OT1/lmr/m/n/10 = []$\T1/lmr
 /m/n/10 . 
@@ -3982,76 +3919,73 @@ pdfTeX warning (ext4): destination with the same identifier (name{tcb@cnt@block
 .15}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3327 \begin{lemma}{}{}{g:lemma:idm179950889248}
+l.3362 \begin{lemma}{}{}{g:lemma:idm484906396640}
                                                  %pdfTeX warning (ext4): destin
 ation with the same identifier (name{tcb@cnt@block.16}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.3333 \begin{lemma}{}{}{g:lemma:idm179950888064}
+l.3368 \begin{lemma}{}{}{g:lemma:idm484906395248}
                                                  %pdfTeX warning (ext4): destin
 ation with the same identifier (name{tcb@cnt@block.17}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.3339 \begin{lemma}{}{}{g:lemma:idm179950898640}
+l.3374 \begin{lemma}{}{}{g:lemma:idm484906390080}
                                                  %pdfTeX warning (ext4): destin
 ation with the same identifier (name{tcb@cnt@block.18}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.3345 \begin{lemma}{}{}{g:lemma:idm179950897456}
+l.3380 \begin{lemma}{}{}{g:lemma:idm484906388768}
                                                  %pdfTeX warning (ext4): destin
 ation with the same identifier (name{tcb@cnt@block.19}) has been already used, 
 duplicate ignored
 <to be read again> 
                    \relax 
-l.3352 ... Theorem).}{}{g:theorem:idm179950936016}
+l.3387 ... Theorem).}{}{g:theorem:idm484906381920}
+                                                  % [54]pdfTeX warning (ext4): 
+destination with the same identifier (name{tcb@cnt@block.20}) has been already 
+used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3394 ...{theorem}{}{}{g:theorem:idm484906376640}
                                                   %pdfTeX warning (ext4): desti
-nation with the same identifier (name{tcb@cnt@block.20}) has been already used,
- duplicate ignored
+nation with the same identifier (name{tcb@cnt@project-distinct.7}) has been alr
+eady used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3359 ...{theorem}{}{}{g:theorem:idm179950950800}
-                                                  % [69]pdfTeX warning (ext4): 
-destination with the same identifier (name{tcb@cnt@project-distinct.7}) has bee
-n already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.3373 ...{activity}{}{g:activity:idm179950943152}
-                                                  % [70]
+l.3408 ...{activity}{}{g:activity:idm484906369040}
+                                                  % [55]
 runsystem(makeindex modernalgebra.idx)...executed safely (allowed).
 
- (./modernalgebra.ind
-[71
+ (./modernalgebra.ind)
+[56
 
 
 
-]) [72]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3400.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3400.
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3435.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3435.
  (./modernalgebra.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3400.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3400.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3435.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3435.
 
 Package rerunfilecheck Info: File `modernalgebra.out' has not changed.
 (rerunfilecheck)             Checksum: 5F6900C8CF82B17C3563EFFC5B333895;1449.
-
-
-LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 49930 strings out of 492616
- 1134769 string characters out of 6129482
- 1426897 words of memory out of 5000000
- 52280 multiletter control sequences out of 15000+600000
- 650118 words of font info for 96 fonts, out of 8000000 for 9000
+ 49879 strings out of 492616
+ 1134237 string characters out of 6129482
+ 1435893 words of memory out of 5000000
+ 52250 multiletter control sequences out of 15000+600000
+ 649799 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,14n,96p,1122b,1340s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,15n,96p,1122b,1340s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{x:biblio:mfo-waldschmidt} has been referenced but
  does not exist, replaced by a fixed one
 
@@ -4087,14 +4021,13 @@ r/local/texlive/2019/texmf-dist/fonts/type1/public/lm/lmri8.pfb></usr/local/tex
 live/2019/texmf-dist/fonts/type1/public/lm/lmro10.pfb></usr/local/texlive/2019/
 texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2019/texmf-dist
 /fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type
-1/public/lm/lmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/lm
-/lmtt10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/sym
-bols/msam10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts
-/symbols/msbm10.pfb>
-Output written on modernalgebra.pdf (86 pages, 701027 bytes).
+1/public/lm/lmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/am
+sfonts/symbols/msam10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publi
+c/amsfonts/symbols/msbm10.pfb>
+Output written on modernalgebra.pdf (66 pages, 779137 bytes).
 PDF statistics:
- 1837 PDF objects out of 2073 (max. 8388607)
- 1668 compressed objects within 17 object streams
- 763 named destinations out of 1000 (max. 500000)
- 293 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1755 PDF objects out of 2073 (max. 8388607)
+ 1605 compressed objects within 17 object streams
+ 746 named destinations out of 1000 (max. 500000)
+ 303 words of extra memory for PDF output out of 10000 (max. 10000000)
 

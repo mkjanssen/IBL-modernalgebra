@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-24T15:05:16-05:00    *-->
+<!--*    on 2020-07-26T22:44:10-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -143,6 +143,7 @@ MathJax.Hub.Config({
 <li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction">Introduction</a></li>
 <li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents">A Note to Students</a></li>
 <li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors">A Note to Instructors</a></li>
+<li><a href="Sec-Versions.html" data-scroll="Sec-Versions">Versions of this text</a></li>
 <li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
 </ul>
 </li>
@@ -184,117 +185,117 @@ MathJax.Hub.Config({
 <span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Principal Ideals and Euclidean Domains</span>
 </h2>
 <article class="assemblage assemblage-like" id="assemblage-12"><h6 class="heading"><span class="title">Guiding Questions.</span></h6>
-<p id="p-430">In this section, we'll seek to answer the questions: <ul class="disc">
-<li id="li-141">What are principal ideals, and what are principal ideal domains?</li>
-<li id="li-142">What are Euclidean domains, and how are they related to PIDs?</li>
-</ul></p></article><p id="p-431">One of the ways in which mathematicians study the <em class="emphasis">structure</em> of an abstract object is by considering how it interacts with other (related) objects. This is especially true of its <em class="emphasis">sub</em>objects. Thus, in linear algebra, we are often concerned with <em class="emphasis">subspaces</em> of a vector space as a means of understanding the vector space, or even submatrices as a way of understanding a matrix (see, e.g., the cofactor expansion formula for the determinant). In real analysis and topology, the important subobjects are usually open sets, or subsequences, and the study of a graph's subgraphs is an important approach to many questions in graph theory.</p>
-<p id="p-432">In this section, we begin a set-theoretic structural exploration of the notion of ring by considering a particularly important class of subring which will be integral to our understanding of factorization.</p>
-<p id="p-433">These subrings are called <em class="emphasis">ideals</em>. They arose in the work of Kummer and Dedekind as a way of trying to recover some notion of unique factorization in rings that do not have properties like the fundamental theorem of arithmetic in \(\Z\text{.}\)</p>
+<p id="p-435">In this section, we'll seek to answer the questions: <ul class="disc">
+<li id="li-144">What are principal ideals, and what are principal ideal domains?</li>
+<li id="li-145">What are Euclidean domains, and how are they related to PIDs?</li>
+</ul></p></article><p id="p-436">One of the ways in which mathematicians study the <em class="emphasis">structure</em> of an abstract object is by considering how it interacts with other (related) objects. This is especially true of its <em class="emphasis">sub</em>objects. Thus, in linear algebra, we are often concerned with <em class="emphasis">subspaces</em> of a vector space as a means of understanding the vector space, or even submatrices as a way of understanding a matrix (see, e.g., the cofactor expansion formula for the determinant). In real analysis and topology, the important subobjects are usually open sets, or subsequences, and the study of a graph's subgraphs is an important approach to many questions in graph theory.</p>
+<p id="p-437">In this section, we begin a set-theoretic structural exploration of the notion of ring by considering a particularly important class of subring which will be integral to our understanding of factorization.</p>
+<p id="p-438">These subrings are called <em class="emphasis">ideals</em>. They arose in the work of Kummer and Dedekind as a way of trying to recover some notion of unique factorization in rings that do not have properties like the fundamental theorem of arithmetic in \(\Z\text{.}\)</p>
 <article class="definition definition-like" id="def-ideal"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span>
 </h6>
-<p id="p-434">A subset \(I\) of a (not necessarily commutative) ring \(R\) is called an <dfn class="terminology">ideal</dfn> if:</p>
+<p id="p-439">A subset \(I\) of a (not necessarily commutative) ring \(R\) is called an <dfn class="terminology">ideal</dfn> if:</p>
 <ol class="decimal">
-<li id="li-143"><p id="p-435">\(0\in I\)</p></li>
-<li id="li-144"><p id="p-436">for all \(x,y\in I\text{,}\) \(x+y\in I\text{;}\) and,</p></li>
-<li id="li-145"><p id="p-437">for all \(x\in I\) and for all \(r\in R\text{,}\) \(xr\in I\) and \(rx\in I\text{.}\)</p></li>
-</ol></article><p id="p-438">Observe that the third requirement for a set \(I\) to be an ideal of \(R\) is simplified slightly if \(R\) is commutative (which, we recall, all of our rings are).</p>
-<p id="p-439">There are many important examples and types of ideals, but there are also some trivial ideals contained in every ring.</p>
+<li id="li-146"><p id="p-440">\(0\in I\)</p></li>
+<li id="li-147"><p id="p-441">for all \(x,y\in I\text{,}\) \(x+y\in I\text{;}\) and,</p></li>
+<li id="li-148"><p id="p-442">for all \(x\in I\) and for all \(r\in R\text{,}\) \(xr\in I\) and \(rx\in I\text{.}\)</p></li>
+</ol></article><p id="p-443">Observe that the third requirement for a set \(I\) to be an ideal of \(R\) is simplified slightly if \(R\) is commutative (which, we recall, all of our rings are).</p>
+<p id="p-444">There are many important examples and types of ideals, but there are also some trivial ideals contained in every ring.</p>
 <article class="theorem theorem-like" id="theorem-34"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span>
 </h6>
-<p id="p-440">Let \(R\) be a ring. Then \(R\) and \(\set{0}\) are ideals of \(R\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-35"><h6 class="heading">
+<p id="p-445">Let \(R\) be a ring. Then \(R\) and \(\set{0}\) are ideals of \(R\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-35"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span>
 </h6>
-<p id="p-441">All ideals are subrings.</p></article><p id="p-443">The following theorem provides a useful characterization of when an ideal \(I\) is in fact the whole ring.</p>
+<p id="p-446">All ideals are subrings.</p></article><p id="p-448">The following theorem provides a useful characterization of when an ideal \(I\) is in fact the whole ring.</p>
 <article class="theorem theorem-like" id="theorem-36"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span>
 </h6>
-<p id="p-444">Let \(R\) be a ring and \(I\) an ideal of \(R\text{.}\) Then \(I = R\) if and only \(I\) contains a unit of \(R\text{.}\)</p></article><p id="p-447">The most important type of ideals (for our work, at least), are those which are the sets of all multiples of a single element in the ring. Such ideals are called <em class="emphasis">principal ideals</em>.</p>
+<p id="p-449">Let \(R\) be a ring and \(I\) an ideal of \(R\text{.}\) Then \(I = R\) if and only \(I\) contains a unit of \(R\text{.}\)</p></article><p id="p-452">The most important type of ideals (for our work, at least), are those which are the sets of all multiples of a single element in the ring. Such ideals are called <em class="emphasis">principal ideals</em>.</p>
 <article class="theorem theorem-like" id="theorem-37"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.5</span><span class="period">.</span>
 </h6>
-<p id="p-448">Let \(R\) be commutative with identity and let \(a\in R\text{.}\) The set</p>
+<p id="p-453">Let \(R\) be commutative with identity and let \(a\in R\text{.}\) The set</p>
 <div class="displaymath">
 \begin{equation*}
 \ideal{a} = \setof{ra}{r\in R}
 \end{equation*}
 </div>
-<p data-braille="continuation">is an ideal (called the <em class="emphasis">principal ideal generated by \(a\)</em>).</p></article><p id="p-452">The element \(a\) in the theorem is known as a <em class="emphasis">generator</em> of \(\ideal{a}\text{.}\)</p>
+<p data-braille="continuation">is an ideal (called the <em class="emphasis">principal ideal generated by \(a\)</em>).</p></article><p id="p-457">The element \(a\) in the theorem is known as a <em class="emphasis">generator</em> of \(\ideal{a}\text{.}\)</p>
 <article class="investigation project-like" id="investigation-19"><h6 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span>
 </h6>
-<p id="p-453">Let \(R\) be commutative with identity, and let \(x,y,z\in R\text{.}\) Give necessary and sufficient conditions for \(z\in \ideal{x}\) and, separately, \(\ideal{x} \subseteq \ideal{y}\text{.}\)</p>
-<p id="p-454">That is, fill in the blanks: “\(z\in \ideal{x} \Leftrightarrow\) _________” and “\(\ideal{x}\subseteq \ideal{y} \Leftrightarrow\) _________.”</p>
-<p id="p-455">Justify your answers.</p></article><p id="p-460">Principal ideals may have more than one generator.</p>
+<p id="p-458">Let \(R\) be commutative with identity, and let \(x,y,z\in R\text{.}\) Give necessary and sufficient conditions for \(z\in \ideal{x}\) and, separately, \(\ideal{x} \subseteq \ideal{y}\text{.}\)</p>
+<p id="p-459">That is, fill in the blanks: “\(z\in \ideal{x} \Leftrightarrow\) _________” and “\(\ideal{x}\subseteq \ideal{y} \Leftrightarrow\) _________.”</p>
+<p id="p-460">Justify your answers.</p></article><p id="p-465">Principal ideals may have more than one generator.</p>
 <article class="theorem theorem-like" id="theorem-38"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.6</span><span class="period">.</span>
 </h6>
-<p id="p-461">Let \(R\) be a ring and \(a\in R\text{.}\) Then \(\ideal{a} = \ideal{ua}\text{,}\) where \(u\) is any unit of \(R\text{.}\)</p></article><article class="activity project-like" id="activity-11"><h6 class="heading">
+<p id="p-466">Let \(R\) be a ring and \(a\in R\text{.}\) Then \(\ideal{a} = \ideal{ua}\text{,}\) where \(u\) is any unit of \(R\text{.}\)</p></article><article class="activity project-like" id="activity-11"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span>
 </h6>
-<p id="p-463">In \(R = \Z\text{,}\) describe the principal ideals generated by</p>
+<p id="p-468">In \(R = \Z\text{,}\) describe the principal ideals generated by</p>
 <ol class="decimal">
-<li id="li-146"><p id="p-464">2</p></li>
-<li id="li-147"><p id="p-465">\(-9\)</p></li>
-<li id="li-148"><p id="p-466">9</p></li>
-<li id="li-149"><p id="p-467">0</p></li>
-<li id="li-150"><p id="p-468">27</p></li>
-<li id="li-151"><p id="p-469">3</p></li>
+<li id="li-149"><p id="p-469">2</p></li>
+<li id="li-150"><p id="p-470">\(-9\)</p></li>
+<li id="li-151"><p id="p-471">9</p></li>
+<li id="li-152"><p id="p-472">0</p></li>
+<li id="li-153"><p id="p-473">27</p></li>
+<li id="li-154"><p id="p-474">3</p></li>
 </ol>
-<p id="p-470">Determine the subset relations among the above ideals.</p></article><p id="p-478">It is the case in many familiar settings that all ideals are principal. Such domains are given a special name.</p>
+<p id="p-475">Determine the subset relations among the above ideals.</p></article><p id="p-483">It is the case in many familiar settings that all ideals are principal. Such domains are given a special name.</p>
 <article class="definition definition-like" id="definition-27"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.7</span><span class="period">.</span>
 </h6>
-<p id="p-479">An integral domain \(R\) in which every ideal is principal is known as a <dfn class="terminology">principal ideal domain (PID)</dfn>.</p></article><article class="theorem theorem-like" id="thm_ZisPID"><h6 class="heading">
+<p id="p-484">An integral domain \(R\) in which every ideal is principal is known as a <dfn class="terminology">principal ideal domain (PID)</dfn>.</p></article><article class="theorem theorem-like" id="thm_ZisPID"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.8</span><span class="period">.</span>
 </h6>
-<p id="p-480">The ring \(\Z\) is a principal ideal domain.</p>
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-9" id="hint-9"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like"><p id="p-481">Use properties specific to \(\Z\text{,}\) perhaps from <a href="Sec-Integers.html" class="internal" title="Chapter 1: The Integers">Section 1</a>.</p></div></div></article><article class="activity project-like" id="activity-12"><h6 class="heading">
+<p id="p-485">The ring \(\Z\) is a principal ideal domain.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-9" id="hint-9"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like"><p id="p-486">Use properties specific to \(\Z\text{,}\) perhaps from <a href="Sec-Integers.html" class="internal" title="Chapter 1: The Integers">Section 1</a>.</p></div></div></article><article class="activity project-like" id="activity-12"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span>
 </h6>
-<p id="p-486">Find an integer \(d\) such that \(I = \ideal{d}\subseteq \Z\text{,}\) if</p>
+<p id="p-491">Find an integer \(d\) such that \(I = \ideal{d}\subseteq \Z\text{,}\) if</p>
 <ol class="decimal">
-<li id="li-158"><p id="p-487">\(I = \setof{4x+10y}{x,y\in\Z}\)</p></li>
-<li id="li-159"><p id="p-488">\(I = \setof{6s+7t}{s,t\in\Z}\)</p></li>
-<li id="li-160"><p id="p-489">\(I = \setof{9w+12z}{w,z\in\Z}\)</p></li>
-<li id="li-161"><p id="p-490">\(I = \setof{am+bn}{m,n\in\Z}\)</p></li>
+<li id="li-161"><p id="p-492">\(I = \setof{4x+10y}{x,y\in\Z}\)</p></li>
+<li id="li-162"><p id="p-493">\(I = \setof{6s+7t}{s,t\in\Z}\)</p></li>
+<li id="li-163"><p id="p-494">\(I = \setof{9w+12z}{w,z\in\Z}\)</p></li>
+<li id="li-164"><p id="p-495">\(I = \setof{am+bn}{m,n\in\Z}\)</p></li>
 </ol>
-<p id="p-491">You do not need to prove that each of the sets above are ideals (though you should make sure you can do it).</p></article><article class="theorem theorem-like" id="theorem-40"><h6 class="heading">
+<p id="p-496">You do not need to prove that each of the sets above are ideals (though you should make sure you can do it).</p></article><article class="theorem theorem-like" id="theorem-40"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.9</span><span class="period">.</span>
 </h6>
-<p id="p-497">Let \(R\) be a principal ideal domain and \(x,y\in R\) be not both zero. Let \(I = \setof{xm+yn}{m,n\in R}\text{.}\) Then:</p>
+<p id="p-502">Let \(R\) be a principal ideal domain and \(x,y\in R\) be not both zero. Let \(I = \setof{xm+yn}{m,n\in R}\text{.}\) Then:</p>
 <ol class="decimal">
-<li id="li-166"><p id="p-498">\(I\) is an ideal, and</p></li>
-<li id="li-167"><p id="p-499">\(I = \ideal{d}\text{,}\) where \(d\) is any greatest common divisor of \(x\) and \(y\text{.}\)</p></li>
+<li id="li-169"><p id="p-503">\(I\) is an ideal, and</p></li>
+<li id="li-170"><p id="p-504">\(I = \ideal{d}\text{,}\) where \(d\) is any greatest common divisor of \(x\) and \(y\text{.}\)</p></li>
 </ol>
-<p id="p-500">We conclude that there exist \(s,t\in R\) such that \(d = xs + yt\text{.}\)</p></article><p id="p-506">We have so far abstracted and axiomatized several important algebraic properties of \(\Z\) that we discussed in <a href="Sec-Integers.html" class="internal" title="Chapter 1: The Integers">§ 1</a>. In particular, we have our usual operations of addition and multiplication, and their interactions; we have notions of divisibility/factorization, irreducibility, and primality; we also have cancellation and greatest common divisors.</p>
-<p id="p-507">Our last major abstraction from \(\Z\) is the division algorithm. The main obstacle to postulating domains with a division algorithm is a clear notion of comparison relations. That is, if \(R\) is an arbitrary domain with \(r,s\in R\text{,}\) is it possible to clearly and sensibly say which of \(r\) or \(s\) is “bigger” ? (Recall that this was a requirement for the division algorithm with nonzero remainders.) However, if there is a way to relate elements of a domain \(R\) to \(\N_0\text{,}\) we can sensibly define a division algorithm.</p>
+<p id="p-505">We conclude that there exist \(s,t\in R\) such that \(d = xs + yt\text{.}\)</p></article><p id="p-511">We have so far abstracted and axiomatized several important algebraic properties of \(\Z\) that we discussed in <a href="Sec-Integers.html" class="internal" title="Chapter 1: The Integers">§ 1</a>. In particular, we have our usual operations of addition and multiplication, and their interactions; we have notions of divisibility/factorization, irreducibility, and primality; we also have cancellation and greatest common divisors.</p>
+<p id="p-512">Our last major abstraction from \(\Z\) is the division algorithm. The main obstacle to postulating domains with a division algorithm is a clear notion of comparison relations. That is, if \(R\) is an arbitrary domain with \(r,s\in R\text{,}\) is it possible to clearly and sensibly say which of \(r\) or \(s\) is “bigger” ? (Recall that this was a requirement for the division algorithm with nonzero remainders.) However, if there is a way to relate elements of a domain \(R\) to \(\N_0\text{,}\) we can sensibly define a division algorithm.</p>
 <article class="definition definition-like" id="definition-28"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.10</span><span class="period">.</span>
 </h6>
-<p id="p-508">Let \(R\) be an integral domain. We call \(R\) a <dfn class="terminology">Euclidean domain</dfn> if there is a function \(\delta : R\setminus \set{0} \to \N_0\) such that: <aside class="aside aside-like" id="aside-5">This is the lowercase Greek letter <dfn class="terminology">delta</dfn>.</aside></p>
+<p id="p-513">Let \(R\) be an integral domain. We call \(R\) a <dfn class="terminology">Euclidean domain</dfn> if there is a function \(\delta : R\setminus \set{0} \to \N_0\) such that: <aside class="aside aside-like" id="aside-5">This is the lowercase Greek letter <dfn class="terminology">delta</dfn>.</aside></p>
 <ol class="decimal">
-<li id="li-168"><p id="p-509">If \(a,b\in R\setminus \set{0}\text{,}\) then \(\delta(a) \le \delta(ab)\text{.}\)</p></li>
-<li id="li-169"><p id="p-510">If \(a,b\in R\text{,}\) \(b\ne 0\text{,}\) then there exist \(q,r\in R\) such that \(a = bq+r\text{,}\) where either \(r = 0\) or \(\delta(r) \lt \delta(b)\text{.}\)</p></li>
+<li id="li-171"><p id="p-514">If \(a,b\in R\setminus \set{0}\text{,}\) then \(\delta(a) \le \delta(ab)\text{.}\)</p></li>
+<li id="li-172"><p id="p-515">If \(a,b\in R\text{,}\) \(b\ne 0\text{,}\) then there exist \(q,r\in R\) such that \(a = bq+r\text{,}\) where either \(r = 0\) or \(\delta(r) \lt \delta(b)\text{.}\)</p></li>
 </ol>
-<p id="p-511">We call the function \(\delta\) a <dfn class="terminology">norm</dfn> for \(R\text{.}\)</p></article><p id="p-512">Thus, a Euclidean domain is an integral domain with a division algorithm that behaves in a familiar way. In the remainder of this section, we will investigate the properties of Euclidean domains. First, we consider some examples.</p>
+<p id="p-516">We call the function \(\delta\) a <dfn class="terminology">norm</dfn> for \(R\text{.}\)</p></article><p id="p-517">Thus, a Euclidean domain is an integral domain with a division algorithm that behaves in a familiar way. In the remainder of this section, we will investigate the properties of Euclidean domains. First, we consider some examples.</p>
 <article class="theorem theorem-like" id="theorem-41"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.11</span><span class="period">.</span>
 </h6>
-<p id="p-513">The field \(\Q\) is a Euclidean domain under ordinary addition and multiplication, with \(\delta(x) = 0\) for all \(x\in \Q\text{.}\)</p></article><article class="investigation project-like" id="investigation-20"><h6 class="heading">
+<p id="p-518">The field \(\Q\) is a Euclidean domain under ordinary addition and multiplication, with \(\delta(x) = 0\) for all \(x\in \Q\text{.}\)</p></article><article class="investigation project-like" id="investigation-20"><h6 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span>
 </h6>
-<p id="p-514">Is \(\Z\) a Euclidean domain? If so, what is the norm function \(\delta\text{,}\) and why does this function have the required properties of a norm?</p></article><article class="lemma theorem-like" id="lem_minimaldegreepoly"><h6 class="heading">
+<p id="p-519">Is \(\Z\) a Euclidean domain? If so, what is the norm function \(\delta\text{,}\) and why does this function have the required properties of a norm?</p></article><article class="lemma theorem-like" id="lem_minimaldegreepoly"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.4.12</span><span class="period">.</span>
 </h6>
-<p id="p-516">Let \(F\) be a field and \(S\subseteq F[x]\) a set containing a nonzero polynomial. Prove that \(S\) contains a polynomial \(f\) such that \(\deg(f) \le \deg(g)\) for all nonzero \(g\in S\text{.}\)</p></article><article class="lemma theorem-like" id="lem_polydivalglem"><h6 class="heading">
+<p id="p-521">Let \(F\) be a field and \(S\subseteq F[x]\) a set containing a nonzero polynomial. Prove that \(S\) contains a polynomial \(f\) such that \(\deg(f) \le \deg(g)\) for all nonzero \(g\in S\text{.}\)</p></article><article class="lemma theorem-like" id="lem_polydivalglem"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.4.13</span><span class="period">.</span>
 </h6>
-<p id="p-518">Let \(F\) be a field and \(f(x),g(x)\in F[x]\) with \(g(x)\ne 0\text{.}\) If \(\deg f(x) \ge \deg g(x) &gt; 0\text{,}\) and \(f(x) = a_0 + a_1 x + \cdots + a_m x^m\) and \(g(x) = b_0 + b_1 x + \cdots + b_n x^n\text{,}\) then \(h(x) = f(x) - a_m b_n^{-1} x^{m-n} g(x)\) has degree strictly less than \(\deg f(x)\text{.}\)</p></article><article class="theorem theorem-like" id="theorem_polydivalg"><h6 class="heading">
+<p id="p-523">Let \(F\) be a field and \(f(x),g(x)\in F[x]\) with \(g(x)\ne 0\text{.}\) If \(\deg f(x) \ge \deg g(x) &gt; 0\text{,}\) and \(f(x) = a_0 + a_1 x + \cdots + a_m x^m\) and \(g(x) = b_0 + b_1 x + \cdots + b_n x^n\text{,}\) then \(h(x) = f(x) - a_m b_n^{-1} x^{m-n} g(x)\) has degree strictly less than \(\deg f(x)\text{.}\)</p></article><article class="theorem theorem-like" id="theorem_polydivalg"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.14</span><span class="period">.</span><span class="space"> </span><span class="title">(Polynomial Division Algorithm).</span>
 </h6>
-<aside class="aside aside-like" id="aside-6">See the <a class="external" href="http://www.corestandards.org/Math/Content/HSA/APR/D/6/" target="_blank">CCSS</a> for more.</aside><p id="p-520">Let \(F\) be a field and \(f(x),g(x)\in F[x]\) with \(g(x)\ne 0\text{.}\) Then there exist unique \(q(x),
+<aside class="aside aside-like" id="aside-6">See the <a class="external" href="http://www.corestandards.org/Math/Content/HSA/APR/D/6/" target="_blank">CCSS</a> for more.</aside><p id="p-525">Let \(F\) be a field and \(f(x),g(x)\in F[x]\) with \(g(x)\ne 0\text{.}\) Then there exist unique \(q(x),
 r(x) \in F[x]\) such that</p>
 <div class="displaymath">
 \begin{equation*}
@@ -302,22 +303,22 @@ f(x) = g(x) q(x) + r(x)\text{,}
 \end{equation*}
 </div>
 <p data-braille="continuation">where \(\deg(r(x)) \lt  \deg g(x)\text{.}\)</p>
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-10" id="hint-10"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-10"><div class="hint solution-like"><p id="p-521">For existence, consider three cases: \(f(x) = 0\text{;}\) \(f(x) \ne 0\) and \(\deg f \lt \deg g\text{;}\) \(f(x) \ne 0\) and \(\deg f \ge \deg g\text{.}\) In the last case, use induction on \(m = \deg f(x)\text{.}\) For uniqueness, mimic the uniqueness proof of <a class="xref" data-knowl="./knowl/thm_divalg.html" title="Theorem 1.2.5: The Division Algorithm for \(\N\)">Theorem 1.2.5</a>.</p></div></div></article><article class="theorem theorem-like" id="theorem-43"><h6 class="heading">
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-10" id="hint-10"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-10"><div class="hint solution-like"><p id="p-526">For existence, consider three cases: \(f(x) = 0\text{;}\) \(f(x) \ne 0\) and \(\deg f \lt \deg g\text{;}\) \(f(x) \ne 0\) and \(\deg f \ge \deg g\text{.}\) In the last case, use induction on \(m = \deg f(x)\text{.}\) For uniqueness, mimic the uniqueness proof of <a class="xref" data-knowl="./knowl/thm_divalg.html" title="Theorem 1.2.5: The Division Algorithm for \(\N\)">Theorem 1.2.5</a>.</p></div></div></article><article class="theorem theorem-like" id="theorem-43"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.15</span><span class="period">.</span>
 </h6>
-<p id="p-527">Let \(F\) be a field. Then the ring \(F[x]\) is a principal ideal domain.</p>
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-11" id="hint-11"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-11"><div class="hint solution-like"><p id="p-528">Mimic the proof of <a class="xref" data-knowl="./knowl/thm_ZisPID.html" title="Theorem 2.4.8">Theorem 2.4.8</a> and use <a class="xref" data-knowl="./knowl/lem_minimaldegreepoly.html" title="Lemma 2.4.12">Lemma 2.4.12</a>!</p></div></div></article><article class="investigation project-like" id="investigation-21"><h6 class="heading">
+<p id="p-532">Let \(F\) be a field. Then the ring \(F[x]\) is a principal ideal domain.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-11" id="hint-11"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-11"><div class="hint solution-like"><p id="p-533">Mimic the proof of <a class="xref" data-knowl="./knowl/thm_ZisPID.html" title="Theorem 2.4.8">Theorem 2.4.8</a> and use <a class="xref" data-knowl="./knowl/lem_minimaldegreepoly.html" title="Lemma 2.4.12">Lemma 2.4.12</a>!</p></div></div></article><article class="investigation project-like" id="investigation-21"><h6 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.4.5</span><span class="period">.</span>
 </h6>
-<p id="p-532">Is \(F[x]\) a Euclidean domain for all fields \(F\text{?}\) If so, what is the norm function \(\delta\text{,}\) and why does this function have the required properties of a norm? If not, why not? Prove your answer.</p></article><p id="p-534">In fact, every Euclidean domain is a PID.</p>
+<p id="p-537">Is \(F[x]\) a Euclidean domain for all fields \(F\text{?}\) If so, what is the norm function \(\delta\text{,}\) and why does this function have the required properties of a norm? If not, why not? Prove your answer.</p></article><p id="p-539">In fact, every Euclidean domain is a PID.</p>
 <article class="theorem theorem-like" id="thm_edispid"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.16</span><span class="period">.</span>
 </h6>
-<p id="p-535">Every Euclidean domain is a principal ideal domain.</p>
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-12" id="hint-12"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-12"><div class="hint solution-like"><p id="p-536">Mimic the proof of <a class="xref" data-knowl="./knowl/thm_ZisPID.html" title="Theorem 2.4.8">Theorem 2.4.8</a>.</p></div></div></article><article class="exploration project-like" id="exploration-18"><h6 class="heading">
+<p id="p-540">Every Euclidean domain is a principal ideal domain.</p>
+<a data-knowl="" class="id-ref original" data-refid="hk-hint-12" id="hint-12"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-12"><div class="hint solution-like"><p id="p-541">Mimic the proof of <a class="xref" data-knowl="./knowl/thm_ZisPID.html" title="Theorem 2.4.8">Theorem 2.4.8</a>.</p></div></div></article><article class="exploration project-like" id="exploration-18"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.4.6</span><span class="period">.</span>
 </h6>
-<p id="p-541">Where do Euclidean domains and PIDs fit in the hierarchy of abstraction found in <a class="xref" data-knowl="./knowl/exer_ringgeneralityone.html" title="Exploration 2.3.6">Question 2.3.6</a>?</p></article></section></div></main>
+<p id="p-546">Where do Euclidean domains and PIDs fit in the hierarchy of abstraction found in <a class="xref" data-knowl="./knowl/exer_ringgeneralityone.html" title="Exploration 2.3.6">Question 2.3.6</a>?</p></article></section></div></main>
 </div>
 </body>
 </html>

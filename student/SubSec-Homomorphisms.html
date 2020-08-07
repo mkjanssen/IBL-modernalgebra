@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-24T15:05:17-05:00    *-->
+<!--*    on 2020-07-26T22:44:12-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -143,6 +143,7 @@ MathJax.Hub.Config({
 <li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction">Introduction</a></li>
 <li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents">A Note to Students</a></li>
 <li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors">A Note to Instructors</a></li>
+<li><a href="Sec-Versions.html" data-scroll="Sec-Versions">Versions of this text</a></li>
 <li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
 </ul>
 </li>
@@ -184,50 +185,50 @@ MathJax.Hub.Config({
 <span class="type">Section</span> <span class="codenumber">4.2</span> <span class="title">Homomorphisms</span>
 </h2>
 <article class="assemblage assemblage-like" id="assemblage-19"><h6 class="heading"><span class="title">Guiding Questions.</span></h6>
-<p id="p-706">In this section, we'll seek to answer the questions: <ul class="disc">
-<li id="li-205">What is a ring homomorphism?</li>
-<li id="li-206">What are some examples of ring homomorphisms?</li>
-</ul></p></article><section class="introduction" id="introduction-8"><p id="p-707">Central to modern mathematics is the notion of <em class="emphasis">function</em><a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-9" id="fn-9"><sup> 1 </sup></a>. Functions arise in all areas of mathematics, each subdiscipline concerned with certain types of functions. In algebra, our concern is with <em class="emphasis">operation-preserving</em> functions, such as the linear transformations \(L : V\to W\) of vector spaces you have seen in a course in linear algebra. Those linear transformations had the properties that \(L(\mathbf{v}+\mathbf{u}) = L(\mathbf{v})+L(\mathbf{u})\) (addition is preserved) and \(L(c\mathbf{u}) = c L(\mathbf{u})\) (scalar multiplication is preserved).</p>
+<p id="p-711">In this section, we'll seek to answer the questions: <ul class="disc">
+<li id="li-208">What is a ring homomorphism?</li>
+<li id="li-209">What are some examples of ring homomorphisms?</li>
+</ul></p></article><section class="introduction" id="introduction-8"><p id="p-712">Central to modern mathematics is the notion of <em class="emphasis">function</em><a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-9" id="fn-9"><sup> 1 </sup></a>. Functions arise in all areas of mathematics, each subdiscipline concerned with certain types of functions. In algebra, our concern is with <em class="emphasis">operation-preserving</em> functions, such as the linear transformations \(L : V\to W\) of vector spaces you have seen in a course in linear algebra. Those linear transformations had the properties that \(L(\mathbf{v}+\mathbf{u}) = L(\mathbf{v})+L(\mathbf{u})\) (addition is preserved) and \(L(c\mathbf{u}) = c L(\mathbf{u})\) (scalar multiplication is preserved).</p>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-9"><div class="fn">This section assumes a familiarity with the idea of function from a set-theoretic point of view, as well as the concepts of injective (one-to-one), surjective (onto), and bijective functions (one-to-one correspondences).</div></div>
-<p id="p-708">We find something similar at work in the study of homomorphisms of rings, which we define to be functions that preserve both addition and multiplication.</p></section><article class="definition definition-like" id="definition-36"><h6 class="heading">
+<p id="p-713">We find something similar at work in the study of homomorphisms of rings, which we define to be functions that preserve both addition and multiplication.</p></section><article class="definition definition-like" id="definition-36"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span>
 </h6>
-<p id="p-709">Let \(R\) and \(S\) be commutative rings with identity. A function \(\p : R\to S\) is a called <dfn class="terminology">ring homomorphism</dfn> if it preserves addition, multiplication, and sends the identity of \(R\) to the identity of \(S\text{.}\) That is, for all \(x,y\in R\text{:}\)</p>
+<p id="p-714">Let \(R\) and \(S\) be commutative rings with identity. A function \(\p : R\to S\) is a called <dfn class="terminology">ring homomorphism</dfn> if it preserves addition, multiplication, and sends the identity of \(R\) to the identity of \(S\text{.}\) That is, for all \(x,y\in R\text{:}\)</p>
 <ul class="disc">
-<li id="li-207">\(\p(x+y) = \p(x) + \p(y)\text{,}\)</li>
-<li id="li-208">\(\p(xy) = \p(x)\p(y)\text{,}\) and</li>
-<li id="li-209">\(\p(1_R) = 1_S\text{.}\)</li>
+<li id="li-210">\(\p(x+y) = \p(x) + \p(y)\text{,}\)</li>
+<li id="li-211">\(\p(xy) = \p(x)\p(y)\text{,}\) and</li>
+<li id="li-212">\(\p(1_R) = 1_S\text{.}\)</li>
 </ul>
-<p data-braille="continuation">If \(\p\) is a bijection, we say that \(\p\) is an <dfn class="terminology">isomorphism</dfn> and write \(R\cong S\text{.}\) If \(\p : R\to R\) is an isomorphism, we say \(\p\) is an <dfn class="terminology">automorphism</dfn> of \(R\text{.}\)</p></article><p id="p-710">Our first job when glimpsing a new concept is to collect a stock of examples.</p>
+<p data-braille="continuation">If \(\p\) is a bijection, we say that \(\p\) is an <dfn class="terminology">isomorphism</dfn> and write \(R\cong S\text{.}\) If \(\p : R\to R\) is an isomorphism, we say \(\p\) is an <dfn class="terminology">automorphism</dfn> of \(R\text{.}\)</p></article><p id="p-715">Our first job when glimpsing a new concept is to collect a stock of examples.</p>
 <article class="exploration project-like" id="expl-homomorphism-examples"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span>
 </h6>
-<p id="p-711">Determine whether the following functions are homomorphisms, isomorphisms, automorphisms, or none of these. Note that \(R\) denotes an arbitrary commutative ring with identity.</p>
+<p id="p-716">Determine whether the following functions are homomorphisms, isomorphisms, automorphisms, or none of these. Note that \(R\) denotes an arbitrary commutative ring with identity.</p>
 <ol class="decimal">
-<li id="li-210">\(\p : R\to R\) defined by \(\p(x)=x\)</li>
-<li id="li-211">\(\psi : R\to R\) defined by \(\psi(x)=-x\)</li>
-<li id="li-212">\(\alpha : \Z\to \Z\) defined by \(\alpha(x)=5x\)</li>
-<li id="li-213">\(F : \Z_2[x]\to \Z_2[x]\) defined by \(F(p) = p^2\)</li>
-<li id="li-214">\(\iota : \C\to \C\) defined by \(\iota(a+bi)=a-bi\text{,}\) where \(a,b\in \R, i^2 = -1\)</li>
-<li id="li-215">\(\beta : \Z\to \Z_{5}\) defined by \(\beta(x) = \overline{x}\)</li>
-<li id="li-216">\(\epsilon_r : R[x] \to R\) defined by \(\epsilon_r(p(x)) = p(r)\) (this is known as the \(r\)-evaluation map)</li>
-<li id="li-217">\(\xi : \Z_5 \to \Z_{10}\) defined by \(\xi(\overline{x}) = \overline{5x}\)</li>
-</ol></article><p id="p-713">Homomorphisms give rise to a particularly important class of subsets: kernels.</p>
+<li id="li-213">\(\p : R\to R\) defined by \(\p(x)=x\)</li>
+<li id="li-214">\(\psi : R\to R\) defined by \(\psi(x)=-x\)</li>
+<li id="li-215">\(\alpha : \Z\to \Z\) defined by \(\alpha(x)=5x\)</li>
+<li id="li-216">\(F : \Z_2[x]\to \Z_2[x]\) defined by \(F(p) = p^2\)</li>
+<li id="li-217">\(\iota : \C\to \C\) defined by \(\iota(a+bi)=a-bi\text{,}\) where \(a,b\in \R, i^2 = -1\)</li>
+<li id="li-218">\(\beta : \Z\to \Z_{5}\) defined by \(\beta(x) = \overline{x}\)</li>
+<li id="li-219">\(\epsilon_r : R[x] \to R\) defined by \(\epsilon_r(p(x)) = p(r)\) (this is known as the \(r\)-evaluation map)</li>
+<li id="li-220">\(\xi : \Z_5 \to \Z_{10}\) defined by \(\xi(\overline{x}) = \overline{5x}\)</li>
+</ol></article><p id="p-718">Homomorphisms give rise to a particularly important class of subsets: kernels.</p>
 <article class="definition definition-like" id="definition-37"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span>
 </h6>
-<p id="p-714">Let \(\p : R \to S\) be a ring homomorphism. Then \(\ker \p =\setof{r\in R}{\p(r)=0_S}\) is the <dfn class="terminology">kernel</dfn> of \(\p\text{.}\)</p></article><article class="activity project-like" id="activity-19"><h6 class="heading">
+<p id="p-719">Let \(\p : R \to S\) be a ring homomorphism. Then \(\ker \p =\setof{r\in R}{\p(r)=0_S}\) is the <dfn class="terminology">kernel</dfn> of \(\p\text{.}\)</p></article><article class="activity project-like" id="activity-19"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span>
 </h6>
-<p id="p-715">For each homomorphism in <a class="xref" data-knowl="./knowl/expl-homomorphism-examples.html" title="Exploration 4.2.1">Exploration 4.2.1</a>, find (with justification), the kernel.</p></article><p id="p-716">In fact, kernels are not just important subsets of rings; they are ideals.</p>
+<p id="p-720">For each homomorphism in <a class="xref" data-knowl="./knowl/expl-homomorphism-examples.html" title="Exploration 4.2.1">Exploration 4.2.1</a>, find (with justification), the kernel.</p></article><p id="p-721">In fact, kernels are not just important subsets of rings; they are ideals.</p>
 <article class="theorem theorem-like" id="theorem-69"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span>
 </h6>
-<p id="p-717">Given a ring homomorphism \(\p : R\to S\text{,}\) \(\ker\p\) is an ideal.</p></article><p id="p-719">Kernels also give a useful way of determining whether their defining homomorphisms are one-to-one.</p>
+<p id="p-722">Given a ring homomorphism \(\p : R\to S\text{,}\) \(\ker\p\) is an ideal.</p></article><p id="p-724">Kernels also give a useful way of determining whether their defining homomorphisms are one-to-one.</p>
 <article class="theorem theorem-like" id="theorem-70"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span>
 </h6>
-<p id="p-720">Let \(\p : R\to S\) be a homomorphism. Then \(\p\) is one-to-one if and only if \(\ker\p = \set{0}\text{.}\)</p></article></section></div></main>
+<p id="p-725">Let \(\p : R\to S\) be a homomorphism. Then \(\p\) is one-to-one if and only if \(\ker\p = \set{0}\text{.}\)</p></article></section></div></main>
 </div>
 </body>
 </html>

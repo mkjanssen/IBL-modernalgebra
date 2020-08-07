@@ -1087,7 +1087,7 @@
       </statement>
     </definition>
     <p>
-    	In other words, an ideal <m>M</m> is maximal if no <q>larger</q> ideal (with respect to inclusion) properly contains it.
+    	In other words, an ideal <m>M\ne R</m> is maximal if no <q>larger</q> ideal (with respect to inclusion) properly contains it.
     	As we will see later, rings can have many maximal ideals.
     </p>
 
@@ -1439,7 +1439,7 @@
 				<li>Prove that <m>\p</m> is a homomorphism.</li>
 				<li>Is <m>\p</m> onto? Justify.</li>
 				<li>Compute <m>\ker\p</m> (that is, list the elements in the set). Is <m>\p</m> one-to-one?</li>
-				<li>Without appealing to the definition, is <m>\ker\p</m> prime? Explain.</li>
+				<li>Without appealing to the definition, is <m>\ker\p</m> prime? Maximal? Explain.</li>
 			</ol>
 		</statement>
 		<solution>

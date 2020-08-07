@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-07-24T15:05:14-05:00    *-->
+<!--*    on 2020-07-26T22:44:08-05:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -143,6 +143,7 @@ MathJax.Hub.Config({
 <li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction">Introduction</a></li>
 <li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents">A Note to Students</a></li>
 <li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors">A Note to Instructors</a></li>
+<li><a href="Sec-Versions.html" data-scroll="Sec-Versions">Versions of this text</a></li>
 <li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
 </ul>
 </li>
@@ -184,11 +185,11 @@ MathJax.Hub.Config({
 <span class="type">Section</span> <span class="codenumber">1.4</span> <span class="title">The Integers modulo \(m\)</span>
 </h2>
 <article class="assemblage assemblage-like" id="assemblage-7"><h6 class="heading"><span class="title">Guiding Questions.</span></h6>
-<p id="p-168">In this section, we'll seek to answer the questions: <ul class="disc">
-<li id="li-34">What are equivalence relations?</li>
-<li id="li-35">What is congruence modulo \(m\text{?}\)</li>
-<li id="li-36">How does arithmetic in \(\Z_m\) compare to arithmetic in \(\Z\text{?}\)</li>
-</ul></p></article><p id="p-169">The foundation for our exploration of abstract algebra is nearly complete. We need the basics of one more "number system" in order to appreciate the abstract approach developed in subsequent chapters. To build that number system, a brief review of relations and equivalence relations is required. Recall that given sets \(S\) and \(T\text{,}\) the Cartesian product of \(S\) with \(T\text{,}\) denoted \(S\times T\) ("\(S\) cross \(T\)"), is the set of all possible ordered pairs whose first element is from \(S\) and second element is from \(T\text{.}\) Symbolically,</p>
+<p id="p-173">In this section, we'll seek to answer the questions: <ul class="disc">
+<li id="li-37">What are equivalence relations?</li>
+<li id="li-38">What is congruence modulo \(m\text{?}\)</li>
+<li id="li-39">How does arithmetic in \(\Z_m\) compare to arithmetic in \(\Z\text{?}\)</li>
+</ul></p></article><p id="p-174">The foundation for our exploration of abstract algebra is nearly complete. We need the basics of one more "number system" in order to appreciate the abstract approach developed in subsequent chapters. To build that number system, a brief review of relations and equivalence relations is required. Recall that given sets \(S\) and \(T\text{,}\) the Cartesian product of \(S\) with \(T\text{,}\) denoted \(S\times T\) ("\(S\) cross \(T\)"), is the set of all possible ordered pairs whose first element is from \(S\) and second element is from \(T\text{.}\) Symbolically,</p>
 <div class="displaymath">
 \begin{equation*}
 S\times T = \setof{(s,t)}{s\in S, \ t\in T}.
@@ -197,17 +198,17 @@ S\times T = \setof{(s,t)}{s\in S, \ t\in T}.
 <article class="definition definition-like" id="definition-6"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.4.1</span><span class="period">.</span>
 </h6>
-<p id="p-170">Let \(S\) be a nonempty set. A <dfn class="terminology">relation</dfn> \(R\) on \(S\) is a subset of \(S\times S\text{.}\) If \(x,y\in S\) such that \((x,y)\in R\text{,}\) we usually write \(xRy\) and say that \(x\) and \(y\) are <dfn class="terminology">related under \(R\)</dfn>.</p></article><p id="p-171">The notion of a relation as presented above is extremely open-ended. <em class="emphasis">Any</em> subset of ordered pairs of \(S\times S\) describes a relation on the set \(S\text{.}\) Of course, some relations are more meaningful than others; the branch of mathematics known as <a class="external" href="https://en.wikipedia.org/wiki/Order_theory" target="_blank">order theory</a> studies <em class="emphasis">order</em> relations (such as the familiar \(\lt\)). Our focus will be on <em class="emphasis">equivalence relations</em>, which isolate the important features of \(=\text{.}\)</p>
+<p id="p-175">Let \(S\) be a nonempty set. A <dfn class="terminology">relation</dfn> \(R\) on \(S\) is a subset of \(S\times S\text{.}\) If \(x,y\in S\) such that \((x,y)\in R\text{,}\) we usually write \(xRy\) and say that \(x\) and \(y\) are <dfn class="terminology">related under \(R\)</dfn>.</p></article><p id="p-176">The notion of a relation as presented above is extremely open-ended. <em class="emphasis">Any</em> subset of ordered pairs of \(S\times S\) describes a relation on the set \(S\text{.}\) Of course, some relations are more meaningful than others; the branch of mathematics known as <a class="external" href="https://en.wikipedia.org/wiki/Order_theory" target="_blank">order theory</a> studies <em class="emphasis">order</em> relations (such as the familiar \(\lt\)). Our focus will be on <em class="emphasis">equivalence relations</em>, which isolate the important features of \(=\text{.}\)</p>
 <article class="definition definition-like" id="def-eqrel"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.4.2</span><span class="period">.</span>
 </h6>
-<p id="p-172">Let \(S\) be a nonempty set. We say a relation \(\sim\) on \(S\) is an <dfn class="terminology">equivalence relation</dfn> if the following properties hold:</p>
+<p id="p-177">Let \(S\) be a nonempty set. We say a relation \(\sim\) on \(S\) is an <dfn class="terminology">equivalence relation</dfn> if the following properties hold:</p>
 <ul class="disc">
-<li id="li-37"><p id="p-173">\(\sim\) is <em class="emphasis">reflexive</em>: if \(a\in S\text{,}\) then \(a\sim a\text{.}\)</p></li>
-<li id="li-38"><p id="p-174">\(\sim\) is <em class="emphasis">symmetric</em>: if \(a,b\in S\) with \(a\sim b\text{,}\) then \(b\sim a\text{.}\)</p></li>
-<li id="li-39"><p id="p-175">\(\sim\) is <em class="emphasis">transitive</em>: if \(a,b,c\in S\) with \(a\sim b\) and \(b\sim c\text{,}\) then \(a\sim c\text{.}\)</p></li>
+<li id="li-40"><p id="p-178">\(\sim\) is <em class="emphasis">reflexive</em>: if \(a\in S\text{,}\) then \(a\sim a\text{.}\)</p></li>
+<li id="li-41"><p id="p-179">\(\sim\) is <em class="emphasis">symmetric</em>: if \(a,b\in S\) with \(a\sim b\text{,}\) then \(b\sim a\text{.}\)</p></li>
+<li id="li-42"><p id="p-180">\(\sim\) is <em class="emphasis">transitive</em>: if \(a,b,c\in S\) with \(a\sim b\) and \(b\sim c\text{,}\) then \(a\sim c\text{.}\)</p></li>
 </ul>
-<p id="p-176">Given \(x\in S\text{,}\) the set</p>
+<p id="p-181">Given \(x\in S\text{,}\) the set</p>
 <div class="displaymath">
 \begin{equation*}
 \overline{x} = \setof{y\in S}{x\sim y}
@@ -216,75 +217,75 @@ S\times T = \setof{(s,t)}{s\in S, \ t\in T}.
 <p data-braille="continuation">is called the <dfn class="terminology">equivalence class of \(x\)</dfn>. Any element \(z\in \overline{x}\) is called a <dfn class="terminology">representative</dfn> of the equivalence class.</p></article><article class="activity project-like" id="activity-3"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.4.1</span><span class="period">.</span>
 </h6>
-<p id="p-177">Prove that “has the same birthday as” is an equivalence relation on the set \(P\) of all people.</p></article><article class="exploration project-like" id="exploration-3"><h6 class="heading">
+<p id="p-182">Prove that “has the same birthday as” is an equivalence relation on the set \(P\) of all people.</p></article><article class="exploration project-like" id="exploration-3"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">1.4.2</span><span class="period">.</span>
 </h6>
-<p id="p-181">What other relations can you think of? Write down one example and one non-example of an equivalence relation.</p></article><article class="activity project-like" id="activity-4"><h6 class="heading">
+<p id="p-186">What other relations can you think of? Write down one example and one non-example of an equivalence relation.</p></article><article class="activity project-like" id="activity-4"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.4.3</span><span class="period">.</span>
 </h6>
-<p id="p-182">Prove that \(\le\) is <em class="emphasis">not</em> an equivalence relation on \(\Z\text{.}\)</p></article><p id="p-184">For our purposes, a particularly important equivalence relation is congruence modulo \(m\) on the set of integers.</p>
+<p id="p-187">Prove that \(\le\) is <em class="emphasis">not</em> an equivalence relation on \(\Z\text{.}\)</p></article><p id="p-189">For our purposes, a particularly important equivalence relation is congruence modulo \(m\) on the set of integers.</p>
 <article class="definition definition-like" id="definition-8"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.4.3</span><span class="period">.</span>
 </h6>
-<p id="p-185">Let \(a,b\in \Z\) and \(m \in \N\text{,}\) \(m &gt; 1\text{.}\) We say <dfn class="terminology">\(a\) is congruent to \(b\) modulo \(m\)</dfn> if \(m\mid a-b\text{.}\) We write \(a \equiv b\mod m\text{.}\)</p></article><article class="activity project-like" id="activity-5"><h6 class="heading">
+<p id="p-190">Let \(a,b\in \Z\) and \(m \in \N\text{,}\) \(m &gt; 1\text{.}\) We say <dfn class="terminology">\(a\) is congruent to \(b\) modulo \(m\)</dfn> if \(m\mid a-b\text{.}\) We write \(a \equiv b\mod m\text{.}\)</p></article><article class="activity project-like" id="activity-5"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.4.4</span><span class="period">.</span>
 </h6>
-<p id="p-186">Justify the following congruences.</p>
+<p id="p-191">Justify the following congruences.</p>
 <ol class="decimal">
-<li id="li-40">\(\displaystyle 18 \equiv 6\mod 12\)</li>
-<li id="li-41">\(\displaystyle 47 \equiv 8\mod 13\)</li>
-<li id="li-42">\(\displaystyle 71 \equiv 1\mod 5\)</li>
-<li id="li-43">\(\displaystyle 21 \equiv -1 \mod 11\)</li>
-<li id="li-44">\(\displaystyle 24 \equiv 0\mod 6\)</li>
+<li id="li-43">\(\displaystyle 18 \equiv 6\mod 12\)</li>
+<li id="li-44">\(\displaystyle 47 \equiv 8\mod 13\)</li>
+<li id="li-45">\(\displaystyle 71 \equiv 1\mod 5\)</li>
+<li id="li-46">\(\displaystyle 21 \equiv -1 \mod 11\)</li>
+<li id="li-47">\(\displaystyle 24 \equiv 0\mod 6\)</li>
 </ol></article><article class="theorem theorem-like" id="theorem-15"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.4.4</span><span class="period">.</span>
 </h6>
-<p id="p-187">Given an integer \(m &gt; 1\text{,}\) congruence modulo \(m\) is an equivalence relation on \(\Z\text{.}\)</p></article><article class="exploration project-like" id="exploration-4"><h6 class="heading">
+<p id="p-192">Given an integer \(m &gt; 1\text{,}\) congruence modulo \(m\) is an equivalence relation on \(\Z\text{.}\)</p></article><article class="exploration project-like" id="exploration-4"><h6 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">1.4.5</span><span class="period">.</span>
 </h6>
-<p id="p-192">Find all of the equivalence classes of \(\Z_5\) and \(\Z_7\text{.}\)</p></article><article class="theorem theorem-like" id="thm-additionmodulom"><h6 class="heading">
+<p id="p-197">Find all of the equivalence classes of \(\Z_5\) and \(\Z_7\text{.}\)</p></article><article class="theorem theorem-like" id="thm-additionmodulom"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.4.5</span><span class="period">.</span>
 </h6>
-<p id="p-194">Let \(a,b, c,d\in \Z\) and \(m &gt; 1\) such that \(a\equiv c\mod m\) and \(b\equiv d\mod m\text{.}\) Then \(a+b \equiv c + d \mod m\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-17"><h6 class="heading">
+<p id="p-199">Let \(a,b, c,d\in \Z\) and \(m &gt; 1\) such that \(a\equiv c\mod m\) and \(b\equiv d\mod m\text{.}\) Then \(a+b \equiv c + d \mod m\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-17"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.4.6</span><span class="period">.</span>
 </h6>
-<p id="p-196">Let \(a,b, c,d\in \Z\) and \(m &gt; 1\) such that \(a\equiv c\mod m\) and \(b\equiv d\mod m\text{.}\) Then \(ab \equiv c d\mod m\text{.}\)</p></article><article class="definition definition-like" id="def-well-defined"><h6 class="heading">
+<p id="p-201">Let \(a,b, c,d\in \Z\) and \(m &gt; 1\) such that \(a\equiv c\mod m\) and \(b\equiv d\mod m\text{.}\) Then \(ab \equiv c d\mod m\text{.}\)</p></article><article class="definition definition-like" id="def-well-defined"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.4.7</span><span class="period">.</span>
 </h6>
-<p id="p-199">Let \(S\) be a set and \(\sim\) an equivalence relation on \(S\text{.}\) Then a statement \(P\) about the equivalence classes of \(S\) is <dfn class="terminology">well-defined</dfn> if the representative of the equivalence class does not matter. That is, whenever \(\overline{x} = \overline{y}\text{,}\) \(P(\overline{x}) = P(\overline{y})\text{.}\)</p></article><p id="p-200">The previous exercises justify the following definitions.</p>
+<p id="p-204">Let \(S\) be a set and \(\sim\) an equivalence relation on \(S\text{.}\) Then a statement \(P\) about the equivalence classes of \(S\) is <dfn class="terminology">well-defined</dfn> if the representative of the equivalence class does not matter. That is, whenever \(\overline{x} = \overline{y}\text{,}\) \(P(\overline{x}) = P(\overline{y})\text{.}\)</p></article><p id="p-205">The previous exercises justify the following definitions.</p>
 <article class="definition definition-like" id="def-arithemticmodm"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.4.8</span><span class="period">.</span>
 </h6>
-<p id="p-201">Let \(m &gt; 1\) and \(a,b\in \Z_m\text{.}\) Then the following are well-defined operations on the equivalence classes:</p>
+<p id="p-206">Let \(m &gt; 1\) and \(a,b\in \Z_m\text{.}\) Then the following are well-defined operations on the equivalence classes:</p>
 <ol class="decimal">
-<li id="li-45"><p id="p-202"><em class="emphasis">Addition modulo \(m\)</em>: \(\overline{a} + \overline{b} := \overline{a+b}\text{.}\) <aside class="aside aside-like" id="aside-3">The symbol \(:=\) is often used to indicate that we are <em class="emphasis">defining</em> the expression on the left to equal the expression on the right.</aside></p></li>
-<li id="li-46"><p id="p-203"><em class="emphasis">Multiplication modulo \(m\)</em>: \(\overline{a}\cdot \overline{b} := \overline{a\cdot b}\text{.}\)</p></li>
-</ol></article><p id="p-204">Most elementary propositions about \(\Z_m\) can be recast as statements about \(\Z\text{.}\) For instance, in proving <a class="xref" data-knowl="./knowl/thm-additionmodulom.html" title="Theorem 1.4.5">Theorem 1.4.5</a> you likely proved that if \(m|a-c\) and \(m|b-d\) that \(m|(a+b)-(c+d)\text{.}\) However, as the statements become more complex, repeatedly reshaping statements about \(Z_m\) as statements about \(\Z\) becomes cumbersome and unhelpful. Instead, you are encouraged to become comfortable doing arithmetic modulo \(m\) or, put another way, arithmetic with the equivalence classes of \(\Z_m\) as defined in <a class="xref" data-knowl="./knowl/def-arithemticmodm.html" title="Definition 1.4.8">Definition 1.4.8</a>.</p>
+<li id="li-48"><p id="p-207"><em class="emphasis">Addition modulo \(m\)</em>: \(\overline{a} + \overline{b} := \overline{a+b}\text{.}\) <aside class="aside aside-like" id="aside-3">The symbol \(:=\) is often used to indicate that we are <em class="emphasis">defining</em> the expression on the left to equal the expression on the right.</aside></p></li>
+<li id="li-49"><p id="p-208"><em class="emphasis">Multiplication modulo \(m\)</em>: \(\overline{a}\cdot \overline{b} := \overline{a\cdot b}\text{.}\)</p></li>
+</ol></article><p id="p-209">Most elementary propositions about \(\Z_m\) can be recast as statements about \(\Z\text{.}\) For instance, in proving <a class="xref" data-knowl="./knowl/thm-additionmodulom.html" title="Theorem 1.4.5">Theorem 1.4.5</a> you likely proved that if \(m|a-c\) and \(m|b-d\) that \(m|(a+b)-(c+d)\text{.}\) However, as the statements become more complex, repeatedly reshaping statements about \(Z_m\) as statements about \(\Z\) becomes cumbersome and unhelpful. Instead, you are encouraged to become comfortable doing arithmetic modulo \(m\) or, put another way, arithmetic with the equivalence classes of \(\Z_m\) as defined in <a class="xref" data-knowl="./knowl/def-arithemticmodm.html" title="Definition 1.4.8">Definition 1.4.8</a>.</p>
 <article class="activity project-like" id="activity-6"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.4.6</span><span class="period">.</span>
 </h6>
-<p id="p-205">Without passing back to \(\Z\text{,}\) find the smallest nonnegative integer representative of the resulting equivalence classes.</p>
+<p id="p-210">Without passing back to \(\Z\text{,}\) find the smallest nonnegative integer representative of the resulting equivalence classes.</p>
 <ol class="decimal">
-<li id="li-47">\(\overline{5}+\overline{11}\) in \(\Z_{9}\)</li>
-<li id="li-48">\(\overline{-3}+\overline{-3}\) in \(\Z_{6}\)</li>
-<li id="li-49">\(\overline{8}\cdot\overline{3}\) in \(\Z_{19}\)</li>
-<li id="li-50">\(\overline{-1}\cdot(\overline{3}+\overline{8})\) in \(\Z_{7}\)</li>
-<li id="li-51">\(\overline{3}\cdot(\overline{5}^2+\overline{3}^3)\) in \(\Z_{20}\)</li>
-</ol></article><p id="p-206">In the remainder of this section, we investigate fundamental properties of arithmetic in \(\Z_m\text{.}\)</p>
+<li id="li-50">\(\overline{5}+\overline{11}\) in \(\Z_{9}\)</li>
+<li id="li-51">\(\overline{-3}+\overline{-3}\) in \(\Z_{6}\)</li>
+<li id="li-52">\(\overline{8}\cdot\overline{3}\) in \(\Z_{19}\)</li>
+<li id="li-53">\(\overline{-1}\cdot(\overline{3}+\overline{8})\) in \(\Z_{7}\)</li>
+<li id="li-54">\(\overline{3}\cdot(\overline{5}^2+\overline{3}^3)\) in \(\Z_{20}\)</li>
+</ol></article><p id="p-211">In the remainder of this section, we investigate fundamental properties of arithmetic in \(\Z_m\text{.}\)</p>
 <article class="investigation project-like" id="q_zmodmcancel"><h6 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.4.7</span><span class="period">.</span>
 </h6>
-<p id="p-207">Let \(\overline{a},\overline{b}\in \Z_m\) and \(m &gt; 1\text{.}\) If \(\overline{a}\cdot \overline{c} = \overline{b}\cdot \overline{c}\text{,}\) is it true that \(\overline{a} = \overline{b}\text{?}\) If so, prove it. If not, find an example of when the statement fails to hold.</p></article><article class="theorem theorem-like" id="theorem_cancelrelprime"><h6 class="heading">
+<p id="p-212">Let \(\overline{a},\overline{b}\in \Z_m\) and \(m &gt; 1\text{.}\) If \(\overline{a}\cdot \overline{c} = \overline{b}\cdot \overline{c}\text{,}\) is it true that \(\overline{a} = \overline{b}\text{?}\) If so, prove it. If not, find an example of when the statement fails to hold.</p></article><article class="theorem theorem-like" id="theorem_cancelrelprime"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.4.9</span><span class="period">.</span>
 </h6>
-<p id="p-209">Let \(a,b,c\text{,}\) and \(m\) be integers with \(m &gt; 1\) and \(\gcd(c,m)=1\text{.}\) Then there is some \(x\in \Z\) such that \(\overline{c} \overline{x} = \overline{1}\text{.}\)</p>
-<p id="p-210">Conclude that if \(\overline{a} \cdot\overline{c} = \overline{b}\cdot\overline{c}\) in \(\Z_m\) that \(\overline{a} = \overline{b}\text{.}\)</p></article><article class="theorem theorem-like" id="theorem_cancelinZp"><h6 class="heading">
+<p id="p-214">Let \(a,b,c\text{,}\) and \(m\) be integers with \(m &gt; 1\) and \(\gcd(c,m)=1\text{.}\) Then there is some \(x\in \Z\) such that \(\overline{c} \overline{x} = \overline{1}\text{.}\)</p>
+<p id="p-215">Conclude that if \(\overline{a} \cdot\overline{c} = \overline{b}\cdot\overline{c}\) in \(\Z_m\) that \(\overline{a} = \overline{b}\text{.}\)</p></article><article class="theorem theorem-like" id="theorem_cancelinZp"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.4.10</span><span class="period">.</span>
 </h6>
-<p id="p-212">Let \(p\in \N\) be prime and \(\overline{a},\overline{b},\overline{c}\in \Z_p\) such that \(\overline{c}\ne \overline{0}\text{.}\) Then</p>
+<p id="p-217">Let \(p\in \N\) be prime and \(\overline{a},\overline{b},\overline{c}\in \Z_p\) such that \(\overline{c}\ne \overline{0}\text{.}\) Then</p>
 <ol class="decimal">
-<li id="li-52"><p id="p-213">there is some \(\overline{x}\in \Z_p\) such that \(\overline{c}\cdot \overline{x} = \overline{1}\text{;}\) and,</p></li>
-<li id="li-53"><p id="p-214">if \(\overline{a} \cdot\overline{c} = \overline{b}\cdot\overline{c}\text{,}\) \(\overline{a} = \overline{b}\text{.}\)</p></li>
+<li id="li-55"><p id="p-218">there is some \(\overline{x}\in \Z_p\) such that \(\overline{c}\cdot \overline{x} = \overline{1}\text{;}\) and,</p></li>
+<li id="li-56"><p id="p-219">if \(\overline{a} \cdot\overline{c} = \overline{b}\cdot\overline{c}\text{,}\) \(\overline{a} = \overline{b}\text{.}\)</p></li>
 </ol></article></section></div></main>
 </div>
 </body>

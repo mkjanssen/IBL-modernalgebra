@@ -223,7 +223,7 @@
 
     
     <p>
-    		Note that while <m>F[x]</m> is a ring, and we already have a <xref ref="def_irreducibleelement" text="custom">definition of an irreducible element of a ring</xref>, we will find it useful to have a ready definition of irreducible in the context of polynomials with coefficients in a field. It is to that task that we now turn.
+    		Note that while <m>F[x]</m> is a ring, and we already have a <xref ref="def_irreducibleelement" text="custom">definition</xref> of an irreducible element of a ring, we will find it useful to have a ready definition of irreducible in the context of polynomials with coefficients in a field. It is to that task that we now turn.
     	</p>
 
     
@@ -458,7 +458,7 @@
     
     <introduction>
     <p>
-    		In this section, our explorations of the structural arithmetic properties that guarantee unique factorization culminate in <xref ref="thm_everyedisufd" />.
+    		In this section, our explorations of the structural arithmetic properties that guarantee unique factorization culminate in <xref ref="theorem_everyedisufd" />.
     		Specifically, we'll see that all Euclidean domains possess the unique factorization property.
     		To prove this theorem, we will rely in part on an interesting property of <em>chains</em> of ideals in Euclidean domains.
     		

@@ -309,7 +309,7 @@
             </li>
             <li>
               <p>
-                <m>\Z_{5}}</m> under addition and multiplication modulo 11
+                <m>\Z_{5}</m> under addition and multiplication modulo 11
               </p>
             </li>
             <li>
@@ -1308,8 +1308,8 @@ Again, this is a formalization of an idea that you have been using since you wer
     			A useful tool for analyzing the structure of rings with finitely many elements are addition and multiplication tables. As an example, consider the addition and multiplication tables for <m>R = \Z_3</m> shown in <xref ref="table-z3addition" /> and <xref ref="table-z3multiplication" />.
 		</p>
 		
-		<table>
-  <title xml:id="table-z3addition">
+		<table xml:id="table-z3addition">
+  <title>
     Addition table for <m>R=\Z_3</m>.
   </title>
   <tabular>

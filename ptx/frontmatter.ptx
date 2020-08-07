@@ -251,8 +251,8 @@
   		<li>An expanded treatment of fields, with an emphasis on extensions of <m>\Q[x]</m> (and possible introduction to groups via permutations of roots of polynomials).</li>
   		<li>Additional optional end-of-section exercises.</li>
   		<li>Integration of SageMath cells to aid computation where appropriate.</li>
-  		<li>PDF and HTML versions of both the student and instructor versions.</li>
-  		<li>Low-cost print copies of the student version.</li>
+  		<li><delete>PDF and HTML versions of both the student and instructor versions</delete>. These are available! Sort of. No HTML instructor version yet, but a <xref ref="Sec-Versions" text="custom">PDF of the student version</xref> is now available.</li>
+  		<li><delete>Low-cost print copies of the student version</delete>. Coming soon!</li>
   	</ul>
 	There is no planned timeline for any of these projects.
 	If you are interested in helping make one of these happen, please email me (Mike) and let me know!
@@ -261,6 +261,24 @@
 	</p>
 
 </preface>
+
+<preface xml:id="Sec-Versions">
+	<title>Versions of this text</title>
+	
+	<p>
+		The primary version of this text is the HTML version, available at <url href="https://ringswithinquiry.org"><c>https://ringswithinquiry.org</c></url>.
+		Frankly, it is the easiest to update in case of a quick fix.
+		Other available editions are:
+	</p>
+	<ul>
+		<li>A <url href="https://ringswithinquiry.org/RWI-Student.pdf">PDF of the student version</url>.</li>
+		<li>A PDF of the instructor version; email Mike Janssen to request it.</li>
+		<li>A low-cost print version from Amazon. (Coming soon!)</li>
+	</ul>
+
+
+</preface>
+
 
 <acknowledgement>
 
@@ -280,6 +298,11 @@ The Network of IBL Communities (and NSF-DUE #1925188) and the UNO STEM TRAIL Cen
 <p>
 Rob Beezer and the PreTeXt team for creating this wonderful authoring language.
 </p>
+
+<p>
+And of course, our friends, family, and colleagues for their support of this project.
+</p>
+
 
 </acknowledgement>
 </frontmatter>

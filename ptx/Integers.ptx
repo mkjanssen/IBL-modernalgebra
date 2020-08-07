@@ -252,7 +252,11 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
     		</statement>
     		<proof>
     			<p>
-    				TBD.
+    				The statement is obviously true when <m>k=1</m>.
+    			</p>
+    			<p>
+    				Now suppose that <m>k > 1</m> and <m>3^k > k</m>.
+    				Then <m>3^{k+1} = 3\cdot 3^k > 3k = 2k + k > k+1</m>.
     			</p>
 		</proof>
 	</theorem>
@@ -313,7 +317,13 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
 				Given a real number <m>b > -1</m>, <m>(1+b)^n \ge 1 + bn</m> for all <m>n\in \N_0</m>.
 		</statement>
 		<proof>
-			TBD.
+			<p>
+				When <m>n=0</m> the inequality becomes <m>1 \ge 1</m>, which is clearly true.
+			</p>
+			<p>
+				Assume <m>n > 0</m>.
+				Then <m>(1+b)^{n+1} = (1+b)(1+b)^{n+1} \ge (1+b)(1+bn) = 1 +bn + b+b^2 n = 1 + b(n+1) + b^2 n	\ge 1+b(n+1)</m>.
+			</p>
 		</proof>
 	</theorem>
 
@@ -1039,7 +1049,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
     </assemblage>
     
     <p>
-      As described in the <xref ref="Sec-Introduction" />,
+      As described in the <xref ref="Sec-Introduction" text="custom">Introduction</xref>,
       our main goal is to build a deep structural understanding of the notion of <em>factorization</em>.
       That is, splitting objects (e.g., numbers,
       polynomials, matrices) into products of other objects.
