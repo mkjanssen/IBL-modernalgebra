@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-11-10T21:50:15-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Rings</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script async="" src="https://cse.google.com/cse.js?cx=017464805646507420634:llcu9bfj13p"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\renewcommand{\labelitemi}{$\diamond$}
+\def\arraystretch{1.5}
+\newcommand{\contentsfinish}{}
+\newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
+\newcommand{\tosay}[1]{\begin{center}\text{\fbox{\scriptsize{#1}}}\end{center}}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsecpagefont}{}
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\smallcaps{#1}}
+\def\oldequation{\equation}
+\def\endoldequation{\endequation}
+\newcommand{\nl}{
+}
+\newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\thesection}.\ \smallcaps{#1}}{\thesection.\ \smallcaps{#1}}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\scriptsize\thesection}.\ \smallcaps{#1}}{}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0.5pt}
+\newcommand{\makedefaultsection}[2][true]{
+}
+\newcommand{\timestamp}{{\color{red}Last updated: {\currenttime\ (UTC), \today}}}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\ideal}[1]{\left\langle\, #1 \,\right\rangle}
+\newcommand{\subgp}[1]{\left\langle\, #1 \,\right\rangle}
+\def\p{\varphi}
+\def\isomorphic{\cong}
+\def\Gal{\text{Gal}}
+\def\im{\text{im}}
+\def\normal{\vartriangleleft}
+\renewcommand{\qedsymbol}{$\checkmark$}
+\def\lcm{{\text{lcm}\,}}
+\newcommand{\q}[1]{{\color{red} {#1}}}
+\newcommand{\startimportant}[1]{\end{[{Hint:} #1]\end}}
+\renewcommand{\textcircled}[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt,color=red] (char) {#1};}}
+\newcommand{\crossout}[1]{\tikz[baseline=(char.base)]{\node[mynode, cross out,draw] (char) {#1};}}
+\newcommand{\set}[1]{\left\{ {#1} \right\}}
+\newcommand{\setof}[2]{{\left\{#1\,\colon\,#2\right\}}}
+\def\C{{\mathbb C}}
+\def\Z{{\mathbb Z}}
+\def\bF{{\mathbb F}}
+\def\Q{{\mathbb Q}}
+\def\N{{\mathbb N}}
+\def\R{{\mathbb R}}
+\newcommand{\h}[1]{{\textbf{#1}}}
+\def\presnotes{}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Rings With Inquiry</span></a></h1>
+<p class="byline">Michael Janssen, Melissa Lindsey</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="SubSec-Fields.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Sec-Fields-and-Rings.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="SubSec-Divisibility-in-Domains.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="SubSec-Fields.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Sec-Fields-and-Rings.html" title="Up">Up</a><a class="next-button button toolbar-item" href="SubSec-Divisibility-in-Domains.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction">Introduction</a></li>
+<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents">A Note to Students</a></li>
+<li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors">A Note to Instructors</a></li>
+<li><a href="Sec-Versions.html" data-scroll="Sec-Versions">Versions of this text</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Sec-Integers.html" data-scroll="Sec-Integers"><span class="codenumber">1</span> <span class="title">The Integers</span></a><ul>
+<li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering">Induction and Well-Ordering</a></li>
+<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers">Divisibility and GCDs in the Integers</a></li>
+<li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization">Primes and Factorization</a></li>
+<li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m">The Integers modulo \(m\)</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Sec-Fields-and-Rings.html" data-scroll="Sec-Fields-and-Rings"><span class="codenumber">2</span> <span class="title">Fields and Rings</span></a><ul>
+<li><a href="SubSec-Fields.html" data-scroll="SubSec-Fields">Fields</a></li>
+<li><a href="SubSec-Rings.html" data-scroll="SubSec-Rings" class="active">Rings</a></li>
+<li><a href="SubSec-Divisibility-in-Domains.html" data-scroll="SubSec-Divisibility-in-Domains">Divisibility in Integral Domains</a></li>
+<li><a href="SubSec-Principal-Ideals.html" data-scroll="SubSec-Principal-Ideals">Principal Ideals and Euclidean Domains</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Sec-Factorization.html" data-scroll="Sec-Factorization"><span class="codenumber">3</span> <span class="title">Factorization</span></a><ul>
+<li><a href="SubSec-Factoring-Polynomials.html" data-scroll="SubSec-Factoring-Polynomials">Factoring Polynomials</a></li>
+<li><a href="SubSec-Factorization-in-Euclidean-Domains.html" data-scroll="SubSec-Factorization-in-Euclidean-Domains">Factorization in Euclidean Domains</a></li>
+<li><a href="SubSec-Nonunique-Factorization.html" data-scroll="SubSec-Nonunique-Factorization">Nonunique Factorization</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Sec-Ideals.html" data-scroll="Sec-Ideals"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms and test</span></a><ul>
+<li><a href="SubSec-Ideals-In-General.html" data-scroll="SubSec-Ideals-In-General">Ideals in general</a></li>
+<li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms">Homomorphisms</a></li>
+<li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings">Quotient Rings: New Rings from Old</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="SubSec-Rings"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Rings</span>
+</h2>
+<article class="assemblage assemblage-like" id="assemblage-9"><h6 class="heading"><span class="title">Guiding Questions.</span></h6>
+<p id="p-293">In this section, we'll seek to answer the questions: <ul class="disc">
+<li id="li-105">What are rings and integral domains, and how do they relate to fields?</li>
+<li id="li-106">What are subrings, and how can we tell if a given subset of a ring is a subring?</li>
+<li id="li-107">What special types of elements do rings have?</li>
+</ul></p></article><p id="p-294">In the previous section, we observed that many familiar number systems are fields but that some are not. As we will see, these non-fields are often more structurally interesting, at least from the perspective of factorization; thus, in this section, we explore them in more detail. Before we proceed with that endeavor we will give a formal definition of polynomial so that we can include it in our work.</p>
+<article class="definition definition-like" id="def-polynomial"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span>
+</h6>
+<p id="p-295">Let \(A\) be a set with a well-defined addition operation \(+\) and additive identity \(0\text{,}\) and \(x\) a variable. We define a <dfn class="terminology">polynomial in \(x\) with coefficients in \(A\)</dfn> to be an expression of the form</p>
+<div class="displaymath">
+\begin{equation*}
+p = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">where \(a_n\ne 0\text{.}\) We call \(n\in \N_0\) the <dfn class="terminology">degree</dfn> of the polynomial \(p\text{,}\) denoted \(\deg(p) = n\text{,}\) and \(a_0,a_1,\ldots,
+a_n\) the <dfn class="terminology">coefficients</dfn> of the polynomial. The coefficient \(a_n\) is known as the <dfn class="terminology">leading coefficient</dfn> of \(p\text{,}\) and \(a_n x^n\) is the <dfn class="terminology">leading term</dfn> of \(p\text{.}\) By</p>
+<div class="displaymath">
+\begin{equation*}
+A[x] := \setof{a_0 + a_1 x + a_2 x + \cdots + a_n x^n}{n\in \N_0, \ a_i\in A}
+\end{equation*}
+</div>
+<p data-braille="continuation">we denote the set of all polynomials with coefficients in \(A\text{.}\) The additive identity of \(A[x]\) is \(0\text{,}\) called the <dfn class="terminology">zero polynomial</dfn>, and is the polynomial whose coefficients are all \(0\text{.}\) The degree of the zero polynomial is \(-\infty\text{.}\)</p></article><article class="exploration project-like" id="exploration-5"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span>
+</h6>
+<p id="p-296">Give some examples of polynomials in \(A[x]\) for various choices of number systems \(A\text{.}\) Identify their coefficients, leading terms, and degrees.</p></article><article class="exploration project-like" id="exploration-6"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span>
+</h6>
+<p id="p-297">In the following table, fill in a <em class="emphasis">Y</em> if the set has the property; fill in a <em class="emphasis">N</em> if it does not.</p>
+<figure class="table table-like" id="table_propertiessandsets"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.2<span class="period">.</span></span><span class="space"> </span>A list of properties and sets.</figcaption><table>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\N\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\Z\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(2\Z\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\Q\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\Q[x]\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\Z_{8}\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\Z_{2}\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\R\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\C\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(\mathcal{M}_2(\R)\)</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Closure under +</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Closure under \(\cdot\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(+\) is associative</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\cdot\) is associative</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">+ is commutative</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\cdot\) is commutative</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\cdot\) distributes over +</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">There is an additive identity</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">All elements have additive inverses</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">There is an multiplicative identity</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">All nonzero elements have mult. inverses</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines" data-braille="last-cell"></td>
+</tr>
+</table></figure></article><article class="exploration project-like" id="q_fieldaxiomspolyring"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span>
+</h6>
+<p id="p-298">Which of the field axioms in <a class="xref" data-knowl="./knowl/def_field.html" title="Definition 2.1.4">Definition 2.1.4</a> hold for \(F[x]\text{,}\) where \(F\) is a field, and which fail to hold in general?</p></article><p id="p-300">As a result of the answer to <a class="xref" data-knowl="./knowl/q_fieldaxiomspolyring.html" title="Exploration 2.2.3">Exploration 2.2.3</a> and the completed <a class="xref" data-knowl="./knowl/table_propertiessandsets.html" title="Table 2.2.2: A list of properties and sets.">Table 2.2.2</a>, we make the following definition.</p>
+<article class="definition definition-like" id="def_ring"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span>
+</h6>
+<p id="p-301">A <dfn class="terminology">ring</dfn> \(R\) is a nonempty set, together with binary operations \(+\) and \(\cdot\text{,}\) denoted \((R,+,\cdot)\text{,}\) and satisfying the following axioms.</p>
+<ol class="decimal">
+<li id="li-108"><p id="p-302">Given any \(a,b,c\in R\text{,}\) \((a+b)+c = a+(b+c)\text{.}\) (Associativity of addition)</p></li>
+<li id="li-109"><p id="p-303">Given any \(a,b\in R\text{,}\) \(a+b= b+a\text{.}\) (Commutativity of addition)</p></li>
+<li id="li-110"><p id="p-304">There exists an element \(0_R\in R\) such that for all \(a\in R\text{,}\) \(a+0_R = 0_R + a = a\text{.}\) (Additive identity)</p></li>
+<li id="li-111"><p id="p-305">Given any \(a\in R\) there exists a \(b\in R\) such that \(a+b = b + a =0_R\text{.}\) (Additive inverses)</p></li>
+<li id="li-112"><p id="p-306">Given any \(a,b,c\in R\text{,}\) \((a\cdot b)\cdot c = a\cdot (b\cdot c)\text{.}\) (Associativity of multiplication)</p></li>
+<li id="li-113"><p id="p-307">For all \(a,b,c\in R\text{,}\) \(a\cdot (b+c) = a\cdot b + a\cdot c\text{.}\) (Distributive property I)</p></li>
+<li id="li-114"><p id="p-308">For all \(a,b,c\in R\text{,}\) \((a+b)\cdot c = a\cdot c + b\cdot c\text{.}\) (Distributive property II)</p></li>
+</ol>
+<p data-braille="continuation">As with fields, when the ring \(R\) is clear from context, we will often write \(0\) in place of \(0_R\text{.}\)</p></article><article class="investigation project-like" id="investigation-10"><h6 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span>
+</h6>
+<p id="p-309">Compare and contrast <a class="xref" data-knowl="./knowl/def_field.html" title="Definition 2.1.4">Definitions 2.1.4</a> and <a class="xref" data-knowl="./knowl/def_ring.html" title="Definition 2.2.3">Definition 2.2.3</a>. What are the similarities? What are the differences?</p></article><p id="p-310">While rings do not enjoy all the properties of fields, they are incredibly useful even in applied mathematics (see, e.g., <a class="xref" data-knowl="./knowl/Curto2013.html" title="Bibliographic Entry 2.2.1">[2.2.1]</a> for one recent example).</p>
+<article class="definition definition-like" id="definition-17"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span>
+</h6>
+<p id="p-311">A ring \(R\) is said to be <dfn class="terminology">commutative</dfn> if, for all \(a,b\in R\text{,}\) \(ab = ba\text{.}\) Additionally, \(R\) is said to have a <dfn class="terminology">unity</dfn> or <dfn class="terminology">multiplicative identity</dfn> if there is an element \(1_R\in R\) such that for all \(a\in R\text{,}\) \(a \cdot 1_R = 1_R \cdot a= a\text{.}\)</p></article><p id="p-312">If \(R\) is noncommutative, it may have a left (respectively, right) identity, i.e., an element \(e\in R\) such that for all \(r\in R\text{,}\) \(er = r\) (respectively, \(re = r\)). If \(R\) has an element \(e\) for which \(er = re = r\) for all \(r\in R\text{,}\) \(e\) is often called a two-sided identity. In short, noncommutative rings may have left, right, or two-sided identities (or none at all).</p>
+<article class="exploration project-like" id="expl-rings-examples"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span>
+</h6>
+<p id="p-313">Consider the sets given in <a class="xref" data-knowl="./knowl/table_propertiessandsets.html" title="Table 2.2.2: A list of properties and sets.">Table 2.2.2</a>. Which are rings? Which are commutative rings with identity?</p></article><article class="exploration project-like" id="exploration-9"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span>
+</h6>
+<p id="p-314">Which properties of fields in <a class="xref" data-knowl="./knowl/thm_fieldproperties.html" title="Theorem 2.1.5: Properties of Fields">Theorem 2.1.5</a> hold for (commutative) rings?</p></article><article class="investigation project-like" id="investigation-11"><h6 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.7</span><span class="period">.</span>
+</h6>
+<p id="p-315">Are all rings fields? Are all fields rings? Justify.</p></article><article class="investigation project-like" id="investigation-12"><h6 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.8</span><span class="period">.</span>
+</h6>
+<p id="p-316">Most familiar rings are commutative, though not all. Most familiar (commutative) rings have identities, but not all. Find:</p>
+<ol class="decimal">
+<li id="li-115"><p id="p-317">A ring that does not have an identity<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 1 </sup></a>.</p></li>
+<li id="li-116"><p id="p-318">A noncommutative ring that <em class="emphasis">does</em> have an (two-sided) identity.</p></li>
+</ol>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn">Sometimes called a <a class="external" href="https://en.wikipedia.org/wiki/Rng_(algebra)" target="_blank"><em class="emphasis">rng</em></a>. \(\ddot\smile\)</div></div></article><p id="p-322">In the 1920s, Emmy Noether was the first to explicitly describe the ring axioms as we know them today, and her definition of a (not-necessarily-commutative) ring has led to a great deal of interesting work in algebra, number theory, and geometry, including the (see <a href="SubSec-Nonunique-Factorization.html" class="internal" title="Section 3.3: Nonunique Factorization">Section 3.3</a> for more on the historical development of the proof of Fermat's Last Theorem). Most modern definitions of <em class="emphasis">ring</em> agree with our <a class="xref" data-knowl="./knowl/def_ring.html" title="Definition 2.2.3">Definition 2.2.3</a> and allow for rings with noncommutative multiplication and no multiplicative identity.</p>
+<p id="p-323">The following theorem states that the set of polynomials with coefficients in a ring \(R\) is itself a ring under the usual operations of polynomial addition of like terms, and multiplication via distribution. The proof is not tricky, but a rigorous justification (especially of, e.g., the associativity of polynomial multiplication) is tedious, and thus is omitted.</p>
+<article class="assemblage assemblage-like" id="assemblage-10"><h6 class="heading"><span class="title">Theorem.</span></h6>
+<p id="p-324">If \(R\) is a (commutative) ring (with identity \(1_R\)), then \(R[x]\) is a (commutative) ring (with identity \(1_{R[x]} = 1_R\)).</p></article><p id="p-325">One of the ways to better understand mathematical structures is to understand their similar substructures (e.g., given a vector space \(V\subseteq \R^n\) and a subspace \(W\subseteq V\text{,}\) we may write \(V = W + W^\perp\)). </p>
+<article class="definition definition-like" id="definition-18"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span>
+</h6>
+<p id="p-326">Let \((R,+,\cdot)\) be a ring and let \(S\subseteq R\text{.}\) If \(S\) is itself a ring under \(+\) and \(\cdot\text{,}\) we say \(S\) is a <dfn class="terminology">subring</dfn> of \(R\text{.}\) In this case, \(R\) is often called an <dfn class="terminology">overring</dfn> of \(S\text{.}\)</p></article><p id="p-327">The following theorem provides a easy-to-apply test to check if a given subset \(S\) of a ring \(R\) is in fact a subring of \(R\text{.}\)</p>
+<article class="theorem theorem-like" id="theorem_subringtest"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span>
+</h6>
+<p id="p-328">Let \(R\) be a ring and \(S\) a subset of \(R\text{.}\) Then \(S\) is a subring if and only if:</p>
+<ol class="decimal">
+<li id="li-119"><p id="p-329">\(S\ne \emptyset\text{;}\)</p></li>
+<li id="li-120"><p id="p-330">\(S\) is closed under multiplication; and</p></li>
+<li id="li-121"><p id="p-331">\(S\) is closed under subtraction.</p></li>
+</ol></article><article class="activity project-like" id="activity-9"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.9</span><span class="period">.</span>
+</h6>
+<p id="p-333">Determine whether the following rings \(S\) are subrings of the given rings \(R\text{.}\)</p>
+<ol class="decimal">
+<li id="li-122"><p id="p-334">\(S = \Z\text{,}\) \(R = \Q\)</p></li>
+<li id="li-123"><p id="p-335">\(S = \Z_{5}\text{,}\) \(R = \Z_{7}\)</p></li>
+<li id="li-124"><p id="p-336">\(S\) is any ring, \(R = S[x]\)</p></li>
+<li id="li-125"><p id="p-337">\(S = \R\text{,}\) \(R = \C\)</p></li>
+</ol></article><p id="p-338">In our study of rings, we are primarily interested in special types of subrings known as <em class="emphasis">ideals</em>, to be studied in more depth in <a href="Sec-Ideals.html" class="internal" title="Chapter 4: Ideals and Homomorphisms and test">Chapter 4</a>.</p>
+<article class="definition definition-like" id="def-unit"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.7</span><span class="period">.</span>
+</h6>
+<p id="p-339">Let \(R\) be a ring and let \(u\in R\) be nonzero. If there is a \(v\in R\) such that \(uv = vu = 1\text{,}\) we say \(u\) is <dfn class="terminology">unit</dfn> of \(R\text{.}\) We denote the set of units of \(R\) by \(R^\times\text{.}\) We say \(x,y\in R\) are <dfn class="terminology">associates</dfn> if there exists some \(u\in R^\times\) such that \(x = uy\text{.}\)</p></article><article class="exploration project-like" id="exploration-10"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.2.10</span><span class="period">.</span>
+</h6>
+<p id="p-340">Explicitly describe the set \(\Z^\times\text{.}\) What are the associates of 7 in \(\Z\text{?}\)</p></article><p id="p-341">In other words, a unit in a ring is a nonzero element with a multiplicative inverse. The existence of units is the primary difference between fields and commutative rings with identity: in a field, all nonzero elements are units, while in a commutative ring with identity, no nonzero elements need be units, as <a class="xref" data-knowl="./knowl/thm-cri-field.html" title="Theorem 2.2.8">Theorem 2.2.8</a> demonstrates.</p>
+<article class="theorem theorem-like" id="thm-cri-field"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.8</span><span class="period">.</span>
+</h6>
+<p id="p-342">A commutative ring with identity \(R\) in which every nonzero element is a unit is a field.</p></article><p id="p-344">A useful tool for analyzing the structure of rings with finitely many elements are addition and multiplication tables. As an example, consider the addition and multiplication tables for \(R = \Z_3\) shown in <a class="xref" data-knowl="./knowl/table-z3addition.html" title="Table 2.2.9: Addition table for \(R=\Z_3\text{.}\)">Table 2.2.9</a> and <a class="xref" data-knowl="./knowl/table-z3multiplication.html" title="Table 2.2.10: Multiplication table for \(R=\Z_3\text{.}\)">Table 2.2.10</a>.</p>
+<figure class="table table-like" id="table-z3addition"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.9<span class="period">.</span></span><span class="space"> </span>Addition table for \(R=\Z_3\text{.}\)</figcaption><table>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">\(​+\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\overline{0}​\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\overline{1}​\)</td>
+<td class="l m b2 r0 l0 t0 lines" data-braille="last-cell">\(\overline{2}​\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(​\overline{0}\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(​\overline{0}\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\overline{1}​\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(​\overline{2}\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(​\overline{1}\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\overline{1}​\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\overline{2}​\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(\overline{0}​\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(​\overline{2}\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\overline{2}​\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\overline{0}​\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(\overline{1}​\)</td>
+</tr>
+</table></figure><figure class="table table-like" id="table-z3multiplication"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.10<span class="period">.</span></span><span class="space"> </span>Multiplication table for \(R=\Z_3\text{.}\)</figcaption><table>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(​\cdot\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\overline{0}​\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\overline{1}​\)</td>
+<td class="l m b2 r0 l0 t0 lines" data-braille="last-cell">\(\overline{2}​\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(​\overline{0}\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(​\overline{0}\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\overline{0}​\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(​\overline{0}\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(​\overline{1}\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\overline{0}​\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\overline{1}​\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(\overline{2}​\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(​\overline{2}\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\overline{0}​\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\overline{2}​\)</td>
+<td class="l m b0 r0 l0 t0 lines" data-braille="last-cell">\(\overline{1}​\)</td>
+</tr>
+</table></figure><article class="investigation project-like" id="invest-tables"><h6 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.11</span><span class="period">.</span>
+</h6>
+<p id="p-345">Calculate addition and multiplication tables for the following rings.</p>
+<ol class="decimal">
+<li id="li-126">\(\displaystyle R = \Z_5\)</li>
+<li id="li-127">\(\displaystyle R = \Z_6\)</li>
+</ol>
+<p id="p-346">List 2-3 observations about your tables.</p></article><p id="p-348">One of the interesting side effects of our definition of <em class="emphasis">ring</em> is that it allows for behavior that may at first appear unintuitive or downright weird.</p>
+<article class="definition definition-like" id="definition-20"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.11</span><span class="period">.</span>
+</h6>
+<p id="p-349">A <dfn class="terminology">zero divisor</dfn> in a ring \(R\) is a nonzero element \(z\in R\) such that there is a nonzero \(x\in R\) with \(zx = 0\) or \(xz=0\text{.}\)</p></article><p id="p-350">Notice that the reason the idea of zero divisors at first appears weird is that they are not something we encounter when working with our familiar sets of numbers, such as \(\Z\) or \(\R\text{.}\) In fact, we specifically use the fact that there are no zero divisors in our familiar numbers systems to solve equations in high school algebra (e.g., if \((x-2)(x+5)=0\text{,}\) then \(x-2=0\) or \(x+5=0\)). The lack of zero divisors is one of the properties that does not persist in our abstraction from the integers to rings in general.</p>
+<article class="exploration project-like" id="exploration-11"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.2.12</span><span class="period">.</span>
+</h6>
+<p id="p-351">Find, with justification, all of the zero divisors in \(\Z_{10}\) and \(\Z_{11}\text{.}\) Make and prove a conjecture about the existence of zero divisors in \(\Z_m\text{,}\) where \(m &gt; 1\text{.}\)</p></article><article class="investigation project-like" id="investigation-14"><h6 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.13</span><span class="period">.</span>
+</h6>
+<p id="p-354">Are there any other rings in which you've seen zero divisors? Recall your answers to <a class="xref" data-knowl="./knowl/expl-rings-examples.html" title="Exploration 2.2.5">Exploration 2.2.5</a>.</p></article><article class="theorem theorem-like" id="theorem-23"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.12</span><span class="period">.</span>
+</h6>
+<p id="p-356">Let \(R\) be a ring and suppose \(a,b\in R\) such that \(ab\) is a zero divisor. Then either \(a\) or \(b\) is a zero divisor.</p></article><article class="theorem theorem-like" id="theorem_unitnotazd"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.13</span><span class="period">.</span>
+</h6>
+<p id="p-358">Let \(R\) be a ring and \(u\in R^\times\text{.}\) Then \(u\) is not a zero divisor.</p></article><article class="investigation project-like" id="investigation-15"><h6 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.14</span><span class="period">.</span>
+</h6>
+<p id="p-360">How can we reinterpret <a class="xref" data-knowl="./knowl/q_zmodmcancel.html" title="Investigation 1.4.7">Investigation 1.4.7</a> in light of our new language of units and zero divisors? State a theorem that uses this new language.</p></article><p id="p-362">While there is a well-developed body of literature on (noncommutative) rings (possibly without identity), from this point on, and unless stated otherwise, when we use the word <em class="emphasis">ring</em> we mean <em class="emphasis">commutative ring with identity</em>.</p>
+<p id="p-363">Moreover, while even commutative rings with identity and zero divisors are of interest to mathematicians, we will focus our study on rings with no zero divisors. As these rings share many properties of the integers, they are known as <dfn class="terminology">integral domains</dfn>.</p>
+<article class="definition definition-like" id="definition-21"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.14</span><span class="period">.</span>
+</h6>
+<p id="p-364">A commutative ring with identity \(R\) is an <dfn class="terminology">integral domain</dfn>, or just <dfn class="terminology">domain</dfn>, if \(R\) has no zero divisors.</p></article><p id="p-365">The next activities and theorems help us identify examples of domains, as well as situate the notion of a domain in its proper place relative to fields and rings in general.</p>
+<article class="activity project-like" id="activity-10"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.15</span><span class="period">.</span>
+</h6>
+<p id="p-366">Which of the following rings are domains? Justify your answers.</p>
+<ol class="decimal">
+<li id="li-128"><p id="p-367">\(\displaystyle \Z\)</p></li>
+<li id="li-129"><p id="p-368">\(\displaystyle \Z_{8}\)</p></li>
+<li id="li-130"><p id="p-369">\(\displaystyle \Z_{19}\)</p></li>
+<li id="li-131"><p id="p-370">\(\displaystyle \R\)</p></li>
+<li id="li-132"><p id="p-371">\(\displaystyle \Q[x]\)</p></li>
+</ol></article><article class="theorem theorem-like" id="theorem_everyfieldisadomain"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.15</span><span class="period">.</span>
+</h6>
+<p id="p-372">Every field is a domain.</p></article><article class="theorem theorem-like" id="theorem-26"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.16</span><span class="period">.</span>
+</h6>
+<p id="p-374">Let \(m &gt; 1\) and \(R = \Z_m\text{.}\) Then \(R\) is a field if and only if \(R\) is a domain.</p></article><article class="theorem theorem-like" id="theorem_subringsaredomains"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.17</span><span class="period">.</span>
+</h6>
+<p id="p-377">If \(R\) is a domain and \(S\) is a subring of \(R\) with identity \(1_S = 1_R\text{,}\) then \(S\) is a domain.</p></article><article class="theorem theorem-like" id="theorem_domainimpliespolynomialdomain"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.18</span><span class="period">.</span>
+</h6>
+<p id="p-379">If \(R\) is a domain, then so is \(R[x]\text{.}\)</p></article><article class="investigation project-like" id="investigation-16"><h6 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.16</span><span class="period">.</span>
+</h6>
+<p id="p-381">Is the converse of <a class="xref" data-knowl="./knowl/theorem_domainimpliespolynomialdomain.html" title="Theorem 2.2.18">Theorem 2.2.18</a> true? If so, give a short proof. If not, find a counterexample.</p></article><article class="corollary theorem-like" id="corollary-2"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">2.2.19</span><span class="period">.</span>
+</h6>
+<p id="p-383">Given a field \(F\text{,}\) the set of polynomials \(F[x]\) is a domain.</p></article><p id="p-384">When considering sets of polynomials, as we do in <a href="Sec-Factorization.html" class="internal" title="Chapter 3: Factorization">Chapter 3</a> (particularly in <a href="SubSec-Factoring-Polynomials.html" class="internal" title="Section 3.1: Factoring Polynomials">Section 3.1</a>), the following results will be quite useful.</p>
+<article class="theorem theorem-like" id="theorem_degreeofproductinfield"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.20</span><span class="period">.</span>
+</h6>
+<p id="p-385">Let \(R\) be a domain, and let \(p(x),q(x)\in R[x]\) be nonzero polynomials. Then \(\deg(p(x) q(x)) = \deg(p(x)) + \deg(q(x))\text{.}\)</p></article><article class="exploration project-like" id="exploration-12"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.2.17</span><span class="period">.</span>
+</h6>
+<p id="p-387">Can the hypotheses of <a class="xref" data-knowl="./knowl/theorem_degreeofproductinfield.html" title="Theorem 2.2.20">Theorem 2.2.20</a> be relaxed? If so, provide more general hypotheses and adapt the proof. If not, give an illustrative example.</p></article><article class="investigation project-like" id="investigation-17"><h6 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.2.18</span><span class="period">.</span>
+</h6>
+<p id="p-389">Let \(R\) be a domain. What are the units of \(R[x]\text{?}\) Prove your answer.</p></article><section class="references" id="references-3"><h3 class="heading hide-type">
+<span class="type">References</span> <span class="codenumber"></span> <span class="title">References</span>
+</h3>
+<article class="bib" id="Curto2013"><div class="bibitem">[1]</div>  <div class="bibentry">C. Curto, V. Itskov, A. Veliz-Cuba, N. Youngs, <em class="emphasis">The Neural Ring: An Algebraic Tool for Analyzing the Intrinsic Structure of Neural Codes</em>, Bull. Math. Bio. 75 (2013), 1571-1611, <a class="external" href="https://doi.org/10.1007/s11538-013-9860-3" target="_blank">DOI 10.1007/s11538-013-9860-3</a>
+</div></article></section></section></div></main>
+</div>
+</body>
+</html>

@@ -206,64 +206,64 @@
             <li>
 
               <p>
-                Given any <m>a,b,c\in F</m>, <m>(a+b)+c = a+(b+c)</m>.
+                Given any <m>a,b,c\in F</m>, <m>(a+b)+c = a+(b+c)</m>. (Associativity of addition)
               </p>
             </li>
             <li>
 
               <p>
-                Given any <m>a,b\in F</m>, <m>a+b= b+a</m>.
+                Given any <m>a,b\in F</m>, <m>a+b= b+a</m>. (Commutativity of addition)
               </p>
             </li>
             <li>
 
               <p>
                 There exists an element <m>0_F\in F</m> such that for all <m>a\in F</m>,
-                <m>a+0_F = 0_F + a = a</m>.
+                <m>a+0_F = 0_F + a = a</m>. (Additive identity)
               </p>
             </li>
             <li>
 
               <p>
-                Given any <m>a\in F</m> there exists a <m>b\in F</m> such that <m>a+b = b + a =0_F</m>.
+                Given any <m>a\in F</m> there exists a <m>b\in F</m> such that <m>a+b = b + a =0_F</m>. (Additive inverse)
               </p>
             </li>
             <li>
 
               <p>
-                Given any <m>a,b,c\in F</m>, <m>(a\cdot b)\cdot c = a\cdot (b\cdot c)</m>.
+                Given any <m>a,b,c\in F</m>, <m>(a\cdot b)\cdot c = a\cdot (b\cdot c)</m>. (Associativity of multiplication)
               </p>
             </li>
             <li>
 
               <p>
-                Given any <m>a,b\in F</m>, <m>a\cdot b = b\cdot a</m>.
+                Given any <m>a,b\in F</m>, <m>a\cdot b = b\cdot a</m>. (Commutativity of multiplication)
               </p>
             </li>
             <li>
 
               <p>
                 There exists an element <m>1_F\in F</m> such that for all <m>a\in F</m>,
-                <m>1_F\cdot a = a\cdot 1_F = a</m>.
+                <m>1_F\cdot a = a\cdot 1_F = a</m>. (Multiplicative identity)
               </p>
             </li>
             <li>
 
               <p>
                 For all <m>a\in F</m>, <m>a\ne 0_F</m>,
-                there exists a <m>b\in F</m> such that <m>a\cdot b = b\cdot a = 1_F</m>.
+                there exists a <m>b\in F</m> such that <m>a\cdot b = b\cdot a = 1_F</m>. (Multiplicative inverse)
               </p>
             </li>
             <li>
 
               <p>
-                For all <m>a,b,c\in F</m>, <m>a\cdot (b+c) = a\cdot b + a\cdot c</m>.
+                For all <m>a,b,c\in F</m>, <m>a\cdot (b+c) = a\cdot b + a\cdot c</m>. (Distributive property I)
               </p>
             </li>
             <li>
 
               <p>
-                For all <m>a,b,c\in F</m>, <m>(a+b)\cdot c = a\cdot c + b\cdot c</m>.
+                For all <m>a,b,c\in F</m>, <m>(a+b)\cdot c = a\cdot c + b\cdot c</m>. (Distributive property II)
               </p>
             </li>
           </ol>
@@ -304,12 +304,12 @@
             </li>
             <li>
               <p>
-                <m>\Z_{6}</m> under addition and multiplication modulo 10
+                <m>\Z_{6}</m> under addition and multiplication modulo 6
               </p>
             </li>
             <li>
               <p>
-                <m>\Z_{5}</m> under addition and multiplication modulo 11
+                <m>\Z_{5}</m> under addition and multiplication modulo 5
               </p>
             </li>
             <li>
@@ -981,44 +981,44 @@ The reason for this we need not discuss.</q> -W.H. Auden</aside>
             <li>
 
               <p>
-                Given any <m>a,b,c\in R</m>, <m>(a+b)+c = a+(b+c)</m>.
+                Given any <m>a,b,c\in R</m>, <m>(a+b)+c = a+(b+c)</m>. (Associativity of addition)
               </p>
             </li>
             <li>
 
               <p>
-                Given any <m>a,b\in R</m>, <m>a+b= b+a</m>.
+                Given any <m>a,b\in R</m>, <m>a+b= b+a</m>. (Commutativity of addition)
               </p>
             </li>
             <li>
 
               <p>
                 There exists an element <m>0_R\in R</m> such that for all <m>a\in R</m>,
-                <m>a+0_R = 0_R + a = a</m>.
+                <m>a+0_R = 0_R + a = a</m>. (Additive identity)
               </p>
             </li>
             <li>
 
               <p>
-                Given any <m>a\in R</m> there exists a <m>b\in R</m> such that <m>a+b = b + a =0_R</m>.
+                Given any <m>a\in R</m> there exists a <m>b\in R</m> such that <m>a+b = b + a =0_R</m>. (Additive inverses)
               </p>
             </li>
             <li>
 
               <p>
-                Given any <m>a,b,c\in R</m>, <m>(a\cdot b)\cdot c = a\cdot (b\cdot c)</m>.
+                Given any <m>a,b,c\in R</m>, <m>(a\cdot b)\cdot c = a\cdot (b\cdot c)</m>. (Associativity of multiplication)
               </p>
             </li>
             <li>
 
               <p>
-                For all <m>a,b,c\in R</m>, <m>a\cdot (b+c) = a\cdot b + a\cdot c</m>.
+                For all <m>a,b,c\in R</m>, <m>a\cdot (b+c) = a\cdot b + a\cdot c</m>. (Distributive property I)
               </p>
             </li>
             <li>
 
               <p>
-                For all <m>a,b,c\in R</m>, <m>(a+b)\cdot c = a\cdot c + b\cdot c</m>.
+                For all <m>a,b,c\in R</m>, <m>(a+b)\cdot c = a\cdot c + b\cdot c</m>. (Distributive property II)
               </p>
             </li>
           </ol>
@@ -1464,14 +1464,14 @@ Again, this is a formalization of an idea that you have been using since you wer
     <idx>zero divisor</idx>
       <statement>
         <p>
-          A <term>zero divisor</term> in a ring <m>R</m> is a nonzero element <m>z\in R</m> such that there is a nonzero <m>x\in R</m> with <m>xz = zx = 0</m>.
+          A <term>zero divisor</term> in a ring <m>R</m> is a nonzero element <m>z\in R</m> such that there is a nonzero <m>x\in R</m> with <m>zx = 0</m> or <m>xz=0</m>.
         </p>
       </statement>
     </definition>
     <p>
       Notice that the reason the idea of zero divisors at first appears weird is that they are not something we encounter when working with our familiar sets of numbers, such as <m>\Z</m> or <m>\R</m>.
       In fact, we specifically use the fact that there are no zero divisors in our familiar numbers systems to solve equations in high school algebra (e.g., if <m>(x-2)(x+5)=0</m>,
-      then <m>(x-2)=0</m> or <m>x+5=0</m>).
+      then <m>x-2=0</m> or <m>x+5=0</m>).
       The lack of zero divisors is one of the properties that does not persist in our abstraction from the integers to rings in general.
     </p>
     <exploration>
@@ -1663,7 +1663,7 @@ Again, this is a formalization of an idea that you have been using since you wer
     <theorem xml:id="theorem_subringsaredomains">
       <statement>
         <p>
-          If <m>R</m> is a domain and <m>S</m> is a subring of <m>R</m>,
+          If <m>R</m> is a domain and <m>S</m> is a subring of <m>R</m> with identity <m>1_S = 1_R</m>,
           then <m>S</m> is a domain.
         </p>
       </statement>
@@ -2003,7 +2003,7 @@ Again, this is a formalization of an idea that you have been using since you wer
           Consider the set <m>R</m> of all polynomials in <m>\Z[x]</m> for which the coefficient on the linear term is zero.
           That is,
           <me>
-            R = \setof{a_0 + a_2 x^2 + \cdots + a_{n-1} x^{n-1} + a_n x^n}{a_i\in \Z,\ n\in\N}
+            R = \setof{a_0 + a_2 x^2 + \cdots + a_{n-1} x^{n-1} + a_n x^n}{a_i\in \Z,\ n\in\N_0}
           </me>.
         </p>
         <p>

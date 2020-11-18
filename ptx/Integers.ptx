@@ -809,7 +809,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
     		<statement>
     			<p>
     				Suppose <m>a,b,c\in\Z</m> such that there exists <m>q\in\Z</m> with <m>a = bq + c</m> and <m>a</m> and <m>b</m> not both zero.
-    				Prove or disprove: <m>\gcd(a,b)=\gcd(a,c)</m>.
+    				Prove or disprove: <m>\gcd(a,b)=\gcd(b,c)</m>.
     			</p>
     		</statement>
 		<solution>
@@ -1711,7 +1711,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
     <investigation xml:id="q_zmodmcancel">
       <statement>
         <p>
-          Let <m>\overline{a},\overline{b}\in \Z_m</m> and <m>m > 1</m>.
+          Let <m>\overline{a},\overline{b},\overline{c}\in \Z_m</m> with <m>\overline{c}\ne\overline{0}</m> and <m>m > 1</m>.
           If <m>\overline{a}\cdot \overline{c} = \overline{b}\cdot \overline{c}</m>,
           is it true that <m>\overline{a} = \overline{b}</m>?
           If so, prove it.

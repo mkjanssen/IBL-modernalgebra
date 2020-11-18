@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2020-11-10T21:50:16-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Homomorphisms</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script async="" src="https://cse.google.com/cse.js?cx=017464805646507420634:llcu9bfj13p"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\renewcommand{\labelitemi}{$\diamond$}
+\def\arraystretch{1.5}
+\newcommand{\contentsfinish}{}
+\newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
+\newcommand{\tosay}[1]{\begin{center}\text{\fbox{\scriptsize{#1}}}\end{center}}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsecpagefont}{}
+\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\smallcaps{#1}}
+\def\oldequation{\equation}
+\def\endoldequation{\endequation}
+\newcommand{\nl}{
+}
+\newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\thesection}.\ \smallcaps{#1}}{\thesection.\ \smallcaps{#1}}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\sectionmark}[1]{\markboth{{\scriptsize\thesection}.\ \smallcaps{#1}}{}}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0.5pt}
+\newcommand{\makedefaultsection}[2][true]{
+}
+\newcommand{\timestamp}{{\color{red}Last updated: {\currenttime\ (UTC), \today}}}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\ideal}[1]{\left\langle\, #1 \,\right\rangle}
+\newcommand{\subgp}[1]{\left\langle\, #1 \,\right\rangle}
+\def\p{\varphi}
+\def\isomorphic{\cong}
+\def\Gal{\text{Gal}}
+\def\im{\text{im}}
+\def\normal{\vartriangleleft}
+\renewcommand{\qedsymbol}{$\checkmark$}
+\def\lcm{{\text{lcm}\,}}
+\newcommand{\q}[1]{{\color{red} {#1}}}
+\newcommand{\startimportant}[1]{\end{[{Hint:} #1]\end}}
+\renewcommand{\textcircled}[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt,color=red] (char) {#1};}}
+\newcommand{\crossout}[1]{\tikz[baseline=(char.base)]{\node[mynode, cross out,draw] (char) {#1};}}
+\newcommand{\set}[1]{\left\{ {#1} \right\}}
+\newcommand{\setof}[2]{{\left\{#1\,\colon\,#2\right\}}}
+\def\C{{\mathbb C}}
+\def\Z{{\mathbb Z}}
+\def\bF{{\mathbb F}}
+\def\Q{{\mathbb Q}}
+\def\N{{\mathbb N}}
+\def\R{{\mathbb R}}
+\newcommand{\h}[1]{{\textbf{#1}}}
+\def\presnotes{}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Rings With Inquiry</span></a></h1>
+<p class="byline">Michael Janssen, Melissa Lindsey</p>
+</div>
+<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="SubSec-Ideals-In-General.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Sec-Ideals.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="SubSec-Quotient-Rings.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="SubSec-Ideals-In-General.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Sec-Ideals.html" title="Up">Up</a><a class="next-button button toolbar-item" href="SubSec-Quotient-Rings.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction">Introduction</a></li>
+<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents">A Note to Students</a></li>
+<li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors">A Note to Instructors</a></li>
+<li><a href="Sec-Versions.html" data-scroll="Sec-Versions">Versions of this text</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Sec-Integers.html" data-scroll="Sec-Integers"><span class="codenumber">1</span> <span class="title">The Integers</span></a><ul>
+<li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering">Induction and Well-Ordering</a></li>
+<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers">Divisibility and GCDs in the Integers</a></li>
+<li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization">Primes and Factorization</a></li>
+<li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m">The Integers modulo \(m\)</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Sec-Fields-and-Rings.html" data-scroll="Sec-Fields-and-Rings"><span class="codenumber">2</span> <span class="title">Fields and Rings</span></a><ul>
+<li><a href="SubSec-Fields.html" data-scroll="SubSec-Fields">Fields</a></li>
+<li><a href="SubSec-Rings.html" data-scroll="SubSec-Rings">Rings</a></li>
+<li><a href="SubSec-Divisibility-in-Domains.html" data-scroll="SubSec-Divisibility-in-Domains">Divisibility in Integral Domains</a></li>
+<li><a href="SubSec-Principal-Ideals.html" data-scroll="SubSec-Principal-Ideals">Principal Ideals and Euclidean Domains</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Sec-Factorization.html" data-scroll="Sec-Factorization"><span class="codenumber">3</span> <span class="title">Factorization</span></a><ul>
+<li><a href="SubSec-Factoring-Polynomials.html" data-scroll="SubSec-Factoring-Polynomials">Factoring Polynomials</a></li>
+<li><a href="SubSec-Factorization-in-Euclidean-Domains.html" data-scroll="SubSec-Factorization-in-Euclidean-Domains">Factorization in Euclidean Domains</a></li>
+<li><a href="SubSec-Nonunique-Factorization.html" data-scroll="SubSec-Nonunique-Factorization">Nonunique Factorization</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Sec-Ideals.html" data-scroll="Sec-Ideals"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms and test</span></a><ul>
+<li><a href="SubSec-Ideals-In-General.html" data-scroll="SubSec-Ideals-In-General">Ideals in general</a></li>
+<li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms" class="active">Homomorphisms</a></li>
+<li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings">Quotient Rings: New Rings from Old</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="SubSec-Homomorphisms"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.2</span> <span class="title">Homomorphisms</span>
+</h2>
+<article class="assemblage assemblage-like" id="assemblage-19"><h6 class="heading"><span class="title">Guiding Questions.</span></h6>
+<p id="p-711">In this section, we'll seek to answer the questions: <ul class="disc">
+<li id="li-208">What is a ring homomorphism?</li>
+<li id="li-209">What are some examples of ring homomorphisms?</li>
+</ul></p></article><section class="introduction" id="introduction-8"><p id="p-712">Central to modern mathematics is the notion of <em class="emphasis">function</em><a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-9" id="fn-9"><sup> 1 </sup></a>. Functions arise in all areas of mathematics, each subdiscipline concerned with certain types of functions. In algebra, our concern is with <em class="emphasis">operation-preserving</em> functions, such as the linear transformations \(L : V\to W\) of vector spaces you have seen in a course in linear algebra. Those linear transformations had the properties that \(L(\mathbf{v}+\mathbf{u}) = L(\mathbf{v})+L(\mathbf{u})\) (addition is preserved) and \(L(c\mathbf{u}) = c L(\mathbf{u})\) (scalar multiplication is preserved).</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-9"><div class="fn">This section assumes a familiarity with the idea of function from a set-theoretic point of view, as well as the concepts of injective (one-to-one), surjective (onto), and bijective functions (one-to-one correspondences).</div></div>
+<p id="p-713">We find something similar at work in the study of homomorphisms of rings, which we define to be functions that preserve both addition and multiplication.</p></section><article class="definition definition-like" id="definition-36"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span>
+</h6>
+<p id="p-714">Let \(R\) and \(S\) be commutative rings with identity. A function \(\p : R\to S\) is a called <dfn class="terminology">ring homomorphism</dfn> if it preserves addition, multiplication, and sends the identity of \(R\) to the identity of \(S\text{.}\) That is, for all \(x,y\in R\text{:}\)</p>
+<ul class="disc">
+<li id="li-210">\(\p(x+y) = \p(x) + \p(y)\text{,}\)</li>
+<li id="li-211">\(\p(xy) = \p(x)\p(y)\text{,}\) and</li>
+<li id="li-212">\(\p(1_R) = 1_S\text{.}\)</li>
+</ul>
+<p data-braille="continuation">If \(\p\) is a bijection, we say that \(\p\) is an <dfn class="terminology">isomorphism</dfn> and write \(R\cong S\text{.}\) If \(\p : R\to R\) is an isomorphism, we say \(\p\) is an <dfn class="terminology">automorphism</dfn> of \(R\text{.}\)</p></article><p id="p-715">Our first job when glimpsing a new concept is to collect a stock of examples.</p>
+<article class="exploration project-like" id="expl-homomorphism-examples"><h6 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span>
+</h6>
+<p id="p-716">Determine whether the following functions are homomorphisms, isomorphisms, automorphisms, or none of these. Note that \(R\) denotes an arbitrary commutative ring with identity.</p>
+<ol class="decimal">
+<li id="li-213">\(\p : R\to R\) defined by \(\p(x)=x\)</li>
+<li id="li-214">\(\psi : R\to R\) defined by \(\psi(x)=-x\)</li>
+<li id="li-215">\(\alpha : \Z\to \Z\) defined by \(\alpha(x)=5x\)</li>
+<li id="li-216">\(F : \Z_2[x]\to \Z_2[x]\) defined by \(F(p) = p^2\)</li>
+<li id="li-217">\(\iota : \C\to \C\) defined by \(\iota(a+bi)=a-bi\text{,}\) where \(a,b\in \R, i^2 = -1\)</li>
+<li id="li-218">\(\beta : \Z\to \Z_{5}\) defined by \(\beta(x) = \overline{x}\)</li>
+<li id="li-219">\(\epsilon_r : R[x] \to R\) defined by \(\epsilon_r(p(x)) = p(r)\) (this is known as the \(r\)-evaluation map)</li>
+<li id="li-220">\(\xi : \Z_5 \to \Z_{10}\) defined by \(\xi(\overline{x}) = \overline{5x}\)</li>
+</ol></article><p id="p-718">Homomorphisms give rise to a particularly important class of subsets: kernels.</p>
+<article class="definition definition-like" id="definition-37"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span>
+</h6>
+<p id="p-719">Let \(\p : R \to S\) be a ring homomorphism. Then \(\ker \p =\setof{r\in R}{\p(r)=0_S}\) is the <dfn class="terminology">kernel</dfn> of \(\p\text{.}\)</p></article><article class="activity project-like" id="activity-19"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span>
+</h6>
+<p id="p-720">For each homomorphism in <a class="xref" data-knowl="./knowl/expl-homomorphism-examples.html" title="Exploration 4.2.1">Exploration 4.2.1</a>, find (with justification), the kernel.</p></article><p id="p-721">In fact, kernels are not just important subsets of rings; they are ideals.</p>
+<article class="theorem theorem-like" id="theorem-69"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span>
+</h6>
+<p id="p-722">Given a ring homomorphism \(\p : R\to S\text{,}\) \(\ker\p\) is an ideal.</p></article><p id="p-724">Kernels also give a useful way of determining whether their defining homomorphisms are one-to-one.</p>
+<article class="theorem theorem-like" id="theorem-70"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span>
+</h6>
+<p id="p-725">Let \(\p : R\to S\) be a homomorphism. Then \(\p\) is one-to-one if and only if \(\ker\p = \set{0}\text{.}\)</p></article></section></div></main>
+</div>
+</body>
+</html>
