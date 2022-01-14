@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2020-11-10T21:50:16-06:00       *-->
+<!--*       on 2022-01-14T12:08:36-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,50 +14,43 @@
 <title>Nonunique Factorization</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
-    },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script async="" src="https://cse.google.com/cse.js?cx=017464805646507420634:llcu9bfj13p"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script async="" src="https://cse.google.com/cse.js?cx=017464805646507420634:llcu9bfj13p"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.674</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_grey.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\renewcommand{\labelitemi}{$\diamond$}
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand{\labelitemi}{$\diamond$}
 \def\arraystretch{1.5}
 \newcommand{\contentsfinish}{}
 \newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
@@ -108,10 +101,19 @@ MathJax.Hub.Config({
 \def\R{{\mathbb R}}
 \newcommand{\h}[1]{{\textbf{#1}}}
 \def\presnotes{}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{conj}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{investigation}[theorem]{Investigation}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\)</div>
+\)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="book-1.html"><span class="title">Rings With Inquiry</span></a></h1>
@@ -146,7 +148,7 @@ MathJax.Hub.Config({
 <li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering">Induction and Well-Ordering</a></li>
 <li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers">Divisibility and GCDs in the Integers</a></li>
 <li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization">Primes and Factorization</a></li>
-<li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m">The Integers modulo \(m\)</a></li>
+<li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m">The Integers modulo <span class="process-math">\(m\)</span></a></li>
 </ul>
 </li>
 <li class="link">
@@ -165,7 +167,7 @@ MathJax.Hub.Config({
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Ideals.html" data-scroll="Sec-Ideals"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms and test</span></a><ul>
+<a href="Sec-Ideals.html" data-scroll="Sec-Ideals"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a><ul>
 <li><a href="SubSec-Ideals-In-General.html" data-scroll="SubSec-Ideals-In-General">Ideals in general</a></li>
 <li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms">Homomorphisms</a></li>
 <li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings">Quotient Rings: New Rings from Old</a></li>
@@ -173,65 +175,65 @@ MathJax.Hub.Config({
 </li>
 <li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="SubSec-Nonunique-Factorization"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">Nonunique Factorization</span>
 </h2>
-<article class="assemblage assemblage-like" id="assemblage-17"><h6 class="heading"><span class="title">Guiding Questions.</span></h6>
+<article class="assemblage assemblage-like" id="assemblage-17"><h3 class="heading"><span class="title">Guiding Questions.</span></h3>
 <p id="p-646">In this section, we'll seek to answer the questions: <ul class="disc">
-<li id="li-194">How can unique factorization fail, and why does it matter?</li>
-<li id="li-195">What is an example of a nonatomic domain?</li>
-<li id="li-196">What is an example of an element that does not factor uniquely into a product of irreducibles?</li>
-</ul></p></article><p id="p-647">Despite the evidence to the contrary, not every ring has the unique factorization property. That is, there are commutative rings with identity which are not UFDs.  In fact, the failure of certain rings in algebraic number theory to have the unique factorization property played a role in several failed attempts to prove Fermat's Last Theorem, which says that there are no nontrivial integer solutions \((x,y,z)\) to the equation \(x^n + y^n = z^n\) if \(n \ge 3\text{.}\) Pierre de Fermat famously claimed that he had a “marvelous proof” of this fact, but the margin of the book in which he was writing was “too narrow to contain it.” Fermat's supposed proof was never found, and many now doubt that he had one. The search for a valid proof would not be complete until the work of Andrew Wiles and Richard Taylor in the mid-1990s.</p>
-<p id="p-648">In 1847, Gabriel Lamé claimed he had completely solved the problem. His solution relied on the factorization of \(x^p + y^p\text{,}\) where \(p\) is an odd prime, as</p>
-<div class="displaymath">
+<li id="li-194"><p id="p-derived-li-194">How can unique factorization fail, and why does it matter?</p></li>
+<li id="li-195"><p id="p-derived-li-195">What is an example of a nonatomic domain?</p></li>
+<li id="li-196"><p id="p-derived-li-196">What is an example of an element that does not factor uniquely into a product of irreducibles?</p></li>
+</ul></p></article><p id="p-647">Despite the evidence to the contrary, not every ring has the unique factorization property. That is, there are commutative rings with identity which are not UFDs.  In fact, the failure of certain rings in algebraic number theory to have the unique factorization property played a role in several failed attempts to prove Fermat's Last Theorem, which says that there are no nontrivial integer solutions <span class="process-math">\((x,y,z)\)</span> to the equation <span class="process-math">\(x^n + y^n = z^n\)</span> if <span class="process-math">\(n \ge 3\text{.}\)</span> Pierre de Fermat famously claimed that he had a “marvelous proof” of this fact, but the margin of the book in which he was writing was “too narrow to contain it.” Fermat's supposed proof was never found, and many now doubt that he had one. The search for a valid proof would not be complete until the work of Andrew Wiles and Richard Taylor in the mid-1990s.</p>
+<p id="p-648">In 1847, Gabriel Lamé claimed he had completely solved the problem. His solution relied on the factorization of <span class="process-math">\(x^p + y^p\text{,}\)</span> where <span class="process-math">\(p\)</span> is an odd prime, as</p>
+<div class="displaymath process-math">
 \begin{equation*}
 x^p + y^p = (x+y)(x+\zeta y) \cdots (x+\zeta^{p-1}y)\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(\zeta = e^{2\pi i/p}\) is a primitive \(p\)-th root of unity in \(\C\text{.}\) However, the ring \(\Z[\zeta] = \setof{a_0 + a_1 \zeta + a_2 \zeta^2 + \cdots + a_{p-1} \zeta^{p-1}}{a_i\in\Z}\) is not a unique factorization domain.</p>
+<p class="continuation">where <span class="process-math">\(\zeta = e^{2\pi i/p}\)</span> is a primitive <span class="process-math">\(p\)</span>-th root of unity in <span class="process-math">\(\C\text{.}\)</span> However, the ring <span class="process-math">\(\Z[\zeta] = \setof{a_0 + a_1 \zeta + a_2 \zeta^2 + \cdots + a_{p-1} \zeta^{p-1}}{a_i\in\Z}\)</span> is not a unique factorization domain.</p>
 <p id="p-649">There are two ways that unique factorization in an integral domain can fail: there can be a failure of a nonzero nonunit to factor into irreducibles, or there can be nonassociate factorizations of the same element. We investigate each in turn.</p>
-<article class="exploration project-like" id="exploration-22"><h6 class="heading">
+<article class="exploration project-like" id="exploration-22"><h3 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">A non-atomic domain.</span>
-</h6>
-<p id="p-650">We say an integral domain \(R\) is <dfn class="terminology">atomic</dfn> if every nonzero nonunit can be written as a finite product of irreducibles in \(R\text{.}\) <aside class="aside aside-like" id="aside-8">The term <em class="emphasis">atom</em> was suggested by <a class="external" href="https://en.wikipedia.org/wiki/Paul_Cohn" target="_blank">Paul Cohn</a> as a synonym for irreducible.</aside> In this exploration, we encounter a non-atomic domain.</p>
+</h3>
+<p id="p-650">We say an integral domain <span class="process-math">\(R\)</span> is <dfn class="terminology">atomic</dfn> if every nonzero nonunit can be written as a finite product of irreducibles in <span class="process-math">\(R\text{.}\)</span> <aside class="aside aside-like" id="aside-8"></aside> In this exploration, we encounter a non-atomic domain.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-22"><div class="fn"><code class="code-inline tex2jax_ignore">https://en.wikipedia.org/wiki/Paul_Cohn</code></div></div>
 <p id="p-651">Let</p>
-<div class="displaymath">
+<div class="displaymath process-math">
 \begin{align*}
 R \amp = \Z + x\Q[x]\\
 \amp = \setof{a + b_1 x + b_2 x^2 + \cdots + b_n x^n}{a\in \Z, b_1,\ldots, b_n \in \Q, n\ge 0},
 \end{align*}
 </div>
-<p data-braille="continuation">the set of polynomials with integer constant terms and rational coefficients.</p>
+<p class="continuation">the set of polynomials with integer constant terms and rational coefficients.</p>
 <ol class="decimal">
-<li id="li-197">Convince yourself that \(R\) is an integral domain. You do not need to prove it in detail, but you should at least argue that \(R\) is closed under the usual polynomial addition and multiplication, and that \(R\) is a domain.</li>
-<li id="li-198">Describe the irreducibles in \(R\text{.}\)</li>
-<li id="li-199">Use the notion of degree to argue that any factorization of \(x\) in \(R\) has the form<div class="displaymath">
+<li id="li-197"><p id="p-derived-li-197">Convince yourself that <span class="process-math">\(R\)</span> is an integral domain. You do not need to prove it in detail, but you should at least argue that <span class="process-math">\(R\)</span> is closed under the usual polynomial addition and multiplication, and that <span class="process-math">\(R\)</span> is a domain.</p></li>
+<li id="li-198"><p id="p-derived-li-198">Describe the irreducibles in <span class="process-math">\(R\text{.}\)</span></p></li>
+<li id="li-199"><p id="p-derived-li-199">Use the notion of degree to argue that any factorization of <span class="process-math">\(x\)</span> in <span class="process-math">\(R\)</span> has the form<div class="displaymath process-math">
 \begin{equation*}
 x = m\left(\frac{x}{m}\right).
 \end{equation*}
-</div>
-</li>
-<li id="li-200">Explain why the factorization in the previous part cannot lead to a factorization of \(x\) into irreducibles in \(R\text{.}\)</li>
-</ol></article><p id="p-652">We now explore the atomic domain \(R = \Z[\sqrt{-7}] = \setof{a+b\sqrt{-7}}{a,b\in\Z}\text{.}\) As we will see, even when a nonzero nonunit can be written as a product of irreducibles, it may be the case that this factorization is not unique.</p>
-<article class="activity project-like" id="activity-17"><h6 class="heading">
+</div></p></li>
+<li id="li-200"><p id="p-derived-li-200">Explain why the factorization in the previous part cannot lead to a factorization of <span class="process-math">\(x\)</span> into irreducibles in <span class="process-math">\(R\text{.}\)</span></p></li>
+</ol></article><p id="p-652">We now explore the atomic domain <span class="process-math">\(R = \Z[\sqrt{-7}] = \setof{a+b\sqrt{-7}}{a,b\in\Z}\text{.}\)</span> As we will see, even when a nonzero nonunit can be written as a product of irreducibles, it may be the case that this factorization is not unique.</p>
+<article class="activity project-like" id="activity-17"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
-</h6>
-<p id="p-653">Verify that \(8 = (1+\sqrt{-7})(1-\sqrt{-7})\text{.}\)</p></article><p id="p-654">Next, we develop a multiplicative function \(\delta\) which enables us to explore the multiplicative properties of \(\Z[\sqrt{-7}]\text{.}\)</p>
-<article class="theorem theorem-like" id="theorem-59"><h6 class="heading">
+</h3>
+<p id="p-653">Verify that <span class="process-math">\(8 = (1+\sqrt{-7})(1-\sqrt{-7})\text{.}\)</span></p></article><p id="p-654">Next, we develop a multiplicative function <span class="process-math">\(\delta\)</span> which enables us to explore the multiplicative properties of <span class="process-math">\(\Z[\sqrt{-7}]\text{.}\)</span></p>
+<article class="theorem theorem-like" id="theorem-59"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span>
-</h6>
-<p id="p-655">Define \(\delta : R \to \N_0\) by \(\delta(a+b\sqrt{-7}) = a^2 + 7 b^2\text{.}\) Then for all \(x,y\in R\text{,}\) \(\delta(xy) = \delta(x)\delta(y)\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-60"><h6 class="heading">
+</h3>
+<p id="p-655">Define <span class="process-math">\(\delta : R \to \N_0\)</span> by <span class="process-math">\(\delta(a+b\sqrt{-7}) = a^2 + 7 b^2\text{.}\)</span> Then for all <span class="process-math">\(x,y\in R\text{,}\)</span> <span class="process-math">\(\delta(xy) = \delta(x)\delta(y)\text{.}\)</span></p></article><article class="theorem theorem-like" id="theorem-60"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
-</h6>
-<p id="p-656">An element \(u\in R\) is a unit if and only if \(\delta(u) = 1\text{.}\)</p></article><article class="lemma theorem-like" id="lemma-7"><h6 class="heading">
+</h3>
+<p id="p-656">An element <span class="process-math">\(u\in R\)</span> is a unit if and only if <span class="process-math">\(\delta(u) = 1\text{.}\)</span></p></article><article class="lemma theorem-like" id="lemma-7"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span>
-</h6>
-<p id="p-658">There do not exist \(x,y\in \N_0\) such that \(2 = x^2 + 7y^2\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-61"><h6 class="heading">
+</h3>
+<p id="p-658">There do not exist <span class="process-math">\(x,y\in \N_0\)</span> such that <span class="process-math">\(2 = x^2 + 7y^2\text{.}\)</span></p></article><article class="theorem theorem-like" id="theorem-61"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.4</span><span class="period">.</span>
-</h6>
-<p id="p-660">The elements 2, \(1+ \sqrt{-7}\text{,}\) and \(1-\sqrt{-7}\) are irreducible in \(R\text{.}\) We conclude that \(R\) is not a UFD.</p></article></section></div></main>
+</h3>
+<p id="p-660">The elements 2, <span class="process-math">\(1+ \sqrt{-7}\text{,}\)</span> and <span class="process-math">\(1-\sqrt{-7}\)</span> are irreducible in <span class="process-math">\(R\text{.}\)</span> We conclude that <span class="process-math">\(R\)</span> is not a UFD.</p></article></section></div></main>
 </div>
 </body>
 </html>

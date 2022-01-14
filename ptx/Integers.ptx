@@ -692,7 +692,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
     </subsection>
 
 
-		<subsubsection>
+		<subsection>
 			<title>Greatest Common Divisors</title>
 			
 			<p>
@@ -1014,7 +1014,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
     </proof>
     </theorem>
     
-    </subsubsection>
+    </subsection>
 
     
     <conclusion>
@@ -1562,18 +1562,19 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
     </proof>
     </theorem>
     
-    <notation>
-    <idx><m>\Z_m</m></idx>
+    
+    
       <p>
+      <idx><m>\Z_m</m></idx>
         The set of equivalence classes of <m>\Z</m> under
-        <m>\equiv_m</m> is denoted <m>\Z_m</m> (pronounced "Z mod m").
+        the equivalence relation <em>congruence modulo <m>m</m></em> is called <term>the integers modulo <m>m</m></term>, and is denoted <m>\Z_m</m> (pronounced "Z mod m").
       </p>
-    </notation>
+    
 
     <exploration>
       <statement>
         <p>
-          Find all of the equivalence classes of <m>\Z_5</m> and <m>\Z_7</m>. 
+          List the elements of <m>\Z_5</m> and <m>\Z_7</m>. 
         </p>
       </statement>
       <answer>
@@ -1653,7 +1654,7 @@ Our word choice is suggestive. In fact, other orderings do exist, and while the 
     <definition xml:id="def-arithemticmodm">
       <statement>
         <p>
-          Let <m>m > 1</m> and <m>a,b\in \Z_m</m>.
+          Let <m>m > 1</m> and <m>\overline{a},\overline{b}\in \Z_m</m>.
           Then the following are well-defined operations on the equivalence classes:
           <ol>
             <li>

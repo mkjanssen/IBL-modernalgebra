@@ -8,5 +8,12 @@
 
         
   </docinfo>
+  
+   <numbering>
+      <projects level="2" />
+      <blocks level="2" />
+  </numbering>
+   
+   <analytics google-gst="G-FFTEF4J4EX" />
  
 </publication>
