@@ -1,76 +1,58 @@
 <!DOCTYPE html>
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-05T11:00:42-06:00    *-->
-<!--*                                    *-->
-<!--*      https://pretextbook.org       *-->
-<!--*                                    *-->
-<!--**************************************-->
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-05-16T10:29:33-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
 <html lang="en-US">
-<head>
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Fields</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
-    },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>(function() {
-  var cx = '017464805646507420634:llcu9bfj13p';
-  var gcse = document.createElement('script');
-  gcse.type = 'text/javascript';
-  gcse.async = true;
-  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(gcse, s);
-})();
-</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Rings With Inquiry">
+<meta property="book:author" content="Michael Janssen">
+<meta property="book:author" content="Melissa Lindsey">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script async="" src="https://cse.google.com/cse.js?cx=017464805646507420634:llcu9bfj13p"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.13;
-</script>
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\labelitemi}{$\diamond$}
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand{\labelitemi}{$\diamond$}
 \def\arraystretch{1.5}
 \newcommand{\contentsfinish}{}
 \newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
@@ -121,10 +103,19 @@ var js_version = 0.13;
 \def\R{{\mathbb R}}
 \newcommand{\h}[1]{{\textbf{#1}}}
 \def\presnotes{}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{conj}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{investigation}[theorem]{Investigation}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\)</div>
+\)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="book-1.html"><span class="title">Rings With Inquiry</span></a></h1>
@@ -144,168 +135,181 @@ var js_version = 0.13;
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
-<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
-<li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction">Introduction</a></li>
-<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents">A Note to Students</a></li>
-<li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors">A Note to Instructors</a></li>
-<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction" class="internal">Introduction</a></li>
+<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents" class="internal">A Note to Students</a></li>
+<li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors" class="internal">A Note to Instructors</a></li>
+<li><a href="Sec-Versions.html" data-scroll="Sec-Versions" class="internal">Versions of this text</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Integers.html" data-scroll="Sec-Integers"><span class="codenumber">1</span> <span class="title">The Integers</span></a><ul>
-<li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering">Induction and Well-Ordering</a></li>
-<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers">Divisibility in the integers</a></li>
-<li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization">Primes and Factorization</a></li>
-<li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m">The Integers modulo \(m\)</a></li>
+<a href="Sec-Integers.html" data-scroll="Sec-Integers" class="internal"><span class="codenumber">1</span> <span class="title">The Integers</span></a><ul>
+<li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering" class="internal">Induction and Well-Ordering</a></li>
+<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers" class="internal">Divisibility and GCDs in the Integers</a></li>
+<li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization" class="internal">Primes and Factorization</a></li>
+<li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m" class="internal">The Integers modulo <span class="process-math">\(m\)</span></a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Fields-and-Rings.html" data-scroll="Sec-Fields-and-Rings"><span class="codenumber">2</span> <span class="title">Fields and Rings</span></a><ul>
+<a href="Sec-Fields-and-Rings.html" data-scroll="Sec-Fields-and-Rings" class="internal"><span class="codenumber">2</span> <span class="title">Fields and Rings</span></a><ul>
 <li><a href="SubSec-Fields.html" data-scroll="SubSec-Fields" class="active">Fields</a></li>
-<li><a href="SubSec-Rings.html" data-scroll="SubSec-Rings">Rings</a></li>
-<li><a href="SubSec-Divisibility-in-Domains.html" data-scroll="SubSec-Divisibility-in-Domains">Divisibility in Integral Domains</a></li>
-<li><a href="SubSec-Principal-Ideals.html" data-scroll="SubSec-Principal-Ideals">Principal Ideals</a></li>
+<li><a href="SubSec-Rings.html" data-scroll="SubSec-Rings" class="internal">Rings</a></li>
+<li><a href="SubSec-Divisibility-in-Domains.html" data-scroll="SubSec-Divisibility-in-Domains" class="internal">Divisibility in Integral Domains</a></li>
+<li><a href="SubSec-Principal-Ideals.html" data-scroll="SubSec-Principal-Ideals" class="internal">Principal Ideals and Euclidean Domains</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Factorization.html" data-scroll="Sec-Factorization"><span class="codenumber">3</span> <span class="title">Factorization</span></a><ul>
-<li><a href="SubSec-Factoring-Polynomials.html" data-scroll="SubSec-Factoring-Polynomials">Factoring Polynomials</a></li>
-<li><a href="SubSec-Factorization-in-Euclidean-Domains.html" data-scroll="SubSec-Factorization-in-Euclidean-Domains">Factorization in Euclidean Domains</a></li>
-<li><a href="SubSec-Nonunique-Factorization.html" data-scroll="SubSec-Nonunique-Factorization">Nonunique Factorization</a></li>
+<a href="Sec-Factorization.html" data-scroll="Sec-Factorization" class="internal"><span class="codenumber">3</span> <span class="title">Factorization</span></a><ul>
+<li><a href="SubSec-Factoring-Polynomials.html" data-scroll="SubSec-Factoring-Polynomials" class="internal">Factoring Polynomials</a></li>
+<li><a href="SubSec-Factorization-in-Euclidean-Domains.html" data-scroll="SubSec-Factorization-in-Euclidean-Domains" class="internal">Factorization in Euclidean Domains</a></li>
+<li><a href="SubSec-Nonunique-Factorization.html" data-scroll="SubSec-Nonunique-Factorization" class="internal">Nonunique Factorization</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Ideals.html" data-scroll="Sec-Ideals"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a><ul>
-<li><a href="SubSec-Ideals-In-General.html" data-scroll="SubSec-Ideals-In-General">Ideals in general</a></li>
-<li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings">Quotient Rings</a></li>
-<li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms">Homomorphisms</a></li>
+<a href="Sec-Ideals.html" data-scroll="Sec-Ideals" class="internal"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a><ul>
+<li><a href="SubSec-Ideals-In-General.html" data-scroll="SubSec-Ideals-In-General" class="internal">Ideals in general</a></li>
+<li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms" class="internal">Homomorphisms</a></li>
+<li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings" class="internal">Quotient Rings: New Rings from Old</a></li>
 </ul>
 </li>
-<li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="section" id="SubSec-Fields"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="SubSec-Fields"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">Fields</span>
 </h2>
-<a href="SubSec-Fields.html" class="permalink">¶</a><p id="p-173">We now begin the process of abstraction. We will do this in stages, beginning with the concept of a <em class="emphasis">field</em>. First, we need to formally define some familiar sets of numbers.</p>
-<article class="definition definition-like" id="definition-11"><h6 class="heading">
+<article class="assemblage assemblage-like" id="assemblage-8"><h3 class="heading"><span class="title">Guiding Questions.</span></h3>
+<p id="p-222">In this section, we'll seek to answer the questions: <ul class="disc">
+<li id="li-57"><p id="p-derived-li-57">What are binary operations?</p></li>
+<li id="li-58"><p id="p-derived-li-58">What is a field? What sorts of things can one do in a field?</p></li>
+<li id="li-59"><p id="p-derived-li-59">What are examples of fields?</p></li>
+</ul></p></article><p id="p-223">We now begin the process of abstraction. We will do this in stages, beginning with the concept of a <em class="emphasis">field</em>. First, we need to formally define some familiar sets of numbers.</p>
+<article class="definition definition-like" id="definition-11"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span>
-</h6>
-<p id="p-174">The rational numbers, denoted by \(\Q\text{,}\) is the set</p>
-<div class="displaymath">
+</h3>
+<p id="p-224">The rational numbers, denoted by <span class="process-math">\(\Q\text{,}\)</span> is the set</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \Q = \setof{\frac{a}{b}}{a,b\in \Z, \ b\ne 0}\text{.}
 \end{equation*}
-</div></article><p id="p-175">Recall that in elementary school, you learned that two fractions \(\frac{a}{b}, \frac{c}{d} \in \Q\) are equivalent if and only if \(ad=bc\text{.}\)</p>
-<article class="activity project-like" id="activity-8"><h6 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span>
-</h6>
-<p id="p-176">Prove that our elementary school definition of equivalent fractions is an equivalence relation.</p></article><p id="p-177">We likely have an intuitive idea of what is meant by \(\R\text{,}\) the set of real numbers. Defining \(\R\) rigorously is actually quite difficult, and will occupy a significant amount of time in a first course in real analysis. Thus, we will make use of your intuition. It is certainly the case that \(\N\subseteq \Z\subseteq \Q\subseteq \R\text{,}\) but \(\R\) also contains many irrational numbers, such as \(\pi\text{,}\) \(e\text{,}\) \(\sqrt{2}\text{,}\) and so on.</p>
-<p id="p-178">Out of \(\R\) we may build the complex numbers.</p>
-<article class="definition definition-like" id="definition-12"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span>
-</h6>
-<p id="p-179">The <dfn class="terminology">complex numbers</dfn> consist of all expressions of the form \(a+bi\text{,}\) where \(a,b\in \R\) and \(i^2 = -1\text{.}\) Given \(z = a+bi\text{,}\) we say \(a\) is the <dfn class="terminology">real part</dfn> of \(z\) and \(b\) is the <dfn class="terminology">imaginary part</dfn>. The set of complex numbers is denoted \(\C\text{.}\)</p></article><article class="definition definition-like" id="def_binaryoperation"><h6 class="heading">
+</div></article><p id="p-225">Recall that in elementary school, you learned that two fractions <span class="process-math">\(\frac{a}{b}, \frac{c}{d} \in \Q\)</span> are equivalent if and only if <span class="process-math">\(ad=bc\text{.}\)</span></p>
+<article class="activity project-like" id="activity-7"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span>
+</h3>
+<p id="p-226">Prove that our elementary school definition of equivalent fractions is an equivalence relation. Recall <a href="" class="xref" data-knowl="./knowl/def-eqrel.html" title="Definition 1.4.2">Definition 1.4.2</a>.</p></article><p id="p-227">We likely have an intuitive idea of what is meant by <span class="process-math">\(\R\text{,}\)</span> the set of real numbers. Defining <span class="process-math">\(\R\)</span> rigorously is actually quite difficult, and occupies a significant amount of time in a first course in real analysis. Thus, we will make use of your intuition. </p>
+<p id="p-228">Out of <span class="process-math">\(\R\)</span> we may build the complex numbers.</p>
+<article class="definition definition-like" id="definition-12"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span>
-</h6>
-<p id="p-180"> Let \(X\) be a nonempty set. A function \(\star : X \times X \to X\) is called a <dfn class="terminology">binary operation</dfn>. If \(\star\) is a binary operation on \(X\text{,}\) we say that \(X\) is <dfn class="terminology">closed under the operation \(\star\)</dfn>. [Given \(a,b\in X\text{,}\) we usually write \(a\star b\) in place of \(\star(a,b)\text{.}\)]</p></article><article class="investigation project-like" id="investigation-4"><h6 class="heading">
-<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span>
-</h6>
-<p id="p-181">Which of \(+, -, \cdot, \div\) are binary operations:</p>
+</h3>
+<p id="p-229">The <dfn class="terminology">complex numbers</dfn> consist of all expressions of the form <span class="process-math">\(a+bi\text{,}\)</span> where <span class="process-math">\(a,b\in \R\)</span> and <span class="process-math">\(i^2 = -1\text{.}\)</span> Given <span class="process-math">\(z = a+bi\text{,}\)</span> we say <span class="process-math">\(a\)</span> is the <dfn class="terminology">real part</dfn> of <span class="process-math">\(z\)</span> and <span class="process-math">\(b\)</span> is the <dfn class="terminology">imaginary part</dfn>. The set of complex numbers is denoted <span class="process-math">\(\C\text{.}\)</span></p></article><p id="p-230">As was mentioned in the <a href="Sec-Introduction.html" class="internal" title="Preface: Introduction">Introduction</a>, <em class="emphasis">algebra</em> comes from an Arabic word meaning “the reunion of broken parts”. We therefore need a way of combining two elements of a set into one; we turn to a particular type of function, known as a binary operation, to accomplish this.</p>
+<article class="definition definition-like" id="def_binaryoperation"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span>
+</h3>
+<p id="p-231"> Let <span class="process-math">\(X\)</span> be a nonempty set. A function <span class="process-math">\(\star : X \times X \to X\)</span> is called a <dfn class="terminology">binary operation</dfn>. If <span class="process-math">\(\star\)</span> is a binary operation on <span class="process-math">\(X\text{,}\)</span> we say that <span class="process-math">\(X\)</span> is <dfn class="terminology">closed under the operation <span class="process-math">\(\star\)</span></dfn>. [Given <span class="process-math">\(a,b\in X\text{,}\)</span> we usually write <span class="process-math">\(a\star b\)</span> in place of the typical function notation, <span class="process-math">\(\star(a,b)\text{.}\)</span>]</p></article><article class="investigation project-like" id="invest-binop"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.1.5</span><span class="period">.</span>
+</h3>
+<p id="p-232">Which of <span class="process-math">\(+, -, \cdot, \div\)</span> are binary operations:</p>
 <ol class="decimal">
-<li id="li-25"><p id="p-182">on \(\R\text{?}\)</p></li>
-<li id="li-26"><p id="p-183">on \(\Q\text{?}\)</p></li>
-<li id="li-27"><p id="p-184">on \(\Z\text{?}\)</p></li>
-<li id="li-28"><p id="p-185">on \(\N\text{?}\)</p></li>
-<li id="li-29"><p id="p-186">on \(\C\text{?}\)</p></li>
+<li id="li-60"><p id="p-233">on <span class="process-math">\(\R\text{?}\)</span></p></li>
+<li id="li-61"><p id="p-234">on <span class="process-math">\(\Q\text{?}\)</span></p></li>
+<li id="li-62"><p id="p-235">on <span class="process-math">\(\Z\text{?}\)</span></p></li>
+<li id="li-63"><p id="p-236">on <span class="process-math">\(\N\text{?}\)</span></p></li>
+<li id="li-64"><p id="p-237">on <span class="process-math">\(\C\text{?}\)</span> (Recall that for <span class="process-math">\(a_1 + b_1 i, a_2 + b_2 i \in \C\text{,}\)</span> <span class="process-math">\((a_1 + b_1 i) + (a_2 + b_2 i) := (a_1 + a_2) + (b_1 + b_2)i\)</span> and  <span class="process-math">\((a_1 + b_1 i)(a_2 + b_2 i) := (a_1 a_2 - b_1 b_2) + (a_1 b_2 + b_1 a_2) i\text{.}\)</span>)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-4" id="answer-4"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-187">Division is never a binary operation. The others are binary operations on \(\C\text{,}\) \(\R, \Q\text{,}\) and \(\Z\text{.}\) The only binary operation on \(\N\) is addition.</p></div></div>
-</div></article><p id="p-188">The hallmark of modern pure mathematics is the use of <em class="emphasis">axioms</em>. An axiom is essentially an unproved assertion of truth. Our use of axioms serves several purposes.</p>
-<p id="p-189">From a logical perspective, axioms help us avoid the problem of infinite regression (e.g., asking <em class="emphasis">How do you know?</em> over and over again). That is, axioms give us very clear starting points from which to make our deductions.</p>
-<p id="p-190">To that end, our first abstract algebraic structure captures and axiomatizes familiar behavior about how numbers can be combined to produce other numbers of the same type.</p>
-<article class="definition definition-like" id="def_field"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span>
-</h6>
-<p id="p-191">A <dfn class="terminology">field</dfn> is a nonempty set \(F\) with at least two elements and binary operations \(+\) and \(\cdot\text{,}\) satisfying the following <dfn class="terminology">field axioms</dfn>:</p>
-<ol class="decimal">
-<li id="li-30"><p id="p-192">Given any \(a,b,c\in F\text{,}\) \((a+b)+c = a+(b+c)\text{.}\)</p></li>
-<li id="li-31"><p id="p-193">Given any \(a,b\in F\text{,}\) \(a+b= b+a\text{.}\)</p></li>
-<li id="li-32"><p id="p-194">There exists an element \(0_F\in F\) such that for all \(a\in F\text{,}\) \(a+0_F = 0_F + a = a\text{.}\)</p></li>
-<li id="li-33"><p id="p-195">Given any \(a\in F\) there exists a \(b\in F\) such that \(a+b = b + a =0_F\text{.}\)</p></li>
-<li id="li-34"><p id="p-196">Given any \(a,b,c\in F\text{,}\) \((a\cdot b)\cdot c = a\cdot (b\cdot c)\text{.}\)</p></li>
-<li id="li-35"><p id="p-197">Given any \(a,b\in F\text{,}\) \(a\cdot b = b\cdot a\text{.}\)</p></li>
-<li id="li-36"><p id="p-198">There exists an element \(1_F\in F\) such that for all \(a\in F\text{,}\) \(1_F\cdot a = a\cdot 1_F = a\text{.}\)</p></li>
-<li id="li-37"><p id="p-199">For all \(a\in F\text{,}\) \(a\ne 0_F\text{,}\) there exists a \(b\in F\) such that \(a\cdot b = b\cdot a = 1_F\text{.}\)</p></li>
-<li id="li-38"><p id="p-200">For all \(a,b,c\in F\text{,}\) \(a\cdot (b+c) = a\cdot b + a\cdot c\text{.}\)</p></li>
-<li id="li-39"><p id="p-201">For all \(a,b,c\in F\text{,}\) \((a+b)\cdot c = a\cdot c + b\cdot c\text{.}\)</p></li>
-</ol></article><p id="p-202">For brevity's sake, we will usually write \(a\cdot b\) as \(ab\text{.}\) Additionally, we will usually drop the subscripts on \(0,1\) unless we need to distinguish between fundamentally different identities in different fields.</p>
-<article class="investigation project-like" id="exer_fieldexamples"><h6 class="heading">
-<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span>
-</h6>
-<p id="p-203">Which of the following are fields? If no operations are specified, assume the most obvious operations (e.g., the addition and multiplication you have known for years). For most, a short justification or counterexample is sufficient.</p>
-<ol class="decimal">
-<li id="li-40"><p id="p-204">\(\N\)</p></li>
-<li id="li-41"><p id="p-205">\(\Z\)</p></li>
-<li id="li-42"><p id="p-206">\(2\Z\text{,}\) the set of even integers</p></li>
-<li id="li-43"><p id="p-207">\(\Q\)</p></li>
-<li id="li-44"><p id="p-208">\(\Z_{10}\)</p></li>
-<li id="li-45"><p id="p-209">\(\Z_{11}\)</p></li>
-<li id="li-46"><p id="p-210">\(\R\)</p></li>
-<li id="li-47"><p id="p-211">\(\C\text{,}\) with addition defined as \((a_1 + b_1 i) + (a_2 + b_2 i) := (a_1 + a_2) + (b_1 + b_2)i\text{,}\) and multiplication defined as \((a_1 + b_1 i)(a_2 + b_2 i) := (a_1 a_2 - b_1 b_2) + (a_1 b_2 + b_1 a_2) i\text{.}\)</p></li>
-<li id="li-48"><p id="p-212">\(\mathcal{M}_2(\R) := \setof{\left(\begin{matrix}a \amp b \\ c \amp d \end{matrix} \right)}{a,b,c,d\in\R}\)<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-4" id="fn-4"><sup> 1 </sup></a>, the set of \(2\times 2\) matrices with real coefficients using the usual definition of matrix multiplication<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-5" id="fn-5"><sup> 2 </sup></a> and matrix addition.</p></li>
-</ol>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn">For students who have taken a linear algebra course.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn">Recall that, if \(\left(\begin{matrix}a_1 \amp b_1 \\ c_1 \amp d_1 \end{matrix} \right), \left(\begin{matrix}a_2 \amp b_2 \\ c_2 \amp d_2 \end{matrix} \right)\in \mathcal{M}_2(\R)\text{,}\) then \(\left(\begin{matrix}a_1 \amp b_1 \\ c_1 \amp d_1 \end{matrix} \right) \cdot \left(\begin{matrix}a_2 \amp b_2 \\ c_2 \amp d_2 \end{matrix} \right) = \left(\begin{matrix}a_1 a_2 + b_1 c_2 \amp a_1 b_2 + b_1 d_2 \\ c_1 a_2 + d_1 c_2 \amp c_1 b_2 + d_1 d_2 \end{matrix} \right)\text{.}\)</div></div></article><a data-knowl="" class="id-ref original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like"><ol id="p-213" class="decimal">
-<li id="li-49"><p id="p-214">\(\N\) is not closed under taking additive inverses, so is not a field.</p></li>
-<li id="li-50"><p id="p-215">\(\Z\) is not a field, as there is no integer \(a\) such that \(2a = 1\text{.}\)</p></li>
-<li id="li-51"><p id="p-216">\(2\Z\) is not a field for the same reason.</p></li>
-<li id="li-52"><p id="p-217">\(\Q\) is a field.</p></li>
-<li id="li-53"><p id="p-218">\(\Z_{10}\) is not a field; there is no \(\overline{a}\in \Z_{10}\) for which \(\overline{5}\cdot \overline{a} = \overline{1}\) (you can check them all; there are only 9 viable options).</p></li>
-<li id="li-54"><p id="p-219">\(\Z_{11}\) <em class="emphasis">is</em> a field. The axioms pertaining to addition and multiplication were established earlier or rely on the same axioms holding for \(\Z\text{.}\)</p></li>
-<li id="li-55"><p id="p-220">\(\R\) is a field</p></li>
-<li id="li-56"><p id="p-221">\(\C\) is a field. Given \(a+bi\ne 0\text{,}\) \((a+bi)^{-1} = \frac{a}{a^2 + b^2} - \frac{b}{a^2 + b^2} i\text{.}\)</p></li>
-<li id="li-57"><p id="p-222">\(\mathcal{M}_2(\R)\) is not a field. Matrix multiplication is not commutative.</p></li>
-</ol></div></div>
-<p id="p-223">In the <a class="xref" data-knowl="./knowl/exer_fieldexamples.html" title="Investigation 2.1.3">Investigation 2.1.3</a>, you determined which of sets of familiar mathematical objects are and are not fields. Notice that you have been working with fields for years and years and that our abstraction of language to that of fields is simply to allow us to explore the common features at the same time - it is inefficient to prove the same statement about every single field when we can prove it once and for all about fields in general.</p>
-<article class="theorem theorem-like" id="thm_fieldproperties"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of Fields.</span>
-</h6>
-<p id="p-224">Let \(F\) be a field.</p>
-<ol class="decimal">
-<li id="li-58"><p id="p-225">The additive identity \(0\) is unique.</p></li>
-<li id="li-59"><p id="p-226">For all \(a\in F\text{,}\) \(a \cdot 0 = 0\cdot a = 0\text{.}\)</p></li>
-<li id="li-60"><p id="p-227">Additive inverses are unique.</p></li>
-<li id="li-61"><p id="p-228">The multiplicative identity \(1\) is unique.</p></li>
-<li id="li-62"><p id="p-229">Multiplicative inverses are unique.</p></li>
-</ol></article><article class="hiddenproof" id="proof-18"><a data-knowl="" class="id-ref original" data-refid="hk-proof-18"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-18"><article class="hiddenproof"><ol class="decimal">
-<li id="li-63"><p id="p-230">Assume \(0, 0'\) both satisfy the additive identity axiom. Observe that \(0 = 0 + 0' = 0'\text{.}\)</p></li>
-<li id="li-64"><p id="p-231">As \(0 = 0 + 0\text{,}\) we may write \(a\cdot 0 = a\cdot (0 + 0) = a\cdot 0 + a \cdot 0\text{.}\) Now add the additive inverse of \(a\cdot 0\) to both sides to obtain \(0 = a \cdot 0 = 0\cdot a\text{.}\)</p></li>
-<li id="li-65"><p id="p-232">Let \(a\in F\) and suppose \(b\) and \(c\) are such that \(a+c = 0\) and \(a+b = 0\text{.}\) Then \(a+c = a+b\text{,}\) and we may add \(b\) (or \(c\)) to both sides to obtain \(b+(a+b) = (b+a)+b = 0 + b = b\) and \(c+(a+c) = (c+a)+c = 0 + c = c\text{.}\) Thus \(b=c\text{.}\)</p></li>
-<li id="li-66"><p id="p-233">Suppose \(1\) and \(1'\) are multiplicative identities. Then \(1 = 1 \cdot 1' = 1'\text{.}\)</p></li>
-<li id="li-67"><p id="p-234">Let \(a\in F\) be nonzero and suppose \(b,c\) are multiplicative inverses for \(a\text{.}\) Then \(ab = 1 = ac\text{,}\) and we may multiply by \(b\) (or \(c\)) to obtain \(b(ab) = (ba)b = 1\cdot b = b = b(ac) = (ba)c = 1\cdot c = c\text{.}\)</p></li>
-</ol></article></div>
-<p id="p-235">One consequence of <a class="xref" data-knowl="./knowl/thm_fieldproperties.html" title="Theorem 2.1.5: Properties of Fields">Theorem 2.1.5</a> is that, given \(a\in F\text{,}\) \(b\in F\setminus \set{0}\text{,}\) we may refer to \(-a\) as <em class="emphasis">the</em> additive inverse of \(a\text{,}\) and \(b^{-1}\) as <em class="emphasis">the</em> multiplicative inverse of \(b\text{.}\) We will thus employ this familiar terminology henceforth.</p>
-<article class="definition definition-like" id="definition-15"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.6</span><span class="period">.</span>
-</h6>
-<p id="p-236">Let \(K\) be a field. If \(F\) is a nonempty subset satisfying</p>
-<ol class="decimal">
-<li id="li-68"><p id="p-237">\(F\subseteq K\) and</p></li>
-<li id="li-69"><p id="p-238">\(F\) is a field under the same operations as \(K\text{,}\)</p></li>
-</ol>
-<p id="p-239">then we call \(F\) a <dfn class="terminology">subfield</dfn> of \(K\text{,}\) and \(K\) an <dfn class="terminology">extension field</dfn> of \(F\text{,}\) and say “\(K/F\) is a <dfn class="terminology">field extension</dfn>.”</p></article> Many of the number sets with which you are familiar are fields. <article class="theorem theorem-like" id="theorem-18"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.1.7</span><span class="period">.</span>
-</h6>
-<p id="p-240">The set of complex numbers \(\C\) is an extension field of \(\R\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-19"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.1.8</span><span class="period">.</span>
-</h6>
-<p id="p-241">For all primes \(p\text{,}\) \(\Z_p\) is a field.</p></article></section></div></main>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-4" id="answer-4"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-4"><div class="answer solution-like"><p id="p-238">Division is never a binary operation. The others are binary operations on <span class="process-math">\(\C\text{,}\)</span> <span class="process-math">\(\R, \Q\text{,}\)</span> and <span class="process-math">\(\Z\text{.}\)</span> The only binary operation on <span class="process-math">\(\N\)</span> is addition.</p></div></div>
+</div></article><article class="activity project-like" id="activity-8"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.6</span><span class="period">.</span>
+</h3>
+<p id="p-239">Choose your favorite nonempty set <span class="process-math">\(X\)</span> and describe a binary operation different than those in <a href="" class="xref" data-knowl="./knowl/invest-binop.html" title="Investigation 2.1.5">Investigation 2.1.5</a>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-5" id="answer-5"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-5"><div class="answer solution-like">
+<p id="p-240">Answers vary, but one option is to define <span class="process-math">\(\min : \Z\times \Z \to \Z\)</span> by</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\min(a,b) := \begin{cases} a \amp \text{if } a \le b\\ b \amp \text{if } b\le a\end{cases.}
+\end{equation*}
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.13/login.js"></script>
+</div></div>
+</div></article><p id="p-241">The hallmark of modern pure mathematics is the use of <em class="emphasis">axioms</em>. An axiom is essentially an unproved assertion of truth. Our use of axioms serves several purposes.</p>
+<p id="p-242">From a logical perspective, axioms help us avoid the problem of infinite regression (e.g., asking <em class="emphasis">How do you know?</em> over and over again). That is, axioms give us very clear starting points from which to make our deductions.</p>
+<p id="p-243">To that end, our first abstract algebraic structure captures and axiomatizes familiar behavior about how numbers can be combined to produce other numbers of the same type.</p>
+<article class="definition definition-like" id="def_field"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.7</span><span class="period">.</span>
+</h3>
+<p id="p-244">A <dfn class="terminology">field</dfn> is a nonempty set <span class="process-math">\(F\)</span> with at least two elements and binary operations <span class="process-math">\(+\)</span> and <span class="process-math">\(\cdot\text{,}\)</span> denoted <span class="process-math">\((F,+,\cdot)\text{,}\)</span> and satisfying the following <dfn class="terminology">field axioms</dfn>:</p>
+<ol class="decimal">
+<li id="li-65"><p id="p-245">Given any <span class="process-math">\(a,b,c\in F\text{,}\)</span> <span class="process-math">\((a+b)+c = a+(b+c)\text{.}\)</span> (Associativity of addition)</p></li>
+<li id="li-66"><p id="p-246">Given any <span class="process-math">\(a,b\in F\text{,}\)</span> <span class="process-math">\(a+b= b+a\text{.}\)</span> (Commutativity of addition)</p></li>
+<li id="li-67"><p id="p-247">There exists an element <span class="process-math">\(0_F\in F\)</span> such that for all <span class="process-math">\(a\in F\text{,}\)</span> <span class="process-math">\(a+0_F = 0_F + a = a\text{.}\)</span> (Additive identity)</p></li>
+<li id="li-68"><p id="p-248">Given any <span class="process-math">\(a\in F\)</span> there exists a <span class="process-math">\(b\in F\)</span> such that <span class="process-math">\(a+b = b + a =0_F\text{.}\)</span> (Additive inverse)</p></li>
+<li id="li-69"><p id="p-249">Given any <span class="process-math">\(a,b,c\in F\text{,}\)</span> <span class="process-math">\((a\cdot b)\cdot c = a\cdot (b\cdot c)\text{.}\)</span> (Associativity of multiplication)</p></li>
+<li id="li-70"><p id="p-250">Given any <span class="process-math">\(a,b\in F\text{,}\)</span> <span class="process-math">\(a\cdot b = b\cdot a\text{.}\)</span> (Commutativity of multiplication)</p></li>
+<li id="li-71"><p id="p-251">There exists an element <span class="process-math">\(1_F\in F\)</span> such that for all <span class="process-math">\(a\in F\text{,}\)</span> <span class="process-math">\(1_F\cdot a = a\cdot 1_F = a\text{.}\)</span> (Multiplicative identity)</p></li>
+<li id="li-72"><p id="p-252">For all <span class="process-math">\(a\in F\text{,}\)</span> <span class="process-math">\(a\ne 0_F\text{,}\)</span> there exists a <span class="process-math">\(b\in F\)</span> such that <span class="process-math">\(a\cdot b = b\cdot a = 1_F\text{.}\)</span> (Multiplicative inverse)</p></li>
+<li id="li-73"><p id="p-253">For all <span class="process-math">\(a,b,c\in F\text{,}\)</span> <span class="process-math">\(a\cdot (b+c) = a\cdot b + a\cdot c\text{.}\)</span> (Distributive property I)</p></li>
+<li id="li-74"><p id="p-254">For all <span class="process-math">\(a,b,c\in F\text{,}\)</span> <span class="process-math">\((a+b)\cdot c = a\cdot c + b\cdot c\text{.}\)</span> (Distributive property II)</p></li>
+</ol></article><p id="p-255">We will usually write <span class="process-math">\(a\cdot b\)</span> as <span class="process-math">\(ab\text{.}\)</span> Additionally, we will usually drop the subscripts on <span class="process-math">\(0,1\)</span> unless we need to distinguish between fundamentally different identities in different fields.</p>
+<article class="investigation project-like" id="exer_fieldexamples"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.1.8</span><span class="period">.</span>
+</h3>
+<p id="p-256">Which of the following are fields under the specified operations? For most, a short justification or counterexample is sufficient.</p>
+<ol class="decimal">
+<li id="li-75"><p id="p-257"><span class="process-math">\(\N\)</span> under the usual addition and multiplication operations</p></li>
+<li id="li-76"><p id="p-258"><span class="process-math">\(\Z\)</span> under the usual addition and multiplication operations</p></li>
+<li id="li-77"><p id="p-259"><span class="process-math">\(2\Z\text{,}\)</span> the set of even integers, under the usual addition and multiplication operations</p></li>
+<li id="li-78"><p id="p-260"><span class="process-math">\(\Q\)</span> under the usual addition and multiplication operations</p></li>
+<li id="li-79"><p id="p-261"><span class="process-math">\(\Z_{6}\)</span> under addition and multiplication modulo 6</p></li>
+<li id="li-80"><p id="p-262"><span class="process-math">\(\Z_{5}\)</span> under addition and multiplication modulo 5</p></li>
+<li id="li-81"><p id="p-263"><span class="process-math">\(\R\)</span> under the usual addition and multiplication operations</p></li>
+<li id="li-82"><p id="p-264"><span class="process-math">\(\C\)</span> under the complex addition and multiplication defined in <a href="" class="xref" data-knowl="./knowl/invest-binop.html" title="Investigation 2.1.5">Investigation 2.1.5</a></p></li>
+<li id="li-83"><p id="p-265"><span class="process-math">\(\mathcal{M}_2(\R) := \setof{\left(\begin{matrix}a \amp b \\ c \amp d \end{matrix} \right)}{a,b,c,d\in\R}\)</span><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-13" id="fn-13"><sup> 1 </sup></a>, the set of <span class="process-math">\(2\times 2\)</span> matrices with real coefficients using the usual definition of matrix multiplication<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-14" id="fn-14"><sup> 2 </sup></a> and matrix addition.</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like"><ol id="p-266" class="decimal">
+<li id="li-84"><p id="p-267"><span class="process-math">\(\N\)</span> is not closed under taking additive inverses, so is not a field.</p></li>
+<li id="li-85"><p id="p-268"><span class="process-math">\(\Z\)</span> is not a field, as there is no integer <span class="process-math">\(a\)</span> such that <span class="process-math">\(2a = 1\text{.}\)</span></p></li>
+<li id="li-86"><p id="p-269"><span class="process-math">\(2\Z\)</span> is not a field for the same reason.</p></li>
+<li id="li-87"><p id="p-270"><span class="process-math">\(\Q\)</span> is a field.</p></li>
+<li id="li-88"><p id="p-271"><span class="process-math">\(\Z_{6}\)</span> is not a field; there is no <span class="process-math">\(\overline{a}\in \Z_{10}\)</span> for which <span class="process-math">\(\overline{2}\cdot \overline{a} = \overline{1}\)</span> (you can check them all; there are only 4 viable options).</p></li>
+<li id="li-89"><p id="p-272"><span class="process-math">\(\Z_{5}\)</span> <em class="emphasis">is</em> a field. The axioms pertaining to addition and multiplication were established earlier or rely on the same axioms holding for <span class="process-math">\(\Z\text{.}\)</span></p></li>
+<li id="li-90"><p id="p-273"><span class="process-math">\(\R\)</span> is a field</p></li>
+<li id="li-91"><p id="p-274"><span class="process-math">\(\C\)</span> is a field. Given <span class="process-math">\(a+bi\ne 0\text{,}\)</span> <span class="process-math">\((a+bi)^{-1} = \frac{a}{a^2 + b^2} - \frac{b}{a^2 + b^2} i\text{.}\)</span></p></li>
+<li id="li-92"><p id="p-275"><span class="process-math">\(\mathcal{M}_2(\R)\)</span> is not a field. Matrix multiplication is not commutative.</p></li>
+</ol></div></div>
+</div></article><p id="p-276">In the <a href="" class="xref" data-knowl="./knowl/exer_fieldexamples.html" title="Investigation 2.1.8">Investigation 2.1.8</a>, you determined which of sets of familiar mathematical objects are and are not fields. Notice that you have been working with fields for years and that our abstraction of language to that of fields is simply to allow us to explore the common features at the same time - it is inefficient to prove the same statement about every single field when we can prove it once and for all about fields in general.</p>
+<article class="theorem theorem-like" id="thm_fieldproperties"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of Fields.</span>
+</h3>
+<p id="p-277">Let <span class="process-math">\(F\)</span> be a field.</p>
+<ol class="decimal">
+<li id="li-93"><p id="p-278">The additive identity <span class="process-math">\(0\)</span> is unique.</p></li>
+<li id="li-94"><p id="p-279">For all <span class="process-math">\(a\in F\text{,}\)</span> <span class="process-math">\(a \cdot 0 = 0\cdot a = 0\text{.}\)</span></p></li>
+<li id="li-95"><p id="p-280">Additive inverses are unique.</p></li>
+<li id="li-96"><p id="p-281">The multiplicative identity <span class="process-math">\(1\)</span> is unique.</p></li>
+<li id="li-97"><p id="p-282">Multiplicative inverses are unique.</p></li>
+<li id="li-98"><p id="p-283"><span class="process-math">\((-1)\cdot (-1) = 1\)</span> <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-8" id="hint-8"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like"><p id="p-284">Note that we are saying that the additive inverse of the multiplicative identity times itself equals the multiplicative identity. You should use only the field axioms and the properties previously established in this theorem.</p></div></div><aside class="aside aside-like" id="aside-4"></aside></p></li>
+</ol></article><article class="hiddenproof" id="proof-23"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-23"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-23"><article class="hiddenproof"><ol class="decimal">
+<li id="li-99"><p id="p-285">Assume <span class="process-math">\(0, 0'\)</span> both satisfy the additive identity axiom. Observe that <span class="process-math">\(0 = 0 + 0' = 0'\text{.}\)</span></p></li>
+<li id="li-100"><p id="p-286">As <span class="process-math">\(0 = 0 + 0\text{,}\)</span> we may write <span class="process-math">\(a\cdot 0 = a\cdot (0 + 0) = a\cdot 0 + a \cdot 0\text{.}\)</span> Now add the additive inverse of <span class="process-math">\(a\cdot 0\)</span> to both sides to obtain <span class="process-math">\(0 = a \cdot 0 = 0\cdot a\text{.}\)</span></p></li>
+<li id="li-101"><p id="p-287">Let <span class="process-math">\(a\in F\)</span> and suppose <span class="process-math">\(b\)</span> and <span class="process-math">\(c\)</span> are such that <span class="process-math">\(a+c = 0\)</span> and <span class="process-math">\(a+b = 0\text{.}\)</span> Then <span class="process-math">\(a+c = a+b\text{,}\)</span> and we may add <span class="process-math">\(b\)</span> (or <span class="process-math">\(c\)</span>) to both sides to obtain <span class="process-math">\(b+(a+b) = (b+a)+b = 0 + b = b\)</span> and <span class="process-math">\(c+(a+c) = (c+a)+c = 0 + c = c\text{.}\)</span> Thus <span class="process-math">\(b=c\text{.}\)</span></p></li>
+<li id="li-102"><p id="p-288">Suppose <span class="process-math">\(1\)</span> and <span class="process-math">\(1'\)</span> are multiplicative identities. Then <span class="process-math">\(1 = 1 \cdot 1' = 1'\text{.}\)</span></p></li>
+<li id="li-103"><p id="p-289">Let <span class="process-math">\(a\in F\)</span> be nonzero and suppose <span class="process-math">\(b,c\)</span> are multiplicative inverses for <span class="process-math">\(a\text{.}\)</span> Then <span class="process-math">\(ab = 1 = ac\text{,}\)</span> and we may multiply by <span class="process-math">\(b\)</span> (or <span class="process-math">\(c\)</span>) to obtain <span class="process-math">\(b(ab) = (ba)b = 1\cdot b = b = b(ac) = (ba)c = 1\cdot c = c\text{.}\)</span></p></li>
+<li id="li-104"><p id="p-290">Observe that <span class="process-math">\((-1) + 1 = 0\)</span> by the definition of additive inverses. Multiply both sides by <span class="process-math">\(-1\)</span> and distribute to obtain <span class="process-math">\((-1)(-1) + (-1)\cdot 1 = (-1)\cdot 0\text{.}\)</span> By part 2 of this theorem and the definition of a multiplicative identity, we obtain <span class="process-math">\((-1)(-1) + (-1) = 0\text{.}\)</span> We now add the multiplicative identity to obtain <span class="process-math">\((-1)(-1) + (-1) + 1 = 0 + 1\text{,}\)</span> which simplifies to <span class="process-math">\((-1)(-1) = 1\text{.}\)</span></p></li>
+</ol></article></div>
+<p id="p-291">One consequence of <a href="" class="xref" data-knowl="./knowl/thm_fieldproperties.html" title="Theorem 2.1.9: Properties of Fields">Theorem 2.1.9</a> is that, given <span class="process-math">\(a\in F\text{,}\)</span> <span class="process-math">\(b\in F\setminus \set{0}\text{,}\)</span> we may refer to <span class="process-math">\(-a\)</span> as <em class="emphasis">the</em> additive inverse of <span class="process-math">\(a\text{,}\)</span> and <span class="process-math">\(b^{-1}\)</span> as <em class="emphasis">the</em> multiplicative inverse of <span class="process-math">\(b\text{.}\)</span> We will thus employ this familiar terminology henceforth.</p>
+<article class="investigation project-like" id="investigation-9"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.1.10</span><span class="period">.</span>
+</h3>
+<p id="p-292">For which <span class="process-math">\(n &gt; 1\)</span> is <span class="process-math">\(\Z_n\)</span> a field? Compute some examples, form a conjecture, and prove your conjecture.</p></article></section><div class="hidden-content tex2jax_ignore" id="hk-fn-13"><div class="fn">For students who have taken a linear algebra course.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-14"><div class="fn">Recall that, if <span class="process-math">\(\left(\begin{matrix}a_1 \amp b_1 \\ c_1 \amp d_1 \end{matrix} \right), \left(\begin{matrix}a_2 \amp b_2 \\ c_2 \amp d_2 \end{matrix} \right)\in \mathcal{M}_2(\R)\text{,}\)</span> then <span class="process-math">\(\left(\begin{matrix}a_1 \amp b_1 \\ c_1 \amp d_1 \end{matrix} \right) \cdot \left(\begin{matrix}a_2 \amp b_2 \\ c_2 \amp d_2 \end{matrix} \right) = \left(\begin{matrix}a_1 a_2 + b_1 c_2 \amp a_1 b_2 + b_1 d_2 \\ c_1 a_2 + d_1 c_2 \amp c_1 b_2 + d_1 d_2 \end{matrix} \right)\text{.}\)</span>
+</div></div>
+</div></main>
+</div>
 </body>
 </html>

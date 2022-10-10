@@ -1362,11 +1362,12 @@
       </p>
     </proof>
     <p>
-      We thus obtain:
+      We thus obtain the following, due to Emmy Noether:
     </p>
     <theorem>
     	<idx>First Isomorphism Theorem</idx>
-      <title>(First Isomorphism Theorem)</title>
+      <title>Noether's Isomorphism Theorem</title>
+      <creator>E. Noether</creator>
       <statement>
         <p>
           Let <m>\p : R\to S</m> be a homomorphism of commutative rings.

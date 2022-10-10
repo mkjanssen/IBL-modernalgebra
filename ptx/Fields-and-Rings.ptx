@@ -896,7 +896,7 @@ The reason for this we need not discuss.</q> -W.H. Auden</aside>
               <cell></cell>
             </row>
             <row>
-              <cell>There is an multiplicative identity</cell>
+              <cell>There is a multiplicative identity</cell>
               <cell></cell>
               <cell></cell>
               <cell></cell>
@@ -1873,13 +1873,13 @@ Again, this is a formalization of an idea that you have been using since you wer
 
     
     <p>
-      Our definition of prime also extends nicely to domains.
+      Our definition of prime also extends nicely to commutative rings with identity.
       Indeed, the desire to extend the familiar notion of prime from <m>\Z</m> to any ring is the reason for our less-familiar definition given in <xref ref="def-primeinteger" />.
     </p>
     <definition>
       <statement>
         <p>
-          Let <m>R</m> be a domain.
+          Let <m>R</m> be commutative with identity.
           We say a nonzero nonunit element <m>a\in R</m> is <term>prime</term>
           if whenever <m>a\mid bc</m> for some <m>b,c\in R</m>,
           either <m>a|b</m> or <m>a|c</m>.
@@ -1895,7 +1895,7 @@ Again, this is a formalization of an idea that you have been using since you wer
     <idx>atom</idx>
       <statement>
         <p>
-          Let <m>R</m> be a domain.
+          Let <m>R</m> be commutative with identity.
           We say a nonzero nonunit element <m>a\in R</m> is <term>irreducible</term>
           if whenever <m>a = bc</m> for some <m>b,c\in R</m>,
           one of <m>b</m> or <m>c</m> is a unit.

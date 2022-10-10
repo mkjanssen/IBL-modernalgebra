@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-14T12:08:35-06:00       *-->
+<!--*       on 2022-10-10T15:50:53-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -9,16 +9,19 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US">
-<head>
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Divisibility and GCDs in the Integers</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Rings With Inquiry">
+<meta property="book:author" content="Michael Janssen">
+<meta property="book:author" content="Melissa Lindsey">
 <script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
-    useLabelIds: true,
     tagSide: "right",
     tagIndent: ".8em",
     packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
@@ -36,21 +39,20 @@
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script async="" src="https://cse.google.com/cse.js?cx=017464805646507420634:llcu9bfj13p"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.674</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
-</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/colors_blue_grey.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script async="" src="https://cse.google.com/cse.js?cx=017464805646507420634:llcu9bfj13p"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand{\labelitemi}{$\diamond$}
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand{\labelitemi}{$\diamond$}
 \def\arraystretch{1.5}
 \newcommand{\contentsfinish}{}
 \newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
@@ -121,7 +123,7 @@
 </div>
 <div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
 </div></div>
-<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
 <a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="SubSec-WellOrdering.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Sec-Integers.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="SubSec-Primes-and-Factorization.html" title="Next">Next</a></span>
@@ -131,53 +133,54 @@
 <button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="SubSec-WellOrdering.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Sec-Integers.html" title="Up">Up</a><a class="next-button button toolbar-item" href="SubSec-Primes-and-Factorization.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
-<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link frontmatter">
-<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
-<li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction">Introduction</a></li>
-<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents">A Note to Students</a></li>
-<li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors">A Note to Instructors</a></li>
-<li><a href="Sec-Versions.html" data-scroll="Sec-Versions">Versions of this text</a></li>
-<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction" class="internal">Introduction</a></li>
+<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents" class="internal">A Note to Students</a></li>
+<li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors" class="internal">A Note to Instructors</a></li>
+<li><a href="Sec-Versions.html" data-scroll="Sec-Versions" class="internal">Versions of this text</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Integers.html" data-scroll="Sec-Integers"><span class="codenumber">1</span> <span class="title">The Integers</span></a><ul>
-<li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering">Induction and Well-Ordering</a></li>
+<a href="Sec-Integers.html" data-scroll="Sec-Integers" class="internal"><span class="codenumber">1</span> <span class="title">The Integers</span></a><ul>
+<li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering" class="internal">Induction and Well-Ordering</a></li>
 <li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers" class="active">Divisibility and GCDs in the Integers</a></li>
-<li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization">Primes and Factorization</a></li>
-<li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m">The Integers modulo <span class="process-math">\(m\)</span></a></li>
+<li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization" class="internal">Primes and Factorization</a></li>
+<li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m" class="internal">The Integers modulo <span class="process-math">\(m\)</span></a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Fields-and-Rings.html" data-scroll="Sec-Fields-and-Rings"><span class="codenumber">2</span> <span class="title">Fields and Rings</span></a><ul>
-<li><a href="SubSec-Fields.html" data-scroll="SubSec-Fields">Fields</a></li>
-<li><a href="SubSec-Rings.html" data-scroll="SubSec-Rings">Rings</a></li>
-<li><a href="SubSec-Divisibility-in-Domains.html" data-scroll="SubSec-Divisibility-in-Domains">Divisibility in Integral Domains</a></li>
-<li><a href="SubSec-Principal-Ideals.html" data-scroll="SubSec-Principal-Ideals">Principal Ideals and Euclidean Domains</a></li>
+<a href="Sec-Fields-and-Rings.html" data-scroll="Sec-Fields-and-Rings" class="internal"><span class="codenumber">2</span> <span class="title">Fields and Rings</span></a><ul>
+<li><a href="SubSec-Fields.html" data-scroll="SubSec-Fields" class="internal">Fields</a></li>
+<li><a href="SubSec-Rings.html" data-scroll="SubSec-Rings" class="internal">Rings</a></li>
+<li><a href="SubSec-Divisibility-in-Domains.html" data-scroll="SubSec-Divisibility-in-Domains" class="internal">Divisibility in Integral Domains</a></li>
+<li><a href="SubSec-Principal-Ideals.html" data-scroll="SubSec-Principal-Ideals" class="internal">Principal Ideals and Euclidean Domains</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Factorization.html" data-scroll="Sec-Factorization"><span class="codenumber">3</span> <span class="title">Factorization</span></a><ul>
-<li><a href="SubSec-Factoring-Polynomials.html" data-scroll="SubSec-Factoring-Polynomials">Factoring Polynomials</a></li>
-<li><a href="SubSec-Factorization-in-Euclidean-Domains.html" data-scroll="SubSec-Factorization-in-Euclidean-Domains">Factorization in Euclidean Domains</a></li>
-<li><a href="SubSec-Nonunique-Factorization.html" data-scroll="SubSec-Nonunique-Factorization">Nonunique Factorization</a></li>
+<a href="Sec-Factorization.html" data-scroll="Sec-Factorization" class="internal"><span class="codenumber">3</span> <span class="title">Factorization</span></a><ul>
+<li><a href="SubSec-Factoring-Polynomials.html" data-scroll="SubSec-Factoring-Polynomials" class="internal">Factoring Polynomials</a></li>
+<li><a href="SubSec-Factorization-in-Euclidean-Domains.html" data-scroll="SubSec-Factorization-in-Euclidean-Domains" class="internal">Factorization in Euclidean Domains</a></li>
+<li><a href="SubSec-Nonunique-Factorization.html" data-scroll="SubSec-Nonunique-Factorization" class="internal">Nonunique Factorization</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Ideals.html" data-scroll="Sec-Ideals"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a><ul>
-<li><a href="SubSec-Ideals-In-General.html" data-scroll="SubSec-Ideals-In-General">Ideals in general</a></li>
-<li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms">Homomorphisms</a></li>
-<li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings">Quotient Rings: New Rings from Old</a></li>
+<a href="Sec-Ideals.html" data-scroll="Sec-Ideals" class="internal"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a><ul>
+<li><a href="SubSec-Ideals-In-General.html" data-scroll="SubSec-Ideals-In-General" class="internal">Ideals in general</a></li>
+<li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms" class="internal">Homomorphisms</a></li>
+<li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings" class="internal">Quotient Rings: New Rings from Old</a></li>
 </ul>
 </li>
-<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="SubSec-Divisibility-in-the-Integers"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="SubSec-Divisibility-in-the-Integers"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Divisibility and GCDs in the Integers</span>
 </h2>
 <article class="assemblage assemblage-like" id="assemblage-4"><h3 class="heading"><span class="title">Guiding Questions.</span></h3>
@@ -195,7 +198,7 @@
 </h4>
 <p id="p-63">Let <span class="process-math">\(a,b\in \Z\text{.}\)</span> We say that <span class="process-math">\(a\)</span> <dfn class="terminology">divides</dfn> <span class="process-math">\(b\text{,}\)</span> and write <span class="process-math">\(a\mid b\text{,}\)</span> if there is an integer <span class="process-math">\(c\)</span> such that <span class="process-math">\(ac = b\text{.}\)</span> In this case, say that <span class="process-math">\(a\)</span> and <span class="process-math">\(c\)</span> are <dfn class="terminology">factors</dfn> of <span class="process-math">\(b\text{.}\)</span> If no such <span class="process-math">\(c\in \Z\)</span> exists, we write <span class="process-math">\(a\nmid b\text{.}\)</span></p></article><p id="p-64">Note that the symbol <span class="process-math">\(|\)</span> is a <em class="emphasis">verb</em>; it is therefore correct to say, e.g., <span class="process-math">\(2|4\text{,}\)</span> as 2 <em class="emphasis">does</em> divide 4. However, it is an abuse of notation to say that <span class="process-math">\(2\mid 4 = 2\text{.}\)</span> Instead, we likely mean <span class="process-math">\(4\div 2 = 2\)</span> or <span class="process-math">\(\frac{4}{2} = 2\)</span> (though we will not deal in fractions just yet).</p>
 <article class="investigation project-like" id="investigation-1"><h4 class="heading">
-<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span>
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
 </h4>
 <p id="p-65">Determine whether <span class="process-math">\(a\mid b\)</span> if:</p>
 <ol class="decimal">
@@ -206,24 +209,23 @@
 </ol>
 <p class="continuation">Comment briefly on the results of this investigation. What did you notice? What do you still wonder?</p></article><p id="p-71">We next collect several standard results about divisibility in <span class="process-math">\(\Z\)</span> which will be used extensively in the remainder of this text.</p>
 <article class="theorem theorem-like" id="theorem-4"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
-</h4>
-<p id="p-72">Let <span class="process-math">\(a,b,c\in\Z\text{.}\)</span> If <span class="process-math">\(a\mid b\)</span> and <span class="process-math">\(a\mid c\text{,}\)</span> then <span class="process-math">\(a\mid (b+c)\text{.}\)</span></p></article><article class="theorem theorem-like" id="thm-divideproduct"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
 </h4>
-<p id="p-74">Let <span class="process-math">\(a,b,c\in\Z\text{.}\)</span> If <span class="process-math">\(a\mid b\text{,}\)</span> then <span class="process-math">\(a\mid bc\text{.}\)</span></p></article><article class="investigation project-like" id="invest-divideproduct"><h4 class="heading">
-<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
-</h4>
-<p id="p-76">Consider the following partial converse to <a href="" class="xref" data-knowl="./knowl/thm-divideproduct.html" title="Theorem 1.2.3">Theorem 1.2.3</a>: If <span class="process-math">\(a,b,c\in\Z\)</span> with <span class="process-math">\(a|bc\text{,}\)</span> must <span class="process-math">\(a|b\)</span> or <span class="process-math">\(a|c\text{?}\)</span> Supply a proof or give a counterexample.</p></article><article class="theorem theorem-like" id="theorem_23lemmageneralization"><h4 class="heading">
+<p id="p-72">Let <span class="process-math">\(a,b,c\in\Z\text{.}\)</span> If <span class="process-math">\(a\mid b\)</span> and <span class="process-math">\(a\mid c\text{,}\)</span> then <span class="process-math">\(a\mid (b+c)\text{.}\)</span></p></article><article class="theorem theorem-like" id="thm-divideproduct"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
 </h4>
+<p id="p-74">Let <span class="process-math">\(a,b,c\in\Z\text{.}\)</span> If <span class="process-math">\(a\mid b\text{,}\)</span> then <span class="process-math">\(a\mid bc\text{.}\)</span></p></article><article class="investigation project-like" id="invest-divideproduct"><h4 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span>
+</h4>
+<p id="p-76">Consider the following partial converse to <a href="" class="xref" data-knowl="./knowl/thm-divideproduct.html" title="Theorem 1.2.4">Theorem 1.2.4</a>: If <span class="process-math">\(a,b,c\in\Z\)</span> with <span class="process-math">\(a|bc\text{,}\)</span> must <span class="process-math">\(a|b\)</span> or <span class="process-math">\(a|c\text{?}\)</span> Supply a proof or give a counterexample.</p></article><article class="theorem theorem-like" id="theorem_23lemmageneralization"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span>
+</h4>
 <p id="p-78">Let <span class="process-math">\(a,b,c,d\in \Z\text{.}\)</span> If <span class="process-math">\(a = b+c\)</span> and <span class="process-math">\(d\)</span> divides any two of <span class="process-math">\(a,b,c\text{,}\)</span> then <span class="process-math">\(d\)</span> divides the third.</p></article><article class="investigation project-like" id="investigation-3"><h4 class="heading">
-<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
 </h4>
 <p id="p-82">Formulate a conjecture akin to the previous theorems about divisibility in <span class="process-math">\(\Z\text{,}\)</span> and then prove it.</p></article><p id="p-84">As we saw above, not all pairs of integers <span class="process-math">\(a,b\)</span> satisfy <span class="process-math">\(a\mid b\)</span> or <span class="process-math">\(b\mid a\text{.}\)</span> However, <a class="external" href="http://www.corestandards.org/Math/Content/4/NBT/B/6/" target="_blank">our experience in elementary mathematics does apply: there is often something left over (a remainder)</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-9" id="fn-9"><sup> 1 </sup></a>. The following theorem formalizes this idea for <span class="process-math">\(a,b\in \N\text{.}\)</span></p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-9"><div class="fn"><code class="code-inline tex2jax_ignore">http://www.corestandards.org/Math/Content/4/NBT/B/6/</code></div></div>
 <article class="theorem theorem-like" id="thm_divalg"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">The Division Algorithm for <span class="process-math">\(\N\)</span>.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">The Division Algorithm for <span class="process-math">\(\N\)</span>.</span>
 </h4>
 <p id="p-85">Let <span class="process-math">\(a,b\in \N\text{.}\)</span> Then there exist unique integers <span class="process-math">\(q,r\)</span> such that <span class="process-math">\(a = bq + r\text{,}\)</span> where <span class="process-math">\(0 \le r \lt b\text{.}\)</span></p>
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like">
@@ -233,25 +235,24 @@
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like"><p id="p-88">Let <span class="process-math">\(S = \setof{a-bs}{s\in \N_0, a-bs\ge 0}\text{.}\)</span></p></div></div></article><aside class="aside aside-like" id="aside-1"><h4 class="heading"><span class="title">Warning!</span></h4>
 <p id="p-95">This theorem has two parts: existence and uniqueness. Do not try to prove them both at the same time.</p></aside><p id="p-96">Unsurprisingly, the Division Algorithm also holds in <span class="process-math">\(\Z\text{,}\)</span> though the existence of negative integers requires a careful restatement. </p>
 <article class="corollary theorem-like" id="corollary-1"><h4 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">The Division Algorithm for <span class="process-math">\(\Z\)</span>.</span>
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">1.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">The Division Algorithm for <span class="process-math">\(\Z\)</span>.</span>
 </h4>
 <p id="p-97">Let <span class="process-math">\(a,b\in \Z\)</span> with <span class="process-math">\(b\ne 0\text{.}\)</span> Then there exist unique integers <span class="process-math">\(q,r\)</span> such that <span class="process-math">\(a = bq + r\text{,}\)</span> where <span class="process-math">\(0 \le r \lt |b|\text{.}\)</span></p>
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-98">Consider cases, and apply <a href="" class="xref" data-knowl="./knowl/thm_divalg.html" title="Theorem 1.2.5: The Division Algorithm for \N">Theorem 1.2.5</a> wherever possible.</p></div></div></article></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-3" id="hint-3"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-98">Consider cases, and apply <a href="" class="xref" data-knowl="./knowl/thm_divalg.html" title="Theorem 1.2.8: The Division Algorithm for \N">Theorem 1.2.8</a> wherever possible.</p></div></div></article></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.2</span> <span class="title">Greatest Common Divisors</span>
 </h3>
 <p id="p-100">We next turn to another familiar property of the integers: the existence of greatest common divisors.</p>
 <article class="definition definition-like" id="gcd-definition"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2.10</span><span class="period">.</span>
 </h4>
 <p id="p-101">Let <span class="process-math">\(a,b\in \Z\)</span> such that <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are not both 0. A <dfn class="terminology">greatest common divisor</dfn> of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> denoted <span class="process-math">\(\gcd(a,b)\text{,}\)</span> is a natural number <span class="process-math">\(d\)</span> satisfying</p>
 <ol class="decimal">
 <li id="li-29"><p id="p-102"><span class="process-math">\(d\mid a\)</span> and <span class="process-math">\(d\mid b\)</span></p></li>
 <li id="li-30"><p id="p-103">if <span class="process-math">\(e\in \N\)</span> and <span class="process-math">\(e\mid a\)</span> and <span class="process-math">\(e\mid b\text{,}\)</span> then <span class="process-math">\(e\mid d\text{.}\)</span></p></li>
 </ol>
-<p id="p-104">If <span class="process-math">\(\gcd(a,b) = 1\text{,}\)</span> we say that <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are <dfn class="terminology">relatively prime</dfn> or <dfn class="terminology">coprime</dfn>. <aside class="aside aside-like" id="aside-2"></aside></p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-10"><div class="fn"><code class="code-inline tex2jax_ignore">http://www.corestandards.org/Math/Content/6/NS/B/4/</code></div></div></article><p id="p-105">This definition may be different than the one you are used to, which likely stated that <span class="process-math">\(d \ge e\)</span> rather than condition 2 in <a href="" class="xref" data-knowl="./knowl/gcd-definition.html" title="Definition 1.2.7">Definition 1.2.7</a>. It can be proved using the order relations of <span class="process-math">\(\Z\)</span> that the definition given here is equivalent to that one. However, we will prefer this definition, as it generalizes naturally to other number systems which do not have an order relation like <span class="process-math">\(\Z\text{.}\)</span></p>
+<p id="p-104">If <span class="process-math">\(\gcd(a,b) = 1\text{,}\)</span> we say that <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are <dfn class="terminology">relatively prime</dfn> or <dfn class="terminology">coprime</dfn>. <aside class="aside aside-like" id="aside-2"></aside></p></article><p id="p-105">This definition may be different than the one you are used to, which likely stated that <span class="process-math">\(d \ge e\)</span> rather than condition 2 in <a href="" class="xref" data-knowl="./knowl/gcd-definition.html" title="Definition 1.2.10">Definition 1.2.10</a>. It can be proved using the order relations of <span class="process-math">\(\Z\)</span> that the definition given here is equivalent to that one. However, we will prefer this definition, as it generalizes naturally to other number systems which do not have an order relation like <span class="process-math">\(\Z\text{.}\)</span></p>
 <article class="activity project-like" id="act-gcdcomputations"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.2.11</span><span class="period">.</span>
 </h4>
 <p id="p-106">Compute <span class="process-math">\(\gcd(a,b)\)</span> if:</p>
 <ol class="decimal">
@@ -259,35 +260,37 @@
 <li id="li-32"><p id="p-108"><span class="process-math">\(a = 0\text{,}\)</span> <span class="process-math">\(b = 169\)</span></p></li>
 <li id="li-33"><p id="p-109"><span class="process-math">\(a= 85\text{,}\)</span> <span class="process-math">\(b = 48\)</span></p></li>
 </ol>
-<p class="continuation">Now that you have had a bit of practice computing gcds, describe your method for finding them in a sentence or two.</p></article><p id="p-111">How did you answer the last question in <a href="" class="xref" data-knowl="./knowl/act-gcdcomputations.html" title="Activity 1.2.4">Activity 1.2.4</a>? If you are like the authors' classes, the answers probably varied, though you have referred at some point to a "prime" (<a href="" class="xref" data-knowl="./knowl/def-primeinteger.html" title="Definition 1.3.1">whatever those are</a>), or possibly some other ad hoc method for finding the gcd. Most such methods rely in some form on our ability to factor integers. However, the problem of factoring arbitrary integers is actually surprisingly computationally intensive. Thankfully, there is another way to compute <span class="process-math">\(\gcd(a,b)\text{,}\)</span> to which we now turn.</p>
+<p class="continuation">Now that you have had a bit of practice computing gcds, describe your method for finding them in a sentence or two.</p></article><p id="p-111">How did you answer the last question in <a href="" class="xref" data-knowl="./knowl/act-gcdcomputations.html" title="Activity 1.2.11">Activity 1.2.11</a>? If you are like the authors' classes, the answers probably varied, though you have referred at some point to a "prime" (<a href="" class="xref" data-knowl="./knowl/def-primeinteger.html" title="Definition 1.3.1">whatever those are</a>), or possibly some other ad hoc method for finding the gcd. Most such methods rely in some form on our ability to factor integers. However, the problem of factoring arbitrary integers is actually surprisingly computationally intensive. Thankfully, there is another way to compute <span class="process-math">\(\gcd(a,b)\text{,}\)</span> to which we now turn.</p>
 <article class="theorem theorem-like" id="theorem-8"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.8</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.12</span><span class="period">.</span>
 </h4>
 <p id="p-112">Let <span class="process-math">\(a,b,c\in\Z\)</span> such that <span class="process-math">\(a = b+c\)</span> with <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> not both zero. Then <span class="process-math">\(\gcd(a,b) = \gcd(b,c)\text{.}\)</span></p></article><article class="investigation project-like" id="invest_gcdremainder"><h4 class="heading">
-<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span>
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.2.13</span><span class="period">.</span>
 </h4>
 <p id="p-116">Suppose <span class="process-math">\(a,b,c\in\Z\)</span> such that there exists <span class="process-math">\(q\in\Z\)</span> with <span class="process-math">\(a = bq + c\)</span> and <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> not both zero. Prove or disprove: <span class="process-math">\(\gcd(a,b)=\gcd(b,c)\text{.}\)</span></p></article><article class="investigation project-like" id="invest-euclid-alg-integers"><h4 class="heading">
-<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">(Euclidean Algorithm).</span>
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.2.14</span><span class="period">.</span><span class="space"> </span><span class="title">(Euclidean Algorithm).</span>
 </h4>
-<p id="p-117">Let <span class="process-math">\(a,b\in \N\text{.}\)</span> Use <a href="" class="xref" data-knowl="./knowl/thm_divalg.html" title="Theorem 1.2.5: The Division Algorithm for \N">Theorem 1.2.5</a> and <a href="" class="xref" data-knowl="./knowl/invest_gcdremainder.html" title="Investigation 1.2.5">Investigation 1.2.5</a> to determine an algorithm for computing <span class="process-math">\(\gcd(a,b)\text{.}\)</span> How could your method be modified to compute <span class="process-math">\(\gcd(a,b)\)</span> for <span class="process-math">\(a,b\in\Z\text{?}\)</span></p></article><article class="activity project-like" id="activity-2"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
+<p id="p-117">Let <span class="process-math">\(a,b\in \N\text{.}\)</span> Use <a href="" class="xref" data-knowl="./knowl/thm_divalg.html" title="Theorem 1.2.8: The Division Algorithm for \N">Theorem 1.2.8</a> and <a href="" class="xref" data-knowl="./knowl/invest_gcdremainder.html" title="Investigation 1.2.13">Investigation 1.2.13</a> to determine an algorithm for computing <span class="process-math">\(\gcd(a,b)\text{.}\)</span> How could your method be modified to compute <span class="process-math">\(\gcd(a,b)\)</span> for <span class="process-math">\(a,b\in\Z\text{?}\)</span></p></article><article class="activity project-like" id="activity-2"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.2.15</span><span class="period">.</span>
 </h4>
 <p id="p-120">Use the Euclidean algorithm to compute <span class="process-math">\(\gcd(18489,17304)\text{.}\)</span></p></article><p id="p-123">The following identity provides a useful characterization of the greatest common divisor of two integers, not both zero. We will return to this idea several times, even after we have left the familiar realm of the integers.</p>
 <article class="theorem theorem-like" id="theorem_bezoutint"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Bézout's Identity.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.16</span><span class="period">.</span><span class="space"> </span><span class="title">Bézout's Identity.</span>
 </h4>
 <p id="p-124">For any integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> not both 0, there are integers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> such that</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 ax + by = \gcd(a,b)\text{.}
 \end{equation*}
 </div>
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-4" id="hint-4"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-125">Apply <a href="" class="xref" data-knowl="./knowl/axiom_wellordering.html" title="Axiom 1.1.2: Well-Ordering Principle">Axiom 1.1.2</a> to a well-chosen set.</p></div></div>
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-5" id="hint-5"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><p id="p-126">Apply <a href="" class="xref" data-knowl="./knowl/axiom_wellordering.html" title="Axiom 1.1.2: Well-Ordering Principle">Axiom 1.1.2</a> to <span class="process-math">\(S = \setof{as+bt}{s,t\in\Z, \ as+bt \gt 0}\text{.}\)</span></p></div></div></article><p id="p-131">We conclude with an answer to the questions raised by <a href="" class="xref" data-knowl="./knowl/invest-divideproduct.html" title="Investigation 1.2.2">Investigation 1.2.2</a>.</p>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-5" id="hint-5"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><p id="p-126">Apply <a href="" class="xref" data-knowl="./knowl/axiom_wellordering.html" title="Axiom 1.1.2: Well-Ordering Principle">Axiom 1.1.2</a> to <span class="process-math">\(S = \setof{as+bt}{s,t\in\Z, \ as+bt \gt 0}\text{.}\)</span></p></div></div></article><p id="p-131">We conclude with an answer to the questions raised by <a href="" class="xref" data-knowl="./knowl/invest-divideproduct.html" title="Investigation 1.2.5">Investigation 1.2.5</a>.</p>
 <article class="theorem theorem-like" id="theorem_relprimecancel"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.10</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.17</span><span class="period">.</span>
 </h4>
-<p id="p-132">Let <span class="process-math">\(a, b\text{,}\)</span> and <span class="process-math">\(c\)</span> be integers. If <span class="process-math">\(a|bc\)</span> and <span class="process-math">\(\gcd(a,b) = 1\text{,}\)</span> then <span class="process-math">\(a|c\text{.}\)</span></p></article></section><section class="conclusion" id="conclusion-1"><p id="p-136">In this section, we have collected some initial results about divisibility in the integers. We'll next explore the multiplicative building blocks of the integers, the primes, in preparation for a deeper exploration of factorization.</p></section></section></div></main>
+<p id="p-132">Let <span class="process-math">\(a, b\text{,}\)</span> and <span class="process-math">\(c\)</span> be integers. If <span class="process-math">\(a|bc\)</span> and <span class="process-math">\(\gcd(a,b) = 1\text{,}\)</span> then <span class="process-math">\(a|c\text{.}\)</span></p></article></section><section class="conclusion" id="conclusion-1"><p id="p-136">In this section, we have collected some initial results about divisibility in the integers. We'll next explore the multiplicative building blocks of the integers, the primes, in preparation for a deeper exploration of factorization.</p></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-9"><div class="fn"><code class="code-inline tex2jax_ignore">http://www.corestandards.org/Math/Content/4/NBT/B/6/</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-10"><div class="fn"><code class="code-inline tex2jax_ignore">http://www.corestandards.org/Math/Content/6/NS/B/4/</code></div></div>
+</div></main>
 </div>
 </body>
 </html>

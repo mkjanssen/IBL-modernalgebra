@@ -1,39 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-05T11:00:47-06:00    *-->
-<!--*                                    *-->
-<!--*      https://pretextbook.org       *-->
-<!--*                                    *-->
-<!--**************************************-->
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-05-16T10:29:36-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>Let \(R\) be a PID and suppose that a non-zero non-unit element \(a\in R\) can be factored in two different ways as a product of irreducibles.</p>
-<div class="displaymath">
-\begin{equation*}
-a=p_1p_2\cdots p_r=q_1q_2\cdots q_s
-\end{equation*}
-</div>
-<p>Assume that \(s\geq r\text{.}\) Since \(p_1\) is irreducible (and therefore prime), there exists \(j\) such that \(p_1 \mid q_j\text{.}\) Since \(q_j\) is irreducible as well, there is a unit \(u_1\) such that \(p_1=u_1 q_j\text{.}\) Up to reordering we have</p>
-<div class="displaymath">
-\begin{equation*}
-p_1p_2\cdots p_r=u_1p_1q_2\cdots q_s
-\end{equation*}
-</div>
-<p>Therefore</p>
-<div class="displaymath">
-\begin{equation*}
-p_2\cdots p_r=u_1q_2\cdots q_s
-\end{equation*}
-</div>
-<p>We can continue in a similar fashion until we end up with</p>
-<div class="displaymath">
-\begin{equation*}
-1=u_1\cdots u_rq_{r+1}\cdots q_s
-\end{equation*}
-</div>
-<p>Since the \(q_j\)'s are non-units, this means that \(r=s\) and that the \(p_i\)'s are associates of the \(q_j\)'s. Therefore \(R\) is a UFD.</p></article></body>
+<body class="ignore-math"><article class="hiddenproof"><p>We prove the double contrapositive: <span class="process-math">\(f(x)\in F[x]\)</span> of degree 2 or 3 is reducible if and only if it has a zero in <span class="process-math">\(F\text{.}\)</span></p>
+<p>If <span class="process-math">\(f(x)\)</span> is reducible there exist nonconstant <span class="process-math">\(s(x),t(x)\in F[x]\)</span> such that <span class="process-math">\(f(x) = s(x) t(x)\text{.}\)</span> Since <span class="process-math">\(\deg f = 2\)</span> or 3, one of <span class="process-math">\(s(x)\)</span> or <span class="process-math">\(t(x)\)</span> has degree 1, and is thus of the form <span class="process-math">\(x-\alpha\text{,}\)</span> where <span class="process-math">\(\alpha \in F\text{.}\)</span> Thus, <span class="process-math">\(f\)</span> has a zero.</p>
+<p>Similarly, if <span class="process-math">\(f\)</span> has a zero <span class="process-math">\(\alpha\in F\text{,}\)</span> <span class="process-math">\(f(x) = (x-\alpha)g(x)\text{,}\)</span> where <span class="process-math">\(\deg g \ge 1\text{.}\)</span> Thus, <span class="process-math">\(f\)</span> is reducible over <span class="process-math">\(F\text{.}\)</span></p></article></body>
 </html>

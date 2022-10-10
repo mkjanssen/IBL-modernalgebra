@@ -1,76 +1,58 @@
 <!DOCTYPE html>
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-05T11:00:44-06:00    *-->
-<!--*                                    *-->
-<!--*      https://pretextbook.org       *-->
-<!--*                                    *-->
-<!--**************************************-->
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-05-16T10:29:34-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
 <html lang="en-US">
-<head>
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Quotient Rings</title>
+<title>Quotient Rings: New Rings from Old</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
-    },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>(function() {
-  var cx = '017464805646507420634:llcu9bfj13p';
-  var gcse = document.createElement('script');
-  gcse.type = 'text/javascript';
-  gcse.async = true;
-  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(gcse, s);
-})();
-</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Rings With Inquiry">
+<meta property="book:author" content="Michael Janssen">
+<meta property="book:author" content="Melissa Lindsey">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script async="" src="https://cse.google.com/cse.js?cx=017464805646507420634:llcu9bfj13p"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.13;
-</script>
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\labelitemi}{$\diamond$}
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand{\labelitemi}{$\diamond$}
 \def\arraystretch{1.5}
 \newcommand{\contentsfinish}{}
 \newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
@@ -121,10 +103,19 @@ var js_version = 0.13;
 \def\R{{\mathbb R}}
 \newcommand{\h}[1]{{\textbf{#1}}}
 \def\presnotes{}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{conj}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{investigation}[theorem]{Investigation}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\)</div>
+\)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="book-1.html"><span class="title">Rings With Inquiry</span></a></h1>
@@ -135,158 +126,276 @@ var js_version = 0.13;
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="SubSec-Ideals-In-General.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Sec-Ideals.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="SubSec-Homomorphisms.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="SubSec-Homomorphisms.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Sec-Ideals.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="backmatter-1.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="SubSec-Ideals-In-General.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Sec-Ideals.html" title="Up">Up</a><a class="next-button button toolbar-item" href="SubSec-Homomorphisms.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="SubSec-Homomorphisms.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Sec-Ideals.html" title="Up">Up</a><a class="next-button button toolbar-item" href="backmatter-1.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
-<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
-<li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction">Introduction</a></li>
-<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents">A Note to Students</a></li>
-<li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors">A Note to Instructors</a></li>
-<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction" class="internal">Introduction</a></li>
+<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents" class="internal">A Note to Students</a></li>
+<li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors" class="internal">A Note to Instructors</a></li>
+<li><a href="Sec-Versions.html" data-scroll="Sec-Versions" class="internal">Versions of this text</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Integers.html" data-scroll="Sec-Integers"><span class="codenumber">1</span> <span class="title">The Integers</span></a><ul>
-<li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering">Induction and Well-Ordering</a></li>
-<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers">Divisibility in the integers</a></li>
-<li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization">Primes and Factorization</a></li>
-<li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m">The Integers modulo \(m\)</a></li>
+<a href="Sec-Integers.html" data-scroll="Sec-Integers" class="internal"><span class="codenumber">1</span> <span class="title">The Integers</span></a><ul>
+<li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering" class="internal">Induction and Well-Ordering</a></li>
+<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers" class="internal">Divisibility and GCDs in the Integers</a></li>
+<li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization" class="internal">Primes and Factorization</a></li>
+<li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m" class="internal">The Integers modulo <span class="process-math">\(m\)</span></a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Fields-and-Rings.html" data-scroll="Sec-Fields-and-Rings"><span class="codenumber">2</span> <span class="title">Fields and Rings</span></a><ul>
-<li><a href="SubSec-Fields.html" data-scroll="SubSec-Fields">Fields</a></li>
-<li><a href="SubSec-Rings.html" data-scroll="SubSec-Rings">Rings</a></li>
-<li><a href="SubSec-Divisibility-in-Domains.html" data-scroll="SubSec-Divisibility-in-Domains">Divisibility in Integral Domains</a></li>
-<li><a href="SubSec-Principal-Ideals.html" data-scroll="SubSec-Principal-Ideals">Principal Ideals</a></li>
+<a href="Sec-Fields-and-Rings.html" data-scroll="Sec-Fields-and-Rings" class="internal"><span class="codenumber">2</span> <span class="title">Fields and Rings</span></a><ul>
+<li><a href="SubSec-Fields.html" data-scroll="SubSec-Fields" class="internal">Fields</a></li>
+<li><a href="SubSec-Rings.html" data-scroll="SubSec-Rings" class="internal">Rings</a></li>
+<li><a href="SubSec-Divisibility-in-Domains.html" data-scroll="SubSec-Divisibility-in-Domains" class="internal">Divisibility in Integral Domains</a></li>
+<li><a href="SubSec-Principal-Ideals.html" data-scroll="SubSec-Principal-Ideals" class="internal">Principal Ideals and Euclidean Domains</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Factorization.html" data-scroll="Sec-Factorization"><span class="codenumber">3</span> <span class="title">Factorization</span></a><ul>
-<li><a href="SubSec-Factoring-Polynomials.html" data-scroll="SubSec-Factoring-Polynomials">Factoring Polynomials</a></li>
-<li><a href="SubSec-Factorization-in-Euclidean-Domains.html" data-scroll="SubSec-Factorization-in-Euclidean-Domains">Factorization in Euclidean Domains</a></li>
-<li><a href="SubSec-Nonunique-Factorization.html" data-scroll="SubSec-Nonunique-Factorization">Nonunique Factorization</a></li>
+<a href="Sec-Factorization.html" data-scroll="Sec-Factorization" class="internal"><span class="codenumber">3</span> <span class="title">Factorization</span></a><ul>
+<li><a href="SubSec-Factoring-Polynomials.html" data-scroll="SubSec-Factoring-Polynomials" class="internal">Factoring Polynomials</a></li>
+<li><a href="SubSec-Factorization-in-Euclidean-Domains.html" data-scroll="SubSec-Factorization-in-Euclidean-Domains" class="internal">Factorization in Euclidean Domains</a></li>
+<li><a href="SubSec-Nonunique-Factorization.html" data-scroll="SubSec-Nonunique-Factorization" class="internal">Nonunique Factorization</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Ideals.html" data-scroll="Sec-Ideals"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a><ul>
-<li><a href="SubSec-Ideals-In-General.html" data-scroll="SubSec-Ideals-In-General">Ideals in general</a></li>
-<li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings" class="active">Quotient Rings</a></li>
-<li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms">Homomorphisms</a></li>
+<a href="Sec-Ideals.html" data-scroll="Sec-Ideals" class="internal"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a><ul>
+<li><a href="SubSec-Ideals-In-General.html" data-scroll="SubSec-Ideals-In-General" class="internal">Ideals in general</a></li>
+<li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms" class="internal">Homomorphisms</a></li>
+<li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings" class="active">Quotient Rings: New Rings from Old</a></li>
 </ul>
 </li>
-<li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="SubSec-Quotient-Rings"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">4.2</span> <span class="title">Quotient Rings</span>
+<span class="type">Section</span> <span class="codenumber">4.3</span> <span class="title">Quotient Rings: New Rings from Old</span>
 </h2>
-<a href="SubSec-Quotient-Rings.html" class="permalink">¶</a><article class="definition definition-like" id="definition-38"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span>
-</h6>
-<p id="p-596">Let \(R\) be a ring and \(I\) an ideal of \(R\text{.}\) Then elements \(r,s\in R\) are said to be <dfn class="terminology">congruent modulo \(I\)</dfn> if \(b-a\in I\text{.}\) If this is the case, we write \(a + I = b + I\text{.}\)</p></article><article class="exploration project-like" id="exploration-18"><h6 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span>
-</h6>
-<p id="p-597">Given a ring \(R\text{,}\) ideal \(I\text{,}\) and \(r\in R\text{,}\) when is it the case that \(r + I = 0 + I = I\text{?}\)</p>
-<div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-13" id="answer-13"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-598">When \(r\in I\text{.}\)</p></div></div>
-</div></article><p id="p-599">Observe that if \(b-a \in I\text{,}\) then there is some \(x\in I\) such that \(b-a = x\text{,}\) and so \(b = a+x\text{.}\)</p>
-<article class="theorem theorem-like" id="theorem-68"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span>
-</h6>
-<p id="p-600">Let \(R\) be a ring and \(I\) an ideal of \(R\text{.}\) Then congruence modulo \(I\) is an equivalence relation on \(R\text{.}\)</p></article><p id="p-601">The set of equivalence classes under this relation is denoted \(R/I\text{.}\)</p>
-<article class="hiddenproof" id="proof-67"><a data-knowl="" class="id-ref original" data-refid="hk-proof-67"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-67"><article class="hiddenproof"><p id="p-602">Since \(0\in I\text{,}\) \(a-a \in I\) for all \(a\text{,}\) so \(a + I = a+I\) and the relation is reflexive.</p>
-<p id="p-603">Moreover, if \(b-a \in I\text{,}\) then \(-1(b-a) = a-b \in I\text{,}\) so the relation is symmetric.</p>
-<p id="p-604">If \(b-a \in I\) and \(c-b\in I\text{,}\) then \((b-a) + (c-b) = c-a \in I\text{,}\) so the relation is transitive.</p></article></div>
-<article class="theorem theorem-like" id="theorem-69"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span>
-</h6>
-<p id="p-605">Let \(R\) be a ring and \(I\) an ideal of \(R\text{.}\) If \(a,b,c,d\in R\) such that \(a+I = b+I\) and \(c+I = d+I\text{,}\) then \((a+c) + I = (b+d) + I\text{.}\)</p></article><article class="hiddenproof" id="proof-68"><a data-knowl="" class="id-ref original" data-refid="hk-proof-68"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-68"><article class="hiddenproof"><p id="p-606">Suppose \(a+I = b+I\) and \(c+I = d+I\text{.}\) Then \(b-a =x \in I\) and \(d-c = y \in I\text{.}\) Adding, we have \((b-a) + (d-c) = (b+d) - (a+c) = x+y \in I\text{.}\) Thus, \((b+d) + I = (a+c) + I\text{.}\)</p></article></div>
-<article class="theorem theorem-like" id="theorem-70"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span>
-</h6>
-<p id="p-607">Let \(R\) be a ring and \(I\) an ideal of \(R\text{.}\) If \(a,b,c,d\in R\) such that \(a+I = b+I\) and \(c+I = d+I\text{,}\) then \(ac + I = bd + I\text{.}\)</p></article><article class="hiddenproof" id="proof-69"><a data-knowl="" class="id-ref original" data-refid="hk-proof-69"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-69"><article class="hiddenproof"><p id="p-608">As before, we observe that \(b-a = x\in I\) and \(d-c = y\in I\text{.}\) Write \(b = x+a\) and \(d = c+y\text{.}\) Then \(bd = (x+a)(c+y) = xc + xy + ac + ay = ac + \underbrace{(xc+xy+ay)}_{\in I}\text{,}\) so \(bd - ac \in I\text{,}\) and thus \(bd + I = ac + I\text{.}\)</p></article></div>
-<p id="p-609">The previous two theorems together show that addition and multiplication on the set \(R/I\) is well-defined.</p>
-<article class="theorem theorem-like" id="theorem-71"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.5</span><span class="period">.</span>
-</h6>
-<p id="p-610">Let \(R\) be a commutative ring with identity \(1_R\) and \(I\) an ideal of \(R\text{.}\) The set of equivalence classes modulo \(I\text{,}\) denoted \(R/I\text{,}\) is a commutative ring with identity \(1_R + I\text{.}\)</p></article><article class="exploration project-like" id="exploration-19"><h6 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span>
-</h6>
-<p id="p-611">Let \(R = \Z\) and \(I = \ideal{7}\text{.}\) Find at least three distinct integers \(x\) such that \(9 + I = x + I\text{.}\)</p>
-<div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-19" id="solution-19"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-19"><div class="solution solution-like"><p id="p-612">Such \(x\) include \(-5, 2, 16\text{,}\) and anything in \(\setof{2+7m}{m\in\Z}\text{.}\)</p></div></div>
-</div></article><article class="definition definition-like" id="definition-39"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.6</span><span class="period">.</span>
-</h6>
-<p id="p-613">Let \(R\) be commutative with identity and \(P\subsetneq R\) a nonzero ideal. We say \(P\) is <dfn class="terminology">prime</dfn> if whenever \(a,b\in R\) such that \(ab\in P\text{,}\) we have \(a\in P\) or \(b\in P\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-72"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.7</span><span class="period">.</span>
-</h6>
-<p id="p-614">Let \(R\) be a domain and \(p\in R\) be prime. Then \(\ideal{p}\) is a prime ideal.</p></article><article class="activity project-like" id="activity-15"><h6 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span>
-</h6>
-<p id="p-615">Which of the following ideals are prime?</p>
+<article class="assemblage assemblage-like" id="assemblage-20"><h3 class="heading"><span class="title">Guiding Questions.</span></h3>
+<p id="p-726">In this section, we'll seek to answer the questions: <ul class="disc">
+<li id="li-221"><p id="p-derived-li-221">How can we use ideals to build new rings out of old?</p></li>
+<li id="li-222"><p id="p-derived-li-222">What sorts of ideals allow us to build domains? Fields?</p></li>
+<li id="li-223"><p id="p-derived-li-223">What is the First Isomorphism Theorem?</p></li>
+</ul></p></article><section class="introduction" id="introduction-9"><p id="p-727">If the only rings that existed were polynomial rings, familiar systems of numbers like <span class="process-math">\(\Z, \Q, \R, \C\text{,}\)</span> and matrix rings, there would still be enough to justify the defining the concept of a ring and exploring its properties. However, these are not the only rings that exist. In this section, we explore a way of building new rings from old by means of ideals. To better understand these new rings, we will also define two new classes of ideals: prime ideals, and maximal ideals. We end by briefly connecting these rings to a familiar problem from high school algebra.</p></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.3.1</span> <span class="title">Congruence modulo <span class="process-math">\(I\)</span></span>
+</h3>
+<p id="p-728">The major concept of this section is the notion of congruence modulo <span class="process-math">\(I\text{.}\)</span> One can reasonably think of this idea as a generalization of congruence modulo <span class="process-math">\(m\)</span> in <span class="process-math">\(\Z\text{.}\)</span></p>
+<article class="definition definition-like" id="definition-38"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.3.1</span><span class="period">.</span>
+</h4>
+<p id="p-729">Let <span class="process-math">\(R\)</span> be a ring and <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{.}\)</span> Then elements <span class="process-math">\(a,b\in R\)</span> are said to be <dfn class="terminology">congruent modulo <span class="process-math">\(I\)</span></dfn> if <span class="process-math">\(b-a\in I\text{.}\)</span> If this is the case, we write <span class="process-math">\(a + I = b + I\text{.}\)</span></p></article><article class="activity project-like" id="activity-20"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.2</span><span class="period">.</span>
+</h4>
+<p id="p-730">Determine (with brief justification) whether <span class="process-math">\(a + I = b + I\)</span> in the following rings <span class="process-math">\(R\text{.}\)</span></p>
 <ol class="decimal">
-<li id="li-129"><p id="p-616">\(\ideal{9}\) in \(\Z\)</p></li>
-<li id="li-130"><p id="p-617">\(\ideal{11}\) in \(\Z\)</p></li>
-<li id="li-131"><p id="p-618">\(\ideal{x^2+1}\) in \(\R[x]\)</p></li>
-<li id="li-132"><p id="p-619">\(\ideal{x^2-1}\) in \(\R[x]\)</p></li>
-<li id="li-133"><p id="p-620">\(\ideal{x^2-5x+6, x^4+2x^3-10x^2+5x-2}\) in \(\R[x]\)</p></li>
+<li id="li-224"><p id="p-derived-li-224"><span class="process-math">\(a = 9\text{,}\)</span> <span class="process-math">\(b = 3\text{,}\)</span> <span class="process-math">\(I = \ideal{6}\text{,}\)</span> <span class="process-math">\(R = \Z\)</span></p></li>
+<li id="li-225"><p id="p-derived-li-225"><span class="process-math">\(a = 10\text{,}\)</span> <span class="process-math">\(b = 4\text{,}\)</span> <span class="process-math">\(I = \ideal{7}\text{,}\)</span> <span class="process-math">\(R = \Z\)</span></p></li>
+<li id="li-226"><p id="p-derived-li-226"><span class="process-math">\(a = 9\text{,}\)</span> <span class="process-math">\(b = 3\text{,}\)</span> <span class="process-math">\(I = \ideal{6}\text{,}\)</span> <span class="process-math">\(R = \Z[x]\)</span></p></li>
+<li id="li-227"><p id="p-derived-li-227"><span class="process-math">\(a = x^2+x-2\text{,}\)</span> <span class="process-math">\(b = x-1\text{,}\)</span> <span class="process-math">\(I = \ideal{x+1}\text{,}\)</span> <span class="process-math">\(R = \Q[x]\)</span></p></li>
+<li id="li-228"><p id="p-derived-li-228">(<em class="emphasis">Challenge.</em>) <span class="process-math">\(a = x^3\text{,}\)</span> <span class="process-math">\(b = x^2+2x\text{,}\)</span> <span class="process-math">\(I = \ideal{y-x^2, y-x-2}\text{,}\)</span> <span class="process-math">\(R = \Q[x,y]\)</span></p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-20" id="solution-20"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-20"><div class="solution solution-like"><ol id="p-621" class="decimal">
-<li id="li-134"><p id="p-622">Not prime. \(3\cdot 3= 9\in \ideal{9}\text{,}\) but \(3\notin\ideal{9}\text{.}\)</p></li>
-<li id="li-135"><p id="p-623">Prime. If \(x\in \ideal{11}\text{,}\) then \(11|x\) and 11 is prime.</p></li>
-<li id="li-136"><p id="p-624">Prime. Easy explanation is that \(R[x]/\ideal{x^2+1}\) is isomorphic to \(\C\text{.}\) \(\ddot\smile\) For now, though, we know that \(x^2+1\) is irreducible, and \(R[x]\) is a PID, so irreducibles are prime.</p></li>
-<li id="li-137"><p id="p-625">Not prime. \(x^2-1 = (x-1)(x+1)\text{,}\) but \(x\pm 1\notin \ideal{x^2-1}\) for degree reasons.</p></li>
-<li id="li-138"><p id="p-626">One may use the EA to show that \(\gcd(x^2-5x+6,x^4+2x^3-10x^2+5x-2) = x-2\text{,}\) so \(\ideal{x^2-5x+6, x^4+2x^3-10x^2+5x-2} = \ideal{x-2}\text{.}\) This is prime.</p></li>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-37" id="solution-37"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-37"><div class="solution solution-like">TBD last one: <span class="process-math">\(x^3 - x^2 - 2x = x(x-2)(x+1) = -x(y-x^2) + x(y-x-2)\text{.}\)</span>
+</div></div>
+</div></article><article class="exploration project-like" id="exploration-25"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.3.3</span><span class="period">.</span>
+</h4>
+<p id="p-731">Given a ring <span class="process-math">\(R\text{,}\)</span> ideal <span class="process-math">\(I\text{,}\)</span> and <span class="process-math">\(a\in R\text{,}\)</span> when is it the case that <span class="process-math">\(a + I = 0 + I = I\text{?}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-15" id="answer-15"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like"><p id="p-732">When <span class="process-math">\(a\in I\text{.}\)</span></p></div></div>
+</div></article><p id="p-733">Observe that if <span class="process-math">\(b-a \in I\text{,}\)</span> then there is some <span class="process-math">\(x\in I\)</span> such that <span class="process-math">\(b-a = x\text{,}\)</span> and so <span class="process-math">\(b = a+x\text{.}\)</span></p>
+<p id="p-734">As was the case in <span class="process-math">\(\Z_m\text{,}\)</span> congruence modulo <span class="process-math">\(I\)</span> is an equivalence relation.</p>
+<article class="theorem theorem-like" id="theorem-71"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.4</span><span class="period">.</span>
+</h4>
+<p id="p-735">Let <span class="process-math">\(R\)</span> be a ring and <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{.}\)</span> Then congruence modulo <span class="process-math">\(I\)</span> is an equivalence relation on <span class="process-math">\(R\text{.}\)</span></p></article><article class="hiddenproof" id="proof-79"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-79"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-79"><article class="hiddenproof"><p id="p-736">Since <span class="process-math">\(0\in I\text{,}\)</span> <span class="process-math">\(a-a \in I\)</span> for all <span class="process-math">\(a\text{,}\)</span> so <span class="process-math">\(a + I = a+I\)</span> and the relation is reflexive.</p>
+<p id="p-737">Moreover, if <span class="process-math">\(b-a \in I\text{,}\)</span> then <span class="process-math">\(-1(b-a) = a-b \in I\text{,}\)</span> so the relation is symmetric.</p>
+<p id="p-738">If <span class="process-math">\(b-a \in I\)</span> and <span class="process-math">\(c-b\in I\text{,}\)</span> then <span class="process-math">\((b-a) + (c-b) = c-a \in I\text{,}\)</span> so the relation is transitive.</p></article></div>
+<p id="p-739">The set of equivalence classes under this relation is denoted <span class="process-math">\(R/I\text{.}\)</span> What is more, this is not merely a set of equivalence classes. As the next two theorems demonstrate, this set possesses two algebraic operations that extend naturally from those of <span class="process-math">\(R\text{.}\)</span></p>
+<article class="theorem theorem-like" id="thm-addition-mod-I"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.5</span><span class="period">.</span>
+</h4>
+<p id="p-740">Let <span class="process-math">\(R\)</span> be a ring and <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{.}\)</span> If <span class="process-math">\(a,b,c,d\in R\)</span> such that <span class="process-math">\(a+I = b+I\)</span> and <span class="process-math">\(c+I = d+I\text{,}\)</span> then <span class="process-math">\((a+c) + I = (b+d) + I\text{.}\)</span></p></article><article class="hiddenproof" id="proof-80"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-80"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-80"><article class="hiddenproof"><p id="p-741">Suppose <span class="process-math">\(a+I = b+I\)</span> and <span class="process-math">\(c+I = d+I\text{.}\)</span> Then <span class="process-math">\(b-a =x \in I\)</span> and <span class="process-math">\(d-c = y \in I\text{.}\)</span> Adding, we have <span class="process-math">\((b-a) + (d-c) = (b+d) - (a+c) = x+y \in I\text{.}\)</span> Thus, <span class="process-math">\((b+d) + I = (a+c) + I\text{.}\)</span></p></article></div>
+<article class="theorem theorem-like" id="thm-multiplication-mod-I"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.6</span><span class="period">.</span>
+</h4>
+<p id="p-742">Let <span class="process-math">\(R\)</span> be a ring and <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{.}\)</span> If <span class="process-math">\(a,b,c,d\in R\)</span> such that <span class="process-math">\(a+I = b+I\)</span> and <span class="process-math">\(c+I = d+I\text{,}\)</span> then <span class="process-math">\(ac + I = bd + I\text{.}\)</span></p></article><article class="hiddenproof" id="proof-81"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-81"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-81"><article class="hiddenproof"><p id="p-743">As before, we observe that <span class="process-math">\(b-a = x\in I\)</span> and <span class="process-math">\(d-c = y\in I\text{.}\)</span> Write <span class="process-math">\(b = x+a\)</span> and <span class="process-math">\(d = c+y\text{.}\)</span> Then <span class="process-math">\(bd = (x+a)(c+y) = xc + xy + ac + ay = ac + \underbrace{(xc+xy+ay)}_{\in I}\text{,}\)</span> so <span class="process-math">\(bd - ac \in I\text{,}\)</span> and thus <span class="process-math">\(bd + I = ac + I\text{.}\)</span></p></article></div>
+<p id="p-744">The previous two theorems together show that addition and multiplication on the set <span class="process-math">\(R/I\)</span> is well-defined. As these operations are built on the operations of <span class="process-math">\(R\text{,}\)</span> it will likely not surprise you to learn that the usual <a href="" class="xref" data-knowl="./knowl/def_ring.html" title="Definition 2.2.6">axioms defining a ring</a> also hold.</p>
+<article class="theorem theorem-like" id="theorem-74"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.7</span><span class="period">.</span>
+</h4>
+<p id="p-745">Let <span class="process-math">\(R\)</span> be a commutative ring with identity <span class="process-math">\(1_R\)</span> and <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{.}\)</span> The set of equivalence classes modulo <span class="process-math">\(I\text{,}\)</span> denoted <span class="process-math">\(R/I\text{,}\)</span> is a commutative ring with identity <span class="process-math">\(1_R + I\)</span> under the operations of addition modulo <span class="process-math">\(I\)</span> and multiplication modulo <span class="process-math">\(I\)</span> defined in <a href="" class="xref" data-knowl="./knowl/thm-addition-mod-I.html" title="Theorem 4.3.5">Theorem 4.3.5</a> and <a href="" class="xref" data-knowl="./knowl/thm-multiplication-mod-I.html" title="Theorem 4.3.6">Theorem 4.3.6</a>.</p></article><article class="hiddenproof" id="proof-82"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-82"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-82"><article class="hiddenproof">TBD</article></div>
+<p id="p-746">Thus, given a ring <span class="process-math">\(R\)</span> and ideal <span class="process-math">\(I\)</span> of <span class="process-math">\(R\text{,}\)</span> we may build a new ring <span class="process-math">\(R/I\text{.}\)</span> In <a href="SubSec-Quotient-Rings.html#subsec-prime-maximal-ideal" class="internal" title="Subsection 4.3.2: Prime and Maximal Ideals">Subsection 4.3.2</a>, we will explore the question of when <span class="process-math">\(R/I\)</span> possesses some of the properties we've previously explored, e.g., when is <span class="process-math">\(R/I\)</span> a domain? A field? First, we conclude with two explorations. The first gives us a sense of what these rings can look like. The second connects quotient rings to <em class="emphasis">solution sets</em> of polynomial equations.</p>
+<article class="exploration project-like" id="exploration-26"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.3.8</span><span class="period">.</span>
+</h4>
+<p id="p-747">Consider the ring <span class="process-math">\(R=\Z_2[x]\)</span> and the ideals <span class="process-math">\(I = \ideal{x^2-1}\)</span> and <span class="process-math">\(J = \ideal{x^3 -x -1}\text{.}\)</span></p>
+<ol class="decimal">
+<li id="li-229"><p id="p-derived-li-229">List the elements of <span class="process-math">\(R/I\)</span> and <span class="process-math">\(R/J\text{.}\)</span></p></li>
+<li id="li-230"><p id="p-derived-li-230">What happens to <span class="process-math">\(x^2\)</span> in <span class="process-math">\(R\)</span> when you pass to the quotient ring <span class="process-math">\(R/I\text{?}\)</span> How about <span class="process-math">\(x^3\)</span> as you pass from <span class="process-math">\(R\)</span> to <span class="process-math">\(R/J\text{?}\)</span></p></li>
+<li id="li-231"><p id="p-derived-li-231">In view of your answer to the previous question, how does <span class="process-math">\(x\)</span> behave as you “mod out” by <span class="process-math">\(I\)</span> and <span class="process-math">\(J\text{?}\)</span></p></li>
+<li id="li-232"><p id="p-derived-li-232">Build addition and multiplication tables for each of <span class="process-math">\(R/I\)</span> and <span class="process-math">\(R/J\text{.}\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-38" id="solution-38"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-38"><div class="solution solution-like">TBD</div></div>
+</div></article><article class="exploration project-like" id="exploration-27"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.3.9</span><span class="period">.</span>
+</h4>
+<p id="p-748">One of the most useful connections made in high school algebra is the connection between a function <span class="process-math">\(f\)</span> (in particular, a polynomial function) and its <em class="emphasis">graph</em>. We may extend this notion to ideals via the concept of a <em class="emphasis">zero set</em> as follows.</p>
+<p id="p-749">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(R = F[x,y]\)</span> with <span class="process-math">\(I\subseteq R\)</span> a nonzero ideal. We define the <dfn class="terminology">zero set</dfn> of <span class="process-math">\(I\text{,}\)</span> denoted <span class="process-math">\(Z(I)\text{,}\)</span> as the set of all points <span class="process-math">\((a,b)\in F^2\)</span> for which <span class="process-math">\(f(a,b)=0\)</span> for all <span class="process-math">\(f\in I\text{.}\)</span></p>
+<ol class="decimal">
+<li id="li-233"><p id="p-derived-li-233">Suppose <span class="process-math">\(I = \ideal{f_1, f_2, \ldots, f_n}\text{.}\)</span> Prove that <span class="process-math">\((a,b)\in Z(I)\)</span> if and only if <span class="process-math">\(f_j(a,b) = 0\)</span> for each <span class="process-math">\(j\in \set{1,\ldots, n}\text{.}\)</span> Thus, <span class="process-math">\(Z(I)\)</span> can be determined entirely by examining the generators of <span class="process-math">\(I\text{.}\)</span></p></li>
+<li id="li-234"><p id="p-derived-li-234">Describe <span class="process-math">\(Z(I)\)</span> given <span class="process-math">\(I = \ideal{y-x^2}\text{.}\)</span></p></li>
+<li id="li-235"><p id="p-derived-li-235">(Challenge) Given <span class="process-math">\(I = \ideal{y-x^2}\)</span> and <span class="process-math">\(J = \ideal{y-x-2}\text{,}\)</span> describe <span class="process-math">\(Z(I+J)\)</span> and <span class="process-math">\(Z(I\cap J)\text{.}\)</span></p></li>
+<li id="li-236"><p id="p-derived-li-236">Given <span class="process-math">\(I=\ideal{y-x^2}\text{,}\)</span> describe the relationship between the variables <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> in the quotient <span class="process-math">\(R/I\text{.}\)</span> In what way have we restricted our polynomial “inputs” to the parabola <span class="process-math">\(y = x^2\text{?}\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-39" id="solution-39"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-39"><div class="solution solution-like">TBD.</div></div>
+</div></article></section><section class="subsection" id="subsec-prime-maximal-ideal"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.3.2</span> <span class="title">Prime and Maximal Ideals</span>
+</h3>
+<p id="p-750">In this section, we continue our exploration of quotient rings by looking more closely at properties of ideals. We focus on particular properties of ideals that ensure that the quotient <span class="process-math">\(R/I\)</span> is either a domain or a field.</p>
+<article class="definition definition-like" id="definition-39"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.3.10</span><span class="period">.</span>
+</h4>
+<p id="p-751">Let <span class="process-math">\(R\)</span> be commutative with identity and <span class="process-math">\(P\subsetneq R\)</span> a nonzero ideal. We say <span class="process-math">\(P\)</span> is <dfn class="terminology">prime</dfn> if whenever <span class="process-math">\(a,b\in R\)</span> such that <span class="process-math">\(ab\in P\text{,}\)</span> we have <span class="process-math">\(a\in P\)</span> or <span class="process-math">\(b\in P\text{.}\)</span></p></article><article class="theorem theorem-like" id="theorem-75"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.11</span><span class="period">.</span>
+</h4>
+<p id="p-752">Let <span class="process-math">\(R\)</span> be a domain and <span class="process-math">\(p\in R\)</span> be prime. Then <span class="process-math">\(\ideal{p}\)</span> is a prime ideal.</p></article><article class="hiddenproof" id="proof-83"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-83"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-83"><article class="hiddenproof">TBD</article></div>
+<article class="activity project-like" id="activity-21"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.12</span><span class="period">.</span>
+</h4>
+<p id="p-753">Which of the following ideals are prime?</p>
+<ol class="decimal">
+<li id="li-237"><p id="p-754"><span class="process-math">\(\ideal{9}\)</span> in <span class="process-math">\(\Z\)</span></p></li>
+<li id="li-238"><p id="p-755"><span class="process-math">\(\ideal{11}\)</span> in <span class="process-math">\(\Z\)</span></p></li>
+<li id="li-239"><p id="p-756"><span class="process-math">\(\ideal{x^2+1}\)</span> in <span class="process-math">\(\R[x]\)</span></p></li>
+<li id="li-240"><p id="p-757"><span class="process-math">\(\ideal{x^2-1}\)</span> in <span class="process-math">\(\R[x]\)</span></p></li>
+<li id="li-241"><p id="p-758"><span class="process-math">\(\ideal{x^2-5x+6, x^4+2x^3-10x^2+5x-2}\)</span> in <span class="process-math">\(\R[x]\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-40" id="solution-40"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-40"><div class="solution solution-like"><ol id="p-759" class="decimal">
+<li id="li-242"><p id="p-760">Not prime. <span class="process-math">\(3\cdot 3= 9\in \ideal{9}\text{,}\)</span> but <span class="process-math">\(3\notin\ideal{9}\text{.}\)</span></p></li>
+<li id="li-243"><p id="p-761">Prime. If <span class="process-math">\(x\in \ideal{11}\text{,}\)</span> then <span class="process-math">\(11|x\)</span> and 11 is prime.</p></li>
+<li id="li-244"><p id="p-762">Prime. Easy explanation is that <span class="process-math">\(R[x]/\ideal{x^2+1}\)</span> is isomorphic to <span class="process-math">\(\C\text{.}\)</span> <span class="process-math">\(\ddot\smile\)</span> For now, though, we know that <span class="process-math">\(x^2+1\)</span> is irreducible, and <span class="process-math">\(R[x]\)</span> is a PID, so irreducibles are prime.</p></li>
+<li id="li-245"><p id="p-763">Not prime. <span class="process-math">\(x^2-1 = (x-1)(x+1)\text{,}\)</span> but <span class="process-math">\(x\pm 1\notin \ideal{x^2-1}\)</span> for degree reasons.</p></li>
+<li id="li-246"><p id="p-764">One may use the EA to show that <span class="process-math">\(\gcd(x^2-5x+6,x^4+2x^3-10x^2+5x-2) = x-2\text{,}\)</span> so <span class="process-math">\(\ideal{x^2-5x+6, x^4+2x^3-10x^2+5x-2} = \ideal{x-2}\text{.}\)</span> This is prime.</p></li>
 </ol></div></div>
-</div></article><article class="definition definition-like" id="definition-40"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.8</span><span class="period">.</span>
-</h6>
-<p id="p-627">Let \(R\) be commutative with identity and let \(M\subsetneq R\) be a nonzero ideal. We say that \(M\) is a <dfn class="terminology">maximal ideal</dfn> if no proper ideal of \(R\) properly contains \(M\text{.}\) That is, if \(J\) is an ideal satisfying \(M\subseteq J\subseteq R\text{,}\) either \(J=M\) or \(J=R\text{.}\)</p></article><p id="p-628">It is a fact that any ring \(R\) with \(0_R\ne 1_R\) has a maximal ideal. This follows from <em class="emphasis">Zorn's Lemma</em>; a rigorous exploration of Zorn's Lemma lies outside of the scope of these notes, but suffice it to say that Zorn's Lemma is incredibly useful in all areas of algebra for proving existence theorems. For example, a proof that every vector space has a basis relies on Zorn's Lemma.</p>
-<p id="p-629">Rings with only one maximal ideal are said to be <em class="emphasis">local rings</em>, and are actively studied in modern research in commutative algebra (the study of commutative rings and their properties).</p>
-<article class="theorem theorem-like" id="theorem-73"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.9</span><span class="period">.</span>
-</h6>
-<p id="p-630">Let \(R\) be commutative with identity and \(I\) an ideal of \(R\text{.}\) Then \(I\) is prime if and only if \(R/I\) is an integral domain.</p></article><article class="hiddenproof" id="proof-70"><a data-knowl="" class="id-ref original" data-refid="hk-proof-70"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-70"><article class="hiddenproof"><p id="p-631">Begin by assuming that \(I\) is prime, and suppose \((a+I)(b+I) = 0+I = I\text{.}\) Then \(ab \in I\text{,}\) and since \(I\) is prime, either \(a\in I\) or \(b\in I\text{.}\) Thus either \(a+I = 0+I\) or \(b+I = 0+I\text{.}\)</p>
-<p id="p-632">Now assume that \(R/I\) is a domain. Further, let \(a,b\in R\) be such that \((a+I)(b+I) = ab+I = 0+I\text{.}\) Then \(ab\in I\text{,}\) and since \(R/I\) is a domain, \(a+I = 0+I\) or \(b+I = 0+I\text{,}\) i.e., \(a\in I\) or \(b\in I\text{.}\) Thus, \(I\) is prime.</p></article></div>
-<article class="lemma theorem-like" id="lemma-8"><h6 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.2.10</span><span class="period">.</span>
-</h6>
-<p id="p-633">Let \(R\) be commutative with identity and \(M\) a maximal ideal of \(R\text{.}\) Let \(x\in R\setminus M\text{,}\) and set \(J = \setof{xr+y}{r\in R, \ y\in M}\text{.}\) Then \(M\subsetneq J\text{,}\) and thus there exist \(r'\in R\text{,}\) \(y'\in M\) such that \(1 = xr'+y'\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-74"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.11</span><span class="period">.</span>
-</h6>
-<p id="p-634">Let \(R\) be commutative with identity and \(I\) an ideal of \(R\text{.}\) Then \(I\) is maximal if and only if \(R/I\) is a field.</p>
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-14" id="hint-14"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-14"><div class="hint solution-like"><p id="p-635">For the forward direction, apply the previous lemma.</p></div></div></article><article class="hiddenproof" id="proof-71"><a data-knowl="" class="id-ref original" data-refid="hk-proof-71"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-71"><article class="hiddenproof"><p id="p-636">If \(R/I\) is a field, assume \(J\) is an ideal of \(R\) that properly contains \(I\text{.}\) Let \(x\in J\setminus I\text{;}\) then \(x+I\) is a nonzero element of \(R/I\text{,}\) and since \(R/I\) is a field, there is some \(y+I\) such that \((xy)+I = 1+I\text{.}\) Since \(x\in J\text{,}\) \(xy\in J\text{.}\) As \(1+I = (x+I)(y+I) = xy+I\text{,}\) we have \(1-xy\in I\subsetneq J\text{,}\) and thus \(1 = (1-xy)+xy \in J\text{,}\) which means \(J = R\text{.}\) Thus, \(I\) is maximal.</p>
-<p id="p-637">Now, suppose that \(I\) is maximal and let \(x\in R\setminus I\text{.}\) Apply the previous lemma to obtain \(1 = xr' + y'\text{,}\) where \(y'\in I\text{.}\) Then</p>
-<div class="displaymath">
+</div></article><p id="p-765">It is this precise condition that guarantees that the resulting quotient is a domain.</p>
+<article class="theorem theorem-like" id="theorem-76"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.13</span><span class="period">.</span>
+</h4>
+<p id="p-766">Let <span class="process-math">\(R\)</span> be commutative with identity and <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{.}\)</span> Then <span class="process-math">\(I\)</span> is prime if and only if <span class="process-math">\(R/I\)</span> is an integral domain.</p></article><article class="hiddenproof" id="proof-84"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-84"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-84"><article class="hiddenproof"><p id="p-767">Begin by assuming that <span class="process-math">\(I\)</span> is prime, and suppose <span class="process-math">\((a+I)(b+I) = 0+I = I\text{.}\)</span> Then <span class="process-math">\(ab \in I\text{,}\)</span> and since <span class="process-math">\(I\)</span> is prime, either <span class="process-math">\(a\in I\)</span> or <span class="process-math">\(b\in I\text{.}\)</span> Thus either <span class="process-math">\(a+I = 0+I\)</span> or <span class="process-math">\(b+I = 0+I\text{.}\)</span></p>
+<p id="p-768">Now assume that <span class="process-math">\(R/I\)</span> is a domain. Further, let <span class="process-math">\(a,b\in R\)</span> be such that <span class="process-math">\((a+I)(b+I) = ab+I = 0+I\text{.}\)</span> Then <span class="process-math">\(ab\in I\text{,}\)</span> and since <span class="process-math">\(R/I\)</span> is a domain, <span class="process-math">\(a+I = 0+I\)</span> or <span class="process-math">\(b+I = 0+I\text{,}\)</span> i.e., <span class="process-math">\(a\in I\)</span> or <span class="process-math">\(b\in I\text{.}\)</span> Thus, <span class="process-math">\(I\)</span> is prime.</p></article></div>
+<p id="p-769">We now consider another important class of ideals: the maximal ideals.</p>
+<article class="definition definition-like" id="definition-40"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.3.14</span><span class="period">.</span>
+</h4>
+<p id="p-770">Let <span class="process-math">\(R\)</span> be commutative with identity and let <span class="process-math">\(M\subsetneq R\)</span> be a nonzero ideal. We say that <span class="process-math">\(M\)</span> is a <dfn class="terminology">maximal ideal</dfn> if no proper ideal of <span class="process-math">\(R\)</span> properly contains <span class="process-math">\(M\text{.}\)</span> That is, if <span class="process-math">\(J\)</span> is an ideal satisfying <span class="process-math">\(M\subseteq J\subseteq R\text{,}\)</span> either <span class="process-math">\(J=M\)</span> or <span class="process-math">\(J=R\text{.}\)</span></p></article><p id="p-771">In other words, an ideal <span class="process-math">\(M\ne R\)</span> is maximal if no “larger” ideal (with respect to inclusion) properly contains it. As we will see later, rings can have many maximal ideals.</p>
+<p id="p-772">It is a fact that any ring <span class="process-math">\(R\)</span> with <span class="process-math">\(0_R\ne 1_R\)</span> has a maximal ideal. This follows from <em class="emphasis">Zorn's Lemma</em>; a rigorous exploration of Zorn's Lemma lies outside of the scope of this text, but suffice it to say that Zorn's Lemma is incredibly useful in all areas of algebra for proving existence theorems. For example, a proof that every vector space has a basis relies on Zorn's Lemma.</p>
+<p id="p-773">Rings with only one maximal ideal are said to be <em class="emphasis">local rings</em>, and are actively studied in modern research in commutative algebra (the study of commutative rings and their properties).</p>
+<p id="p-774">The next two results demonstrate that the maximality of <span class="process-math">\(I\)</span> is precisely the condition that guarantees that <span class="process-math">\(R/I\)</span> is a field.</p>
+<article class="lemma theorem-like" id="lemma-9"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.3.15</span><span class="period">.</span>
+</h4>
+<p id="p-775">Let <span class="process-math">\(R\)</span> be commutative with identity and <span class="process-math">\(M\)</span> a maximal ideal of <span class="process-math">\(R\text{.}\)</span> Let <span class="process-math">\(x\in R\setminus M\text{,}\)</span> and set <span class="process-math">\(J = \setof{xr+y}{r\in R, \ y\in M}\text{.}\)</span> Then <span class="process-math">\(M\subsetneq J\text{,}\)</span> and thus there exist <span class="process-math">\(r'\in R\text{,}\)</span> <span class="process-math">\(y'\in M\)</span> such that <span class="process-math">\(1 = xr'+y'\text{.}\)</span></p></article><article class="hiddenproof" id="proof-85"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-85"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-85"><article class="hiddenproof">TBD</article></div>
+<article class="theorem theorem-like" id="theorem-77"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.16</span><span class="period">.</span>
+</h4>
+<p id="p-776">Let <span class="process-math">\(R\)</span> be commutative with identity and <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{.}\)</span> Then <span class="process-math">\(I\)</span> is maximal if and only if <span class="process-math">\(R/I\)</span> is a field.</p>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-22" id="hint-22"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-22"><div class="hint solution-like"><p id="p-777">For the forward direction, apply the previous lemma to construct an inverse for <span class="process-math">\(x+I\)</span> given any <span class="process-math">\(x\in R\setminus I\text{.}\)</span></p></div></div></article><article class="hiddenproof" id="proof-86"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-86"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-86"><article class="hiddenproof"><p id="p-778">If <span class="process-math">\(R/I\)</span> is a field, assume <span class="process-math">\(J\)</span> is an ideal of <span class="process-math">\(R\)</span> that properly contains <span class="process-math">\(I\text{.}\)</span> Let <span class="process-math">\(x\in J\setminus I\text{;}\)</span> then <span class="process-math">\(x+I\)</span> is a nonzero element of <span class="process-math">\(R/I\text{,}\)</span> and since <span class="process-math">\(R/I\)</span> is a field, there is some <span class="process-math">\(y+I\)</span> such that <span class="process-math">\((xy)+I = 1+I\text{.}\)</span> Since <span class="process-math">\(x\in J\text{,}\)</span> <span class="process-math">\(xy\in J\text{.}\)</span> As <span class="process-math">\(1+I = (x+I)(y+I) = xy+I\text{,}\)</span> we have <span class="process-math">\(1-xy\in I\subsetneq J\text{,}\)</span> and thus <span class="process-math">\(1 = (1-xy)+xy \in J\text{,}\)</span> which means <span class="process-math">\(J = R\text{.}\)</span> Thus, <span class="process-math">\(I\)</span> is maximal.</p>
+<p id="p-779">Now, suppose that <span class="process-math">\(I\)</span> is maximal and let <span class="process-math">\(x\in R\setminus I\text{.}\)</span> Apply the previous lemma to obtain <span class="process-math">\(1 = xr' + y'\text{,}\)</span> where <span class="process-math">\(y'\in I\text{.}\)</span> Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-1 + I = xs+y + I = xs + I = (x+I)(y+I)\text{.}
+1 + I = xs+y + I = xs + I = (x+I)(y+I).
 \end{equation*}
 </div></article></div>
-<article class="theorem theorem-like" id="theorem-75"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.12</span><span class="period">.</span>
-</h6>
-<p id="p-638">Every maximal ideal is prime.</p></article><article class="hiddenproof" id="proof-72"><a data-knowl="" class="id-ref original" data-refid="hk-proof-72"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-72"><article class="hiddenproof"><p id="p-639">All fields are integral domains. Thus, if \(I\) is maximal, \(R/I\) is a field, thus a domain, and thus \(I\) is prime.</p></article></div>
-<article class="theorem theorem-like" id="theorem-76"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.13</span><span class="period">.</span>
-</h6>
-<p id="p-640">In a principal ideal domain, every prime ideal is maximal.</p></article><article class="hiddenproof" id="proof-73"><a data-knowl="" class="id-ref original" data-refid="hk-proof-73"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-73"><article class="hiddenproof"><p id="p-641">Let \(R\) be a PID and \(\ideal{p}\) a prime ideal. By previous work, \(p\) is prime. Suppose that \(\ideal{p} \subseteq \ideal{m}\text{.}\) Thus, \(p\in \ideal{m}\text{,}\) so \(m|p\text{.}\) That is, \(p = mk\text{.}\) Since \(p\) is prime and \(R\) is a domain, it is irreducible. Thus, either \(m\) or \(k\) is a unit. If \(m\) is a unit, then \(\ideal{m} = R\text{.}\) If \(k\) is a unit, then \(m = k^{-1} p\text{,}\) and thus \(m\in \ideal{p}\text{,}\) which means that \(\ideal{m} = \ideal{p}\text{.}\)</p>
-<p id="p-642">Thus, \(\ideal{p}\) is maximal.</p></article></div>
-<article class="assemblage assemblage-like" id="assemblage-5"><h6 class="heading"><span class="title">Challenge.</span></h6>
-<p id="p-643">Find a commutative ring with identity, \(R\text{,}\) and a non-maximal prime ideal \(P\) of \(R\text{.}\)</p></article><a data-knowl="" class="id-ref original" data-refid="hk-solution-21" id="solution-21"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-21"><div class="solution solution-like"><p id="p-644">In \(\Z[x]\text{,}\) it is straightforward to see that \(\ideal{x}\) is prime. Moreover, \(\ideal{x}\subsetneq \ideal{2,x}\text{,}\) and thus is not maximal.</p></div></div></section></div></main>
+<article class="theorem theorem-like" id="theorem-78"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.17</span><span class="period">.</span>
+</h4>
+<p id="p-780">Every maximal ideal is prime.</p></article><article class="hiddenproof" id="proof-87"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-87"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-87"><article class="hiddenproof"><p id="p-781">All fields are integral domains. Thus, if <span class="process-math">\(I\)</span> is maximal, <span class="process-math">\(R/I\)</span> is a field, thus a domain, and thus <span class="process-math">\(I\)</span> is prime.</p></article></div>
+<p id="p-782">In general, the converse is not true (see the <a href="" class="xref" data-knowl="./knowl/challenge-nonmaximal-prime.html" title="Assemblage: Challenge">Challenge</a> below). However, it holds in sufficiently nice rings.</p>
+<article class="theorem theorem-like" id="thm-pid-primes-are-maximal"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.18</span><span class="period">.</span>
+</h4>
+<p id="p-783">In a principal ideal domain, every prime ideal is maximal.</p></article><article class="hiddenproof" id="proof-88"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-88"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-88"><article class="hiddenproof"><p id="p-784">Let <span class="process-math">\(R\)</span> be a PID and <span class="process-math">\(\ideal{p}\)</span> a prime ideal. By previous work, <span class="process-math">\(p\)</span> is prime. Suppose that <span class="process-math">\(\ideal{p} \subseteq \ideal{m}\text{.}\)</span> Thus, <span class="process-math">\(p\in \ideal{m}\text{,}\)</span> so <span class="process-math">\(m|p\text{.}\)</span> That is, <span class="process-math">\(p = mk\text{.}\)</span> Since <span class="process-math">\(p\)</span> is prime and <span class="process-math">\(R\)</span> is a domain, it is irreducible. Thus, either <span class="process-math">\(m\)</span> or <span class="process-math">\(k\)</span> is a unit. If <span class="process-math">\(m\)</span> is a unit, then <span class="process-math">\(\ideal{m} = R\text{.}\)</span> If <span class="process-math">\(k\)</span> is a unit, then <span class="process-math">\(m = k^{-1} p\text{,}\)</span> and thus <span class="process-math">\(m\in \ideal{p}\text{,}\)</span> which means that <span class="process-math">\(\ideal{m} = \ideal{p}\text{.}\)</span></p>
+<p id="p-785">Thus, <span class="process-math">\(\ideal{p}\)</span> is maximal.</p></article></div>
+<article class="exploration project-like" id="exploration-28"><h4 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.3.19</span><span class="period">.</span>
+</h4>
+<p id="p-786">Describe the prime and maximal ideals of <span class="process-math">\(\Z\)</span> and <span class="process-math">\(\Q[x]\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-23" id="hint-23"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-23"><div class="hint solution-like">For which ideals <span class="process-math">\(I\)</span> is <span class="process-math">\(\Z/I\)</span> a domain? A field? Similarly for <span class="process-math">\(\Q[x]\text{.}\)</span> Or, use <a href="" class="xref" data-knowl="./knowl/thm-pid-primes-are-maximal.html" title="Theorem 4.3.18">Theorem 4.3.18</a>.</div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-41" id="solution-41"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-41"><div class="solution solution-like">TBD</div></div>
+</div></article><article class="assemblage assemblage-like" id="challenge-nonmaximal-prime"><h4 class="heading"><span class="title">Challenge.</span></h4>
+<p id="p-787">Find a commutative ring with identity, <span class="process-math">\(R\text{,}\)</span> and a nonmaximal prime ideal <span class="process-math">\(P\)</span> of <span class="process-math">\(R\text{.}\)</span></p></article></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.3.3</span> <span class="title">Homomorphisms and Quotient Rings</span>
+</h3>
+<p id="p-789">As quotient rings provide fertile soil for building new examples of rings, it should not surprise us to find that homomorphisms interact with quotient rings in interesting and useful ways. Chief among them are the <em class="emphasis">isomorphism theorems</em>. In this subsection, we focus primarily on the First Isomorphism Theorem.</p>
+<p id="p-790">We have seen that any homomorphism <span class="process-math">\(\p : R\to S\)</span> gives rise to an ideal of <span class="process-math">\(R\text{,}\)</span> namely <span class="process-math">\(\ker\p\text{.}\)</span> Our next theorem demonstrates that, given a commutative ring with identity <span class="process-math">\(R\text{,}\)</span> every ideal is the kernel of some homomorphism defined on <span class="process-math">\(R\text{.}\)</span></p>
+<article class="theorem theorem-like" id="theorem-80"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.20</span><span class="period">.</span>
+</h4>
+<p id="p-791">Let <span class="process-math">\(R\)</span> be commutative with identity and <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{.}\)</span> Define <span class="process-math">\(\p: R\to R/I\)</span> by <span class="process-math">\(\p(r) = r+I\text{.}\)</span> Then <span class="process-math">\(\p\)</span> is a homomorphism with <span class="process-math">\(\ker\p = I\text{.}\)</span></p></article><p id="p-792">In what follows, we work toward a proof of the First Isomorphism Theorem for Rings.</p>
+<p id="p-793">Throughout, let <span class="process-math">\(R\)</span> and <span class="process-math">\(S\)</span> be commutative rings with identity, and let <span class="process-math">\(\p : R\to S\)</span> be a homomorphism. Recall that <span class="process-math">\(\im \p = \setof{s\in S}{\p(r) = s\text{ for some } r\in R}\text{.}\)</span></p>
+<p id="p-794">Define <span class="process-math">\(f: R/\ker \p \to \im \p\)</span> by <span class="process-math">\(f(r+\ker \p) = \p(r)\text{.}\)</span></p>
+<article class="lemma theorem-like" id="lemma-10"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.3.21</span><span class="period">.</span>
+</h4>
+<p id="p-795">Using the notation from above, <span class="process-math">\(f\)</span> is a well-defined function.</p></article><article class="hiddenproof" id="proof-89"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-89"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-89"><article class="hiddenproof"><p id="p-796">Suppose that <span class="process-math">\(r_1 + \ker\p = r_2 + \ker\p\text{.}\)</span> Then <span class="process-math">\(r_2-r_1 \in \ker\p\text{,}\)</span> so <span class="process-math">\(\p(r_2-r_1) = 0_S\text{,}\)</span> and thus <span class="process-math">\(\p(r_1) = \p(r_2)\text{.}\)</span> Therefore, <span class="process-math">\(f(r_1+\ker\p) = f(r_2+\ker\p)\text{,}\)</span> and <span class="process-math">\(f\)</span> is well-defined.</p></article></div>
+<article class="lemma theorem-like" id="lemma-11"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.3.22</span><span class="period">.</span>
+</h4>
+<p id="p-797">Using the notation above, <span class="process-math">\(f\)</span> is a homomorphism.</p></article><article class="hiddenproof" id="proof-90"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-90"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-90"><article class="hiddenproof"><p id="p-798">We show that <span class="process-math">\(f\)</span> preserves addition. That it preserves multiplication will follow similarly. Observe that <span class="process-math">\(f((x+\ker\p) + (y+\ker\p)) = f((x+y)+\ker\p) = \p(x+y) = \p(x)+\p(y) = f(x+\ker\p) + f(y+\ker\p)\text{.}\)</span></p></article></div>
+<article class="lemma theorem-like" id="lemma-12"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.3.23</span><span class="period">.</span>
+</h4>
+<p id="p-799">Using the notation above, <span class="process-math">\(f\)</span> is one-to-one.</p></article><article class="hiddenproof" id="proof-91"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-91"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-91"><article class="hiddenproof"><p id="p-800">Suppose that <span class="process-math">\(f(r_1 + \ker\p) = f(r_2 + \ker\p)\text{.}\)</span> That is, <span class="process-math">\(\p(r_1) = \p(r_2)\text{.}\)</span> Then <span class="process-math">\(\p(r_1 - r_2) = 0_S\text{,}\)</span> so <span class="process-math">\(r_1 -r_2 \in \ker\p\text{,}\)</span> and therefore <span class="process-math">\(r_1 + \ker\p = r_2 + \ker \p\text{.}\)</span> Thus, <span class="process-math">\(f\)</span> is one-to-one.</p></article></div>
+<article class="lemma theorem-like" id="lemma-13"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.3.24</span><span class="period">.</span>
+</h4>
+<p id="p-801">Using the notation above, <span class="process-math">\(f\)</span> is onto.</p></article><article class="hiddenproof" id="proof-92"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-92"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-92"><article class="hiddenproof"><p id="p-802">Since <span class="process-math">\(\p\)</span> is onto <span class="process-math">\(\im \p\)</span> by definition, given any <span class="process-math">\(s\in \im \p\)</span> there is some <span class="process-math">\(r\in R\)</span> such that <span class="process-math">\(\p(r) = s\text{.}\)</span> Then <span class="process-math">\(f(r+\ker\p) = \p(r)\text{.}\)</span></p></article></div>
+<p id="p-803">We thus obtain the following, due to Emmy Noether:</p>
+<article class="theorem theorem-like" id="theorem-81"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.25</span><span class="space"> </span><span class="creator">(E. Noether)</span><span class="period">.</span><span class="space"> </span><span class="title">Noether's Isomorphism Theorem.</span>
+</h4>
+<p id="p-804">Let <span class="process-math">\(\p : R\to S\)</span> be a homomorphism of commutative rings. Then <span class="process-math">\(R/\ker \p \cong \im \p\text{.}\)</span></p>
+<p id="p-805">In particular, if <span class="process-math">\(\p : R\to S\)</span> is onto, <span class="process-math">\(R/\ker \p \cong S\text{.}\)</span></p></article><p id="p-806">The First Isomorphism Theorem gives a useful way of establishing an isomorphism between a quotient ring <span class="process-math">\(R/I\)</span> and another ring <span class="process-math">\(S\text{:}\)</span> find an onto homomorphism <span class="process-math">\(R\to S\)</span> with kernel <span class="process-math">\(I\text{.}\)</span></p>
+<article class="theorem theorem-like" id="theorem-82"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.26</span><span class="period">.</span>
+</h4>
+<p id="p-807">We have the following isomorphisms of rings.</p>
+<ol class="decimal">
+<li id="li-247"><p id="p-808"><span class="process-math">\(\displaystyle \Z/\ideal{m} \cong \Z_m\)</span></p></li>
+<li id="li-248"><p id="p-809"><span class="process-math">\(\displaystyle \Q[x]/\ideal{x-5} \cong \Q\)</span></p></li>
+<li id="li-249"><p id="p-810"><span class="process-math">\(\displaystyle \R[x]/\ideal{x^2+1} \cong \C\)</span></p></li>
+</ol></article><article class="hiddenproof" id="proof-93"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-93"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-93"><article class="hiddenproof">TBD <p id="p-811">Define <span class="process-math">\(\p: \R[x] \to \C\)</span> by <span class="process-math">\(\p(p(x)) = p(i)\text{.}\)</span> We saw earlier that this evaluation map is a homomorphism. It is easy to see that <span class="process-math">\(\p\)</span> is onto as <span class="process-math">\(\p(a+bx) = a+bi\)</span> for any <span class="process-math">\(a,b\in \R\text{.}\)</span> Thus, <span class="process-math">\(\R[x]/\ker\p \cong \C\)</span> by the First Isomorphism Theorem.</p>
+<p id="p-812">We claim that <span class="process-math">\(\ker\p = \ideal{x^2+1}\text{.}\)</span> Clearly, <span class="process-math">\(\ideal{x^2+1} \subseteq \ker\p\text{.}\)</span> Moreover, <span class="process-math">\(\ker\p \subsetneq \R[x]\text{.}\)</span> Finally, <span class="process-math">\(\ideal{x^2+1}\)</span> is prime and thus maximal, as <span class="process-math">\(\R[x]\)</span> is a PID. Thus, <span class="process-math">\(\ker\p = \ideal{x^2+1}\text{.}\)</span></p></article></div>
+<article class="activity project-like" id="activity-22"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.3.27</span><span class="period">.</span>
+</h4>
+<p id="p-813">Let <span class="process-math">\(R = \Z_6\)</span> and define <span class="process-math">\(\p : \Z_6 \to \Z_2\)</span> by <span class="process-math">\(\p(\overline{x}) = \overline{x}\text{.}\)</span> That is, <span class="process-math">\(\p\)</span> sends an equivalence class <span class="process-math">\(\overline{x}\in \Z_6\)</span> represented by <span class="process-math">\(x\in \Z\)</span> to the equivalence class represented by <span class="process-math">\(x\)</span> in <span class="process-math">\(\Z_2\text{.}\)</span></p>
+<ol class="decimal">
+<li id="li-250"><p id="p-derived-li-250">Show that <span class="process-math">\(\p\)</span> is a <a href="" class="xref" data-knowl="./knowl/def-well-defined.html" title="Definition 1.4.12">well-defined</a> function.</p></li>
+<li id="li-251"><p id="p-derived-li-251">Prove that <span class="process-math">\(\p\)</span> is a homomorphism.</p></li>
+<li id="li-252"><p id="p-derived-li-252">Is <span class="process-math">\(\p\)</span> onto? Justify.</p></li>
+<li id="li-253"><p id="p-derived-li-253">Compute <span class="process-math">\(\ker\p\)</span> (that is, list the elements in the set). Is <span class="process-math">\(\p\)</span> one-to-one?</p></li>
+<li id="li-254"><p id="p-derived-li-254">Without appealing to the definition, is <span class="process-math">\(\ker\p\)</span> prime? Maximal? Explain.</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-43" id="solution-43"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-43"><div class="solution solution-like">TBD</div></div>
+</div></article></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.13/login.js"></script>
 </body>
 </html>

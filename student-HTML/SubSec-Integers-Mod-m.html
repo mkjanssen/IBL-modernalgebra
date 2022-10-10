@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-14T12:08:35-06:00       *-->
+<!--*       on 2022-10-10T15:50:53-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -9,16 +9,19 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US">
-<head>
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>The Integers modulo m</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Rings With Inquiry">
+<meta property="book:author" content="Michael Janssen">
+<meta property="book:author" content="Melissa Lindsey">
 <script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
-    useLabelIds: true,
     tagSide: "right",
     tagIndent: ".8em",
     packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
@@ -36,21 +39,20 @@
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script async="" src="https://cse.google.com/cse.js?cx=017464805646507420634:llcu9bfj13p"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.674</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
-</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/colors_blue_grey.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script async="" src="https://cse.google.com/cse.js?cx=017464805646507420634:llcu9bfj13p"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand{\labelitemi}{$\diamond$}
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand{\labelitemi}{$\diamond$}
 \def\arraystretch{1.5}
 \newcommand{\contentsfinish}{}
 \newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
@@ -121,7 +123,7 @@
 </div>
 <div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
 </div></div>
-<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
 <a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="SubSec-Primes-and-Factorization.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Sec-Integers.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Sec-Fields-and-Rings.html" title="Next">Next</a></span>
@@ -131,53 +133,54 @@
 <button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="SubSec-Primes-and-Factorization.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Sec-Integers.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Sec-Fields-and-Rings.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
-<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link frontmatter">
-<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
-<li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction">Introduction</a></li>
-<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents">A Note to Students</a></li>
-<li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors">A Note to Instructors</a></li>
-<li><a href="Sec-Versions.html" data-scroll="Sec-Versions">Versions of this text</a></li>
-<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction" class="internal">Introduction</a></li>
+<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents" class="internal">A Note to Students</a></li>
+<li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors" class="internal">A Note to Instructors</a></li>
+<li><a href="Sec-Versions.html" data-scroll="Sec-Versions" class="internal">Versions of this text</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Integers.html" data-scroll="Sec-Integers"><span class="codenumber">1</span> <span class="title">The Integers</span></a><ul>
-<li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering">Induction and Well-Ordering</a></li>
-<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers">Divisibility and GCDs in the Integers</a></li>
-<li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization">Primes and Factorization</a></li>
+<a href="Sec-Integers.html" data-scroll="Sec-Integers" class="internal"><span class="codenumber">1</span> <span class="title">The Integers</span></a><ul>
+<li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering" class="internal">Induction and Well-Ordering</a></li>
+<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers" class="internal">Divisibility and GCDs in the Integers</a></li>
+<li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization" class="internal">Primes and Factorization</a></li>
 <li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m" class="active">The Integers modulo <span class="process-math">\(m\)</span></a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Fields-and-Rings.html" data-scroll="Sec-Fields-and-Rings"><span class="codenumber">2</span> <span class="title">Fields and Rings</span></a><ul>
-<li><a href="SubSec-Fields.html" data-scroll="SubSec-Fields">Fields</a></li>
-<li><a href="SubSec-Rings.html" data-scroll="SubSec-Rings">Rings</a></li>
-<li><a href="SubSec-Divisibility-in-Domains.html" data-scroll="SubSec-Divisibility-in-Domains">Divisibility in Integral Domains</a></li>
-<li><a href="SubSec-Principal-Ideals.html" data-scroll="SubSec-Principal-Ideals">Principal Ideals and Euclidean Domains</a></li>
+<a href="Sec-Fields-and-Rings.html" data-scroll="Sec-Fields-and-Rings" class="internal"><span class="codenumber">2</span> <span class="title">Fields and Rings</span></a><ul>
+<li><a href="SubSec-Fields.html" data-scroll="SubSec-Fields" class="internal">Fields</a></li>
+<li><a href="SubSec-Rings.html" data-scroll="SubSec-Rings" class="internal">Rings</a></li>
+<li><a href="SubSec-Divisibility-in-Domains.html" data-scroll="SubSec-Divisibility-in-Domains" class="internal">Divisibility in Integral Domains</a></li>
+<li><a href="SubSec-Principal-Ideals.html" data-scroll="SubSec-Principal-Ideals" class="internal">Principal Ideals and Euclidean Domains</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Factorization.html" data-scroll="Sec-Factorization"><span class="codenumber">3</span> <span class="title">Factorization</span></a><ul>
-<li><a href="SubSec-Factoring-Polynomials.html" data-scroll="SubSec-Factoring-Polynomials">Factoring Polynomials</a></li>
-<li><a href="SubSec-Factorization-in-Euclidean-Domains.html" data-scroll="SubSec-Factorization-in-Euclidean-Domains">Factorization in Euclidean Domains</a></li>
-<li><a href="SubSec-Nonunique-Factorization.html" data-scroll="SubSec-Nonunique-Factorization">Nonunique Factorization</a></li>
+<a href="Sec-Factorization.html" data-scroll="Sec-Factorization" class="internal"><span class="codenumber">3</span> <span class="title">Factorization</span></a><ul>
+<li><a href="SubSec-Factoring-Polynomials.html" data-scroll="SubSec-Factoring-Polynomials" class="internal">Factoring Polynomials</a></li>
+<li><a href="SubSec-Factorization-in-Euclidean-Domains.html" data-scroll="SubSec-Factorization-in-Euclidean-Domains" class="internal">Factorization in Euclidean Domains</a></li>
+<li><a href="SubSec-Nonunique-Factorization.html" data-scroll="SubSec-Nonunique-Factorization" class="internal">Nonunique Factorization</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Ideals.html" data-scroll="Sec-Ideals"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a><ul>
-<li><a href="SubSec-Ideals-In-General.html" data-scroll="SubSec-Ideals-In-General">Ideals in general</a></li>
-<li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms">Homomorphisms</a></li>
-<li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings">Quotient Rings: New Rings from Old</a></li>
+<a href="Sec-Ideals.html" data-scroll="Sec-Ideals" class="internal"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a><ul>
+<li><a href="SubSec-Ideals-In-General.html" data-scroll="SubSec-Ideals-In-General" class="internal">Ideals in general</a></li>
+<li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms" class="internal">Homomorphisms</a></li>
+<li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings" class="internal">Quotient Rings: New Rings from Old</a></li>
 </ul>
 </li>
-<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="SubSec-Integers-Mod-m"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="SubSec-Integers-Mod-m"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.4</span> <span class="title">The Integers modulo <span class="process-math">\(m\)</span></span>
 </h2>
 <article class="assemblage assemblage-like" id="assemblage-7"><h3 class="heading"><span class="title">Guiding Questions.</span></h3>
@@ -186,7 +189,7 @@
 <li id="li-38"><p id="p-derived-li-38">What is congruence modulo <span class="process-math">\(m\text{?}\)</span></p></li>
 <li id="li-39"><p id="p-derived-li-39">How does arithmetic in <span class="process-math">\(\Z_m\)</span> compare to arithmetic in <span class="process-math">\(\Z\text{?}\)</span></p></li>
 </ul></p></article><p id="p-174">The foundation for our exploration of abstract algebra is nearly complete. We need the basics of one more "number system" in order to appreciate the abstract approach developed in subsequent chapters. To build that number system, a brief review of relations and equivalence relations is required. Recall that given sets <span class="process-math">\(S\)</span> and <span class="process-math">\(T\text{,}\)</span> the Cartesian product of <span class="process-math">\(S\)</span> with <span class="process-math">\(T\text{,}\)</span> denoted <span class="process-math">\(S\times T\)</span> ("<span class="process-math">\(S\)</span> cross <span class="process-math">\(T\)</span>"), is the set of all possible ordered pairs whose first element is from <span class="process-math">\(S\)</span> and second element is from <span class="process-math">\(T\text{.}\)</span> Symbolically,</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-additionmodulom.html ./knowl/def-arithemticmodm.html ./knowl/theorem_relprimecancel.html ./knowl/theorem_cancelrelprime.html">
 \begin{equation*}
 S\times T = \setof{(s,t)}{s\in S, \ t\in T}.
 \end{equation*}
@@ -195,7 +198,6 @@ S\times T = \setof{(s,t)}{s\in S, \ t\in T}.
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.4.1</span><span class="period">.</span>
 </h3>
 <p id="p-175">Let <span class="process-math">\(S\)</span> be a nonempty set. A <dfn class="terminology">relation</dfn> <span class="process-math">\(R\)</span> on <span class="process-math">\(S\)</span> is a subset of <span class="process-math">\(S\times S\text{.}\)</span> If <span class="process-math">\(x,y\in S\)</span> such that <span class="process-math">\((x,y)\in R\text{,}\)</span> we usually write <span class="process-math">\(xRy\)</span> and say that <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are <dfn class="terminology">related under <span class="process-math">\(R\)</span></dfn>.</p></article><p id="p-176">The notion of a relation as presented above is extremely open-ended. <em class="emphasis">Any</em> subset of ordered pairs of <span class="process-math">\(S\times S\)</span> describes a relation on the set <span class="process-math">\(S\text{.}\)</span> Of course, some relations are more meaningful than others; the branch of mathematics known as <a class="external" href="https://en.wikipedia.org/wiki/Order_theory" target="_blank">order theory</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-12" id="fn-12"><sup> 1 </sup></a> studies <em class="emphasis">order</em> relations (such as the familiar <span class="process-math">\(\lt\)</span>). Our focus will be on <em class="emphasis">equivalence relations</em>, which isolate the important features of <span class="process-math">\(=\text{.}\)</span></p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-12"><div class="fn"><code class="code-inline tex2jax_ignore">https://en.wikipedia.org/wiki/Order_theory</code></div></div>
 <article class="definition definition-like" id="def-eqrel"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.4.2</span><span class="period">.</span>
 </h3>
@@ -206,26 +208,26 @@ S\times T = \setof{(s,t)}{s\in S, \ t\in T}.
 <li id="li-42"><p id="p-180"><span class="process-math">\(\sim\)</span> is <em class="emphasis">transitive</em>: if <span class="process-math">\(a,b,c\in S\)</span> with <span class="process-math">\(a\sim b\)</span> and <span class="process-math">\(b\sim c\text{,}\)</span> then <span class="process-math">\(a\sim c\text{.}\)</span></p></li>
 </ul>
 <p id="p-181">Given <span class="process-math">\(x\in S\text{,}\)</span> the set</p>
-<div class="displaymath process-math">
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \overline{x} = \setof{y\in S}{x\sim y}
 \end{equation*}
 </div>
 <p class="continuation">is called the <dfn class="terminology">equivalence class of <span class="process-math">\(x\)</span></dfn>. Any element <span class="process-math">\(z\in \overline{x}\)</span> is called a <dfn class="terminology">representative</dfn> of the equivalence class.</p></article><article class="activity project-like" id="activity-3"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.4.1</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.4.3</span><span class="period">.</span>
 </h3>
 <p id="p-182">Prove that “has the same birthday as” is an equivalence relation on the set <span class="process-math">\(P\)</span> of all people.</p></article><article class="exploration project-like" id="exploration-3"><h3 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">1.4.2</span><span class="period">.</span>
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">1.4.4</span><span class="period">.</span>
 </h3>
 <p id="p-186">What other relations can you think of? Write down one example and one non-example of an equivalence relation.</p></article><article class="activity project-like" id="activity-4"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.4.3</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.4.5</span><span class="period">.</span>
 </h3>
 <p id="p-187">Prove that <span class="process-math">\(\le\)</span> is <em class="emphasis">not</em> an equivalence relation on <span class="process-math">\(\Z\text{.}\)</span></p></article><p id="p-189">For our purposes, a particularly important equivalence relation is congruence modulo <span class="process-math">\(m\)</span> on the set of integers.</p>
 <article class="definition definition-like" id="definition-8"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.4.3</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.4.6</span><span class="period">.</span>
 </h3>
 <p id="p-190">Let <span class="process-math">\(a,b\in \Z\)</span> and <span class="process-math">\(m \in \N\text{,}\)</span> <span class="process-math">\(m &gt; 1\text{.}\)</span> We say <dfn class="terminology"><span class="process-math">\(a\)</span> is congruent to <span class="process-math">\(b\)</span> modulo <span class="process-math">\(m\)</span></dfn> if <span class="process-math">\(m\mid a-b\text{.}\)</span> We write <span class="process-math">\(a \equiv b\mod m\text{.}\)</span></p></article><article class="activity project-like" id="activity-5"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.4.4</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.4.7</span><span class="period">.</span>
 </h3>
 <p id="p-191">Justify the following congruences.</p>
 <ol class="decimal">
@@ -235,32 +237,32 @@ S\times T = \setof{(s,t)}{s\in S, \ t\in T}.
 <li id="li-46"><p id="p-derived-li-46"><span class="process-math">\(\displaystyle 21 \equiv -1 \mod 11\)</span></p></li>
 <li id="li-47"><p id="p-derived-li-47"><span class="process-math">\(\displaystyle 24 \equiv 0\mod 6\)</span></p></li>
 </ol></article><article class="theorem theorem-like" id="theorem-15"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.4.4</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.4.8</span><span class="period">.</span>
 </h3>
 <p id="p-192">Given an integer <span class="process-math">\(m &gt; 1\text{,}\)</span> congruence modulo <span class="process-math">\(m\)</span> is an equivalence relation on <span class="process-math">\(\Z\text{.}\)</span></p></article><p id="p-196"> The set of equivalence classes of <span class="process-math">\(\Z\)</span> under the equivalence relation <em class="emphasis">congruence modulo <span class="process-math">\(m\)</span></em> is called <dfn class="terminology">the integers modulo <span class="process-math">\(m\)</span></dfn>, and is denoted <span class="process-math">\(\Z_m\)</span> (pronounced "Z mod m").</p>
 <article class="exploration project-like" id="exploration-4"><h3 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">1.4.5</span><span class="period">.</span>
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">1.4.9</span><span class="period">.</span>
 </h3>
 <p id="p-197">List the elements of <span class="process-math">\(\Z_5\)</span> and <span class="process-math">\(\Z_7\text{.}\)</span></p></article><article class="theorem theorem-like" id="thm-additionmodulom"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.4.5</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.4.10</span><span class="period">.</span>
 </h3>
 <p id="p-199">Let <span class="process-math">\(a,b, c,d\in \Z\)</span> and <span class="process-math">\(m &gt; 1\)</span> such that <span class="process-math">\(a\equiv c\mod m\)</span> and <span class="process-math">\(b\equiv d\mod m\text{.}\)</span> Then <span class="process-math">\(a+b \equiv c + d \mod m\text{.}\)</span></p></article><article class="theorem theorem-like" id="theorem-17"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.4.6</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.4.11</span><span class="period">.</span>
 </h3>
 <p id="p-201">Let <span class="process-math">\(a,b, c,d\in \Z\)</span> and <span class="process-math">\(m &gt; 1\)</span> such that <span class="process-math">\(a\equiv c\mod m\)</span> and <span class="process-math">\(b\equiv d\mod m\text{.}\)</span> Then <span class="process-math">\(ab \equiv c d\mod m\text{.}\)</span></p></article><article class="definition definition-like" id="def-well-defined"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.4.7</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.4.12</span><span class="period">.</span>
 </h3>
 <p id="p-204">Let <span class="process-math">\(S\)</span> be a set and <span class="process-math">\(\sim\)</span> an equivalence relation on <span class="process-math">\(S\text{.}\)</span> Then a statement <span class="process-math">\(P\)</span> about the equivalence classes of <span class="process-math">\(S\)</span> is <dfn class="terminology">well-defined</dfn> if the representative of the equivalence class does not matter. That is, whenever <span class="process-math">\(\overline{x} = \overline{y}\text{,}\)</span> <span class="process-math">\(P(\overline{x}) = P(\overline{y})\text{.}\)</span></p></article><p id="p-205">The previous exercises justify the following definitions.</p>
 <article class="definition definition-like" id="def-arithemticmodm"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.4.8</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.4.13</span><span class="period">.</span>
 </h3>
 <p id="p-206">Let <span class="process-math">\(m &gt; 1\)</span> and <span class="process-math">\(\overline{a},\overline{b}\in \Z_m\text{.}\)</span> Then the following are well-defined operations on the equivalence classes:</p>
 <ol class="decimal">
 <li id="li-48"><p id="p-207"><em class="emphasis">Addition modulo <span class="process-math">\(m\)</span></em>: <span class="process-math">\(\overline{a} + \overline{b} := \overline{a+b}\text{.}\)</span> <aside class="aside aside-like" id="aside-3"></aside></p></li>
 <li id="li-49"><p id="p-208"><em class="emphasis">Multiplication modulo <span class="process-math">\(m\)</span></em>: <span class="process-math">\(\overline{a}\cdot \overline{b} := \overline{a\cdot b}\text{.}\)</span></p></li>
-</ol></article><p id="p-209">Most elementary propositions about <span class="process-math">\(\Z_m\)</span> can be recast as statements about <span class="process-math">\(\Z\text{.}\)</span> For instance, in proving <a href="" class="xref" data-knowl="./knowl/thm-additionmodulom.html" title="Theorem 1.4.5">Theorem 1.4.5</a> you likely proved that if <span class="process-math">\(m|a-c\)</span> and <span class="process-math">\(m|b-d\)</span> that <span class="process-math">\(m|(a+b)-(c+d)\text{.}\)</span> However, as the statements become more complex, repeatedly reshaping statements about <span class="process-math">\(Z_m\)</span> as statements about <span class="process-math">\(\Z\)</span> becomes cumbersome and unhelpful. Instead, you are encouraged to become comfortable doing arithmetic modulo <span class="process-math">\(m\)</span> or, put another way, arithmetic with the equivalence classes of <span class="process-math">\(\Z_m\)</span> as defined in <a href="" class="xref" data-knowl="./knowl/def-arithemticmodm.html" title="Definition 1.4.8">Definition 1.4.8</a>.</p>
+</ol></article><p id="p-209">Most elementary propositions about <span class="process-math">\(\Z_m\)</span> can be recast as statements about <span class="process-math">\(\Z\text{.}\)</span> For instance, in proving <a href="" class="xref" data-knowl="./knowl/thm-additionmodulom.html" title="Theorem 1.4.10">Theorem 1.4.10</a> you likely proved that if <span class="process-math">\(m|a-c\)</span> and <span class="process-math">\(m|b-d\)</span> that <span class="process-math">\(m|(a+b)-(c+d)\text{.}\)</span> However, as the statements become more complex, repeatedly reshaping statements about <span class="process-math">\(Z_m\)</span> as statements about <span class="process-math">\(\Z\)</span> becomes cumbersome and unhelpful. Instead, you are encouraged to become comfortable doing arithmetic modulo <span class="process-math">\(m\)</span> or, put another way, arithmetic with the equivalence classes of <span class="process-math">\(\Z_m\)</span> as defined in <a href="" class="xref" data-knowl="./knowl/def-arithemticmodm.html" title="Definition 1.4.13">Definition 1.4.13</a>.</p>
 <article class="activity project-like" id="activity-6"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.4.6</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.4.14</span><span class="period">.</span>
 </h3>
 <p id="p-210">Without passing back to <span class="process-math">\(\Z\text{,}\)</span> find the smallest nonnegative integer representative of the resulting equivalence classes.</p>
 <ol class="decimal">
@@ -271,20 +273,21 @@ S\times T = \setof{(s,t)}{s\in S, \ t\in T}.
 <li id="li-54"><p id="p-derived-li-54"><span class="process-math">\(\overline{3}\cdot(\overline{5}^2+\overline{3}^3)\)</span> in <span class="process-math">\(\Z_{20}\)</span></p></li>
 </ol></article><p id="p-211">In the remainder of this section, we investigate fundamental properties of arithmetic in <span class="process-math">\(\Z_m\text{.}\)</span></p>
 <article class="investigation project-like" id="q_zmodmcancel"><h3 class="heading">
-<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.4.7</span><span class="period">.</span>
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">1.4.15</span><span class="period">.</span>
 </h3>
 <p id="p-212">Let <span class="process-math">\(\overline{a},\overline{b},\overline{c}\in \Z_m\)</span> with <span class="process-math">\(\overline{c}\ne\overline{0}\)</span> and <span class="process-math">\(m &gt; 1\text{.}\)</span> If <span class="process-math">\(\overline{a}\cdot \overline{c} = \overline{b}\cdot \overline{c}\text{,}\)</span> is it true that <span class="process-math">\(\overline{a} = \overline{b}\text{?}\)</span> If so, prove it. If not, find an example of when the statement fails to hold.</p></article><article class="theorem theorem-like" id="theorem_cancelrelprime"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.4.9</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.4.16</span><span class="period">.</span>
 </h3>
 <p id="p-214">Let <span class="process-math">\(a,b,c\text{,}\)</span> and <span class="process-math">\(m\)</span> be integers with <span class="process-math">\(m &gt; 1\)</span> and <span class="process-math">\(\gcd(c,m)=1\text{.}\)</span> Then there is some <span class="process-math">\(x\in \Z\)</span> such that <span class="process-math">\(\overline{c} \overline{x} = \overline{1}\text{.}\)</span></p>
 <p id="p-215">Conclude that if <span class="process-math">\(\overline{a} \cdot\overline{c} = \overline{b}\cdot\overline{c}\)</span> in <span class="process-math">\(\Z_m\)</span> that <span class="process-math">\(\overline{a} = \overline{b}\text{.}\)</span></p></article><article class="theorem theorem-like" id="theorem_cancelinZp"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.4.10</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.4.17</span><span class="period">.</span>
 </h3>
 <p id="p-217">Let <span class="process-math">\(p\in \N\)</span> be prime and <span class="process-math">\(\overline{a},\overline{b},\overline{c}\in \Z_p\)</span> such that <span class="process-math">\(\overline{c}\ne \overline{0}\text{.}\)</span> Then</p>
 <ol class="decimal">
 <li id="li-55"><p id="p-218">there is some <span class="process-math">\(\overline{x}\in \Z_p\)</span> such that <span class="process-math">\(\overline{c}\cdot \overline{x} = \overline{1}\text{;}\)</span> and,</p></li>
 <li id="li-56"><p id="p-219">if <span class="process-math">\(\overline{a} \cdot\overline{c} = \overline{b}\cdot\overline{c}\text{,}\)</span> <span class="process-math">\(\overline{a} = \overline{b}\text{.}\)</span></p></li>
-</ol></article></section></div></main>
+</ol></article></section><div class="hidden-content tex2jax_ignore" id="hk-fn-12"><div class="fn"><code class="code-inline tex2jax_ignore">https://en.wikipedia.org/wiki/Order_theory</code></div></div>
+</div></main>
 </div>
 </body>
 </html>

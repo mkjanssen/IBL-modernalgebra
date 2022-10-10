@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-05T11:00:47-06:00    *-->
-<!--*                                    *-->
-<!--*      https://pretextbook.org       *-->
-<!--*                                    *-->
-<!--**************************************-->
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-05-16T10:29:36-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>It is a straightforward definition check to see that \(I\) as defined in the hint is an ideal. That we are in a PID means there exists \(a\) such that \(I=\cup I_j=\ideal{a}\text{.}\) Therefore there exists \(j\) such that \(a\in I_j\text{.}\) It follows that \(I=I_j\) and in particular that \(I=I_k\) for all \(k\geq j\text{.}\)</p></article></body>
+<body class="ignore-math"><article class="hiddenproof"><p><em class="emphasis">Existence:</em> If <span class="process-math">\(f(x) = 0\text{,}\)</span> then <span class="process-math">\(q(x) = 0\)</span> and <span class="process-math">\(r(x) = 0\)</span> will do. If <span class="process-math">\(f(x)\ne 0\)</span> and <span class="process-math">\(\deg f \lt \deg g\text{,}\)</span> then <span class="process-math">\(q(x) = 0\)</span> and <span class="process-math">\(r(x) = f(x)\)</span> will suffice. Thus, we need only consider the case in which <span class="process-math">\(f(x) \ne 0\)</span> and <span class="process-math">\(\deg f \ge \deg g\text{.}\)</span> We use induction on <span class="process-math">\(\deg f = m\text{.}\)</span></p>
+<p>When <span class="process-math">\(m = 0\text{,}\)</span> <span class="process-math">\(\deg g \le 0 = \deg f\text{,}\)</span> and as <span class="process-math">\(g(x) \ne 0\text{,}\)</span> both <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are nonzero constants. Then <span class="process-math">\(r = 0\)</span> and <span class="process-math">\(q = fg^{-1}\)</span> will work.</p>
+<p>Now assume <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> exist whenever <span class="process-math">\(\deg f \lt m\text{.}\)</span> Assume <span class="process-math">\(\deg f = m\)</span> and write <span class="process-math">\(f(x) = a_0 + a_1 x + \cdots + a_m x^m\)</span> and <span class="process-math">\(g(x) = b_0 + b_1 x + \cdots + b_n x^n\text{.}\)</span> Use <a href="" class="xref" data-knowl="./knowl/lem_polydivalglem.html" title="Lemma 2.4.17">Lemma 2.4.17</a> and set <span class="process-math">\(h(x) = f(x) - a_m b_n^{-1} x^{m-n} g(x)\text{,}\)</span> which must have degree less than <span class="process-math">\(f\text{.}\)</span> Thus, by induction, there exist <span class="process-math">\(q_1, r_1\in F[x]\)</span> such that <span class="process-math">\(h = g q_1 + r_1\text{,}\)</span> with <span class="process-math">\(r_1 = 0\)</span> or <span class="process-math">\(\deg r_1 \lt \deg g\text{.}\)</span></p>
+<p>We therefore have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+f(x) \amp = a_m b_n^{-1} x^{m-n} g(x) + h(x)\\
+\amp = a_m b_n^{-1} x^{m-n} g(x) + g(x) q_1(x) + r_1(x)\\
+\amp = (a_m b_n^{-1} x^{m-n} + q_1(x)) g(x) + r_1(x)\text{,}
+\end{align*}
+</div>
+<p class="continuation">where <span class="process-math">\(q = a_m b_n^{-1} x^{m-n} + q_1(x)\)</span> and <span class="process-math">\(r = r_1(x)\)</span> have the desired properties.</p>
+<p><em class="emphasis">Uniqueness:</em> Suppose <span class="process-math">\(f = gq + r\)</span> and <span class="process-math">\(f = g\hat{q} + \hat{r}\text{,}\)</span> where <span class="process-math">\(r,\hat{r}\)</span> both have the desired properties. Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+0 = g[q - \hat{q}] + [r - \hat{r}]\text{,}
+\end{equation*}
+</div>
+<p class="continuation">or <span class="process-math">\(\hat{r} - r = g [q - \hat{q}]\text{.}\)</span> Thus either <span class="process-math">\(\hat{r} - r = 0\text{,}\)</span> or <span class="process-math">\(\hat{r} - r\)</span> has degree at least <span class="process-math">\(\deg g\text{.}\)</span> The latter is clearly impossible, so <span class="process-math">\(\hat{r} = r\)</span> and <span class="process-math">\(\hat{q} = q\text{.}\)</span></p></article></body>
 </html>

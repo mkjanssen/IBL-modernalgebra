@@ -1,76 +1,58 @@
 <!DOCTYPE html>
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-05T11:00:43-06:00    *-->
-<!--*                                    *-->
-<!--*      https://pretextbook.org       *-->
-<!--*                                    *-->
-<!--**************************************-->
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-05-16T10:29:34-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
 <html lang="en-US">
-<head>
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Principal Ideals</title>
+<title>Principal Ideals and Euclidean Domains</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
-    },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>(function() {
-  var cx = '017464805646507420634:llcu9bfj13p';
-  var gcse = document.createElement('script');
-  gcse.type = 'text/javascript';
-  gcse.async = true;
-  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(gcse, s);
-})();
-</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Rings With Inquiry">
+<meta property="book:author" content="Michael Janssen">
+<meta property="book:author" content="Melissa Lindsey">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script async="" src="https://cse.google.com/cse.js?cx=017464805646507420634:llcu9bfj13p"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.13;
-</script>
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\labelitemi}{$\diamond$}
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand{\labelitemi}{$\diamond$}
 \def\arraystretch{1.5}
 \newcommand{\contentsfinish}{}
 \newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
@@ -121,10 +103,19 @@ var js_version = 0.13;
 \def\R{{\mathbb R}}
 \newcommand{\h}[1]{{\textbf{#1}}}
 \def\presnotes{}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{conj}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{investigation}[theorem]{Investigation}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\)</div>
+\)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="book-1.html"><span class="title">Rings With Inquiry</span></a></h1>
@@ -144,256 +135,274 @@ var js_version = 0.13;
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
-<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
-<li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction">Introduction</a></li>
-<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents">A Note to Students</a></li>
-<li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors">A Note to Instructors</a></li>
-<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction" class="internal">Introduction</a></li>
+<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents" class="internal">A Note to Students</a></li>
+<li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors" class="internal">A Note to Instructors</a></li>
+<li><a href="Sec-Versions.html" data-scroll="Sec-Versions" class="internal">Versions of this text</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Integers.html" data-scroll="Sec-Integers"><span class="codenumber">1</span> <span class="title">The Integers</span></a><ul>
-<li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering">Induction and Well-Ordering</a></li>
-<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers">Divisibility in the integers</a></li>
-<li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization">Primes and Factorization</a></li>
-<li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m">The Integers modulo \(m\)</a></li>
+<a href="Sec-Integers.html" data-scroll="Sec-Integers" class="internal"><span class="codenumber">1</span> <span class="title">The Integers</span></a><ul>
+<li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering" class="internal">Induction and Well-Ordering</a></li>
+<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers" class="internal">Divisibility and GCDs in the Integers</a></li>
+<li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization" class="internal">Primes and Factorization</a></li>
+<li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m" class="internal">The Integers modulo <span class="process-math">\(m\)</span></a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Fields-and-Rings.html" data-scroll="Sec-Fields-and-Rings"><span class="codenumber">2</span> <span class="title">Fields and Rings</span></a><ul>
-<li><a href="SubSec-Fields.html" data-scroll="SubSec-Fields">Fields</a></li>
-<li><a href="SubSec-Rings.html" data-scroll="SubSec-Rings">Rings</a></li>
-<li><a href="SubSec-Divisibility-in-Domains.html" data-scroll="SubSec-Divisibility-in-Domains">Divisibility in Integral Domains</a></li>
-<li><a href="SubSec-Principal-Ideals.html" data-scroll="SubSec-Principal-Ideals" class="active">Principal Ideals</a></li>
+<a href="Sec-Fields-and-Rings.html" data-scroll="Sec-Fields-and-Rings" class="internal"><span class="codenumber">2</span> <span class="title">Fields and Rings</span></a><ul>
+<li><a href="SubSec-Fields.html" data-scroll="SubSec-Fields" class="internal">Fields</a></li>
+<li><a href="SubSec-Rings.html" data-scroll="SubSec-Rings" class="internal">Rings</a></li>
+<li><a href="SubSec-Divisibility-in-Domains.html" data-scroll="SubSec-Divisibility-in-Domains" class="internal">Divisibility in Integral Domains</a></li>
+<li><a href="SubSec-Principal-Ideals.html" data-scroll="SubSec-Principal-Ideals" class="active">Principal Ideals and Euclidean Domains</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Factorization.html" data-scroll="Sec-Factorization"><span class="codenumber">3</span> <span class="title">Factorization</span></a><ul>
-<li><a href="SubSec-Factoring-Polynomials.html" data-scroll="SubSec-Factoring-Polynomials">Factoring Polynomials</a></li>
-<li><a href="SubSec-Factorization-in-Euclidean-Domains.html" data-scroll="SubSec-Factorization-in-Euclidean-Domains">Factorization in Euclidean Domains</a></li>
-<li><a href="SubSec-Nonunique-Factorization.html" data-scroll="SubSec-Nonunique-Factorization">Nonunique Factorization</a></li>
+<a href="Sec-Factorization.html" data-scroll="Sec-Factorization" class="internal"><span class="codenumber">3</span> <span class="title">Factorization</span></a><ul>
+<li><a href="SubSec-Factoring-Polynomials.html" data-scroll="SubSec-Factoring-Polynomials" class="internal">Factoring Polynomials</a></li>
+<li><a href="SubSec-Factorization-in-Euclidean-Domains.html" data-scroll="SubSec-Factorization-in-Euclidean-Domains" class="internal">Factorization in Euclidean Domains</a></li>
+<li><a href="SubSec-Nonunique-Factorization.html" data-scroll="SubSec-Nonunique-Factorization" class="internal">Nonunique Factorization</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Ideals.html" data-scroll="Sec-Ideals"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a><ul>
-<li><a href="SubSec-Ideals-In-General.html" data-scroll="SubSec-Ideals-In-General">Ideals in general</a></li>
-<li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings">Quotient Rings</a></li>
-<li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms">Homomorphisms</a></li>
+<a href="Sec-Ideals.html" data-scroll="Sec-Ideals" class="internal"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a><ul>
+<li><a href="SubSec-Ideals-In-General.html" data-scroll="SubSec-Ideals-In-General" class="internal">Ideals in general</a></li>
+<li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms" class="internal">Homomorphisms</a></li>
+<li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings" class="internal">Quotient Rings: New Rings from Old</a></li>
 </ul>
 </li>
-<li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="section" id="SubSec-Principal-Ideals"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Principal Ideals</span>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="SubSec-Principal-Ideals"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Principal Ideals and Euclidean Domains</span>
 </h2>
-<a href="SubSec-Principal-Ideals.html" class="permalink">¶</a><p id="p-366">One of the ways in which mathematicians study the <em class="emphasis">structure</em> of an abstract object is by considering how it interacts with other (related) objects. This is especially true of its <em class="emphasis">sub</em>objects. Thus, in linear algebra, we are often concerned with <em class="emphasis">subspaces</em> of a vector space as a means of understanding the vector space, or even submatrices as a way of understanding a matrix (see, e.g., the cofactor expansion formula for the determinant). In real analysis and topology, the important subobjects are usually open sets, or subsequences, and the study of a graph's subgraphs is an important approach to many questions in graph theory.</p>
-<p id="p-367">In this section, we begin a set-theoretic structural exploration of the notion of ring by considering a particularly important class of subring which will be integral to our understanding of factorization.</p>
-<p id="p-368">These subrings are called <em class="emphasis">ideals</em>. They arose in the work of Kummer and Dedekind as a way of trying to recover some notion of unique factorization in rings that do not have properties like the fundamental theorem of arithmetic in \(\Z\text{.}\)</p>
-<article class="definition definition-like" id="def-ideal"><h6 class="heading">
+<article class="assemblage assemblage-like" id="assemblage-12"><h3 class="heading"><span class="title">Guiding Questions.</span></h3>
+<p id="p-435">In this section, we'll seek to answer the questions: <ul class="disc">
+<li id="li-144"><p id="p-derived-li-144">What are principal ideals, and what are principal ideal domains?</p></li>
+<li id="li-145"><p id="p-derived-li-145">What are Euclidean domains, and how are they related to PIDs?</p></li>
+</ul></p></article><p id="p-436">One of the ways in which mathematicians study the <em class="emphasis">structure</em> of an abstract object is by considering how it interacts with other (related) objects. This is especially true of its <em class="emphasis">sub</em>objects. Thus, in linear algebra, we are often concerned with <em class="emphasis">subspaces</em> of a vector space as a means of understanding the vector space, or even submatrices as a way of understanding a matrix (see, e.g., the cofactor expansion formula for the determinant). In real analysis and topology, the important subobjects are usually open sets, or subsequences, and the study of a graph's subgraphs is an important approach to many questions in graph theory.</p>
+<p id="p-437">In this section, we begin a set-theoretic structural exploration of the notion of ring by considering a particularly important class of subring which will be integral to our understanding of factorization.</p>
+<p id="p-438">These subrings are called <em class="emphasis">ideals</em>. They arose in the work of Kummer and Dedekind as a way of trying to recover some notion of unique factorization in rings that do not have properties like the fundamental theorem of arithmetic in <span class="process-math">\(\Z\text{.}\)</span></p>
+<article class="definition definition-like" id="def-ideal"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span>
-</h6>
-<p id="p-369">A subset \(I\) of a (not necessarily commutative) ring \(R\) is called an <dfn class="terminology">ideal</dfn> if:</p>
+</h3>
+<p id="p-439">A subset <span class="process-math">\(I\)</span> of a (not necessarily commutative) ring <span class="process-math">\(R\)</span> is called an <dfn class="terminology">ideal</dfn> if:</p>
 <ol class="decimal">
-<li id="li-95"><p id="p-370">\(0\in I\)</p></li>
-<li id="li-96"><p id="p-371">for all \(x,y\in I\text{,}\) \(x+y\in I\text{;}\) and,</p></li>
-<li id="li-97"><p id="p-372">for all \(x\in I\) and for all \(r\in R\text{,}\) \(xr\in I\) and \(rx\in I\text{.}\)</p></li>
-</ol></article><p id="p-373">Observe that the third requirement for a set \(I\) to be an ideal of \(R\) is simplified slightly if \(R\) is commutative (which, we recall, all of our rings are).</p>
-<p id="p-374">There are many important examples and types of ideals, but there are also some trivial ideals contained in every ring.</p>
-<article class="theorem theorem-like" id="theorem-33"><h6 class="heading">
+<li id="li-146"><p id="p-440"><span class="process-math">\(\displaystyle 0\in I\)</span></p></li>
+<li id="li-147"><p id="p-441">for all <span class="process-math">\(x,y\in I\text{,}\)</span> <span class="process-math">\(x+y\in I\text{;}\)</span> and,</p></li>
+<li id="li-148"><p id="p-442">for all <span class="process-math">\(x\in I\)</span> and for all <span class="process-math">\(r\in R\text{,}\)</span> <span class="process-math">\(xr\in I\)</span> and <span class="process-math">\(rx\in I\text{.}\)</span></p></li>
+</ol></article><p id="p-443">Observe that the third requirement for a set <span class="process-math">\(I\)</span> to be an ideal of <span class="process-math">\(R\)</span> is simplified slightly if <span class="process-math">\(R\)</span> is commutative (which, we recall, all of our rings are).</p>
+<p id="p-444">There are many important examples and types of ideals, but there are also some trivial ideals contained in every ring.</p>
+<article class="theorem theorem-like" id="theorem-34"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span>
-</h6>
-<p id="p-375">Let \(R\) be a ring. Then \(R\) and \(\set{0}\) are ideals of \(R\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-34"><h6 class="heading">
+</h3>
+<p id="p-445">Let <span class="process-math">\(R\)</span> be a ring. Then <span class="process-math">\(R\)</span> and <span class="process-math">\(\set{0}\)</span> are ideals of <span class="process-math">\(R\text{.}\)</span></p></article><article class="theorem theorem-like" id="theorem-35"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span>
-</h6>
-<p id="p-376">All ideals are subrings.</p></article><article class="hiddenproof" id="proof-31"><a data-knowl="" class="id-ref original" data-refid="hk-proof-31"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-31"><article class="hiddenproof"><p id="p-377">It is straightforward to check that all conditions of <a class="xref" data-knowl="./knowl/theorem_subringtest.html" title="Theorem 2.2.6">Theorem 2.2.6</a> are satisfied.</p></article></div>
-<p id="p-378">The following theorem provides a useful characterization of when an ideal \(I\) is in fact the whole ring.</p>
-<article class="theorem theorem-like" id="theorem-35"><h6 class="heading">
+</h3>
+<p id="p-446">All ideals are subrings.</p></article><article class="hiddenproof" id="proof-37"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-37"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-37"><article class="hiddenproof"><p id="p-447">It is straightforward to check that all conditions of <a href="" class="xref" data-knowl="./knowl/theorem_subringtest.html" title="Theorem 2.2.14">Theorem 2.2.14</a> are satisfied.</p></article></div>
+<p id="p-448">The following theorem provides a useful characterization of when an ideal <span class="process-math">\(I\)</span> is in fact the whole ring.</p>
+<article class="theorem theorem-like" id="theorem-36"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span>
-</h6>
-<p id="p-379">Let \(R\) be a ring and \(I\) an ideal of \(R\text{.}\) Then \(I = R\) if and only \(I\) contains a unit of \(R\text{.}\)</p></article><article class="hiddenproof" id="proof-32"><a data-knowl="" class="id-ref original" data-refid="hk-proof-32"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-32"><article class="hiddenproof"><p id="p-380">If \(I = R\text{,}\) \(1\in R\) will do.</p>
-<p id="p-381">If there is a unit \(u\in I\text{,}\) then given any \(r\in R\text{,}\) \(r = r u^{-1} u = (ru^{-1}) u \in I\text{,}\) so \(I = R\text{.}\)</p></article></div>
-<p id="p-382">The most important type of ideals (for our work, at least), are those which are the sets of all multiples of a single element in the ring. Such ideals are called <em class="emphasis">principal ideals</em>.</p>
-<article class="theorem theorem-like" id="theorem-36"><h6 class="heading">
+</h3>
+<p id="p-449">Let <span class="process-math">\(R\)</span> be a ring and <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{.}\)</span> Then <span class="process-math">\(I = R\)</span> if and only <span class="process-math">\(I\)</span> contains a unit of <span class="process-math">\(R\text{.}\)</span></p></article><article class="hiddenproof" id="proof-38"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-38"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-38"><article class="hiddenproof"><p id="p-450">If <span class="process-math">\(I = R\text{,}\)</span> <span class="process-math">\(1\in R\)</span> will do.</p>
+<p id="p-451">If there is a unit <span class="process-math">\(u\in I\text{,}\)</span> then given any <span class="process-math">\(r\in R\text{,}\)</span> <span class="process-math">\(r = r u^{-1} u = (ru^{-1}) u \in I\text{,}\)</span> so <span class="process-math">\(I = R\text{.}\)</span></p></article></div>
+<p id="p-452">The most important type of ideals (for our work, at least), are those which are the sets of all multiples of a single element in the ring. Such ideals are called <em class="emphasis">principal ideals</em>.</p>
+<article class="theorem theorem-like" id="theorem-37"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.5</span><span class="period">.</span>
-</h6>
-<p id="p-383">Let \(R\) be commutative with identity and let \(a\in R\text{.}\) The set</p>
-<div class="displaymath">
+</h3>
+<p id="p-453">Let <span class="process-math">\(R\)</span> be commutative with identity and let <span class="process-math">\(a\in R\text{.}\)</span> The set</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \ideal{a} = \setof{ra}{r\in R}
 \end{equation*}
 </div>
-<p>is an ideal (called the <em class="emphasis">principal ideal generated by \(a\)</em>).</p></article><article class="hiddenproof" id="proof-33"><a data-knowl="" class="id-ref original" data-refid="hk-proof-33"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-33"><article class="hiddenproof"><p id="p-384">Observe that \(0 = 0\cdot a \in \ideal{a}\text{.}\)</p>
-<p id="p-385">Moreover, if \(r_1 a, r_2 a\in \ideal{a}\text{,}\) \(r_1 a - r_2 a = (r_1 - r_2)a \in \ideal{a}\text{.}\) Finally, if \(x\in R\) and \(r a\in \ideal{a}\text{,}\) \(x (ra) = (xr) a \in \ideal{a}\text{.}\)</p>
-<p id="p-386">Thus, \(\ideal{a}\) is an ideal.</p></article></div>
-<p id="p-387">The element \(a\) in the theorem is known as the <em class="emphasis">generator</em> of \(\ideal{a}\text{.}\)</p>
-<article class="investigation project-like" id="investigation-13"><h6 class="heading">
-<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span>
-</h6>
-<p id="p-388">Let \(R\) be commutative with identity, and let \(x,y,z\in R\text{.}\) Give necessary and sufficient conditions for \(z\in \ideal{x}\) and, separately, \(\ideal{x} \subseteq \ideal{y}\text{.}\)</p>
-<p id="p-389">That is, fill in the blanks: “\(z\in \ideal{x} \Leftrightarrow\) \makebox[0.75in]{\hrulefill}” and “\(\ideal{x}\subseteq \ideal{y} \Leftrightarrow\) \makebox[0.75in]{\hrulefill}.”</p>
-<p id="p-390">Justify your answers.</p>
+<p class="continuation">is an ideal (called the <em class="emphasis">principal ideal generated by <span class="process-math">\(a\)</span></em>).</p></article><article class="hiddenproof" id="proof-39"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-39"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-39"><article class="hiddenproof"><p id="p-454">Observe that <span class="process-math">\(0 = 0\cdot a \in \ideal{a}\text{.}\)</span></p>
+<p id="p-455">Moreover, if <span class="process-math">\(r_1 a, r_2 a\in \ideal{a}\text{,}\)</span> <span class="process-math">\(r_1 a - r_2 a = (r_1 - r_2)a \in \ideal{a}\text{.}\)</span> Finally, if <span class="process-math">\(x\in R\)</span> and <span class="process-math">\(r a\in \ideal{a}\text{,}\)</span> <span class="process-math">\(x (ra) = (xr) a \in \ideal{a}\text{.}\)</span></p>
+<p id="p-456">Thus, <span class="process-math">\(\ideal{a}\)</span> is an ideal.</p></article></div>
+<p id="p-457">The element <span class="process-math">\(a\)</span> in the theorem is known as a <em class="emphasis">generator</em> of <span class="process-math">\(\ideal{a}\text{.}\)</span></p>
+<article class="investigation project-like" id="investigation-19"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.4.6</span><span class="period">.</span>
+</h3>
+<p id="p-458">Let <span class="process-math">\(R\)</span> be commutative with identity, and let <span class="process-math">\(x,y,z\in R\text{.}\)</span> Give necessary and sufficient conditions for <span class="process-math">\(z\in \ideal{x}\)</span> and, separately, <span class="process-math">\(\ideal{x} \subseteq \ideal{y}\text{.}\)</span></p>
+<p id="p-459">That is, fill in the blanks: “<span class="process-math">\(z\in \ideal{x} \Leftrightarrow\)</span> _________” and “<span class="process-math">\(\ideal{x}\subseteq \ideal{y} \Leftrightarrow\)</span> _________.”</p>
+<p id="p-460">Justify your answers.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-10" id="answer-10"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like">
-<p id="p-391">We have “\(z\in \ideal{x} \Leftrightarrow x|z\)” and “\(\ideal{x}\subseteq \ideal{y} \Leftrightarrow y|x\)”<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-7" id="fn-7"><sup> 1 </sup></a>.</p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn">An acceptable alternative would be: \(x\in \ideal{y}\text{.}\) Make sure students are aware of this!</div></div>
-<p id="p-392">Note that \(z\in \ideal{x} \Leftrightarrow \exists r\in R, z = xr \Leftrightarrow x|z\text{.}\)</p>
-<p id="p-393">Similarly, suppose \(\ideal{x}\subseteq \ideal{y}\text{.}\) Then \(x\in \ideal{y}\text{,}\) so \(y|x\text{.}\) Conversely, if \(y|x\text{,}\) then there is some \(r\in R\) such that \(x = yr\text{,}\) and thus for all \(ax\in \ideal{x}\text{,}\) \(ax = (ar)y \in \ideal{y}\text{.}\)</p>
-<p id="p-394">Note that this means that if we want to know if \(\ideal{x}\subseteq \ideal{y}\text{,}\) it's enough to check that \(x\in \ideal{y}\text{.}\)</p>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like">
+<p id="p-461">We have “<span class="process-math">\(z\in \ideal{x} \Leftrightarrow x|z\)</span>” and “<span class="process-math">\(\ideal{x}\subseteq \ideal{y} \Leftrightarrow y|x\)</span>”<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-18" id="fn-18"><sup> 1 </sup></a>.</p>
+<p id="p-462">Note that <span class="process-math">\(z\in \ideal{x} \Leftrightarrow \exists r\in R, z = xr \Leftrightarrow x|z\text{.}\)</span></p>
+<p id="p-463">Similarly, suppose <span class="process-math">\(\ideal{x}\subseteq \ideal{y}\text{.}\)</span> Then <span class="process-math">\(x\in \ideal{y}\text{,}\)</span> so <span class="process-math">\(y|x\text{.}\)</span> Conversely, if <span class="process-math">\(y|x\text{,}\)</span> then there is some <span class="process-math">\(r\in R\)</span> such that <span class="process-math">\(x = yr\text{,}\)</span> and thus for all <span class="process-math">\(ax\in \ideal{x}\text{,}\)</span> <span class="process-math">\(ax = (ar)y \in \ideal{y}\text{.}\)</span></p>
+<p id="p-464">Note that this means that if we want to know if <span class="process-math">\(\ideal{x}\subseteq \ideal{y}\text{,}\)</span> it's enough to check that <span class="process-math">\(x\in \ideal{y}\text{.}\)</span></p>
 </div></div>
-</div></article><p id="p-395">Principal ideals may have more than one generator.</p>
-<article class="theorem theorem-like" id="theorem-37"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.6</span><span class="period">.</span>
-</h6>
-<p id="p-396">Let \(R\) be a ring and \(a\in R\text{.}\) Then \(\ideal{a} = \ideal{ua}\text{,}\) where \(u\) is any unit of \(R\text{.}\)</p></article><article class="hiddenproof" id="proof-34"><a data-knowl="" class="id-ref original" data-refid="hk-proof-34"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-34"><article class="hiddenproof"><p id="p-397">Apply the answer to the question.</p></article></div>
-<article class="activity project-like" id="activity-10"><h6 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.2</span><span class="period">.</span>
-</h6>
-<p id="p-398">In \(R = \Z\text{,}\) describe the principal ideals generated by</p>
+</div></article><p id="p-465">Principal ideals may have more than one generator.</p>
+<article class="theorem theorem-like" id="theorem-38"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.7</span><span class="period">.</span>
+</h3>
+<p id="p-466">Let <span class="process-math">\(R\)</span> be a ring and <span class="process-math">\(a\in R\text{.}\)</span> Then <span class="process-math">\(\ideal{a} = \ideal{ua}\text{,}\)</span> where <span class="process-math">\(u\)</span> is any unit of <span class="process-math">\(R\text{.}\)</span></p></article><article class="hiddenproof" id="proof-40"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-40"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-40"><article class="hiddenproof"><p id="p-467">Apply the answer to the question.</p></article></div>
+<article class="activity project-like" id="activity-11"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.8</span><span class="period">.</span>
+</h3>
+<p id="p-468">In <span class="process-math">\(R = \Z\text{,}\)</span> describe the principal ideals generated by</p>
 <ol class="decimal">
-<li id="li-98"><p id="p-399">2</p></li>
-<li id="li-99"><p id="p-400">\(-9\)</p></li>
-<li id="li-100"><p id="p-401">9</p></li>
-<li id="li-101"><p id="p-402">0</p></li>
-<li id="li-102"><p id="p-403">27</p></li>
-<li id="li-103"><p id="p-404">3</p></li>
+<li id="li-149"><p id="p-469">2</p></li>
+<li id="li-150"><p id="p-470"><span class="process-math">\(\displaystyle -9\)</span></p></li>
+<li id="li-151"><p id="p-471">9</p></li>
+<li id="li-152"><p id="p-472">0</p></li>
+<li id="li-153"><p id="p-473">27</p></li>
+<li id="li-154"><p id="p-474">3</p></li>
 </ol>
-<p id="p-405">Determine the subset relations among the above ideals.</p>
+<p id="p-475">Determine the subset relations among the above ideals.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-22" id="solution-22"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-22"><div class="solution solution-like">
 <ol class="decimal">
-<li id="li-104"><p id="p-406">All multiples of 2</p></li>
-<li id="li-105"><p id="p-407">All multiples of \(-9\)</p></li>
-<li id="li-106"><p id="p-408">All multiples of 9; same as the previous part.</p></li>
-<li id="li-107"><p id="p-409">\(\set{0}\)</p></li>
-<li id="li-108"><p id="p-410">All multiples of 27</p></li>
-<li id="li-109"><p id="p-411">All multiples of 3</p></li>
+<li id="li-155"><p id="p-476">All multiples of 2</p></li>
+<li id="li-156"><p id="p-477">All multiples of <span class="process-math">\(-9\)</span></p></li>
+<li id="li-157"><p id="p-478">All multiples of 9; same as the previous part.</p></li>
+<li id="li-158"><p id="p-479"><span class="process-math">\(\displaystyle \set{0}\)</span></p></li>
+<li id="li-159"><p id="p-480">All multiples of 27</p></li>
+<li id="li-160"><p id="p-481">All multiples of 3</p></li>
 </ol>
-<p id="p-412">We have \(\ideal{0}\subsetneq \ideal{27}\subsetneq \ideal{-9} = \ideal{9} \subsetneq \ideal{3}\text{.}\) The ideal \(\ideal{2}\) only contains \(\ideal{0}\text{,}\) which is a subset of all ideals.</p>
+<p id="p-482">We have <span class="process-math">\(\ideal{0}\subsetneq \ideal{27}\subsetneq \ideal{-9} = \ideal{9} \subsetneq \ideal{3}\text{.}\)</span> The ideal <span class="process-math">\(\ideal{2}\)</span> only contains <span class="process-math">\(\ideal{0}\text{,}\)</span> which is a subset of all ideals.</p>
 </div></div>
-</div></article><p id="p-413">It is the case in many familiar settings that all ideals are principal. Such domains are given a special name.</p>
-<article class="definition definition-like" id="definition-28"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.7</span><span class="period">.</span>
-</h6>
-<p id="p-414">An integral domain \(R\) in which every ideal is principal is known as a <dfn class="terminology">principal ideal domain (PID)</dfn>.</p></article><article class="theorem theorem-like" id="thm_ZisPID"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.8</span><span class="period">.</span>
-</h6>
-<p id="p-415">The ring \(\Z\) is a principal ideal domain.</p>
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-3" id="hint-3"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-3"><div class="hint solution-like"><p id="p-416">Use properties specific to \(\Z\text{,}\) perhaps from <a href="Sec-Integers.html" class="internal" title="Chapter 1: The Integers">Section 1</a>.</p></div></div></article><article class="hiddenproof" id="proof-35"><a data-knowl="" class="id-ref original" data-refid="hk-proof-35"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-35"><article class="hiddenproof"><p id="p-417">Let \(I\subseteq Z\) be an ideal. If \(I = \set{0}\text{,}\) then \(I = \ideal{0}\text{,}\) so suppose there is some nonzero \(x\in I\text{.}\) Define \(S = \setof{m\in \Z}{m &gt; 0}\text{.}\) Note that \(S\ne \emptyset\text{,}\) as if \(m\in I\text{,}\) \((-1)m \in I\) also.</p>
-<p id="p-418">By WOP, \(S\) has a least element, call it \(d\text{.}\)</p>
-<p id="p-419"><em class="emphasis">Claim:</em> \(I = \ideal{d}\text{.}\)</p>
-<p id="p-420">It is clear that \(\ideal{d}\subseteq I\text{.}\) Now let \(x\in I\) be nonzero, and write \(x = dq + r\) using the division algorithm. Observe that \(0 \le r = x - dq \lt d\text{,}\) but as \(x\in I\) and \(-dq \in I\text{,}\) we must have \(r\in I\text{.}\) To avoid contradicting the WOP, we must have \(r = 0\text{.}\) Thus, \(x = dq\) and \(x\in \ideal{d}\text{.}\)</p></article></div>
-<article class="activity project-like" id="activity-11"><h6 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span>
-</h6>
-<p id="p-421">Find an integer \(d\) such that \(I = \ideal{d}\subseteq \Z\text{,}\) if</p>
+</div></article><p id="p-483">It is the case in many familiar settings that all ideals are principal. Such domains are given a special name.</p>
+<article class="definition definition-like" id="definition-27"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.9</span><span class="period">.</span>
+</h3>
+<p id="p-484">An integral domain <span class="process-math">\(R\)</span> in which every ideal is principal is known as a <dfn class="terminology">principal ideal domain (PID)</dfn>.</p></article><article class="theorem theorem-like" id="thm_ZisPID"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.10</span><span class="period">.</span>
+</h3>
+<p id="p-485">The ring <span class="process-math">\(\Z\)</span> is a principal ideal domain.</p>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-9" id="hint-9"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like"><p id="p-486">Use properties specific to <span class="process-math">\(\Z\text{,}\)</span> perhaps from <a href="Sec-Integers.html" class="internal" title="Chapter 1: The Integers">Section 1</a>.</p></div></div></article><article class="hiddenproof" id="proof-41"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-41"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-41"><article class="hiddenproof"><p id="p-487">Let <span class="process-math">\(I\subseteq Z\)</span> be an ideal. If <span class="process-math">\(I = \set{0}\text{,}\)</span> then <span class="process-math">\(I = \ideal{0}\text{,}\)</span> so suppose there is some nonzero <span class="process-math">\(x\in I\text{.}\)</span> Define <span class="process-math">\(S = \setof{m\in \Z}{m &gt; 0}\text{.}\)</span> Note that <span class="process-math">\(S\ne \emptyset\text{,}\)</span> as if <span class="process-math">\(m\in I\text{,}\)</span> <span class="process-math">\((-1)m \in I\)</span> also.</p>
+<p id="p-488">By WOP, <span class="process-math">\(S\)</span> has a least element, call it <span class="process-math">\(d\text{.}\)</span></p>
+<p id="p-489"><em class="emphasis">Claim:</em> <span class="process-math">\(I = \ideal{d}\text{.}\)</span></p>
+<p id="p-490">It is clear that <span class="process-math">\(\ideal{d}\subseteq I\text{.}\)</span> Now let <span class="process-math">\(x\in I\)</span> be nonzero, and write <span class="process-math">\(x = dq + r\)</span> using the division algorithm. Observe that <span class="process-math">\(0 \le r = x - dq \lt d\text{,}\)</span> but as <span class="process-math">\(x\in I\)</span> and <span class="process-math">\(-dq \in I\text{,}\)</span> we must have <span class="process-math">\(r\in I\text{.}\)</span> To avoid contradicting the WOP, we must have <span class="process-math">\(r = 0\text{.}\)</span> Thus, <span class="process-math">\(x = dq\)</span> and <span class="process-math">\(x\in \ideal{d}\text{.}\)</span></p></article></div>
+<article class="activity project-like" id="activity-12"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.4.11</span><span class="period">.</span>
+</h3>
+<p id="p-491">Find an integer <span class="process-math">\(d\)</span> such that <span class="process-math">\(I = \ideal{d}\subseteq \Z\text{,}\)</span> if</p>
 <ol class="decimal">
-<li id="li-110"><p id="p-422">\(I = \setof{4x+10y}{x,y\in\Z}\)</p></li>
-<li id="li-111"><p id="p-423">\(I = \setof{6s+7t}{s,t\in\Z}\)</p></li>
-<li id="li-112"><p id="p-424">\(I = \setof{9w+12z}{w,z\in\Z}\)</p></li>
-<li id="li-113"><p id="p-425">\(I = \setof{am+bn}{m,n\in\Z}\)</p></li>
+<li id="li-161"><p id="p-492"><span class="process-math">\(\displaystyle I = \setof{4x+10y}{x,y\in\Z}\)</span></p></li>
+<li id="li-162"><p id="p-493"><span class="process-math">\(\displaystyle I = \setof{6s+7t}{s,t\in\Z}\)</span></p></li>
+<li id="li-163"><p id="p-494"><span class="process-math">\(\displaystyle I = \setof{9w+12z}{w,z\in\Z}\)</span></p></li>
+<li id="li-164"><p id="p-495"><span class="process-math">\(\displaystyle I = \setof{am+bn}{m,n\in\Z}\)</span></p></li>
 </ol>
-<p id="p-426">You do not need to prove that each of the sets above are ideals (though you should make sure you can do it).</p>
+<p id="p-496">You do not need to prove that each of the sets above are ideals (though you should make sure you can do it).</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like">
-<p id="p-427">We see:</p>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-23" id="solution-23"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-23"><div class="solution solution-like">
+<p id="p-497">We see:</p>
 <ol class="decimal">
-<li id="li-114"><p id="p-428">\(I= \ideal{2}\)</p></li>
-<li id="li-115"><p id="p-429">\(I = \ideal{1} = \Z\)</p></li>
-<li id="li-116"><p id="p-430">\(I = \ideal{3}\)</p></li>
-<li id="li-117"><p id="p-431">\(I = \ideal{\gcd(a,b)}\)</p></li>
+<li id="li-165"><p id="p-498"><span class="process-math">\(\displaystyle I= \ideal{2}\)</span></p></li>
+<li id="li-166"><p id="p-499"><span class="process-math">\(\displaystyle I = \ideal{1} = \Z\)</span></p></li>
+<li id="li-167"><p id="p-500"><span class="process-math">\(\displaystyle I = \ideal{3}\)</span></p></li>
+<li id="li-168"><p id="p-501"><span class="process-math">\(\displaystyle I = \ideal{\gcd(a,b)}\)</span></p></li>
 </ol>
 </div></div>
-</div></article><article class="theorem theorem-like" id="theorem-39"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.9</span><span class="period">.</span>
-</h6>
-<p id="p-432">Let \(R\) be a principal ideal domain and \(x,y\in R\) be not both zero. Let \(I = \setof{xm+yn}{m,n\in R}\text{.}\) Then:</p>
+</div></article><article class="theorem theorem-like" id="theorem-40"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.12</span><span class="period">.</span>
+</h3>
+<p id="p-502">Let <span class="process-math">\(R\)</span> be a principal ideal domain and <span class="process-math">\(x,y\in R\)</span> be not both zero. Let <span class="process-math">\(I = \setof{xm+yn}{m,n\in R}\text{.}\)</span> Then:</p>
 <ol class="decimal">
-<li id="li-118"><p id="p-433">\(I\) is an ideal, and</p></li>
-<li id="li-119"><p id="p-434">\(I = \ideal{d}\text{,}\) where \(d\) is any greatest common divisor of \(x\) and \(y\text{.}\)</p></li>
+<li id="li-169"><p id="p-503"><span class="process-math">\(I\)</span> is an ideal, and</p></li>
+<li id="li-170"><p id="p-504"><span class="process-math">\(I = \ideal{d}\text{,}\)</span> where <span class="process-math">\(d\)</span> is any greatest common divisor of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span></p></li>
 </ol>
-<p id="p-435">We conclude that there exist \(s,t\in R\) such that \(d = xs + yt\text{.}\)</p></article><article class="hiddenproof" id="proof-36"><a data-knowl="" class="id-ref original" data-refid="hk-proof-36"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-36"><article class="hiddenproof"><p id="p-436">Observe that \(0 = x0 + y0 \in I\text{.}\) Additionally, if \(x m_1 + y n_1, x m_2 + y n_2\in I\text{,}\) then \((x m_1 + y n_1) + (x m_2 + y n_2) = x (m_1 + m_2) + y (n_1 + n_2) \in I\text{,}\) and \(r(x m_1 + y n_1) = x (rm_1) + y(rn_1) \in I\text{.}\) Thus, \(I\) is an ideal.</p>
-<p id="p-437">Since \(R\) is a PID, there exists \(d\in R\) such that \(I = \ideal{d}\text{.}\) We claim that \(d\) is a GCD of \(x\) and \(y\text{.}\)</p>
-<p id="p-438">It is clear that \(d|x\text{,}\) as \(x\cdot 1 + y\cdot 0\in I = \ideal{d}\text{.}\) Similarly, \(d|y\text{.}\)</p>
-<p id="p-439">Now let \(e\in R\) be a common divisor of \(x\) and \(y\text{.}\) We wish to show that \(e|d\text{.}\) Write \(x = e k_1\) and \(y = e k_2\text{.}\) Since \(d\in \ideal{d}\text{,}\) there exist \(s,t\in R\) such that \(d = x s + yt = (e k_1) s + (e k_2)t = e(k_1 s + k_2 t)\text{,}\) and thus \(e|d\text{.}\)</p>
-<p id="p-440">In particular, there exist \(s,t\in R\) such that a GCD \(d\) of \(x\) and \(y\) can be written as \(d = xs + yt\text{.}\)</p></article></div>
-<p id="p-441">We have so far abstracted and axiomatized several important algebraic properties of \(\Z\) that we discussed in <a href="Sec-Integers.html" class="internal" title="Chapter 1: The Integers">§ 1</a>. In particular, we have our usual operations of addition and multiplication, and their interactions; we have notions of divisibility/factorization, irreducibility, and primality; we also have cancellation and greatest common divisors.</p>
-<p id="p-442">Our last major abstraction from \(\Z\) is the division algorithm. The main obstacle to postulating domains with a division algorithm is a clear notion of comparison relations. That is, if \(R\) is an arbitrary domain with \(r,s\in R\text{,}\) is it possible to clearly and sensibly say which of \(r\) or \(s\) is “bigger” ? (Recall that this was a requirement for the division algorithm with nonzero remainders.) However, if there is a way to relate elements of a domain \(R\) to \(\N_0\text{,}\) we can sensibly define a division algorithm.</p>
-<article class="definition definition-like" id="definition-29"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.10</span><span class="period">.</span>
-</h6>
-<p id="p-443">Let \(R\) be an integral domain. We call \(R\) a <dfn class="terminology">Euclidean domain</dfn> if there is a function \(\delta : R\setminus \set{0} \to \N_0\) such that: <aside class="aside aside-like" id="aside-4">This is the lowercase Greek letter <dfn class="terminology">delta</dfn>.</aside>}</p>
+<p id="p-505">We conclude that there exist <span class="process-math">\(s,t\in R\)</span> such that <span class="process-math">\(d = xs + yt\text{.}\)</span></p></article><article class="hiddenproof" id="proof-42"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-42"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-42"><article class="hiddenproof"><p id="p-506">Observe that <span class="process-math">\(0 = x0 + y0 \in I\text{.}\)</span> Additionally, if <span class="process-math">\(x m_1 + y n_1, x m_2 + y n_2\in I\text{,}\)</span> then <span class="process-math">\((x m_1 + y n_1) + (x m_2 + y n_2) = x (m_1 + m_2) + y (n_1 + n_2) \in I\text{,}\)</span> and <span class="process-math">\(r(x m_1 + y n_1) = x (rm_1) + y(rn_1) \in I\text{.}\)</span> Thus, <span class="process-math">\(I\)</span> is an ideal.</p>
+<p id="p-507">Since <span class="process-math">\(R\)</span> is a PID, there exists <span class="process-math">\(d\in R\)</span> such that <span class="process-math">\(I = \ideal{d}\text{.}\)</span> We claim that <span class="process-math">\(d\)</span> is a GCD of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span></p>
+<p id="p-508">It is clear that <span class="process-math">\(d|x\text{,}\)</span> as <span class="process-math">\(x\cdot 1 + y\cdot 0\in I = \ideal{d}\text{.}\)</span> Similarly, <span class="process-math">\(d|y\text{.}\)</span></p>
+<p id="p-509">Now let <span class="process-math">\(e\in R\)</span> be a common divisor of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span> We wish to show that <span class="process-math">\(e|d\text{.}\)</span> Write <span class="process-math">\(x = e k_1\)</span> and <span class="process-math">\(y = e k_2\text{.}\)</span> Since <span class="process-math">\(d\in \ideal{d}\text{,}\)</span> there exist <span class="process-math">\(s,t\in R\)</span> such that <span class="process-math">\(d = x s + yt = (e k_1) s + (e k_2)t = e(k_1 s + k_2 t)\text{,}\)</span> and thus <span class="process-math">\(e|d\text{.}\)</span></p>
+<p id="p-510">In particular, there exist <span class="process-math">\(s,t\in R\)</span> such that a GCD <span class="process-math">\(d\)</span> of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> can be written as <span class="process-math">\(d = xs + yt\text{.}\)</span></p></article></div>
+<p id="p-511">We have so far abstracted and axiomatized several important algebraic properties of <span class="process-math">\(\Z\)</span> that we discussed in <a href="Sec-Integers.html" class="internal" title="Chapter 1: The Integers">§ 1</a>. In particular, we have our usual operations of addition and multiplication, and their interactions; we have notions of divisibility/factorization, irreducibility, and primality; we also have cancellation and greatest common divisors.</p>
+<p id="p-512">Our last major abstraction from <span class="process-math">\(\Z\)</span> is the division algorithm. The main obstacle to postulating domains with a division algorithm is a clear notion of comparison relations. That is, if <span class="process-math">\(R\)</span> is an arbitrary domain with <span class="process-math">\(r,s\in R\text{,}\)</span> is it possible to clearly and sensibly say which of <span class="process-math">\(r\)</span> or <span class="process-math">\(s\)</span> is “bigger” ? (Recall that this was a requirement for the division algorithm with nonzero remainders.) However, if there is a way to relate elements of a domain <span class="process-math">\(R\)</span> to <span class="process-math">\(\N_0\text{,}\)</span> we can sensibly define a division algorithm.</p>
+<article class="definition definition-like" id="definition-28"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.13</span><span class="period">.</span>
+</h3>
+<p id="p-513">Let <span class="process-math">\(R\)</span> be an integral domain. We call <span class="process-math">\(R\)</span> a <dfn class="terminology">Euclidean domain</dfn> if there is a function <span class="process-math">\(\delta : R\setminus \set{0} \to \N_0\)</span> such that: <aside class="aside aside-like" id="aside-5"></aside></p>
 <ol class="decimal">
-<li id="li-120"><p id="p-444">If \(a,b\in R\setminus \set{0}\text{,}\) then \(\delta(a) \le \delta(ab)\text{.}\)</p></li>
-<li id="li-121"><p id="p-445">If \(a,b\in R\text{,}\) \(b\ne 0\text{,}\) then there exist \(q,r\in R\) such that \(a = bq+r\text{,}\) where either \(r = 0\) or \(\delta(r) \lt \delta(b)\text{.}\)</p></li>
+<li id="li-171"><p id="p-514">If <span class="process-math">\(a,b\in R\setminus \set{0}\text{,}\)</span> then <span class="process-math">\(\delta(a) \le \delta(ab)\text{.}\)</span></p></li>
+<li id="li-172"><p id="p-515">If <span class="process-math">\(a,b\in R\text{,}\)</span> <span class="process-math">\(b\ne 0\text{,}\)</span> then there exist <span class="process-math">\(q,r\in R\)</span> such that <span class="process-math">\(a = bq+r\text{,}\)</span> where either <span class="process-math">\(r = 0\)</span> or <span class="process-math">\(\delta(r) \lt \delta(b)\text{.}\)</span></p></li>
 </ol>
-<p id="p-446">We call the function \(\delta\) a <dfn class="terminology">norm</dfn> for \(R\text{.}\)</p></article><p id="p-447">Thus, a Euclidean domain is an integral domain with a division algorithm that behaves in a familiar way.</p>
-<article class="investigation project-like" id="investigation-14"><h6 class="heading">
-<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span>
-</h6>
-<p id="p-448">Is \(\Z\) a Euclidean domain? If so, what is the norm function \(\delta\text{,}\) and why does this function have the required properties of a norm?</p>
+<p id="p-516">We call the function <span class="process-math">\(\delta\)</span> a <dfn class="terminology">norm</dfn> for <span class="process-math">\(R\text{.}\)</span></p></article><p id="p-517">Thus, a Euclidean domain is an integral domain with a division algorithm that behaves in a familiar way. In the remainder of this section, we will investigate the properties of Euclidean domains. First, we consider some examples.</p>
+<article class="theorem theorem-like" id="theorem-41"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.14</span><span class="period">.</span>
+</h3>
+<p id="p-518">The field <span class="process-math">\(\Q\)</span> is a Euclidean domain under ordinary addition and multiplication, with <span class="process-math">\(\delta(x) = 0\)</span> for all <span class="process-math">\(x\in \Q\text{.}\)</span></p></article><article class="hiddenproof" id="proof-43"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-43"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-43"><article class="hiddenproof">TBD.</article></div>
+<article class="investigation project-like" id="investigation-20"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.4.15</span><span class="period">.</span>
+</h3>
+<p id="p-519">Is <span class="process-math">\(\Z\)</span> a Euclidean domain? If so, what is the norm function <span class="process-math">\(\delta\text{,}\)</span> and why does this function have the required properties of a norm?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-11" id="answer-11"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><p id="p-449">Yes. The norm is the absolute value function.</p></div></div>
-</div></article><article class="lemma theorem-like" id="lem_minimaldegreepoly"><h6 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.4.11</span><span class="period">.</span>
-</h6>
-<p id="p-450">Let \(F\) be a field and \(S\subseteq F[x]\) a set containing a nonzero polynomial. Prove that \(S\) contains a polynomial \(f\) such that \(\deg(f) \le \deg(g)\) for all nonzero \(g\in S\text{.}\)</p></article><article class="hiddenproof" id="proof-37"><a data-knowl="" class="id-ref original" data-refid="hk-proof-37"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-37"><article class="hiddenproof"><p id="p-451">Let \(T = \setof{\deg g}{g\in S}\text{.}\) Since \(S\) contains a nonzero polynomial, \(T\ne \emptyset\text{.}\) By WOP, \(T\) contains a minimal element \(d \ge 0\text{,}\) which must be the degree of some polynomial in \(S\text{.}\)</p></article></div>
-<article class="lemma theorem-like" id="lem_polydivalglem"><h6 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.4.12</span><span class="period">.</span>
-</h6>
-<p id="p-452">Let \(F\) be a field and \(f(x),g(x)\in F[x]\) with \(g(x)\ne 0\text{.}\) If \(\deg f(x) \ge \deg g(x) &gt; 0\text{,}\) and \(f(x) = a_0 + a_1 x + \cdots + a_m x^m\) and \(g(x) = b_0 + b_1 x + \cdots + b_n x^n\text{,}\) then \(h(x) = f(x) - a_m b_n^{-1} x^{m-n} g(x)\) has degree strictly less than \(\deg f(x)\text{.}\)</p></article><article class="hiddenproof" id="proof-38"><a data-knowl="" class="id-ref original" data-refid="hk-proof-38"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-38"><article class="hiddenproof"><p id="p-453">The leading term of \(f(x)\) is \(a_m x^m\text{,}\) while the leading term of \(a_m b_n^{-1} x^{m-n} g(x)\) is \(a_m b_n^{-1} x^{m-n} (b_n x^n) = a_m x^m\text{.}\) Thus, the leading term of \(h\) has degree less than \(m\text{.}\)</p></article></div>
-<article class="theorem theorem-like" id="theorem_polydivalg"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.13</span><span class="period">.</span><span class="space"> </span><span class="title">(Polynomial Division Algorithm).</span>
-</h6>
-<aside class="aside aside-like" id="aside-5">See the <a class="external" href="http://www.corestandards.org/Math/Content/HSA/APR/D/6/" target="_blank">CCSS</a> for more.</aside><p id="p-454">Let \(F\) be a field and \(f(x),g(x)\in F[x]\) with \(g(x)\ne 0\text{.}\) Then there exist unique \(q(x),
-r(x) \in F[x]\) such that</p>
-<div class="displaymath">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><p id="p-520">Yes. The norm is the absolute value function.</p></div></div>
+</div></article><article class="lemma theorem-like" id="lem_minimaldegreepoly"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.4.16</span><span class="period">.</span>
+</h3>
+<p id="p-521">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(S\subseteq F[x]\)</span> a set containing a nonzero polynomial. Prove that <span class="process-math">\(S\)</span> contains a polynomial <span class="process-math">\(f\)</span> such that <span class="process-math">\(\deg(f) \le \deg(g)\)</span> for all nonzero <span class="process-math">\(g\in S\text{.}\)</span></p></article><article class="hiddenproof" id="proof-44"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-44"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-44"><article class="hiddenproof"><p id="p-522">Let <span class="process-math">\(T = \setof{\deg g}{g\in S}\text{.}\)</span> Since <span class="process-math">\(S\)</span> contains a nonzero polynomial, <span class="process-math">\(T\ne \emptyset\text{.}\)</span> By WOP, <span class="process-math">\(T\)</span> contains a minimal element <span class="process-math">\(d \ge 0\text{,}\)</span> which must be the degree of some polynomial in <span class="process-math">\(S\text{.}\)</span></p></article></div>
+<article class="lemma theorem-like" id="lem_polydivalglem"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">2.4.17</span><span class="period">.</span>
+</h3>
+<p id="p-523">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(f(x),g(x)\in F[x]\)</span> with <span class="process-math">\(g(x)\ne 0\text{.}\)</span> If <span class="process-math">\(\deg f(x) \ge \deg g(x) &gt; 0\text{,}\)</span> and <span class="process-math">\(f(x) = a_0 + a_1 x + \cdots + a_m x^m\)</span> and <span class="process-math">\(g(x) = b_0 + b_1 x + \cdots + b_n x^n\text{,}\)</span> then <span class="process-math">\(h(x) = f(x) - a_m b_n^{-1} x^{m-n} g(x)\)</span> has degree strictly less than <span class="process-math">\(\deg f(x)\text{.}\)</span></p></article><article class="hiddenproof" id="proof-45"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-45"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-45"><article class="hiddenproof"><p id="p-524">The leading term of <span class="process-math">\(f(x)\)</span> is <span class="process-math">\(a_m x^m\text{,}\)</span> while the leading term of <span class="process-math">\(a_m b_n^{-1} x^{m-n} g(x)\)</span> is <span class="process-math">\(a_m b_n^{-1} x^{m-n} (b_n x^n) = a_m x^m\text{.}\)</span> Thus, the leading term of <span class="process-math">\(h\)</span> has degree less than <span class="process-math">\(m\text{.}\)</span></p></article></div>
+<article class="theorem theorem-like" id="theorem_polydivalg"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.18</span><span class="period">.</span><span class="space"> </span><span class="title">(Polynomial Division Algorithm).</span>
+</h3>
+<aside class="aside aside-like" id="aside-6"></aside><p id="p-525">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(f(x),g(x)\in F[x]\)</span> with <span class="process-math">\(g(x)\ne 0\text{.}\)</span> Then there exist unique <span class="process-math">\(q(x),
+r(x) \in F[x]\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 f(x) = g(x) q(x) + r(x)\text{,}
 \end{equation*}
 </div>
-<p>where \(\deg(r(x)) \lt  \deg g(x)\text{.}\)</p>
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-4" id="hint-4"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-4"><div class="hint solution-like"><p id="p-455">For existence, consider three cases: \(f(x) = 0\text{;}\) \(f(x) \ne 0\) and \(\deg f \lt \deg g\text{;}\) \(f(x) \ne 0\) and \(\deg f \ge \deg g\text{.}\) In the last case, use induction on \(m = \deg f(x)\text{.}\) For uniqueness, mimic the uniqueness proof of <a class="xref" data-knowl="./knowl/thm_divalg.html" title="Theorem 1.2.5: The Division Algorithm">Theorem 1.2.5</a>.</p></div></div></article><article class="hiddenproof" id="proof-39"><a data-knowl="" class="id-ref original" data-refid="hk-proof-39"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-39"><article class="hiddenproof"><p id="p-456"><em class="emphasis">Existence:</em> If \(f(x) = 0\text{,}\) then \(q(x) = 0\) and \(r(x) = 0\) will do. If \(f(x)\ne 0\) and \(\deg f \lt \deg g\text{,}\) then \(q(x) = 0\) and \(r(x) = f(x)\) will suffice. Thus, we need only consider the case in which \(f(x) \ne 0\) and \(\deg f \ge \deg g\text{.}\) We use induction on \(\deg f = m\text{.}\)</p>
-<p id="p-457">When \(m = 0\text{,}\) \(\deg g \le 0 = \deg f\text{,}\) and as \(g(x) \ne 0\text{,}\) both \(f\) and \(g\) are nonzero constants. Then \(r = 0\) and \(q = fg^{-1}\) will work.</p>
-<p id="p-458">Now assume \(q\) and \(r\) exist whenever \(\deg f \lt m\text{.}\) Assume \(\deg f = m\) and write \(f(x) = a_0 + a_1 x + \cdots + a_m x^m\) and \(g(x) = b_0 + b_1 x + \cdots + b_n x^n\text{.}\) Use <a class="xref" data-knowl="./knowl/lem_polydivalglem.html" title="Lemma 2.4.12">Lemma 2.4.12</a> and set \(h(x) = f(x) - a_m b_n^{-1} x^{m-n} g(x)\text{,}\) which must have degree less than \(f\text{.}\) Thus, by induction, there exist \(q_1, r_1\in F[x]\) such that \(h = g q_1 + r_1\text{,}\) with \(r_1 = 0\) or \(\deg r_1 \lt \deg g\text{.}\)</p>
-<p id="p-459">We therefore have</p>
-<div class="displaymath">
+<p class="continuation">where <span class="process-math">\(\deg(r(x)) \lt  \deg g(x)\text{.}\)</span></p>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-10" id="hint-10"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-10"><div class="hint solution-like"><p id="p-526">For existence, consider three cases: <span class="process-math">\(f(x) = 0\text{;}\)</span> <span class="process-math">\(f(x) \ne 0\)</span> and <span class="process-math">\(\deg f \lt \deg g\text{;}\)</span> <span class="process-math">\(f(x) \ne 0\)</span> and <span class="process-math">\(\deg f \ge \deg g\text{.}\)</span> In the last case, use induction on <span class="process-math">\(m = \deg f(x)\text{.}\)</span> For uniqueness, mimic the uniqueness proof of <a href="" class="xref" data-knowl="./knowl/thm_divalg.html" title="Theorem 1.2.8: The Division Algorithm for \N">Theorem 1.2.8</a>.</p></div></div></article><article class="hiddenproof" id="proof-46"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-46"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-46"><article class="hiddenproof"><p id="p-527"><em class="emphasis">Existence:</em> If <span class="process-math">\(f(x) = 0\text{,}\)</span> then <span class="process-math">\(q(x) = 0\)</span> and <span class="process-math">\(r(x) = 0\)</span> will do. If <span class="process-math">\(f(x)\ne 0\)</span> and <span class="process-math">\(\deg f \lt \deg g\text{,}\)</span> then <span class="process-math">\(q(x) = 0\)</span> and <span class="process-math">\(r(x) = f(x)\)</span> will suffice. Thus, we need only consider the case in which <span class="process-math">\(f(x) \ne 0\)</span> and <span class="process-math">\(\deg f \ge \deg g\text{.}\)</span> We use induction on <span class="process-math">\(\deg f = m\text{.}\)</span></p>
+<p id="p-528">When <span class="process-math">\(m = 0\text{,}\)</span> <span class="process-math">\(\deg g \le 0 = \deg f\text{,}\)</span> and as <span class="process-math">\(g(x) \ne 0\text{,}\)</span> both <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are nonzero constants. Then <span class="process-math">\(r = 0\)</span> and <span class="process-math">\(q = fg^{-1}\)</span> will work.</p>
+<p id="p-529">Now assume <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> exist whenever <span class="process-math">\(\deg f \lt m\text{.}\)</span> Assume <span class="process-math">\(\deg f = m\)</span> and write <span class="process-math">\(f(x) = a_0 + a_1 x + \cdots + a_m x^m\)</span> and <span class="process-math">\(g(x) = b_0 + b_1 x + \cdots + b_n x^n\text{.}\)</span> Use <a href="" class="xref" data-knowl="./knowl/lem_polydivalglem.html" title="Lemma 2.4.17">Lemma 2.4.17</a> and set <span class="process-math">\(h(x) = f(x) - a_m b_n^{-1} x^{m-n} g(x)\text{,}\)</span> which must have degree less than <span class="process-math">\(f\text{.}\)</span> Thus, by induction, there exist <span class="process-math">\(q_1, r_1\in F[x]\)</span> such that <span class="process-math">\(h = g q_1 + r_1\text{,}\)</span> with <span class="process-math">\(r_1 = 0\)</span> or <span class="process-math">\(\deg r_1 \lt \deg g\text{.}\)</span></p>
+<p id="p-530">We therefore have</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-6">
 \begin{align*}
 f(x) \amp = a_m b_n^{-1} x^{m-n} g(x) + h(x)\\
 \amp = a_m b_n^{-1} x^{m-n} g(x) + g(x) q_1(x) + r_1(x)\\
 \amp = (a_m b_n^{-1} x^{m-n} + q_1(x)) g(x) + r_1(x)\text{,}
 \end{align*}
 </div>
-<p>where \(q = a_m b_n^{-1} x^{m-n} + q_1(x)\) and \(r = r_1(x)\) have the desired properties.</p>
-<p id="p-460"><em class="emphasis">Uniqueness:</em> Suppose \(f = gq + r\) and \(f = g\hat{q} + \hat{r}\text{,}\) where \(r,\hat{r}\) both have the desired properties. Then</p>
-<div class="displaymath">
+<p class="continuation">where <span class="process-math">\(q = a_m b_n^{-1} x^{m-n} + q_1(x)\)</span> and <span class="process-math">\(r = r_1(x)\)</span> have the desired properties.</p>
+<p id="p-531"><em class="emphasis">Uniqueness:</em> Suppose <span class="process-math">\(f = gq + r\)</span> and <span class="process-math">\(f = g\hat{q} + \hat{r}\text{,}\)</span> where <span class="process-math">\(r,\hat{r}\)</span> both have the desired properties. Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 0 = g[q - \hat{q}] + [r - \hat{r}]\text{,}
 \end{equation*}
 </div>
-<p>or \(\hat{r} - r = g [q - \hat{q}]\text{.}\) Thus either \(\hat{r} - r = 0\text{,}\) or \(\hat{r} - r\) has degree at least \(\deg g\text{.}\) The latter is clearly impossible, so \(\hat{r} = r\) and \(\hat{q} = q\text{.}\)</p></article></div>
-<article class="theorem theorem-like" id="theorem-41"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.14</span><span class="period">.</span>
-</h6>
-<p id="p-461">Let \(F\) be a field. Then the ring \(F[x]\) is a principal ideal domain.</p>
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-5" id="hint-5"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><p id="p-462">Mimic the proof of <a class="xref" data-knowl="./knowl/thm_ZisPID.html" title="Theorem 2.4.8">Theorem 2.4.8</a> and use <a class="xref" data-knowl="./knowl/lem_minimaldegreepoly.html" title="Lemma 2.4.11">Lemma 2.4.11</a>!</p></div></div></article><article class="hiddenproof" id="proof-40"><a data-knowl="" class="id-ref original" data-refid="hk-proof-40"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-40"><article class="hiddenproof"><p id="p-463">Let \(I\) be a nonzero ideal of \(F[x]\) and let \(f(x)\in I\) be a polynomial of smallest degree. We claim \(I = \ideal{f(x)}\text{.}\)</p>
-<p id="p-464">Clearly \(\ideal{f(x)}\subseteq I\text{.}\)</p>
-<p id="p-465">Let \(g(x)\in I\) and use <a class="xref" data-knowl="./knowl/theorem_polydivalg.html" title="Theorem 2.4.13: (Polynomial Division Algorithm)">Theorem 2.4.13</a> to write \(g(x) = f(x) q(x) + r(x)\text{,}\) where \(\deg r(x) \lt \deg f(x)\) or \(r(x) = 0\text{.}\) As in <a class="xref" data-knowl="./knowl/thm_ZisPID.html" title="Theorem 2.4.8">Theorem 2.4.8</a>, write \(r(x) = g(x) - f(x) q(x) \in I\text{,}\) so we must have that \(r(x) = 0\text{.}\) Thus, \(f(x) | g(x)\) and \(g(x)\in \ideal{f(x)}\text{.}\)</p></article></div>
-<article class="investigation project-like" id="investigation-15"><h6 class="heading">
-<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.4.5</span><span class="period">.</span>
-</h6>
-<p id="p-466">Is \(F[x]\) a Euclidean domain for all fields \(F\text{?}\) If so, what is the norm function \(\delta\text{,}\) and why does this function have the required properties of a norm?</p>
+<p class="continuation">or <span class="process-math">\(\hat{r} - r = g [q - \hat{q}]\text{.}\)</span> Thus either <span class="process-math">\(\hat{r} - r = 0\text{,}\)</span> or <span class="process-math">\(\hat{r} - r\)</span> has degree at least <span class="process-math">\(\deg g\text{.}\)</span> The latter is clearly impossible, so <span class="process-math">\(\hat{r} = r\)</span> and <span class="process-math">\(\hat{q} = q\text{.}\)</span></p></article></div>
+<article class="theorem theorem-like" id="theorem-43"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.19</span><span class="period">.</span>
+</h3>
+<p id="p-532">Let <span class="process-math">\(F\)</span> be a field. Then the ring <span class="process-math">\(F[x]\)</span> is a principal ideal domain.</p>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-11" id="hint-11"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-11"><div class="hint solution-like"><p id="p-533">Mimic the proof of <a href="" class="xref" data-knowl="./knowl/thm_ZisPID.html" title="Theorem 2.4.10">Theorem 2.4.10</a> and use <a href="" class="xref" data-knowl="./knowl/lem_minimaldegreepoly.html" title="Lemma 2.4.16">Lemma 2.4.16</a>!</p></div></div></article><article class="hiddenproof" id="proof-47"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-47"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-47"><article class="hiddenproof"><p id="p-534">Let <span class="process-math">\(I\)</span> be a nonzero ideal of <span class="process-math">\(F[x]\)</span> and let <span class="process-math">\(f(x)\in I\)</span> be a polynomial of smallest degree. We claim <span class="process-math">\(I = \ideal{f(x)}\text{.}\)</span></p>
+<p id="p-535">Clearly <span class="process-math">\(\ideal{f(x)}\subseteq I\text{.}\)</span></p>
+<p id="p-536">Let <span class="process-math">\(g(x)\in I\)</span> and use <a href="" class="xref" data-knowl="./knowl/theorem_polydivalg.html" title="Theorem 2.4.18: (Polynomial Division Algorithm)">Theorem 2.4.18</a> to write <span class="process-math">\(g(x) = f(x) q(x) + r(x)\text{,}\)</span> where <span class="process-math">\(\deg r(x) \lt \deg f(x)\)</span> or <span class="process-math">\(r(x) = 0\text{.}\)</span> As in <a href="" class="xref" data-knowl="./knowl/thm_ZisPID.html" title="Theorem 2.4.10">Theorem 2.4.10</a>, write <span class="process-math">\(r(x) = g(x) - f(x) q(x) \in I\text{,}\)</span> so we must have that <span class="process-math">\(r(x) = 0\text{.}\)</span> Thus, <span class="process-math">\(f(x) | g(x)\)</span> and <span class="process-math">\(g(x)\in \ideal{f(x)}\text{.}\)</span></p></article></div>
+<article class="investigation project-like" id="investigation-21"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">2.4.20</span><span class="period">.</span>
+</h3>
+<p id="p-537">Is <span class="process-math">\(F[x]\)</span> a Euclidean domain for all fields <span class="process-math">\(F\text{?}\)</span> If so, what is the norm function <span class="process-math">\(\delta\text{,}\)</span> and why does this function have the required properties of a norm? If not, why not? Prove your answer.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-answer-12" id="answer-12"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><p id="p-467">Yes. It's the degree function.</p></div></div>
-</div></article><article class="exploration project-like" id="exploration-15"><h6 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.4.6</span><span class="period">.</span>
-</h6>
-<p id="p-468">Where do Euclidean domains and PIDs fit in the hierarchy of abstraction found in <a class="xref" data-knowl="./knowl/exer_ringgeneralityone.html" title="Exploration 2.3.3">Question 2.3.3</a>?</p></article></section></div></main>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-14" id="answer-14"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like"><p id="p-538">Yes. It's the degree function.</p></div></div>
+</div></article><p id="p-539">In fact, every Euclidean domain is a PID.</p>
+<article class="theorem theorem-like" id="thm_edispid"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.21</span><span class="period">.</span>
+</h3>
+<p id="p-540">Every Euclidean domain is a principal ideal domain.</p>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-12" id="hint-12"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-12"><div class="hint solution-like"><p id="p-541">Mimic the proof of <a href="" class="xref" data-knowl="./knowl/thm_ZisPID.html" title="Theorem 2.4.10">Theorem 2.4.10</a>.</p></div></div></article><article class="hiddenproof" id="proof-48"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-48"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-48"><article class="hiddenproof"><p id="p-542">Let <span class="process-math">\(R\)</span> be a euclidean domain, and <span class="process-math">\(I\)</span> an ideal of <span class="process-math">\(R\text{.}\)</span> If <span class="process-math">\(I = \set{0}\text{,}\)</span> then <span class="process-math">\(I\)</span> is principal, so assume that <span class="process-math">\(I\ne \set{0}\text{.}\)</span></p>
+<p id="p-543">Define <span class="process-math">\(S = \setof{\delta(x)&gt;0}{x\in I}\text{.}\)</span> Then the Well-Ordering Principle guarantees that <span class="process-math">\(S\)</span> has a least element. Let <span class="process-math">\(d\in I\)</span> be such that <span class="process-math">\(\delta(d) &gt; 0\)</span> is minimal. We claim that <span class="process-math">\(I = \ideal{d}\text{.}\)</span></p>
+<p id="p-544">Clearly <span class="process-math">\(\ideal{d}\subseteq I\text{.}\)</span> Now assume that <span class="process-math">\(a\in I\text{,}\)</span> and write <span class="process-math">\(a = dq + r\text{,}\)</span> where either <span class="process-math">\(r = 0\)</span> or <span class="process-math">\(r\ne 0\)</span> and <span class="process-math">\(\delta(r) \lt \delta(d)\text{.}\)</span> If <span class="process-math">\(\delta(r) \lt \delta(d)\text{,}\)</span> then <span class="process-math">\(r = a - dq \in I\text{,}\)</span> contradicting the minimality of <span class="process-math">\(\delta(d)\text{.}\)</span> Thus, <span class="process-math">\(r = 0\text{,}\)</span> and <span class="process-math">\(a\in \ideal{d}\text{.}\)</span></p>
+<p id="p-545">Therefore, <span class="process-math">\(R\)</span> is a PID.</p></article></div>
+<article class="exploration project-like" id="exploration-18"><h3 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2.4.22</span><span class="period">.</span>
+</h3>
+<p id="p-546">Where do Euclidean domains and PIDs fit in the hierarchy of abstraction found in <a href="" class="xref" data-knowl="./knowl/exer_ringgeneralityone.html" title="Exploration 2.3.14">Question 2.3.14</a>?</p></article></section><div class="hidden-content tex2jax_ignore" id="hk-fn-18"><div class="fn">An acceptable alternative would be: <span class="process-math">\(x\in \ideal{y}\text{.}\)</span> Make sure students are aware of this!</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-19"><div class="fn"><code class="code-inline tex2jax_ignore">http://www.corestandards.org/Math/Content/HSA/APR/D/6/</code></div></div>
+</div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.13/login.js"></script>
 </body>
 </html>

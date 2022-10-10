@@ -1,47 +1,21 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-05T11:00:44-06:00    *-->
-<!--*                                    *-->
-<!--*      https://pretextbook.org       *-->
-<!--*                                    *-->
-<!--**************************************-->
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-05-16T10:29:34-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">
-<p>We wish to prove that</p>
-<div class="displaymath">
-\begin{equation*}
-1^3 + 2^3 + 3^3 + \cdots + n^3 = \frac{n^2(n+1)^2}{4}.
-\end{equation*}
-</div>
-<p><em class="emphasis">Base Case:</em> When \(n=1\text{,}\) the theorem clearly holds.</p>
-<p><em class="emphasis">Inductive Hypothesis:</em> Assume for all \(k\le n\) that we have</p>
-<div class="displaymath">
-\begin{equation}
-1^3 + 2^3 + 3^3 + \cdots + k^3 = \frac{k^2(k+1)^2}{4}.\tag{1.1.5}
-\end{equation}
-</div>
-<p><em class="emphasis">Inductive Step:</em> We wish to prove that</p>
-<div class="displaymath">
-\begin{equation*}
-1^3 + 2^3 + 3^3 + \cdots + n^3 +(n+1)^3 = \frac{(n+1)^2((n+1)+1)^2}{4} = \frac{(n+1)^2(n+2)^2}{4}.
-\end{equation*}
-</div>
-<p>We apply <a class="xref" data-knowl="./knowl/eq-sum-of-cubes-ind-hyp.html" title="Equation 1.1.5">(1.1.5)</a> to obtain</p>
-<div class="displaymath">
-\begin{align*}
-1^3 + 2^3 + 3^3 + \cdots + n^3 +(n+1)^3 \amp = \frac{n^2(n+1)^2}{4} + (n+1)^3 \\
-\amp = \frac{n^2(n+1)^2}{4} + \frac{4(n+1)^3}{4}\\
-\amp = \frac{n^2(n+1)^2 + 4(n+1)^3}{4}\\
-\amp = \frac{(n+1)^2 (n^2+4(n+1))}{4}\\
-\amp = \frac{(n+1)^2 (n^2+4n+4)}{4}\\
-\amp = \frac{(n+1)^2 (n+2)^2}{4}.
-\end{align*}
-</div>
-<p>The theorem is proved.</p>
-</div></body>
+<body class="ignore-math"><div class="solution solution-like"><ol class="decimal">
+<li><p>Examples vary, but <span class="process-math">\(f(x) = x^2-4\)</span> and <span class="process-math">\(g(x) = x+1\)</span> suffice.</p></li>
+<li><p>Since <span class="process-math">\(f(x) = x^2 - 4\in S\text{,}\)</span> we see that <span class="process-math">\(2\in D\text{.}\)</span> Furthermore, the zero polynomial is not in <span class="process-math">\(S\text{,}\)</span> so the degrees of polynomials in <span class="process-math">\(S\)</span> are all nonnegative integers. Thus, <span class="process-math">\(D\subseteq \N_0\text{.}\)</span></p></li>
+<li><p>We see that <span class="process-math">\(D\)</span> meets the conditions of the well-ordering principle, and so it has a least element. This least element is the degree of the polynomial of least degree satisfying <span class="process-math">\(f(2) = f(-2) = 0\)</span> and <span class="process-math">\(f(0) = -4\text{.}\)</span></p></li>
+</ol></div></body>
 </html>

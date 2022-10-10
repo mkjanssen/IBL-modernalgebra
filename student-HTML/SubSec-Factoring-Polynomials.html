@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-14T12:08:36-06:00       *-->
+<!--*       on 2022-10-10T15:50:53-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -9,16 +9,19 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US">
-<head>
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Factoring Polynomials</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Rings With Inquiry">
+<meta property="book:author" content="Michael Janssen">
+<meta property="book:author" content="Melissa Lindsey">
 <script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
-    useLabelIds: true,
     tagSide: "right",
     tagIndent: ".8em",
     packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
@@ -36,21 +39,20 @@
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script async="" src="https://cse.google.com/cse.js?cx=017464805646507420634:llcu9bfj13p"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.674</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
-</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/colors_blue_grey.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script async="" src="https://cse.google.com/cse.js?cx=017464805646507420634:llcu9bfj13p"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand{\labelitemi}{$\diamond$}
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand{\labelitemi}{$\diamond$}
 \def\arraystretch{1.5}
 \newcommand{\contentsfinish}{}
 \newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
@@ -121,7 +123,7 @@
 </div>
 <div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
 </div></div>
-<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
 <a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec-Factorization.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Sec-Factorization.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="SubSec-Factorization-in-Euclidean-Domains.html" title="Next">Next</a></span>
@@ -131,53 +133,54 @@
 <button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec-Factorization.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Sec-Factorization.html" title="Up">Up</a><a class="next-button button toolbar-item" href="SubSec-Factorization-in-Euclidean-Domains.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
-<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link frontmatter">
-<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
-<li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction">Introduction</a></li>
-<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents">A Note to Students</a></li>
-<li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors">A Note to Instructors</a></li>
-<li><a href="Sec-Versions.html" data-scroll="Sec-Versions">Versions of this text</a></li>
-<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction" class="internal">Introduction</a></li>
+<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents" class="internal">A Note to Students</a></li>
+<li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors" class="internal">A Note to Instructors</a></li>
+<li><a href="Sec-Versions.html" data-scroll="Sec-Versions" class="internal">Versions of this text</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Integers.html" data-scroll="Sec-Integers"><span class="codenumber">1</span> <span class="title">The Integers</span></a><ul>
-<li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering">Induction and Well-Ordering</a></li>
-<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers">Divisibility and GCDs in the Integers</a></li>
-<li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization">Primes and Factorization</a></li>
-<li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m">The Integers modulo <span class="process-math">\(m\)</span></a></li>
+<a href="Sec-Integers.html" data-scroll="Sec-Integers" class="internal"><span class="codenumber">1</span> <span class="title">The Integers</span></a><ul>
+<li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering" class="internal">Induction and Well-Ordering</a></li>
+<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers" class="internal">Divisibility and GCDs in the Integers</a></li>
+<li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization" class="internal">Primes and Factorization</a></li>
+<li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m" class="internal">The Integers modulo <span class="process-math">\(m\)</span></a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Fields-and-Rings.html" data-scroll="Sec-Fields-and-Rings"><span class="codenumber">2</span> <span class="title">Fields and Rings</span></a><ul>
-<li><a href="SubSec-Fields.html" data-scroll="SubSec-Fields">Fields</a></li>
-<li><a href="SubSec-Rings.html" data-scroll="SubSec-Rings">Rings</a></li>
-<li><a href="SubSec-Divisibility-in-Domains.html" data-scroll="SubSec-Divisibility-in-Domains">Divisibility in Integral Domains</a></li>
-<li><a href="SubSec-Principal-Ideals.html" data-scroll="SubSec-Principal-Ideals">Principal Ideals and Euclidean Domains</a></li>
+<a href="Sec-Fields-and-Rings.html" data-scroll="Sec-Fields-and-Rings" class="internal"><span class="codenumber">2</span> <span class="title">Fields and Rings</span></a><ul>
+<li><a href="SubSec-Fields.html" data-scroll="SubSec-Fields" class="internal">Fields</a></li>
+<li><a href="SubSec-Rings.html" data-scroll="SubSec-Rings" class="internal">Rings</a></li>
+<li><a href="SubSec-Divisibility-in-Domains.html" data-scroll="SubSec-Divisibility-in-Domains" class="internal">Divisibility in Integral Domains</a></li>
+<li><a href="SubSec-Principal-Ideals.html" data-scroll="SubSec-Principal-Ideals" class="internal">Principal Ideals and Euclidean Domains</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Factorization.html" data-scroll="Sec-Factorization"><span class="codenumber">3</span> <span class="title">Factorization</span></a><ul>
+<a href="Sec-Factorization.html" data-scroll="Sec-Factorization" class="internal"><span class="codenumber">3</span> <span class="title">Factorization</span></a><ul>
 <li><a href="SubSec-Factoring-Polynomials.html" data-scroll="SubSec-Factoring-Polynomials" class="active">Factoring Polynomials</a></li>
-<li><a href="SubSec-Factorization-in-Euclidean-Domains.html" data-scroll="SubSec-Factorization-in-Euclidean-Domains">Factorization in Euclidean Domains</a></li>
-<li><a href="SubSec-Nonunique-Factorization.html" data-scroll="SubSec-Nonunique-Factorization">Nonunique Factorization</a></li>
+<li><a href="SubSec-Factorization-in-Euclidean-Domains.html" data-scroll="SubSec-Factorization-in-Euclidean-Domains" class="internal">Factorization in Euclidean Domains</a></li>
+<li><a href="SubSec-Nonunique-Factorization.html" data-scroll="SubSec-Nonunique-Factorization" class="internal">Nonunique Factorization</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Ideals.html" data-scroll="Sec-Ideals"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a><ul>
-<li><a href="SubSec-Ideals-In-General.html" data-scroll="SubSec-Ideals-In-General">Ideals in general</a></li>
-<li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms">Homomorphisms</a></li>
-<li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings">Quotient Rings: New Rings from Old</a></li>
+<a href="Sec-Ideals.html" data-scroll="Sec-Ideals" class="internal"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a><ul>
+<li><a href="SubSec-Ideals-In-General.html" data-scroll="SubSec-Ideals-In-General" class="internal">Ideals in general</a></li>
+<li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms" class="internal">Homomorphisms</a></li>
+<li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings" class="internal">Quotient Rings: New Rings from Old</a></li>
 </ul>
 </li>
-<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="SubSec-Factoring-Polynomials"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="SubSec-Factoring-Polynomials"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.1</span> <span class="title">Factoring Polynomials</span>
 </h2>
 <article class="assemblage assemblage-like" id="assemblage-13"><h3 class="heading"><span class="title">Guiding Questions.</span></h3>
@@ -185,54 +188,53 @@
 <li id="li-173"><p id="p-derived-li-173">What properties of divisibility in <span class="process-math">\(\Z\)</span> extend to <span class="process-math">\(F[x]\text{?}\)</span></p></li>
 <li id="li-174"><p id="p-derived-li-174">What is an irreducible polynomial? Are there any tools we can use to determine if a given polynomial is irreducible?</p></li>
 </ul></p></article><p id="p-550">One of the most beautiful consequences of an abstract study of algebra is the fact that both <span class="process-math">\(\Z\)</span> and <span class="process-math">\(F[x]\)</span> are Euclidean domains. While they are not “the same”, we can expect them to share many of the same properties. In this section, our first goal will be to extend familiar properties from <span class="process-math">\(\Z\)</span> to <span class="process-math">\(F[x]\text{.}\)</span> We will also see that particular features of a polynomial (e.g., its degree, or the existence of roots) allows for additional criteria for its irreducibility to be decided.</p>
-<p id="p-551">Since both <span class="process-math">\(\Z\)</span> and <span class="process-math">\(F[x]\)</span> have a division algorithm, it is reasonable to expect that, similar to the integers, we can also investigate the greatest common divisor of polynomials. In fact, <a href="" class="xref" data-knowl="./knowl/invest-euclid-alg-integers.html" title="Investigation 1.2.6: (Euclidean Algorithm)">our method</a> for finding the greatest common divisor of two integers extends nicely to polynomials.</p>
+<p id="p-551">Since both <span class="process-math">\(\Z\)</span> and <span class="process-math">\(F[x]\)</span> have a division algorithm, it is reasonable to expect that, similar to the integers, we can also investigate the greatest common divisor of polynomials. In fact, <a href="" class="xref" data-knowl="./knowl/invest-euclid-alg-integers.html" title="Investigation 1.2.14: (Euclidean Algorithm)">our method</a> for finding the greatest common divisor of two integers extends nicely to polynomials.</p>
 <article class="investigation project-like" id="investigation-22"><h3 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span>
 </h3>
 <p id="p-552">Given <span class="process-math">\(f(x),g(x)\in F[x]\text{,}\)</span> state a conjecture that gives a means for finding <span class="process-math">\(\gcd(f(x),g(x))\text{.}\)</span> Prove your conjecture is correct.</p></article><article class="investigation project-like" id="investigation-23"><h3 class="heading">
 <span class="type">Investigation</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span>
 </h3>
-<p id="p-554">Carefully state and prove a Bézout-like theorem (recall <a href="" class="xref" data-knowl="./knowl/theorem_bezoutint.html" title="Theorem 1.2.9: Bézout's Identity">Theorem 1.2.9</a>) for polynomials in <span class="process-math">\(F[x]\text{.}\)</span></p></article><p id="p-556">One of the most useful things we can do with polynomials is <em class="emphasis">evaluate</em> them by “plugging in” elements from our coefficient set (or some superset that contains it) and performing the resulting arithmetic in an appropriate ring. We can make this completely rigorous using the language of functions: given a commutative ring <span class="process-math">\(R\)</span> and all polynomials <span class="process-math">\(p(x) = a_0 + a_1 x + \cdots + a_n x^n \in R[x]\text{,}\)</span> we define the function <span class="process-math">\(p_f : R\to R\)</span> by <span class="process-math">\(p_f(r) = a_0 + a_1 r + \cdots + a_n r^n \text{.}\)</span> However, we will not belabor this point; instead, we will generally write <span class="process-math">\(p(r)\)</span> in place of <span class="process-math">\(p_f(r)\)</span> and appeal to our common notions of evaluating polynomials.</p>
+<p id="p-554">Carefully state and prove a Bézout-like theorem (recall <a href="" class="xref" data-knowl="./knowl/theorem_bezoutint.html" title="Theorem 1.2.16: Bézout's Identity">Theorem 1.2.16</a>) for polynomials in <span class="process-math">\(F[x]\text{.}\)</span></p></article><p id="p-556">One of the most useful things we can do with polynomials is <em class="emphasis">evaluate</em> them by “plugging in” elements from our coefficient set (or some superset that contains it) and performing the resulting arithmetic in an appropriate ring. We can make this completely rigorous using the language of functions: given a commutative ring <span class="process-math">\(R\)</span> and all polynomials <span class="process-math">\(p(x) = a_0 + a_1 x + \cdots + a_n x^n \in R[x]\text{,}\)</span> we define the function <span class="process-math">\(p_f : R\to R\)</span> by <span class="process-math">\(p_f(r) = a_0 + a_1 r + \cdots + a_n r^n \text{.}\)</span> However, we will not belabor this point; instead, we will generally write <span class="process-math">\(p(r)\)</span> in place of <span class="process-math">\(p_f(r)\)</span> and appeal to our common notions of evaluating polynomials.</p>
 <p id="p-557">Given a polynomial <span class="process-math">\(p(x)\in R[x]\text{,}\)</span> we have frequently been interested in finding all <span class="process-math">\(r\in R\)</span> for which <span class="process-math">\(p(r) = 0\text{.}\)</span></p>
 <article class="definition definition-like" id="definition-29"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span>
 </h3>
 <p id="p-558">Let <span class="process-math">\(R\)</span> be commutative with identity and suppose <span class="process-math">\(p(x) \in R[x]\text{.}\)</span> We say <span class="process-math">\(r\in R\)</span> is a <dfn class="terminology">zero</dfn> or <dfn class="terminology">root</dfn> of <span class="process-math">\(p(x)\)</span> if <span class="process-math">\(p(r) = 0\text{.}\)</span></p></article><p id="p-559">When considering polynomials with integer coefficients, any rational roots are particularly well-behaved.</p>
 <article class="theorem theorem-like" id="thm-rational-root"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span>
 </h3>
 <p id="p-560">Let <span class="process-math">\(p(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n \in \Z[x]\)</span> with <span class="process-math">\(a_0,a_n\ne 0\text{.}\)</span> If <span class="process-math">\(r,s\in\Z\)</span> such that <span class="process-math">\(s\ne 0, \gcd(r,s)=1\text{,}\)</span> and <span class="process-math">\(p(r/s)=0\text{,}\)</span> then <span class="process-math">\(r|a_0\)</span> and <span class="process-math">\(s|a_n\text{.}\)</span></p></article><article class="activity project-like" id="activity-13"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span>
 </h3>
-<p id="p-561">Use <a href="" class="xref" data-knowl="./knowl/thm-rational-root.html" title="Theorem 3.1.2">Theorem 3.1.2</a> to find the <em class="emphasis">possible</em> rational roots of <span class="process-math">\(p(x) = 3 - x + x^2 + 5x^3 - 10x^4 - 6x^5\text{.}\)</span> Which of the possibilities you found are actually roots? Justify.</p></article><p id="p-563"><a href="" class="xref" data-knowl="./knowl/thm-rational-root.html" title="Theorem 3.1.2">Theorem 3.1.2</a> gave a condition to check to see if polynomials in <span class="process-math">\(\Z[x]\)</span> had roots in <span class="process-math">\(\Q\text{.}\)</span> However, the lack of a rational root for a polynomial <span class="process-math">\(q(x)\in \Z[x]\)</span> is not sufficient to say that a polynomial is irreducible in <span class="process-math">\(\Z[x]\)</span> according to <a href="" class="xref" data-knowl="./knowl/def_irreducibleelement.html" title="Definition 2.3.4">Definition 2.3.4</a>.</p>
+<p id="p-561">Use <a href="" class="xref" data-knowl="./knowl/thm-rational-root.html" title="Theorem 3.1.4">Theorem 3.1.4</a> to find the <em class="emphasis">possible</em> rational roots of <span class="process-math">\(p(x) = 3 - x + x^2 + 5x^3 - 10x^4 - 6x^5\text{.}\)</span> Which of the possibilities you found are actually roots? Justify.</p></article><p id="p-563"><a href="" class="xref" data-knowl="./knowl/thm-rational-root.html" title="Theorem 3.1.4">Theorem 3.1.4</a> gave a condition to check to see if polynomials in <span class="process-math">\(\Z[x]\)</span> had roots in <span class="process-math">\(\Q\text{.}\)</span> However, the lack of a rational root for a polynomial <span class="process-math">\(q(x)\in \Z[x]\)</span> is not sufficient to say that a polynomial is irreducible in <span class="process-math">\(\Z[x]\)</span> according to <a href="" class="xref" data-knowl="./knowl/def_irreducibleelement.html" title="Definition 2.3.5">Definition 2.3.5</a>.</p>
 <article class="activity project-like" id="activity-14"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span>
 </h3>
 <p id="p-564">Find a polynomial <span class="process-math">\(q(x) \in \Z[x]\)</span> that has no roots in <span class="process-math">\(\Q\)</span> but is nonetheless reducible <em class="emphasis">over <span class="process-math">\(\Z\)</span></em>.</p></article><p id="p-566">To simplify matters, we will focus henceforth on polynomials with coefficients in a field. The following theorem is <a class="external" href="http://www.corestandards.org/Math/Content/HSA/APR/B/2/" target="_blank">a result that you learned in high school algebra</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-20" id="fn-20"><sup> 1 </sup></a> (and have likely used countless times since then), but as with the other familiar topics we have explored so far, it is necessary to formalize prior to continuing.</p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-20"><div class="fn"><code class="code-inline tex2jax_ignore">http://www.corestandards.org/Math/Content/HSA/APR/B/2/</code></div></div>
 <article class="theorem theorem-like" id="theorem-46"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Factor Theorem.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Factor Theorem.</span>
 </h3>
-<p id="p-567">Let <span class="process-math">\(F\)</span> be a field, and <span class="process-math">\(p(x)\in F[x]\text{.}\)</span> Then <span class="process-math">\(\alpha\in F\)</span> is a root of <span class="process-math">\(p(x)\)</span> if and only if <span class="process-math">\(x-\alpha\)</span> divides <span class="process-math">\(p(x)\text{.}\)</span></p></article><p id="p-570">Note that while <span class="process-math">\(F[x]\)</span> is a ring, and we already have a <a href="" class="xref" data-knowl="./knowl/def_irreducibleelement.html" title="Definition 2.3.4">definition</a> of an irreducible element of a ring, we will find it useful to have a ready definition of irreducible in the context of polynomials with coefficients in a field. It is to that task that we now turn.</p>
+<p id="p-567">Let <span class="process-math">\(F\)</span> be a field, and <span class="process-math">\(p(x)\in F[x]\text{.}\)</span> Then <span class="process-math">\(\alpha\in F\)</span> is a root of <span class="process-math">\(p(x)\)</span> if and only if <span class="process-math">\(x-\alpha\)</span> divides <span class="process-math">\(p(x)\text{.}\)</span></p></article><p id="p-570">Note that while <span class="process-math">\(F[x]\)</span> is a ring, and we already have a <a href="" class="xref" data-knowl="./knowl/def_irreducibleelement.html" title="Definition 2.3.5">definition</a> of an irreducible element of a ring, we will find it useful to have a ready definition of irreducible in the context of polynomials with coefficients in a field. It is to that task that we now turn.</p>
 <article class="exploration project-like" id="exploration-19"><h3 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span>
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.1.8</span><span class="period">.</span>
 </h3>
-<p id="p-571">Given a field <span class="process-math">\(F\text{,}\)</span> define an irreducible element of <span class="process-math">\(F[x]\text{,}\)</span> keeping in view <a href="" class="xref" data-knowl="./knowl/theorem_degreeofproductinfield.html" title="Theorem 2.2.20">Theorem 2.2.20</a> and <a href="" class="xref" data-knowl="./knowl/def_irreducibleelement.html" title="Definition 2.3.4">Definition 2.3.4</a>. <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-13" id="hint-13"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-13"><div class="hint solution-like">What are the units in <span class="process-math">\(F[x]\text{?}\)</span>
+<p id="p-571">Given a field <span class="process-math">\(F\text{,}\)</span> define an irreducible element of <span class="process-math">\(F[x]\text{,}\)</span> keeping in view <a href="" class="xref" data-knowl="./knowl/theorem_degreeofproductinfield.html" title="Theorem 2.2.36">Theorem 2.2.36</a> and <a href="" class="xref" data-knowl="./knowl/def_irreducibleelement.html" title="Definition 2.3.5">Definition 2.3.5</a>. <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-13" id="hint-13"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-13"><div class="hint solution-like">What are the units in <span class="process-math">\(F[x]\text{?}\)</span>
 </div></div></p></article><article class="definition definition-like" id="definition-30"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.9</span><span class="period">.</span>
 </h3>
 <p id="p-573">A polynomial <span class="process-math">\(f(x)\in F[x]\)</span> is <dfn class="terminology">reducible</dfn> if it is not irreducible.</p></article><article class="exploration project-like" id="exploration-20"><h3 class="heading">
-<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span>
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">3.1.10</span><span class="period">.</span>
 </h3>
 <p id="p-574">State a positive definition for a reducible polynomial with coefficients in a field <span class="process-math">\(F\text{.}\)</span> That is, state a definition which does not refer to the notion of irreducibility.</p></article><article class="theorem theorem-like" id="theorem-47"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.11</span><span class="period">.</span>
 </h3>
 <p id="p-576">Every polynomial of degree 1 in <span class="process-math">\(F[x]\)</span> is irreducible.</p></article><article class="theorem theorem-like" id="theorem-48"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.12</span><span class="period">.</span>
 </h3>
 <p id="p-578">A nonconstant polynomial <span class="process-math">\(f(x)\in F[x]\)</span> of degree 2 or 3 is irreducible over <span class="process-math">\(F\)</span> if and only if it has no zeros in <span class="process-math">\(F\text{.}\)</span></p></article><p id="p-582">The preceding theorems allow us to explore the (ir)reducibility of polynomials of small degree with coefficients in <em class="emphasis">any field</em>.</p>
 <article class="activity project-like" id="activity-15"><h3 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="period">.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.13</span><span class="period">.</span>
 </h3>
 <p id="p-583">Determine which of the following polynomials are irreducible over the given fields. Justify your answer.</p>
 <ol class="decimal">
@@ -260,17 +262,18 @@
 </li>
 </ol></article><p id="p-587">As the following theorem illustrates, in <span class="process-math">\(F[x]\text{,}\)</span> all irreducibles are primes.</p>
 <article class="theorem theorem-like" id="theorem-49"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.14</span><span class="period">.</span>
 </h3>
 <p id="p-588">Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(p(x),f(x),g(x)\in F[x]\)</span> such that <span class="process-math">\(p(x)\)</span> is irreducible and <span class="process-math">\(p(x)\)</span> divides <span class="process-math">\(f(x) g(x)\text{.}\)</span> Then <span class="process-math">\(p(x)\)</span> divides <span class="process-math">\(f(x)\)</span> or <span class="process-math">\(p(x)\)</span> divides <span class="process-math">\(g(x)\text{.}\)</span></p></article><p id="p-590">We next state the Fundamental Theorem of Algebra. Despite its name, its proof relies on analytic properties of the real numbers; there is no purely algebraic proof. Moreover, it is not essential for the work we do in following sections, but given its close relationship to the question of factorization, we include it here for completeness.</p>
 <article class="assemblage assemblage-like" id="ftalg"><h3 class="heading"><span class="title">Fundamental Theorem of Algebra.</span></h3>
 <p id="p-591">Every nonconstant polynomial with coefficients in <span class="process-math">\(\C\)</span> has a root in <span class="process-math">\(\C\text{.}\)</span></p></article><p id="p-592">We conclude with one consequence of the Fundamental Theorem of Algebra.</p>
 <article class="theorem theorem-like" id="theorem-50"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.8</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.15</span><span class="period">.</span>
 </h3>
 <p id="p-593">Every nonconstant polynomial in <span class="process-math">\(\C[x]\)</span> can be written as a product of linear polynomials.</p>
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-14" id="hint-14"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-14"><div class="hint solution-like"><p id="p-594">What are the irreducibles in <span class="process-math">\(\C[x]\text{?}\)</span></p></div></div></article><p id="p-596">Thus, the multiplicative structure of <span class="process-math">\(\C[x]\)</span> is straightforward: everything can be factored as a product of linear polynomials. Fields of coefficients like <span class="process-math">\(\C\)</span> for which this is true are said to be <dfn class="terminology">algebraically closed</dfn>; not all fields satisfy this property. For instance, <span class="process-math">\(x^2 + 1\in \R[x]\)</span> does not factor into a product of linear polynomials. Consequently, <span class="process-math">\(\R\)</span> is not algebraically closed.</p>
-<p id="p-597">However, regardless of whether our field is algebraically closed, we have not yet determined that any <span class="process-math">\(p\in F[x]\)</span> can be factored uniquely into a product of irreducibles, or even that such factorizations into irreducibles exist. In <a href="SubSec-Factorization-in-Euclidean-Domains.html" class="internal" title="Section 3.2: Factorization in Euclidean Domains">Section 3.2</a>, we do just that.</p></section></div></main>
+<p id="p-597">However, regardless of whether our field is algebraically closed, we have not yet determined that any <span class="process-math">\(p\in F[x]\)</span> can be factored uniquely into a product of irreducibles, or even that such factorizations into irreducibles exist. In <a href="SubSec-Factorization-in-Euclidean-Domains.html" class="internal" title="Section 3.2: Factorization in Euclidean Domains">Section 3.2</a>, we do just that.</p></section><div class="hidden-content tex2jax_ignore" id="hk-fn-20"><div class="fn"><code class="code-inline tex2jax_ignore">http://www.corestandards.org/Math/Content/HSA/APR/B/2/</code></div></div>
+</div></main>
 </div>
 </body>
 </html>

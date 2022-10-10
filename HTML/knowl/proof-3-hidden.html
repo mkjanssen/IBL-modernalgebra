@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-05T11:00:44-06:00    *-->
-<!--*                                    *-->
-<!--*      https://pretextbook.org       *-->
-<!--*                                    *-->
-<!--**************************************-->
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-05-16T10:29:34-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>First, assume that \(a \lt b\text{.}\) Then \(q = 0\) and \(r = a\) are sufficient. If \(a = b\text{,}\) then \(q = 1\) and \(r = 0\) will work.</p>
-<p>Now, assume that \(a &gt; b\text{.}\) Then the set \(S = \setof{s\in\N}{a-bs \ge 0}\) is nonempty. Further, note that \(S\) has a largest element: every element \(x\in S\) satisfies \(x \le a\text{,}\) since \(a,b\in\N\text{.}\) Let \(q\) be the largest element of \(S\text{,}\) and set \(r = a - bq\text{.}\)</p>
-<p>To finish the proof, it is enough to show that this choice of \(r\) satisfies \(0\le r \le b-1\text{.}\) Observe that \(r\in S\text{,}\) so \(r\ge 0\text{.}\) If \(r \ge b\text{,}\) then \(a - b(q+1) = a-bq -b = r -b \ge 0\text{.}\) Since \(q+1 &gt; q\text{,}\) this is a contradiction to the assumption that \(q\) was the largest element of \(S\text{.}\) Thus, \(r \lt b\text{,}\) i.e., \(r \le b-1\text{.}\)</p>
-<p>Let \(q,q',r,r'\) be such that \(a = bq+r\) and \(a=bq'+r'\text{.}\) We see that \(bq+r = bq' + r'\text{,}\) so \(b(q-q') = r'-r\text{,}\) so \(b|r'-r\text{.}\) If \(r'-r = 0\text{,}\) we are done.</p>
-<p>Otherwise, \(r'-r\) is a nonzero multiple of \(n\text{.}\) If \(r' \ge r\text{,}\) then \(0\le b(q-q') = r' - r \le b-1 - r\text{,}\) a contradiction. Similarly, if \(r' \le r\text{,}\) write \(b(q'-q) = r-r' \ge 0\text{,}\) and a symmetric argument leads to a contradiction.</p>
-<p>Thus, \(r' = r\text{,}\) so \(b(q-q') = 0\text{,}\) and since \(b &gt; 0\text{,}\) \(q - q'= 0\text{,}\) i.e., \(q = q'\text{.}\)</p></article></body>
+<body class="ignore-math"><article class="hiddenproof"><p>When <span class="process-math">\(n=0\)</span> the inequality becomes <span class="process-math">\(1 \ge 1\text{,}\)</span> which is clearly true.</p>
+<p>Assume <span class="process-math">\(n &gt; 0\text{.}\)</span> Then <span class="process-math">\((1+b)^{n+1} = (1+b)(1+b)^{n+1} \ge (1+b)(1+bn) = 1 +bn + b+b^2 n = 1 + b(n+1) + b^2 n	\ge 1+b(n+1)\text{.}\)</span></p></article></body>
 </html>

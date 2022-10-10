@@ -1,76 +1,58 @@
 <!DOCTYPE html>
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-05T11:00:44-06:00    *-->
-<!--*                                    *-->
-<!--*      https://pretextbook.org       *-->
-<!--*                                    *-->
-<!--**************************************-->
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-05-16T10:29:34-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
 <html lang="en-US">
-<head>
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Ideals in general</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
-    },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>(function() {
-  var cx = '017464805646507420634:llcu9bfj13p';
-  var gcse = document.createElement('script');
-  gcse.type = 'text/javascript';
-  gcse.async = true;
-  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(gcse, s);
-})();
-</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Rings With Inquiry">
+<meta property="book:author" content="Michael Janssen">
+<meta property="book:author" content="Melissa Lindsey">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script async="" src="https://cse.google.com/cse.js?cx=017464805646507420634:llcu9bfj13p"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.13;
-</script>
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\renewcommand{\labelitemi}{$\diamond$}
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand{\labelitemi}{$\diamond$}
 \def\arraystretch{1.5}
 \newcommand{\contentsfinish}{}
 \newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
@@ -121,10 +103,19 @@ var js_version = 0.13;
 \def\R{{\mathbb R}}
 \newcommand{\h}[1]{{\textbf{#1}}}
 \def\presnotes{}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{conj}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{investigation}[theorem]{Investigation}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\)</div>
+\)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="book-1.html"><span class="title">Rings With Inquiry</span></a></h1>
@@ -135,191 +126,205 @@ var js_version = 0.13;
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec-Ideals.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Sec-Ideals.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="SubSec-Quotient-Rings.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec-Ideals.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Sec-Ideals.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="SubSec-Homomorphisms.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec-Ideals.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Sec-Ideals.html" title="Up">Up</a><a class="next-button button toolbar-item" href="SubSec-Quotient-Rings.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec-Ideals.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Sec-Ideals.html" title="Up">Up</a><a class="next-button button toolbar-item" href="SubSec-Homomorphisms.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
-<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
-<li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction">Introduction</a></li>
-<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents">A Note to Students</a></li>
-<li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors">A Note to Instructors</a></li>
-<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction" class="internal">Introduction</a></li>
+<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents" class="internal">A Note to Students</a></li>
+<li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors" class="internal">A Note to Instructors</a></li>
+<li><a href="Sec-Versions.html" data-scroll="Sec-Versions" class="internal">Versions of this text</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Integers.html" data-scroll="Sec-Integers"><span class="codenumber">1</span> <span class="title">The Integers</span></a><ul>
-<li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering">Induction and Well-Ordering</a></li>
-<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers">Divisibility in the integers</a></li>
-<li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization">Primes and Factorization</a></li>
-<li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m">The Integers modulo \(m\)</a></li>
+<a href="Sec-Integers.html" data-scroll="Sec-Integers" class="internal"><span class="codenumber">1</span> <span class="title">The Integers</span></a><ul>
+<li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering" class="internal">Induction and Well-Ordering</a></li>
+<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers" class="internal">Divisibility and GCDs in the Integers</a></li>
+<li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization" class="internal">Primes and Factorization</a></li>
+<li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m" class="internal">The Integers modulo <span class="process-math">\(m\)</span></a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Fields-and-Rings.html" data-scroll="Sec-Fields-and-Rings"><span class="codenumber">2</span> <span class="title">Fields and Rings</span></a><ul>
-<li><a href="SubSec-Fields.html" data-scroll="SubSec-Fields">Fields</a></li>
-<li><a href="SubSec-Rings.html" data-scroll="SubSec-Rings">Rings</a></li>
-<li><a href="SubSec-Divisibility-in-Domains.html" data-scroll="SubSec-Divisibility-in-Domains">Divisibility in Integral Domains</a></li>
-<li><a href="SubSec-Principal-Ideals.html" data-scroll="SubSec-Principal-Ideals">Principal Ideals</a></li>
+<a href="Sec-Fields-and-Rings.html" data-scroll="Sec-Fields-and-Rings" class="internal"><span class="codenumber">2</span> <span class="title">Fields and Rings</span></a><ul>
+<li><a href="SubSec-Fields.html" data-scroll="SubSec-Fields" class="internal">Fields</a></li>
+<li><a href="SubSec-Rings.html" data-scroll="SubSec-Rings" class="internal">Rings</a></li>
+<li><a href="SubSec-Divisibility-in-Domains.html" data-scroll="SubSec-Divisibility-in-Domains" class="internal">Divisibility in Integral Domains</a></li>
+<li><a href="SubSec-Principal-Ideals.html" data-scroll="SubSec-Principal-Ideals" class="internal">Principal Ideals and Euclidean Domains</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Factorization.html" data-scroll="Sec-Factorization"><span class="codenumber">3</span> <span class="title">Factorization</span></a><ul>
-<li><a href="SubSec-Factoring-Polynomials.html" data-scroll="SubSec-Factoring-Polynomials">Factoring Polynomials</a></li>
-<li><a href="SubSec-Factorization-in-Euclidean-Domains.html" data-scroll="SubSec-Factorization-in-Euclidean-Domains">Factorization in Euclidean Domains</a></li>
-<li><a href="SubSec-Nonunique-Factorization.html" data-scroll="SubSec-Nonunique-Factorization">Nonunique Factorization</a></li>
+<a href="Sec-Factorization.html" data-scroll="Sec-Factorization" class="internal"><span class="codenumber">3</span> <span class="title">Factorization</span></a><ul>
+<li><a href="SubSec-Factoring-Polynomials.html" data-scroll="SubSec-Factoring-Polynomials" class="internal">Factoring Polynomials</a></li>
+<li><a href="SubSec-Factorization-in-Euclidean-Domains.html" data-scroll="SubSec-Factorization-in-Euclidean-Domains" class="internal">Factorization in Euclidean Domains</a></li>
+<li><a href="SubSec-Nonunique-Factorization.html" data-scroll="SubSec-Nonunique-Factorization" class="internal">Nonunique Factorization</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="Sec-Ideals.html" data-scroll="Sec-Ideals"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a><ul>
+<a href="Sec-Ideals.html" data-scroll="Sec-Ideals" class="internal"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a><ul>
 <li><a href="SubSec-Ideals-In-General.html" data-scroll="SubSec-Ideals-In-General" class="active">Ideals in general</a></li>
-<li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings">Quotient Rings</a></li>
-<li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms">Homomorphisms</a></li>
+<li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms" class="internal">Homomorphisms</a></li>
+<li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings" class="internal">Quotient Rings: New Rings from Old</a></li>
 </ul>
 </li>
-<li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="section" id="SubSec-Ideals-In-General"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="SubSec-Ideals-In-General"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.1</span> <span class="title">Ideals in general</span>
 </h2>
-<a href="SubSec-Ideals-In-General.html" class="permalink">¶</a><section class="introduction" id="introduction-4"><p id="p-556">Recall that one of the ways in which we understand a mathematical object is to study its relationship to other mathematical objects. In algebra, we learn about a ring by studying its relationship to other rings via functions (introduced in <a href="SubSec-Homomorphisms.html" class="internal" title="Section 4.3: Homomorphisms">Section 4.3</a>) and to its ideals, introduced in <a class="xref" data-knowl="./knowl/def-ideal.html" title="Definition 2.4.1">Definition 2.4.1</a>.</p>
-<p id="p-557">The notion of an ideal number was first introduced by Ernst Kummer middle of the nineteenth century. Kummer was studying the cyclotomic integers in connection to work on Fermat's Last Theorem and reciprocity laws in number theory, and discovered, to use our modern terminology, that these rings of cyclotomic integers were not UFDs. In particular, he found irreducible cyclotomic integers that were not prime. His work, which was finished by Richard Dedekind by 1871, was to define a new class of complex number, an <em class="emphasis">ideal number</em> for which unique factorization into prime ideal numbers held. This notion of ideal number was later elaborated on by David Hilbert and Emmy Noether into the more general version which we stated in <a class="xref" data-knowl="./knowl/def-ideal.html" title="Definition 2.4.1">Definition 2.4.1</a>.</p>
-<p id="p-558">In this section, we explore ways of describing non-principal ideals. We also explore properties of ideals, as well as their connections to other fields of mathematics.</p></section><p id="p-559">We first explore the behavior of ideals under the usual set-theoretic operations of intersection and union.</p>
-<article class="theorem theorem-like" id="thm-idealintersection"><h6 class="heading">
+<article class="assemblage assemblage-like" id="assemblage-18"><h3 class="heading"><span class="title">Guiding Questions.</span></h3>
+<p id="p-666">In this section, we'll seek to answer the questions: <ul class="disc">
+<li id="li-201"><p id="p-derived-li-201">What operations can we perform on existing ideals to create new ideals?</p></li>
+<li id="li-202"><p id="p-derived-li-202">How can we describe (non-principal) ideals in general?</p></li>
+</ul></p></article><section class="introduction" id="introduction-7"><p id="p-667">Recall that one of the ways in which we understand a mathematical object is to study its relationship to other mathematical objects. In algebra, we learn about a ring by studying its relationship to other rings via functions (introduced in <a href="SubSec-Homomorphisms.html" class="internal" title="Section 4.2: Homomorphisms">Section 4.2</a>) and to its ideals, introduced in <a href="" class="xref" data-knowl="./knowl/def-ideal.html" title="Definition 2.4.1">Definition 2.4.1</a>.</p>
+<p id="p-668">The notion of an ideal number was first introduced by Ernst Kummer in the middle of the nineteenth century. Kummer was studying the cyclotomic integers in connection to work on Fermat's Last Theorem and reciprocity laws in number theory, and discovered, to use our modern terminology, that these rings of cyclotomic integers were not UFDs. In particular, he found irreducible cyclotomic integers that were not prime. His work, which was finished by Richard Dedekind by 1871, was to define a new class of complex number, an <em class="emphasis">ideal number</em> for which unique factorization into prime ideal numbers held. This notion of ideal number was later elaborated on by David Hilbert and Emmy Noether into the more general version which we stated in <a href="" class="xref" data-knowl="./knowl/def-ideal.html" title="Definition 2.4.1">Definition 2.4.1</a>.</p>
+<p id="p-669">In this section, we explore ways of describing non-principal ideals. We also explore properties of ideals, as well as their connections to other fields of mathematics.</p></section><p id="p-670">We first explore the behavior of ideals under the usual set-theoretic operations of intersection and union.</p>
+<article class="theorem theorem-like" id="thm-idealintersection"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.1.1</span><span class="period">.</span>
-</h6>
-<p id="p-560">Let \(R\) be a ring and let \(\set{I_{\alpha}}_{\alpha\in \Gamma}\) be a family of ideals. Then \(I = \bigcap\limits_{\alpha\in \Gamma} I_\alpha\) is an ideal.</p></article><article class="hiddenproof" id="proof-58"><a data-knowl="" class="id-ref original" data-refid="hk-proof-58"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-58"><article class="hiddenproof"><p id="p-561">It is clear that \(0\in I\text{.}\) Moreover, if \(x,y\in I\text{,}\) then \(x,y\in I_\alpha\) for all \(\alpha\text{,}\) so \(x-y\in I_\alpha\) and thus \(x-y\in I\text{.}\) Finally, if \(x\in I\) and \(r\in R\text{,}\) \(rx\in I_\alpha\) for all \(\alpha\text{,}\) and thus \(rx\in I\text{.}\)</p></article></div>
-<article class="investigation project-like" id="invest-idealunion"><h6 class="heading">
-<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">4.1.1</span><span class="period">.</span>
-</h6>
-<p id="p-562">Let \(R\) be a ring and \(I,J\subseteq R\) be ideals. Must \(I\cup J\) be an ideal of \(R\text{?}\) Give a proof or counterexample of your assertion.</p>
+</h3>
+<p id="p-671">Let <span class="process-math">\(R\)</span> be a ring and let <span class="process-math">\(\set{I_{\alpha}}_{\alpha\in \Gamma}\)</span> be a family of ideals. Then <span class="process-math">\(I = \bigcap\limits_{\alpha\in \Gamma} I_\alpha\)</span> is an ideal.</p></article><article class="hiddenproof" id="proof-68"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-68"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-68"><article class="hiddenproof"><p id="p-672">It is clear that <span class="process-math">\(0\in I\text{.}\)</span> Moreover, if <span class="process-math">\(x,y\in I\text{,}\)</span> then <span class="process-math">\(x,y\in I_\alpha\)</span> for all <span class="process-math">\(\alpha\text{,}\)</span> so <span class="process-math">\(x-y\in I_\alpha\)</span> and thus <span class="process-math">\(x-y\in I\text{.}\)</span> Finally, if <span class="process-math">\(x\in I\)</span> and <span class="process-math">\(r\in R\text{,}\)</span> <span class="process-math">\(rx\in I_\alpha\)</span> for all <span class="process-math">\(\alpha\text{,}\)</span> and thus <span class="process-math">\(rx\in I\text{.}\)</span></p></article></div>
+<article class="investigation project-like" id="invest-idealunion"><h3 class="heading">
+<span class="type">Investigation</span><span class="space"> </span><span class="codenumber">4.1.2</span><span class="period">.</span>
+</h3>
+<p id="p-673">Let <span class="process-math">\(R\)</span> be a ring and <span class="process-math">\(I,J\subseteq R\)</span> be ideals. Must <span class="process-math">\(I\cup J\)</span> be an ideal of <span class="process-math">\(R\text{?}\)</span> Give a proof or counterexample of your assertion.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like"><p id="p-563">Given \(R = \Z\text{,}\) \(I = \ideal{2}\text{,}\) and \(J = \ideal{3}\text{,}\) note that since \(5 = 2 + 3\notin I\cup J\text{,}\) the union \(I\cup J\) is not an ideal.</p></div></div>
-</div></article><p id="p-564">In addition to the set-theoretic properties described above, we can do arithmetic with ideals.</p>
-<article class="theorem theorem-like" id="theorem-62"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.1.2</span><span class="period">.</span>
-</h6>
-<p id="p-565">Let \(R\) be a ring and \(I,J\subseteq R\) ideals of \(R\text{.}\) Then the <dfn class="terminology">sum</dfn> of \(I\) and \(J\text{,}\)</p>
-<div class="displaymath">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-33" id="solution-33"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-33"><div class="solution solution-like"><p id="p-674">Given <span class="process-math">\(R = \Z\text{,}\)</span> <span class="process-math">\(I = \ideal{2}\text{,}\)</span> and <span class="process-math">\(J = \ideal{3}\text{,}\)</span> note that since <span class="process-math">\(5 = 2 + 3\notin I\cup J\text{,}\)</span> the union <span class="process-math">\(I\cup J\)</span> is not an ideal.</p></div></div>
+</div></article><p id="p-675">In addition to the set-theoretic properties described above, we can do arithmetic with ideals.</p>
+<article class="theorem theorem-like" id="theorem-63"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.1.3</span><span class="period">.</span>
+</h3>
+<p id="p-676">Let <span class="process-math">\(R\)</span> be a ring and <span class="process-math">\(I,J\subseteq R\)</span> ideals of <span class="process-math">\(R\text{.}\)</span> Then the <dfn class="terminology">sum</dfn> of <span class="process-math">\(I\)</span> and <span class="process-math">\(J\text{,}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 I+J := \setof{x+y}{x\in I, y\in J},
 \end{equation*}
 </div>
-<p>is an ideal of \(R\text{.}\) Furthermore, the <dfn class="terminology">product</dfn> of \(I\) and \(J\text{,}\)</p>
-<div class="displaymath">
+<p class="continuation">is an ideal of <span class="process-math">\(R\text{.}\)</span> Furthermore, the <dfn class="terminology">product</dfn> of <span class="process-math">\(I\)</span> and <span class="process-math">\(J\text{,}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 IJ := \setof{x_1 y_1 + x_2 y_2 + \cdots + x_n y_n}{n\ge 1, x_i \in I, y_j\in J}
 \end{equation*}
 </div>
-<p>is an ideal of \(R\text{.}\)</p></article><article class="hiddenproof" id="proof-59"><a data-knowl="" class="id-ref original" data-refid="hk-proof-59"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-59"><article class="hiddenproof">TBD.</article></div>
-<p id="p-566">When we studied principal ideals, we were able to describe the principal ideal in terms of a single generating element. However, not every ideal is principal (see the <a class="xref" data-knowl="./knowl/challenge-nonprincideal.html" title="Challenge 4.1.8">Challenge 4.1.8</a>). Still, we would like a way to more precisely describe the elements of such ideals; we begin with <a class="xref" data-knowl="./knowl/def_idealgeneration.html" title="Definition 4.1.3">Definition 4.1.3</a>.</p>
-<article class="definition definition-like" id="def_idealgeneration"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.3</span><span class="period">.</span>
-</h6>
-<p id="p-567">Let \(R\) be a commutative ring with identity, and let \(S\subseteq R\) be a subset. Then</p>
-<div class="displaymath">
+<p class="continuation">is an ideal of <span class="process-math">\(R\text{.}\)</span></p></article><article class="hiddenproof" id="proof-69"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-69"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-69"><article class="hiddenproof">TBD.</article></div>
+<p id="p-677">When we studied principal ideals, we were able to describe the principal ideal in terms of a single generating element. However, not every ideal is principal (see the <a href="" class="xref" data-knowl="./knowl/challenge-nonprincideal.html" title="Challenge 4.1.9">Challenge 4.1.9</a>). Still, we would like a way to more precisely describe the elements of such ideals; we begin with <a href="" class="xref" data-knowl="./knowl/def_idealgeneration.html" title="Definition 4.1.4">Definition 4.1.4</a>.</p>
+<article class="definition definition-like" id="def_idealgeneration"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.4</span><span class="period">.</span>
+</h3>
+<p id="p-678">Let <span class="process-math">\(R\)</span> be a commutative ring with identity, and let <span class="process-math">\(S\subseteq R\)</span> be a subset. Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="eq_idealgeneratedbyset">
 \begin{equation}
-\langle S \rangle := \bigcap\limits_{\substack{J\supseteq S\\\text{ \(J\) is an ideal } } } J\label{eq_idealgeneratedbyset}\tag{4.1.1}
+\langle S \rangle := \bigcap\limits_{\substack{J\supseteq S\\\text{ \(J\) is an ideal } } } J\tag{4.1.1}
 \end{equation}
 </div>
-<p>is called the , and we call \(S\) the <dfn class="terminology">generating set for the ideal</dfn>.</p></article><p id="p-568">A consequence of <a class="xref" data-knowl="./knowl/def_idealgeneration.html" title="Definition 4.1.3">Definition 4.1.3</a> is the following theorem.</p>
-<article class="theorem theorem-like" id="theorem-63"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.1.4</span><span class="period">.</span>
-</h6>Let \(R\) be a ring. Then \(\ideal{\emptyset} = \set{0}\text{.}\)</article><article class="hiddenproof" id="proof-60"><a data-knowl="" class="id-ref original" data-refid="hk-proof-60"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-60"><article class="hiddenproof"><p id="p-569">Observe that for all ideals \(J\) in \(R\text{,}\) \(\emptyset\subseteq J\text{.}\) In particular, one of the ideals in the right-hand side of <a class="xref" data-knowl="./knowl/eq_idealgeneratedbyset.html" title="Equation 4.1.1">(4.1.1)</a> is the zero ideal. Since the zero ideal is a subset of all ideals, the theorem follows.</p></article></div>
-<p id="p-570">One way to interpret <a class="xref" data-knowl="./knowl/def_idealgeneration.html" title="Definition 4.1.3">Definition 4.1.3</a> is that \(\ideal{S}\) is the smallest ideal (with respect to subset inclusion) that contains \(S\text{.}\)</p>
-<article class="theorem theorem-like" id="theorem-smallestideal"><h6 class="heading">
+<p class="continuation">is called the <dfn class="terminology">ideal generated by <span class="process-math">\(S\)</span></dfn>, and we call <span class="process-math">\(S\)</span> the <dfn class="terminology">generating set for the ideal</dfn>.</p></article><p id="p-679">A consequence of <a href="" class="xref" data-knowl="./knowl/def_idealgeneration.html" title="Definition 4.1.4">Definition 4.1.4</a> is the following theorem.</p>
+<article class="theorem theorem-like" id="theorem-64"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.1.5</span><span class="period">.</span>
-</h6>
-<p id="p-571">Given a commutative ring \(R\) and a subset \(S\) of \(R\text{,}\) \(\ideal{S}\) is the smallest ideal containing \(S\) in the sense that, if \(J\) is any ideal of \(R\) containing \(S\text{,}\) \(\ideal{S}\subseteq J\text{.}\)</p></article><article class="hiddenproof" id="proof-61"><a data-knowl="" class="id-ref original" data-refid="hk-proof-61"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-61"><article class="hiddenproof"><p id="p-572">Let \(I\) be any ideal containing \(S\text{.}\) Thus, \(I\) is one of the ideals on the right-hand side of <a class="xref" data-knowl="./knowl/eq_idealgeneratedbyset.html" title="Equation 4.1.1">(4.1.1)</a>. Since \(\ideal{S}\) is formed by the intersection of \(I\) with other ideals, \(\ideal{S}\subseteq I\text{.}\)</p></article></div>
-<p id="p-573">The concept elucidated by <a class="xref" data-knowl="./knowl/theorem-smallestideal.html" title="Theorem 4.1.5">Theorem 4.1.5</a> is useful conceptually, but does not give us a handle on the structure of the elements of \(\ideal{S}\) Such a description is provided by <a class="xref" data-knowl="./knowl/thm_idealgeneratingset.html" title="Theorem 4.1.6">Theorem 4.1.6</a>.</p>
-<article class="theorem theorem-like" id="thm_idealgeneratingset"><h6 class="heading">
+</h3>Let <span class="process-math">\(R\)</span> be a ring. Then <span class="process-math">\(\ideal{\emptyset} = \set{0}\text{.}\)</span></article><article class="hiddenproof" id="proof-70"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-70"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-70"><article class="hiddenproof"><p id="p-680">Observe that for all ideals <span class="process-math">\(J\)</span> in <span class="process-math">\(R\text{,}\)</span> <span class="process-math">\(\emptyset\subseteq J\text{.}\)</span> In particular, one of the ideals in the right-hand side of <a href="" class="xref" data-knowl="./knowl/eq_idealgeneratedbyset.html" title="Equation 4.1.1">(4.1.1)</a> is the zero ideal. Since the zero ideal is a subset of all ideals, the theorem follows.</p></article></div>
+<p id="p-681">One way to interpret <a href="" class="xref" data-knowl="./knowl/def_idealgeneration.html" title="Definition 4.1.4">Definition 4.1.4</a> is that <span class="process-math">\(\ideal{S}\)</span> is the smallest ideal (with respect to subset inclusion) that contains <span class="process-math">\(S\text{.}\)</span></p>
+<article class="theorem theorem-like" id="theorem-smallestideal"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.1.6</span><span class="period">.</span>
-</h6>
-<p id="p-574">Given a commutative ring with identity \(R\) and a nonempty subset \(S\) of \(R\text{:}\)</p>
+</h3>
+<p id="p-682">Given a commutative ring <span class="process-math">\(R\)</span> and a subset <span class="process-math">\(S\)</span> of <span class="process-math">\(R\text{,}\)</span> <span class="process-math">\(\ideal{S}\)</span> is the smallest ideal containing <span class="process-math">\(S\)</span> in the sense that, if <span class="process-math">\(J\)</span> is any ideal of <span class="process-math">\(R\)</span> containing <span class="process-math">\(S\text{,}\)</span> <span class="process-math">\(\ideal{S}\subseteq J\text{.}\)</span></p></article><article class="hiddenproof" id="proof-71"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-71"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-71"><article class="hiddenproof"><p id="p-683">Let <span class="process-math">\(I\)</span> be any ideal containing <span class="process-math">\(S\text{.}\)</span> Thus, <span class="process-math">\(I\)</span> is one of the ideals on the right-hand side of <a href="" class="xref" data-knowl="./knowl/eq_idealgeneratedbyset.html" title="Equation 4.1.1">(4.1.1)</a>. Since <span class="process-math">\(\ideal{S}\)</span> is formed by the intersection of <span class="process-math">\(I\)</span> with other ideals, <span class="process-math">\(\ideal{S}\subseteq I\text{.}\)</span></p></article></div>
+<p id="p-684">The concept elucidated by <a href="" class="xref" data-knowl="./knowl/theorem-smallestideal.html" title="Theorem 4.1.6">Theorem 4.1.6</a> is helpful, but does not give us a handle on the structure of the elements of <span class="process-math">\(\ideal{S}\text{.}\)</span> Such a description is provided by <a href="" class="xref" data-knowl="./knowl/thm_idealgeneratingset.html" title="Theorem 4.1.7">Theorem 4.1.7</a>.</p>
+<article class="theorem theorem-like" id="thm_idealgeneratingset"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.1.7</span><span class="period">.</span>
+</h3>
+<p id="p-685">Given a commutative ring with identity <span class="process-math">\(R\)</span> and a nonempty subset <span class="process-math">\(S\)</span> of <span class="process-math">\(R\text{:}\)</span></p>
 <ol class="decimal">
-<li id="li-124">The set \(I = \setof{r_1 s_1 + r_2 s_2 + \cdots + r_n s_n}{r_i\in R, \ s_j \in S,\ n\ge 1}\) is an ideal of \(R\text{;}\)</li>
-<li id="li-125">\(S\subseteq I\text{;}\) and</li>
-<li id="li-126">\(\displaystyle I = \ideal{S}\)</li>
-</ol></article><article class="hiddenproof" id="proof-62"><a data-knowl="" class="id-ref original" data-refid="hk-proof-62"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-62"><article class="hiddenproof"><p id="p-575">It is clear that \(0\in I\text{,}\) and that if \(r\in R\) and \(x\in I\text{,}\) \(rx\in I\text{.}\) Moreover, the sum of two \(R\)-linear combinations of elements of \(S\) is yet another \(R\)-linear combination of elements of \(S\text{.}\) Thus, \(I\) is an ideal. Further, if \(s\in S\text{,}\) \(1\cdot s \in I\text{,}\) so \(S\subseteq I\text{.}\) Therefore, \(\ideal{S}\subseteq I\text{.}\)</p>
-<p id="p-576">Now assume that \(x\in I\text{.}\) Then \(x\) has the form \(x = r_1 s_1 + \cdots + r_n s_n\text{.}\) Each \(s_i \in S\text{,}\) so each \(r_i s_i \in J\) if \(J\) is any ideal containing \(S\text{.}\) In particular, \(r_i s_i \in \ideal{S}\text{,}\) and thus the sum \(x = \sum r_i s_i \in \ideal{S}\text{.}\)</p></article></div>
-<article class="definition definition-like" id="definition-36"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.7</span><span class="period">.</span>
-</h6>
-<p id="p-577">If \(R\) is a ring and \(S = \set{s_1, s_2, \ldots,
-s_n}\) is a finite subset of \(R\text{,}\) the ideal \(I\) generated by \(R\) is denoted by \(I = \ideal{s_1 s_2, \ldots,
-s_n}\text{,}\) and we say \(I\) is <dfn class="terminology">finitely generated</dfn>.</p></article><article class="principle theorem-like" id="challenge-nonprincideal"><h6 class="heading">
-<span class="type">Challenge</span><span class="space"> </span><span class="codenumber">4.1.8</span><span class="period">.</span>
-</h6>
-<p id="p-578">The ring \(\Z[x]\) is not a PID.</p>
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-11" id="hint-11"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-11"><div class="hint solution-like"><p id="p-579">Consider the ideal \(I = \langle 2, x \rangle\text{.}\)</p></div></div></article><p id="p-582">Note that the set \(S\) in <a class="xref" data-knowl="./knowl/thm_idealgeneratingset.html" title="Theorem 4.1.6">Theorem 4.1.6</a> need not be finite. However, in many familiar rings, every ideal will have a finite generating set, as the next theorem demonstrates.</p>
-<article class="theorem theorem-like" id="theorem-66"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.1.9</span><span class="period">.</span>
-</h6>
-<p id="p-583">Let \(R\) be a ring. If \(R\) is Noetherian<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-8" id="fn-8"><sup> 1 </sup></a>, then every ideal \(I\) of \(R\) is finitely generated.</p>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-8"><div class="fn">Recall <a class="xref" data-knowl="./knowl/def-noetherian.html" title="Definition 3.2.3">Definition 3.2.3</a>.</div></div>
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-12" id="hint-12"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-12"><div class="hint solution-like"><p id="p-584">Consider an arbitrary ideal \(I\) and inductively build an ascending chain of finitely generated ideals contained in \(I\text{.}\)</p></div></div></article><article class="hiddenproof" id="proof-64"><a data-knowl="" class="id-ref original" data-refid="hk-proof-64"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-64"><article class="hiddenproof"><p id="p-585">Assume that \(R\) is Noetherian. Inductively build an ascending chain of ideals as follows:</p>
+<li id="li-203"><p id="p-derived-li-203">The set <span class="process-math">\(I = \setof{r_1 s_1 + r_2 s_2 + \cdots + r_n s_n}{r_i\in R, \ s_j \in S,\ n\ge 1}\)</span> is an ideal of <span class="process-math">\(R\text{;}\)</span></p></li>
+<li id="li-204"><p id="p-derived-li-204"><span class="process-math">\(S\subseteq I\text{;}\)</span> and</p></li>
+<li id="li-205"><p id="p-derived-li-205"><span class="process-math">\(I = \ideal{S}\text{.}\)</span></p></li>
+</ol></article><article class="hiddenproof" id="proof-72"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-72"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-72"><article class="hiddenproof"><p id="p-686">It is clear that <span class="process-math">\(0\in I\text{,}\)</span> and that if <span class="process-math">\(r\in R\)</span> and <span class="process-math">\(x\in I\text{,}\)</span> <span class="process-math">\(rx\in I\text{.}\)</span> Moreover, the sum of two <span class="process-math">\(R\)</span>-linear combinations of elements of <span class="process-math">\(S\)</span> is yet another <span class="process-math">\(R\)</span>-linear combination of elements of <span class="process-math">\(S\text{.}\)</span> Thus, <span class="process-math">\(I\)</span> is an ideal. Further, if <span class="process-math">\(s\in S\text{,}\)</span> <span class="process-math">\(1\cdot s \in I\text{,}\)</span> so <span class="process-math">\(S\subseteq I\text{.}\)</span> Therefore, <span class="process-math">\(\ideal{S}\subseteq I\text{.}\)</span></p>
+<p id="p-687">Now assume that <span class="process-math">\(x\in I\text{.}\)</span> Then <span class="process-math">\(x\)</span> has the form <span class="process-math">\(x = r_1 s_1 + \cdots + r_n s_n\text{.}\)</span> Each <span class="process-math">\(s_i \in S\text{,}\)</span> so each <span class="process-math">\(r_i s_i \in J\)</span> if <span class="process-math">\(J\)</span> is any ideal containing <span class="process-math">\(S\text{.}\)</span> In particular, <span class="process-math">\(r_i s_i \in \ideal{S}\text{,}\)</span> and thus the sum <span class="process-math">\(x = \sum r_i s_i \in \ideal{S}\text{.}\)</span></p></article></div>
+<p id="p-688">In other words, the ideal <span class="process-math">\(\ideal{S}\)</span> contains all possible finite sums of products of ring elements with elements from <span class="process-math">\(S\text{.}\)</span></p>
+<article class="definition definition-like" id="definition-34"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.8</span><span class="period">.</span>
+</h3>
+<p id="p-689">If <span class="process-math">\(R\)</span> is a ring and <span class="process-math">\(S = \set{s_1, s_2, \ldots,
+s_n}\)</span> is a finite subset of <span class="process-math">\(R\text{,}\)</span> the ideal <span class="process-math">\(I\)</span> generated by <span class="process-math">\(R\)</span> is denoted by <span class="process-math">\(I = \ideal{s_1, s_2, \ldots,
+s_n}\text{,}\)</span> and we say <span class="process-math">\(I\)</span> is <dfn class="terminology">finitely generated</dfn>.</p></article><article class="principle theorem-like" id="challenge-nonprincideal"><h3 class="heading">
+<span class="type">Challenge</span><span class="space"> </span><span class="codenumber">4.1.9</span><span class="period">.</span>
+</h3>
+<p id="p-690">The ring <span class="process-math">\(\Z[x]\)</span> is not a PID.</p>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-19" id="hint-19"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-19"><div class="hint solution-like"><p id="p-691">Consider the ideal <span class="process-math">\(I = \langle 2, x \rangle\text{.}\)</span></p></div></div></article><p id="p-694">Note that the set <span class="process-math">\(S\)</span> in <a href="" class="xref" data-knowl="./knowl/thm_idealgeneratingset.html" title="Theorem 4.1.7">Theorem 4.1.7</a> need not be finite. However, in many familiar rings, every ideal will have a finite generating set, as the next theorem demonstrates.</p>
+<article class="theorem theorem-like" id="theorem-67"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.1.10</span><span class="period">.</span>
+</h3>
+<p id="p-695">Let <span class="process-math">\(R\)</span> be a ring. If <span class="process-math">\(R\)</span> is Noetherian<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-23" id="fn-23"><sup> 1 </sup></a>, then every ideal <span class="process-math">\(I\)</span> of <span class="process-math">\(R\)</span> is finitely generated.</p>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-20" id="hint-20"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-20"><div class="hint solution-like"><p id="p-696">Consider an arbitrary ideal <span class="process-math">\(I\)</span> and inductively build an ascending chain of finitely generated ideals contained in <span class="process-math">\(I\text{.}\)</span></p></div></div></article><article class="hiddenproof" id="proof-74"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-74"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-74"><article class="hiddenproof"><p id="p-697">Assume that <span class="process-math">\(R\)</span> is Noetherian. Inductively build an ascending chain of ideals as follows:</p>
 <ul class="disc">
-<li id="li-127">Let \(x_1 \in I\) be arbitrary.</li>
-<li id="li-128">For all \(i\ge 2\text{,}\) let \(x_i \in I\setminus \ideal{x_1, \ldots, x_{i-1}}\) be arbitrary.</li>
+<li id="li-206"><p id="p-derived-li-206">Let <span class="process-math">\(x_1 \in I\)</span> be arbitrary.</p></li>
+<li id="li-207"><p id="p-derived-li-207">For all <span class="process-math">\(i\ge 2\text{,}\)</span> let <span class="process-math">\(x_i \in I\setminus \ideal{x_1, \ldots, x_{i-1}}\)</span> be arbitrary.</p></li>
 </ul>
-<p>We thus obtain an ascending chain of ideals</p>
-<div class="displaymath">
+<p class="continuation">We thus obtain an ascending chain of ideals</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \ideal{x_1} \subseteq \ideal{x_1, x_2}\subseteq \ideal{x_1,x_2,x_3}\subseteq \cdots
 \end{equation*}
 </div>
-<p>which must stabilize at \(\ideal{x_1, x_2,\ldots, x_n}\text{.}\) That is, at some point, \(I\setminus \ideal{x_1, x_2,\ldots, x_n} = \emptyset\text{,}\) and since \(\ideal{x_1, x_2,\ldots, x_n}\subseteq I\text{,}\) we have \(I = \ideal{x_1, x_2,\ldots, x_n}\text{.}\)</p></article></div>
-<p id="p-586">In fact, we could have used the finite generation of ideals as the definition of Noetherian rings, as the two notions are equivalent. First, a lemma.</p>
-<article class="lemma theorem-like" id="lemma-ascendingchainideal"><h6 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.1.10</span><span class="period">.</span>
-</h6>
-<p id="p-587">Let \(R\) be a ring and \(I_1 \subseteq I_2\subseteq I_3\subseteq \cdots \) an ascending chain of ideals. Then</p>
-<div class="displaymath">
+<p class="continuation">which must stabilize at <span class="process-math">\(\ideal{x_1, x_2,\ldots, x_n}\text{.}\)</span> That is, at some point, <span class="process-math">\(I\setminus \ideal{x_1, x_2,\ldots, x_n} = \emptyset\text{,}\)</span> and since <span class="process-math">\(\ideal{x_1, x_2,\ldots, x_n}\subseteq I\text{,}\)</span> we have <span class="process-math">\(I = \ideal{x_1, x_2,\ldots, x_n}\text{.}\)</span></p></article></div>
+<p id="p-698">In fact, we could have used the finite generation of ideals as the definition of Noetherian rings, as the two notions are equivalent. First, a lemma.</p>
+<article class="lemma theorem-like" id="lemma-ascendingchainideal"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.1.11</span><span class="period">.</span>
+</h3>
+<p id="p-699">Let <span class="process-math">\(R\)</span> be a ring and <span class="process-math">\(I_1 \subseteq I_2\subseteq I_3\subseteq \cdots \)</span> an ascending chain of ideals. Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 I = \bigcup\limits_{j=1}^\infty I_j
 \end{equation*}
 </div>
-<p>is an ideal.</p></article><article class="hiddenproof" id="proof-65"><a data-knowl="" class="id-ref original" data-refid="hk-proof-65"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-65"><article class="hiddenproof"><p id="p-588">Straightforward definition check. Nearly identical to <a class="xref" data-knowl="./knowl/theorem-pidisnoetherian.html" title="Theorem 3.2.4">Theorem 3.2.4</a>.</p></article></div>
-<article class="theorem theorem-like" id="theorem-67"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.1.11</span><span class="period">.</span>
-</h6>
-<p id="p-589">Let \(R\) be a ring such that every ideal of \(R\) is finitely generated. Then \(R\) is Noetherian.</p>
-<a data-knowl="" class="id-ref original" data-refid="hk-hint-13" id="hint-13"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-13"><div class="hint solution-like"><p id="p-590">Argue that the ideal \(I\) defined in <a class="xref" data-knowl="./knowl/lemma-ascendingchainideal.html" title="Lemma 4.1.10">Lemma 4.1.10</a> is a finitely generated ideal of \(R\text{,}\) and use this to conclude that the ascending chain stabilizes.</p></div></div></article><article class="hiddenproof" id="proof-66"><a data-knowl="" class="id-ref original" data-refid="hk-proof-66"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-66"><article class="hiddenproof"><p id="p-591">Following the hint and <a class="xref" data-knowl="./knowl/lemma-ascendingchainideal.html" title="Lemma 4.1.10">Lemma 4.1.10</a>, we have \(I = \ideal{x_1, x_2, \ldots, x_n}\) while \(I_j\subseteq I\) for all \(j\text{.}\) Since \(I = \bigcup\limits_{j=1}^\infty I_j\text{,}\) for each \(k, 1\le k \le n\text{,}\) there is a \(j_k\) satisfying \(x_k \in I_{j_k}\text{.}\) What is more, we may rename \(x_1, x_2, \ldots, x_n\) so that \(j_1 \le j_2 \le \ldots \le j_n\) and thus</p>
-<div class="displaymath">
+<p class="continuation">is an ideal.</p></article><article class="hiddenproof" id="proof-75"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-75"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-75"><article class="hiddenproof"><p id="p-700">Straightforward definition check. Nearly identical to <a href="" class="xref" data-knowl="./knowl/theorem-pidisnoetherian.html" title="Theorem 3.2.7">Theorem 3.2.7</a>.</p></article></div>
+<article class="theorem theorem-like" id="theorem-68"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.1.12</span><span class="period">.</span>
+</h3>
+<p id="p-701">Let <span class="process-math">\(R\)</span> be a ring such that every ideal of <span class="process-math">\(R\)</span> is finitely generated. Then <span class="process-math">\(R\)</span> is Noetherian.</p>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-21" id="hint-21"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-21"><div class="hint solution-like"><p id="p-702">Argue that the ideal <span class="process-math">\(I\)</span> defined in <a href="" class="xref" data-knowl="./knowl/lemma-ascendingchainideal.html" title="Lemma 4.1.11">Lemma 4.1.11</a> is a finitely generated ideal of <span class="process-math">\(R\text{,}\)</span> and use this to conclude that the ascending chain stabilizes.</p></div></div></article><article class="hiddenproof" id="proof-76"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-76"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-76"><article class="hiddenproof"><p id="p-703">Following the hint and <a href="" class="xref" data-knowl="./knowl/lemma-ascendingchainideal.html" title="Lemma 4.1.11">Lemma 4.1.11</a>, we have <span class="process-math">\(I = \ideal{x_1, x_2, \ldots, x_n}\)</span> while <span class="process-math">\(I_j\subseteq I\)</span> for all <span class="process-math">\(j\text{.}\)</span> Since <span class="process-math">\(I = \bigcup\limits_{j=1}^\infty I_j\text{,}\)</span> for each <span class="process-math">\(k, 1\le k \le n\text{,}\)</span> there is a <span class="process-math">\(j_k\)</span> satisfying <span class="process-math">\(x_k \in I_{j_k}\text{.}\)</span> What is more, we may rename <span class="process-math">\(x_1, x_2, \ldots, x_n\)</span> so that <span class="process-math">\(j_1 \le j_2 \le \ldots \le j_n\)</span> and thus</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lemma-ascendingchainideal.html">
 \begin{equation*}
 I_{j_1} \subseteq I_{j_2}\subseteq \cdots \subseteq I_{j_n}.
 \end{equation*}
 </div>
-<p>Observe that this means that \(x_{j_k}\in I_{j_n}\) for all \(k\text{,}\) so that \(I = I_{j_n}\text{.}\) Thus, the chain stabilizes, and \(R\) is Noetherian.</p></article></div>
-<p id="p-592">We close with a discussion of a class of ideals which are the object of active mathematical research. Recall that a (simple) graph \(G\) consists of a set \(V = \set{x_1, x_2, \ldots, x_n}\) of <em class="emphasis">vertices</em> together with a collection \(E\) of <em class="emphasis">edges</em>, which are just pairs of vertices and can be written \(x_i x_j\text{.}\) This notation suggests the following definition.</p>
-<article class="definition definition-like" id="def-edge-ideal"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.12</span><span class="period">.</span>
-</h6>
-<p id="p-593">Let \(K\) be a field, \(G\) a graph on the vertex set \(V = \set{x_1, x_2, \ldots, x_n}\) with edge set \(E\text{,}\) and let \(R = K[x_1, x_2, \ldots, x_n]\) be the ring of polynomials whose variables are the vertices of \(G\) with coefficients in \(K\text{.}\) Define the  of \(G\) to be</p>
-<div class="displaymath">
+<p class="continuation">Observe that this means that <span class="process-math">\(x_{j_k}\in I_{j_n}\)</span> for all <span class="process-math">\(k\text{,}\)</span> so that <span class="process-math">\(I = I_{j_n}\text{.}\)</span> Thus, the chain stabilizes, and <span class="process-math">\(R\)</span> is Noetherian.</p></article></div>
+<p id="p-704">As one might expect, not every ring is Noetherian. However, most familiar rings are.</p>
+<article class="exploration project-like" id="exploration-23"><h3 class="heading">
+<span class="type">Exploration</span><span class="space"> </span><span class="codenumber">4.1.13</span><span class="period">.</span>
+</h3>
+<p id="p-705">Show that the ring <span class="process-math">\(R = \Q[x_1, x_2, x_3, \ldots]\)</span> of polynomials in infinitely many variables over <span class="process-math">\(\Q\)</span> is not Noetherian either by exhibiting an ascending chain of ideals that never stabilizes, or an ideal without a finite generating set.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-34" id="solution-34"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-34"><div class="solution solution-like"><p id="p-706">TBD.</p></div></div>
+</div></article><p id="p-707">We close with a discussion of a class of ideals which are the object of active mathematical research. Recall that a (simple) graph <span class="process-math">\(G\)</span> consists of a set <span class="process-math">\(V = \set{x_1, x_2, \ldots, x_n}\)</span> of <em class="emphasis">vertices</em> together with a collection <span class="process-math">\(E\)</span> of <em class="emphasis">edges</em>, which are just pairs of vertices and can be written <span class="process-math">\(x_i x_j\text{.}\)</span> This notation suggests the following definition.</p>
+<article class="definition definition-like" id="def-edge-ideal"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1.14</span><span class="period">.</span>
+</h3>
+<p id="p-708">Let <span class="process-math">\(K\)</span> be a field, <span class="process-math">\(G\)</span> a graph on the vertex set <span class="process-math">\(V = \set{x_1, x_2, \ldots, x_n}\)</span> with edge set <span class="process-math">\(E\text{,}\)</span> and let <span class="process-math">\(R = K[x_1, x_2, \ldots, x_n]\)</span> be the ring of polynomials whose variables are the vertices of <span class="process-math">\(G\)</span> with coefficients in <span class="process-math">\(K\text{.}\)</span> Define the <dfn class="terminology">edge ideal</dfn> of <span class="process-math">\(G\)</span> to be</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 I(G) := \ideal{x_i x_j \mid x_i x_j\in E}.
 \end{equation*}
 </div>
-<p>That is, \(I(G)\) is generated by the products of the variables corresponding to the edges of the graph.</p></article><article class="activity project-like" id="activity-14"><h6 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.2</span><span class="period">.</span>
-</h6>
-<p id="p-594">Consider the graph \(G\) in <a class="xref" data-knowl="./knowl/graph.html" title="Figure 4.1.13">Figure 4.1.13</a>. List the generators of \(I(G)\) and an appropriate ring in which \(I(G)\) may live.</p></article><figure class="figure figure-like" id="graph"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="./images/graph.svg" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.13<span class="period">.</span></span><span class="space"> </span>A graph \(G\text{.}\)</figcaption></figure><p id="p-595">As one might hope, we do not make <a class="xref" data-knowl="./knowl/def-edge-ideal.html" title="Definition 4.1.12">Definition 4.1.12</a> merely for fun; given a graph \(G\text{,}\) it is possible to relate the graph-theoretic properties of \(G\) (e.g., the chromatic number) with the ideal-theoretic properties of \(I(G)\text{.}\) See <a class="xref" data-knowl="./knowl/vantuyl-intro.html" title="Bibliographic Entry 4.1.1">[4.1.1]</a> and <a class="xref" data-knowl="./knowl/mfo-waldschmidt.html" title="Bibliographic Entry 4.1.2">[4.1.2]</a>, among others, for more.</p>
+<p class="continuation">That is, <span class="process-math">\(I(G)\)</span> is generated by the products of the variables corresponding to the edges of the graph.</p></article><article class="activity project-like" id="activity-18"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.15</span><span class="period">.</span>
+</h3>
+<p id="p-709">Consider the graph <span class="process-math">\(G\)</span> in <a href="" class="xref" data-knowl="./knowl/graph.html" title="Figure 4.1.16">Figure 4.1.16</a>. List the generators of <span class="process-math">\(I(G)\)</span> and an appropriate ring in which <span class="process-math">\(I(G)\)</span> may live.</p></article><figure class="figure figure-like" id="graph"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="./images/graph.svg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.16<span class="period">.</span></span><span class="space"> </span>A graph <span class="process-math">\(G\text{.}\)</span></figcaption></figure><p id="p-710">As one might hope, we do not make <a href="" class="xref" data-knowl="./knowl/def-edge-ideal.html" title="Definition 4.1.14">Definition 4.1.14</a> merely for fun; given a graph <span class="process-math">\(G\text{,}\)</span> it is possible to relate the graph-theoretic properties of <span class="process-math">\(G\)</span> (e.g., the chromatic number) with the ideal-theoretic properties of <span class="process-math">\(I(G)\text{.}\)</span> See <a href="" class="xref" data-knowl="./knowl/vantuyl-intro.html" title="Bibliographic Entry 4.1.1">[4.1.1]</a> and <a href="" class="xref" data-knowl="./knowl/mfo-waldschmidt.html" title="Bibliographic Entry 4.1.2">[4.1.2]</a>, among others, for more.</p>
 <section class="references" id="references-4"><h3 class="heading hide-type">
 <span class="type">References</span> <span class="codenumber"></span> <span class="title">References</span>
 </h3>
-<article class="bib" id="vantuyl-intro"><div class="bibitem">[1]</div>  <div class="bibentry">A. Van Tuyl, <em class="emphasis"><a class="external" href="http://dx.doi.org/doi:10.1007/978-3-642-38742-5_3" target="_blank">A Beginner's Guide to Edge and Cover Ideals</a></em>, in <em class="emphasis">Monomial Ideals, Computations, and Applications</em>, Lecture Notes in Mathematics Volume 2083, 2013, pp 63-94</div></article><article class="bib" id="mfo-waldschmidt"><div class="bibitem">[2]</div>  <div class="bibentry">C. Bocci, S. Cooper, E. Guardo, et al., <em class="emphasis"><a class="external" href="https://doi.org/10.1007/s10801-016-0693-7" target="_blank">The Waldschmidt constant for squarefree monomial ideals</a></em>, <em class="emphasis">J Algebr Comb</em> (2016) 44:875</div></article></section></section></div></main>
+<article class="bib" id="vantuyl-intro"><div class="bibitem">[1]</div>  <div class="bibentry">A. Van Tuyl, <em class="emphasis"><a class="external" href="http://dx.doi.org/doi:10.1007/978-3-642-38742-5_3" target="_blank">A Beginner's Guide to Edge and Cover Ideals</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-24" id="fn-24"><sup> 2 </sup></a></em>, in <em class="emphasis">Monomial Ideals, Computations, and Applications</em>, Lecture Notes in Mathematics Volume 2083, 2013, pp 63-94</div></article><article class="bib" id="mfo-waldschmidt"><div class="bibitem">[2]</div>  <div class="bibentry">C. Bocci, S. Cooper, E. Guardo, et al., <em class="emphasis"><a class="external" href="https://doi.org/10.1007/s10801-016-0693-7" target="_blank">The Waldschmidt constant for squarefree monomial ideals</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-25" id="fn-25"><sup> 3 </sup></a></em>, <em class="emphasis">J Algebr Comb</em> (2016) 44:875</div></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-23"><div class="fn">Recall <a href="" class="xref" data-knowl="./knowl/def-noetherian.html" title="Definition 3.2.5">Definition 3.2.5</a>.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-24"><div class="fn"><code class="code-inline tex2jax_ignore">http://dx.doi.org/doi:10.1007/978-3-642-38742-5_3</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-25"><div class="fn"><code class="code-inline tex2jax_ignore">https://doi.org/10.1007/s10801-016-0693-7</code></div></div>
+</div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.13/login.js"></script>
 </body>
 </html>
