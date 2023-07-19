@@ -21,10 +21,10 @@
 
 <colophon xmlns:xi="http://www.w3.org/2001/XInclude">
 
-  <edition>Fall 2022 Edition</edition>
+  <edition>Fall 2023 Edition</edition>
   <website>
-    <name>https://ringswithinquiry.org</name>
-    <address>https://ringswithinquiry.org</address>
+    <name>http://ringswithinquiry.org</name>
+    <address>http://ringswithinquiry.org</address>
   </website>
 
   <copyright>
@@ -245,10 +245,10 @@
   </p>
   
   <p>
-  	The book has been used to carry a full semester course at least three times: twice at Dordt University (Fall 2018 and 2020), and once at Morningside College (Fall 2019).
+  	The book has been used to carry a full semester course several times at Dordt University, Morningside College, and Grand Valley State University
   	Future plans for the text include:
   	<ul>
-  		<li>An expanded treatment of fields, with an emphasis on extensions of <m>\Q[x]</m> (and possible introduction to groups via permutations of roots of polynomials).</li>
+  		<li>An expanded treatment of fields, with an emphasis on extensions of <m>\Q</m> (and possible introduction to groups via permutations of roots of polynomials).</li>
   		<li>Additional optional end-of-section exercises.</li>
   		<li>Integration of SageMath cells to aid computation where appropriate.</li>
   		<li><delete>PDF and HTML versions of both the student and instructor versions</delete>. These are available! Sort of. No HTML instructor version yet, but a <xref ref="Sec-Versions" text="custom">PDF of the student version</xref> is now available.</li>
@@ -266,12 +266,12 @@
 	<title>Versions of this text</title>
 	
 	<p>
-		The primary version of this text is the HTML version, available at <url href="https://ringswithinquiry.org"><c>https://ringswithinquiry.org</c></url>.
+		The primary version of this text is the HTML version, available at <url href="http://ringswithinquiry.org"><c>http://ringswithinquiry.org</c></url>.
 		Frankly, it is the easiest to update in case of a quick fix.
 		Other available editions are:
 	</p>
 	<ul>
-		<li>A <url href="https://ringswithinquiry.org/RWI-Student.pdf">PDF of the student version</url>.</li>
+		<li>A <url href="http://ringswithinquiry.org/RWI-Student.pdf">PDF of the student version</url>.</li>
 		<li>A PDF of the instructor version; email Mike Janssen to request it.</li>
 		<li>A low-cost print version from Amazon. (Coming soon!)</li>
 	</ul>

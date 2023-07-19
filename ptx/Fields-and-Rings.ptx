@@ -2034,7 +2034,7 @@ Again, this is a formalization of an idea that you have been using since you wer
     	</p>
 
 
-    <definition>
+    <definition xml:id="def-gcd-domain">
     <idx>greatest common divisor (integral domain)</idx>
       <statement>
         <p>
@@ -2226,7 +2226,7 @@ Again, this is a formalization of an idea that you have been using since you wer
       <statement>
         <p>
           Let <m>R</m> be a ring and <m>I</m> an ideal of <m>R</m>.
-          Then <m>I = R</m> if and only <m>I</m> contains a unit of <m>R</m>.
+          Then <m>I = R</m> if and only if <m>I</m> contains a unit of <m>R</m>.
         </p>
       </statement>
     </theorem>
@@ -2546,13 +2546,12 @@ Again, this is a formalization of an idea that you have been using since you wer
           <ol>
             <li>
               <p>
-                <m>I</m> is an ideal, and
+                <m>I</m> is an ideal, so there is some <m>d\in R</m> for which <m>I = \ideal{d}</m>;
               </p>
             </li>
             <li>
               <p>
-                <m>I = \ideal{d}</m>,
-                where <m>d</m> is any greatest common divisor of <m>x</m> and <m>y</m>.
+                <m>d</m> is a <xref ref="def-gcd-domain" text="custom">greatest common divisor</xref> of <m>x</m> and <m>y</m>.
               </p>
             </li>
           </ol>

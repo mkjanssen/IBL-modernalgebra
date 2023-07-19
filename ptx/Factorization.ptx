@@ -154,7 +154,7 @@
     <activity>
     		<statement>
     			<p>
-    				Use <xref ref="thm-rational-root" /> to find the <em>possible</em> rational roots of <m>p(x) = 3 - x + x^2 + 5x^3 - 10x^4 - 6x^5</m>. Which of the possibilities you found are actually roots? Justify.
+    				Use <xref ref="thm-rational-root" /> to find the <em>possible</em> rational roots of <m>p(x) = 40-58x-13x^2+25x^3+6x^4</m>. Which of the possibilities you found are actually roots? Justify.
     			</p>
     		</statement>
     		<solution>

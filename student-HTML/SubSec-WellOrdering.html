@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-10-10T15:50:53-05:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -18,41 +15,173 @@
 <meta property="book:title" content="Rings With Inquiry">
 <meta property="book:author" content="Michael Janssen">
 <meta property="book:author" content="Melissa Lindsey">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
     tagSide: "right",
     tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
   },
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
   },
   chtml: {
-    scale: 0.88,
+    scale: 0.98,
     mtextInheritFont: true
   },
   loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script async="" src="https://cse.google.com/cse.js?cx=017464805646507420634:llcu9bfj13p"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_blue_grey.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script async="" src="https://cse.google.com/cse.js?cx=017464805646507420634:llcu9bfj13p"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="pretext-book ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand{\labelitemi}{$\diamond$}
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Rings With Inquiry</span></a></h1>
+<p class="byline">Michael Janssen, Melissa Lindsey</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="Sec-Integers.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="Sec-Integers.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="SubSec-Divisibility-in-the-Integers.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\renewcommand{\labelitemi}{$\diamond$}
 \def\arraystretch{1.5}
 \newcommand{\contentsfinish}{}
 \newcommand{\separator}{\begin{center}\rule{\columnwidth}{\arrayrulewidth}\end{center}}
@@ -115,172 +244,227 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="book-1.html"><span class="title">Rings With Inquiry</span></a></h1>
-<p class="byline">Michael Janssen, Melissa Lindsey</p>
-</div>
-<div class="searchwrapper" role="search"><div class="gcse-search"></div></div>
-</div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Sec-Integers.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Sec-Integers.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="SubSec-Divisibility-in-the-Integers.html" title="Next">Next</a></span>
-</div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Sec-Integers.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Sec-Integers.html" title="Up">Up</a><a class="next-button button toolbar-item" href="SubSec-Divisibility-in-the-Integers.html" title="Next">Next</a>
-</div>
-</div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link frontmatter">
-<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
-<li><a href="Sec-Introduction.html" data-scroll="Sec-Introduction" class="internal">Introduction</a></li>
-<li><a href="Sec-NoteToStudents.html" data-scroll="Sec-NoteToStudents" class="internal">A Note to Students</a></li>
-<li><a href="Sec-NoteToInstructors.html" data-scroll="Sec-NoteToInstructors" class="internal">A Note to Instructors</a></li>
-<li><a href="Sec-Versions.html" data-scroll="Sec-Versions" class="internal">Versions of this text</a></li>
-<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Sec-Introduction.html" class="internal"><span class="title">Introduction</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="references-1.html" class="internal"><span class="title">References</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="Sec-NoteToStudents.html" class="internal"><span class="title">A Note to Students</span></a></div></li>
+<li><div class="toc-item"><a href="Sec-NoteToInstructors.html" class="internal"><span class="title">A Note to Instructors</span></a></div></li>
+<li><div class="toc-item"><a href="Sec-Versions.html" class="internal"><span class="title">Versions of this text</span></a></div></li>
+<li><div class="toc-item"><a href="acknowledgement-1.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="Sec-Integers.html" data-scroll="Sec-Integers" class="internal"><span class="codenumber">1</span> <span class="title">The Integers</span></a><ul>
-<li><a href="SubSec-WellOrdering.html" data-scroll="SubSec-WellOrdering" class="active">Induction and Well-Ordering</a></li>
-<li><a href="SubSec-Divisibility-in-the-Integers.html" data-scroll="SubSec-Divisibility-in-the-Integers" class="internal">Divisibility and GCDs in the Integers</a></li>
-<li><a href="SubSec-Primes-and-Factorization.html" data-scroll="SubSec-Primes-and-Factorization" class="internal">Primes and Factorization</a></li>
-<li><a href="SubSec-Integers-Mod-m.html" data-scroll="SubSec-Integers-Mod-m" class="internal">The Integers modulo <span class="process-math">\(m\)</span></a></li>
+<li>
+<div class="toc-item"><a href="Sec-Integers.html" class="internal"><span class="codenumber">1</span> <span class="title">The Integers</span></a></div>
+<ul class="structural">
+<li class="active"><div class="toc-item"><a href="SubSec-WellOrdering.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Induction and Well-Ordering</span></a></div></li>
+<li>
+<div class="toc-item"><a href="SubSec-Divisibility-in-the-Integers.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Divisibility and GCDs in the Integers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="SubSec-Divisibility-in-the-Integers.html#subsection-1" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Divisibility and the Division Algorithm</span></a></div></li>
+<li><div class="toc-item"><a href="SubSec-Divisibility-in-the-Integers.html#subsection-2" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Greatest Common Divisors</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="Sec-Fields-and-Rings.html" data-scroll="Sec-Fields-and-Rings" class="internal"><span class="codenumber">2</span> <span class="title">Fields and Rings</span></a><ul>
-<li><a href="SubSec-Fields.html" data-scroll="SubSec-Fields" class="internal">Fields</a></li>
-<li><a href="SubSec-Rings.html" data-scroll="SubSec-Rings" class="internal">Rings</a></li>
-<li><a href="SubSec-Divisibility-in-Domains.html" data-scroll="SubSec-Divisibility-in-Domains" class="internal">Divisibility in Integral Domains</a></li>
-<li><a href="SubSec-Principal-Ideals.html" data-scroll="SubSec-Principal-Ideals" class="internal">Principal Ideals and Euclidean Domains</a></li>
+<li>
+<div class="toc-item"><a href="SubSec-Primes-and-Factorization.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Primes and Factorization</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="SubSec-Primes-and-Factorization.html#references-2" class="internal"><span class="codenumber">1.3</span> <span class="title">References</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="SubSec-Integers-Mod-m.html" class="internal"><span class="codenumber">1.4</span> <span class="title">The Integers modulo <span class="process-math">\(m\)</span></span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="Sec-Factorization.html" data-scroll="Sec-Factorization" class="internal"><span class="codenumber">3</span> <span class="title">Factorization</span></a><ul>
-<li><a href="SubSec-Factoring-Polynomials.html" data-scroll="SubSec-Factoring-Polynomials" class="internal">Factoring Polynomials</a></li>
-<li><a href="SubSec-Factorization-in-Euclidean-Domains.html" data-scroll="SubSec-Factorization-in-Euclidean-Domains" class="internal">Factorization in Euclidean Domains</a></li>
-<li><a href="SubSec-Nonunique-Factorization.html" data-scroll="SubSec-Nonunique-Factorization" class="internal">Nonunique Factorization</a></li>
+<li>
+<div class="toc-item"><a href="Sec-Fields-and-Rings.html" class="internal"><span class="codenumber">2</span> <span class="title">Fields and Rings</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="SubSec-Fields.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Fields</span></a></div></li>
+<li>
+<div class="toc-item"><a href="SubSec-Rings.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Rings</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="SubSec-Rings.html#references-3" class="internal"><span class="codenumber">2.2</span> <span class="title">References</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="SubSec-Divisibility-in-Domains.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Divisibility in Integral Domains</span></a></div></li>
+<li><div class="toc-item"><a href="SubSec-Principal-Ideals.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Principal Ideals and Euclidean Domains</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="Sec-Ideals.html" data-scroll="Sec-Ideals" class="internal"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a><ul>
-<li><a href="SubSec-Ideals-In-General.html" data-scroll="SubSec-Ideals-In-General" class="internal">Ideals in general</a></li>
-<li><a href="SubSec-Homomorphisms.html" data-scroll="SubSec-Homomorphisms" class="internal">Homomorphisms</a></li>
-<li><a href="SubSec-Quotient-Rings.html" data-scroll="SubSec-Quotient-Rings" class="internal">Quotient Rings: New Rings from Old</a></li>
+<li>
+<div class="toc-item"><a href="Sec-Factorization.html" class="internal"><span class="codenumber">3</span> <span class="title">Factorization</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="SubSec-Factoring-Polynomials.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Factoring Polynomials</span></a></div></li>
+<li>
+<div class="toc-item"><a href="SubSec-Factorization-in-Euclidean-Domains.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Factorization in Euclidean Domains</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="SubSec-Factorization-in-Euclidean-Domains.html#subsection-3" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Unique Factorization Domains</span></a></div></li>
+<li><div class="toc-item"><a href="SubSec-Factorization-in-Euclidean-Domains.html#subsection-4" class="internal"><span class="codenumber">3.2.2</span> <span class="title">The Ascending Chain Condition and Noetherian Rings</span></a></div></li>
+<li><div class="toc-item"><a href="SubSec-Factorization-in-Euclidean-Domains.html#subsection-5" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Euclidean Domains are UFDs</span></a></div></li>
 </ul>
 </li>
-<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
-</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content">
+<li><div class="toc-item"><a href="SubSec-Nonunique-Factorization.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Nonunique Factorization</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Sec-Ideals.html" class="internal"><span class="codenumber">4</span> <span class="title">Ideals and Homomorphisms</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="SubSec-Ideals-In-General.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Ideals in general</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="SubSec-Ideals-In-General.html#references-4" class="internal"><span class="codenumber">4.1</span> <span class="title">References</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="SubSec-Homomorphisms.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Homomorphisms</span></a></div></li>
+<li>
+<div class="toc-item"><a href="SubSec-Quotient-Rings.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Quotient Rings: New Rings from Old</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="SubSec-Quotient-Rings.html#subsection-6" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Congruence modulo <span class="process-math">\(I\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="SubSec-Quotient-Rings.html#subsec-prime-maximal-ideal" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Prime and Maximal Ideals</span></a></div></li>
+<li><div class="toc-item"><a href="SubSec-Quotient-Rings.html#subsection-8" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Homomorphisms and Quotient Rings</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="SubSec-WellOrdering"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Induction and Well-Ordering</span>
 </h2>
 <article class="assemblage assemblage-like" id="assemblage-1"><h3 class="heading"><span class="title">Guiding Questions.</span></h3>
-<p id="p-30">In this section, we'll seek to answer the questions: <ul class="disc">
-<li id="li-13"><p id="p-derived-li-13">What is the Well-Ordering Principle?</p></li>
-<li id="li-14"><p id="p-derived-li-14">What is mathematical induction, and how can we use it to prove statements about <span class="process-math">\(\N\text{?}\)</span></p></li>
-</ul></p></article><section class="introduction" id="introduction-2"><p id="p-31">In this section we will assume the basic algebraic/arithmetic properties of the integers such as closure under addition, subtraction, and multiplication, most of which we will formalize via axioms in subsequent sections. <a href="" class="xref" data-knowl="./knowl/axiom_wellordering.html" title="Axiom 1.1.2: Well-Ordering Principle">Axiom 1.1.2</a> formalizes the familiar notion that nonempty subsets of the positive integers have a smallest element, which will be used repeatedly throughout the text. We then explore a closely related idea, mathematical induction, via an example and exercises.</p></section><article class="definition definition-like" id="def_naturalnumbers"><h3 class="heading">
+<div class="para" id="p-30">In this section, we'll seek to answer the questions: <ul class="disc">
+<li id="li-13"><div class="para" id="p-derived-li-13">What is the Well-Ordering Principle?</div></li>
+<li id="li-14"><div class="para" id="p-derived-li-14">What is mathematical induction, and how can we use it to prove statements about <span class="process-math">\(\N\text{?}\)</span>
+</div></li>
+</ul>
+</div></article><section class="introduction" id="introduction-2"><div class="para" id="p-31">In this section we will assume the basic algebraic/arithmetic properties of the integers such as closure under addition, subtraction, and multiplication, most of which we will formalize via axioms in subsequent sections. <a href="" class="xref" data-knowl="./knowl/axiom_wellordering.html" title="Axiom 1.1.2: Well-Ordering Principle">Axiom 1.1.2</a> formalizes the familiar notion that nonempty subsets of the positive integers have a smallest element, which will be used repeatedly throughout the text. We then explore a closely related idea, mathematical induction, via an example and exercises.</div></section><article class="definition definition-like" id="def_naturalnumbers"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span>
 </h3>
-<p id="p-32"> The collection of <dfn class="terminology">natural numbers</dfn> is denoted by <span class="process-math">\(\N\text{,}\)</span> and is the set</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para logical" id="p-32">
+<div class="para"> The collection of <dfn class="terminology">natural numbers</dfn> is denoted by <span class="process-math">\(\N\text{,}\)</span> and is the set</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \N = \set{1, 2, 3, \ldots}\text{.}
 \end{equation*}
 </div>
-<p id="p-33">By <span class="process-math">\(\N_0\)</span> we mean the set <span class="process-math">\(\N\cup \set{0} = \set{0, 1, 2, 3, \ldots}\text{.}\)</span></p></article><p id="p-34">In some sense, the fundamental properties of <span class="process-math">\(\N\)</span> are (a) there is a smallest natural number, and (b) there is always a next natural numberIn fact, one can build a model of <span class="process-math">\(\N\)</span> with set theory and the Peano axioms, which utilize the notion of a <em class="emphasis">successor</em>--the next natural number.). A consequence of the Peano postulates is the <em class="emphasis">well-ordering principle</em>, which we state as an axiom.</p>
+</div> <div class="para" id="p-33">By <span class="process-math">\(\N_0\)</span> we mean the set <span class="process-math">\(\N\cup \set{0} = \set{0, 1, 2, 3, \ldots}\text{.}\)</span>
+</div></article><div class="para" id="p-34">In some sense, the fundamental properties of <span class="process-math">\(\N\)</span> are (a) there is a smallest natural number, and (b) there is always a next natural numberIn fact, one can build a model of <span class="process-math">\(\N\)</span> with set theory and the Peano axioms, which utilize the notion of a <em class="emphasis">successor</em>--the next natural number.). A consequence of the Peano postulates is the <em class="emphasis">well-ordering principle</em>, which we state as an axiom.</div>
 <article class="axiom theorem-like" id="axiom_wellordering"><h3 class="heading">
 <span class="type">Axiom</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Well-Ordering Principle.</span>
 </h3>
-<p id="p-35"> Every nonempty subset of <span class="process-math">\(\N_0\)</span> contains a least (smallest) element under the usual ordering, <span class="process-math">\(\le\)</span><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 1 </sup></a>.</p></article><p id="p-36">The Well-Ordering Principle is useful for producing smallest elements of nonempty subsets defined to have certain properties, as the following example demonstrates.</p>
+<div class="para" id="p-35"> Every nonempty subset of <span class="process-math">\(\N_0\)</span> contains a least (smallest) element under the usual ordering, <span class="process-math">\(\le\)</span><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 1 </sup></a>.</div></article><div class="para" id="p-36">The Well-Ordering Principle is useful for producing smallest elements of nonempty subsets defined to have certain properties, as the following example demonstrates.</div>
 <article class="exploration project-like" id="exploration-1"><h3 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span>
 </h3>
-<p id="p-37">In this exploration, we investigate polynomials with real coefficients, as well as their degrees. We will define these terms more formally in <a href="" class="xref" data-knowl="./knowl/def-polynomial.html" title="Definition 2.2.1">Definition 2.2.1</a>, but for now you may use your intuition from previous courses in algebra.</p>
-<p id="p-38">Let <span class="process-math">\(S\)</span> be the set of all polynomials <span class="process-math">\(f\)</span> in the variable <span class="process-math">\(x\)</span> with real coefficients such that <span class="process-math">\(f(2) = f(-2) = 0\)</span> and <span class="process-math">\(f(0) = -4\text{.}\)</span></p>
-<ol class="decimal">
-<li id="li-15"><p id="p-derived-li-15">Give an example of an <span class="process-math">\(f\in S\)</span> and <span class="process-math">\(g\notin S\text{.}\)</span></p></li>
-<li id="li-16"><p id="p-derived-li-16">Let <span class="process-math">\(D = \setof{\deg f}{f\in S}\)</span> be the set of possible degrees of polynomials in <span class="process-math">\(S\text{.}\)</span> Show that <span class="process-math">\(D\ne \emptyset\)</span> and <span class="process-math">\(D\subseteq \N_0\text{.}\)</span></p></li>
-<li id="li-17"><p id="p-derived-li-17">Apply the Well-Ordering Principle to argue that <span class="process-math">\(D\)</span> has a least element. To what does this correspond in <span class="process-math">\(S\text{?}\)</span></p></li>
-</ol></article><p id="p-39">We will use this principle throughout the text, next in <a href="" class="xref" data-knowl="./knowl/thm_divalg.html" title="Theorem 1.2.8: The Division Algorithm for \N">Theorem 1.2.8</a>.</p>
+<div class="para" id="p-37">In this exploration, we investigate polynomials with real coefficients, as well as their degrees. We will define these terms more formally in <a href="" class="xref" data-knowl="./knowl/def-polynomial.html" title="Definition 2.2.1">Definition 2.2.1</a>, but for now you may use your intuition from previous courses in algebra.</div> <div class="para" id="p-38">Let <span class="process-math">\(S\)</span> be the set of all polynomials <span class="process-math">\(f\)</span> in the variable <span class="process-math">\(x\)</span> with real coefficients such that <span class="process-math">\(f(2) = f(-2) = 0\)</span> and <span class="process-math">\(f(0) = -4\text{.}\)</span>
+</div> <ol class="decimal">
+<li id="li-15"><div class="para" id="p-derived-li-15">Give an example of an <span class="process-math">\(f\in S\)</span> and <span class="process-math">\(g\notin S\text{.}\)</span>
+</div></li>
+<li id="li-16"><div class="para" id="p-derived-li-16">Let <span class="process-math">\(D = \setof{\deg f}{f\in S}\)</span> be the set of possible degrees of polynomials in <span class="process-math">\(S\text{.}\)</span> Show that <span class="process-math">\(D\ne \emptyset\)</span> and <span class="process-math">\(D\subseteq \N_0\text{.}\)</span>
+</div></li>
+<li id="li-17"><div class="para" id="p-derived-li-17">Apply the Well-Ordering Principle to argue that <span class="process-math">\(D\)</span> has a least element. To what does this correspond in <span class="process-math">\(S\text{?}\)</span>
+</div></li>
+</ol></article><div class="para" id="p-39">We will use this principle throughout the text, next in <a href="" class="xref" data-knowl="./knowl/thm_divalg.html" title="Theorem 1.2.8: The Division Algorithm for \N">Theorem 1.2.8</a>.</div>
 <figure class="figure figure-like" id="figure-1"><div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="https://imgs.xkcd.com/comics/well_ordering_principle.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.4<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://www.xkcd.com/2193/" target="_blank">A suspect use of the Well-Ordering Principle.</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 3 </sup></a></figcaption></figure><article class="definition definition-like" id="def_integers"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="period">.</span>
 </h3>
-<p id="p-40"> The set of integers consists of the positive and negative natural numbers, together with zero, and is denoted by <span class="process-math">\(\Z\text{:}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para logical" id="p-40">
+<div class="para"> The set of integers consists of the positive and negative natural numbers, together with zero, and is denoted by <span class="process-math">\(\Z\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \Z = \set{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots}\text{.}
 \end{equation*}
+</div>
 </div></article><article class="assemblage assemblage-like" id="induction"><h3 class="heading"><span class="title">Mathematical Induction.</span></h3>
-<p id="p-41">Let <span class="process-math">\(P(m)\)</span> be a statement about the natural number <span class="process-math">\(m\)</span><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 4 </sup></a>. Let <span class="process-math">\(k_0\in \N\)</span> be such that the statement <span class="process-math">\(P(k_0)\)</span> is true (the <em class="emphasis">base case</em>), and suppose there is an <span class="process-math">\(n\ge k_0\)</span> such that for all <span class="process-math">\(k\)</span> satisfying <span class="process-math">\(k_0 \le k \le n\text{,}\)</span> <span class="process-math">\(P(k)\)</span> is true (the <em class="emphasis">inductive hypothesis</em>). Then <span class="process-math">\(P(n+1)\)</span> is true, and thus <span class="process-math">\(P(m)\)</span> is true for all <span class="process-math">\(m\ge k_0\)</span> (the <em class="emphasis">inductive step</em>).</p></article><p id="p-42">Mathematical induction is like climbing an infinite staircase. The <em class="emphasis">base case</em> tells us that we can take a first step on the staircase (<span class="process-math">\(k_0\)</span>). In the <em class="emphasis">inductive hypothesis</em>, we assume we can take all the steps up to a certain height (<span class="process-math">\(n\)</span>). In the <em class="emphasis">inductive step</em>, we prove that this allows us to take the <span class="process-math">\((n+1)\)</span>st step.</p>
-<p id="p-43">Thus, if we can take step <span class="process-math">\(k_0\text{,}\)</span> we can (by the inductive step) take step <span class="process-math">\(k_0 + 1\text{.}\)</span> And since we can take step <span class="process-math">\(k_0 + 1\text{,}\)</span> we can (again by the inductive step) take step <span class="process-math">\(k_0 + 2\text{.}\)</span> And so on, forever (or, if the notion of actual infinity makes you uncomfortable, as far as we want to go).</p>
+<div class="para" id="p-41">Let <span class="process-math">\(P(m)\)</span> be a statement about the natural number <span class="process-math">\(m\)</span><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 4 </sup></a>. Let <span class="process-math">\(k_0\in \N\)</span> be such that the statement <span class="process-math">\(P(k_0)\)</span> is true (the <em class="emphasis">base case</em>), and suppose there is an <span class="process-math">\(n\ge k_0\)</span> such that for all <span class="process-math">\(k\)</span> satisfying <span class="process-math">\(k_0 \le k \le n\text{,}\)</span> <span class="process-math">\(P(k)\)</span> is true (the <em class="emphasis">inductive hypothesis</em>). Then <span class="process-math">\(P(n+1)\)</span> is true, and thus <span class="process-math">\(P(m)\)</span> is true for all <span class="process-math">\(m\ge k_0\)</span> (the <em class="emphasis">inductive step</em>).</div></article><div class="para" id="p-42">Mathematical induction is like climbing an infinite staircase. The <em class="emphasis">base case</em> tells us that we can take a first step on the staircase (<span class="process-math">\(k_0\)</span>). In the <em class="emphasis">inductive hypothesis</em>, we assume we can take all the steps up to a certain height (<span class="process-math">\(n\)</span>). In the <em class="emphasis">inductive step</em>, we prove that this allows us to take the <span class="process-math">\((n+1)\)</span>st step.</div>
+<div class="para" id="p-43">Thus, if we can take step <span class="process-math">\(k_0\text{,}\)</span> we can (by the inductive step) take step <span class="process-math">\(k_0 + 1\text{.}\)</span> And since we can take step <span class="process-math">\(k_0 + 1\text{,}\)</span> we can (again by the inductive step) take step <span class="process-math">\(k_0 + 2\text{.}\)</span> And so on, forever (or, if the notion of actual infinity makes you uncomfortable, as far as we want to go).</div>
 <article class="assemblage assemblage-like" id="assemblage-3"><h3 class="heading"><span class="title">Example.</span></h3>
-<p id="p-44">For all <span class="process-math">\(n \ge 1\text{,}\)</span></p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para logical" id="p-44">
+<div class="para">For all <span class="process-math">\(n \ge 1\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
 \begin{equation*}
 1+ 2 + 3 + \cdots + n = \frac{n(n+1)}{2}\text{.}
 \end{equation*}
 </div>
-<p id="p-45"><em class="emphasis">Proof.</em> Base case: When <span class="process-math">\(n = 1\text{,}\)</span> the equation <span class="process-math">\(1 = \frac{1\cdot (1+1)}{2}\)</span> is true.</p>
-<p id="p-46"><em class="emphasis">Inductive Hypothesis:</em> Assume that there exists a <span class="process-math">\(n\)</span> such that whenever <span class="process-math">\(k \le n\text{,}\)</span> the equation</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="ex_indhyp">
+</div>
+<div class="para" id="p-45">
+<em class="emphasis">Proof.</em> Base case: When <span class="process-math">\(n = 1\text{,}\)</span> the equation <span class="process-math">\(1 = \frac{1\cdot (1+1)}{2}\)</span> is true.</div>
+<div class="para logical" id="p-46">
+<div class="para">
+<em class="emphasis">Inductive Hypothesis:</em> Assume that there exists a <span class="process-math">\(n\)</span> such that whenever <span class="process-math">\(k \le n\text{,}\)</span> the equation</div>
+<div class="displaymath process-math" id="ex_indhyp">
 \begin{equation}
 1+ 2 + 3 + \cdots + k = \frac{k(k+1)}{2}\tag{1.1.1}
 \end{equation}
 </div>
-<p class="continuation">is true.</p>
-<p id="p-47"><em class="emphasis">Inductive Step:</em> Our goal is to show that <span class="process-math">\(P(n+1)\)</span> is true. That is, we wish to establish that</p>
-<div class="displaymath process-math" data-contains-math-knowls="" id="ex_indgoal">
+<div class="para">is true.</div>
+</div>
+<div class="para logical" id="p-47">
+<div class="para">
+<em class="emphasis">Inductive Step:</em> Our goal is to show that <span class="process-math">\(P(n+1)\)</span> is true. That is, we wish to establish that</div>
+<div class="displaymath process-math" id="ex_indgoal">
 \begin{equation}
 1+ 2 + 3 + \cdots + n + (n+1) = \frac{(n+1)((n+1)+1)}{2}\text{.}\tag{1.1.2}
 \end{equation}
 </div>
-<p id="p-48">We begin on the left-hand side of <a href="" class="xref" data-knowl="./knowl/ex_indhyp.html" title="Equation 1.1.1">(1.1.1)</a>, where we may apply the inductive hypothesis to see that</p>
+</div>
+<div class="para logical" id="p-48">
+<div class="para">We begin on the left-hand side of <a href="" class="xref" data-knowl="./knowl/ex_indhyp.html" title="Equation 1.1.1">(1.1.1)</a>, where we may apply the inductive hypothesis to see that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/ex_indhyp.html" id="ex_indstep1">
 \begin{equation}
 1+ 2 + 3 + \cdots + n + (n+1) = \left[\frac{n(n+1)}{2}\right] + (n+1)\text{.}\tag{1.1.3}
 \end{equation}
 </div>
-<p class="continuation">Through the use of straightforward algebra, the right-hand side becomes</p>
+<div class="para">Through the use of straightforward algebra, the right-hand side becomes</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/ex_indhyp.html" id="ex_indstep2">
 \begin{equation}
 \frac{n(n+1)}{2} + \frac{2(n+1)}{2} = \frac{n(n+1) + 2(n+1)}{2} = \frac{(n+1)(n+2)}{2}\text{.}\tag{1.1.4}
 \end{equation}
 </div>
-<p id="p-49">Putting <a href="" class="xref" data-knowl="./knowl/ex_indstep1.html" title="Equation 1.1.3">(1.1.3)</a> and <a href="" class="xref" data-knowl="./knowl/ex_indstep2.html" title="Equation 1.1.4">(1.1.4)</a> together, we obtain</p>
+</div>
+<div class="para logical" id="p-49">
+<div class="para">Putting <a href="" class="xref" data-knowl="./knowl/ex_indstep1.html" title="Equation 1.1.3">(1.1.3)</a> and <a href="" class="xref" data-knowl="./knowl/ex_indstep2.html" title="Equation 1.1.4">(1.1.4)</a> together, we obtain</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/ex_indstep1.html ./knowl/ex_indstep2.html ./knowl/ex_indgoal.html">
 \begin{equation*}
 1+ 2 + 3 + \cdots + n + (n+1) = \frac{(n+1)((n+1)+1)}{2}\text{,}
 \end{equation*}
 </div>
-<p class="continuation">which is exactly the goal we stated in <a href="" class="xref" data-knowl="./knowl/ex_indgoal.html" title="Equation 1.1.2">(1.1.2)</a>.</p></article><p id="p-50">We conclude with opportunities to practice induction.</p>
+<div class="para">which is exactly the goal we stated in <a href="" class="xref" data-knowl="./knowl/ex_indgoal.html" title="Equation 1.1.2">(1.1.2)</a>.</div>
+</div></article><div class="para" id="p-50">We conclude with opportunities to practice induction.</div>
 <article class="theorem theorem-like" id="theorem-1"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.6</span><span class="period">.</span>
 </h3>
-<p id="p-51">For all <span class="process-math">\(k\ge 1\text{,}\)</span> <span class="process-math">\(3^k &gt; k\text{.}\)</span></p></article><article class="theorem theorem-like" id="theorem-2"><h3 class="heading">
+<div class="para" id="p-51">For all <span class="process-math">\(k\ge 1\text{,}\)</span> <span class="process-math">\(3^k &gt; k\text{.}\)</span>
+</div></article><article class="theorem theorem-like" id="theorem-2"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.7</span><span class="period">.</span>
 </h3>
-<p id="p-54">Prove that the sum of the first <span class="process-math">\(n\)</span> cubes is <span class="process-math">\(\dfrac{n^2(n+1)^2}{4}\text{.}\)</span> That is,</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para" id="p-54">Prove that the sum of the first <span class="process-math">\(n\)</span> cubes is <span class="process-math">\(\dfrac{n^2(n+1)^2}{4}\text{.}\)</span> That is,</div>
+<div class="displaymath process-math">
 \begin{equation*}
 1^3 + 2^3 + 3^3 + \cdots + n^3 = \dfrac{n^2(n+1)^2}{4}.
 \end{equation*}
 </div></article><article class="theorem theorem-like" id="theorem-3"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">(Bernoulli's Inequality).</span>
 </h3>Given a real number <span class="process-math">\(b &gt; -1\text{,}\)</span> <span class="process-math">\((1+b)^n \ge 1 + bn\)</span> for all <span class="process-math">\(n\in \N_0\text{.}\)</span></article></section><div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn">Our word choice is suggestive. In fact, other orderings do exist, and while the set of nonnegative real numbers <span class="process-math">\(\mathbb{R}\)</span> does not satisfy the well-ordering principle under the usual ordering <span class="process-math">\(\le\text{,}\)</span> the Well Ordering Axiom asserts that there exists a well ordering on <em class="emphasis">any</em> set, including <span class="process-math">\(\mathbb{R}\text{.}\)</span> Accepting this axiom is equivalent to accepting the <a class="external" href="https://plato.stanford.edu/entries/axiom-choice/" target="_blank">axiom of choice</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 2 </sup></a>.</div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn"><code class="code-inline tex2jax_ignore">https://plato.stanford.edu/entries/axiom-choice/</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn"><code class="code-inline tex2jax_ignore">https://www.xkcd.com/2193/</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn"><code class="code-inline tex2jax_ignore">plato.stanford.edu/entries/axiom-choice/</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn"><code class="code-inline tex2jax_ignore">www.xkcd.com/2193/</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-8"><div class="fn">Sample statements could include “<span class="process-math">\(m\)</span> is really interesting” or “<span class="process-math">\(3m^2 + m + 2\)</span> is even”.</div></div>
+</div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="Sec-Integers.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="SubSec-Divisibility-in-the-Integers.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
+</div>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
 </div>
 </body>
 </html>
